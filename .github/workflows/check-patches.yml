@@ -2,7 +2,10 @@ name: Check for new BF6 patches
 
 on:
   schedule:
-    - cron: '0 14 * * *'   # daily, 14:00 UTC — adjust as you like
+    - cron: '0 14 * * 1'   # weekly, Mondays 14:00 UTC. BF6 ships updates every
+                           # 1-3 weeks, and ea.com's news listing only exposes the
+                           # 2 most recent — a longer interval risks a patch
+                           # scrolling off the page before the bot ever sees it.
   workflow_dispatch: {}     # lets you trigger it manually from the Actions tab
 
 permissions:
