@@ -1,3 +1,15 @@
 .DS_Store
 __pycache__/
 *.pyc
+
+# Local-only setup files that live alongside the repo. This is a public repo —
+# keep these out of it.
+brief.md
+*.zip
+RESUME.md
+
+# Never commit credentials. The Cloudflare token lives outside this folder, but
+# these patterns are cheap insurance against a stray copy landing in here.
+*token*.txt
+*Token*.txt
+.env

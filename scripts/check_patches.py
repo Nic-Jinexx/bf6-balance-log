@@ -20,7 +20,10 @@ from pathlib import Path
 
 SOURCES = [
     "https://www.ea.com/games/battlefield/battlefield-6/news",
-    "https://forums.ea.com/category/battlefield-en/blog/battlefield-game-info-hub-en",
+    # forums.ea.com was dropped 2026-07-30. It 403s a plain "Mozilla/5.0" UA, and
+    # with a full browser UA it returns a 20 KB client-side-rendered shell with no
+    # article links in it at all — so the regex could never match there. Keeping it
+    # only produced a permanent failure to log every run.
 ]
 
 # Matches battlefield-6-game-update-1-4-1-0 / battlefield-6-update-1-1-1-0 /
@@ -52,6 +55,19 @@ def write_output(name: str, value: str) -> None:
         print(f"{name}={value}")
 
 
+def warn(message: str) -> None:
+    """Surface a non-fatal problem loudly.
+
+    Inside Actions this emits a `::warning::` annotation, so a dead or
+    restructured source shows up on the run summary instead of hiding behind a
+    green checkmark that looks identical to a clean run.
+    """
+    if os.environ.get("GITHUB_ACTIONS"):
+        print(f"::warning::{message}")
+    else:
+        print(f"WARNING: {message}", file=sys.stderr)
+
+
 def version_key(v: str):
     return [int(x) for x in v.split(".")]
 
@@ -64,15 +80,28 @@ def main() -> None:
     errors = []
     for url in SOURCES:
         try:
-            html = fetch(url)
-            found_versions |= extract_versions(html)
+            versions = extract_versions(fetch(url))
         except Exception as e:  # noqa: BLE001 - report and keep going
             errors.append(f"{url}: {e}")
+            continue
+
+        print(f"{url} -> {len(versions)} version(s)")
+        if not versions:
+            # Fetched fine but matched nothing. Almost always means EA restructured
+            # the page or moved it behind client-side rendering. This is the silent
+            # -miss case: without a warning it reads exactly like "no new patches".
+            warn(f"{url} fetched OK but yielded no version numbers - regex may be stale")
+        found_versions |= versions
+
+    # Always report per-source failures. Previously these were only printed when
+    # *every* source failed, so one dead source out of several passed unnoticed.
+    for err in errors:
+        warn(f"source failed to fetch - {err}")
 
     if errors and not found_versions:
-        # Every source failed to fetch (network hiccup, EA changed the page, etc.)
-        # Don't report a false "nothing new" — just skip this run quietly.
-        print("All sources failed to fetch:", "; ".join(errors), file=sys.stderr)
+        # Every source failed (network hiccup, EA changed the page, etc.).
+        # Don't report a false "nothing new" — skip this run without flagging.
+        warn("every source failed - skipping this run rather than reporting 'nothing new'")
         write_output("found", "false")
         return
 
