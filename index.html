@@ -59,8 +59,6 @@ td.item{color:var(--text);font-weight:600}
 .src{font-size:13.5px;font-family:var(--mono);color:var(--dim);margin-top:10px}
 .src a{color:var(--vehicles);text-decoration:none}
 .src a:hover{text-decoration:underline}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-@media(max-width:700px){.grid2{grid-template-columns:1fr}}
 .indexTable{width:100%;border-collapse:collapse;font-size:15px;margin-bottom:10px}
 .indexTable th{text-align:left;font-family:var(--mono);font-size:13px;color:var(--dim);text-transform:uppercase;border-bottom:1px solid var(--border2);padding:8px 10px}
 .indexTable td{padding:8px 10px;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:14.5px}
@@ -68,7 +66,6 @@ td.item{color:var(--text);font-weight:600}
 .indexTable a:hover{text-decoration:underline}
 footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--border);color:var(--dim);font-size:14px;font-family:var(--mono)}
 .disclaimer{background:var(--panel2);border:1px solid var(--border);border-radius:6px;padding:14px 16px;font-size:14.5px;color:var(--muted);margin:18px 0 6px}
-.none{color:var(--dim);font-style:italic;font-size:15px;padding:12px 0 4px 42px}
 .searchbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;margin:20px 0 8px}
 .searchbar .icon{color:var(--dim);font-family:var(--mono);font-size:16px}
 .searchbar input{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-family:var(--mono);font-size:16px;padding:4px 0}
@@ -121,6 +118,125 @@ b.rs{color:#ff5c5c !important;font-weight:800}
   transition:color .15s ease,border-color .15s ease;
 }
 .feedback-btn:hover{color:var(--text);border-color:var(--weapons)}
+/* moved off the element's style attribute so the mobile rules below can override it */
+#kofi-fixed{position:fixed;bottom:18px;right:18px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+
+/* ==================== responsive ====================
+   Additive and media-gated. At >=1101px the page renders as it did before. */
+
+html{-webkit-text-size-adjust:100%}
+
+/* ---- tables become their own horizontal scroll areas ----
+   Consumes the overflow before it reaches details.patch{overflow:hidden}, which
+   is why that rule can stay as-is. Applies to every table on the page, so a new
+   patch entry inherits this with no wrapper markup to remember. */
+@media (max-width:1100px){
+  table,.indexTable{display:block;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;max-width:100%}
+  table>caption{display:block;position:sticky;left:0}
+  /* scroll affordance: edge shadow visible only while there is more to pan to.
+     The cover gradients scroll with the content (local) and hide the shadows
+     (scroll) once you reach either end. */
+  table{
+    background-image:
+      linear-gradient(to right,var(--panel),rgba(17,22,19,0) 60%),
+      linear-gradient(to left,var(--panel),rgba(17,22,19,0) 60%),
+      linear-gradient(to right,rgba(0,0,0,.45),rgba(0,0,0,0)),
+      linear-gradient(to left,rgba(0,0,0,.45),rgba(0,0,0,0));
+    background-position:left center,right center,left center,right center;
+    background-repeat:no-repeat;
+    background-size:26px 100%,26px 100%,14px 100%,14px 100%;
+    background-attachment:local,local,scroll,scroll;
+  }
+  .indexTable{background-image:
+      linear-gradient(to right,var(--bg),rgba(10,14,12,0) 60%),
+      linear-gradient(to left,var(--bg),rgba(10,14,12,0) 60%),
+      linear-gradient(to right,rgba(0,0,0,.45),rgba(0,0,0,0)),
+      linear-gradient(to left,rgba(0,0,0,.45),rgba(0,0,0,0))}
+}
+
+/* ---- narrow windows / tablets ---- */
+@media (max-width:900px){
+  .wrap{padding:0 16px 80px}
+  h1{font-size:26px}
+  .body{padding:0 14px 18px 24px}
+  .subbody{padding:2px 14px 14px 20px}
+  h2.cat{align-items:flex-start}
+  h2.cat .dot{flex:0 0 auto;margin-top:7px}
+}
+
+/* ---- phones ---- */
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 14px 72px}
+
+  header.top{padding:24px 0 18px;margin-bottom:20px}
+  h1{font-size:22px;letter-spacing:0;margin:10px 0 6px}
+  .sub{font-size:15px}
+  .meta-row{gap:10px;margin-top:12px;font-size:13px}
+  .disclaimer{font-size:13.5px;padding:12px}
+
+  h2.cat{font-size:17px;letter-spacing:.3px;margin:34px 0 4px;gap:8px;align-items:flex-start}
+  h2.cat .dot{flex:0 0 auto;margin-top:6px}
+  p.cat-note{font-size:14px;margin:6px 0 16px}
+
+  nav.toc{gap:6px;margin:18px 0 24px}
+  nav.toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:13px}
+
+  .searchbar{flex-wrap:wrap;padding:6px 10px;margin:14px 0 8px}
+  .searchbar input{min-width:0;font-size:16px} /* keep 16px: anything smaller makes iOS zoom on focus */
+  .searchbar #searchClear{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin:-6px -4px;font-size:22px}
+  .searchbar #searchCount{flex:1 0 100%;order:5;text-align:right;padding-top:2px}
+  .searchbar #searchCount:empty{display:none}
+  .suggestions{max-height:52vh}
+  .suggestions .sug-item{padding:12px 14px;font-size:14px}
+
+  /* summary wraps instead of squeezing the tag off the row */
+  summary{flex-wrap:wrap;gap:6px 10px;padding:12px 14px;font-size:14px}
+  summary .ver{min-width:0}
+  summary .date{font-size:13px}
+  summary .tag{font-size:11px;padding:3px 8px}
+  details.subdetail summary{padding:12px;font-size:14px}
+
+  /* collapse the indent stack: wrap 20 + body 42 + subbody 30 + ul 18 */
+  .body{padding:0 12px 16px 14px}
+  .subbody{padding:2px 12px 12px 14px}
+  .body p.dev{font-size:14px;padding-left:10px}
+  ul.plain{margin:8px 0;padding-left:18px}
+  ul.plain li{font-size:15px}
+  ul.plain.small li{font-size:14px}
+
+  /* less panning needed per table; td.num keeps its nowrap by design */
+  table{font-size:13.5px;margin:10px 0}
+  table caption{font-size:12.5px}
+  th{padding:6px;font-size:11.5px}
+  td{padding:7px 6px}
+  .indexTable th{padding:7px 6px}
+  .indexTable td{padding:7px 6px;font-size:13.5px}
+  /* keep version/date/link columns on one line so the table pans with its columns
+     aligned, rather than squeezing "Jul 16, 2026" onto three lines */
+  .indexTable th,.indexTable td{white-space:nowrap}
+  .indexTable td:nth-child(4){white-space:normal;min-width:184px}
+  .indexTable td a{display:inline-flex;align-items:center;min-height:44px}
+
+  .src{font-size:12.5px}
+  footer,footer p{font-size:13px}
+
+  /* CTAs out of the corner and into the flow */
+  #kofi-fixed{position:static;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;padding:0 14px 26px}
+  .feedback-btn{min-height:44px;padding:11px 16px}
+}
+
+/* ---- 320-380px ---- */
+@media (max-width:380px){
+  .wrap{padding:0 12px 72px}
+  h1{font-size:20px}
+  h2.cat{font-size:16px}
+  .body{padding:0 10px 14px 10px}
+  .subbody{padding:2px 10px 12px}
+  table{font-size:12.5px}
+  th,td{padding:6px 4px}
+  summary{padding:11px 12px;font-size:13px}
+}
 </style>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2ed16d9d96844272bd6103453ef7aefc"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
@@ -140,7 +256,7 @@ b.rs{color:#ff5c5c !important;font-weight:800}
 
 <div class="searchbar">
 <span class="icon">&#128269;</span>
-<input type="text" id="searchInput" placeholder='Search weapon, vehicle, gadget, stat, or patch version… e.g. "L115", "muzzle velocity", "1.3.3.0"' autocomplete="off"
+<input type="text" id="searchInput" placeholder="Search weapon, vehicle, stat, or patch…" autocomplete="off"
   oninput="handleSearchInput(this.value)"
   onkeydown="handleSearchKeydown(event)"
   onfocus="handleSearchInput(this.value)">
@@ -1284,7 +1400,7 @@ b.rs{color:#ff5c5c !important;font-weight:800}
 })();
 </script>
 
-<div id="kofi-fixed" style="position:fixed;bottom:18px;right:18px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+<div id="kofi-fixed">
 <a class="feedback-btn" href="mailto:feedback@bf6balancelog.com?subject=BF6%20Balance%20Log%20feedback" title="Send feedback">&#9993; Feedback</a>
 <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
 <script type='text/javascript'>
