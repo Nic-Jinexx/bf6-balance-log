@@ -1,0 +1,17 @@
+{
+  "_comment": "Versions already reflected in index.html. The checker bot compares EA's news page against this list and only flags versions NOT in it. Add a new version here once you've added its entries to index.html so the bot stops flagging it.",
+  "versions": [
+    "1.0.1.0",
+    "1.1.1.0",
+    "1.1.2.0",
+    "1.1.3.0",
+    "1.1.3.5",
+    "1.2.1.0",
+    "1.2.2.0",
+    "1.2.3.0",
+    "1.3.1.5",
+    "1.3.2.0",
+    "1.3.3.0",
+    "1.4.1.0"
+  ]
+}

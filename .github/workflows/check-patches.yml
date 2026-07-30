@@ -1,0 +1,59 @@
+name: Check for new BF6 patches
+
+on:
+  schedule:
+    - cron: '0 14 * * *'   # daily, 14:00 UTC — adjust as you like
+  workflow_dispatch: {}     # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - id: check
+        run: python scripts/check_patches.py
+
+      - name: Open issue for new patch(es)
+        if: steps.check.outputs.found == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const versions = "${{ steps.check.outputs.versions }}".split(",").filter(Boolean);
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              labels: "new-patch",
+              per_page: 100,
+            });
+            const openTitles = new Set(existing.data.map(i => i.title));
+
+            for (const v of versions) {
+              const title = `New BF6 patch detected: ${v}`;
+              if (openTitles.has(title)) continue;
+
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                labels: ["new-patch"],
+                body: [
+                  `EA has published Battlefield 6 Game Update **${v}**.`,
+                  "",
+                  "To add it to the balance log:",
+                  `1. Ask Claude (web/desktop) or Claude Code to fetch the official patch notes for ${v} and extract the balance-relevant changes, following the format already used in \`index.html\`.`,
+                  "2. Add the new `<details class=\"patch\">` block(s) to the matching category section(s), plus a row in the Patch Index table.",
+                  `3. Add \`${v}\` to \`data/known_versions.json\` so this bot stops flagging it.`,
+                  "4. Commit to `main` — GitHub Pages redeploys automatically.",
+                ].join("\n"),
+              });
+            }
