@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bf6balancelog.com/sitemap.xml
