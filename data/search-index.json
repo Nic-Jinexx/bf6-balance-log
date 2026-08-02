@@ -10,7 +10,7 @@
    "name": "9K38 Igla",
    "url": "/gadgets/launchers/9k38-igla/",
    "cat": "LAUNCHERS",
-   "alt": "air defense launcher"
+   "alt": "active locking air-defense launcher air defense launcher 9k38 igla igla"
   },
   {
    "name": "AK-205",
@@ -25,7 +25,7 @@
    "alt": "ak-4d"
   },
   {
-   "name": "AN/M14 Incendiary Grenade",
+   "name": "AN/M14",
    "url": "/gadgets/throwables/an-m14/",
    "cat": "THROWABLES",
    "alt": "incendiary grenade an/m14"
@@ -55,6 +55,12 @@
    "alt": ""
   },
   {
+   "name": "CSB IV",
+   "url": "/gadgets/tools/csb-iv/",
+   "cat": "TOOLS",
+   "alt": "eod bot csb iv"
+  },
+  {
    "name": "CSS Bundle",
    "url": "/gadgets/deployables/css-bundle/",
    "cat": "DEPLOYABLES",
@@ -73,12 +79,6 @@
    "alt": ""
   },
   {
-   "name": "Defibrillator",
-   "url": "/gadgets/tools/powerpulse/",
-   "cat": "TOOLS",
-   "alt": "defibrillator powerpulse"
-  },
-  {
    "name": "DGMK4",
    "url": "/gadgets/tools/dgmk4/",
    "cat": "TOOLS",
@@ -95,12 +95,6 @@
    "url": "/weapons/assault-rifles/ef88/",
    "cat": "ASSAULT RIFLES",
    "alt": "f88 ef-88"
-  },
-  {
-   "name": "EOD Bot",
-   "url": "/gadgets/tools/csb-iv/",
-   "cat": "TOOLS",
-   "alt": "eod bot csb iv"
   },
   {
    "name": "EOD Bot Arm",
@@ -259,7 +253,7 @@
    "alt": "m16"
   },
   {
-   "name": "M18 Smoke Grenade",
+   "name": "M18",
    "url": "/gadgets/throwables/m18/",
    "cat": "THROWABLES",
    "alt": "smoke grenade m18"
@@ -367,7 +361,7 @@
    "alt": "fragmentation grenade"
   },
   {
-   "name": "M84 Flash Grenade",
+   "name": "M84",
    "url": "/gadgets/throwables/m84/",
    "cat": "THROWABLES",
    "alt": "flash grenade m84"
@@ -415,6 +409,12 @@
    "alt": "missile intercept system"
   },
   {
+   "name": "MTN-55",
+   "url": "/gadgets/throwables/mtn-55/",
+   "cat": "THROWABLES",
+   "alt": "throwable proximity detector mtn-55"
+  },
+  {
    "name": "NVO-228E",
    "url": "/weapons/assault-rifles/nvo-228e/",
    "cat": "ASSAULT RIFLES",
@@ -425,6 +425,12 @@
    "url": "/weapons/sidearms/p18/",
    "cat": "SIDEARMS",
    "alt": ""
+  },
+  {
+   "name": "Powerpulse",
+   "url": "/gadgets/tools/powerpulse/",
+   "cat": "TOOLS",
+   "alt": "defibrillator powerpulse"
   },
   {
    "name": "PP-19",
@@ -487,7 +493,7 @@
    "alt": ""
   },
   {
-   "name": "SCG-24 Anti-Vehicle Grenade",
+   "name": "SCG-24",
    "url": "/gadgets/throwables/scg-24/",
    "cat": "THROWABLES",
    "alt": "anti-vehicle grenade scg-24"
@@ -559,6 +565,12 @@
    "alt": "incendiary-round shotgun"
   },
   {
+   "name": "Steel Wing",
+   "url": "/gadgets/throwables/steel-wing/",
+   "cat": "THROWABLES",
+   "alt": "throwing knife steel wing"
+  },
+  {
    "name": "SV-98",
    "url": "/weapons/sniper-rifles/sv-98/",
    "cat": "SNIPER RIFLES",
@@ -581,18 +593,6 @@
    "url": "/gadgets/deployables/tarantula-alx/",
    "cat": "DEPLOYABLES",
    "alt": "assault ladder"
-  },
-  {
-   "name": "Throwable Proximity Detector MTN-55",
-   "url": "/gadgets/throwables/mtn-55/",
-   "cat": "THROWABLES",
-   "alt": "throwable proximity detector mtn-55"
-  },
-  {
-   "name": "Throwing Knife Steel Wing",
-   "url": "/gadgets/throwables/steel-wing/",
-   "cat": "THROWABLES",
-   "alt": "throwing knife steel wing"
   },
   {
    "name": "TR-7",
@@ -619,7 +619,7 @@
    "alt": ""
   },
   {
-   "name": "V40 Mini Frag Grenade",
+   "name": "V40",
    "url": "/gadgets/throwables/v40/",
    "cat": "THROWABLES",
    "alt": "mini frag grenade v40"

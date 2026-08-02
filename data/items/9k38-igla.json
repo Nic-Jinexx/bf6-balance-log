@@ -6,9 +6,12 @@
   "subcategory": "launchers",
   "order": 9,
   "aliases": [
-    "air defense launcher"
+    "active locking air-defense launcher",
+    "air defense launcher",
+    "9k38 igla",
+    "igla"
   ],
-  "blurb": "Air Defense Launcher",
+  "blurb": "Active Locking Air-Defense Launcher",
   "class": "Engineer",
   "traits": [],
   "description": {
