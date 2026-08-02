@@ -30,8 +30,19 @@
 <style>
 :root{
   --bg:#0a0e0c; --panel:#111613; --panel2:#151b17; --border:#25302a; --border2:#324037;
-  --text:#e2e8e2; --muted:#8b978c; --dim:#5f6b62;
-  --weapons:#e0a63a; --vehicles:#5b9bd5; --gadgets:#7bbf6a; --systemic:#e0645a; --maps:#b98fd6; --redsec:#4fd1c5;
+  /* Secondary greys, brightened. --dim was #5f6b62 at 3.48:1, which failed AA
+     for normal text and carried a lot of small copy: table headers, captions,
+     source lines, the footer, tree counts and empty subcategories. --muted was
+     passing but sat close to the floor. Measured with scripts/probe_type.html. */
+  --text:#e2e8e2; --muted:#9caa9d; --dim:#76857a;
+  /* Category palette, second darkening pass. Not a uniform multiply: each color
+     is solved to land at ~4.8:1 against the background, which is the floor for
+     normal-size text (guide buttons, tree labels, the REDSEC wordmark). What
+     read as "pastel" was uneven lightness, so equalizing contrast is what
+     actually deepens the set. Blue and red were already at the floor and could
+     not go darker without becoming unreadable. */
+  --weapons:#a47621; --vehicles:#4682bb; --gadgets:#558c47; --systemic:#2a8d84; --maps:#976eb3; --redsec:#e63f3f;
+  --progression:#768279; --patchnotes:#c25c8e;
   --mono:'IBM Plex Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 }
@@ -44,9 +55,25 @@ h1{font-family:var(--mono);font-size:30px;letter-spacing:0.5px;margin:14px 0 6px
 .sub{color:var(--muted);font-size:16px;max-width:760px}
 .meta-row{display:flex;flex-wrap:wrap;gap:18px;margin-top:16px;font-family:var(--mono);font-size:14px;color:var(--dim)}
 .meta-row span b{color:var(--muted)}
-nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 34px}
-nav.toc a{font-family:var(--mono);font-size:14px;text-transform:uppercase;letter-spacing:.4px;padding:7px 12px;border:1px solid var(--border2);border-radius:3px;text-decoration:none;color:var(--muted);background:var(--panel)}
-nav.toc a:hover{color:var(--text);border-color:var(--weapons)}
+/* guide buttons: each takes its own section's color as its background */
+nav.toc{display:flex;flex-wrap:wrap;gap:7px;margin:22px 0 30px}
+nav.toc a{font-family:var(--mono);font-size:13.5px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;padding:10px 12px;border:1px solid transparent;border-radius:4px;text-decoration:none;color:var(--bg);background:var(--dim);
+  transition:filter .16s ease,transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s ease}
+nav.toc a:hover{filter:brightness(1.3);transform:translateY(-3px) scale(1.045);box-shadow:0 6px 16px rgba(0,0,0,.5)}
+nav.toc a:active{transform:translateY(-1px) scale(1.01);box-shadow:0 2px 6px rgba(0,0,0,.5)}
+@media (prefers-reduced-motion:reduce){
+  nav.toc a{transition:filter .16s ease}
+  nav.toc a:hover,nav.toc a:active{transform:none}
+}
+nav.toc a.t-systemic{background:var(--systemic)}
+nav.toc a.t-weapons{background:var(--weapons)}
+nav.toc a.t-vehicles{background:var(--vehicles)}
+nav.toc a.t-gadgets{background:var(--gadgets)}
+nav.toc a.t-maps{background:var(--maps)}
+nav.toc a.t-redsec{background:var(--redsec)}
+nav.toc a.t-progression{background:var(--progression)}
+/* the REDSEC wordmark is red by default, which would vanish on the red button */
+nav.toc a.t-redsec b.rs{color:var(--bg) !important}
 h2.cat{font-family:var(--mono);font-size:21px;text-transform:uppercase;letter-spacing:.6px;margin:52px 0 4px;padding-bottom:10px;border-bottom:2px solid var(--border2);display:flex;align-items:center;gap:10px}
 h2.cat .dot{width:10px;height:10px;border-radius:2px;display:inline-block}
 h2.cat.weapons{color:var(--weapons)} h2.cat.weapons .dot{background:var(--weapons)}
@@ -77,8 +104,8 @@ tr:last-child td{border-bottom:none}
 tr:nth-child(even) td{background:rgba(255,255,255,0.045)}
 td.num{font-family:var(--mono);color:var(--text);white-space:nowrap}
 td.item{color:var(--text);font-weight:600}
-.delta-down{color:#7bbf6a}
-.delta-up{color:#e0645a}
+.delta-down,td.num.delta-down{color:#7bbf6a}
+.delta-up,td.num.delta-up{color:#e0645a}
 .src{font-size:13.5px;font-family:var(--mono);color:var(--dim);margin-top:10px}
 .src a{color:var(--vehicles);text-decoration:none}
 .src a:hover{text-decoration:underline}
@@ -107,6 +134,11 @@ mark.hl{background:var(--weapons);color:#1a1400;padding:0 1px;border-radius:2px}
 .suggestions .sug-item .sug-cat{color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;border:1px solid var(--border2);border-radius:8px;padding:1px 7px}
 .suggestions .sug-item.active .sug-cat{border-color:var(--weapons);color:var(--weapons)}
 .suggestions .sug-empty{padding:10px 14px;color:var(--dim);font-size:14.5px;font-style:italic}
+.suggestions .sug-head{padding:7px 14px 4px;font-family:var(--mono);font-size:11px;text-transform:uppercase;
+  letter-spacing:.6px;color:var(--dim);background:rgba(0,0,0,.18);border-bottom:1px solid var(--border)}
+.suggestions .sug-item.sug-goto .sug-term::after{content:"\2192";color:var(--dim);margin-left:8px}
+.suggestions .sug-item.sug-goto:hover .sug-term::after,
+.suggestions .sug-item.sug-goto.active .sug-term::after{color:var(--weapons)}
 
 /* nested "everything else" sub-sections */
 details.subdetail{margin-top:16px;border:1px dashed var(--border2);border-radius:5px;background:rgba(255,255,255,0.015)}
@@ -126,11 +158,12 @@ ul.plain.small li b{color:var(--text);font-weight:600}
 .tag.tag-systemic{color:var(--systemic);border-color:var(--systemic)}
 .tag.tag-maps{color:var(--maps);border-color:var(--maps)}
 .tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
-.tag.tag-progression{color:#9aa89e;border-color:#3a463d}
+.tag.tag-progression{color:var(--progression);border-color:#3a463d}
 
-/* <b class="rs">REDSEC</b> word flag, wherever it appears in body text */
-b.rs{color:#ff5c5c !important;font-weight:800}
-.sug-cat.redsec{color:#ff5c5c;border-color:#ff5c5c}
+/* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
+   Red now means REDSEC and nothing else: the Systemic section took the teal. */
+b.rs{color:var(--redsec) !important;font-weight:800}
+.sug-cat.redsec{color:var(--redsec);border-color:var(--redsec)}
 
 .feedback-btn{
   display:inline-flex;align-items:center;gap:6px;
@@ -143,6 +176,65 @@ b.rs{color:#ff5c5c !important;font-weight:800}
 .feedback-btn:hover{color:var(--text);border-color:var(--weapons)}
 /* moved off the element's style attribute so the mobile rules below can override it */
 #kofi-fixed{position:fixed;bottom:18px;right:18px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+
+/* ==================== database tree ====================
+   The sidebar sits OUTSIDE .wrap on purpose: .wrap's direct children are walked
+   by the search script to build its category groups, so nothing may be added to
+   it. .layout is the flex parent; .wrap keeps its own max-width and centering. */
+.layout{display:flex;align-items:flex-start}
+.layout>.wrap{flex:1 1 auto;min-width:0}
+.tree{flex:0 0 268px;position:sticky;top:0;height:100vh;overflow-y:auto;overscroll-behavior:contain;
+      background:var(--panel);border-right:1px solid var(--border);padding:20px 0 40px}
+/* sidebar masthead: the site icon alone, linking home. No wordmark, so the
+   img carries the accessible name instead of adjacent text. */
+.tree .tree-brand{display:block;padding:0 16px 16px;margin-bottom:8px;
+      border-bottom:1px solid var(--border);text-decoration:none;line-height:0}
+.tree .tree-brand img{width:48px;height:48px;border-radius:6px;display:block;
+      transition:transform .15s ease,filter .15s ease}
+.tree .tree-brand:hover img{transform:scale(1.06);filter:brightness(1.15)}
+/* a branch that is a plain link rather than an expandable node */
+.tree a.branch-link{display:flex;align-items:center;gap:8px;padding:9px 16px;font-family:var(--mono);
+      font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;text-decoration:none}
+.tree a.branch-link::before{content:"\25C2";width:11px;font-size:12px;font-weight:400;opacity:.8}
+.tree a.branch-link:hover{background:rgba(255,255,255,.045)}
+.tree a.branch-link[aria-current="page"]{background:rgba(255,255,255,.07)}
+.tree a.branch-link.b-patchnotes{color:var(--patchnotes)}
+.tree details{background:none;border:none;border-radius:0;margin:0;overflow:visible}
+.tree summary{padding:9px 16px;font-family:var(--mono);font-size:14px;text-transform:uppercase;
+      letter-spacing:.4px;gap:8px;color:var(--muted)}
+.tree summary::before{content:"\25B8";color:var(--dim);width:11px;font-weight:400;font-size:12px}
+.tree details[open]>summary::before{content:"\25BE"}
+.tree summary:hover{color:var(--text)}
+/* Bold, matching the subcategory rows below, so the whole tree reads as
+   label -> label -> item rather than the branches receding into their leaves. */
+.tree .branch>summary,.tree a.branch-link{font-weight:700;font-size:14.5px;letter-spacing:.4px}
+.tree .branch.b-weapons>summary{color:var(--weapons)}
+.tree .branch.b-attachments>summary{color:var(--weapons)}
+.tree .branch.b-gadgets>summary{color:var(--gadgets)}
+.tree .branch.b-vehicles>summary{color:var(--vehicles)}
+.tree .branch.b-classes>summary{color:var(--systemic)}
+.tree .branch.b-maps>summary{color:var(--maps)}
+.tree .branch.b-modes>summary{color:var(--maps)}
+/* Subcategories are labels, the leaves under them are items. They sit at a smaller size than
+   the leaves, so weight and brightness carry that distinction instead. Unlike the branch rows
+   above, these are sans and mixed-case, so bold reads cleanly here. */
+.tree .sub>summary{padding-left:32px;font-size:14px;text-transform:none;letter-spacing:0;
+      font-family:var(--sans);font-weight:700;color:var(--text)}
+.tree .sub.empty>summary{color:var(--dim);font-weight:600;cursor:default;list-style:none}
+.tree .sub.empty>summary::before{content:"\00B7";color:var(--dim)}
+.tree .sub.empty>summary .cnt{display:none}
+.tree summary .cnt{margin-left:auto;font-size:12px;color:var(--dim);font-family:var(--mono)}
+.tree a.leaf{display:block;padding:7px 16px 7px 46px;font-size:15.5px;color:var(--muted);
+      text-decoration:none;border-left:2px solid transparent}
+.tree a.leaf:hover{color:var(--text);background:rgba(255,255,255,.045)}
+.tree a.leaf[aria-current="page"]{color:var(--text);background:rgba(255,255,255,.06);border-left-color:var(--weapons)}
+.tree .leaf-none{padding:4px 16px 8px 46px;font-size:14px;color:var(--dim);font-style:italic}
+
+/* mobile drawer, CSS-only so the tree still opens with JS disabled */
+#treeToggle{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
+      clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.treeBtn{display:none}
+.treeScrim{display:none}
 
 /* ==================== responsive ====================
    Additive and media-gated. At >=1101px the page renders as it did before. */
@@ -249,6 +341,22 @@ html{-webkit-text-size-adjust:100%}
   .feedback-btn{min-height:44px;padding:11px 16px}
 }
 
+/* ---- tree becomes an off-canvas drawer ---- */
+@media (max-width:900px){
+  .tree{position:fixed;top:0;left:0;bottom:0;width:284px;height:100%;z-index:70;
+        transform:translateX(-100%);transition:transform .22s ease;box-shadow:2px 0 24px rgba(0,0,0,.5)}
+  #treeToggle:checked ~ .layout .tree{transform:none}
+  .treeScrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:65;
+        opacity:0;pointer-events:none;transition:opacity .22s ease}
+  #treeToggle:checked ~ .treeScrim{opacity:1;pointer-events:auto}
+  .treeBtn{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin:14px 0 0;padding:0 16px;
+        font-family:var(--mono);font-size:14px;text-transform:uppercase;letter-spacing:.4px;
+        color:var(--muted);background:var(--panel);border:1px solid var(--border2);border-radius:4px;cursor:pointer}
+  .treeBtn:hover{color:var(--text);border-color:var(--weapons)}
+  .tree a.leaf{padding-top:9px;padding-bottom:9px}
+  .tree summary{padding-top:11px;padding-bottom:11px}
+}
+
 /* ---- 320-380px ---- */
 @media (max-width:380px){
   .wrap{padding:0 12px 72px}
@@ -264,14 +372,238 @@ html{-webkit-text-size-adjust:100%}
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2ed16d9d96844272bd6103453ef7aefc"}'></script><!-- End Cloudflare Web Analytics -->
 </head>
 <body>
+<input type="checkbox" id="treeToggle" aria-label="Toggle database navigation">
+<label for="treeToggle" class="treeScrim" aria-hidden="true"></label>
+
+<div class="layout">
+
+<aside class="tree" aria-label="Database navigation">
+<!-- TREE:START -->
+<nav class="tree-nav" aria-label="Item database">
+<a class="tree-brand" href="/" title="BF6 Balance Log"><img src="/icon-192.png" alt="BF6 Balance Log, home" width="48" height="48"></a>
+<a class="branch-link b-patchnotes" href="/" aria-current="page">Patch Notes</a>
+<details class="branch b-weapons">
+<summary>Weapons<span class="cnt">68</span></summary>
+<details class="sub">
+<summary>Assault Rifles<span class="cnt">11</span></summary>
+<a class="leaf" href="/weapons/assault-rifles/m433/">M433</a>
+<a class="leaf" href="/weapons/assault-rifles/b36a4/">B36A4</a>
+<a class="leaf" href="/weapons/assault-rifles/sor-556-mk2/">SOR-556 MK2</a>
+<a class="leaf" href="/weapons/assault-rifles/ak4d/">AK4D</a>
+<a class="leaf" href="/weapons/assault-rifles/tr-7/">TR-7</a>
+<a class="leaf" href="/weapons/assault-rifles/kord-6p67/">KORD 6P67</a>
+<a class="leaf" href="/weapons/assault-rifles/nvo-228e/">NVO-228E</a>
+<a class="leaf" href="/weapons/assault-rifles/l85a3/">L85A3</a>
+<a class="leaf" href="/weapons/assault-rifles/vcr-2/">VCR-2</a>
+<a class="leaf" href="/weapons/assault-rifles/m16a4/">M16A4</a>
+<a class="leaf" href="/weapons/assault-rifles/ef88/">EF88</a>
+</details>
+<details class="sub">
+<summary>Carbines<span class="cnt">9</span></summary>
+<a class="leaf" href="/weapons/carbines/m4a1/">M4A1</a>
+<a class="leaf" href="/weapons/carbines/m277/">M277</a>
+<a class="leaf" href="/weapons/carbines/ak-205/">AK-205</a>
+<a class="leaf" href="/weapons/carbines/m417-a2/">M417 A2</a>
+<a class="leaf" href="/weapons/carbines/grt-bc/">GRT-BC</a>
+<a class="leaf" href="/weapons/carbines/qbz-192/">QBZ-192</a>
+<a class="leaf" href="/weapons/carbines/sg-553r/">SG 553R</a>
+<a class="leaf" href="/weapons/carbines/sor-300sc/">SOR-300SC</a>
+<a class="leaf" href="/weapons/carbines/brod-3/">BROD 3</a>
+</details>
+<details class="sub">
+<summary>SMGs<span class="cnt">10</span></summary>
+<a class="leaf" href="/weapons/smgs/sgx/">SGX</a>
+<a class="leaf" href="/weapons/smgs/pw5a3/">PW5A3</a>
+<a class="leaf" href="/weapons/smgs/pw7a2/">PW7A2</a>
+<a class="leaf" href="/weapons/smgs/umg-40/">UMG-40</a>
+<a class="leaf" href="/weapons/smgs/usg-90/">USG-90</a>
+<a class="leaf" href="/weapons/smgs/kv9/">KV9</a>
+<a class="leaf" href="/weapons/smgs/scw-10/">SCW-10</a>
+<a class="leaf" href="/weapons/smgs/sl9/">SL9</a>
+<a class="leaf" href="/weapons/smgs/cz3a1/">CZ3A1</a>
+<a class="leaf" href="/weapons/smgs/pp-19/">PP-19</a>
+</details>
+<details class="sub">
+<summary>LMGs<span class="cnt">10</span></summary>
+<a class="leaf" href="/weapons/lmgs/l110/">L110</a>
+<a class="leaf" href="/weapons/lmgs/drs-iar/">DRS-IAR</a>
+<a class="leaf" href="/weapons/lmgs/m60/">M/60</a>
+<a class="leaf" href="/weapons/lmgs/rpkm/">RPKM</a>
+<a class="leaf" href="/weapons/lmgs/m123k/">M123K</a>
+<a class="leaf" href="/weapons/lmgs/m250/">M250</a>
+<a class="leaf" href="/weapons/lmgs/kts100-mk8/">KTS100 MK8</a>
+<a class="leaf" href="/weapons/lmgs/m240l/">M240L</a>
+<a class="leaf" href="/weapons/lmgs/m121-a2/">M121 A2</a>
+<a class="leaf" href="/weapons/lmgs/rpk-74m/">RPK-74M</a>
+</details>
+<details class="sub">
+<summary>DMRs<span class="cnt">6</span></summary>
+<a class="leaf" href="/weapons/dmrs/m39-emr/">M39 EMR</a>
+<a class="leaf" href="/weapons/dmrs/lmr27/">LMR27</a>
+<a class="leaf" href="/weapons/dmrs/svk-86/">SVK-8.6</a>
+<a class="leaf" href="/weapons/dmrs/svdm/">SVDM</a>
+<a class="leaf" href="/weapons/dmrs/grt-cps/">GRT-CPS</a>
+<a class="leaf" href="/weapons/dmrs/vssm/">VSSM</a>
+</details>
+<details class="sub">
+<summary>Sniper Rifles<span class="cnt">5</span></summary>
+<a class="leaf" href="/weapons/sniper-rifles/m2010-esr/">M2010 ESR</a>
+<a class="leaf" href="/weapons/sniper-rifles/sv-98/">SV-98</a>
+<a class="leaf" href="/weapons/sniper-rifles/psr/">PSR</a>
+<a class="leaf" href="/weapons/sniper-rifles/mini-scout/">Mini Scout</a>
+<a class="leaf" href="/weapons/sniper-rifles/l115/">L115</a>
+</details>
+<details class="sub">
+<summary>Shotguns<span class="cnt">4</span></summary>
+<a class="leaf" href="/weapons/shotguns/m87a1/">M87A1</a>
+<a class="leaf" href="/weapons/shotguns/m1014/">M1014</a>
+<a class="leaf" href="/weapons/shotguns/18-5ks-k/">18.5KS-K</a>
+<a class="leaf" href="/weapons/shotguns/db-12/">DB-12</a>
+</details>
+<details class="sub">
+<summary>Sidearms<span class="cnt">7</span></summary>
+<a class="leaf" href="/weapons/sidearms/p18/">P18</a>
+<a class="leaf" href="/weapons/sidearms/es-57/">ES 5.7</a>
+<a class="leaf" href="/weapons/sidearms/m45a1/">M45A1</a>
+<a class="leaf" href="/weapons/sidearms/m44/">M44</a>
+<a class="leaf" href="/weapons/sidearms/ggh-22/">GGH-22</a>
+<a class="leaf" href="/weapons/sidearms/m357-trait/">M357 Trait</a>
+<a class="leaf" href="/weapons/sidearms/vz-61/">VZ. 61</a>
+</details>
+<details class="sub">
+<summary>Melee<span class="cnt">6</span></summary>
+<a class="leaf" href="/weapons/melee/combat-knife/">Combat Knife</a>
+<a class="leaf" href="/weapons/melee/sledgehammer/">Sledgehammer</a>
+<a class="leaf" href="/weapons/melee/hunting-knife/">Hunting Knife</a>
+<a class="leaf" href="/weapons/melee/ice-axe/">Ice Axe</a>
+<a class="leaf" href="/weapons/melee/serrated-blade/">Serrated Blade</a>
+<a class="leaf" href="/weapons/melee/eod-bot-arm/">EOD Bot Arm</a>
+</details>
+</details>
+<details class="branch b-attachments">
+<summary>Attachments<span class="cnt">0</span></summary>
+<details class="sub empty">
+<summary>Optics<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Barrels<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Underbarrel<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Magazines<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Ammunition<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+</details>
+<details class="branch b-gadgets">
+<summary>Gadgets<span class="cnt">41</span></summary>
+<details class="sub">
+<summary>Throwables<span class="cnt">9</span></summary>
+<a class="leaf" href="/gadgets/throwables/m67/">M67</a>
+<a class="leaf" href="/gadgets/throwables/mk141/">MK 141 Mod 0</a>
+<a class="leaf" href="/gadgets/throwables/m84/">M84 Flash Grenade</a>
+<a class="leaf" href="/gadgets/throwables/scg-24/">SCG-24 Anti-Vehicle Grenade</a>
+<a class="leaf" href="/gadgets/throwables/v40/">V40 Mini Frag Grenade</a>
+<a class="leaf" href="/gadgets/throwables/m18/">M18 Smoke Grenade</a>
+<a class="leaf" href="/gadgets/throwables/an-m14/">AN/M14 Incendiary Grenade</a>
+<a class="leaf" href="/gadgets/throwables/mtn-55/">Throwable Proximity Detector MTN-55</a>
+<a class="leaf" href="/gadgets/throwables/steel-wing/">Throwing Knife Steel Wing</a>
+</details>
+<details class="sub">
+<summary>Launchers<span class="cnt">11</span></summary>
+<a class="leaf" href="/gadgets/launchers/x95-bre/">X95 BRE</a>
+<a class="leaf" href="/gadgets/launchers/m320a1-he/">M320A1 HE</a>
+<a class="leaf" href="/gadgets/launchers/m320a1-thrm/">M320A1 THRM</a>
+<a class="leaf" href="/gadgets/launchers/ss26/">SS26</a>
+<a class="leaf" href="/gadgets/launchers/mbt-law/">MBT-LAW</a>
+<a class="leaf" href="/gadgets/launchers/slm-93a/">SLM-93A Spire</a>
+<a class="leaf" href="/gadgets/launchers/rpg-7v2/">RPG-7V2</a>
+<a class="leaf" href="/gadgets/launchers/m136-at/">M136 AT</a>
+<a class="leaf" href="/gadgets/launchers/9k38-igla/">9K38 Igla</a>
+<a class="leaf" href="/gadgets/launchers/m320a1-smk/">M320A1 SMK</a>
+<a class="leaf" href="/gadgets/launchers/sich-g1-wp/">SICH G1 WP</a>
+</details>
+<details class="sub">
+<summary>Deployables<span class="cnt">14</span></summary>
+<a class="leaf" href="/gadgets/deployables/tarantula-alx/">Tarantula ALX</a>
+<a class="leaf" href="/gadgets/deployables/qlink-6/">QLINK 6</a>
+<a class="leaf" href="/gadgets/deployables/m15/">M15</a>
+<a class="leaf" href="/gadgets/deployables/m4a1-slam/">M4A1 SLAM</a>
+<a class="leaf" href="/gadgets/deployables/ptkm-1r/">PTKM-1R</a>
+<a class="leaf" href="/gadgets/deployables/css-bundle/">CSS Bundle</a>
+<a class="leaf" href="/gadgets/deployables/gpdis/">GPDIS</a>
+<a class="leaf" href="/gadgets/deployables/mp-aps/">MP-APS</a>
+<a class="leaf" href="/gadgets/deployables/lwcms/">LWCMS</a>
+<a class="leaf" href="/gadgets/deployables/maxguard-900/">Maxguard 900</a>
+<a class="leaf" href="/gadgets/deployables/goliath-compact/">Goliath Compact</a>
+<a class="leaf" href="/gadgets/deployables/m18a1/">M18A1</a>
+<a class="leaf" href="/gadgets/deployables/field-dummy-25/">Field Dummy No.25</a>
+<a class="leaf" href="/gadgets/deployables/c-4/">C-4 Explosives</a>
+</details>
+<details class="sub">
+<summary>Tools<span class="cnt">7</span></summary>
+<a class="leaf" href="/gadgets/tools/csb-iv/">EOD Bot</a>
+<a class="leaf" href="/gadgets/tools/powerpulse/">Defibrillator</a>
+<a class="leaf" href="/gadgets/tools/ltlm-ii/">LTLM II</a>
+<a class="leaf" href="/gadgets/tools/xfgm-6d/">XFGM-6D</a>
+<a class="leaf" href="/gadgets/tools/trcrv2/">TRCRV2</a>
+<a class="leaf" href="/gadgets/tools/dgmk4/">DGMK4</a>
+<a class="leaf" href="/gadgets/tools/manet-dis-5/">MANET-DIS 5</a>
+</details>
+</details>
+<details class="branch b-vehicles">
+<summary>Vehicles<span class="cnt">0</span></summary>
+<details class="sub empty">
+<summary>Ground<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Air<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Naval<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Transport<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+</details>
+<details class="branch b-classes">
+<summary>Classes<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="branch b-maps">
+<summary>Maps<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="branch b-modes">
+<summary>Modes<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+</nav>
+<!-- TREE:END -->
+</aside>
+
 <div class="wrap">
+
+<label for="treeToggle" class="treeBtn">&#9776; Browse database</label>
 
 <header class="top">
 <div class="meta-row"><span><b>SCOPE</b> Weapon / Vehicle / Gadget / Mode balance changes shown in full; bug fixes, UI, cosmetics, audio, and Portal-only items are condensed into a collapsed "Everything else" section per patch, tucked away but searchable</span></div>
 <h1>Battlefield 6: Balance Change Log</h1>
 <p class="sub">Every balance-relevant change from every official Battlefield 6 Game Update, launch (Oct 2025) through Update 1.4.1.0 (Jul 2026), pulled from EA's own patch note pages and organized by category. Numbers are stated exactly as published. Dev-team commentary is paraphrased; nothing is invented.</p>
 <div class="meta-row">
-<span><b>Patches covered</b> 1.0.1.0 – 1.4.1.0 (12 updates)</span>
+<span><b>Patches covered</b> 1.0.1.0 – 1.4.1.0 (14 updates)</span>
 <span><b>Window</b> Oct 9, 2025 – Jul 16, 2026</span>
 <span><b>Compiled</b> Jul 29, 2026</span>
 </div>
@@ -288,34 +620,36 @@ html{-webkit-text-size-adjust:100%}
 <div id="searchSuggestions" class="suggestions"></div>
 </div>
 
-<div class="disclaimer">Source for every entry below is Electronic Arts' official Battlefield 6 "Game Updates" pages (ea.com / forums.ea.com). Each patch block links to its source. Wording of dev notes is paraphrased in my own words per standard citation practice; exact figures are reproduced as published since numeric specs aren't creative text.</div>
+<div class="disclaimer">Source for every entry below is Electronic Arts' official Battlefield 6 "Game Updates" pages on ea.com. Each patch block links to its source. Wording of dev notes is paraphrased in my own words per standard citation practice; exact figures are reproduced as published since numeric specs aren't creative text.</div>
+
+<nav class="toc">
+<a class="t-systemic" href="#systemic">Systemic Gunplay</a>
+<a class="t-weapons" href="#weapons">Individual Weapons</a>
+<a class="t-vehicles" href="#vehicles">Vehicles</a>
+<a class="t-gadgets" href="#gadgets">Gadgets</a>
+<a class="t-maps" href="#maps">Maps &amp; Mode Balance</a>
+<a class="t-redsec" href="#redsec"><b class="rs">REDSEC</b></a>
+<a class="t-progression" href="#progression">Progression &amp; Economy</a>
+</nav>
 
 <h2 class="cat" style="color:var(--text);border-color:var(--border2)">Patch Index</h2>
 <table class="indexTable">
 <tr><th>Version</th><th>Posted</th><th>Live</th><th>Headline</th><th>Link</th></tr>
 <tr><td>1.4.1.0</td><td>Jul 16, 2026</td><td>Jul 21, 2026</td><td>Season 4: Pacific Front (naval combat)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-1-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
-<tr><td>1.3.3.0</td><td>Jun 26, 2026</td><td>Jun 30, 2026</td><td>Wet Work Event (major gunplay overhaul)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-3-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
+<tr><td>1.3.3.0</td><td>Jun 26, 2026</td><td>Jun 30, 2026</td><td>Season 3: High-Value Target (major gunplay overhaul)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-3-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
 <tr><td>1.3.2.0</td><td>Jun 5, 2026</td><td>Jun 9, 2026</td><td>Season 3: Blastpoint (Cairo Bazaar)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-2-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
 <tr><td>1.3.1.5</td><td>May 22, 2026</td><td>May 26, 2026</td><td>Quality-of-Life patch (no balance changes)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-5" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
-<tr><td>1.2.3.0</td><td>Apr 14, 2026</td><td>Apr 14, 2026</td><td>Operation Augur</td><td><a href="https://forums.ea.com/blog/battlefield-game-info-hub-en/battlefield-6-game-update-1-2-3-0/13320217" target="_blank" rel="noopener">forums.ea.com ↗</a></td></tr>
+<tr><td>1.3.1.0</td><td>May 8, 2026</td><td>May 12, 2026</td><td>Season 3: Warlords: Supremacy launch (vehicle overhaul)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
+<tr><td>1.2.3.5</td><td>May 4, 2026</td><td>May 5, 2026</td><td>Quality-of-Life patch (no balance changes)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-5" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
+<tr><td>1.2.3.0</td><td>Apr 10, 2026</td><td>Apr 14, 2026</td><td>Season 2: Hunter / Prey (Operation Augur)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">forums.ea.com ↗</a></td></tr>
 <tr><td>1.2.2.0</td><td>Mar 13, 2026</td><td>Mar 17, 2026</td><td>Nightfall content drop (Hagental Base)</td><td><a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
-<tr><td>1.2.1.0</td><td>Feb 13, 2026</td><td>Feb 17, 2026</td><td>Season 2: Nightfall launch</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-1-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
+<tr><td>1.2.1.0</td><td>Feb 13, 2026</td><td>Feb 17, 2026</td><td>Season 2: Extreme Measures launch</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-1-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
 <tr><td>1.1.3.5</td><td>Jan 16, 2026</td><td>Jan 20, 2026</td><td>Small QoL / jet &amp; melee pass</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-5" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
 <tr><td>1.1.3.0</td><td>Dec 5, 2025</td><td>Dec 5, 2025</td><td>Winter Offensive</td><td><a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
 <tr><td>1.1.2.0</td><td>Nov 17, 2025</td><td>Nov 18, 2025</td><td>California Resistance (Eastwood)</td><td><a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
-<tr><td>1.1.1.0</td><td>Oct 24, 2025</td><td>Oct 28, 2025</td><td>Season 1 launch</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-update-1-1-1-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
-<tr><td>1.0.1.0</td><td>Oct 9, 2025</td><td>Oct 10, 2025</td><td>Launch / Day-One patch</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-update-notes-1-0-1-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
+<tr><td>1.1.1.0</td><td>Oct 24, 2025</td><td>Oct 28, 2025</td><td>Season 1: Rogue Ops launch</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-update-1-1-1-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
+<tr><td>1.0.1.0</td><td>Oct 9, 2025</td><td>Oct 9, 2025</td><td>Launch / Day-One patch</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-update-notes-1-0-1-0" target="_blank" rel="noopener">ea.com ↗</a></td></tr>
 </table>
-
-<nav class="toc">
-<a href="#systemic">Systemic Gunplay</a>
-<a href="#weapons">Individual Weapons</a>
-<a href="#vehicles">Vehicles</a>
-<a href="#gadgets">Gadgets</a>
-<a href="#maps">Maps &amp; Mode Balance</a>
-<a href="#redsec"><b class="rs">REDSEC</b></a>
-<a href="#progression">Progression &amp; Economy</a>
-</nav>
 
 <h2 class="cat systemic" id="systemic"><span class="dot"></span>Systemic Gunplay: TTK, Dispersion, Recoil, Ballistics</h2>
 <p class="cat-note">Game-wide formulas that affect every weapon of a given class, rather than a single gun. These are the changes with the broadest player-facing impact.</p>
@@ -353,10 +687,10 @@ html{-webkit-text-size-adjust:100%}
 <table>
 <caption>Bolt-action rifle sweet-spot range (one-shot-kill window)</caption>
 <tr><th>Weapon</th><th>Before</th><th>After</th></tr>
-<tr><td class="item">L115</td><td class="num">120–175m</td><td class="num delta-down">100–133m</td></tr>
-<tr><td class="item">M2010 ESR</td><td class="num">75–120m</td><td class="num delta-down">75–100m</td></tr>
-<tr><td class="item">PSR</td><td class="num">100–150m</td><td class="num delta-down">90–120m</td></tr>
-<tr><td class="item">SV-98</td><td class="num">54–90m</td><td class="num delta-down">54–75m</td></tr>
+<tr data-item="l115"><td class="item">L115</td><td class="num">120–175m</td><td class="num delta-down">100–133m</td></tr>
+<tr data-item="m2010-esr"><td class="item">M2010 ESR</td><td class="num">75–120m</td><td class="num delta-down">75–100m</td></tr>
+<tr data-item="psr"><td class="item">PSR</td><td class="num">100–150m</td><td class="num delta-down">90–120m</td></tr>
+<tr data-item="sv-98"><td class="item">SV-98</td><td class="num">54–90m</td><td class="num delta-down">54–75m</td></tr>
 </table>
 
 <table>
@@ -368,99 +702,99 @@ html{-webkit-text-size-adjust:100%}
 <table>
 <caption>Muzzle velocity: reduced on 47 weapons (KV9 increased)</caption>
 <tr><th>Weapon</th><th>Before</th><th>After</th><th>Δ</th></tr>
-<tr><td>ES 5.7</td><td class="num">650 m/s</td><td class="num">510 m/s</td><td class="num delta-down">−21.54%</td></tr>
-<tr><td>LMR27</td><td class="num">880 m/s</td><td class="num">800 m/s</td><td class="num delta-down">−9.09%</td></tr>
-<tr><td>SCW-10</td><td class="num">428 m/s</td><td class="num">398 m/s</td><td class="num delta-down">−7.01%</td></tr>
-<tr><td>SG 553R</td><td class="num">519 m/s</td><td class="num">483 m/s</td><td class="num delta-down">−6.94%</td></tr>
-<tr><td>TR7</td><td class="num">648 m/s</td><td class="num">604 m/s</td><td class="num delta-down">−6.79%</td></tr>
-<tr><td>NVO-228E</td><td class="num">671 m/s</td><td class="num">626 m/s</td><td class="num delta-down">−6.71%</td></tr>
-<tr><td>M417A2</td><td class="num">600 m/s</td><td class="num">560 m/s</td><td class="num delta-down">−6.67%</td></tr>
-<tr><td>M121 A2</td><td class="num">600 m/s</td><td class="num">560 m/s</td><td class="num delta-down">−6.67%</td></tr>
+<tr data-item="es-57"><td>ES 5.7</td><td class="num">650 m/s</td><td class="num">510 m/s</td><td class="num delta-down">−21.54%</td></tr>
+<tr data-item="lmr27"><td>LMR27</td><td class="num">880 m/s</td><td class="num">800 m/s</td><td class="num delta-down">−9.09%</td></tr>
+<tr data-item="scw-10"><td>SCW-10</td><td class="num">428 m/s</td><td class="num">398 m/s</td><td class="num delta-down">−7.01%</td></tr>
+<tr data-item="sg-553r"><td>SG 553R</td><td class="num">519 m/s</td><td class="num">483 m/s</td><td class="num delta-down">−6.94%</td></tr>
+<tr data-item="tr-7"><td>TR7</td><td class="num">648 m/s</td><td class="num">604 m/s</td><td class="num delta-down">−6.79%</td></tr>
+<tr data-item="nvo-228e"><td>NVO-228E</td><td class="num">671 m/s</td><td class="num">626 m/s</td><td class="num delta-down">−6.71%</td></tr>
+<tr data-item="m417-a2"><td>M417A2</td><td class="num">600 m/s</td><td class="num">560 m/s</td><td class="num delta-down">−6.67%</td></tr>
+<tr data-item="m121-a2"><td>M121 A2</td><td class="num">600 m/s</td><td class="num">560 m/s</td><td class="num delta-down">−6.67%</td></tr>
 <tr><td>CZ3A1</td><td class="num">360 m/s</td><td class="num">336 m/s</td><td class="num delta-down">−6.67%</td></tr>
-<tr><td>M240L</td><td class="num">630 m/s</td><td class="num">590 m/s</td><td class="num delta-down">−6.35%</td></tr>
-<tr><td>M4A1</td><td class="num">630 m/s</td><td class="num">590 m/s</td><td class="num delta-down">−6.35%</td></tr>
-<tr><td>VCR-2</td><td class="num">704 m/s</td><td class="num">660 m/s</td><td class="num delta-down">−6.25%</td></tr>
-<tr><td>SOR-300SC</td><td class="num">563 m/s</td><td class="num">528 m/s</td><td class="num delta-down">−6.22%</td></tr>
-<tr><td>GRT-BC</td><td class="num">599 m/s</td><td class="num">563 m/s</td><td class="num delta-down">−6.01%</td></tr>
-<tr><td>RPKM</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-down">−5.97%</td></tr>
-<tr><td>M123K</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-down">−5.97%</td></tr>
-<tr><td>M433</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-down">−5.97%</td></tr>
-<tr><td>SGX</td><td class="num">402 m/s</td><td class="num">378 m/s</td><td class="num delta-down">−5.97%</td></tr>
-<tr><td>QBZ-192</td><td class="num">644 m/s</td><td class="num">608 m/s</td><td class="num delta-down">−5.59%</td></tr>
-<tr><td>DRS-IAR</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
-<tr><td>M/60</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
-<tr><td>AK4D</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
-<tr><td>PW5A3</td><td class="num">432 m/s</td><td class="num">408 m/s</td><td class="num delta-down">−5.56%</td></tr>
-<tr><td>M16A4</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
-<tr><td>SVK-8.6</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
-<tr><td>PSR</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
-<tr><td>SV-98</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
-<tr><td>L115</td><td class="num">703 m/s</td><td class="num">664 m/s</td><td class="num delta-down">−5.55%</td></tr>
-<tr><td>L110</td><td class="num">780 m/s</td><td class="num">740 m/s</td><td class="num delta-down">−5.13%</td></tr>
-<tr><td>B36A4</td><td class="num">780 m/s</td><td class="num">740 m/s</td><td class="num delta-down">−5.13%</td></tr>
-<tr><td>M277</td><td class="num">624 m/s</td><td class="num">592 m/s</td><td class="num delta-down">−5.13%</td></tr>
-<tr><td>PP-19</td><td class="num">468 m/s</td><td class="num">444 m/s</td><td class="num delta-down">−5.13%</td></tr>
-<tr><td>M39 EMR</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
-<tr><td>SVDM</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
-<tr><td>GRT-CPS</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
-<tr><td>M2010 ESR</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
-<tr><td>Mini Scout</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
-<tr><td>M250</td><td class="num">760 m/s</td><td class="num">724 m/s</td><td class="num delta-down">−4.74%</td></tr>
+<tr data-item="m240l"><td>M240L</td><td class="num">630 m/s</td><td class="num">590 m/s</td><td class="num delta-down">−6.35%</td></tr>
+<tr data-item="m4a1"><td>M4A1</td><td class="num">630 m/s</td><td class="num">590 m/s</td><td class="num delta-down">−6.35%</td></tr>
+<tr data-item="vcr-2"><td>VCR-2</td><td class="num">704 m/s</td><td class="num">660 m/s</td><td class="num delta-down">−6.25%</td></tr>
+<tr data-item="sor-300sc"><td>SOR-300SC</td><td class="num">563 m/s</td><td class="num">528 m/s</td><td class="num delta-down">−6.22%</td></tr>
+<tr data-item="grt-bc"><td>GRT-BC</td><td class="num">599 m/s</td><td class="num">563 m/s</td><td class="num delta-down">−6.01%</td></tr>
+<tr data-item="rpkm"><td>RPKM</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-down">−5.97%</td></tr>
+<tr data-item="m123k"><td>M123K</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-down">−5.97%</td></tr>
+<tr data-item="m433"><td>M433</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-down">−5.97%</td></tr>
+<tr data-item="sgx"><td>SGX</td><td class="num">402 m/s</td><td class="num">378 m/s</td><td class="num delta-down">−5.97%</td></tr>
+<tr data-item="qbz-192"><td>QBZ-192</td><td class="num">644 m/s</td><td class="num">608 m/s</td><td class="num delta-down">−5.59%</td></tr>
+<tr data-item="drs-iar"><td>DRS-IAR</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
+<tr data-item="m60"><td>M/60</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
+<tr data-item="ak4d"><td>AK4D</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
+<tr data-item="pw5a3"><td>PW5A3</td><td class="num">432 m/s</td><td class="num">408 m/s</td><td class="num delta-down">−5.56%</td></tr>
+<tr data-item="m16a4"><td>M16A4</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
+<tr data-item="svk-86"><td>SVK-8.6</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
+<tr data-item="psr"><td>PSR</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
+<tr data-item="sv-98"><td>SV-98</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">−5.56%</td></tr>
+<tr data-item="l115"><td>L115</td><td class="num">703 m/s</td><td class="num">664 m/s</td><td class="num delta-down">−5.55%</td></tr>
+<tr data-item="l110"><td>L110</td><td class="num">780 m/s</td><td class="num">740 m/s</td><td class="num delta-down">−5.13%</td></tr>
+<tr data-item="b36a4"><td>B36A4</td><td class="num">780 m/s</td><td class="num">740 m/s</td><td class="num delta-down">−5.13%</td></tr>
+<tr data-item="m277"><td>M277</td><td class="num">624 m/s</td><td class="num">592 m/s</td><td class="num delta-down">−5.13%</td></tr>
+<tr data-item="pp-19"><td>PP-19</td><td class="num">468 m/s</td><td class="num">444 m/s</td><td class="num delta-down">−5.13%</td></tr>
+<tr data-item="m39-emr"><td>M39 EMR</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
+<tr data-item="svdm"><td>SVDM</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
+<tr data-item="grt-cps"><td>GRT-CPS</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
+<tr data-item="m2010-esr"><td>M2010 ESR</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
+<tr data-item="mini-scout"><td>Mini Scout</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
+<tr data-item="m250"><td>M250</td><td class="num">760 m/s</td><td class="num">724 m/s</td><td class="num delta-down">−4.74%</td></tr>
 <tr><td>Kord 6P67</td><td class="num">760 m/s</td><td class="num">724 m/s</td><td class="num delta-down">−4.74%</td></tr>
-<tr><td>USG-90</td><td class="num">570 m/s</td><td class="num">543 m/s</td><td class="num delta-down">−4.74%</td></tr>
-<tr><td>SL9</td><td class="num">510 m/s</td><td class="num">486 m/s</td><td class="num delta-down">−4.71%</td></tr>
-<tr><td>L85A3</td><td class="num">814 m/s</td><td class="num">778 m/s</td><td class="num delta-down">−4.42%</td></tr>
-<tr><td>UMG-40</td><td class="num">488 m/s</td><td class="num">467 m/s</td><td class="num delta-down">−4.30%</td></tr>
-<tr><td>SOR-556 Mk2</td><td class="num">800 m/s</td><td class="num">768 m/s</td><td class="num delta-down">−4.00%</td></tr>
-<tr><td>PW7A2</td><td class="num">600 m/s</td><td class="num">576 m/s</td><td class="num delta-down">−4.00%</td></tr>
+<tr data-item="usg-90"><td>USG-90</td><td class="num">570 m/s</td><td class="num">543 m/s</td><td class="num delta-down">−4.74%</td></tr>
+<tr data-item="sl9"><td>SL9</td><td class="num">510 m/s</td><td class="num">486 m/s</td><td class="num delta-down">−4.71%</td></tr>
+<tr data-item="l85a3"><td>L85A3</td><td class="num">814 m/s</td><td class="num">778 m/s</td><td class="num delta-down">−4.42%</td></tr>
+<tr data-item="umg-40"><td>UMG-40</td><td class="num">488 m/s</td><td class="num">467 m/s</td><td class="num delta-down">−4.30%</td></tr>
+<tr data-item="sor-556-mk2"><td>SOR-556 Mk2</td><td class="num">800 m/s</td><td class="num">768 m/s</td><td class="num delta-down">−4.00%</td></tr>
+<tr data-item="pw7a2"><td>PW7A2</td><td class="num">600 m/s</td><td class="num">576 m/s</td><td class="num delta-down">−4.00%</td></tr>
 <tr><td>VZ.61</td><td class="num">326 m/s</td><td class="num">313 m/s</td><td class="num delta-down">−3.99%</td></tr>
-<tr><td>AK-205</td><td class="num">737 m/s</td><td class="num">708 m/s</td><td class="num delta-down">−3.93%</td></tr>
+<tr data-item="ak-205"><td>AK-205</td><td class="num">737 m/s</td><td class="num">708 m/s</td><td class="num delta-down">−3.93%</td></tr>
 <tr><td>KTS100MK8</td><td class="num">840 m/s</td><td class="num">808 m/s</td><td class="num delta-down">−3.81%</td></tr>
-<tr><td>RPK-74M</td><td class="num">840 m/s</td><td class="num">808 m/s</td><td class="num delta-down">−3.81%</td></tr>
-<tr><td>KV9</td><td class="num">348 m/s</td><td class="num">362 m/s</td><td class="num delta-up">+4.02%</td></tr>
+<tr data-item="rpk-74m"><td>RPK-74M</td><td class="num">840 m/s</td><td class="num">808 m/s</td><td class="num delta-down">−3.81%</td></tr>
+<tr data-item="kv9"><td>KV9</td><td class="num">348 m/s</td><td class="num">362 m/s</td><td class="num delta-up">+4.02%</td></tr>
 </table>
 
 <table>
 <caption>Recoil variation (spread of recoil pattern): reduced on 37 weapons</caption>
 <tr><th>Weapon</th><th>Before</th><th>After</th><th>Δ</th></tr>
-<tr><td>TR-7</td><td class="num">47.1°</td><td class="num">40.8°</td><td class="num delta-down">−13.4%</td></tr>
-<tr><td>AK4D</td><td class="num">25.4°</td><td class="num">20.0°</td><td class="num delta-down">−21.3%</td></tr>
-<tr><td>NVO-228E</td><td class="num">36.8°</td><td class="num">28.9°</td><td class="num delta-down">−21.5%</td></tr>
-<tr><td>VCR-2</td><td class="num">64.9°</td><td class="num">50.3°</td><td class="num delta-down">−22.5%</td></tr>
-<tr><td>M433</td><td class="num">50.9°</td><td class="num">41.4°</td><td class="num delta-down">−18.7%</td></tr>
-<tr><td>M16A4</td><td class="num">46.4°</td><td class="num">37.5°</td><td class="num delta-down">−19.2%</td></tr>
-<tr><td>B36A4</td><td class="num">37.4°</td><td class="num">28.0°</td><td class="num delta-down">−25.1%</td></tr>
-<tr><td>L85A3</td><td class="num">29.4°</td><td class="num">22.8°</td><td class="num delta-down">−22.4%</td></tr>
-<tr><td>SOR-556 MK2</td><td class="num">17.3°</td><td class="num">12.7°</td><td class="num delta-down">−26.6%</td></tr>
-<tr><td>KORD 6P67</td><td class="num">35.3°</td><td class="num">28.9°</td><td class="num delta-down">−18.1%</td></tr>
-<tr><td>M417A2</td><td class="num">19.8°</td><td class="num">15.4°</td><td class="num delta-down">−22.2%</td></tr>
-<tr><td>SG 553R</td><td class="num">43.3°</td><td class="num">35.8°</td><td class="num delta-down">−17.3%</td></tr>
-<tr><td>SOR-300SC</td><td class="num">19.2°</td><td class="num">15.8°</td><td class="num delta-down">−17.7%</td></tr>
-<tr><td>M277</td><td class="num">39.4°</td><td class="num">34.4°</td><td class="num delta-down">−12.7%</td></tr>
-<tr><td>M4A1</td><td class="num">37.9°</td><td class="num">30.7°</td><td class="num delta-down">−19.0%</td></tr>
-<tr><td>GRT-BC</td><td class="num">31.2°</td><td class="num">26.1°</td><td class="num delta-down">−16.3%</td></tr>
-<tr><td>QBZ-192</td><td class="num">23.5°</td><td class="num">19.9°</td><td class="num delta-down">−15.3%</td></tr>
-<tr><td>AK-205</td><td class="num">7.8°</td><td class="num">7.4°</td><td class="num delta-down">−5.1%</td></tr>
-<tr><td>RPKM</td><td class="num">22.7°</td><td class="num">17.5°</td><td class="num delta-down">−22.9%</td></tr>
-<tr><td>DRS-IAR</td><td class="num">35.2°</td><td class="num">29.3°</td><td class="num delta-down">−16.8%</td></tr>
-<tr><td>KTS100 MK8</td><td class="num">10.9°</td><td class="num">9.5°</td><td class="num delta-down">−12.8%</td></tr>
-<tr><td>RPK-74M</td><td class="num">18.9°</td><td class="num">16.1°</td><td class="num delta-down">−14.8%</td></tr>
-<tr><td>M121 A2</td><td class="num">39.5°</td><td class="num">31.8°</td><td class="num delta-down">−19.5%</td></tr>
-<tr><td>M240L</td><td class="num">41.8°</td><td class="num">34.5°</td><td class="num delta-down">−17.5%</td></tr>
-<tr><td>M/60</td><td class="num">38.8°</td><td class="num">29.9°</td><td class="num delta-down">−22.9%</td></tr>
-<tr><td>M250</td><td class="num">39.7°</td><td class="num">35.9°</td><td class="num delta-down">−9.6%</td></tr>
-<tr><td>M123K</td><td class="num">55.9°</td><td class="num">47.7°</td><td class="num delta-down">−14.7%</td></tr>
-<tr><td>L110</td><td class="num">39.4°</td><td class="num">31.0°</td><td class="num delta-down">−21.3%</td></tr>
-<tr><td>SCW-10</td><td class="num">35.0°</td><td class="num">33.5°</td><td class="num delta-down">−4.3%</td></tr>
-<tr><td>UMG-40</td><td class="num">17.4°</td><td class="num">13.0°</td><td class="num delta-down">−25.3%</td></tr>
-<tr><td>KV9</td><td class="num">57.6°</td><td class="num">50.0°</td><td class="num delta-down">−13.2%</td></tr>
+<tr data-item="tr-7"><td>TR-7</td><td class="num">47.1°</td><td class="num">40.8°</td><td class="num delta-down">−13.4%</td></tr>
+<tr data-item="ak4d"><td>AK4D</td><td class="num">25.4°</td><td class="num">20.0°</td><td class="num delta-down">−21.3%</td></tr>
+<tr data-item="nvo-228e"><td>NVO-228E</td><td class="num">36.8°</td><td class="num">28.9°</td><td class="num delta-down">−21.5%</td></tr>
+<tr data-item="vcr-2"><td>VCR-2</td><td class="num">64.9°</td><td class="num">50.3°</td><td class="num delta-down">−22.5%</td></tr>
+<tr data-item="m433"><td>M433</td><td class="num">50.9°</td><td class="num">41.4°</td><td class="num delta-down">−18.7%</td></tr>
+<tr data-item="m16a4"><td>M16A4</td><td class="num">46.4°</td><td class="num">37.5°</td><td class="num delta-down">−19.2%</td></tr>
+<tr data-item="b36a4"><td>B36A4</td><td class="num">37.4°</td><td class="num">28.0°</td><td class="num delta-down">−25.1%</td></tr>
+<tr data-item="l85a3"><td>L85A3</td><td class="num">29.4°</td><td class="num">22.8°</td><td class="num delta-down">−22.4%</td></tr>
+<tr data-item="sor-556-mk2"><td>SOR-556 MK2</td><td class="num">17.3°</td><td class="num">12.7°</td><td class="num delta-down">−26.6%</td></tr>
+<tr data-item="kord-6p67"><td>KORD 6P67</td><td class="num">35.3°</td><td class="num">28.9°</td><td class="num delta-down">−18.1%</td></tr>
+<tr data-item="m417-a2"><td>M417A2</td><td class="num">19.8°</td><td class="num">15.4°</td><td class="num delta-down">−22.2%</td></tr>
+<tr data-item="sg-553r"><td>SG 553R</td><td class="num">43.3°</td><td class="num">35.8°</td><td class="num delta-down">−17.3%</td></tr>
+<tr data-item="sor-300sc"><td>SOR-300SC</td><td class="num">19.2°</td><td class="num">15.8°</td><td class="num delta-down">−17.7%</td></tr>
+<tr data-item="m277"><td>M277</td><td class="num">39.4°</td><td class="num">34.4°</td><td class="num delta-down">−12.7%</td></tr>
+<tr data-item="m4a1"><td>M4A1</td><td class="num">37.9°</td><td class="num">30.7°</td><td class="num delta-down">−19.0%</td></tr>
+<tr data-item="grt-bc"><td>GRT-BC</td><td class="num">31.2°</td><td class="num">26.1°</td><td class="num delta-down">−16.3%</td></tr>
+<tr data-item="qbz-192"><td>QBZ-192</td><td class="num">23.5°</td><td class="num">19.9°</td><td class="num delta-down">−15.3%</td></tr>
+<tr data-item="ak-205"><td>AK-205</td><td class="num">7.8°</td><td class="num">7.4°</td><td class="num delta-down">−5.1%</td></tr>
+<tr data-item="rpkm"><td>RPKM</td><td class="num">22.7°</td><td class="num">17.5°</td><td class="num delta-down">−22.9%</td></tr>
+<tr data-item="drs-iar"><td>DRS-IAR</td><td class="num">35.2°</td><td class="num">29.3°</td><td class="num delta-down">−16.8%</td></tr>
+<tr data-item="kts100-mk8"><td>KTS100 MK8</td><td class="num">10.9°</td><td class="num">9.5°</td><td class="num delta-down">−12.8%</td></tr>
+<tr data-item="rpk-74m"><td>RPK-74M</td><td class="num">18.9°</td><td class="num">16.1°</td><td class="num delta-down">−14.8%</td></tr>
+<tr data-item="m121-a2"><td>M121 A2</td><td class="num">39.5°</td><td class="num">31.8°</td><td class="num delta-down">−19.5%</td></tr>
+<tr data-item="m240l"><td>M240L</td><td class="num">41.8°</td><td class="num">34.5°</td><td class="num delta-down">−17.5%</td></tr>
+<tr data-item="m60"><td>M/60</td><td class="num">38.8°</td><td class="num">29.9°</td><td class="num delta-down">−22.9%</td></tr>
+<tr data-item="m250"><td>M250</td><td class="num">39.7°</td><td class="num">35.9°</td><td class="num delta-down">−9.6%</td></tr>
+<tr data-item="m123k"><td>M123K</td><td class="num">55.9°</td><td class="num">47.7°</td><td class="num delta-down">−14.7%</td></tr>
+<tr data-item="l110"><td>L110</td><td class="num">39.4°</td><td class="num">31.0°</td><td class="num delta-down">−21.3%</td></tr>
+<tr data-item="scw-10"><td>SCW-10</td><td class="num">35.0°</td><td class="num">33.5°</td><td class="num delta-down">−4.3%</td></tr>
+<tr data-item="umg-40"><td>UMG-40</td><td class="num">17.4°</td><td class="num">13.0°</td><td class="num delta-down">−25.3%</td></tr>
+<tr data-item="kv9"><td>KV9</td><td class="num">57.6°</td><td class="num">50.0°</td><td class="num delta-down">−13.2%</td></tr>
 <tr><td>CZ3A1</td><td class="num">59.1°</td><td class="num">50.8°</td><td class="num delta-down">−14.0%</td></tr>
-<tr><td>SGX</td><td class="num">39.8°</td><td class="num">31.7°</td><td class="num delta-down">−20.4%</td></tr>
-<tr><td>PW5A3</td><td class="num">33.2°</td><td class="num">28.3°</td><td class="num delta-down">−14.8%</td></tr>
-<tr><td>PP-19</td><td class="num">21.4°</td><td class="num">18.0°</td><td class="num delta-down">−15.9%</td></tr>
-<tr><td>SL9</td><td class="num">16.2°</td><td class="num">13.0°</td><td class="num delta-down">−19.8%</td></tr>
-<tr><td>USG-90</td><td class="num">42.8°</td><td class="num">35.5°</td><td class="num delta-down">−17.1%</td></tr>
-<tr><td>PW7A2</td><td class="num">33.3°</td><td class="num">27.8°</td><td class="num delta-down">−16.5%</td></tr>
+<tr data-item="sgx"><td>SGX</td><td class="num">39.8°</td><td class="num">31.7°</td><td class="num delta-down">−20.4%</td></tr>
+<tr data-item="pw5a3"><td>PW5A3</td><td class="num">33.2°</td><td class="num">28.3°</td><td class="num delta-down">−14.8%</td></tr>
+<tr data-item="pp-19"><td>PP-19</td><td class="num">21.4°</td><td class="num">18.0°</td><td class="num delta-down">−15.9%</td></tr>
+<tr data-item="sl9"><td>SL9</td><td class="num">16.2°</td><td class="num">13.0°</td><td class="num delta-down">−19.8%</td></tr>
+<tr data-item="usg-90"><td>USG-90</td><td class="num">42.8°</td><td class="num">35.5°</td><td class="num delta-down">−17.1%</td></tr>
+<tr data-item="pw7a2"><td>PW7A2</td><td class="num">33.3°</td><td class="num">27.8°</td><td class="num delta-down">−16.5%</td></tr>
 <tr><td>VZ.61</td><td class="num">20.8°</td><td class="num">18.4°</td><td class="num delta-down">−11.5%</td></tr>
 </table>
 
@@ -491,19 +825,19 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <table>
 <tr><th>Weapon</th><th>Change</th></tr>
-<tr><td class="item">AK-205</td><td>Adjusted to match expectations for a 5.45×39mm weapon; minimal handling impact</td></tr>
-<tr><td class="item">B36A4, L85A3, M433, SOR-555 MK2</td><td>Reduced recoil randomness: more consistent and effective at longer range</td></tr>
-<tr><td class="item">DB-12</td><td>Increased rate of fire and faster pump action</td></tr>
-<tr><td class="item">L110</td><td>Reduced recoil: reinforces MG vs. AR handling gap</td></tr>
-<tr><td class="item">LMR27</td><td>Increased close-to-mid range damage: rewards accurate headshots</td></tr>
-<tr><td class="item">M123K</td><td>Reduced recoil: improves sustained-fire control, reinforces belt-fed MG role</td></tr>
-<tr><td class="item">M277</td><td>Reduced recoil: more effective at range</td></tr>
-<tr><td class="item">M417A2, QBZ-192</td><td>Reduced recoil randomness: stays competitive vs. updated ARs</td></tr>
+<tr data-item="ak-205"><td class="item">AK-205</td><td>Adjusted to match expectations for a 5.45×39mm weapon; minimal handling impact</td></tr>
+<tr data-item="b36a4 l85a3 m433 sor-556-mk2"><td class="item">B36A4, L85A3, M433, SOR-555 MK2 (SOR-555 as published; the in-game rifle is the SOR-556 MK2)</td><td>Reduced recoil randomness: more consistent and effective at longer range</td></tr>
+<tr data-item="db-12"><td class="item">DB-12</td><td>Increased rate of fire and faster pump action</td></tr>
+<tr data-item="l110"><td class="item">L110</td><td>Reduced recoil: reinforces MG vs. AR handling gap</td></tr>
+<tr data-item="lmr27"><td class="item">LMR27</td><td>Increased close-to-mid range damage: rewards accurate headshots</td></tr>
+<tr data-item="m123k"><td class="item">M123K</td><td>Reduced recoil: improves sustained-fire control, reinforces belt-fed MG role</td></tr>
+<tr data-item="m277"><td class="item">M277</td><td>Reduced recoil: more effective at range</td></tr>
+<tr data-item="m417-a2 qbz-192"><td class="item">M417A2, QBZ-192</td><td>Reduced recoil randomness: stays competitive vs. updated ARs</td></tr>
 <tr><td class="item">PW5A3, SGX</td><td>Increased recoil: harder to control, less precise at range</td></tr>
 <tr><td class="item">PW7A2, USG-90</td><td>Adjusted recoil: better at range, slightly harder up close</td></tr>
-<tr><td class="item">SCW-10</td><td>Increased recoil: reduced range effectiveness, reinforces CQB role</td></tr>
-<tr><td class="item">SG 553R</td><td>Increased recoil: limits range effectiveness vs. its close-range strength</td></tr>
-<tr><td class="item">SOR-300SC</td><td>Adjusted recoil: stays competitive vs. updated ARs</td></tr>
+<tr data-item="scw-10"><td class="item">SCW-10</td><td>Increased recoil: reduced range effectiveness, reinforces CQB role</td></tr>
+<tr data-item="sg-553r"><td class="item">SG 553R</td><td>Increased recoil: limits range effectiveness vs. its close-range strength</td></tr>
+<tr data-item="sor-300sc"><td class="item">SOR-300SC</td><td>Adjusted recoil: stays competitive vs. updated ARs</td></tr>
 </table>
 <table>
 <caption>Spotting range</caption>
@@ -536,8 +870,8 @@ html{-webkit-text-size-adjust:100%}
 <li>Aim Assist fully reset to Open Beta tuning after players found the launch version's increased long-range slowdown made high-zoom aiming feel less smooth.</li>
 <li>Dispersion globally reduced slightly across all weapon types; fixed an unintended dispersion-increase rate.</li>
 <li>Non-Recon-class sniper rifle accuracy improved.</li>
-<li>Increased the weighting of long-range performance in automatic-weapon balance, benefiting <b>PW7A2</b> and <b>KV9</b> specifically.</li>
-<li>Reduced recoil and recoil variation on <b>LMR27</b>, <b>M39</b>, and <b>SVDM</b> for better long-range reliability.</li>
+<li data-item="pw7a2 kv9">Increased the weighting of long-range performance in automatic-weapon balance, benefiting <b>PW7A2</b> and <b>KV9</b> specifically.</li>
+<li data-item="lmr27 m39-emr svdm">Reduced recoil and recoil variation on <b>LMR27</b>, <b>M39</b>, and <b>SVDM</b> for better long-range reliability.</li>
 </ul>
 
 <details class="subdetail">
@@ -592,7 +926,7 @@ html{-webkit-text-size-adjust:100%}
 <li>General recoil adjustments across multiple weapons at launch.</li>
 <li>ADS accuracy made more stable while moving, but less accurate when firing mid-jump; increased bullet spread firing automatic weapons while ADS.</li>
 <li>Bolt-action rifles: the first-shot accuracy boost now applies to every shot fired, not just the first.</li>
-<li><b>M87A1</b> shotgun requires more pellets to secure a kill.</li>
+<li data-item="m87a1"><b>M87A1</b> shotgun requires more pellets to secure a kill.</li>
 <li>Increased jump-repeat penalty and slightly lowered jump height; increased weapon inaccuracy while jumping or sliding; reduced slide-to-jump momentum.</li>
 </ul>
 
@@ -622,7 +956,7 @@ html{-webkit-text-size-adjust:100%}
 <summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-weapons">weapons</span></summary>
 <div class="body">
 <ul class="plain">
-<li><b>L115</b> iron sight attachment cost increased 5 → 15 points, brought in line with other bolt-actions.</li>
+<li data-item="l115"><b>L115</b> iron sight attachment cost increased 5 → 15 points, brought in line with other bolt-actions.</li>
 <li><b>Extended Fast Magazine (L115)</b> now uses correct 3D asset (visual fix, not a stat change).</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.3.0</a>, posted Jun 26, 2026</div>
@@ -633,8 +967,8 @@ html{-webkit-text-size-adjust:100%}
 <div class="body">
 <ul class="plain">
 <li>Extended Barrels on all weapons: cost reduced 15 → 5 points, and no longer grant an ADS-speed bonus, intended to widen attachment/build diversity, especially on weapons with few barrel options.</li>
-<li>1.50x Thermal Sight cost on the <b>L115</b> corrected 15 → 25 points.</li>
-<li>Burst Fire attachments on <b>GRT-BC, UMG-40, PW5A3, CZ3A1, SG 553R, Kord 6P67</b> now apply their stat effects only to burst-fire mode, as intended.</li>
+<li data-item="l115">1.50x Thermal Sight cost on the <b>L115</b> corrected 15 → 25 points.</li>
+<li data-item="grt-bc umg-40 pw5a3 cz3a1 sg-553r kord-6p67">Burst Fire attachments on <b>GRT-BC, UMG-40, PW5A3, CZ3A1, SG 553R, Kord 6P67</b> now apply their stat effects only to burst-fire mode, as intended.</li>
 </ul>
 
 <details class="subdetail">
@@ -654,6 +988,21 @@ html{-webkit-text-size-adjust:100%}
 </details>
 
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.2.0</a>, posted Jun 5, 2026</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-weapons">recoil pass</span></summary>
+<div class="body">
+<p class="dev">Dev intent: recoil compensation bug fixes had made automatic weapons easier to control than intended, so recoil was raised to compensate, with a larger increase on the high-DPS automatics to pull back their mid and long range reach.</p>
+<ul class="plain">
+<li>Recoil <b>slightly increased on all automatic weapons</b>, offsetting the recoil-compensation bug fixes.</li>
+<li>Further recoil increase on the high-DPS automatics, reducing their long and mid range capability: <b data-item="sg-553r m4a1 grt-bc cz3a1 tr-7 vcr-2 m433">SG553R, SCW-10, KV9, CZ3A1, SGX, TR-7, M4A1, M121 A2, VCR-2, M433, PW5A3, M123K, GRT-BC</b>.</li>
+<li>Recoil reduction applied to <b>controller input reduced</b>, so recoil behaves more consistently across control schemes.</li>
+<li><b>Magnifier</b> is now a shared optic accessory.</li>
+<li><b>DVO LPVO</b> cost increased 10 &rarr; <span class="delta-up">25</span> points on GRTCPS, M121 A2 and CZ3A1.</li>
+<li data-item="m87a1 m1014">Shotguns gain new attachment options: <b>Shotgun Speedloaders</b> magazine attachment added to the <b>M87A1</b> and <b>M1014</b>.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.0</a>, posted May 8, 2026</div>
 </div>
 </details>
 <details class="patch">
@@ -678,15 +1027,15 @@ html{-webkit-text-size-adjust:100%}
 </div>
 </details>
 
-<div class="src">Source: <a href="https://forums.ea.com/blog/battlefield-game-info-hub-en/battlefield-6-game-update-1-2-3-0/13320217" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 14, 2026</div>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 10, 2026</div>
 </div>
 </details>
 <details class="patch">
 <summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-weapons">weapons</span></summary>
 <div class="body">
 <ul class="plain">
-<li><b>Mini Scout</b> muzzle velocity reduced 880 → 800 m/s.</li>
-<li><b>Mini Scout</b> limb damage reduced to line up with its lower-torso damage value.</li>
+<li data-item="mini-scout"><b>Mini Scout</b> muzzle velocity reduced 880 → 800 m/s.</li>
+<li data-item="mini-scout"><b>Mini Scout</b> limb damage reduced to line up with its lower-torso damage value.</li>
 <li>Range Finder custom zeroing no longer applies instantly: it now requires a short delay before taking effect.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.1.0</a>, posted Feb 13, 2026</div>
@@ -696,9 +1045,9 @@ html{-webkit-text-size-adjust:100%}
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-weapons">weapons</span></summary>
 <div class="body">
 <ul class="plain">
-<li>Minimum time between shots on <b>Mini Scout</b> increased by 100ms to reduce rapid-fire inconsistency and pace it better.</li>
-<li>Reduced recoil magnitude but <i>increased</i> recoil variation on <b>M250, NVO-228E, RPKM, SG 553R, SOR-300SC</b>, all perform less effectively at long range now; SG 553R got the biggest adjustment.</li>
-<li><b>L110</b> and <b>M123K</b> 200-round magazine cost reduced 55 → 50 points, and the ADS-movement-dispersion penalty for using it was removed.</li>
+<li data-item="mini-scout">Minimum time between shots on <b>Mini Scout</b> increased by 100ms to reduce rapid-fire inconsistency and pace it better.</li>
+<li data-item="m250 nvo-228e rpkm sg-553r sor-300sc">Reduced recoil magnitude but <i>increased</i> recoil variation on <b>M250, NVO-228E, RPKM, SG 553R, SOR-300SC</b>, all perform less effectively at long range now; SG 553R got the biggest adjustment.</li>
+<li data-item="l110 m123k"><b>L110</b> and <b>M123K</b> 200-round magazine cost reduced 55 → 50 points, and the ADS-movement-dispersion penalty for using it was removed.</li>
 </ul>
 
 <details class="subdetail">
@@ -784,7 +1133,7 @@ html{-webkit-text-size-adjust:100%}
 <tr><td class="item">Emergency Countermeasures cooldown acceleration</td><td class="num">2x → <span class="delta-down">1.5x</span> (but now stays active until countermeasures are available again)</td></tr>
 <tr><td class="item">Emergency Repair "pause on damage" timer</td><td class="num">1s → <span class="delta-up">2s</span></td></tr>
 <tr><td class="item">Projectile Intercept System activation time</td><td class="num">reduced to <span class="delta-down">0.55s</span></td></tr>
-<tr><td class="item">RPG-7V2 damage</td><td class="num">173–460 → <span class="delta-up">188–500</span> (tanks) · 1035 → <span class="delta-up">1125</span> (helicopters)</td></tr>
+<tr data-item="rpg-7v2"><td class="item">RPG-7V2 damage</td><td class="num">173–460 → <span class="delta-up">188–500</span> (tanks) · 1035 → <span class="delta-up">1125</span> (helicopters)</td></tr>
 <tr><td class="item">Smoke Generator</td><td>Now gives the same damage-reduction benefit as Thermal Smoke: hits inside the cloud register as minimum-angle hits</td></tr>
 </table>
 
@@ -819,7 +1168,7 @@ html{-webkit-text-size-adjust:100%}
 <caption>Thermal Smoke</caption>
 <tr><th>System</th><th>Change</th></tr>
 <tr><td class="item">Damage-received cap while mitigating</td><td class="num">75% → <span class="delta-up">100%</span> (raises the cap on damage you still take, a net nerf to its effectiveness)</td></tr>
-<tr><td class="item">C-4 interaction</td><td>No longer removes C-4 explosives</td></tr>
+<tr data-item="c-4"><td class="item">C-4 interaction</td><td>No longer removes C-4 explosives</td></tr>
 <tr><td class="item">Coverage requirement</td><td>Must now cover the middle of a tank to grant any damage-resistance benefit</td></tr>
 </table>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.3.0</a>, posted Jun 26, 2026</div>
@@ -838,6 +1187,46 @@ html{-webkit-text-size-adjust:100%}
 </div>
 </details>
 <details class="patch">
+<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-vehicles">major overhaul</span></summary>
+<div class="body">
+<p class="dev">Dev intent: rebuild the tank damage model so incoming damage is readable and time-to-kill is predictable, rework tracked-vehicle mobility, and retune repair and regeneration so survivability and counterplay are easier to gauge.</p>
+
+<table>
+<caption>Tank angle and zone damage, simplified</caption>
+<tr><th>Hit location</th><th>Multiplier</th></tr>
+<tr><td class="item">Turret</td><td class="num">75% of base</td></tr>
+<tr><td class="item">Body</td><td class="num">100% minimum</td></tr>
+<tr><td class="item">Favourable side angle</td><td class="num">150%</td></tr>
+<tr><td class="item">Favourable rear angle</td><td class="num">200%</td></tr>
+</table>
+<ul class="plain">
+<li>Differential damage removed entirely from <b>IFV, MBT, APT and AA</b> vehicles.</li>
+<li><b>MBT</b> health increased to <span class="delta-up">1200</span>; <b>APT</b> health reduced to <span class="delta-down">800</span>.</li>
+</ul>
+
+<table>
+<caption>Vehicle health regeneration rework</caption>
+<tr><th>Property</th><th>Before</th><th>After</th></tr>
+<tr><td class="item">Delay before regeneration</td><td class="num">6 s</td><td class="num delta-up">12 s</td></tr>
+<tr><td class="item">Regeneration rate</td><td class="num">~5% / s</td><td class="num delta-up">10% / s</td></tr>
+<tr><td class="item">Regeneration ceiling</td><td class="num">bracket-limited</td><td class="num">full health</td></tr>
+<tr><td class="item">Critical health</td><td class="num">blocks regeneration</td><td class="num">slows it by 80%</td></tr>
+</table>
+
+<ul class="plain">
+<li>New transmission and steering model on <b>all tracked vehicles</b>: smoother acceleration and more responsive turning.</li>
+<li>Tanks are <b>no longer immobilised by high damage</b>. Anti-tank mines still immobilise.</li>
+<li>Ground-vehicle boost no longer empties the bar when interrupted, and can be re-applied while recharging unless fully emptied.</li>
+<li>MBT and IFV turret speeds modestly improved; tank first-person aiming made more responsive.</li>
+<li><b>Reinforced Plating removed</b>, replaced by <b>Contingency Systems</b>: accelerates countermeasure cooldown at low health.</li>
+<li><b>Emergency Repair</b> now heals over time rather than instantly.</li>
+<li>Lock-on vehicle weapons now deal consistent damage, ignoring hit zones and angles.</li>
+<li><b>Engineer Field Specialization passives retuned:</b> Devastating Impact repair reduction cut &minus;50% &rarr; <span class="delta-down">&minus;25%</span>; Overheat Control vehicle-weapon effect cut &minus;50% &rarr; <span class="delta-down">&minus;10%</span>; the Vehicle Regeneration passive was replaced with <b>Mine Sweeping</b>, which highlights mines within 30m of the player.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.0</a>, posted May 8, 2026</div>
+</div>
+</details>
+<details class="patch">
 <summary><span class="ver">1.2.3.0</span><span class="date">Apr 14, 2026</span><span class="tag tag-vehicles">scout helicopter</span></summary>
 <div class="body">
 <table>
@@ -853,7 +1242,7 @@ html{-webkit-text-size-adjust:100%}
 <tr><td class="item">Attack Heli Heavy Rocket explosion radius</td><td class="num">7m → <span class="delta-down">5.5m</span></td></tr>
 <tr><td class="item">Seismic Detector radius</td><td class="num">16m → <span class="delta-up">36m</span></td></tr>
 </table>
-<div class="src">Source: <a href="https://forums.ea.com/blog/battlefield-game-info-hub-en/battlefield-6-game-update-1-2-3-0/13320217" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 14, 2026</div>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 10, 2026</div>
 </div>
 </details>
 <details class="patch">
@@ -945,18 +1334,69 @@ html{-webkit-text-size-adjust:100%}
 <div class="body">
 <p class="dev">Dev note: the Season 2 nerf to RPG-7V2 velocity/acceleration made its arc feel unintuitive at close range, so the trajectory itself was reworked this patch.</p>
 <ul class="plain">
-<li><b>RPG-7V2</b> projectile trajectory reworked; zeroing range reduced 100m → 22m.</li>
-<li><b>M18A1 AP Mine</b> trigger range and fragmentation-damage range unified at approximately 3m; Claymore fragmentation no longer deals self-damage.</li>
+<li data-item="rpg-7v2"><b>RPG-7V2</b> projectile trajectory reworked; zeroing range reduced 100m → 22m.</li>
+<li data-item="m18a1"><b>M18A1 AP Mine</b> trigger range and fragmentation-damage range unified at approximately 3m; Claymore fragmentation no longer deals self-damage.</li>
 </ul>
 <table>
 <caption>LWCMS Portable Mortar (nerf pass, continued from 1.1.3.0)</caption>
-<tr><td class="item">Health</td><td class="num">250 → <span class="delta-down">50</span></td></tr>
-<tr><td class="item">Replenish time</td><td class="num">10s → <span class="delta-up">30s</span></td></tr>
-<tr><td class="item">"Enter" prompt radius</td><td class="num">1.5m → <span class="delta-down">1m</span></td></tr>
-<tr><td class="item">"Pick Up" prompt radius</td><td class="num">as published: "increased from 1.5m minimum to 1m minimum"</td></tr>
-<tr><td class="item">Loadout restriction</td><td>Can no longer be equipped or placed near the Missile Intercept System</td></tr>
+<tr data-item="lwcms"><td class="item">Health</td><td class="num">250 → <span class="delta-down">50</span></td></tr>
+<tr data-item="lwcms"><td class="item">Replenish time</td><td class="num">10s → <span class="delta-up">30s</span></td></tr>
+<tr data-item="lwcms"><td class="item">"Enter" prompt radius</td><td class="num">1.5m → <span class="delta-down">1m</span></td></tr>
+<tr data-item="lwcms"><td class="item">"Pick Up" prompt radius</td><td class="num">as published: "increased from 1.5m minimum to 1m minimum"</td></tr>
+<tr data-item="lwcms"><td class="item">Loadout restriction</td><td>Can no longer be equipped or placed near the Missile Intercept System</td></tr>
 </table>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.2.0</a>, posted Jun 5, 2026</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-gadgets">anti-vehicle retune</span></summary>
+<div class="body">
+<p class="dev">Dev intent: part of the same pass as the vehicle overhaul. Mines, launchers, the Portable Mortar, the Engineers Supply Crate, the Hardware Suppression System and laser designation were all retuned together, aiming to make launchers more viable, give anti-vehicle gadgets clearer roles, and make support gadgets behave more consistently.</p>
+
+<table>
+<caption>Anti-vehicle damage, as republished this patch</caption>
+<tr><th>Gadget</th><th>vs. tanks</th><th>vs. helicopters</th><th>vs. jets</th></tr>
+<tr data-item="c-4"><td class="item">C-4</td><td class="num">350</td><td class="num">350</td><td class="num">1000</td></tr>
+<tr data-item="m136-at"><td class="item">M136 AT</td><td class="num">207–550</td><td class="num">1000</td><td class="num">1000</td></tr>
+<tr data-item="rpg-7v2"><td class="item">RPG</td><td class="num">173–460</td><td class="num">1035</td><td class="num">1000</td></tr>
+<tr data-item="mbt-law"><td class="item">MBT-LAW</td><td class="num">240</td><td class="num">520</td><td class="num">800</td></tr>
+<tr><td class="item">MAS 148 Glaive</td><td class="num">465</td><td class="num">1007.5</td><td class="num">1000</td></tr>
+<tr data-item="slm-93a"><td class="item">SLM-93A</td><td class="num">200</td><td class="num">650</td><td class="num">650</td></tr>
+<tr data-item="9k38-igla"><td class="item">9K93 IGLA (as published; the in-game gadget is the 9K38 Igla)</td><td class="num">200</td><td class="num">650</td><td class="num">650</td></tr>
+<tr data-item="ptkm-1r"><td class="item">PTKM-1R Acoustic Mine</td><td class="num">480</td><td class="num">&mdash;</td><td class="num">&mdash;</td></tr>
+<tr data-item="m15"><td class="item">M15 AV Mine</td><td class="num">390</td><td class="num">&mdash;</td><td class="num">&mdash;</td></tr>
+<tr data-item="m4a1-slam"><td class="item">M4A1 SLAM</td><td class="num">199–363</td><td class="num">&mdash;</td><td class="num">&mdash;</td></tr>
+<tr data-item="csb-iv"><td class="item">CSB IV EOD Bot, Mine Layer</td><td class="num">300</td><td class="num">&mdash;</td><td class="num">&mdash;</td></tr>
+</table>
+
+<table>
+<caption>Launcher handling</caption>
+<tr><th>Launcher</th><th>Property</th><th>Before</th><th>After</th></tr>
+<tr data-item="slm-93a"><td class="item">SLM-93A</td><td>Base lock-on range</td><td class="num">650 m</td><td class="num delta-down">550 m</td></tr>
+<tr data-item="slm-93a"><td class="item">SLM-93A</td><td>Max missile speed</td><td class="num">540 m/s</td><td class="num delta-down">480 m/s</td></tr>
+<tr data-item="9k38-igla"><td class="item">9K93 IGLA</td><td>Lock-on time</td><td class="num">1.2 s</td><td class="num delta-down">1 s</td></tr>
+<tr data-item="9k38-igla"><td class="item">9K93 IGLA</td><td>Max missile speed</td><td class="num">640 m/s</td><td class="num delta-down">480 m/s</td></tr>
+<tr data-item="9k38-igla"><td class="item">9K93 IGLA</td><td>Missile acceleration</td><td class="num">65 m/s</td><td class="num delta-up">100 m/s</td></tr>
+<tr data-item="mbt-law"><td class="item">MBT-LAW</td><td>Initial missile speed</td><td class="num">30 m/s</td><td class="num delta-up">100 m/s</td></tr>
+<tr data-item="mbt-law"><td class="item">MBT-LAW</td><td>Max missile speed</td><td class="num">75 m/s</td><td class="num delta-up">300 m/s</td></tr>
+<tr data-item="mbt-law"><td class="item">MBT-LAW</td><td>Missile acceleration</td><td class="num">50 m/s</td><td class="num delta-up">100 m/s</td></tr>
+<tr><td class="item">MAS 148 Glaive</td><td>Locking time</td><td class="num">1.8 s</td><td class="num delta-down">1.4 s</td></tr>
+<tr><td class="item">MAS 148 Glaive</td><td>Max missile speed</td><td class="num">60 m/s</td><td class="num delta-up">70 m/s</td></tr>
+<tr><td class="item">MAS 148 Glaive</td><td>Starting ammunition</td><td class="num">2</td><td class="num delta-up">3</td></tr>
+</table>
+
+<ul class="plain">
+<li data-item="m15"><b>M15 AV Mine:</b> maximum placed increased 6 &rarr; <span class="delta-up">9</span>; mines no longer despawn 3 minutes after their owner dies; deployment is now blocked only inside enemy HQs; mines glint at close range to distinguish them from props and debris.</li>
+<li data-item="m4a1-slam"><b>M4A1 SLAM:</b> now triggers regardless of vehicle movement speed, and gains a short arming delay after placement.</li>
+<li data-item="ptkm-1r m15 csb-iv"><b>PTKM-1R Acoustic Mines and M15 AV Mines</b> no longer trigger for Light Transport or Personal Transport vehicles. The same applies to the EOD Bot's Mine Layer, whose stacking-prevention radius increased 1.5m &rarr; <span class="delta-up">5m</span>.</li>
+<li data-item="m18a1"><b>M18A1 Claymore:</b> fragmentation base close-range damage reduced 65 &rarr; <span class="delta-down">50</span>, with drop-off now starting at the edge of the detection arc. The detection arc itself was tuned to match the visible laser beams.</li>
+<li data-item="ltlm-ii"><b>LTLM II Laser Designator:</b> effect duration reduced 20s &rarr; <span class="delta-down">9s</span> for both soldier and vehicle designators; it no longer reduces lock-on time for anti-air missiles, and instead grants a consistent 20% lock-on range increase across all locking weapons.</li>
+<li data-item="lwcms"><b>Portable Mortar</b> shot dispersion is no longer perfectly accurate at maximum range; once fully zeroed, shorter-range bombardments are now much more accurate than longer-range ones.</li>
+<li data-item="css-bundle"><b>Engineers Supply Crate</b> no longer has limited supply charges in standard multiplayer, so it can resupply nearby vehicles indefinitely.</li>
+<li data-item="dgmk4"><b>Hardware Suppression System:</b> can no longer target enemy gadgets through walls at long range, though limited wall penetration remains at closer distances; it no longer detects or detonates grenades and M320A1 projectiles, but still targets launcher projectiles. Maximum range restored to its original value.</li>
+<li data-item="lwcms xfgm-6d ltlm-ii csb-iv">Player-controlled gadgets &mdash; <b>Portable Mortar, XFGM-6D Recon Drone, LTLM II Laser Designator, CSB IV EOD Bot</b> &mdash; now only begin resupplying once the deployed gadget has been destroyed.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.0</a>, posted May 8, 2026</div>
 </div>
 </details>
 <details class="patch">
@@ -979,7 +1419,7 @@ html{-webkit-text-size-adjust:100%}
 <li><b>MBT Guided Shell</b> reworked: faster but much less maneuverable.</li>
 <li>Vehicle-hit scoring updated so RPG critical hits and regular hits no longer award identical score.</li>
 </ul>
-<div class="src">Source: <a href="https://forums.ea.com/blog/battlefield-game-info-hub-en/battlefield-6-game-update-1-2-3-0/13320217" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 14, 2026</div>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 10, 2026</div>
 </div>
 </details>
 <details class="patch">
@@ -1081,10 +1521,46 @@ html{-webkit-text-size-adjust:100%}
 </div>
 </details>
 <details class="patch">
+<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-redsec">Ranked BR Quads · downed state · transport helis</span></summary>
+<div class="body">
+<p class="dev">Dev intent: Season 3 brought Ranked Battle Royale Quads as the first step for competitive play, alongside a pass on how long a downed player survives, and a rebalance of the transport helicopters that had been carrying too much of the fight.</p>
+<ul class="plain">
+<li><b>Ranked Battle Royale Quads added</b>, with rank, rewards and an Elite 250 leaderboard above Master.</li>
+<li>Damage taken from primary weapons <b>while in the downed state reduced by 20%</b>, raising the number of bullets needed to finish a downed soldier by roughly 2 to 3.</li>
+<li><b>Helicopters now lose control when the pilot seat is unoccupied</b>, in Battle Royale modes only, to limit the effectiveness of seat swapping.</li>
+</ul>
+
+<table>
+<caption>UH-79 Transport and Glider 96 rebalance</caption>
+<tr><th>Property</th><th>Before</th><th>After</th></tr>
+<tr><td class="item">.50 cal MG damage</td><td class="num">unaffected by armor</td><td class="num">flat 30, now affected by armor</td></tr>
+<tr><td class="item">.50 cal MG overheat</td><td class="num">&mdash;</td><td class="num">approximately 15 shots</td></tr>
+<tr><td class="item">.50 cal MG dispersion</td><td class="num">0.01 / 0.5&deg;</td><td class="num delta-up">0.03 / 1.5&deg;</td></tr>
+<tr><td class="item">UH-79 minigun damage</td><td class="num">unaffected by armor</td><td class="num">flat 20, now affected by armor</td></tr>
+<tr><td class="item">UH-79 minigun dispersion</td><td class="num">1.2&deg;</td><td class="num delta-up">2.4&deg;</td></tr>
+<tr><td class="item">UH-79 minigun cooldown</td><td class="num">faster than multiplayer</td><td class="num">same as multiplayer, overheat penalty 3&times; longer</td></tr>
+<tr><td class="item">UH-79 health</td><td class="num">1500 (multiplayer value, in error)</td><td class="num delta-down">1250 (Battle Royale value)</td></tr>
+</table>
+
+<ul class="plain">
+<li><b>M1A2 SEPv3:</b> Coaxial 7.62mm LMG replaced by the Coaxial .50 cal HMG. On both the M1A2 SEPv3 and the M3A3 Bradley, the LMG gunner weapons were replaced with Grenade Launchers.</li>
+<li><b>M3A3 Bradley:</b> Proximity Scan replaced by the Counter-Fire Radar.</li>
+<li><b>Tanks now autospot</b> on the enemy minimap from up to 300m away.</li>
+<li><b>XFGM-6D Recon Drone</b> cooldown increased 120s &rarr; <span class="delta-up">240s</span>, and its zoom functionality was removed.</li>
+<li>Smoke Grenades used with Strike Packages such as Mobile Respawn and Artillery Strike can no longer be destroyed by gunfire.</li>
+<li><b>Loot Detection added to Battle Royale on Fort Lyndon:</b> on deploy, revive or respawn, loot containers within 50m are revealed through walls for 80 seconds.</li>
+<li>The <b>Box Truck</b> was renamed the <b>Explosive Ordnance Transporter</b>, its loot pool refreshed toward anti-vehicle and explosive options. Anti-Vehicle Drop loot was updated to counter tanks more reliably, and when a tank is nearby the closest anti-vehicle supplies are now marked.</li>
+<li>Battle Royale loot distribution improved to better support weapon progression across a match; gas station explosions are now more dangerous at close range.</li>
+<li>Vehicle Containers stay highlighted for 60 seconds after a player picks up a vehicle keycard.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.0</a>, posted May 8, 2026</div>
+</div>
+</details>
+<details class="patch">
 <summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-redsec">loot balance</span></summary>
 <div class="body">
 <ul class="plain">
-<li>Improved attachment setups for <b>M4A1, M277, SVDM, Mini Scout, UMG-40, 18.5KS-K</b> so these weapons use their intended attachments and are better balanced when found as ground loot.</li>
+<li data-item="m4a1 m277 svdm mini-scout umg-40 18-5ks-k">Improved attachment setups for <b>M4A1, M277, SVDM, Mini Scout, UMG-40, 18.5KS-K</b> so these weapons use their intended attachments and are better balanced when found as ground loot.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.1.0</a>, posted Feb 13, 2026</div>
 </div>
@@ -1121,6 +1597,38 @@ html{-webkit-text-size-adjust:100%}
 </div>
 </details>
 <details class="patch">
+<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-progression">mission XP · assists</span></summary>
+<div class="body">
+<ul class="plain">
+<li>Mission XP rebalanced to be more consistent and predictable, and <b>reduced relative to other XP sources</b>.</li>
+<li>Completing a mission now grants XP equal to <b>one full level</b>; having a mission you are on countered grants a further 50% of a level.</li>
+<li>Battle Royale Duos XP required per level reduced 1700 &rarr; <span class="delta-down">1500</span>.</li>
+<li>New <b>Assist Confirmed</b> score event: when a downed player is eliminated, every assisting player now receives Assist Confirmed. Applies in Strikepoint and in <b class="rs">REDSEC</b>.</li>
+<li>Critical Assist window increased 1.5s &rarr; <span class="delta-up">3s</span>.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.0</a>, posted May 8, 2026</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.2.3.5</span><span class="date">May 4, 2026</span><span class="tag tag-progression">QoL, no balance changes</span></summary>
+<div class="body">
+<p class="cat-note" style="margin-top:14px">This update contained no weapon, vehicle, gadget, or mode balance changes; it was a quality-of-life/bug-fix patch only.</p>
+<details class="subdetail">
+<summary>Everything in 1.2.3.5: stability, progression, UI, AI, <b class="rs">REDSEC</b> misc</summary>
+<div class="subbody">
+<ul class="plain small">
+<li><b>Player &amp; stability</b>: Fixed a first-person/third-person stance-transition desync that contributed to some "died behind cover" cases; fixed the game becoming unresponsive when resuming from a suspended state; assorted crash and stability fixes.</li>
+<li><b>Progression</b>: Fixed the third weapon slot on Assault granting XP toward the Primary Weapon instead of the weapon in hand.</li>
+<li><b>UI &amp; HUD</b>: Restored the missing "Game Started" prompt when joining Operation Augur late; added the Battle Pass tab back to the Operation End of Round screen; corrected in-game names for the NATO and PAX Dirt Bikes, the Strix Raiders squad icon, and the NATO Traverser Mark 2.</li>
+<li><b>AI</b>: Improved bot logic to reduce unnecessary redeploying.</li>
+<li><b><b class="rs">REDSEC</b> misc</b>: Spectate cycling moved from "A"/"D" to "Q"/"E"; fixed camera clipping in the Armored Transport middle seat in Gauntlet, a disappearing DMR mesh after a DBNO revive, and invisible weapon models while customizing during the Gauntlet briefing.</li>
+</ul>
+</div>
+</details>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-5" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.5</a>, posted May 4, 2026</div>
+</div>
+</details>
+<details class="patch">
 <summary><span class="ver">1.2.3.0</span><span class="date">Apr 14, 2026</span><span class="tag tag-redsec">XP economy</span></summary>
 <div class="body">
 <ul class="plain">
@@ -1128,7 +1636,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Multiplayer XP earn rates increased roughly 5–10% overall.</li>
 <li>Battle Royale/Gauntlet progression now weights time-in-match more heavily; Battle Royale kill and damage-assist score increased 50%.</li>
 </ul>
-<div class="src">Source: <a href="https://forums.ea.com/blog/battlefield-game-info-hub-en/battlefield-6-game-update-1-2-3-0/13320217" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 14, 2026</div>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 10, 2026</div>
 </div>
 </details>
 <details class="patch">
@@ -1145,11 +1653,12 @@ html{-webkit-text-size-adjust:100%}
 
 <footer>
 <p class="disclaimer" style="margin-top:0">This is unofficial fan content. It is not affiliated with, endorsed by, or sponsored by Electronic Arts, DICE, Battlefield Studios, Ripple Effect, or Criterion. Battlefield&trade;, REDSEC&trade;, and all related names, weapons, and trademarks are the property of their respective owners. All figures are compiled from EA's publicly posted patch notes; wording here is paraphrased and reorganized, not reproduced verbatim.</p>
-<p><b>Method:</b> compiled by reading every official EA "Battlefield 6 Game Update" page from launch through Jul 16, 2026, plus a same-day EA Forums post for 1.2.3.0. Weapon/vehicle/gadget/mode balance changes are laid out in full under their category above. Everything else in a patch (bug fixes, UI, cosmetics, audio, Portal, settings, AI, and non-balance <b class="rs">REDSEC</b> items) is condensed into a collapsed "Everything else" section inside that patch's entry, so it's there if you want it without bloating the page. Where dev commentary is quoted in spirit, it has been paraphrased; every number is reproduced exactly as EA published it.</p>
+<p><b>Method:</b> compiled by reading every official EA "Battlefield 6 Game Update" page from launch through Jul 16, 2026. Every version number and both dates in the Patch Index were verified field by field against EA's own page for that update on Aug 1, 2026. Weapon/vehicle/gadget/mode balance changes are laid out in full under their category above. Everything else in a patch (bug fixes, UI, cosmetics, audio, Portal, settings, AI, and non-balance <b class="rs">REDSEC</b> items) is condensed into a collapsed "Everything else" section inside that patch's entry, so it's there if you want it without bloating the page. Where dev commentary is quoted in spirit, it has been paraphrased; every number is reproduced exactly as EA published it.</p>
 <p>Compiled Jul 29, 2026. EA revises these pages after posting ("this announcement may change"), so treat entries as accurate to the versions linked above, not necessarily the current live page.</p>
 </footer>
 
-</div>
+</div><!-- /.wrap -->
+</div><!-- /.layout -->
 
 <script>
 (function(){
@@ -1159,25 +1668,29 @@ html{-webkit-text-size-adjust:100%}
   // remember each entry's original open/closed state so we can restore it when the search is cleared
   allPatches.forEach(function(d){ d.dataset.originallyOpen = d.hasAttribute('open') ? '1' : '0'; });
 
+  var CAT_LABELS = {systemic:'Systemic',weapons:'Weapon',vehicles:'Vehicle',gadgets:'Gadget',maps:'Map/Mode',redsec:'REDSEC',progression:'Economy'};
+
+  // Groups are anchored on the category headings themselves rather than on the
+  // position of nav.toc, because the guide buttons now sit above the Patch Index.
+  // The Patch Index heading carries no id, so it stays outside the groups and is
+  // left alone by filtering, exactly as before.
   function buildGroups(){
     var wrap = document.querySelector('.wrap');
     var children = Array.prototype.slice.call(wrap.children);
-    var navIdx = -1;
-    for (var i=0;i<children.length;i++){ if (children[i].tagName === 'NAV'){ navIdx = i; break; } }
     var groups = [];
     var current = null;
-    for (var j = navIdx+1; j < children.length; j++){
+    for (var j = 0; j < children.length; j++){
       var el = children[j];
       if (el.tagName === 'FOOTER') break;
-      if (el.tagName === 'H2'){ current = {header: el, items: []}; groups.push(current); }
+      if (el.tagName === 'H2'){
+        current = CAT_LABELS[el.id] ? {header: el, items: []} : null;
+        if (current) groups.push(current);
+      }
       else if (current){ current.items.push(el); }
     }
     return groups;
   }
   var groups = buildGroups();
-
-  
-  var CAT_LABELS = {systemic:'Systemic',weapons:'Weapon',vehicles:'Vehicle',gadgets:'Gadget',maps:'Map/Mode',redsec:'REDSEC',progression:'Economy'};
   var STOPWORDS = ['compiled','method','window','innate','scope','patches covered'];
 
   function cleanTerm(s){ return s.replace(/[:;]\s*$/,'').replace(/\s+/g,' ').trim(); }
@@ -1233,6 +1746,31 @@ html{-webkit-text-size-adjust:100%}
     return escapeHtml(term.slice(0,pos)) + '<mark class="hl">' + escapeHtml(term.slice(pos,pos+query.length)) + '</mark>' + escapeHtml(term.slice(pos+query.length));
   }
 
+  // Item pages, written by scripts/build_pages.py alongside the pages themselves,
+  // so the index can never drift from what actually exists. Absent file, failed
+  // fetch or file:// all degrade to the in-page search that was here before.
+  var itemIndex = [];
+  if (window.fetch){
+    fetch('/data/search-index.json')
+      .then(function(r){ return r.ok ? r.json() : null; })
+      .then(function(d){ if (d && d.items) itemIndex = d.items; })
+      .catch(function(){});
+  }
+
+  function matchItems(query){
+    var starts = [], contains = [];
+    itemIndex.forEach(function(it){
+      var hay = (it.name + ' ' + (it.alt || '')).toLowerCase();
+      var p = hay.indexOf(query);
+      if (p === -1) return;
+      var entry = {term: it.name, cat: it.cat, url: it.url};
+      if (it.name.toLowerCase().indexOf(query) === 0) starts.push(entry); else contains.push(entry);
+    });
+    starts.sort(function(a,b){ return a.term.length - b.term.length; });
+    contains.sort(function(a,b){ return a.term.length - b.term.length; });
+    return starts.concat(contains).slice(0, 5);
+  }
+
   var activeSuggestionIndex = -1;
   var currentSuggestions = [];
 
@@ -1248,7 +1786,10 @@ html{-webkit-text-size-adjust:100%}
     });
     starts.sort(function(a,b){ return a.term.length - b.term.length; });
     contains.sort(function(a,b){ return a.term.length - b.term.length; });
-    currentSuggestions = starts.concat(contains).slice(0, 8);
+
+    var itemHits = matchItems(query);
+    var textHits = starts.concat(contains).slice(0, itemHits.length ? 6 : 8);
+    currentSuggestions = itemHits.concat(textHits);
     activeSuggestionIndex = -1;
 
     if (currentSuggestions.length === 0){
@@ -1257,13 +1798,17 @@ html{-webkit-text-size-adjust:100%}
       return;
     }
 
-    box.innerHTML = currentSuggestions.map(function(k, i){
+    var html = '';
+    currentSuggestions.forEach(function(k, i){
+      if (itemHits.length && i === 0) html += '<div class="sug-head">Database</div>';
+      if (itemHits.length && i === itemHits.length && textHits.length) html += '<div class="sug-head">In this page</div>';
       var catClass = k.cat === 'REDSEC' ? ' redsec' : '';
-      return '<div class="sug-item" data-idx="'+i+'" onmousedown="selectSuggestion('+i+')">' +
-               '<span class="sug-term">' + highlightTerm(k.term, query) + '</span>' +
-               '<span class="sug-cat' + catClass + '">' + escapeHtml(k.cat) + '</span>' +
-             '</div>';
-    }).join('');
+      html += '<div class="sug-item' + (k.url ? ' sug-goto' : '') + '" data-idx="'+i+'" onmousedown="selectSuggestion('+i+')">' +
+                '<span class="sug-term">' + highlightTerm(k.term, query) + '</span>' +
+                '<span class="sug-cat' + catClass + '">' + escapeHtml(k.cat) + '</span>' +
+              '</div>';
+    });
+    box.innerHTML = html;
     box.classList.add('show');
   }
 
@@ -1280,6 +1825,7 @@ html{-webkit-text-size-adjust:100%}
   window.selectSuggestion = function(i){
     var k = currentSuggestions[i];
     if (!k) return;
+    if (k.url){ window.location.href = k.url; return; }
     var input = document.getElementById('searchInput');
     input.value = k.term;
     filterBalanceLog(k.term);
