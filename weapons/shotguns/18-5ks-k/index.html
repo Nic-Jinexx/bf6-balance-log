@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0e0c">
+<title>18.5KS-K: Patch History &amp; Stats | BF6 Balance Log</title>
+<meta name="description" content="Every logged Battlefield 6 balance change to the 18.5KS-K, with its patch history, stats and in-game description.">
+<link rel="canonical" href="https://bf6balancelog.com/weapons/shotguns/18-5ks-k/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="18.5KS-K patch history | BF6 Balance Log">
+<meta property="og:description" content="Every logged Battlefield 6 balance change to the 18.5KS-K, with its patch history, stats and in-game description.">
+<meta property="og:url" content="https://bf6balancelog.com/weapons/shotguns/18-5ks-k/">
+<meta property="og:site_name" content="BF6 Balance Log">
+<meta property="og:image" content="https://bf6balancelog.com/img/items/18-5ks-k.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="18.5KS-K patch history | BF6 Balance Log">
+<meta name="twitter:description" content="Every logged Battlefield 6 balance change to the 18.5KS-K, with its patch history, stats and in-game description.">
+<meta name="twitter:image" content="https://bf6balancelog.com/img/items/18-5ks-k.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"BF6 Balance Log","item":"https://bf6balancelog.com/"},{"@type":"ListItem","position":2,"name":"18.5KS-K","item":"https://bf6balancelog.com/weapons/shotguns/18-5ks-k/"}]}
+</script>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/icon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+
+:root{
+  --bg:#0a0e0c; --panel:#111613; --panel2:#151b17; --border:#25302a; --border2:#324037;
+  /* Secondary greys, brightened. --dim was #5f6b62 at 3.48:1, which failed AA
+     for normal text and carried a lot of small copy: table headers, captions,
+     source lines, the footer, tree counts and empty subcategories. --muted was
+     passing but sat close to the floor. Measured with scripts/probe_type.html. */
+  --text:#e2e8e2; --muted:#9caa9d; --dim:#76857a;
+  /* Category palette, second darkening pass. Not a uniform multiply: each color
+     is solved to land at ~4.8:1 against the background, which is the floor for
+     normal-size text (guide buttons, tree labels, the REDSEC wordmark). What
+     read as "pastel" was uneven lightness, so equalizing contrast is what
+     actually deepens the set. Blue and red were already at the floor and could
+     not go darker without becoming unreadable. */
+  --weapons:#a47621; --vehicles:#4682bb; --gadgets:#558c47; --systemic:#2a8d84; --maps:#976eb3; --redsec:#e63f3f;
+  --progression:#768279; --patchnotes:#c25c8e;
+  --mono:'IBM Plex Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.5;font-size:17px}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 80px}
+header.top{border-bottom:1px solid var(--border);padding:36px 0 22px;margin-bottom:28px;position:relative}
+h1{font-family:var(--mono);font-size:30px;letter-spacing:0.5px;margin:14px 0 6px;text-transform:uppercase}
+.sub{color:var(--muted);font-size:16px;max-width:760px}
+.meta-row{display:flex;flex-wrap:wrap;gap:18px;margin-top:16px;font-family:var(--mono);font-size:14px;color:var(--dim)}
+.meta-row span b{color:var(--muted)}
+/* guide buttons: each takes its own section's color as its background */
+nav.toc{display:flex;flex-wrap:wrap;gap:7px;margin:22px 0 30px}
+nav.toc a{font-family:var(--mono);font-size:13.5px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;padding:10px 12px;border:1px solid transparent;border-radius:4px;text-decoration:none;color:var(--bg);background:var(--dim);
+  transition:filter .16s ease,transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s ease}
+nav.toc a:hover{filter:brightness(1.3);transform:translateY(-3px) scale(1.045);box-shadow:0 6px 16px rgba(0,0,0,.5)}
+nav.toc a:active{transform:translateY(-1px) scale(1.01);box-shadow:0 2px 6px rgba(0,0,0,.5)}
+@media (prefers-reduced-motion:reduce){
+  nav.toc a{transition:filter .16s ease}
+  nav.toc a:hover,nav.toc a:active{transform:none}
+}
+nav.toc a.t-systemic{background:var(--systemic)}
+nav.toc a.t-weapons{background:var(--weapons)}
+nav.toc a.t-vehicles{background:var(--vehicles)}
+nav.toc a.t-gadgets{background:var(--gadgets)}
+nav.toc a.t-maps{background:var(--maps)}
+nav.toc a.t-redsec{background:var(--redsec)}
+nav.toc a.t-progression{background:var(--progression)}
+/* the REDSEC wordmark is red by default, which would vanish on the red button */
+nav.toc a.t-redsec b.rs{color:var(--bg) !important}
+h2.cat{font-family:var(--mono);font-size:21px;text-transform:uppercase;letter-spacing:.6px;margin:52px 0 4px;padding-bottom:10px;border-bottom:2px solid var(--border2);display:flex;align-items:center;gap:10px}
+h2.cat .dot{width:10px;height:10px;border-radius:2px;display:inline-block}
+h2.cat.weapons{color:var(--weapons)} h2.cat.weapons .dot{background:var(--weapons)}
+h2.cat.vehicles{color:var(--vehicles)} h2.cat.vehicles .dot{background:var(--vehicles)}
+h2.cat.gadgets{color:var(--gadgets)} h2.cat.gadgets .dot{background:var(--gadgets)}
+h2.cat.systemic{color:var(--systemic)} h2.cat.systemic .dot{background:var(--systemic)}
+h2.cat.maps{color:var(--maps)} h2.cat.maps .dot{background:var(--maps)}
+h2.cat.redsec{color:var(--redsec)} h2.cat.redsec .dot{background:var(--redsec)}
+p.cat-note{color:var(--muted);font-size:15px;margin:6px 0 22px;max-width:820px}
+details.patch{background:var(--panel);border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden}
+details.patch[open]{border-color:var(--border2)}
+summary{cursor:pointer;padding:13px 16px;display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:15px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";color:var(--dim);width:14px;font-weight:700}
+details[open] summary::before{content:"−"}
+summary .ver{color:var(--text);font-weight:700;min-width:78px}
+summary .date{color:var(--muted)}
+summary .tag{margin-left:auto;font-size:12px;padding:2px 8px;border-radius:10px;border:1px solid var(--border2);color:var(--dim);text-transform:uppercase}
+.body{padding:0 16px 18px 42px;border-top:1px solid var(--border)}
+.body p.dev{color:var(--muted);font-size:14.5px;font-style:italic;margin:14px 0 10px;padding-left:10px;border-left:2px solid var(--border2)}
+ul.plain{margin:10px 0;padding-left:18px}
+ul.plain li{margin-bottom:6px;font-size:16px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}
+table caption{text-align:left;font-family:var(--mono);font-size:13.5px;color:var(--dim);margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px}
+th{text-align:left;font-family:var(--mono);font-size:13px;text-transform:uppercase;color:var(--dim);border-bottom:1px solid var(--border2);padding:6px 10px}
+td{padding:6px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:rgba(255,255,255,0.045)}
+td.num{font-family:var(--mono);color:var(--text);white-space:nowrap}
+td.item{color:var(--text);font-weight:600}
+.delta-down,td.num.delta-down{color:#7bbf6a}
+.delta-up,td.num.delta-up{color:#e0645a}
+.src{font-size:13.5px;font-family:var(--mono);color:var(--dim);margin-top:10px}
+.src a{color:var(--vehicles);text-decoration:none}
+.src a:hover{text-decoration:underline}
+.indexTable{width:100%;border-collapse:collapse;font-size:15px;margin-bottom:10px}
+.indexTable th{text-align:left;font-family:var(--mono);font-size:13px;color:var(--dim);text-transform:uppercase;border-bottom:1px solid var(--border2);padding:8px 10px}
+.indexTable td{padding:8px 10px;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:14.5px}
+.indexTable a{color:var(--vehicles);text-decoration:none}
+.indexTable a:hover{text-decoration:underline}
+footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--border);color:var(--dim);font-size:14px;font-family:var(--mono)}
+.disclaimer{background:var(--panel2);border:1px solid var(--border);border-radius:6px;padding:14px 16px;font-size:14.5px;color:var(--muted);margin:18px 0 6px}
+.searchbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;margin:20px 0 8px}
+.searchbar .icon{color:var(--dim);font-family:var(--mono);font-size:16px}
+.searchbar input{flex:1;background:transparent;border:none;outline:none;color:var(--text);font-family:var(--mono);font-size:16px;padding:4px 0}
+.searchbar input::placeholder{color:var(--dim)}
+.searchbar #searchCount{font-family:var(--mono);font-size:13.5px;color:var(--dim);white-space:nowrap}
+.searchbar #searchClear{cursor:pointer;color:var(--dim);font-family:var(--mono);font-size:18px;line-height:1;padding:0 2px;visibility:hidden}
+.searchbar #searchClear.show{visibility:visible}
+.searchbar #searchClear:hover{color:var(--systemic)}
+mark.hl{background:var(--weapons);color:#1a1400;padding:0 1px;border-radius:2px}
+.suggestions{position:absolute;top:100%;left:0;right:0;background:var(--panel2);border:1px solid var(--border2);border-top:none;border-radius:0 0 6px 6px;max-height:280px;overflow-y:auto;display:none;z-index:30;box-shadow:0 10px 26px rgba(0,0,0,0.45)}
+.suggestions.show{display:block}
+.suggestions .sug-item{padding:8px 14px;font-family:var(--mono);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid var(--border)}
+.suggestions .sug-item:last-child{border-bottom:none}
+.suggestions .sug-item:hover,.suggestions .sug-item.active{background:var(--panel);color:var(--weapons)}
+.suggestions .sug-item .sug-term mark.hl{background:var(--weapons);color:#1a1400}
+.suggestions .sug-item .sug-cat{color:var(--dim);font-size:12px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;border:1px solid var(--border2);border-radius:8px;padding:1px 7px}
+.suggestions .sug-item.active .sug-cat{border-color:var(--weapons);color:var(--weapons)}
+.suggestions .sug-empty{padding:10px 14px;color:var(--dim);font-size:14.5px;font-style:italic}
+.suggestions .sug-head{padding:7px 14px 4px;font-family:var(--mono);font-size:11px;text-transform:uppercase;
+  letter-spacing:.6px;color:var(--dim);background:rgba(0,0,0,.18);border-bottom:1px solid var(--border)}
+.suggestions .sug-item.sug-goto .sug-term::after{content:"\2192";color:var(--dim);margin-left:8px}
+.suggestions .sug-item.sug-goto:hover .sug-term::after,
+.suggestions .sug-item.sug-goto.active .sug-term::after{color:var(--weapons)}
+
+/* nested "everything else" sub-sections */
+details.subdetail{margin-top:16px;border:1px dashed var(--border2);border-radius:5px;background:rgba(255,255,255,0.015)}
+details.subdetail summary{padding:9px 14px;font-family:var(--sans);font-size:14.5px;color:var(--dim);gap:8px}
+details.subdetail summary::before{content:"\203A";color:var(--dim);width:12px;font-weight:400}
+details.subdetail[open] summary::before{content:"\2304"}
+details.subdetail summary:hover{color:var(--muted)}
+.subbody{padding:2px 16px 14px 30px;border-top:1px dashed var(--border)}
+ul.plain.small{margin:8px 0}
+ul.plain.small li{font-size:14.5px;color:var(--muted);margin-bottom:6px}
+ul.plain.small li b{color:var(--text);font-weight:600}
+
+/* tag color-coding, matches the category the entry lives under */
+.tag.tag-weapons{color:var(--weapons);border-color:var(--weapons)}
+.tag.tag-vehicles{color:var(--vehicles);border-color:var(--vehicles)}
+.tag.tag-gadgets{color:var(--gadgets);border-color:var(--gadgets)}
+.tag.tag-systemic{color:var(--systemic);border-color:var(--systemic)}
+.tag.tag-maps{color:var(--maps);border-color:var(--maps)}
+.tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
+.tag.tag-progression{color:var(--progression);border-color:#3a463d}
+
+/* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
+   Red now means REDSEC and nothing else: the Systemic section took the teal. */
+b.rs{color:var(--redsec) !important;font-weight:800}
+.sug-cat.redsec{color:var(--redsec);border-color:var(--redsec)}
+
+.feedback-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--panel2);border:1px solid var(--border2);color:var(--muted);
+  font-family:var(--mono);font-size:14px;text-decoration:none;
+  padding:8px 14px;border-radius:20px;white-space:nowrap;
+  box-shadow:0 4px 14px rgba(0,0,0,0.4);
+  transition:color .15s ease,border-color .15s ease;
+}
+.feedback-btn:hover{color:var(--text);border-color:var(--weapons)}
+/* moved off the element's style attribute so the mobile rules below can override it */
+#kofi-fixed{position:fixed;bottom:18px;right:18px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+
+/* ==================== database tree ====================
+   The sidebar sits OUTSIDE .wrap on purpose: .wrap's direct children are walked
+   by the search script to build its category groups, so nothing may be added to
+   it. .layout is the flex parent; .wrap keeps its own max-width and centering. */
+.layout{display:flex;align-items:flex-start}
+.layout>.wrap{flex:1 1 auto;min-width:0}
+.tree{flex:0 0 268px;position:sticky;top:0;height:100vh;overflow-y:auto;overscroll-behavior:contain;
+      background:var(--panel);border-right:1px solid var(--border);padding:20px 0 40px}
+/* sidebar masthead: the site icon alone, linking home. No wordmark, so the
+   img carries the accessible name instead of adjacent text. */
+.tree .tree-brand{display:block;padding:0 16px 16px;margin-bottom:8px;
+      border-bottom:1px solid var(--border);text-decoration:none;line-height:0}
+.tree .tree-brand img{width:48px;height:48px;border-radius:6px;display:block;
+      transition:transform .15s ease,filter .15s ease}
+.tree .tree-brand:hover img{transform:scale(1.06);filter:brightness(1.15)}
+/* a branch that is a plain link rather than an expandable node */
+.tree a.branch-link{display:flex;align-items:center;gap:8px;padding:9px 16px;font-family:var(--mono);
+      font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;text-decoration:none}
+.tree a.branch-link::before{content:"\25C2";width:11px;font-size:12px;font-weight:400;opacity:.8}
+.tree a.branch-link:hover{background:rgba(255,255,255,.045)}
+.tree a.branch-link[aria-current="page"]{background:rgba(255,255,255,.07)}
+.tree a.branch-link.b-patchnotes{color:var(--patchnotes)}
+.tree details{background:none;border:none;border-radius:0;margin:0;overflow:visible}
+.tree summary{padding:9px 16px;font-family:var(--mono);font-size:14px;text-transform:uppercase;
+      letter-spacing:.4px;gap:8px;color:var(--muted)}
+.tree summary::before{content:"\25B8";color:var(--dim);width:11px;font-weight:400;font-size:12px}
+.tree details[open]>summary::before{content:"\25BE"}
+.tree summary:hover{color:var(--text)}
+/* Bold, matching the subcategory rows below, so the whole tree reads as
+   label -> label -> item rather than the branches receding into their leaves. */
+.tree .branch>summary,.tree a.branch-link{font-weight:700;font-size:14.5px;letter-spacing:.4px}
+.tree .branch.b-weapons>summary{color:var(--weapons)}
+.tree .branch.b-attachments>summary{color:var(--weapons)}
+.tree .branch.b-gadgets>summary{color:var(--gadgets)}
+.tree .branch.b-vehicles>summary{color:var(--vehicles)}
+.tree .branch.b-classes>summary{color:var(--systemic)}
+.tree .branch.b-maps>summary{color:var(--maps)}
+.tree .branch.b-modes>summary{color:var(--maps)}
+/* Subcategories are labels, the leaves under them are items. They sit at a smaller size than
+   the leaves, so weight and brightness carry that distinction instead. Unlike the branch rows
+   above, these are sans and mixed-case, so bold reads cleanly here. */
+.tree .sub>summary{padding-left:32px;font-size:14px;text-transform:none;letter-spacing:0;
+      font-family:var(--sans);font-weight:700;color:var(--text)}
+.tree .sub.empty>summary{color:var(--dim);font-weight:600;cursor:default;list-style:none}
+.tree .sub.empty>summary::before{content:"\00B7";color:var(--dim)}
+.tree .sub.empty>summary .cnt{display:none}
+.tree summary .cnt{margin-left:auto;font-size:12px;color:var(--dim);font-family:var(--mono)}
+.tree a.leaf{display:block;padding:7px 16px 7px 46px;font-size:15.5px;color:var(--muted);
+      text-decoration:none;border-left:2px solid transparent}
+.tree a.leaf:hover{color:var(--text);background:rgba(255,255,255,.045)}
+.tree a.leaf[aria-current="page"]{color:var(--text);background:rgba(255,255,255,.06);border-left-color:var(--weapons)}
+.tree .leaf-none{padding:4px 16px 8px 46px;font-size:14px;color:var(--dim);font-style:italic}
+
+/* mobile drawer, CSS-only so the tree still opens with JS disabled */
+#treeToggle{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
+      clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.treeBtn{display:none}
+.treeScrim{display:none}
+
+/* ==================== responsive ====================
+   Additive and media-gated. At >=1101px the page renders as it did before. */
+
+html{-webkit-text-size-adjust:100%}
+
+/* ---- tables become their own horizontal scroll areas ----
+   Consumes the overflow before it reaches details.patch{overflow:hidden}, which
+   is why that rule can stay as-is. Applies to every table on the page, so a new
+   patch entry inherits this with no wrapper markup to remember. */
+@media (max-width:1100px){
+  table,.indexTable{display:block;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;max-width:100%}
+  table>caption{display:block;position:sticky;left:0}
+  /* scroll affordance: edge shadow visible only while there is more to pan to.
+     The cover gradients scroll with the content (local) and hide the shadows
+     (scroll) once you reach either end. */
+  table{
+    background-image:
+      linear-gradient(to right,var(--panel),rgba(17,22,19,0) 60%),
+      linear-gradient(to left,var(--panel),rgba(17,22,19,0) 60%),
+      linear-gradient(to right,rgba(0,0,0,.45),rgba(0,0,0,0)),
+      linear-gradient(to left,rgba(0,0,0,.45),rgba(0,0,0,0));
+    background-position:left center,right center,left center,right center;
+    background-repeat:no-repeat;
+    background-size:26px 100%,26px 100%,14px 100%,14px 100%;
+    background-attachment:local,local,scroll,scroll;
+  }
+  .indexTable{background-image:
+      linear-gradient(to right,var(--bg),rgba(10,14,12,0) 60%),
+      linear-gradient(to left,var(--bg),rgba(10,14,12,0) 60%),
+      linear-gradient(to right,rgba(0,0,0,.45),rgba(0,0,0,0)),
+      linear-gradient(to left,rgba(0,0,0,.45),rgba(0,0,0,0))}
+}
+
+/* ---- narrow windows / tablets ---- */
+@media (max-width:900px){
+  .wrap{padding:0 16px 80px}
+  h1{font-size:26px}
+  .body{padding:0 14px 18px 24px}
+  .subbody{padding:2px 14px 14px 20px}
+  h2.cat{align-items:flex-start}
+  h2.cat .dot{flex:0 0 auto;margin-top:7px}
+}
+
+/* ---- phones ---- */
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 14px 72px}
+
+  header.top{padding:24px 0 18px;margin-bottom:20px}
+  h1{font-size:22px;letter-spacing:0;margin:10px 0 6px}
+  .sub{font-size:15px}
+  .meta-row{gap:10px;margin-top:12px;font-size:13px}
+  .disclaimer{font-size:13.5px;padding:12px}
+
+  h2.cat{font-size:17px;letter-spacing:.3px;margin:34px 0 4px;gap:8px;align-items:flex-start}
+  h2.cat .dot{flex:0 0 auto;margin-top:6px}
+  p.cat-note{font-size:14px;margin:6px 0 16px}
+
+  nav.toc{gap:6px;margin:18px 0 24px}
+  nav.toc a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-size:13px}
+
+  .searchbar{flex-wrap:wrap;padding:6px 10px;margin:14px 0 8px}
+  .searchbar input{min-width:0;font-size:16px} /* keep 16px: anything smaller makes iOS zoom on focus */
+  .searchbar #searchClear{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;margin:-6px -4px;font-size:22px}
+  .searchbar #searchCount{flex:1 0 100%;order:5;text-align:right;padding-top:2px}
+  .searchbar #searchCount:empty{display:none}
+  .suggestions{max-height:52vh}
+  .suggestions .sug-item{padding:12px 14px;font-size:14px}
+
+  /* summary wraps instead of squeezing the tag off the row */
+  summary{flex-wrap:wrap;gap:6px 10px;padding:12px 14px;font-size:14px}
+  summary .ver{min-width:0}
+  summary .date{font-size:13px}
+  summary .tag{font-size:11px;padding:3px 8px}
+  details.subdetail summary{padding:12px;font-size:14px}
+
+  /* collapse the indent stack: wrap 20 + body 42 + subbody 30 + ul 18 */
+  .body{padding:0 12px 16px 14px}
+  .subbody{padding:2px 12px 12px 14px}
+  .body p.dev{font-size:14px;padding-left:10px}
+  ul.plain{margin:8px 0;padding-left:18px}
+  ul.plain li{font-size:15px}
+  ul.plain.small li{font-size:14px}
+
+  /* less panning needed per table; td.num keeps its nowrap by design */
+  table{font-size:13.5px;margin:10px 0}
+  table caption{font-size:12.5px}
+  th{padding:6px;font-size:11.5px}
+  td{padding:7px 6px}
+  .indexTable th{padding:7px 6px}
+  .indexTable td{padding:7px 6px;font-size:13.5px}
+  /* keep version/date/link columns on one line so the table pans with its columns
+     aligned, rather than squeezing "Jul 16, 2026" onto three lines */
+  .indexTable th,.indexTable td{white-space:nowrap}
+  .indexTable td:nth-child(4){white-space:normal;min-width:184px}
+  .indexTable td a{display:inline-flex;align-items:center;min-height:44px}
+
+  .src{font-size:12.5px}
+  footer,footer p{font-size:13px}
+
+  /* CTAs out of the corner and into the flow */
+  #kofi-fixed{position:static;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;padding:0 14px 26px}
+  .feedback-btn{min-height:44px;padding:11px 16px}
+}
+
+/* ---- tree becomes an off-canvas drawer ---- */
+@media (max-width:900px){
+  .tree{position:fixed;top:0;left:0;bottom:0;width:284px;height:100%;z-index:70;
+        transform:translateX(-100%);transition:transform .22s ease;box-shadow:2px 0 24px rgba(0,0,0,.5)}
+  #treeToggle:checked ~ .layout .tree{transform:none}
+  .treeScrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:65;
+        opacity:0;pointer-events:none;transition:opacity .22s ease}
+  #treeToggle:checked ~ .treeScrim{opacity:1;pointer-events:auto}
+  .treeBtn{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin:14px 0 0;padding:0 16px;
+        font-family:var(--mono);font-size:14px;text-transform:uppercase;letter-spacing:.4px;
+        color:var(--muted);background:var(--panel);border:1px solid var(--border2);border-radius:4px;cursor:pointer}
+  .treeBtn:hover{color:var(--text);border-color:var(--weapons)}
+  .tree a.leaf{padding-top:9px;padding-bottom:9px}
+  .tree summary{padding-top:11px;padding-bottom:11px}
+}
+
+/* ---- 320-380px ---- */
+@media (max-width:380px){
+  .wrap{padding:0 12px 72px}
+  h1{font-size:20px}
+  h2.cat{font-size:16px}
+  .body{padding:0 10px 14px 10px}
+  .subbody{padding:2px 10px 12px}
+  table{font-size:12.5px}
+  th,td{padding:6px 4px}
+  summary{padding:11px 12px;font-size:13px}
+}
+
+.crumb{font-family:var(--mono);font-size:13px;color:var(--dim);margin:20px 0 0;letter-spacing:.3px}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--text)}
+header.itemhead{border-bottom:1px solid var(--border);padding:14px 0 24px;margin-bottom:0}
+header.itemhead h1{margin:10px 0 0}
+/* gadgets lead with the model designation EA's notes use; the in-game name rides underneath */
+header.itemhead p.itemsub{margin:5px 0 0;font-family:var(--mono);font-size:14px;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.6px}
+.descblock{margin:20px 0 0;max-width:760px}
+.desclabel{font-family:var(--mono);font-size:12.5px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.7px;color:var(--dim);margin:0 0 7px}
+blockquote.ingame{margin:0;padding:8px 0 8px 16px;border-left:3px solid var(--border2);
+  color:var(--text);font-size:16.5px}
+.tbd{color:var(--dim);font-style:italic}
+.traits{display:flex;flex-wrap:wrap;gap:7px;margin:13px 0 0}
+.traits span{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.5px;
+  color:var(--muted);border:1px solid var(--border2);border-radius:3px;padding:4px 10px;background:var(--panel)}
+/* square ends, and vertically centred: the global td rule is vertical-align:top,
+   which left the bar riding above its label */
+.factbox table.ratings td{vertical-align:middle}
+.factbox table.ratings td:nth-child(2){width:100%;padding:6px 12px}
+.factbox table.ratings td:last-child{width:1%}
+.bar{display:block;height:7px;background:rgba(255,255,255,.09);overflow:hidden}
+.bar i{display:block;height:100%}
+.itemgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;
+  margin:26px 0 4px;align-items:start}
+figure.itemimg{margin:0}
+figure.itemimg img{width:100%;height:auto;display:block;border:1px solid var(--border);
+  border-radius:6px;background:var(--panel)}
+figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:8px}
+.imgpending{aspect-ratio:16/9;border:1px dashed var(--border2);border-radius:6px;background:var(--panel);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
+  color:var(--dim);font-family:var(--mono);font-size:13px;text-align:center;padding:16px}
+.imgpending b{color:var(--muted);font-size:16px;font-weight:600;letter-spacing:.4px}
+/* No horizontal padding on the box itself: the inset lives on the cells instead,
+   so a striped row's background runs the full width of the panel rather than
+   stopping 16px short on each side. overflow:hidden keeps a stripe from
+   spilling past the rounded corners. */
+.factbox{background:var(--panel);border:1px solid var(--border);border-radius:6px;
+  padding:2px 0 14px;overflow:hidden}
+.factbox h3{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.6px;
+  color:var(--dim);margin:16px 0 0;padding:0 16px;font-weight:600}
+.factbox .emptynote{padding:0 16px}
+.factbox table{margin:8px 0 2px}
+.factbox td{padding:6px 0}
+.factbox td:first-child{color:var(--muted);padding-left:16px}
+.factbox td:last-child{font-family:var(--mono);text-align:right;color:var(--text);padding-right:16px}
+/* a challenge with several tasks: left aligned and wrapping, since right-aligned
+   mono prose is unreadable. Must follow the :last-child rule to win on order. */
+.factbox td.stack{text-align:left;font-family:var(--sans);white-space:normal;
+  padding-top:9px;padding-bottom:9px}
+.factbox td.stack .req{display:block;font-size:14px;line-height:1.4}
+.factbox td.stack .req + .req{margin-top:5px}
+.emptynote{color:var(--dim);font-style:italic;font-size:14.5px;margin:12px 0 0}
+.relgroup{margin:14px 0 0}
+.relgroup h4{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;
+  color:var(--dim);margin:0 0 6px;font-weight:600}
+.relgroup a{color:var(--text)}
+.usagebox{border:1px dashed var(--border2);border-radius:6px;background:var(--panel);padding:30px 16px;
+  text-align:center;color:var(--dim);font-family:var(--mono);font-size:13.5px;line-height:1.7}
+.backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
+.backlog a{color:var(--vehicles);text-decoration:none}
+.backlog a:hover{text-decoration:underline}
+/* the shared rule turns every table into its own scroll box below 1100px, which
+   is right for wide patch tables but collapses this two-column one to content
+   width. Opt the fact box back out; it never needs to scroll. */
+@media (max-width:1100px){
+  .factbox table{display:table;width:100%;background-image:none}
+}
+@media (max-width:900px){.itemgrid{grid-template-columns:1fr}}
+@media (max-width:640px){
+  header.itemhead h1{font-size:22px}
+  blockquote.ingame{font-size:15.5px}
+  .factbox{padding:2px 12px 12px}
+}
+
+</style>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2ed16d9d96844272bd6103453ef7aefc"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+<body>
+<input type="checkbox" id="treeToggle" aria-label="Toggle database navigation">
+<label for="treeToggle" class="treeScrim" aria-hidden="true"></label>
+
+<div class="layout">
+
+<aside class="tree" aria-label="Database navigation">
+<!-- TREE:START -->
+<nav class="tree-nav" aria-label="Item database">
+<a class="tree-brand" href="/" title="BF6 Balance Log"><img src="/icon-192.png" alt="BF6 Balance Log, home" width="48" height="48"></a>
+<a class="branch-link b-patchnotes" href="/">Patch Notes</a>
+<details class="branch b-weapons" open>
+<summary>Weapons<span class="cnt">68</span></summary>
+<details class="sub">
+<summary>Assault Rifles<span class="cnt">11</span></summary>
+<a class="leaf" href="/weapons/assault-rifles/m433/">M433</a>
+<a class="leaf" href="/weapons/assault-rifles/b36a4/">B36A4</a>
+<a class="leaf" href="/weapons/assault-rifles/sor-556-mk2/">SOR-556 MK2</a>
+<a class="leaf" href="/weapons/assault-rifles/ak4d/">AK4D</a>
+<a class="leaf" href="/weapons/assault-rifles/tr-7/">TR-7</a>
+<a class="leaf" href="/weapons/assault-rifles/kord-6p67/">KORD 6P67</a>
+<a class="leaf" href="/weapons/assault-rifles/nvo-228e/">NVO-228E</a>
+<a class="leaf" href="/weapons/assault-rifles/l85a3/">L85A3</a>
+<a class="leaf" href="/weapons/assault-rifles/vcr-2/">VCR-2</a>
+<a class="leaf" href="/weapons/assault-rifles/m16a4/">M16A4</a>
+<a class="leaf" href="/weapons/assault-rifles/ef88/">EF88</a>
+</details>
+<details class="sub">
+<summary>Carbines<span class="cnt">9</span></summary>
+<a class="leaf" href="/weapons/carbines/m4a1/">M4A1</a>
+<a class="leaf" href="/weapons/carbines/m277/">M277</a>
+<a class="leaf" href="/weapons/carbines/ak-205/">AK-205</a>
+<a class="leaf" href="/weapons/carbines/m417-a2/">M417 A2</a>
+<a class="leaf" href="/weapons/carbines/grt-bc/">GRT-BC</a>
+<a class="leaf" href="/weapons/carbines/qbz-192/">QBZ-192</a>
+<a class="leaf" href="/weapons/carbines/sg-553r/">SG 553R</a>
+<a class="leaf" href="/weapons/carbines/sor-300sc/">SOR-300SC</a>
+<a class="leaf" href="/weapons/carbines/brod-3/">BROD 3</a>
+</details>
+<details class="sub">
+<summary>SMGs<span class="cnt">10</span></summary>
+<a class="leaf" href="/weapons/smgs/sgx/">SGX</a>
+<a class="leaf" href="/weapons/smgs/pw5a3/">PW5A3</a>
+<a class="leaf" href="/weapons/smgs/pw7a2/">PW7A2</a>
+<a class="leaf" href="/weapons/smgs/umg-40/">UMG-40</a>
+<a class="leaf" href="/weapons/smgs/usg-90/">USG-90</a>
+<a class="leaf" href="/weapons/smgs/kv9/">KV9</a>
+<a class="leaf" href="/weapons/smgs/scw-10/">SCW-10</a>
+<a class="leaf" href="/weapons/smgs/sl9/">SL9</a>
+<a class="leaf" href="/weapons/smgs/cz3a1/">CZ3A1</a>
+<a class="leaf" href="/weapons/smgs/pp-19/">PP-19</a>
+</details>
+<details class="sub">
+<summary>LMGs<span class="cnt">10</span></summary>
+<a class="leaf" href="/weapons/lmgs/l110/">L110</a>
+<a class="leaf" href="/weapons/lmgs/drs-iar/">DRS-IAR</a>
+<a class="leaf" href="/weapons/lmgs/m60/">M/60</a>
+<a class="leaf" href="/weapons/lmgs/rpkm/">RPKM</a>
+<a class="leaf" href="/weapons/lmgs/m123k/">M123K</a>
+<a class="leaf" href="/weapons/lmgs/m250/">M250</a>
+<a class="leaf" href="/weapons/lmgs/kts100-mk8/">KTS100 MK8</a>
+<a class="leaf" href="/weapons/lmgs/m240l/">M240L</a>
+<a class="leaf" href="/weapons/lmgs/m121-a2/">M121 A2</a>
+<a class="leaf" href="/weapons/lmgs/rpk-74m/">RPK-74M</a>
+</details>
+<details class="sub">
+<summary>DMRs<span class="cnt">6</span></summary>
+<a class="leaf" href="/weapons/dmrs/m39-emr/">M39 EMR</a>
+<a class="leaf" href="/weapons/dmrs/lmr27/">LMR27</a>
+<a class="leaf" href="/weapons/dmrs/svk-86/">SVK-8.6</a>
+<a class="leaf" href="/weapons/dmrs/svdm/">SVDM</a>
+<a class="leaf" href="/weapons/dmrs/grt-cps/">GRT-CPS</a>
+<a class="leaf" href="/weapons/dmrs/vssm/">VSSM</a>
+</details>
+<details class="sub">
+<summary>Sniper Rifles<span class="cnt">5</span></summary>
+<a class="leaf" href="/weapons/sniper-rifles/m2010-esr/">M2010 ESR</a>
+<a class="leaf" href="/weapons/sniper-rifles/sv-98/">SV-98</a>
+<a class="leaf" href="/weapons/sniper-rifles/psr/">PSR</a>
+<a class="leaf" href="/weapons/sniper-rifles/mini-scout/">Mini Scout</a>
+<a class="leaf" href="/weapons/sniper-rifles/l115/">L115</a>
+</details>
+<details class="sub" open>
+<summary>Shotguns<span class="cnt">4</span></summary>
+<a class="leaf" href="/weapons/shotguns/m87a1/">M87A1</a>
+<a class="leaf" href="/weapons/shotguns/m1014/">M1014</a>
+<a class="leaf" href="/weapons/shotguns/18-5ks-k/" aria-current="page">18.5KS-K</a>
+<a class="leaf" href="/weapons/shotguns/db-12/">DB-12</a>
+</details>
+<details class="sub">
+<summary>Sidearms<span class="cnt">7</span></summary>
+<a class="leaf" href="/weapons/sidearms/p18/">P18</a>
+<a class="leaf" href="/weapons/sidearms/es-57/">ES 5.7</a>
+<a class="leaf" href="/weapons/sidearms/m45a1/">M45A1</a>
+<a class="leaf" href="/weapons/sidearms/m44/">M44</a>
+<a class="leaf" href="/weapons/sidearms/ggh-22/">GGH-22</a>
+<a class="leaf" href="/weapons/sidearms/m357-trait/">M357 Trait</a>
+<a class="leaf" href="/weapons/sidearms/vz-61/">VZ. 61</a>
+</details>
+<details class="sub">
+<summary>Melee<span class="cnt">6</span></summary>
+<a class="leaf" href="/weapons/melee/combat-knife/">Combat Knife</a>
+<a class="leaf" href="/weapons/melee/sledgehammer/">Sledgehammer</a>
+<a class="leaf" href="/weapons/melee/hunting-knife/">Hunting Knife</a>
+<a class="leaf" href="/weapons/melee/ice-axe/">Ice Axe</a>
+<a class="leaf" href="/weapons/melee/serrated-blade/">Serrated Blade</a>
+<a class="leaf" href="/weapons/melee/eod-bot-arm/">EOD Bot Arm</a>
+</details>
+</details>
+<details class="branch b-attachments">
+<summary>Attachments<span class="cnt">0</span></summary>
+<details class="sub empty">
+<summary>Optics<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Barrels<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Underbarrel<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Magazines<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Ammunition<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+</details>
+<details class="branch b-gadgets">
+<summary>Gadgets<span class="cnt">41</span></summary>
+<details class="sub">
+<summary>Throwables<span class="cnt">9</span></summary>
+<a class="leaf" href="/gadgets/throwables/m67/">M67</a>
+<a class="leaf" href="/gadgets/throwables/mk141/">MK 141 Mod 0</a>
+<a class="leaf" href="/gadgets/throwables/m84/">M84 Flash Grenade</a>
+<a class="leaf" href="/gadgets/throwables/scg-24/">SCG-24 Anti-Vehicle Grenade</a>
+<a class="leaf" href="/gadgets/throwables/v40/">V40 Mini Frag Grenade</a>
+<a class="leaf" href="/gadgets/throwables/m18/">M18 Smoke Grenade</a>
+<a class="leaf" href="/gadgets/throwables/an-m14/">AN/M14 Incendiary Grenade</a>
+<a class="leaf" href="/gadgets/throwables/mtn-55/">Throwable Proximity Detector MTN-55</a>
+<a class="leaf" href="/gadgets/throwables/steel-wing/">Throwing Knife Steel Wing</a>
+</details>
+<details class="sub">
+<summary>Launchers<span class="cnt">11</span></summary>
+<a class="leaf" href="/gadgets/launchers/x95-bre/">X95 BRE</a>
+<a class="leaf" href="/gadgets/launchers/m320a1-he/">M320A1 HE</a>
+<a class="leaf" href="/gadgets/launchers/m320a1-thrm/">M320A1 THRM</a>
+<a class="leaf" href="/gadgets/launchers/ss26/">SS26</a>
+<a class="leaf" href="/gadgets/launchers/mbt-law/">MBT-LAW</a>
+<a class="leaf" href="/gadgets/launchers/slm-93a/">SLM-93A Spire</a>
+<a class="leaf" href="/gadgets/launchers/rpg-7v2/">RPG-7V2</a>
+<a class="leaf" href="/gadgets/launchers/m136-at/">M136 AT</a>
+<a class="leaf" href="/gadgets/launchers/9k38-igla/">9K38 Igla</a>
+<a class="leaf" href="/gadgets/launchers/m320a1-smk/">M320A1 SMK</a>
+<a class="leaf" href="/gadgets/launchers/sich-g1-wp/">SICH G1 WP</a>
+</details>
+<details class="sub">
+<summary>Deployables<span class="cnt">14</span></summary>
+<a class="leaf" href="/gadgets/deployables/tarantula-alx/">Tarantula ALX</a>
+<a class="leaf" href="/gadgets/deployables/qlink-6/">QLINK 6</a>
+<a class="leaf" href="/gadgets/deployables/m15/">M15</a>
+<a class="leaf" href="/gadgets/deployables/m4a1-slam/">M4A1 SLAM</a>
+<a class="leaf" href="/gadgets/deployables/ptkm-1r/">PTKM-1R</a>
+<a class="leaf" href="/gadgets/deployables/css-bundle/">CSS Bundle</a>
+<a class="leaf" href="/gadgets/deployables/gpdis/">GPDIS</a>
+<a class="leaf" href="/gadgets/deployables/mp-aps/">MP-APS</a>
+<a class="leaf" href="/gadgets/deployables/lwcms/">LWCMS</a>
+<a class="leaf" href="/gadgets/deployables/maxguard-900/">Maxguard 900</a>
+<a class="leaf" href="/gadgets/deployables/goliath-compact/">Goliath Compact</a>
+<a class="leaf" href="/gadgets/deployables/m18a1/">M18A1</a>
+<a class="leaf" href="/gadgets/deployables/field-dummy-25/">Field Dummy No.25</a>
+<a class="leaf" href="/gadgets/deployables/c-4/">C-4 Explosives</a>
+</details>
+<details class="sub">
+<summary>Tools<span class="cnt">7</span></summary>
+<a class="leaf" href="/gadgets/tools/csb-iv/">EOD Bot</a>
+<a class="leaf" href="/gadgets/tools/powerpulse/">Defibrillator</a>
+<a class="leaf" href="/gadgets/tools/ltlm-ii/">LTLM II</a>
+<a class="leaf" href="/gadgets/tools/xfgm-6d/">XFGM-6D</a>
+<a class="leaf" href="/gadgets/tools/trcrv2/">TRCRV2</a>
+<a class="leaf" href="/gadgets/tools/dgmk4/">DGMK4</a>
+<a class="leaf" href="/gadgets/tools/manet-dis-5/">MANET-DIS 5</a>
+</details>
+</details>
+<details class="branch b-vehicles">
+<summary>Vehicles<span class="cnt">0</span></summary>
+<details class="sub empty">
+<summary>Ground<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Air<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Naval<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="sub empty">
+<summary>Transport<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+</details>
+<details class="branch b-classes">
+<summary>Classes<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="branch b-maps">
+<summary>Maps<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+<details class="branch b-modes">
+<summary>Modes<span class="cnt">0</span></summary>
+<div class="leaf-none">nothing catalogued yet</div>
+</details>
+</nav>
+<!-- TREE:END -->
+</aside>
+
+<div class="wrap">
+
+<label for="treeToggle" class="treeBtn">&#9776; Browse database</label>
+
+<nav class="crumb"><a href="/">Balance Log</a> / <span>Weapons</span> / <span>Shotguns</span> / <span style="color:var(--weapons)">18.5KS-K</span></nav>
+
+<header class="top itemhead">
+<h1>18.5KS-K</h1>
+
+<div class="traits"><span>Aggressive</span><span>Close Range</span><span>Semi-Auto</span></div>
+<div class="descblock"><h2 class="desclabel">In-game description</h2><blockquote class="ingame">&ldquo;A magazine-fed, semi-automatic shotgun firing 2.75&quot; shells for sizable damage.&rdquo;</blockquote></div>
+</header>
+
+<div class="searchbar">
+<span class="icon">&#128269;</span>
+<input type="text" id="searchInput" aria-label="Search the database" placeholder="Search the database&hellip;" autocomplete="off"
+  oninput="handleSearchInput(this.value)"
+  onkeydown="handleSearchKeydown(event)"
+  onfocus="handleSearchInput(this.value)">
+<span id="searchClear" onclick="clearBalanceSearch()">&times;</span>
+<div id="searchSuggestions" class="suggestions"></div>
+</div>
+
+<div class="itemgrid">
+<figure class="itemimg"><img src="/img/items/18-5ks-k.jpg" alt="18.5KS-K in Battlefield 6" loading="lazy"></figure>
+<div class="factbox">
+<h3>Stats <span class="tbd" style="text-transform:none;letter-spacing:0">as of 1.4.1.0</span></h3>
+<table>
+<tr><td>Damage</td><td>80</td></tr>
+<tr><td>Rate of fire</td><td>300</td></tr>
+<tr><td>Magazine</td><td>8</td></tr>
+</table>
+<h3>Ratings</h3><table class="ratings">
+<tr><td>Hipfire</td><td><span class="bar"><i style="width:42%;background:var(--weapons)"></i></span></td><td>42</td></tr>
+<tr><td>Precision</td><td><span class="bar"><i style="width:14%;background:var(--weapons)"></i></span></td><td>14</td></tr>
+<tr><td>Control</td><td><span class="bar"><i style="width:15%;background:var(--weapons)"></i></span></td><td>15</td></tr>
+<tr><td>Mobility</td><td><span class="bar"><i style="width:60%;background:var(--weapons)"></i></span></td><td>60</td></tr>
+</table>
+<h3>Availability</h3><table>
+<tr><td>Signature Weapon</td><td>Any</td></tr>
+<tr><td>Unlock</td><td>Assignment: Point Blank 2</td></tr>
+<tr><td>Requirement</td><td class="stack"><span class="req">Get kills in a round with a Shotgun (25)</span><span class="req">Get Shotgun kills without reloading (5)</span></td></tr>
+<tr><td>Added in</td><td>1.0.1.0 (Launch)</td></tr>
+</table>
+</div>
+</div>
+
+<h2 class="cat weapons" id="history"><span class="dot"></span>Patch history</h2>
+<p class="cat-note">1 change to the 18.5KS-K has been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
+<details class="patch" open>
+<summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-redsec">REDSEC</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="m4a1 m277 svdm mini-scout umg-40 18-5ks-k">Improved attachment setups for <b>M4A1, M277, SVDM, Mini Scout, UMG-40, 18.5KS-K</b> so these weapons use their intended attachments and are better balanced when found as ground loot.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#redsec">1.2.1.0 in the balance log</a></div>
+</div></details>
+
+<h2 class="cat weapons" id="related"><span class="dot"></span>Compatible attachments</h2>
+<p class="emptynote">Compatibility is not catalogued yet. Once attachments are added they will be listed here, and each attachment will link back to this page.</p>
+
+<h2 class="cat weapons" id="usage"><span class="dot"></span>Usage</h2>
+<div class="usagebox">Usage data is not published for Battlefield 6 yet.<br>This panel is reserved for it.</div>
+
+<p class="backlog"><a href="/#redsec">&larr; Back to the full balance log</a></p>
+
+<footer>
+<p class="disclaimer" style="margin-top:0">This is unofficial fan content. It is not affiliated with, endorsed by, or sponsored by Electronic Arts, DICE, Battlefield Studios, Ripple Effect, or Criterion. Battlefield&trade;, REDSEC&trade;, and all related names, weapons, and trademarks are the property of their respective owners.</p>
+<p>Patch entries on this page are the 18.5KS-K lines from EA's official Game Update notes, reproduced exactly as published and linked to their source in the <a href="/">full log</a>. Any in-game description is quoted and attributed.</p>
+</footer>
+
+</div><!-- /.wrap -->
+</div><!-- /.layout -->
+
+<script>
+
+(function(){
+  var input = document.getElementById('searchInput');
+  var box = document.getElementById('searchSuggestions');
+  if (!input || !box || !window.fetch) return;
+  var items = [], hits = [], active = -1;
+
+  fetch('/data/search-index.json').then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){ if (d && d.items) items = d.items; }).catch(function(){});
+
+  function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function mark(term, q){
+    var p = term.toLowerCase().indexOf(q);
+    if (p === -1) return esc(term);
+    return esc(term.slice(0,p)) + '<mark class="hl">' + esc(term.slice(p,p+q.length)) +
+           '</mark>' + esc(term.slice(p+q.length));
+  }
+  function render(q){
+    if (!q){ box.classList.remove('show'); box.innerHTML=''; hits=[]; active=-1; return; }
+    var starts = [], contains = [];
+    items.forEach(function(it){
+      var hay = (it.name + ' ' + (it.alt || '')).toLowerCase();
+      if (hay.indexOf(q) === -1) return;
+      (it.name.toLowerCase().indexOf(q) === 0 ? starts : contains).push(it);
+    });
+    var byLen = function(a,b){ return a.name.length - b.name.length; };
+    starts.sort(byLen); contains.sort(byLen);
+    hits = starts.concat(contains).slice(0, 8);
+    active = -1;
+    if (!hits.length){
+      box.innerHTML = '<div class="sug-empty">No matching item. ' +
+        '<a href="/" style="color:inherit">Search the full log</a>.</div>';
+      box.classList.add('show'); return;
+    }
+    box.innerHTML = '<div class="sug-head">Database</div>' + hits.map(function(it,i){
+      return '<div class="sug-item sug-goto" onmousedown="location.href=\''+it.url+'\'">' +
+             '<span class="sug-term">' + mark(it.name, q) + '</span>' +
+             '<span class="sug-cat">' + esc(it.cat) + '</span></div>';
+    }).join('');
+    box.classList.add('show');
+  }
+  function setActive(i){
+    var els = box.querySelectorAll('.sug-item');
+    els.forEach(function(e){ e.classList.remove('active'); });
+    if (i >= 0 && i < els.length){ els[i].classList.add('active'); els[i].scrollIntoView({block:'nearest'}); }
+    active = i;
+  }
+  window.handleSearchInput = function(v){
+    var q = v.trim().toLowerCase();
+    document.getElementById('searchClear').classList.toggle('show', q !== '');
+    render(q);
+  };
+  window.handleSearchKeydown = function(e){
+    var open = box.classList.contains('show') && hits.length;
+    if (e.key === 'ArrowDown' && open){ e.preventDefault(); setActive(Math.min(active+1, hits.length-1)); }
+    else if (e.key === 'ArrowUp' && open){ e.preventDefault(); setActive(Math.max(active-1, 0)); }
+    else if (e.key === 'Enter'){
+      if (open && active >= 0){ e.preventDefault(); location.href = hits[active].url; }
+      else if (input.value.trim()){ location.href = '/?q=' + encodeURIComponent(input.value.trim()); }
+    }
+    else if (e.key === 'Escape'){ box.classList.remove('show'); }
+  };
+  window.clearBalanceSearch = function(){
+    input.value = ''; render(''); document.getElementById('searchClear').classList.remove('show');
+    input.focus();
+  };
+  document.addEventListener('click', function(e){
+    var bar = document.querySelector('.searchbar');
+    if (bar && !bar.contains(e.target)) box.classList.remove('show');
+  });
+})();
+
+</script>
+
+<div id="kofi-fixed">
+<a class="feedback-btn" href="mailto:feedback@bf6balancelog.com?subject=BF6%20Balance%20Log%20feedback" title="Send feedback">&#9993; Feedback</a>
+</div>
+</body>
+</html>
