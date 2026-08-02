@@ -140,7 +140,7 @@
       "name": "Winter Offensive",
       "season": 1,
       "live": "Dec 9, 2025",
-      "_date_conflict": "The roadmap prints DEC 9. The Patch Index in index.html lists 1.1.3.0 as posted AND live Dec 5, 2025. Roadmap date used here. Unresolved: either the log's date is wrong or the event launched later than the patch.",
+      "_date_note": "Resolved: these are two different dates, not a conflict. EA's page for 1.1.3.0 says the patch was posted AND live Dec 5, 2025, which is what the Patch Index in index.html records. The roadmap's DEC 9 is when the Winter Offensive content went live, which is what this file records. Both are correct.",
       "added": [
         {"name": "Ice Lock Gauntlet", "kind": "Event", "_note": "REDSEC, limited-time"},
         {"name": "Ice Lock Empire State", "kind": "Map", "_note": "limited-time event and map"},
