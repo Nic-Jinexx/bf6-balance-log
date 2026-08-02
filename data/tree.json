@@ -1,0 +1,56 @@
+{
+  "_comment": "The site's navigation tree. Every branch/subcategory key is part of the public URL (/<branch>/<subcategory>/<slug>/), so renaming one moves every page under it and needs a redirect stub. Branches marked flat:true hold items directly, giving /<branch>/<slug>/. A branch with a link is a plain jump rather than an expandable node and holds no items. Order here is the order shown in the sidebar.",
+  "branches": [
+    {"key": "patchnotes", "label": "Patch Notes", "link": "/"},
+    {
+      "key": "weapons",
+      "label": "Weapons",
+      "_signature_note": "Which class the category is a signature weapon for. Set here rather than repeated in every item file; an item can still override it by declaring its own Signature Weapon row in availability.",
+      "children": [
+        {"key": "assault-rifles", "label": "Assault Rifles", "signature": "Assault"},
+        {"key": "carbines", "label": "Carbines", "signature": "Any"},
+        {"key": "smgs", "label": "SMGs", "signature": "Engineer"},
+        {"key": "lmgs", "label": "LMGs", "signature": "Support"},
+        {"key": "dmrs", "label": "DMRs", "signature": "Any"},
+        {"key": "sniper-rifles", "label": "Sniper Rifles", "signature": "Recon"},
+        {"key": "shotguns", "label": "Shotguns", "signature": "Any"},
+        {"key": "sidearms", "label": "Sidearms", "signature": "Any"},
+        {"key": "melee", "label": "Melee", "signature": "Any"}
+      ]
+    },
+    {
+      "key": "attachments",
+      "label": "Attachments",
+      "children": [
+        {"key": "optics", "label": "Optics"},
+        {"key": "barrels", "label": "Barrels"},
+        {"key": "underbarrel", "label": "Underbarrel"},
+        {"key": "magazines", "label": "Magazines"},
+        {"key": "ammunition", "label": "Ammunition"}
+      ]
+    },
+    {
+      "key": "gadgets",
+      "label": "Gadgets",
+      "children": [
+        {"key": "throwables", "label": "Throwables"},
+        {"key": "launchers", "label": "Launchers"},
+        {"key": "deployables", "label": "Deployables"},
+        {"key": "tools", "label": "Tools"}
+      ]
+    },
+    {
+      "key": "vehicles",
+      "label": "Vehicles",
+      "children": [
+        {"key": "ground", "label": "Ground"},
+        {"key": "air", "label": "Air"},
+        {"key": "naval", "label": "Naval"},
+        {"key": "transport", "label": "Transport"}
+      ]
+    },
+    {"key": "classes", "label": "Classes", "flat": true},
+    {"key": "maps", "label": "Maps", "flat": true},
+    {"key": "modes", "label": "Modes", "flat": true}
+  ]
+}

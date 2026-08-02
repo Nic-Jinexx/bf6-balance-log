@@ -1,0 +1,290 @@
+{
+  "_comment": "Content releases: which update added what. The balance log records balance changes only, so weapon/vehicle/map/mode additions are NOT derivable from index.html (see updates.md). This file is the source for an item's 'Added in' row, and it preserves the release record for things that have no page yet. An entry with a slug fills that item's Added in automatically; an entry without one is a page waiting to be built.",
+  "_source": "EA's own Season 1-4 launch roadmaps (img/BF6_S*_*.avif), read directly. Names and category labels are taken verbatim from the roadmap art, which supersedes anything dictated from memory.",
+  "_dates": "The date printed on the roadmap for that update.",
+  "releases": [
+    {
+      "version": "1.0.1.0",
+      "name": "Launch",
+      "live": "Oct 10, 2025",
+      "_note": "Not an exhaustive launch roster. Weapons are listed here as their pages get built, so that every Added in value comes from this one file.",
+      "added": [
+        {"name": "M4A1", "slug": "m4a1", "kind": "Carbine"},
+        {"name": "M277", "slug": "m277", "kind": "Carbine"},
+        {"name": "AK-205", "slug": "ak-205", "kind": "Carbine"},
+        {"name": "M417 A2", "slug": "m417-a2", "kind": "Carbine"},
+        {"name": "GRT-BC", "slug": "grt-bc", "kind": "Carbine"},
+        {"name": "QBZ-192", "slug": "qbz-192", "kind": "Carbine"},
+        {"name": "SG 553R", "slug": "sg-553r", "kind": "Carbine"},
+        {"name": "M433", "slug": "m433", "kind": "Assault Rifle"},
+        {"name": "B36A4", "slug": "b36a4", "kind": "Assault Rifle"},
+        {"name": "SOR-556 MK2", "slug": "sor-556-mk2", "kind": "Assault Rifle"},
+        {"name": "AK4D", "slug": "ak4d", "kind": "Assault Rifle"},
+        {"name": "TR-7", "slug": "tr-7", "kind": "Assault Rifle"},
+        {"name": "KORD 6P67", "slug": "kord-6p67", "kind": "Assault Rifle"},
+        {"name": "NVO-228E", "slug": "nvo-228e", "kind": "Assault Rifle"},
+        {"name": "L85A3", "slug": "l85a3", "kind": "Assault Rifle"},
+        {"name": "SGX", "slug": "sgx", "kind": "SMG"},
+        {"name": "PW5A3", "slug": "pw5a3", "kind": "SMG"},
+        {"name": "PW7A2", "slug": "pw7a2", "kind": "SMG"},
+        {"name": "UMG-40", "slug": "umg-40", "kind": "SMG"},
+        {"name": "USG-90", "slug": "usg-90", "kind": "SMG"},
+        {"name": "KV9", "slug": "kv9", "kind": "SMG"},
+        {"name": "SCW-10", "slug": "scw-10", "kind": "SMG"},
+        {"name": "SL9", "slug": "sl9", "kind": "SMG"},
+        {"name": "L110", "slug": "l110", "kind": "LMG"},
+        {"name": "DRS-IAR", "slug": "drs-iar", "kind": "LMG"},
+        {"name": "M/60", "slug": "m60", "kind": "LMG"},
+        {"name": "RPKM", "slug": "rpkm", "kind": "LMG"},
+        {"name": "M123K", "slug": "m123k", "kind": "LMG"},
+        {"name": "M250", "slug": "m250", "kind": "LMG"},
+        {"name": "KTS100 MK8", "slug": "kts100-mk8", "kind": "LMG"},
+        {"name": "M240L", "slug": "m240l", "kind": "LMG"},
+        {"name": "M39 EMR", "slug": "m39-emr", "kind": "DMR"},
+        {"name": "LMR27", "slug": "lmr27", "kind": "DMR"},
+        {"name": "SVK-8.6", "slug": "svk-86", "kind": "DMR"},
+        {"name": "SVDM", "slug": "svdm", "kind": "DMR"},
+        {"name": "M2010 ESR", "slug": "m2010-esr", "kind": "Sniper Rifle"},
+        {"name": "SV-98", "slug": "sv-98", "kind": "Sniper Rifle"},
+        {"name": "PSR", "slug": "psr", "kind": "Sniper Rifle"},
+        {"name": "M87A1", "slug": "m87a1", "kind": "Shotgun"},
+        {"name": "M1014", "slug": "m1014", "kind": "Shotgun"},
+        {"name": "18.5KS-K", "slug": "18-5ks-k", "kind": "Shotgun"},
+        {"name": "P18", "slug": "p18", "kind": "Sidearm"},
+        {"name": "ES 5.7", "slug": "es-57", "kind": "Sidearm"},
+        {"name": "M45A1", "slug": "m45a1", "kind": "Sidearm"},
+        {"name": "M44", "slug": "m44", "kind": "Sidearm"},
+        {"name": "Combat Knife", "slug": "combat-knife", "kind": "Melee"},
+        {"name": "Sledgehammer", "slug": "sledgehammer", "kind": "Melee"},
+        {"name": "Hunting Knife", "slug": "hunting-knife", "kind": "Melee"},
+        {"name": "Tarantula ALX", "slug": "tarantula-alx", "kind": "Gadget"},
+        {"name": "X95 BRE", "slug": "x95-bre", "kind": "Gadget"},
+        {"name": "M320A1 HE", "slug": "m320a1-he", "kind": "Gadget"},
+        {"name": "M320A1 THRM", "slug": "m320a1-thrm", "kind": "Gadget"},
+        {"name": "QLINK 6", "slug": "qlink-6", "kind": "Gadget"},
+        {"name": "SS26", "slug": "ss26", "kind": "Gadget"},
+        {"name": "MBT-LAW", "slug": "mbt-law", "kind": "Gadget"},
+        {"name": "SLM-93A Spire", "slug": "slm-93a", "kind": "Gadget"},
+        {"name": "RPG-7V2", "slug": "rpg-7v2", "kind": "Gadget"},
+        {"name": "M136 AT", "slug": "m136-at", "kind": "Gadget"},
+        {"name": "M15", "slug": "m15", "kind": "Gadget"},
+        {"name": "M4A1 SLAM", "slug": "m4a1-slam", "kind": "Gadget"},
+        {"name": "PTKM-1R", "slug": "ptkm-1r", "kind": "Gadget"},
+        {"name": "CSB IV", "slug": "csb-iv", "kind": "Gadget"},
+        {"name": "CSS Bundle", "slug": "css-bundle", "kind": "Gadget"},
+        {"name": "Powerpulse", "slug": "powerpulse", "kind": "Gadget"},
+        {"name": "GPDIS", "slug": "gpdis", "kind": "Gadget"},
+        {"name": "MP-APS", "slug": "mp-aps", "kind": "Gadget"},
+        {"name": "LWCMS", "slug": "lwcms", "kind": "Gadget"},
+        {"name": "M320A1 SMK", "slug": "m320a1-smk", "kind": "Gadget"},
+        {"name": "SICH G1 WP", "slug": "sich-g1-wp", "kind": "Gadget"},
+        {"name": "Maxguard 900", "slug": "maxguard-900", "kind": "Gadget"},
+        {"name": "Goliath Compact", "slug": "goliath-compact", "kind": "Gadget"},
+        {"name": "LTLM II", "slug": "ltlm-ii", "kind": "Gadget"},
+        {"name": "XFGM-6D", "slug": "xfgm-6d", "kind": "Gadget"},
+        {"name": "TRCRV2", "slug": "trcrv2", "kind": "Gadget"},
+        {"name": "M18A1", "slug": "m18a1", "kind": "Gadget"},
+        {"name": "Field Dummy No.25", "slug": "field-dummy-25", "kind": "Gadget"},
+        {"name": "C-4 Explosives", "slug": "c-4", "kind": "Gadget"},
+        {"name": "DGMK4", "slug": "dgmk4", "kind": "Gadget"},
+        {"name": "M67", "slug": "m67", "kind": "Throwable"},
+        {"name": "MK 141 Mod 0", "slug": "mk141", "kind": "Throwable"},
+        {"name": "M84", "slug": "m84", "kind": "Throwable"},
+        {"name": "SCG-24", "slug": "scg-24", "kind": "Throwable"},
+        {"name": "V40", "slug": "v40", "kind": "Throwable"},
+        {"name": "M18", "slug": "m18", "kind": "Throwable"},
+        {"name": "AN/M14", "slug": "an-m14", "kind": "Throwable"},
+        {"name": "MTN-55", "slug": "mtn-55", "kind": "Throwable"},
+        {"name": "Steel Wing", "slug": "steel-wing", "kind": "Throwable"}
+      ]
+    },
+    {
+      "version": "1.1.1.0",
+      "name": "Rogue Ops",
+      "season": 1,
+      "live": "Oct 28, 2025",
+      "added": [
+        {"name": "Fort Lyndon", "kind": "Map", "_note": "REDSEC"},
+        {"name": "Battle Royale", "kind": "Mode", "_note": "REDSEC"},
+        {"name": "Gauntlet", "kind": "Mode", "_note": "REDSEC"},
+        {"name": "Portal Updates", "kind": "Feature", "_note": "REDSEC"},
+        {"name": "Blackwell Fields", "kind": "Map"},
+        {"name": "Strikepoint", "kind": "Mode"},
+        {"name": "Traverser Mark 2", "kind": "Vehicle"},
+        {"name": "SOR-300SC", "slug": "sor-300sc", "kind": "Carbine"},
+        {"name": "GGH-22", "slug": "ggh-22", "kind": "Sidearm"},
+        {"name": "Mini Scout", "slug": "mini-scout", "kind": "Sniper Rifle"},
+        {"name": "Rail Cover", "kind": "Attachment", "_note": "dictated from patch notes; not shown on the roadmap"},
+        {"name": "LPVO", "kind": "Attachment", "_note": "dictated from patch notes; not shown on the roadmap"}
+      ]
+    },
+    {
+      "version": "1.1.2.0",
+      "name": "California Resistance",
+      "season": 1,
+      "live": "Nov 18, 2025",
+      "added": [
+        {"name": "Rodeo", "kind": "Gauntlet Mission", "_note": "REDSEC"},
+        {"name": "Portal Sandbox", "kind": "Feature", "_note": "REDSEC"},
+        {"name": "Eastwood", "kind": "Map"},
+        {"name": "Sabotage", "kind": "Mode", "_note": "limited-time"},
+        {"name": "Golf Cart", "kind": "Vehicle"},
+        {"name": "Battle Pickups", "kind": "Feature"},
+        {"name": "DB-12", "slug": "db-12", "kind": "Shotgun"},
+        {"name": "M357 Trait", "slug": "m357-trait", "kind": "Sidearm", "_note": "roadmap prints the name as 'M357 TRAIT'; Trait is part of the name"},
+        {"name": "Troy Angled", "kind": "Attachment", "_note": "dictated from patch notes; not shown on the roadmap"}
+      ]
+    },
+    {
+      "version": "1.1.3.0",
+      "name": "Winter Offensive",
+      "season": 1,
+      "live": "Dec 9, 2025",
+      "_date_conflict": "The roadmap prints DEC 9. The Patch Index in index.html lists 1.1.3.0 as posted AND live Dec 5, 2025. Roadmap date used here. Unresolved: either the log's date is wrong or the event launched later than the patch.",
+      "added": [
+        {"name": "Ice Lock Gauntlet", "kind": "Event", "_note": "REDSEC, limited-time"},
+        {"name": "Ice Lock Empire State", "kind": "Map", "_note": "limited-time event and map"},
+        {"name": "Ice Climbing Axe", "slug": "ice-axe", "kind": "Melee", "_note": "in-game display name is Ice Axe, model Nomad CX-12."},
+        {"name": "Portal Updates", "kind": "Feature"}
+      ]
+    },
+    {
+      "version": "1.2.1.0",
+      "name": "Extreme Measures",
+      "season": 2,
+      "live": "Feb 17, 2026",
+      "_name_conflict": "The Patch Index in index.html headlines 1.2.1.0 as 'Season 2: Nightfall launch'. The roadmap shows Nightfall is the SECOND Season 2 update (Mar 17); the Feb 17 update is Extreme Measures. The log's headline looks wrong.",
+      "added": [
+        {"name": "Contaminated", "kind": "Map"},
+        {"name": "VL-7 Strike", "kind": "Mode", "_note": "limited time"},
+        {"name": "Gauntlet Altered State", "kind": "Mode", "_note": "REDSEC, limited-time"},
+        {"name": "BR - Synthesis", "kind": "Mode", "_note": "REDSEC, limited-time"},
+        {"name": "AH-6 Little Bird", "kind": "Vehicle"},
+        {"name": "MH-350", "kind": "Vehicle", "_note": "roadmap pairs these as 'AH-6 LITTLE BIRD AND MH-350', new vehicles"},
+        {"name": "GRT-CPS", "slug": "grt-cps", "kind": "DMR"},
+        {"name": "VCR-2", "slug": "vcr-2", "kind": "Assault Rifle"},
+        {"name": "HTI-MK2", "kind": "Gadget"},
+        {"name": "M121 A2", "slug": "m121-a2", "kind": "Machine Gun"},
+        {"name": "9K38 Igla", "slug": "9k38-igla", "kind": "Gadget"}
+      ]
+    },
+    {
+      "version": "1.2.2.0",
+      "name": "Nightfall",
+      "season": 2,
+      "live": "Mar 17, 2026",
+      "added": [
+        {"name": "Hagental Base", "kind": "Map"},
+        {"name": "Nightfall", "kind": "Mode", "_note": "limited time"},
+        {"name": "Gauntlet Nightfall", "kind": "Mode", "_note": "REDSEC, limited time"},
+        {"name": "Defense Testing Complex 3 - Fort Lyndon", "kind": "POI", "_note": "REDSEC. Corroborated: index.html records this addition inside patch 1.2.2.0."},
+        {"name": "M1830-1", "kind": "Vehicle"},
+        {"name": "CZ3A1", "slug": "cz3a1", "kind": "SMG"},
+        {"name": "VZ. 61", "slug": "vz-61", "kind": "Sidearm"}
+      ]
+    },
+    {
+      "version": "1.2.3.0",
+      "name": "Hunter / Prey",
+      "season": 2,
+      "live": "Apr 14, 2026",
+      "added": [
+        {"name": "Operation Augur", "kind": "Mode", "_note": "limited-time"},
+        {"name": "Portal Updates", "kind": "Feature"},
+        {"name": "Battle Pass Season 2", "kind": "Feature", "_note": "new bonus path"},
+        {"name": "LTV", "kind": "Vehicle", "_note": "corroborated: index.html records 'Added the LTV vehicle' inside patch 1.2.3.0"},
+        {"name": "Ripper 14\" Machete", "slug": "serrated-blade", "kind": "Melee", "_note": "in-game display name is Serrated Blade, model Ripper 14\"."}
+      ]
+    },
+    {
+      "version": "1.3.1.0",
+      "name": "Warlords: Supremacy",
+      "season": 3,
+      "live": "May 12, 2026",
+      "_note": "Was missing from the log entirely. Confirmed 2026-08-01 against EA's own page: Game Update 1.3.1.0, posted May 8 2026, live May 12 2026. Added to index.html and known_versions.json.",
+      "added": [
+        {"name": "Railway to Golmud", "kind": "Map"},
+        {"name": "Ranked Battle Royale", "kind": "Mode", "_note": "REDSEC, BF Labs"},
+        {"name": "M16A4", "slug": "m16a4", "kind": "Assault Rifle"},
+        {"name": "RPK-74M", "slug": "rpk-74m", "kind": "LMG", "_note": "distinct from the RPKM. The 2026-08-01 in-game capture shows both in the LMG roster with different stats (RPKM 35/553/40, RPK-74M 20/685/45); the earlier guess that they were one weapon was wrong."},
+        {"name": "L115", "slug": "l115", "kind": "Sniper Rifle"},
+        {"name": "Speed Holster", "kind": "Attachment"},
+        {"name": "Aftermarket Buffer", "kind": "Attachment"},
+        {"name": "Burst Mode", "kind": "Attachment"}
+      ]
+    },
+    {
+      "version": "1.3.2.0",
+      "name": "Blastpoint",
+      "season": 3,
+      "live": "Jun 9, 2026",
+      "added": [
+        {"name": "Cairo Bazaar", "kind": "Map"},
+        {"name": "Obliteration", "kind": "Mode"},
+        {"name": "Explosive Charge", "kind": "Event", "_note": "limited-time"},
+        {"name": "PP-19", "slug": "pp-19", "kind": "SMG"},
+        {"name": "Handheld Jammer", "slug": "manet-dis-5", "kind": "Gadget", "_note": "in-game the page name is the model, MANET-DIS 5; Handheld Jammer is the display name."},
+        {"name": "#00 Buckshot", "kind": "Attachment"},
+        {"name": "Cryogenic Barrels", "kind": "Attachment"}
+      ]
+    },
+    {
+      "version": "1.3.3.0",
+      "name": "High-Value Target",
+      "season": 3,
+      "live": "Jun 30, 2026",
+      "added": [
+        {"name": "Tactical Obliteration", "kind": "Mode"},
+        {"name": "Casual Battle Royale", "kind": "Mode", "_note": "REDSEC"},
+        {"name": "Wet Work", "kind": "Event", "_note": "limited-time"},
+        {"name": "EOD Bot Arm", "slug": "eod-bot-arm", "kind": "Melee"},
+        {"name": "Compensator", "kind": "Attachment"},
+        {"name": "Subsonic Ammo", "kind": "Attachment"}
+      ]
+    },
+    {
+      "version": "1.4.1.0",
+      "name": "Pacific Front",
+      "season": 4,
+      "live": "Jul 21, 2026",
+      "added": [
+        {"name": "Tsuru Reef", "kind": "Map"},
+        {"name": "7.7M NSW RHIB", "kind": "Boat"},
+        {"name": "RCB-90", "kind": "Boat"},
+        {"name": "Ranked Updates", "kind": "Feature", "_note": "REDSEC, new season"},
+        {"name": "EF88", "slug": "ef88", "kind": "Assault Rifle"},
+        {"name": "BROD 3", "slug": "brod-3", "kind": "Carbine"},
+        {"name": "VSSM", "slug": "vssm", "kind": "DMR"}
+      ]
+    }
+  ],
+  "_scheduled_comment": "Announced on the Season 4 roadmap but not yet released as of 2026-08-01. Deliberately NOT in 'releases': nothing here has a version, and none of it should fill an Added in value until it actually ships.",
+  "scheduled": [
+    {
+      "name": "Top Gun",
+      "season": 4,
+      "planned": "Aug 18, 2026",
+      "added": [
+        {"name": "Wake Island", "kind": "Map"},
+        {"name": "Top Gun: Carrier Strike", "kind": "Mode"},
+        {"name": "Top Gun: Fighter Sweep", "kind": "Mode", "_note": "REDSEC"},
+        {"name": "Aircraft Carrier", "kind": "POI", "_note": "REDSEC"},
+        {"name": "Interdictor", "kind": "Weapon"},
+        {"name": "Spectator Mode + Custom Lobbies", "kind": "Feature", "_note": "BF Labs"},
+        {"name": "F/A-81F Super Spectre", "kind": "Vehicle", "_note": "2-seater jet"},
+        {"name": "F-74A Seacat", "kind": "Vehicle", "_note": "2-seater jet"}
+      ]
+    },
+    {
+      "name": "Tidal Strike",
+      "season": 4,
+      "planned": "Sep 15, 2026",
+      "added": [
+        {"name": "Deep Six: Collection Event", "kind": "Event", "_note": "new challenges"},
+        {"name": "Phantom Program", "kind": "Feature", "_note": "REDSEC, discoverable secrets"},
+        {"name": "Proximity Chat", "kind": "Feature", "_note": "REDSEC, BF Labs"},
+        {"name": "Diver's Knife", "kind": "Melee"}
+      ]
+    }
+  ]
+}
