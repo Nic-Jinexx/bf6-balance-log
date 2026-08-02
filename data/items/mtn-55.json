@@ -1,0 +1,33 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 129 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "mtn-55",
+  "name": "Throwable Proximity Detector MTN-55",
+  "branch": "gadgets",
+  "subcategory": "throwables",
+  "order": 8,
+  "aliases": [
+    "throwable proximity detector",
+    "mtn-55"
+  ],
+  "blurb": "",
+  "class": "Recon",
+  "traits": [],
+  "description": {
+    "text": "This detector scans for enemies once per second within visible range of the device. Detected enemies will be spotted, marking their position in-world and on the minimap for a duration of two seconds.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

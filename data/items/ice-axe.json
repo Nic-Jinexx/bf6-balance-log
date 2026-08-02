@@ -1,0 +1,40 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 87 in the 16:03 run), SELECT MELEE WEAPON. Melee has no CUSTOMIZE screen, so the art is cropped from the same shot. Melee reports Hit Delay and Damage instead of the primary-weapon stat block, and has no trait chips.",
+  "slug": "ice-axe",
+  "name": "Ice Axe",
+  "branch": "weapons",
+  "subcategory": "melee",
+  "order": 4,
+  "aliases": [],
+  "blurb": "Nomad CX-12",
+  "variant": "Nomad CX-12",
+  "traits": [],
+  "description": {
+    "text": "Primarily used for mountaineering, this Ice Axe also serves as a lightweight melee weapon. It can perform lethal takedowns on enemies when striking from behind or while they are prone.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Hit delay",
+      "value": "100 ms"
+    },
+    {
+      "label": "Damage",
+      "value": "35"
+    }
+  ],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Owned"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

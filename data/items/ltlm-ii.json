@@ -1,0 +1,32 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 121 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "ltlm-ii",
+  "name": "LTLM II",
+  "branch": "gadgets",
+  "subcategory": "tools",
+  "order": 3,
+  "aliases": [
+    "laser designator"
+  ],
+  "blurb": "Laser Designator",
+  "class": "Recon",
+  "traits": [],
+  "description": {
+    "text": "The designator functions as binoculars for enhanced spotting and allows users to mark designate both vehicles and locations. Designated targets can be locked-on from further away and lose below-radar protection. Users can set the device to function autonomously and remotely access the designator at any point, which can rotate to provide a 360 degree field of view.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

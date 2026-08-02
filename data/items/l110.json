@@ -1,0 +1,78 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 20/21 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01. source writes \"LL10\".",
+  "slug": "l110",
+  "name": "L110",
+  "branch": "weapons",
+  "subcategory": "lmgs",
+  "order": 1,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Hatchet",
+  "traits": [
+    "Versatile",
+    "Mid Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "An all-purpose Squad Automatic Weapon chambered in 5.56x45mm. Well-matched for most engagements.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "720"
+    },
+    {
+      "label": "Magazine",
+      "value": "100"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 22
+    },
+    {
+      "label": "Precision",
+      "value": 37
+    },
+    {
+      "label": "Control",
+      "value": 60
+    },
+    {
+      "label": "Mobility",
+      "value": 28
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Default"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

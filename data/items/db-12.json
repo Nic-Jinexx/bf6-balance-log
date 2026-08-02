@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 68/69 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown for an owned weapon, so both stay TBD.",
+  "slug": "db-12",
+  "name": "DB-12",
+  "branch": "weapons",
+  "subcategory": "shotguns",
+  "order": 4,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Aggressive",
+    "Close Range",
+    "Pump Action"
+  ],
+  "description": {
+    "text": "A double-barrel, pump action shotgun allowing for a rapid follow-up shot before having to rechamber the next set of shells.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "89"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "150"
+    },
+    {
+      "label": "Magazine",
+      "value": "16"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 39
+    },
+    {
+      "label": "Precision",
+      "value": 6
+    },
+    {
+      "label": "Control",
+      "value": 10
+    },
+    {
+      "label": "Mobility",
+      "value": 62
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

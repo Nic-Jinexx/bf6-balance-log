@@ -1,0 +1,34 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 116 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "sich-g1-wp",
+  "name": "SICH G1 WP",
+  "branch": "gadgets",
+  "subcategory": "launchers",
+  "order": 11,
+  "aliases": [
+    "incendiary airburst launcher"
+  ],
+  "blurb": "Incendiary Airburst Launcher",
+  "class": "Support",
+  "traits": [],
+  "description": {
+    "text": "Fires incendiary grenades a distance of 25m that explode mid-flight, producing an incendiary cloud that burns enemy targets. The cloud will block visibility and clear and prevent spotting.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Support Specialist 2"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Resupply teammates with the Supply Pouch (200)"
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

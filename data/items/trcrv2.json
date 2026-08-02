@@ -1,0 +1,35 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 123 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "trcrv2",
+  "name": "TRCRV2",
+  "branch": "gadgets",
+  "subcategory": "tools",
+  "order": 5,
+  "aliases": [
+    "tracer dart"
+  ],
+  "blurb": "Tracer Dart",
+  "class": "Recon",
+  "traits": [],
+  "description": {
+    "text": "A gas-powered pistol that fires a magnetic dart which designates enemy vehicles or personnel. Designated targets can be locked-on from further away and lose below-radar protection.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Recon Specialist 1"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Spot enemies at objectives using Recon gadgets (300)",
+        "Earn score (40,000)"
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

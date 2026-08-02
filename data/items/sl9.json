@@ -1,0 +1,85 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 14/15 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "sl9",
+  "name": "SL9",
+  "branch": "weapons",
+  "subcategory": "smgs",
+  "order": 8,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Versatile",
+    "Mid Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "Boasting a unique design, this cutting edge SMG is adaptable to a variety of combat scenarios.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "675"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 62
+    },
+    {
+      "label": "Control",
+      "value": 59
+    },
+    {
+      "label": "Mobility",
+      "value": 72
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Close Quarters 2"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Get kills with the SCW-10 or SGX (300)",
+        "Get multi-kills with SMGs (20)"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

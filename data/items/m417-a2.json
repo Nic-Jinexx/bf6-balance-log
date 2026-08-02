@@ -1,0 +1,84 @@
+{
+  "_comment": "Transcribed from the in-game Select Primary Weapon screen, FACTORY preset, captured 2026-08-01. TBD is deliberate: fields not shown on screen are left unknown rather than guessed.",
+  "slug": "m417-a2",
+  "name": "M417 A2",
+  "branch": "weapons",
+  "subcategory": "carbines",
+  "order": 4,
+  "aliases": [
+    "m417",
+    "m417a2"
+  ],
+  "blurb": "",
+  "traits": [
+    "Hard-Hitting",
+    "Mid Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "Chambered in 7.62x51mm, this compact battle rifle offsets its high damage with a steady rate of fire.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "35"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "654"
+    },
+    {
+      "label": "Magazine",
+      "value": "20"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 27
+    },
+    {
+      "label": "Control",
+      "value": 31
+    },
+    {
+      "label": "Mobility",
+      "value": 60
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 32"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

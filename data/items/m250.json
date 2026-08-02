@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 30/31 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "m250",
+  "name": "M250",
+  "branch": "weapons",
+  "subcategory": "lmgs",
+  "order": 6,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Versatile",
+    "Long Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "A companion to the M277 with similar ranged overmatch effectiveness, combining suppressing fire with lethal ranged capability.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "675"
+    },
+    {
+      "label": "Magazine",
+      "value": "50"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 22
+    },
+    {
+      "label": "Precision",
+      "value": 26
+    },
+    {
+      "label": "Control",
+      "value": 43
+    },
+    {
+      "label": "Mobility",
+      "value": 28
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 46"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

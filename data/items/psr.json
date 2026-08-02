@@ -1,0 +1,85 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 56/57 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "psr",
+  "name": "PSR",
+  "branch": "weapons",
+  "subcategory": "sniper-rifles",
+  "order": 3,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Hard-Hitting",
+    "Extreme Range",
+    "Bolt-Action"
+  ],
+  "description": {
+    "text": "Designed for extreme ranges, this sniper rifle is most effective between 90m-120m.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "100"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "38"
+    },
+    {
+      "label": "Magazine",
+      "value": "10"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 29
+    },
+    {
+      "label": "Precision",
+      "value": 100
+    },
+    {
+      "label": "Control",
+      "value": 22
+    },
+    {
+      "label": "Mobility",
+      "value": 34
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Deadeye 2"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Get headshot kills over 200m with Sniper Rifles (150)",
+        "Get kills with Sniper Rifles (300)"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 40/41 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "m39-emr",
+  "name": "M39 EMR",
+  "branch": "weapons",
+  "subcategory": "dmrs",
+  "order": 1,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Versatile",
+    "Long Range",
+    "Semi-Auto"
+  ],
+  "description": {
+    "text": "Chambered in 7.62x51mm, this versatile marksman rifle is a solid addition to any squad arsenal.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "41"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "257"
+    },
+    {
+      "label": "Magazine",
+      "value": "20"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 34
+    },
+    {
+      "label": "Precision",
+      "value": 65
+    },
+    {
+      "label": "Control",
+      "value": 15
+    },
+    {
+      "label": "Mobility",
+      "value": 40
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 4"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

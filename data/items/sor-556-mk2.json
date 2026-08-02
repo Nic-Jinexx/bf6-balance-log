@@ -1,0 +1,84 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture 20260801145248 / 20260801145253). Two shots per weapon: SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. TBD is deliberate: anything not legible on screen stays TBD rather than becoming a plausible-looking guess. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "sor-556-mk2",
+  "name": "SOR-556 MK2",
+  "branch": "weapons",
+  "subcategory": "assault-rifles",
+  "order": 3,
+  "aliases": [
+    "sor556mk2",
+    "sor-556"
+  ],
+  "blurb": "",
+  "traits": [
+    "Accurate",
+    "Long Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "This modular rifle is in an intermediate configuration. Its highly accurate and best utilized at mid to long range engagements.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "568"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 45
+    },
+    {
+      "label": "Control",
+      "value": 47
+    },
+    {
+      "label": "Mobility",
+      "value": 52
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 25"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

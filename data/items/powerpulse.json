@@ -1,0 +1,33 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 111 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "powerpulse",
+  "name": "Defibrillator",
+  "branch": "gadgets",
+  "subcategory": "tools",
+  "order": 2,
+  "aliases": [
+    "defibrillator",
+    "powerpulse"
+  ],
+  "blurb": "Powerpulse",
+  "class": "Support",
+  "traits": [],
+  "description": {
+    "text": "This equipment can revive both squad members and teammates. Charge paddles for a short duration to revive a downed soldier with full health. Can also inflict damage on enemies.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

@@ -1,0 +1,85 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 46/47 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "svdm",
+  "name": "SVDM",
+  "branch": "weapons",
+  "subcategory": "dmrs",
+  "order": 4,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Versatile",
+    "Long Range",
+    "Semi-Auto"
+  ],
+  "description": {
+    "text": "A classic marksman's rifle modernized for the 21st century. The right configuration can offer extreme mobility or ranged eliminations.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "41"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "300"
+    },
+    {
+      "label": "Magazine",
+      "value": "10"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 40
+    },
+    {
+      "label": "Precision",
+      "value": 55
+    },
+    {
+      "label": "Control",
+      "value": 17
+    },
+    {
+      "label": "Mobility",
+      "value": 44
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Deadeye 1"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Perform a headshot with DMRs (100)",
+        "Inflict damage over 75m with DMRs (5,000)"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

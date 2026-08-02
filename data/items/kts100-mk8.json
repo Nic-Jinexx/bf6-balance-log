@@ -1,0 +1,87 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 32/33 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "kts100-mk8",
+  "name": "KTS100 MK8",
+  "branch": "weapons",
+  "subcategory": "lmgs",
+  "order": 7,
+  "aliases": [
+    "kts100"
+  ],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Accurate",
+    "Long Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "With low recoil and a steady RPM, this light machine gun's moderate damage is offset by accurate suppressive fire.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "514"
+    },
+    {
+      "label": "Magazine",
+      "value": "60"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 34
+    },
+    {
+      "label": "Precision",
+      "value": 77
+    },
+    {
+      "label": "Control",
+      "value": 63
+    },
+    {
+      "label": "Mobility",
+      "value": 38
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Bullet Storm 1"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Suppress enemies with LMGs (300)",
+        "Inflict hip-fire damage with LMGs (10,000)"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

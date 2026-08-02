@@ -1,0 +1,83 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture 20260801145455 / 20260801145449). Two shots per weapon: SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. TBD is deliberate: anything not legible on screen stays TBD rather than becoming a plausible-looking guess. Unlock and Requirement are not shown on either screen, so both are TBD.",
+  "slug": "m16a4",
+  "name": "M16A4",
+  "branch": "weapons",
+  "subcategory": "assault-rifles",
+  "order": 10,
+  "aliases": [
+    "m16"
+  ],
+  "blurb": "",
+  "traits": [
+    "Versatile",
+    "Mid Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "With an enduring legacy on the Battlefield, this well-rounded rifle can be configured for burst fire or full auto by modifying the lower receiver.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "771"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 40
+    },
+    {
+      "label": "Precision",
+      "value": 27
+    },
+    {
+      "label": "Control",
+      "value": 41
+    },
+    {
+      "label": "Mobility",
+      "value": 50
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

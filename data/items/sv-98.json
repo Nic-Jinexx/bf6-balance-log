@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 54/55 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "sv-98",
+  "name": "SV-98",
+  "branch": "weapons",
+  "subcategory": "sniper-rifles",
+  "order": 2,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Versatile",
+    "Long Range",
+    "Bolt-Action"
+  ],
+  "description": {
+    "text": "Firing the legacy 7.62x54mmR, this balanced bolt-action rifle is most effective between 54m-75m.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "100"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "38"
+    },
+    {
+      "label": "Magazine",
+      "value": "10"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 34
+    },
+    {
+      "label": "Precision",
+      "value": 100
+    },
+    {
+      "label": "Control",
+      "value": 33
+    },
+    {
+      "label": "Mobility",
+      "value": 46
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 26"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

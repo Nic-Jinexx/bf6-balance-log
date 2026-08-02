@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 44/45 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "svk-86",
+  "name": "SVK-8.6",
+  "branch": "weapons",
+  "subcategory": "dmrs",
+  "order": 3,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Hard-Hitting",
+    "Long Range",
+    "Semi-Auto"
+  ],
+  "description": {
+    "text": "A precision rifle chambered in the powerful 8.6×70mm cartridge. Its lethality is offset by a lower effective rate of fire.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "66"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "150"
+    },
+    {
+      "label": "Magazine",
+      "value": "10"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 29
+    },
+    {
+      "label": "Precision",
+      "value": 30
+    },
+    {
+      "label": "Control",
+      "value": 9
+    },
+    {
+      "label": "Mobility",
+      "value": 32
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 33"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

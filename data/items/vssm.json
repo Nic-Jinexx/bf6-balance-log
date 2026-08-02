@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 50/51 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown for an owned weapon, so both stay TBD.",
+  "slug": "vssm",
+  "name": "VSSM",
+  "branch": "weapons",
+  "subcategory": "dmrs",
+  "order": 6,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Aggressive",
+    "Close Range",
+    "Semi-Auto"
+  ],
+  "description": {
+    "text": "A unique DMR with an integral suppressor and subsonic ammunition for covert operations. Aggressive configuration is available, with trade-offs.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "35"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "450"
+    },
+    {
+      "label": "Magazine",
+      "value": "20"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 80
+    },
+    {
+      "label": "Control",
+      "value": 34
+    },
+    {
+      "label": "Mobility",
+      "value": 56
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

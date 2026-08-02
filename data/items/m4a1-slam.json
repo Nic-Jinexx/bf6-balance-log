@@ -1,0 +1,32 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 105 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "m4a1-slam",
+  "name": "M4A1 SLAM",
+  "branch": "gadgets",
+  "subcategory": "deployables",
+  "order": 4,
+  "aliases": [
+    "tripwire sensor av mine"
+  ],
+  "blurb": "Tripwire Sensor AV Mine",
+  "class": "Engineer",
+  "traits": [],
+  "description": {
+    "text": "An anti-vehicle mine designed for ground and off-route placement. When nearby enemy vehicles trip the device's proximity sensor they are targeted with a high-velocity projectile.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

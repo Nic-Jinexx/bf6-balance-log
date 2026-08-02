@@ -1,0 +1,32 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 124 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "m18a1",
+  "name": "M18A1",
+  "branch": "gadgets",
+  "subcategory": "deployables",
+  "order": 12,
+  "aliases": [
+    "anti-personnel mine"
+  ],
+  "blurb": "Anti-Personnel Mine",
+  "class": "Recon",
+  "traits": [],
+  "description": {
+    "text": "A directional, anti-personnel fragmentation mine that is detonated via a tripwire firing system. Enemies moving past the mine at normal crouch or prone speed will not trigger the device.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

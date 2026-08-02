@@ -1,0 +1,78 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 0/1 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "sgx",
+  "name": "SGX",
+  "branch": "weapons",
+  "subcategory": "smgs",
+  "order": 1,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Aggressive",
+    "Close Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "A modern 9x19mm PDW suited for close-range engagements. Can be configured to improve its ranged capabilities.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "830"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 51
+    },
+    {
+      "label": "Precision",
+      "value": 32
+    },
+    {
+      "label": "Control",
+      "value": 57
+    },
+    {
+      "label": "Mobility",
+      "value": 72
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Default"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

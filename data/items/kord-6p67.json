@@ -1,0 +1,87 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture 20260801145343 / 20260801145339). Two shots per weapon: SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. TBD is deliberate: anything not legible on screen stays TBD rather than becoming a plausible-looking guess. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "kord-6p67",
+  "name": "KORD 6P67",
+  "branch": "weapons",
+  "subcategory": "assault-rifles",
+  "order": 6,
+  "aliases": [
+    "kord",
+    "6p67"
+  ],
+  "blurb": "",
+  "traits": [
+    "Versatile",
+    "Mid Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "This low-recoil, high rate-of-fire rifle performs well at both close and long ranges.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "20"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "900"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 40
+    },
+    {
+      "label": "Precision",
+      "value": 33
+    },
+    {
+      "label": "Control",
+      "value": 59
+    },
+    {
+      "label": "Mobility",
+      "value": 52
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Rapid Fire 1"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Inflict damage with Assault Rifles (300)",
+        "Inflict damage with Assault Rifles (10,000)"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

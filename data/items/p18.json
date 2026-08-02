@@ -1,0 +1,78 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 70/71 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "p18",
+  "name": "P18",
+  "branch": "weapons",
+  "subcategory": "sidearms",
+  "order": 1,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Versatile",
+    "Close Range",
+    "Semi-Auto"
+  ],
+  "description": {
+    "text": "A reliable sidearm able to meet the demands of almost any combat scenario.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "25"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "400"
+    },
+    {
+      "label": "Magazine",
+      "value": "17"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 54
+    },
+    {
+      "label": "Precision",
+      "value": 49
+    },
+    {
+      "label": "Control",
+      "value": 23
+    },
+    {
+      "label": "Mobility",
+      "value": 75
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Default"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

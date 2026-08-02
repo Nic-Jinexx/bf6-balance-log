@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 28/29 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "m123k",
+  "name": "M123K",
+  "branch": "weapons",
+  "subcategory": "lmgs",
+  "order": 5,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Aggressive",
+    "Close Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "An ideal LMG for mobile fire support. Will dominate in close-quarters and keep enemies suppressed with a high firerate.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "830"
+    },
+    {
+      "label": "Magazine",
+      "value": "100"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 34
+    },
+    {
+      "label": "Precision",
+      "value": 21
+    },
+    {
+      "label": "Control",
+      "value": 53
+    },
+    {
+      "label": "Mobility",
+      "value": 34
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 28"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

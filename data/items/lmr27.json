@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 42/43 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "lmr27",
+  "name": "LMR27",
+  "branch": "weapons",
+  "subcategory": "dmrs",
+  "order": 2,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Aggressive",
+    "Mid Range",
+    "Semi-Auto"
+  ],
+  "description": {
+    "text": "With an intermediate chambering, this cutting-edge precision rifle allows for rapid follow-up shots at the cost of relatively low damage.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "29"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "450"
+    },
+    {
+      "label": "Magazine",
+      "value": "10"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 40
+    },
+    {
+      "label": "Precision",
+      "value": 66
+    },
+    {
+      "label": "Control",
+      "value": 31
+    },
+    {
+      "label": "Mobility",
+      "value": 52
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 16"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

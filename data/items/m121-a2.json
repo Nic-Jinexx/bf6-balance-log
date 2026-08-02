@@ -1,0 +1,84 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 36/37 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown on either screen, so both stay TBD rather than becoming a plausible-looking guess.",
+  "slug": "m121-a2",
+  "name": "M121 A2",
+  "branch": "weapons",
+  "subcategory": "lmgs",
+  "order": 9,
+  "aliases": [
+    "m121a2"
+  ],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Hard-Hitting",
+    "Close Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "This powerful general-purpose machine gun excels at closer ranges but can extend its reach with competent recoil and trigger management.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "35"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "654"
+    },
+    {
+      "label": "Magazine",
+      "value": "50"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 34
+    },
+    {
+      "label": "Precision",
+      "value": 20
+    },
+    {
+      "label": "Control",
+      "value": 38
+    },
+    {
+      "label": "Mobility",
+      "value": 34
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

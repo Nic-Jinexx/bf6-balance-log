@@ -1,0 +1,85 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 24/25 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "m60",
+  "name": "M/60",
+  "branch": "weapons",
+  "subcategory": "lmgs",
+  "order": 3,
+  "aliases": [
+    "m/60",
+    "m-60"
+  ],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Hard-Hitting",
+    "Long Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "This widely used general purpose machine gun is capable of keeping enemies suppressed with a slow and steady rate of fire.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "35"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "514"
+    },
+    {
+      "label": "Magazine",
+      "value": "100"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 29
+    },
+    {
+      "label": "Precision",
+      "value": 27
+    },
+    {
+      "label": "Control",
+      "value": 41
+    },
+    {
+      "label": "Mobility",
+      "value": 30
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 20"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

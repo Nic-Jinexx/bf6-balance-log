@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 82/83 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown for an owned weapon, so both stay TBD.",
+  "slug": "vz-61",
+  "name": "VZ. 61",
+  "branch": "weapons",
+  "subcategory": "sidearms",
+  "order": 7,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Full Auto",
+    "High Firerate",
+    "Versatile"
+  ],
+  "description": {
+    "text": "An iconic machine pistol chambered in .32 ACP for low damage but controllable automatic fire.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "17"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "818"
+    },
+    {
+      "label": "Magazine",
+      "value": "10"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 61
+    },
+    {
+      "label": "Control",
+      "value": 57
+    },
+    {
+      "label": "Mobility",
+      "value": 69
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

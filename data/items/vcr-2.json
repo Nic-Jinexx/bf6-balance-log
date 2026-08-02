@@ -1,0 +1,83 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture 20260801145432 / 20260801145425). Two shots per weapon: SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. TBD is deliberate: anything not legible on screen stays TBD rather than becoming a plausible-looking guess. Unlock and Requirement are not shown on either screen, so both are TBD.",
+  "slug": "vcr-2",
+  "name": "VCR-2",
+  "branch": "weapons",
+  "subcategory": "assault-rifles",
+  "order": 9,
+  "aliases": [
+    "vcr2"
+  ],
+  "blurb": "",
+  "traits": [
+    "Aggressive",
+    "Close Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "Originating from the Balkans, this high firerate bullpup is the perfect rifle for close-quarter engagements.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "900"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 19
+    },
+    {
+      "label": "Control",
+      "value": 40
+    },
+    {
+      "label": "Mobility",
+      "value": 52
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

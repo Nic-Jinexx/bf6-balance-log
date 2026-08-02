@@ -1,0 +1,32 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 114 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "lwcms",
+  "name": "LWCMS",
+  "branch": "gadgets",
+  "subcategory": "deployables",
+  "order": 9,
+  "aliases": [
+    "portable mortar"
+  ],
+  "blurb": "Portable Mortar",
+  "class": "Support",
+  "traits": [],
+  "description": {
+    "text": "This man-portable indirect-fire weapon launches high-explosive shells designed to strike defensive positions and disperse infantry, or smoke shells to conceal troop movement. Aim via the minimap or manually. Once fired, the mortar will be spotted, marking its position in-world and on the enemy's minimap. Weapon accuracy increases with continuous shots in the same location.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

@@ -1,0 +1,83 @@
+{
+  "_comment": "Transcribed from the in-game Select Primary Weapon screen, FACTORY preset, captured 2026-08-01. TBD is deliberate: fields not shown on screen are left unknown rather than guessed.",
+  "slug": "ak-205",
+  "name": "AK-205",
+  "branch": "weapons",
+  "subcategory": "carbines",
+  "order": 3,
+  "aliases": [
+    "ak205"
+  ],
+  "blurb": "",
+  "traits": [
+    "Accurate",
+    "Long Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "With an average cyclic rate and 5.45x39mm chambering, this rifle offers superior ranged performance.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "20"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "720"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 88
+    },
+    {
+      "label": "Control",
+      "value": 57
+    },
+    {
+      "label": "Mobility",
+      "value": 60
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 22"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

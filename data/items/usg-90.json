@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 8/9 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "usg-90",
+  "name": "USG-90",
+  "branch": "weapons",
+  "subcategory": "smgs",
+  "order": 5,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "High Capacity",
+    "Close Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "A high-capacity PDW with a unique design. Lower effective damage is offset by a high rate of fire.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "20"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "900"
+    },
+    {
+      "label": "Magazine",
+      "value": "50"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 35
+    },
+    {
+      "label": "Control",
+      "value": 56
+    },
+    {
+      "label": "Mobility",
+      "value": 68
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 36"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

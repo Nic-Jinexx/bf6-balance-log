@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 58/59 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown for an owned weapon, so both stay TBD.",
+  "slug": "mini-scout",
+  "name": "Mini Scout",
+  "branch": "weapons",
+  "subcategory": "sniper-rifles",
+  "order": 4,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Aggressive",
+    "Long Range",
+    "Bolt-Action"
+  ],
+  "description": {
+    "text": "This lightweight scout rifle offsets reduced damage by allowing rapid follow-up shots without having to break focus.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "62"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "47"
+    },
+    {
+      "label": "Magazine",
+      "value": "10"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 40
+    },
+    {
+      "label": "Precision",
+      "value": 100
+    },
+    {
+      "label": "Control",
+      "value": 28
+    },
+    {
+      "label": "Mobility",
+      "value": 54
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

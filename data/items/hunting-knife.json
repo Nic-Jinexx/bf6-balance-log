@@ -1,0 +1,40 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 86 in the 16:03 run), SELECT MELEE WEAPON. Melee has no CUSTOMIZE screen, so the art is cropped from the same shot. Melee reports Hit Delay and Damage instead of the primary-weapon stat block, and has no trait chips.",
+  "slug": "hunting-knife",
+  "name": "Hunting Knife",
+  "branch": "weapons",
+  "subcategory": "melee",
+  "order": 3,
+  "aliases": [],
+  "blurb": "Bighorn HK-16",
+  "variant": "Bighorn HK-16",
+  "traits": [],
+  "description": {
+    "text": "A personal knife carried by SSG Simone \"Gecko\" Espina. Designed for fast attacks, striking enemies from the back or while they are prone will initiate a lethal takedown. Increases sprint speed when equipped.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Hit delay",
+      "value": "100 ms"
+    },
+    {
+      "label": "Damage",
+      "value": "35"
+    }
+  ],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Challenge"
+    },
+    {
+      "label": "Requirement",
+      "value": "Mission Complete 4"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

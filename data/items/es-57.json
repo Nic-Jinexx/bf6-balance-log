@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 72/73 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "es-57",
+  "name": "ES 5.7",
+  "branch": "weapons",
+  "subcategory": "sidearms",
+  "order": 2,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Accurate",
+    "Mid Range",
+    "Semi-Auto"
+  ],
+  "description": {
+    "text": "Companion to the USG-90, this sidearm has generous magazine capacity and exceptional bullet velocity compared to its peers.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "20"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "450"
+    },
+    {
+      "label": "Magazine",
+      "value": "20"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 54
+    },
+    {
+      "label": "Precision",
+      "value": 57
+    },
+    {
+      "label": "Control",
+      "value": 28
+    },
+    {
+      "label": "Mobility",
+      "value": 81
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 24"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

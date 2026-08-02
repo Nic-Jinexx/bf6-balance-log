@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 80/81 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown for an owned weapon, so both stay TBD.",
+  "slug": "m357-trait",
+  "name": "M357 Trait",
+  "branch": "weapons",
+  "subcategory": "sidearms",
+  "order": 6,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Hard-Hitting",
+    "Close Range",
+    "Revolver"
+  ],
+  "description": {
+    "text": "This lightweight revolver has an 8-shot cylinder and comes with a variety of available attachments.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "50"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "225"
+    },
+    {
+      "label": "Magazine",
+      "value": "8"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 54
+    },
+    {
+      "label": "Precision",
+      "value": 27
+    },
+    {
+      "label": "Control",
+      "value": 8
+    },
+    {
+      "label": "Mobility",
+      "value": 73
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

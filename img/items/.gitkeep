@@ -1,0 +1,2 @@
+Item art goes here as <slug>.png (or .jpg/.webp), e.g. m4a1.png.
+Drop the file in and re-run scripts/build_pages.py. No data file edit needed.

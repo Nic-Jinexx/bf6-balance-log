@@ -1,0 +1,83 @@
+{
+  "_comment": "Transcribed from the in-game Select Primary Weapon screen, FACTORY preset, captured 2026-08-01. TBD is deliberate: fields not shown on screen are left unknown rather than guessed.",
+  "slug": "m277",
+  "name": "M277",
+  "branch": "weapons",
+  "subcategory": "carbines",
+  "order": 2,
+  "aliases": [
+    "m277"
+  ],
+  "blurb": "",
+  "traits": [
+    "Versatile",
+    "Mid Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "Chambered in 6.8×51mm, this newly fielded rifle is intended for overmatch at range at the cost of magazine capacity.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "720"
+    },
+    {
+      "label": "Magazine",
+      "value": "20"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 40
+    },
+    {
+      "label": "Precision",
+      "value": 21
+    },
+    {
+      "label": "Control",
+      "value": 32
+    },
+    {
+      "label": "Mobility",
+      "value": 58
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 11"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

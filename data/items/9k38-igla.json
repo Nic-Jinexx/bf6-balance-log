@@ -1,0 +1,32 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 103 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "9k38-igla",
+  "name": "9K38 Igla",
+  "branch": "gadgets",
+  "subcategory": "launchers",
+  "order": 9,
+  "aliases": [
+    "air defense launcher"
+  ],
+  "blurb": "Air Defense Launcher",
+  "class": "Engineer",
+  "traits": [],
+  "description": {
+    "text": "A man-portable air-defense system designed to target enemy aircraft. Requires lock-on before launch, after which the user must maintain target acquisition by tracking the aircraft with the weapon sight to preserve missile guidance. Missiles can reacquire targets mid-flight if tracking is lost or countermeasures are deployed.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

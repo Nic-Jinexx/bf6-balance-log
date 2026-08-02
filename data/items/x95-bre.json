@@ -1,0 +1,32 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 91 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "x95-bre",
+  "name": "X95 BRE",
+  "branch": "gadgets",
+  "subcategory": "launchers",
+  "order": 1,
+  "aliases": [
+    "breaching projectile launcher"
+  ],
+  "blurb": "Breaching Projectile Launcher",
+  "class": "Assault",
+  "traits": [],
+  "description": {
+    "text": "A handheld launcher that fires breaching rounds which attach, and after a short delay, penetrate most destructible surfaces to deliver a blinding explosion on the other side. If the breaching round hits an enemy soldier, it will cause limited impact damage before triggering the same blinding explosion.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

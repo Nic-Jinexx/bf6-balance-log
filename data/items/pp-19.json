@@ -1,0 +1,84 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 18/19 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown on either screen, so both stay TBD rather than becoming a plausible-looking guess.",
+  "slug": "pp-19",
+  "name": "PP-19",
+  "branch": "weapons",
+  "subcategory": "smgs",
+  "order": 10,
+  "aliases": [
+    "pp19"
+  ],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Versatile",
+    "Mid Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "Derived from a unique predecessor, this modest SMG can still tap into its helical, high-capacity roots with some slight modification.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "720"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 50
+    },
+    {
+      "label": "Control",
+      "value": 54
+    },
+    {
+      "label": "Mobility",
+      "value": 68
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

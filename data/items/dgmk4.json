@@ -1,0 +1,32 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 127 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "dgmk4",
+  "name": "DGMK4",
+  "branch": "gadgets",
+  "subcategory": "tools",
+  "order": 6,
+  "aliases": [
+    "hardware suppression system"
+  ],
+  "blurb": "Hardware Suppression System",
+  "class": "Recon",
+  "traits": [],
+  "description": {
+    "text": "When equipped, the Hardware Suppression System spots all nearby electronic and explosive gadgets as well as targets in the middle of a locked-on process. Take aim and activate the device to intercept missiles and destroy electronic gadgets, up to a total of three combined.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

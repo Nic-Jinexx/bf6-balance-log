@@ -1,0 +1,83 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture 20260801145119 / 20260801145124). Two shots per weapon: SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. TBD is deliberate: anything not legible on screen stays TBD rather than becoming a plausible-looking guess. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "b36a4",
+  "name": "B36A4",
+  "branch": "weapons",
+  "subcategory": "assault-rifles",
+  "order": 2,
+  "aliases": [
+    "b36"
+  ],
+  "blurb": "",
+  "traits": [
+    "Versatile",
+    "Mid Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "A versatile rifle that can be modified to compete in both close-quarters or ranged encounters.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "720"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 40
+    },
+    {
+      "label": "Precision",
+      "value": 27
+    },
+    {
+      "label": "Control",
+      "value": 42
+    },
+    {
+      "label": "Mobility",
+      "value": 52
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 24"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

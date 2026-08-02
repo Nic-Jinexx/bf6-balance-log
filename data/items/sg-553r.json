@@ -1,0 +1,87 @@
+{
+  "_comment": "Transcribed from the in-game Select Primary Weapon screen, FACTORY preset, captured 2026-08-01. TBD is deliberate: fields not shown on screen are left unknown rather than guessed.",
+  "slug": "sg-553r",
+  "name": "SG 553R",
+  "branch": "weapons",
+  "subcategory": "carbines",
+  "order": 7,
+  "aliases": [
+    "sg553r",
+    "553r"
+  ],
+  "blurb": "",
+  "traits": [
+    "Hard-Hitting",
+    "Mid Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "A classic cold-war era rifle modernized for export. Its effectiveness quickly diminishes beyond mid range.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "35"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "720"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 23
+    },
+    {
+      "label": "Control",
+      "value": 37
+    },
+    {
+      "label": "Mobility",
+      "value": 60
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Danger Close 2"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Get kills with the QBZ-192 or M277 (100)",
+        "Perform a headshot with Carbines (300)"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

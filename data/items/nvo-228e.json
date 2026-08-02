@@ -1,0 +1,87 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture 20260801145403 / 20260801145357). Two shots per weapon: SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. TBD is deliberate: anything not legible on screen stays TBD rather than becoming a plausible-looking guess. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "nvo-228e",
+  "name": "NVO-228E",
+  "branch": "weapons",
+  "subcategory": "assault-rifles",
+  "order": 7,
+  "aliases": [
+    "nvo228e",
+    "nvo"
+  ],
+  "blurb": "",
+  "traits": [
+    "Hard-Hitting",
+    "Mid Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "This powerful assault rifle chambered in 7.62 Soviet is a reliable weapon designed for mid-range encounters.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "35"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "654"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 40
+    },
+    {
+      "label": "Precision",
+      "value": 25
+    },
+    {
+      "label": "Control",
+      "value": 41
+    },
+    {
+      "label": "Mobility",
+      "value": 52
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Rapid Fire 2"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Get kills with the Kord 6P67 or B36A4 (300)",
+        "Get kills over 50m while ADS with Assault Rifles (100)"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

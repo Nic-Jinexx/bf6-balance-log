@@ -1,0 +1,35 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 115 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01. source writes \"M1320A1\"; within the Support tree the only M320A1 is the SMK.",
+  "slug": "m320a1-smk",
+  "name": "M320A1 SMK",
+  "branch": "gadgets",
+  "subcategory": "launchers",
+  "order": 10,
+  "aliases": [
+    "smoke grenade launcher"
+  ],
+  "blurb": "Smoke Grenade Launcher",
+  "class": "Support",
+  "traits": [],
+  "description": {
+    "text": "Fires impact-triggered grenades designed to create temporary smoke screens. Blocks ability to spot targets and clears spotted markers from all infantry inside the smoke radius. Can be carried standalone or underslung on weapons with a Gadget Mount attachment for faster access.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Support 1"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Heal teammates for health with the Support (5,000)",
+        "Earn score (10,000)"
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

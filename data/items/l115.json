@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 60/61 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown for an owned weapon, so both stay TBD.",
+  "slug": "l115",
+  "name": "L115",
+  "branch": "weapons",
+  "subcategory": "sniper-rifles",
+  "order": 5,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Hard-Hitting",
+    "Extreme Range",
+    "Bolt-Action"
+  ],
+  "description": {
+    "text": "Designed to withstand operation in arctic warfare, this magnum caliber sniper rifle has earned itself a legendary reputation worldwide. Most effective between 100m-133m.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "100"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "46"
+    },
+    {
+      "label": "Magazine",
+      "value": "5"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 34
+    },
+    {
+      "label": "Precision",
+      "value": 100
+    },
+    {
+      "label": "Control",
+      "value": 19
+    },
+    {
+      "label": "Mobility",
+      "value": 50
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

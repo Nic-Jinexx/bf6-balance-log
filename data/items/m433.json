@@ -1,0 +1,77 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture 20260801145028 / 20260801145035). Two shots per weapon: SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. TBD is deliberate: anything not legible on screen stays TBD rather than becoming a plausible-looking guess. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "m433",
+  "name": "M433",
+  "branch": "weapons",
+  "subcategory": "assault-rifles",
+  "order": 1,
+  "aliases": [],
+  "blurb": "",
+  "traits": [
+    "Aggressive",
+    "Close Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "Chambered in 5.56x45mm, this cutting-edge rifle is best suited at closer ranges due to its above average rate of fire.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "830"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 22
+    },
+    {
+      "label": "Control",
+      "value": 53
+    },
+    {
+      "label": "Mobility",
+      "value": 46
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Default"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

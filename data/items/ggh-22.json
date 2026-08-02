@@ -1,0 +1,82 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 78/79 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown for an owned weapon, so both stay TBD.",
+  "slug": "ggh-22",
+  "name": "GGH-22",
+  "branch": "weapons",
+  "subcategory": "sidearms",
+  "order": 5,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Versatile",
+    "Mid Range",
+    "Semi-Auto"
+  ],
+  "description": {
+    "text": "A renowned semi-auto pistol with a .40 caliber chambering for improved ranged performance.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "25"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "360"
+    },
+    {
+      "label": "Magazine",
+      "value": "15"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 54
+    },
+    {
+      "label": "Precision",
+      "value": 48
+    },
+    {
+      "label": "Control",
+      "value": 18
+    },
+    {
+      "label": "Mobility",
+      "value": 75
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

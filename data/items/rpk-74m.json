@@ -1,0 +1,84 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 38/39 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown on either screen, so both stay TBD rather than becoming a plausible-looking guess.",
+  "slug": "rpk-74m",
+  "name": "RPK-74M",
+  "branch": "weapons",
+  "subcategory": "lmgs",
+  "order": 10,
+  "aliases": [
+    "rpk74m"
+  ],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Accurate",
+    "Long Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "A cold war LSW furnished for modern combat demands, offering controllable recoil, variable capacity, and serviceable damage.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "20"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "685"
+    },
+    {
+      "label": "Magazine",
+      "value": "45"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 34
+    },
+    {
+      "label": "Precision",
+      "value": 62
+    },
+    {
+      "label": "Control",
+      "value": 60
+    },
+    {
+      "label": "Mobility",
+      "value": 38
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

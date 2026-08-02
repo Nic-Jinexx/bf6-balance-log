@@ -1,0 +1,40 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 89 in the 16:03 run), SELECT MELEE WEAPON. Melee has no CUSTOMIZE screen, so the art is cropped from the same shot. Melee reports Hit Delay and Damage instead of the primary-weapon stat block, and has no trait chips.",
+  "slug": "eod-bot-arm",
+  "name": "EOD Bot Arm",
+  "branch": "weapons",
+  "subcategory": "melee",
+  "order": 6,
+  "aliases": [],
+  "blurb": "EOD Bot Arm",
+  "variant": "EOD Bot Arm",
+  "traits": [],
+  "description": {
+    "text": "A severed claw arm from an EOD robot, used for melee attacks. Attacking enemies from the back or while they are prone will initiate a lethal takedown. Increases sprint speed when equipped.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Hit delay",
+      "value": "100 ms"
+    },
+    {
+      "label": "Damage",
+      "value": "35"
+    }
+  ],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Currently unavailable"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

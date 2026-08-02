@@ -1,0 +1,85 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 34/35 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "m240l",
+  "name": "M240L",
+  "branch": "weapons",
+  "subcategory": "lmgs",
+  "order": 8,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Hard-Hitting",
+    "Mid Range",
+    "Steady Firerate"
+  ],
+  "description": {
+    "text": "A general purpose machine gun modernized to improve weight and increase capacity. Effective in both aggressive and defensive roles.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "35"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "600"
+    },
+    {
+      "label": "Magazine",
+      "value": "50"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 29
+    },
+    {
+      "label": "Precision",
+      "value": 24
+    },
+    {
+      "label": "Control",
+      "value": 38
+    },
+    {
+      "label": "Mobility",
+      "value": 30
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Bullet Storm 2"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Inflict damage with the RPKM or KTS100 Mk8 (7,000)",
+        "Get multi-kills with LMGs (15)"
+      ]
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

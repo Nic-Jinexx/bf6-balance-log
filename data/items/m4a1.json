@@ -1,0 +1,83 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-07-31 (Steam capture 20260731164228 / 164311). TBD is deliberate: anything not legible on screen stays TBD rather than becoming a plausible-looking guess.",
+  "slug": "m4a1",
+  "name": "M4A1",
+  "branch": "weapons",
+  "subcategory": "carbines",
+  "order": 1,
+  "aliases": [
+    "m4"
+  ],
+  "blurb": "",
+  "traits": [
+    "Aggressive",
+    "Close Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "With its high cyclic rate, extending this carbine's effective range requires competent recoil management.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "900"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 54
+    },
+    {
+      "label": "Precision",
+      "value": 25
+    },
+    {
+      "label": "Control",
+      "value": 36
+    },
+    {
+      "label": "Mobility",
+      "value": 60
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 2"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

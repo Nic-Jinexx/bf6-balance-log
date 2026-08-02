@@ -1,0 +1,35 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 102 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "m136-at",
+  "name": "M136 AT",
+  "branch": "gadgets",
+  "subcategory": "launchers",
+  "order": 8,
+  "aliases": [
+    "aim-guided launcher"
+  ],
+  "blurb": "Aim-Guided Launcher",
+  "class": "Engineer",
+  "traits": [],
+  "description": {
+    "text": "An anti-vehicle launcher that allows the user to guide the missile to the target via the weapon's crosshairs. Inflicts greater damage on the sides, top, and rear of vehicles where the armor is thinner.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Engineer Specialist 1"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Deploy the Vehicle Supply Crate (5)",
+        "Earn score (40,000)"
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

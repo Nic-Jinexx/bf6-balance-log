@@ -1,0 +1,35 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 118 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01. source writes \"Goliath Impact\".",
+  "slug": "goliath-compact",
+  "name": "Goliath Compact",
+  "branch": "gadgets",
+  "subcategory": "deployables",
+  "order": 11,
+  "aliases": [
+    "supply pouch"
+  ],
+  "blurb": "Supply Pouch",
+  "class": "Support",
+  "traits": [],
+  "description": {
+    "text": "A single-use pouch to replenish ammo and medical supplies for the owner or their teammates. Fully restocks ammo capacity of the primary and secondary weapons and restores a portion of health.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Assignment: Support Specialist 1"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Intercept projectiles with the Grenade Intercept System (100)",
+        "Earn score (40,000)"
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

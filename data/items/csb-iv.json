@@ -1,0 +1,33 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 107 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "csb-iv",
+  "name": "EOD Bot",
+  "branch": "gadgets",
+  "subcategory": "tools",
+  "order": 1,
+  "aliases": [
+    "eod bot",
+    "csb iv"
+  ],
+  "blurb": "CSB IV",
+  "class": "Engineer",
+  "traits": [],
+  "description": {
+    "text": "Remotely controllable robot with various capabilities, including repairing vehicles and equipment, arming and disarming M-COM explosives, remote M-COM explosive arming where the robot will self-destruct on completion of task, launching cluster munitions to clear an area of enemy gadgets, and placing Anti-Vehicle Mines.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

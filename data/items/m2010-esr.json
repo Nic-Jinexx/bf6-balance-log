@@ -1,0 +1,78 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 52/53 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement transcribed from the in-game challenge text (source: Battlefield 6), recorded 2026-08-01.",
+  "slug": "m2010-esr",
+  "name": "M2010 ESR",
+  "branch": "weapons",
+  "subcategory": "sniper-rifles",
+  "order": 1,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Hard-Hitting",
+    "Extreme Range",
+    "Bolt-Action"
+  ],
+  "description": {
+    "text": "This precision rifle is effective at extended ranges but has a relatively low base magazine capacity. Best used between 75m-100m.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "100"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "43"
+    },
+    {
+      "label": "Magazine",
+      "value": "5"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 34
+    },
+    {
+      "label": "Precision",
+      "value": 100
+    },
+    {
+      "label": "Control",
+      "value": 27
+    },
+    {
+      "label": "Mobility",
+      "value": 50
+    }
+  ],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Default"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

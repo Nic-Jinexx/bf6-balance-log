@@ -1,0 +1,33 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 120 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
+  "slug": "an-m14",
+  "name": "AN/M14 Incendiary Grenade",
+  "branch": "gadgets",
+  "subcategory": "throwables",
+  "order": 7,
+  "aliases": [
+    "incendiary grenade",
+    "an/m14"
+  ],
+  "blurb": "",
+  "class": "Support",
+  "traits": [],
+  "description": {
+    "text": "A grenade that produces a brief blast radius of intense heat. Affected enemies will continue to burn for a short duration. Fire damage can be reduced by going prone.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "TBD"
+    },
+    {
+      "label": "Requirement",
+      "value": "TBD"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

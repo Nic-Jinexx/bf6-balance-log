@@ -1,0 +1,81 @@
+{
+  "_comment": "Transcribed from the in-game Select Primary Weapon screen, FACTORY preset, captured 2026-08-01. TBD is deliberate: fields not shown on screen are left unknown rather than guessed.",
+  "slug": "brod-3",
+  "name": "BROD 3",
+  "branch": "weapons",
+  "subcategory": "carbines",
+  "order": 9,
+  "aliases": [
+    "brod3",
+    "brod"
+  ],
+  "blurb": "",
+  "traits": [
+    "Aggressive",
+    "Close Range",
+    "High Firerate"
+  ],
+  "description": {
+    "text": "A frontrunner in 21st century firearm design, this third BROD iteration has been refined through frontline feedback. Collapsible stock maximizes mobility.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.1.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "26"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "830"
+    },
+    {
+      "label": "Magazine",
+      "value": "30"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 47
+    },
+    {
+      "label": "Precision",
+      "value": 1
+    },
+    {
+      "label": "Control",
+      "value": 35
+    },
+    {
+      "label": "Mobility",
+      "value": 60
+    }
+  ],
+  "_unlock_note": "Season 4 Battle Pass while Season 4 is current. Expected to convert to a Season N Hardware Challenge once the season rolls over; change the Unlock value here and rebuild when it does. No Requirement row: a battle pass tier is not a challenge.",
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Season 4 Battle Pass"
+    }
+  ],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}
