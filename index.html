@@ -1100,6 +1100,10 @@ html{-webkit-text-size-adjust:100%}
 <div class="body">
 <ul class="plain">
 <li data-item="l115"><b>L115</b> iron sight attachment cost increased 5 → 15 points, brought in line with other bolt-actions.</li>
+<li data-item="m16a4 rpk-74m"><b>Angled Grips</b> on the <b>M16A4</b> and <b>RPK-74M</b> now apply their intended recoil-reduction values.</li>
+<li data-item="ak-205"><b>AK-205</b> ergonomic attachments now correctly update the weapon's stat values.</li>
+<li data-item="m45a1 vz-61"><b>M45A1</b> and <b>Vz.61</b> sidearms now use Subsonic Ammo by default.</li>
+<li data-item="usg-90"><b>USG-90</b> hip-fire weapon position lowered to reduce how much screen space it occupies.</li>
 <li><b>Extended Fast Magazine (L115)</b> now uses correct 3D asset (visual fix, not a stat change).</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.3.0</a>, posted Jun 26, 2026</div>
@@ -1112,6 +1116,8 @@ html{-webkit-text-size-adjust:100%}
 <li>Extended Barrels on all weapons: cost reduced 15 → 5 points, and no longer grant an ADS-speed bonus, intended to widen attachment/build diversity, especially on weapons with few barrel options.</li>
 <li data-item="l115">1.50x Thermal Sight cost on the <b>L115</b> corrected 15 → 25 points.</li>
 <li data-item="grt-bc umg-40 pw5a3 cz3a1 sg-553r kord-6p67">Burst Fire attachments on <b>GRT-BC, UMG-40, PW5A3, CZ3A1, SG 553R, Kord 6P67</b> now apply their stat effects only to burst-fire mode, as intended.</li>
+<li data-item="m45a1">Tac-Light Hip and Tac-Light ADS are now unlocked by default on the <b>M45A1</b> and available to all players.</li>
+<li data-item="p18 vz-61"><b>P18</b> and <b>Vz.61</b> tactical reloads can no longer be skipped by repeatedly pressing reload during an empty reload.</li>
 </ul>
 
 <details class="subdetail">
@@ -1153,6 +1159,7 @@ html{-webkit-text-size-adjust:100%}
 <div class="body">
 <ul class="plain">
 <li>Hollow Point and Synthetic Tip ammunition cost reduced on most weapons (their lower penetration is now reflected correctly in the in-game descriptions too; see 1.3.3.0).</li>
+<li data-item="sledgehammer"><b><b class="rs">REDSEC</b> destruction values updated:</b> plaster, concrete and other heavy objects now take 2 <b>Sledgehammer</b> hits instead of 4 or more. Multiplayer modes are unaffected.</li>
 </ul>
 
 <details class="subdetail">
@@ -1385,6 +1392,7 @@ html{-webkit-text-size-adjust:100%}
 <li><b>Reinforced Plating removed</b>, replaced by <b>Contingency Systems</b>: accelerates countermeasure cooldown at low health.</li>
 <li><b>Emergency Repair</b> now heals over time rather than instantly.</li>
 <li>Lock-on vehicle weapons now deal consistent damage, ignoring hit zones and angles.</li>
+<li data-item="ltlm-ii">The <b>IFV</b> no longer carries the <b>laser designator</b> by default; it now shares a slot with Mines Countermeasures and Smoke grenades.</li>
 <li><b>Engineer Field Specialization passives retuned:</b> Devastating Impact repair reduction cut &minus;50% &rarr; <span class="delta-down">&minus;25%</span>; Overheat Control vehicle-weapon effect cut &minus;50% &rarr; <span class="delta-down">&minus;10%</span>; the Vehicle Regeneration passive was replaced with <b>Mine Sweeping</b>, which highlights mines within 30m of the player.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.0</a>, posted May 8, 2026</div>
@@ -1499,6 +1507,7 @@ html{-webkit-text-size-adjust:100%}
 <li data-item="eod-bot-arm sledgehammer">The <b>EOD Bot Arm</b> and the <b>Sledgehammer</b> can no longer be used while swimming, and the Sledgehammer can no longer be used for quick swings while swimming.</li>
 <li>Launchers that discard their tubes now continue to reload even when they are no longer the active weapon.</li>
 <li><b>MAS 148 Glaive:</b> can no longer lock on to vehicles through rocks or cliffs.</li>
+<li data-item="ss26"><b>SS26</b> Incendiary Rounds no longer ignite the ocean floor when fired underwater.</li>
 <li data-item="m320a1-he"><b>M320A1, Level 2 "Grenadier" Trait (<b class="rs">REDSEC</b>):</b> removed the bonus HE ammo previously granted immediately on reaching Level 2; HE max-ammo increase reduced 5 → 4.</li>
 <li data-item="m320a1-he"><b>M320A1, Level 3 "Cluster Munitions" Trait (<b class="rs">REDSEC</b>):</b> submunitions created reduced 6 → 3; submunition max blast damage reduced 30 → 20; blast radius reduced 2m → 1.5m; max damage distance reduced 0.6m → 0.3m; submunition dispersion and bounce reworked so bomblets spread out instead of clustering into repeat explosions on one spot.</li>
 </ul>
@@ -1527,6 +1536,12 @@ html{-webkit-text-size-adjust:100%}
 <ul class="plain">
 <li data-item="rpg-7v2"><b>RPG-7V2</b> projectile trajectory reworked; zeroing range reduced 100m → 22m.</li>
 <li data-item="m18a1"><b>M18A1 AP Mine</b> trigger range and fragmentation-damage range unified at approximately 3m; Claymore fragmentation no longer deals self-damage.</li>
+<li data-item="m18a1"><b>M18A1 AP Mines</b> no longer damage downed players in multiplayer.</li>
+<li data-item="csb-iv m15 m4a1-slam"><b>CSB IV EOD Bot</b> mines can no longer be placed within 5m of another EOD Bot mine, an <b>M15 AV Mine</b>, or an <b>M4A1 SLAM</b>.</li>
+<li data-item="xfgm-6d dgmk4"><b>XFGM-6D Recon Drone</b> targeting logic now matches the <b>DGMK4 Hardware Suppression System</b>: close targets can be destroyed through walls, distant targets require line of sight.</li>
+<li data-item="ltlm-ii"><b>LTLM II Portable Laser Designator</b> can no longer be deployed unintentionally by releasing zoom and fire together, or by repeatedly pressing fire while zoomed and then releasing zoom.</li>
+<li data-item="ss26"><b>SS26</b> aim position improved so shots and hit indicators align correctly with the front sight.</li>
+<li data-item="lwcms"><b>Portable Mortar</b> play adjusted to encourage mobile deployment and repositioning: firing and relocating is easier, while static placement is more vulnerable and easier to counter.</li>
 </ul>
 <table>
 <caption>LWCMS Portable Mortar (nerf pass, continued from 1.1.3.0)</caption>
@@ -1537,6 +1552,15 @@ html{-webkit-text-size-adjust:100%}
 <tr data-item="lwcms mp-aps"><td class="item">Loadout restriction</td><td>Can no longer be equipped or placed near the Missile Intercept System</td></tr>
 </table>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.2.0</a>, posted Jun 5, 2026</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.3.1.5</span><span class="date">May 22, 2026</span><span class="tag tag-gadgets">proximity detector</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="mtn-55"><b>MTN-55 Proximity Detector</b> spotting improved so enemy soldiers are revealed more reliably in certain scenarios.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-5" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.5</a>, posted May 22, 2026</div>
 </div>
 </details>
 <details class="patch">
@@ -1586,6 +1610,7 @@ html{-webkit-text-size-adjust:100%}
 <li data-item="css-bundle"><b>Engineers Supply Crate</b> no longer has limited supply charges in standard multiplayer, so it can resupply nearby vehicles indefinitely.</li>
 <li data-item="dgmk4"><b>Hardware Suppression System:</b> can no longer target enemy gadgets through walls at long range, though limited wall penetration remains at closer distances; it no longer detects or detonates grenades and M320A1 projectiles, but still targets launcher projectiles. Maximum range restored to its original value.</li>
 <li data-item="lwcms xfgm-6d ltlm-ii csb-iv">Player-controlled gadgets &mdash; <b>Portable Mortar, XFGM-6D Recon Drone, LTLM II Laser Designator, CSB IV EOD Bot</b> &mdash; now only begin resupplying once the deployed gadget has been destroyed.</li>
+<li data-item="csb-iv">The <b>EOD Bot</b> now self-destructs when its out-of-bounds timer expires, when control ends while it is out of bounds, or when it is pushed out of bounds.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.0</a>, posted May 8, 2026</div>
 </div>
@@ -1596,19 +1621,20 @@ html{-webkit-text-size-adjust:100%}
 <p class="dev">Dev note: defibrillators were reworked around a charge system because it had become too easy to revive several teammates in quick succession with little risk. Goal: keep clutch multi-revives possible while rewarding more deliberate use.</p>
 <table>
 <caption>Defibrillator</caption>
-<tr><td class="item">Charges</td><td>New: 3 charges total, 1 charge restored every 4s</td></tr>
-<tr><td class="item">Full charge time</td><td class="num">0.65s → <span class="delta-up">1s</span></td></tr>
-<tr><td class="item">Fully-charged shock damage</td><td class="num">60 → <span class="delta-up">100</span> (a full-charge zap can one-shot kill again)</td></tr>
-<tr><td class="item">Revive health granted</td><td class="num">scales 50–100, in 10-point steps, based on charge level</td></tr>
-<tr><td class="item">Minimum charge to revive</td><td>Now requires 0.35s charge before a revive can be performed</td></tr>
-<tr><td class="item">Rate of fire</td><td>Slightly reduced</td></tr>
+<tr data-item="powerpulse"><td class="item">Charges</td><td>New: 3 charges total, 1 charge restored every 4s</td></tr>
+<tr data-item="powerpulse"><td class="item">Full charge time</td><td class="num">0.65s → <span class="delta-up">1s</span></td></tr>
+<tr data-item="powerpulse"><td class="item">Fully-charged shock damage</td><td class="num">60 → <span class="delta-up">100</span> (a full-charge zap can one-shot kill again)</td></tr>
+<tr data-item="powerpulse"><td class="item">Revive health granted</td><td class="num">scales 50–100, in 10-point steps, based on charge level</td></tr>
+<tr data-item="powerpulse"><td class="item">Minimum charge to revive</td><td>Now requires 0.35s charge before a revive can be performed</td></tr>
+<tr data-item="powerpulse"><td class="item">Rate of fire</td><td>Slightly reduced</td></tr>
 </table>
 <ul class="plain">
-<li>Reduced the turning response of <b>AT4</b> and <b>TOW</b> missiles.</li>
-<li>Reduced the initial speed, acceleration, and max speed of the <b>RPG</b>.</li>
+<li data-item="m136-at">Reduced the turning response of <b>AT4</b> and <b>TOW</b> missiles. (AT4 as published; the in-game launcher is the M136 AT.)</li>
+<li data-item="rpg-7v2">Reduced the initial speed, acceleration, and max speed of the <b>RPG</b>.</li>
 <li>Added infinite ammo to Mobile Anti-Aircraft primaries in multiplayer.</li>
 <li><b>MBT Guided Shell</b> reworked: faster but much less maneuverable.</li>
-<li>Vehicle-hit scoring updated so RPG critical hits and regular hits no longer award identical score.</li>
+<li data-item="rpg-7v2">Vehicle-hit scoring updated so RPG critical hits and regular hits no longer award identical score.</li>
+<li data-item="tarantula-alx"><b>Assault Ladder</b> interaction logic expanded: ladders can now destroy additional small placeable gadgets and props.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 10, 2026</div>
 </div>
@@ -1617,10 +1643,12 @@ html{-webkit-text-size-adjust:100%}
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-gadgets">mines / mortar</span></summary>
 <div class="body">
 <ul class="plain">
-<li>Anti-Tank Mines now despawn 180 seconds after their owner is eliminated.</li>
-<li>Anti-Tank Mines limited to 6 active per player.</li>
+<li data-item="m15">Anti-Tank Mines now despawn 180 seconds after their owner is eliminated.</li>
+<li data-item="m15">Anti-Tank Mines limited to 6 active per player.</li>
+<li data-item="lwcms">Portable Mortar can now be deployed within HQ areas.</li>
 <li data-item="lwcms">Portable Mortar HE shell effectiveness increased against stationary weapons/vehicles on a direct hit, and against infantry under heavy fire.</li>
 <li data-item="lwcms">Portable Mortar minimap zoom improved for better bombardment awareness.</li>
+<li data-item="an-m14"><b>AN/M14 Incendiary Grenade:</b> fire behaviour improved when the grenade is obscured by geometry — it could previously apply fire damage outside its intended visual range.</li>
 <li>Friendly drone icon visibility range increased 50m → 150m.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.2.0</a>, posted Mar 13, 2026</div>
@@ -1666,6 +1694,8 @@ html{-webkit-text-size-adjust:100%}
 <li>Thermobaric grenade concussive effect reduced 2.5s → 1s.</li>
 <li data-item="powerpulse">Repair Tool overheats faster to prevent vehicles becoming too durable; Repair Tool and Defibrillator can now damage enemy gadgets. Defibrillator damage reduced on both quick and charged zaps.</li>
 <li data-item="tarantula-alx">Assault Ladder ramp deployment angle increased 45° → 54°.</li>
+<li data-item="tarantula-alx">Gameplay volumes adjusted so the <b>Assault Ladder</b> is the only gadget blocked from deployment inside them; all other gadgets can still be placed.</li>
+<li data-item="xfgm-6d csb-iv ltlm-ii">Remote-entry gadgets — <b>XFGM-6D Recon Drone</b>, <b>CSB IV EOD Bot</b>, <b>LTLM II Laser Designator</b> — can no longer be equipped while out of ammo with no active gadget deployed.</li>
 <li data-item="rpg-7v2"><b>RPG-7V2:</b> increased ADS dispersion to discourage quick-scoping.</li>
 <li data-item="mbt-law"><b>MBT-LAW:</b> made the default Engineer launcher; switched to auto-guided missiles; can no longer be hip-fired.</li>
 <li><b>MAS 148 Glaive:</b> added two zoom levels; can now lock onto stationary weapons/vehicles (AA, TOW, heavy MG); minimum lock-on range set to 40m.</li>
