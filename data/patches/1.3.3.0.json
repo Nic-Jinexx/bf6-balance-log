@@ -94,7 +94,9 @@
     "PLAYER"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "m18"
+   ]
   },
   {
    "text": "Soldier rotation now behaves correctly when changing stance while dragging a downed teammate.",
@@ -572,7 +574,8 @@
    ],
    "section": "gadgets",
    "items": [
-    "manet-dis-5"
+    "manet-dis-5",
+    "trcrv2"
    ]
   },
   {

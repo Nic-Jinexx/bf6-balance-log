@@ -91,6 +91,7 @@ h2.cat.ui{color:var(--ui)} h2.cat.ui .dot{background:var(--ui)}
 h2.cat.audio{color:var(--audio)} h2.cat.audio .dot{background:var(--audio)}
 h2.cat.portal{color:var(--portal)} h2.cat.portal .dot{background:var(--portal)}
 h2.cat.ai{color:var(--ai)} h2.cat.ai .dot{background:var(--ai)}
+h2.cat.other{color:var(--muted)} h2.cat.other .dot{background:var(--muted)}
 p.grp{margin:16px 0 6px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 p.cat-note{color:var(--muted);font-size:15px;margin:6px 0 22px;max-width:820px}
 details.patch{background:var(--panel);border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden}
@@ -174,6 +175,8 @@ ul.plain.small li b{color:var(--text);font-weight:600}
 .tag.tag-audio{color:var(--audio);border-color:var(--audio)}
 .tag.tag-portal{color:var(--portal);border-color:var(--portal)}
 .tag.tag-ai{color:var(--ai);border-color:var(--ai)}
+.tag.tag-misc{color:var(--muted);border-color:var(--border2)}
+.tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
 
 /* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
    Red now means REDSEC and nothing else: the Systemic section took the teal. */
@@ -740,49 +743,30 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </div>
 
 <h2 class="cat gadgets" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">6 changes to the RPG-7V2 have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
+<p class="cat-note">5 changes to the RPG-7V2 have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
 <details class="patch" open>
 <summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-vehicles">vehicles</span></summary>
 <div class="body">
-<table>
-<caption>General vehicle weapons</caption>
-<tr><th>System</th><th>Change</th></tr>
-<tr data-item="rpg-7v2"><td class="item">RPG-7V2 damage</td><td class="num">173–460 → <span class="delta-up">188–500</span> (tanks) · 1035 → <span class="delta-up">1125</span> (helicopters)</td></tr>
-</table>
+<ul class="plain">
+<li data-item="rpg-7v2">RPG-7V2 damage increased from 173-460 to 188-500 against tanks, and from 1035 to 1125 against helicopters.</li>
+</ul>
 <div class="src">Full patch entry and EA source link: <a href="/#vehicles">1.3.3.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
 <summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="rpg-7v2"><b>RPG-7V2</b> projectile trajectory reworked; zeroing range reduced 100m → 22m.</li>
+<li data-item="rpg-7v2">Reworked the trajectory of the RPG-7V2 Projectile. Zeroing range reduced from 100m to 22m.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.3.2.0 in the balance log</a></div>
-</div></details>
-<details class="patch" open>
-<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
-<div class="body">
-<table>
-<caption>Anti-vehicle damage, as republished this patch</caption>
-<tr><th>Gadget</th><th>vs. tanks</th><th>vs. helicopters</th><th>vs. jets</th></tr>
-<tr data-item="rpg-7v2"><td class="item">RPG</td><td class="num">173–460</td><td class="num">1035</td><td class="num">1000</td></tr>
-</table>
-<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.3.1.0 in the balance log</a></div>
-</div></details>
-<details class="patch" open>
-<summary><span class="ver">1.2.3.0</span><span class="date">Apr 14, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
-<div class="body">
-<ul class="plain">
-<li data-item="rpg-7v2">Reduced the initial speed, acceleration, and max speed of the <b>RPG</b>.</li>
-<li data-item="rpg-7v2">Vehicle-hit scoring updated so RPG critical hits and regular hits no longer award identical score.</li>
-</ul>
-<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.2.3.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
 <summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-gadgets">gadgets</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="rpg-7v2"><b>RPG-7V2:</b> increased ADS dispersion to discourage quick-scoping.</li>
+<li data-item="rpg-7v2">Adjusted sight and reticle for better aiming.</li>
+<li data-item="rpg-7v2">Increased dispersion when aiming down sights to discourage quick-scoping.</li>
+<li data-item="rpg-7v2">Fixed projectiles hitting nearby cover incorrectly when aimed just above it.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.0.1.0 in the balance log</a></div>
 </div></details>

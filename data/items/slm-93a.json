@@ -6,7 +6,9 @@
   "subcategory": "launchers",
   "order": 6,
   "aliases": [
-    "air-defense launcher"
+    "air-defense launcher",
+    "slm-93a",
+    "slm93a"
   ],
   "blurb": "Air-Defense Launcher",
   "class": "Engineer",

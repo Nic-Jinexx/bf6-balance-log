@@ -91,6 +91,7 @@ h2.cat.ui{color:var(--ui)} h2.cat.ui .dot{background:var(--ui)}
 h2.cat.audio{color:var(--audio)} h2.cat.audio .dot{background:var(--audio)}
 h2.cat.portal{color:var(--portal)} h2.cat.portal .dot{background:var(--portal)}
 h2.cat.ai{color:var(--ai)} h2.cat.ai .dot{background:var(--ai)}
+h2.cat.other{color:var(--muted)} h2.cat.other .dot{background:var(--muted)}
 p.grp{margin:16px 0 6px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 p.cat-note{color:var(--muted);font-size:15px;margin:6px 0 22px;max-width:820px}
 details.patch{background:var(--panel);border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden}
@@ -174,6 +175,8 @@ ul.plain.small li b{color:var(--text);font-weight:600}
 .tag.tag-audio{color:var(--audio);border-color:var(--audio)}
 .tag.tag-portal{color:var(--portal);border-color:var(--portal)}
 .tag.tag-ai{color:var(--ai);border-color:var(--ai)}
+.tag.tag-misc{color:var(--muted);border-color:var(--border2)}
+.tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
 
 /* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
    Red now means REDSEC and nothing else: the Systemic section took the teal. */
@@ -737,12 +740,13 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </div>
 
 <h2 class="cat maps" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">4 changes to the Siege of Cairo have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
+<p class="cat-note">8 changes to the Siege of Cairo have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
 <details class="patch" open>
 <summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-maps">maps &amp; modes</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="eastwood new-sobek-city saints-quarter siege-of-cairo">Player spawn placements adjusted on <b>Eastwood</b>, <b>New Sobek City</b>, <b>Saints Quarter</b> and <b>Siege of Cairo</b>. EA names no specifics.</li>
+<li data-item="eastwood new-sobek-city saints-quarter siege-of-cairo">Player spawn placements have been adjusted on Eastwood, New Sobek City, Saints Quarter, and Siege of Cairo.</li>
+<li data-item="siege-of-cairo">Players will no longer clip through terrain objects while in the Siege of Cairo pre-game lobby.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#maps">1.3.3.0 in the balance log</a></div>
 </div></details>
@@ -750,18 +754,25 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-maps">maps &amp; modes</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="eastwood saints-quarter siege-of-cairo new-sobek-city hagental-base">Multiple spawn points improved across <b>Eastwood</b>, <b>Saints Quarter</b>, <b>Siege of Cairo</b>, <b>New Sobek City</b> and <b>Hagental Base</b>. EA names no specifics.</li>
+<li data-item="eastwood hagental-base new-sobek-city saints-quarter siege-of-cairo">Multiple spawn points have been improved across Eastwood, Saints Quarter, Siege of Cairo, New Sobek City, and Hagental Base.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#maps">1.3.2.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
-<summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-maps">maps &amp; modes</span></summary>
+<summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-maps">maps &amp; modes</span></summary>
 <div class="body">
-<table>
-<tr><th>Map</th><th>Sector changes</th></tr>
-<tr data-item="siege-of-cairo"><td class="item">Siege of Cairo</td><td>+1 Attacker tank each in Sectors 1 and 3; capture area on B flag updated to support sector pushes</td></tr>
-</table>
-<div class="src">Full patch entry and EA source link: <a href="/#maps">1.1.3.0 in the balance log</a></div>
+<ul class="plain">
+<li data-item="siege-of-cairo">Resolved an issue in Breakthrough on Siege of Cairo where Defenders were unable to deploy on Point B while Point A was contested or captured in Sector 3.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#maps">1.2.2.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-maps">maps &amp; modes</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="maxguard-900 siege-of-cairo">Fixed an issue on Siege of Cairo where players could reach the top of buildings in Sector D3 using the Deployable Cover gadget.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#maps">1.2.1.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
 <summary><span class="ver">1.1.1.0</span><span class="date">Oct 24, 2025</span><span class="tag tag-progression">balance</span></summary>
@@ -770,6 +781,15 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <li data-item="siege-of-cairo">Fixed missing or incorrect ambient and destruction sounds across several maps, including Siege of Cairo, as well as missing explosion sounds for silos and tanker trailers.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#audio">1.1.1.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-maps">maps &amp; modes</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="siege-of-cairo">Fixed spawn killing issues on Siege of Cairo.</li>
+<li data-item="iberian-offensive siege-of-cairo">Fixed multiple exploits on Siege of Cairo and Iberian Offensive that allowed players to reach unintended areas.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#maps">1.0.1.0 in the balance log</a></div>
 </div></details>
 
 <h2 class="cat maps" id="related"><span class="dot"></span>Related items</h2>

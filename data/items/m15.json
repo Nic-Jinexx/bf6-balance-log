@@ -6,7 +6,11 @@
   "subcategory": "deployables",
   "order": 3,
   "aliases": [
-    "anti-vehicle mine"
+    "anti-vehicle mine",
+    "anti-tank mine",
+    "at mine",
+    "m15",
+    "m15 av mine"
   ],
   "blurb": "M15",
   "class": "Engineer",

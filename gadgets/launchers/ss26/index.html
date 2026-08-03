@@ -91,6 +91,7 @@ h2.cat.ui{color:var(--ui)} h2.cat.ui .dot{background:var(--ui)}
 h2.cat.audio{color:var(--audio)} h2.cat.audio .dot{background:var(--audio)}
 h2.cat.portal{color:var(--portal)} h2.cat.portal .dot{background:var(--portal)}
 h2.cat.ai{color:var(--ai)} h2.cat.ai .dot{background:var(--ai)}
+h2.cat.other{color:var(--muted)} h2.cat.other .dot{background:var(--muted)}
 p.grp{margin:16px 0 6px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 p.cat-note{color:var(--muted);font-size:15px;margin:6px 0 22px;max-width:820px}
 details.patch{background:var(--panel);border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden}
@@ -174,6 +175,8 @@ ul.plain.small li b{color:var(--text);font-weight:600}
 .tag.tag-audio{color:var(--audio);border-color:var(--audio)}
 .tag.tag-portal{color:var(--portal);border-color:var(--portal)}
 .tag.tag-ai{color:var(--ai);border-color:var(--ai)}
+.tag.tag-misc{color:var(--muted);border-color:var(--border2)}
+.tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
 
 /* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
    Red now means REDSEC and nothing else: the Systemic section took the teal. */
@@ -740,22 +743,22 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </div>
 
 <h2 class="cat gadgets" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">4 changes to the SS26 have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
+<p class="cat-note">18 changes to the SS26 have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
 <details class="patch" open>
-<summary><span class="ver">1.4.1.0</span><span class="date">Jul 16, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
+<summary><span class="ver">1.4.1.0</span><span class="date">Jul 16, 2026</span><span class="tag tag-weapons">weapons</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="ss26"><b>SS26</b> Incendiary Rounds no longer ignite the ocean floor when fired underwater.</li>
+<li data-item="ss26">SS26 Incendiary Rounds no longer ignite the ocean floor when fired underwater.</li>
 </ul>
-<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.4.1.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#weapons">1.4.1.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
-<summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
+<summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-weapons">weapons</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="ss26"><b>SS26</b> aim position improved so shots and hit indicators align correctly with the front sight.</li>
+<li data-item="ss26">SS26 aim position has been improved so shots and hit indicators align correctly with the front sight.</li>
 </ul>
-<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.3.2.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#weapons">1.3.2.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
 <summary><span class="ver">1.2.3.0</span><span class="date">Apr 10, 2026</span><span class="tag tag-progression">balance</span></summary>
@@ -769,7 +772,21 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-gadgets">gadgets</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="ss26"><b>SS26:</b> fire damage now applies only once per soldier; damage drop-off adjusted; unlock rank lowered from Rank 1 to Rank 0.</li>
+<li data-item="ss26">Fire damage now only applies once to soldiers.</li>
+<li data-item="ss26">Damage drop-off has been adjusted.</li>
+<li data-item="ss26">Unlock requirement reduced from Rank 1 to Rank 0.</li>
+<li data-item="ss26">Spotting angle and maximum spotting distance in binocular mode have been made more forgiving.</li>
+<li data-item="ss26">Can no longer laser paint the environment.</li>
+<li data-item="ss26">Now removes laser paint marks when a vehicle enters thermal smoke.</li>
+<li data-item="ss26">Now correctly spots vehicles when laser painting them.</li>
+<li data-item="ss26">Thermal view toggle now updates the UI correctly.</li>
+<li data-item="ss26">Zoom now activates instantly and returns to your previous zoom level.</li>
+<li data-item="ss26">Deploy animation now plays correctly.</li>
+<li data-item="ss26">Will now rotate properly for other players when deployed.</li>
+<li data-item="ss26">Improved the Game Hint to show RMB (Zoom) instead of E/R (Interact/Reload).</li>
+<li data-item="ss26">Now allows only one spawn per player (4 per squad total) before self-destruct.</li>
+<li data-item="qlink-6 ss26">Enemy Deploy Beacons now display an icon on the minimap when pinged.</li>
+<li data-item="ss26">Can now be deployed at a soldier’s feet if the original location is blocked.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.0.1.0 in the balance log</a></div>
 </div></details>
@@ -777,7 +794,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <h2 class="cat gadgets" id="related"><span class="dot"></span>Related items</h2>
 <p class="emptynote">Compatibility is not catalogued yet. Once attachments are added they will be listed here, and each attachment will link back to this page.</p>
 
-<p class="backlog"><a href="/#gadgets">&larr; Back to the full balance log</a></p>
+<p class="backlog"><a href="/#weapons">&larr; Back to the full balance log</a></p>
 
 <footer>
 <p class="disclaimer" style="margin-top:0">This is unofficial fan content. It is not affiliated with, endorsed by, or sponsored by Electronic Arts, DICE, Battlefield Studios, Ripple Effect, or Criterion. Battlefield&trade;, REDSEC&trade;, and all related names, weapons, and trademarks are the property of their respective owners.</p>

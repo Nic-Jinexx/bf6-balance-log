@@ -91,6 +91,7 @@ h2.cat.ui{color:var(--ui)} h2.cat.ui .dot{background:var(--ui)}
 h2.cat.audio{color:var(--audio)} h2.cat.audio .dot{background:var(--audio)}
 h2.cat.portal{color:var(--portal)} h2.cat.portal .dot{background:var(--portal)}
 h2.cat.ai{color:var(--ai)} h2.cat.ai .dot{background:var(--ai)}
+h2.cat.other{color:var(--muted)} h2.cat.other .dot{background:var(--muted)}
 p.grp{margin:16px 0 6px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 p.cat-note{color:var(--muted);font-size:15px;margin:6px 0 22px;max-width:820px}
 details.patch{background:var(--panel);border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden}
@@ -174,6 +175,8 @@ ul.plain.small li b{color:var(--text);font-weight:600}
 .tag.tag-audio{color:var(--audio);border-color:var(--audio)}
 .tag.tag-portal{color:var(--portal);border-color:var(--portal)}
 .tag.tag-ai{color:var(--ai);border-color:var(--ai)}
+.tag.tag-misc{color:var(--muted);border-color:var(--border2)}
+.tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
 
 /* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
    Red now means REDSEC and nothing else: the Systemic section took the teal. */
@@ -739,7 +742,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </div>
 
 <h2 class="cat gadgets" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">15 changes to the Defibrillator have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
+<p class="cat-note">17 changes to the Defibrillator have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
 <details class="patch" open>
 <summary><span class="ver">1.4.1.0</span><span class="date">Jul 16, 2026</span><span class="tag tag-progression">balance</span></summary>
 <div class="body">
@@ -752,25 +755,27 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="powerpulse"><b>Defibrillator:</b> the discharge sequence now completes fully before the gadget is removed when out of ammo.</li>
+<li data-item="powerpulse">The PowerPulse Defibrillator discharge sequence now completes fully before the gadget is removed when out of ammo.</li>
 <li data-item="powerpulse">Defibrillator charge replenishment now has unique sound effects.</li>
 <li data-item="powerpulse">The Defibrillator reload animations now include new audio.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.3.3.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
-<summary><span class="ver">1.2.3.0</span><span class="date">Apr 14, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
+<summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
 <div class="body">
-<table>
-<caption>Defibrillator</caption>
-<tr data-item="powerpulse"><td class="item">Charges</td><td>New: 3 charges total, 1 charge restored every 4s</td></tr>
-<tr data-item="powerpulse"><td class="item">Full charge time</td><td class="num">0.65s → <span class="delta-up">1s</span></td></tr>
-<tr data-item="powerpulse"><td class="item">Fully-charged shock damage</td><td class="num">60 → <span class="delta-up">100</span> (a full-charge zap can one-shot kill again)</td></tr>
-<tr data-item="powerpulse"><td class="item">Revive health granted</td><td class="num">scales 50–100, in 10-point steps, based on charge level</td></tr>
-<tr data-item="powerpulse"><td class="item">Minimum charge to revive</td><td>Now requires 0.35s charge before a revive can be performed</td></tr>
-<tr data-item="powerpulse"><td class="item">Rate of fire</td><td>Slightly reduced</td></tr>
-</table>
-<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.2.3.0 in the balance log</a></div>
+<ul class="plain">
+<li data-item="powerpulse">Defibrillators now show their charging animation correctly to other players in third-person.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.3.2.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-redsec">REDSEC</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="powerpulse">Corrected an issue where Defibrillator charges could regenerate incorrectly.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#redsec">1.3.1.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
 <summary><span class="ver">1.2.3.0</span><span class="date">Apr 10, 2026</span><span class="tag tag-progression">balance</span></summary>
@@ -784,24 +789,51 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="powerpulse"><b>Defibrillator:</b> revive detection made more consistent on stairs and uneven terrain.</li>
+<li data-item="powerpulse">Improved consistency of Defibrillator revives detection on stairs and uneven terrain.</li>
+<li data-item="powerpulse">Improved reliability of multiple sound effects under heavy load, including defibrillators, blowtorches, ziplines, and parachutes.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.2.1.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
-<summary><span class="ver">1.1.1.0</span><span class="date">Oct 24, 2025</span><span class="tag tag-progression">balance</span></summary>
+<summary><span class="ver">1.1.3.5</span><span class="date">Jan 16, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
 <div class="body">
 <ul class="plain">
+<li data-item="powerpulse xfgm-6d">Fixed an issue where the GDPIS was not destroyed when targeted by the XFGM-6D Recon Drone, Defibrillators, or the Repair Tool.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.1.3.5 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-player">player &amp; movement</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="powerpulse">Fixed an issue causing vaulting while charging a defibrillator to make the soldier’s hands disappear.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#player">1.1.3.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-gadgets">gadgets</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="powerpulse">Fixed inconsistent hit registration for the Defibrillator after range adjustment.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.1.2.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.1.1.0</span><span class="date">Oct 24, 2025</span><span class="tag tag-gadgets">gadgets</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="powerpulse">Fixed an issue where Defibrillators appeared floating during vaulting animations.</li>
 <li data-item="powerpulse">Tuned haptic feedback across multiple actions, including window barging, defibrillator use, swimming, rocket pods, mounted MGs, and sea vehicle collisions.</li>
 <li data-item="powerpulse">Fixed an issue where defibrillator loop sounds could get stuck when vaulting.</li>
 </ul>
-<div class="src">Full patch entry and EA source link: <a href="/#audio">1.1.1.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.1.1.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
 <summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-gadgets">gadgets</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="powerpulse">Repair Tool overheats faster to prevent vehicles becoming too durable; Repair Tool and Defibrillator can now damage enemy gadgets. Defibrillator damage reduced on both quick and charged zaps.</li>
+<li data-item="powerpulse">Repair Tool and Defibrillators can now damage enemy gadgets.</li>
+<li data-item="powerpulse">Defibrillator damage reduced on both quick zaps and charged zaps.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.0.1.0 in the balance log</a></div>
 </div></details>
@@ -809,7 +841,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <h2 class="cat gadgets" id="related"><span class="dot"></span>Related items</h2>
 <p class="emptynote">Compatibility is not catalogued yet. Once attachments are added they will be listed here, and each attachment will link back to this page.</p>
 
-<p class="backlog"><a href="/#gadgets">&larr; Back to the full balance log</a></p>
+<p class="backlog"><a href="/#player">&larr; Back to the full balance log</a></p>
 
 <footer>
 <p class="disclaimer" style="margin-top:0">This is unofficial fan content. It is not affiliated with, endorsed by, or sponsored by Electronic Arts, DICE, Battlefield Studios, Ripple Effect, or Criterion. Battlefield&trade;, REDSEC&trade;, and all related names, weapons, and trademarks are the property of their respective owners.</p>

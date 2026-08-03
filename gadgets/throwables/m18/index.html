@@ -91,6 +91,7 @@ h2.cat.ui{color:var(--ui)} h2.cat.ui .dot{background:var(--ui)}
 h2.cat.audio{color:var(--audio)} h2.cat.audio .dot{background:var(--audio)}
 h2.cat.portal{color:var(--portal)} h2.cat.portal .dot{background:var(--portal)}
 h2.cat.ai{color:var(--ai)} h2.cat.ai .dot{background:var(--ai)}
+h2.cat.other{color:var(--muted)} h2.cat.other .dot{background:var(--muted)}
 p.grp{margin:16px 0 6px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 p.cat-note{color:var(--muted);font-size:15px;margin:6px 0 22px;max-width:820px}
 details.patch{background:var(--panel);border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden}
@@ -174,6 +175,8 @@ ul.plain.small li b{color:var(--text);font-weight:600}
 .tag.tag-audio{color:var(--audio);border-color:var(--audio)}
 .tag.tag-portal{color:var(--portal);border-color:var(--portal)}
 .tag.tag-ai{color:var(--ai);border-color:var(--ai)}
+.tag.tag-misc{color:var(--muted);border-color:var(--border2)}
+.tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
 
 /* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
    Red now means REDSEC and nothing else: the Systemic section took the teal. */
@@ -739,7 +742,32 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </div>
 
 <h2 class="cat gadgets" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">1 change to the Smoke Grenade has been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
+<p class="cat-note">8 changes to the Smoke Grenade have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
+<details class="patch" open>
+<summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-player">player &amp; movement</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="m18">Smoke Grenades now interact with spotting more reliably, preventing cases where smoke either blocked spotting incorrectly or failed to block spotting when it should.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#player">1.3.3.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-player">player &amp; movement</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="m18">Spotting and pinging are now more consistent at the perceived edge of Smoke Grenades, without reducing the blocking effect of smoke.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#player">1.3.2.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-vehicles">vehicles</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="ltlm-ii m18">The IFV no longer has the laser designator equipped by default, it now shares a slot with the Mines Countermeasures &amp; Smoke grenades.</li>
+<li data-item="m18">Smoke Grenades used with Strike Packages such as Mobile Respawn and Artillery Strike can no longer be destroyed by gunfire.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#vehicles">1.3.1.0 in the balance log</a></div>
+</div></details>
 <details class="patch" open>
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-progression">balance</span></summary>
 <div class="body">
@@ -748,11 +776,28 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#portal">1.2.2.0 in the balance log</a></div>
 </div></details>
+<details class="patch" open>
+<summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-weapons">weapons</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="m18">Fixed an issue where Scope glints and laser sight lens flares would be visible through the cover of smoke grenades.</li>
+<li data-item="m18">Fixed an issue where the Smoke Grenade was missing from the Support class Loadout #2.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#weapons">1.2.1.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-gadgets">gadgets</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="m18">Fixed smoke grenades not detonating in some cases.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.0.1.0 in the balance log</a></div>
+</div></details>
 
 <h2 class="cat gadgets" id="related"><span class="dot"></span>Related items</h2>
 <p class="emptynote">Compatibility is not catalogued yet. Once attachments are added they will be listed here, and each attachment will link back to this page.</p>
 
-<p class="backlog"><a href="/#portal">&larr; Back to the full balance log</a></p>
+<p class="backlog"><a href="/#player">&larr; Back to the full balance log</a></p>
 
 <footer>
 <p class="disclaimer" style="margin-top:0">This is unofficial fan content. It is not affiliated with, endorsed by, or sponsored by Electronic Arts, DICE, Battlefield Studios, Ripple Effect, or Criterion. Battlefield&trade;, REDSEC&trade;, and all related names, weapons, and trademarks are the property of their respective owners.</p>

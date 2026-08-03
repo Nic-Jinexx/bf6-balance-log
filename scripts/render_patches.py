@@ -31,14 +31,11 @@ PATCHES = REPO_ROOT / "data" / "patches"
 INDEX = REPO_ROOT / "index.html"
 KNOWN = REPO_ROOT / "data" / "known_versions.json"
 
-# Categories this script owns. The curated sections (systemic, player, weapons,
-# vehicles, gadgets, maps, redsec, progression) are still hand-authored and are
-# migrated separately; only sections with a marker pair are touched.
-RENDERED = ["ui", "audio", "portal", "ai"]
-
-MISC_LABEL = {
-    "misc": "Settings, Network, Single Player, Stability and VFX",
-}
+# Every category on the page is generated. There is no "systemic" category:
+# that was an editorial grouping with no EA equivalent, and its lines now sit in
+# whichever category EA filed them under (decision 2026-08-03).
+RENDERED = ["player", "weapons", "vehicles", "gadgets", "maps", "redsec",
+            "progression", "ui", "audio", "portal", "ai", "misc"]
 
 # --- table shapes -----------------------------------------------------------
 # Ordered most specific first. Each yields (headers, cells) built purely from
@@ -82,12 +79,21 @@ def version_key(v):
 
 
 def load_entries():
+    """section -> version -> [entry].
+
+    REDSEC lines go to the REDSEC section rather than their gameplay category,
+    so Battle Royale tuning stays separate from multiplayer (decision
+    2026-08-03). The gameplay heading survives as the group label inside it.
+    """
     by_cat = {}
     for path in sorted(PATCHES.glob("*.json")):
         payload = json.loads(path.read_text(encoding="utf-8"))
         version = payload["version"]
         for entry in payload["entries"]:
-            by_cat.setdefault(entry["section"], {}).setdefault(version, []).append(entry)
+            cat = "redsec" if entry.get("redsec") else entry["section"]
+            if entry["section"] == "summary":
+                cat = "summary"
+            by_cat.setdefault(cat, {}).setdefault(version, []).append(entry)
     return by_cat
 
 
@@ -126,8 +132,12 @@ def delta_class(cell):
     return ""
 
 
-def render_rows(entries):
-    """A heading group -> markup. Tables where EA's shape allows, else a list."""
+def render_rows(entries, emitted=None):
+    """A heading group -> markup. Tables where EA's shape allows, else a list.
+
+    Every entry consumed is recorded in `emitted` so main() can prove that no
+    line was silently dropped on the way to the page.
+    """
     out = []
     i = 0
     while i < len(entries):
@@ -137,6 +147,8 @@ def render_rows(entries):
             out.append("<table>")
             out.append("<tr>" + "".join("<th>%s</th>" % esc(h) for h in headers) + "</tr>")
             for entry, cells in rows:
+                if emitted is not None:
+                    emitted.append(entry)
                 attr = ' data-item="%s"' % " ".join(entry["items"]) if entry["items"] else ""
                 tds = ['<td class="item">%s</td>' % esc(cells[0])]
                 for cell in cells[1:]:
@@ -147,9 +159,12 @@ def render_rows(entries):
             continue
 
         entry = entries[i]
+        if emitted is not None:
+            emitted.append(entry)
         attr = ' data-item="%s"' % " ".join(entry["items"]) if entry["items"] else ""
-        badge = '<b class="rs">REDSEC</b> ' if entry.get("redsec") else ""
-        out.append("<li%s>%s%s</li>" % (attr, badge, esc(entry["text"])))
+        # No REDSEC badge: those lines live in the REDSEC section, which labels
+        # them already.
+        out.append("<li%s>%s</li>" % (attr, esc(entry["text"])))
         i += 1
 
     # wrap consecutive <li> runs in a <ul>
@@ -169,7 +184,7 @@ def render_rows(entries):
     return wrapped
 
 
-def render_category(cat, by_version, meta, summaries):
+def render_category(cat, by_version, meta, summaries, emitted=None):
     out = []
     versions = sorted(by_version, key=version_key, reverse=True)
     for n, version in enumerate(versions):
@@ -196,7 +211,7 @@ def render_category(cat, by_version, meta, summaries):
         for label in order:
             if label:
                 out.append('<p class="grp"><b>%s</b></p>' % esc(label))
-            out.extend(render_rows(groups[label]))
+            out.extend(render_rows(groups[label], emitted))
         out.append('<div class="src">Source: <a href="%s" target="_blank" rel="noopener">'
                    'Battlefield 6 Game Update %s</a>, posted %s</div>'
                    % (url, version, posted))
@@ -236,9 +251,27 @@ def main():
     summaries = collect_summaries(by_cat)
 
     updated = index_html
+    emitted = []
     for cat in RENDERED:
-        body = render_category(cat, by_cat.get(cat, {}), meta, summaries)
+        body = render_category(cat, by_cat.get(cat, {}), meta, summaries, emitted)
         updated = inject(updated, cat, body)
+
+    # Completeness: every entry in every rendered category must reach the page,
+    # as a list item or as a table row. "summary" is excluded because those
+    # lines render as the per-patch dev-intent note instead.
+    expected = sum(len(v) for cat in RENDERED
+                   for v in by_cat.get(cat, {}).values())
+    if len(emitted) != expected:
+        print("render_patches: %d entries expected, %d reached the page"
+              % (expected, len(emitted)))
+        sys.exit(1)
+    unrendered = sorted(set(by_cat) - set(RENDERED) - {"summary"})
+    if unrendered:
+        print("render_patches: categories with no section on the page: %s"
+              % ", ".join(unrendered))
+        sys.exit(1)
+    print("render_patches: %d entries rendered across %d categories"
+          % (len(emitted), len(RENDERED)))
 
     if args.check:
         if updated != index_html:

@@ -28,7 +28,9 @@
     "New Content: Winter Offensive"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "ice-axe"
+   ]
   },
   {
    "text": "Portal updates: Ice Lock Empire State is available for use in supported Portal experiences during the event window.",
@@ -46,7 +48,9 @@
     "New Content: Winter Offensive"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "ice-axe"
+   ]
   },
   {
    "text": "Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment.",
@@ -698,7 +702,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "tarantula-alx"
+   ]
   },
   {
    "text": "Fixed an issue where gadgets that should be hidden by occlusion were still visible through geometry.",
@@ -745,7 +751,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "xfgm-6d"
+   ]
   },
   {
    "text": "Reduced Throwing Knife dispersion so that headshots are reliably achievable up to 15 metres.",

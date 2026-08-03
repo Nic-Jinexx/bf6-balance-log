@@ -665,7 +665,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Fixed M15 AV Mine proximity placement exploit.",
@@ -673,7 +675,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Fixed missing pickup prompt for thrown C-4 satchels.",

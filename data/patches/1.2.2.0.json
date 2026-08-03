@@ -17,7 +17,8 @@
    ],
    "section": "summary",
    "items": [
-    "lwcms"
+    "lwcms",
+    "m15"
    ]
   },
   {
@@ -527,7 +528,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Corrected an issue where the Gas Mask could appear available on maps without Psy Gas.",
@@ -545,7 +548,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "slm-93a"
+   ]
   },
   {
    "text": "Corrected placeholder previews for select gadget skins.",
@@ -614,7 +619,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Portable Mortar can now be deployed within HQ areas.",

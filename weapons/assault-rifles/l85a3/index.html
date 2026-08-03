@@ -91,6 +91,7 @@ h2.cat.ui{color:var(--ui)} h2.cat.ui .dot{background:var(--ui)}
 h2.cat.audio{color:var(--audio)} h2.cat.audio .dot{background:var(--audio)}
 h2.cat.portal{color:var(--portal)} h2.cat.portal .dot{background:var(--portal)}
 h2.cat.ai{color:var(--ai)} h2.cat.ai .dot{background:var(--ai)}
+h2.cat.other{color:var(--muted)} h2.cat.other .dot{background:var(--muted)}
 p.grp{margin:16px 0 6px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 p.cat-note{color:var(--muted);font-size:15px;margin:6px 0 22px;max-width:820px}
 details.patch{background:var(--panel);border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden}
@@ -174,6 +175,8 @@ ul.plain.small li b{color:var(--text);font-weight:600}
 .tag.tag-audio{color:var(--audio);border-color:var(--audio)}
 .tag.tag-portal{color:var(--portal);border-color:var(--portal)}
 .tag.tag-ai{color:var(--ai);border-color:var(--ai)}
+.tag.tag-misc{color:var(--muted);border-color:var(--border2)}
+.tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
 
 /* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
    Red now means REDSEC and nothing else: the Systemic section took the teal. */
@@ -752,39 +755,37 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </div>
 
 <h2 class="cat weapons" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">4 changes to the L85A3 have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
+<p class="cat-note">5 changes to the L85A3 have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
 <details class="patch" open>
-<summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-systemic">systemic gunplay</span></summary>
+<summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-weapons">weapons</span></summary>
 <div class="body">
 <ul class="plain">
 <li data-item="l85a3">Battle Pass and Store previews for soldiers inspecting the L85A3 now display the correct hand position.</li>
 </ul>
 <table>
-<caption>Muzzle velocity: reduced on 47 weapons (KV9 increased)</caption>
-<tr><th>Weapon</th><th>Before</th><th>After</th><th>Δ</th></tr>
-<tr data-item="l85a3"><td>L85A3</td><td class="num">814 m/s</td><td class="num">778 m/s</td><td class="num delta-down">−4.42%</td></tr>
+<tr><th></th><th>From</th><th>To</th><th>Change</th></tr>
+<tr data-item="l85a3"><td class="item">L85A3</td><td class="num">814 m/s</td><td class="num">778 m/s</td><td class="num delta-down">-4.42%</td></tr>
+<tr data-item="l85a3"><td class="item">L85A3</td><td class="num">29.4°</td><td class="num">22.8°</td><td class="num delta-down">-22.4%</td></tr>
 </table>
-<table>
-<caption>Recoil variation (spread of recoil pattern): reduced on 37 weapons</caption>
-<tr><th>Weapon</th><th>Before</th><th>After</th><th>Δ</th></tr>
-<tr data-item="l85a3"><td>L85A3</td><td class="num">29.4°</td><td class="num">22.8°</td><td class="num delta-down">−22.4%</td></tr>
-</table>
-<div class="src">Full patch entry and EA source link: <a href="/#systemic">1.3.3.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#weapons">1.3.3.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
-<summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-systemic">systemic gunplay</span></summary>
+<summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-player">player &amp; movement</span></summary>
 <div class="body">
+<ul class="plain">
+<li data-item="l85a3">Fixed an issue where stickers were not applied correctly on the War Wolf Legendary weapon package for the L85A3.</li>
+</ul>
 <table>
-<tr><th>Weapon</th><th>Change</th></tr>
-<tr data-item="b36a4 l85a3 m433 sor-556-mk2"><td class="item">B36A4, L85A3, M433, SOR-555 MK2 (SOR-555 as published; the in-game rifle is the SOR-556 MK2)</td><td>Reduced recoil randomness: more consistent and effective at longer range</td></tr>
+<tr><th></th><th>Change</th></tr>
+<tr data-item="b36a4 l85a3 m433"><td class="item">B36A4, L85A3, M433, SOR-555 MK2</td><td class="num">Reduced recoil randomness, improving consistency and effectiveness at longer ranges.</td></tr>
 </table>
-<div class="src">Full patch entry and EA source link: <a href="/#systemic">1.2.1.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#player">1.2.1.0 in the balance log</a></div>
 </div></details>
 
 <h2 class="cat weapons" id="related"><span class="dot"></span>Compatible attachments</h2>
 <p class="emptynote">Compatibility is not catalogued yet. Once attachments are added they will be listed here, and each attachment will link back to this page.</p>
 
-<p class="backlog"><a href="/#systemic">&larr; Back to the full balance log</a></p>
+<p class="backlog"><a href="/#player">&larr; Back to the full balance log</a></p>
 
 <footer>
 <p class="disclaimer" style="margin-top:0">This is unofficial fan content. It is not affiliated with, endorsed by, or sponsored by Electronic Arts, DICE, Battlefield Studios, Ripple Effect, or Criterion. Battlefield&trade;, REDSEC&trade;, and all related names, weapons, and trademarks are the property of their respective owners.</p>

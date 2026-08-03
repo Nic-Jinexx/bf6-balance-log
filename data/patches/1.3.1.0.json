@@ -601,7 +601,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "The ground vehicle boost bar is no longer emptied when interrupting boost.",
@@ -1207,7 +1209,8 @@
    ],
    "section": "vehicles",
    "items": [
-    "ltlm-ii"
+    "ltlm-ii",
+    "m18"
    ]
   },
   {
@@ -1315,6 +1318,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "m15",
     "ptkm-1r"
    ]
   },
@@ -1694,6 +1698,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "ltlm-ii",
     "mbt-law"
    ]
   },
@@ -2961,7 +2966,9 @@
     "AI:"
    ],
    "section": "ai",
-   "items": []
+   "items": [
+    "slm-93a"
+   ]
   },
   {
    "text": "Improved Bot navigation when using ziplines and hanging ropes across all experiences.",
@@ -3302,7 +3309,9 @@
     "STRIKE PACKAGES:"
    ],
    "section": "gadgets",
-   "items": [],
+   "items": [
+    "m18"
+   ],
    "redsec": true
   },
   {

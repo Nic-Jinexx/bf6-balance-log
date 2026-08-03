@@ -80,7 +80,9 @@
     "New Gadgets"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "xfgm-6d"
+   ]
   },
   {
    "text": "Protective Mask: Essential equipment for contaminated zones, protecting players from psychoactive smoke. Additional filters can be acquired and equipped to extend protection time.",
@@ -606,7 +608,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Fixed an issue where attached M4A1 SLAM AV Mine explosives on the XFGM-6D Recon Drone did not correctly affect battery life or top speed. Attached explosives now behave consistently and detonate when the XFGM-6D Recon Drone is destroyed.",
@@ -721,6 +725,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "m15",
     "m4a1"
    ]
   },
@@ -829,7 +834,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "m18"
+   ]
   },
   {
    "text": "Fixed inconsistent knife melee timing to improve reliability during close-quarters combat.",
@@ -856,7 +863,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "lmr27"
+   ]
   },
   {
    "text": "Fixed the SGX RO-M 1.75x sight to function consistently with other weapons.",
@@ -1859,7 +1868,9 @@
     "SETTINGS:"
    ],
    "section": "misc",
-   "items": []
+   "items": [
+    "mk141"
+   ]
   },
   {
    "text": "Fixed a memory leak that could occur when specific scripting events were triggered repeatedly.",
@@ -2230,7 +2241,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Fixed rare cases where the game could become unresponsive after reconnecting network cables during gameplay or while accepting invitations on Xbox Series consoles.",

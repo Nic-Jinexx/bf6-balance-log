@@ -91,6 +91,7 @@ h2.cat.ui{color:var(--ui)} h2.cat.ui .dot{background:var(--ui)}
 h2.cat.audio{color:var(--audio)} h2.cat.audio .dot{background:var(--audio)}
 h2.cat.portal{color:var(--portal)} h2.cat.portal .dot{background:var(--portal)}
 h2.cat.ai{color:var(--ai)} h2.cat.ai .dot{background:var(--ai)}
+h2.cat.other{color:var(--muted)} h2.cat.other .dot{background:var(--muted)}
 p.grp{margin:16px 0 6px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 p.cat-note{color:var(--muted);font-size:15px;margin:6px 0 22px;max-width:820px}
 details.patch{background:var(--panel);border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden}
@@ -174,6 +175,8 @@ ul.plain.small li b{color:var(--text);font-weight:600}
 .tag.tag-audio{color:var(--audio);border-color:var(--audio)}
 .tag.tag-portal{color:var(--portal);border-color:var(--portal)}
 .tag.tag-ai{color:var(--ai);border-color:var(--ai)}
+.tag.tag-misc{color:var(--muted);border-color:var(--border2)}
+.tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
 
 /* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
    Red now means REDSEC and nothing else: the Systemic section took the teal. */
@@ -739,37 +742,94 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </div>
 
 <h2 class="cat gadgets" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">5 changes to the MBT-LAW have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
+<p class="cat-note">47 changes to the MBT-LAW have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
 <details class="patch" open>
 <summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
 <div class="body">
-<table>
-<caption>Anti-vehicle damage, as republished this patch</caption>
-<tr><th>Gadget</th><th>vs. tanks</th><th>vs. helicopters</th><th>vs. jets</th></tr>
-<tr data-item="mbt-law"><td class="item">MBT-LAW</td><td class="num">240</td><td class="num">520</td><td class="num">800</td></tr>
-</table>
-<table>
-<caption>Launcher handling</caption>
-<tr><th>Launcher</th><th>Property</th><th>Before</th><th>After</th></tr>
-<tr data-item="mbt-law"><td class="item">MBT-LAW</td><td>Initial missile speed</td><td class="num">30 m/s</td><td class="num delta-up">100 m/s</td></tr>
-<tr data-item="mbt-law"><td class="item">MBT-LAW</td><td>Max missile speed</td><td class="num">75 m/s</td><td class="num delta-up">300 m/s</td></tr>
-<tr data-item="mbt-law"><td class="item">MBT-LAW</td><td>Missile acceleration</td><td class="num">50 m/s</td><td class="num delta-up">100 m/s</td></tr>
-</table>
+<ul class="plain">
+<li data-item="mbt-law">Damage against vehicles has been updated to 240 against tanks, 520 against helicopters, and 800 against jets.</li>
+<li data-item="mbt-law">Initial missile speed has been increased from 30 to 100 m/s.</li>
+<li data-item="mbt-law">Maximum missile speed has been increased from 75 to 300 m/s.</li>
+<li data-item="mbt-law">Missile acceleration has been increased from 50 to 100 m/s.</li>
+<li data-item="mbt-law">Updated the damage so it now deals 465 damage against tanks, 1007.5 against helicopters, and 1000 against jets.</li>
+<li data-item="mbt-law">Reduced the locking time from 1.8 to 1.4 seconds.</li>
+<li data-item="mbt-law">Increased maximum missile speed from 60 to 70 m/s.</li>
+<li data-item="mbt-law">Increased starting ammunition from 2 to 3.</li>
+<li data-item="mbt-law">Effect duration has been reduced from 20 to 9 seconds for both soldier and vehicle designators.</li>
+<li data-item="ltlm-ii mbt-law">Laser Designator no longer reduces lock-on time for anti-air missiles.</li>
+<li data-item="ltlm-ii mbt-law">Gadget now provides a consistent 20% increase to lock-on range across all locking weapons. This also applies to vehicle-mounted laser designators.</li>
+<li data-item="mbt-law">Mine Layer damage against tanks has been updated to 300.</li>
+<li data-item="mbt-law">Mine Layer no longer triggers on Light Transport or Personal Transport vehicles.</li>
+<li data-item="mbt-law">Mine Layer now glints at close range to help distinguish it from level props and debris.</li>
+<li data-item="mbt-law">Mine Layer stacking prevention radius has been increased from 1.5m to 5m.</li>
+<li data-item="csb-iv mbt-law">The EOD Bot now self-destructs when its out-of-bounds timer expires, when control ends while out of bounds, or when pushed out of bounds.</li>
+<li data-item="mbt-law">Tweaked targeting behaviour so it can no longer target enemy gadgets through walls at long range, though limited wall penetration is still possible at closer distances.</li>
+<li data-item="mbt-law">Updated interception behaviour so it no longer detects or detonates grenades and M320A1 projectiles, but will still target launcher projectiles.</li>
+<li data-item="mbt-law">Updated maximum range back to its original value.</li>
+</ul>
 <div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.3.1.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
-<summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-gadgets">gadgets</span></summary>
+<summary><span class="ver">1.2.3.0</span><span class="date">Apr 10, 2026</span><span class="tag tag-redsec">REDSEC</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="mbt-law"><b>MBT-LAW:</b> made the default Engineer launcher; switched to auto-guided missiles; can no longer be hip-fired.</li>
+<li data-item="mbt-law">Corrected MBT-LAW placement inside the Weapons Cache container.</li>
 </ul>
-<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.0.1.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#redsec">1.2.3.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="mbt-law">Restored the MBT-LAW default skin in the Customise screen.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.2.2.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="mbt-law">Fixed an issue where the RPG-7 and the MBT-LAW launchers would be inaccurate if fired right after the zoom transition is completed.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.2.1.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-vehicles">vehicles</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="mbt-law">Fixed an issue where a vehicle could keep showing a lock-on warning for several seconds after being hit by an MBT-LAW.</li>
+<li data-item="mbt-law">MBT-LAW is now the default rocket launcher for the Engineer class.</li>
+<li data-item="mbt-law">Missiles now follow a more accurate trajectory.</li>
+<li data-item="mbt-law">Now uses auto-guided missiles.</li>
+<li data-item="mbt-law">Can no longer be hip-fired.</li>
+<li data-item="mbt-law">Sight and reticle updated for a clearer aiming experience.</li>
+<li data-item="mbt-law">Blast damage now correctly applies to vehicles.</li>
+<li data-item="mbt-law">Missile trajectory updated to better reflect real-world behavior.</li>
+<li data-item="mbt-law">Two zoom levels introduced.</li>
+<li data-item="mbt-law">Can now lock on to stationary weapons and vehicles (AA, TOW, heavy MG).</li>
+<li data-item="mbt-law">Lock-on distance changed and now cannot lock onto targets closer than 40m.</li>
+<li data-item="mbt-law">Fixed clipping and reticle issues in the scope.</li>
+<li data-item="mbt-law">Blast damage now correctly applies to vehicles.</li>
+<li data-item="mbt-law">Hipfire crosshair no longer appears when aiming down sights.</li>
+<li data-item="mbt-law">LEDs now correctly show lock progress, thermal setting, and zoom level.</li>
+<li data-item="mbt-law">Field of view now transitions more smoothly when zooming.</li>
+<li data-item="mbt-law">Gadget can no longer lock on to air vehicles below radar level.</li>
+<li data-item="mbt-law">Fixed an issue where missiles sometimes did not deal damage.</li>
+<li data-item="mbt-law">The projectile now detonates on collision.</li>
+<li data-item="mbt-law">The projectile now credits the correct damage owner in kill feed and cards.</li>
+<li data-item="mbt-law">The projectiles deal less structural damage (more hits required to destroy facades).</li>
+<li data-item="mbt-law">Gadget now cannot be aimed down sights while reloading.</li>
+<li data-item="mbt-law">Blast and shockwave radius are now aligned with destruction values.</li>
+<li data-item="mbt-law">Smoke from the Airburst Incendiary now blocks spotting and lock-ons for soldiers and vehicles.</li>
+<li data-item="mbt-law">Sight size no longer scales incorrectly with field of view.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#vehicles">1.0.1.0 in the balance log</a></div>
 </div></details>
 
 <h2 class="cat gadgets" id="related"><span class="dot"></span>Related items</h2>
 <p class="emptynote">Compatibility is not catalogued yet. Once attachments are added they will be listed here, and each attachment will link back to this page.</p>
 
-<p class="backlog"><a href="/#gadgets">&larr; Back to the full balance log</a></p>
+<p class="backlog"><a href="/#vehicles">&larr; Back to the full balance log</a></p>
 
 <footer>
 <p class="disclaimer" style="margin-top:0">This is unofficial fan content. It is not affiliated with, endorsed by, or sponsored by Electronic Arts, DICE, Battlefield Studios, Ripple Effect, or Criterion. Battlefield&trade;, REDSEC&trade;, and all related names, weapons, and trademarks are the property of their respective owners.</p>

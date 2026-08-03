@@ -7,7 +7,9 @@
   "order": 4,
   "aliases": [
     "anti-vehicle grenade",
-    "scg-24"
+    "scg-24",
+    "at grenade",
+    "anti-tank grenade"
   ],
   "blurb": "SCG-24",
   "class": "Engineer",

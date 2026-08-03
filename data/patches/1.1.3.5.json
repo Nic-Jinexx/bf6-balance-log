@@ -104,7 +104,12 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "combat-knife",
+    "hunting-knife",
+    "ice-axe",
+    "serrated-blade"
+   ]
   },
   {
    "text": "Improved buffering behaviour for knife and sledgehammer attacks.",
@@ -114,6 +119,10 @@
    ],
    "section": "weapons",
    "items": [
+    "combat-knife",
+    "hunting-knife",
+    "ice-axe",
+    "serrated-blade",
     "sledgehammer"
    ]
   },
@@ -170,6 +179,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "powerpulse",
     "xfgm-6d"
    ]
   },

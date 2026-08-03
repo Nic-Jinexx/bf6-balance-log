@@ -40,7 +40,9 @@
     "Major Updates for 1.2.3.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "UI, HUD and Front-End Improvements : Menus, challenges, loadouts, End of Round screens, localisation, Store presentation, and Battle Pass readability have all been updated to improve clarity and consistency across the experience.",
@@ -1146,7 +1148,9 @@
     "PROGRESSION:"
    ],
    "section": "progression",
-   "items": []
+   "items": [
+    "an-m14"
+   ]
   },
   {
    "text": "Automatic AA and stationary weapons now display their pickup provider icons more consistently.",

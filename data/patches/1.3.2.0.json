@@ -241,7 +241,9 @@
     "PLAYER"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "m18"
+   ]
   },
   {
    "text": "Air vehicle radar and minimap range have been expanded when radar is available.",
@@ -369,6 +371,7 @@
    "section": "gadgets",
    "items": [
     "csb-iv",
+    "m15",
     "m4a1-slam"
    ]
   },
@@ -390,7 +393,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Enemy Engineer and Recon gadgets defused by Engineer or Recon players now award XP.",
@@ -502,7 +507,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "trcrv2"
+   ]
   },
   {
    "text": "Vehicle Supply Stations now also resupply missiles for the Mobile Anti-Air.",
@@ -935,7 +942,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "field-dummy-25"
+   ]
   },
   {
    "text": "Danger pings are no longer placed unintentionally when attempting to spot multiple enemies in quick succession.",

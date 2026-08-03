@@ -472,7 +472,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Fixed an issue where the Supply Pouch would sometimes not resupply correctly.",
@@ -498,7 +500,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "scg-24"
+   ]
   },
   {
    "text": "Buildings now take more hits to be destroyed by a Sledgehammer.",

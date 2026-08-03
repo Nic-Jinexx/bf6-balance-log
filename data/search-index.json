@@ -28,13 +28,13 @@
    "name": "Anti-Vehicle Grenade",
    "url": "/gadgets/throwables/scg-24/",
    "cat": "THROWABLES",
-   "alt": "anti-vehicle grenade scg-24"
+   "alt": "anti-vehicle grenade scg-24 at grenade anti-tank grenade"
   },
   {
    "name": "Anti-Vehicle Mine",
    "url": "/gadgets/deployables/m15/",
    "cat": "DEPLOYABLES",
-   "alt": "anti-vehicle mine"
+   "alt": "anti-vehicle mine anti-tank mine at mine m15 m15 av mine"
   },
   {
    "name": "Assault Ladder",
@@ -226,7 +226,7 @@
    "name": "Ice Axe",
    "url": "/weapons/melee/ice-axe/",
    "cat": "MELEE",
-   "alt": ""
+   "alt": "ice climbing axe"
   },
   {
    "name": "Incendiary Grenade",
@@ -622,7 +622,7 @@
    "name": "SLM-93A Spire",
    "url": "/gadgets/launchers/slm-93a/",
    "cat": "LAUNCHERS",
-   "alt": "air-defense launcher"
+   "alt": "air-defense launcher slm-93a slm93a"
   },
   {
    "name": "Smoke Grenade",

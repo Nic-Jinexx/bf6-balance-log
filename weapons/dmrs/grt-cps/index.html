@@ -91,6 +91,7 @@ h2.cat.ui{color:var(--ui)} h2.cat.ui .dot{background:var(--ui)}
 h2.cat.audio{color:var(--audio)} h2.cat.audio .dot{background:var(--audio)}
 h2.cat.portal{color:var(--portal)} h2.cat.portal .dot{background:var(--portal)}
 h2.cat.ai{color:var(--ai)} h2.cat.ai .dot{background:var(--ai)}
+h2.cat.other{color:var(--muted)} h2.cat.other .dot{background:var(--muted)}
 p.grp{margin:16px 0 6px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 p.cat-note{color:var(--muted);font-size:15px;margin:6px 0 22px;max-width:820px}
 details.patch{background:var(--panel);border:1px solid var(--border);border-radius:6px;margin-bottom:12px;overflow:hidden}
@@ -174,6 +175,8 @@ ul.plain.small li b{color:var(--text);font-weight:600}
 .tag.tag-audio{color:var(--audio);border-color:var(--audio)}
 .tag.tag-portal{color:var(--portal);border-color:var(--portal)}
 .tag.tag-ai{color:var(--ai);border-color:var(--ai)}
+.tag.tag-misc{color:var(--muted);border-color:var(--border2)}
+.tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
 
 /* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
    Red now means REDSEC and nothing else: the Systemic section took the teal. */
@@ -752,26 +755,32 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </div>
 
 <h2 class="cat weapons" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">5 changes to the GRT-CPS have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
+<p class="cat-note">6 changes to the GRT-CPS have been logged, newest first. Each entry is the exact line from EA's patch notes.</p>
 <details class="patch" open>
-<summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-systemic">systemic gunplay</span></summary>
+<summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-weapons">weapons</span></summary>
 <div class="body">
 <table>
-<caption>Muzzle velocity: reduced on 47 weapons (KV9 increased)</caption>
-<tr><th>Weapon</th><th>Before</th><th>After</th><th>Δ</th></tr>
-<tr data-item="grt-cps"><td>GRT-CPS</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">−5.00%</td></tr>
+<tr><th></th><th>From</th><th>To</th><th>Change</th></tr>
+<tr data-item="grt-cps"><td class="item">GRT-CPS</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">-5.00%</td></tr>
 </table>
-<div class="src">Full patch entry and EA source link: <a href="/#systemic">1.3.3.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#weapons">1.3.3.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
-<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-weapons">weapons</span></summary>
+<summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-weapons">weapons</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="grt-cps m121-a2 cz3a1"><b>DVO LPVO</b> cost increased 10 &rarr; <span class="delta-up">25</span> points on GRTCPS, M121 A2 and CZ3A1.</li>
+<li data-item="grt-cps m121-a2 m2010-esr mini-scout sor-556-mk2 sv-98 vcr-2">Weapon attachment poses have been improved for the GRT-CPS, VCR-2, SV-98, Mini Scout, M121 A2, M2010 ESR, and SOR-556 Mk2.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#weapons">1.3.2.0 in the balance log</a></div>
+</div></details>
+<details class="patch" open>
+<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-progression">balance</span></summary>
+<div class="body">
+<ul class="plain">
 <li data-item="cz3a1 db-12 grt-cps m121-a2 mini-scout sor-300sc vcr-2 vz-61">Updated the ordering of Mastery Weapon Packages for the GRTCPS, M121 A2, VCR-2, Mini Scout, SOR-300SC, DB12, vz. 61, CZ3A1, and M257.</li>
 <li data-item="cz3a1 grt-cps m121-a2">Updated the DVO LPVO cost on the GRTCPS, M121 A2, and CZ3A1 from 10 to 25 points.</li>
 </ul>
-<div class="src">Full patch entry and EA source link: <a href="/#weapons">1.3.1.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#ui">1.3.1.0 in the balance log</a></div>
 </div></details>
 <details class="patch" open>
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-progression">balance</span></summary>
@@ -781,11 +790,19 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#portal">1.2.2.0 in the balance log</a></div>
 </div></details>
+<details class="patch" open>
+<summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-weapons">weapons</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="grt-cps">GRT-CPS: A semi-automatic designated marksman rifle designed for mid- to long-range engagements, featuring a high-capacity magazine for sustained fire.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#weapons">1.2.1.0 in the balance log</a></div>
+</div></details>
 
 <h2 class="cat weapons" id="related"><span class="dot"></span>Compatible attachments</h2>
 <p class="emptynote">Compatibility is not catalogued yet. Once attachments are added they will be listed here, and each attachment will link back to this page.</p>
 
-<p class="backlog"><a href="/#systemic">&larr; Back to the full balance log</a></p>
+<p class="backlog"><a href="/#weapons">&larr; Back to the full balance log</a></p>
 
 <footer>
 <p class="disclaimer" style="margin-top:0">This is unofficial fan content. It is not affiliated with, endorsed by, or sponsored by Electronic Arts, DICE, Battlefield Studios, Ripple Effect, or Criterion. Battlefield&trade;, REDSEC&trade;, and all related names, weapons, and trademarks are the property of their respective owners.</p>

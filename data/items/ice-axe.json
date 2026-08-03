@@ -5,7 +5,9 @@
   "branch": "weapons",
   "subcategory": "melee",
   "order": 4,
-  "aliases": [],
+  "aliases": [
+    "ice climbing axe"
+  ],
   "blurb": "Nomad CX-12",
   "variant": "Nomad CX-12",
   "traits": [],

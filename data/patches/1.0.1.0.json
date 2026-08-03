@@ -378,7 +378,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m18"
+   ]
   },
   {
    "text": "Fixed visual issues when firing certain Rocket Launchers and scopes.",
@@ -450,7 +452,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Defibrillator damage reduced on both quick zaps and charged zaps.",
@@ -504,7 +508,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Updated spawn blocking interactions between ladders and wiring materials.",
@@ -955,6 +961,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "qlink-6",
     "ss26"
    ]
   },
