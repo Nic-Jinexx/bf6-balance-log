@@ -53,11 +53,14 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
+      "value": "Season 1 Catch-Up Hardware 1"
     },
     {
       "label": "Requirement",
-      "value": "TBD"
+      "value": [
+        "Deal damage from a distance of 25 meters or less (1,500)",
+        "Kills and assists with Grenades (10)"
+      ]
     }
   ],
   "related": [
@@ -78,5 +81,6 @@
       "items": []
     }
   ],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 1 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses."
 }

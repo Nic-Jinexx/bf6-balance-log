@@ -53,11 +53,14 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
+      "value": "Season 3 Catch-Up Hardware 5"
     },
     {
       "label": "Requirement",
-      "value": "TBD"
+      "value": [
+        "Get Kills and Assists with Sniper Rifles or DMRs. Headshot Kills count double (10)",
+        "Complete matches. Matches in Conquest or Gauntlet count double (6)"
+      ]
     }
   ],
   "related": [
@@ -78,5 +81,6 @@
       "items": []
     }
   ],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 3 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses. Gated behind node 4: the screen states \"Unlocked through Challenge SEASON 3 CATCH-UP HARDWARE 4\". Still locked on the capturing account, so the tasks are shown but unstarted; the requirement text is unaffected."
 }

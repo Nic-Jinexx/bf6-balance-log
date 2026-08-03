@@ -20,13 +20,18 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
+      "value": "Season 3 Catch-Up Hardware 2"
     },
     {
       "label": "Requirement",
-      "value": "TBD"
+      "value": [
+        "Intercept Grenades or Rockets with the GPDIS or MP-APS Support Gadget (10)",
+        "OR",
+        "Destroy enemy Gadgets (10)"
+      ]
     }
   ],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 3 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses. The only challenge on these tracks with alternative tasks rather than both: the screen prints a literal OR between them, reproduced here."
 }

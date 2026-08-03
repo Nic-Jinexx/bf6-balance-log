@@ -53,11 +53,14 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
+      "value": "Nightfall Hardware 2"
     },
     {
       "label": "Requirement",
-      "value": "TBD"
+      "value": [
+        "Deal damage with Secondary Weapons (500)",
+        "Earn score in any mode (5,000)"
+      ]
     }
   ],
   "related": [
@@ -78,5 +81,6 @@
       "items": []
     }
   ],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 2 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses."
 }

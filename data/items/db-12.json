@@ -53,11 +53,14 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
+      "value": "Season 1 Hardware 5"
     },
     {
       "label": "Requirement",
-      "value": "TBD"
+      "value": [
+        "Get hipfire kills with Shotguns (35)",
+        "Get Shotgun kills in a life (4)"
+      ]
     }
   ],
   "related": [
@@ -78,5 +81,6 @@
       "items": []
     }
   ],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 1 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses."
 }

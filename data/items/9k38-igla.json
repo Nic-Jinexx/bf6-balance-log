@@ -23,17 +23,17 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "Season 2 Hardware Challenge"
+      "value": "Season 2 Catch-Up Hardware 1"
     },
     {
       "label": "Requirement",
       "value": [
-        "Get kills and assists with SMGs (30)",
-        "Earn score with vehicles (2,500)"
+        "Kills and assists with SMGs (30)",
+        "Earn score in vehicles (2,500)"
       ]
     }
   ],
   "related": [],
   "retired_paths": [],
-  "_unlock_note": "Season 2 catch-up hardware challenge, reported 2026-08-02. The second task was given as \"Earn Scorn Vehicles 2500\"; the count is certain, the wording is a best rendering and should be checked against the in-game challenge text."
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 2 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses. Supersedes the second-hand wording recorded earlier that day; the in-game text is \"Earn score in vehicles\", not \"with vehicles\"."
 }

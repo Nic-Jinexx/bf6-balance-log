@@ -55,11 +55,14 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
+      "value": "Season 2 Catch-Up Hardware 5"
     },
     {
       "label": "Requirement",
-      "value": "TBD"
+      "value": [
+        "Kills with DMRs. Kills from a distance of 75 meters or more count double (30)",
+        "Deal damage with DMRs (2,000)"
+      ]
     }
   ],
   "related": [
@@ -80,5 +83,6 @@
       "items": []
     }
   ],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 2 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses."
 }

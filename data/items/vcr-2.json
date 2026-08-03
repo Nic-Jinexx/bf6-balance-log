@@ -54,7 +54,14 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "Season 2 Hardware Challenge"
+      "value": "Season 2 Catch-Up Hardware 2"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Deal damage to vehicles with Shoulder-Launched Missiles (3,000)",
+        "Destroy or support in destroying aircraft with the 9K38 IGLA Launcher (5)"
+      ]
     }
   ],
   "related": [
@@ -76,5 +83,5 @@
     }
   ],
   "retired_paths": [],
-  "_unlock_note": "Season 2 catch-up hardware challenge, reported 2026-08-02. No Requirement row: the challenge text was not supplied, matching how the SOR-300SC's Season 1 challenge is recorded."
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 2 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses."
 }

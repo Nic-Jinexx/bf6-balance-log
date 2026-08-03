@@ -55,11 +55,14 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
+      "value": "Season 3 Catch-Up Hardware 4"
     },
     {
       "label": "Requirement",
-      "value": "TBD"
+      "value": [
+        "Get Kills and Assists with Machine Guns. Multi-Kills grant bonus progress (30)",
+        "Complete matches. Matches in Domination or Battle Royale count double (6)"
+      ]
     }
   ],
   "related": [
@@ -80,5 +83,6 @@
       "items": []
     }
   ],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 3 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses."
 }

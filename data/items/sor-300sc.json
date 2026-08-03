@@ -55,7 +55,14 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "Season 1 Hardware Challenge"
+      "value": "Season 1 Catch-Up Hardware 3"
+    },
+    {
+      "label": "Requirement",
+      "value": [
+        "Kill enemies with Sniper Rifles (20)",
+        "Get headshot hits (30)"
+      ]
     }
   ],
   "related": [
@@ -76,5 +83,6 @@
       "items": []
     }
   ],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 1 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses. Was recorded as \"Season 1 Hardware Challenge\" with no Requirement row, on the grounds that seasonal hardware challenges carry no challenge text. They do: it is on the Challenges screen, which had not been captured."
 }

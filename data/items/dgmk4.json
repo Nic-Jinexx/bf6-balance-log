@@ -20,17 +20,17 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "Season 2 Hardware Challenge"
+      "value": "Season 2 Catch-Up Hardware 3"
     },
     {
       "label": "Requirement",
       "value": [
-        "Get kills or assists with Assault Rifles (30)",
-        "Inflict damage while ADS (2,500)"
+        "Kills and assists with Assault Rifles (30)",
+        "Deal damage while ADS (2,500)"
       ]
     }
   ],
   "related": [],
   "retired_paths": [],
-  "_unlock_note": "Season 2 catch-up hardware challenge, reported 2026-08-02. Gated behind the 9K38 Igla and VCR-2 challenges, which must be completed first. The second task was given as \"2500 damage with ADS while ADS\"; the count is certain, and whether it is restricted to Assault Rifles is not established. Unresolved: releases.json records the DGMK4 as a launch gadget (1.0.1.0), while the Igla and VCR-2 it is gated behind are both Season 2 (1.2.1.0). Either it shipped at launch and was later folded into the Season 2 catch-up chain, or one of the two records is wrong."
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 2 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses. The second task is not restricted to Assault Rifles, which had been left open earlier. Position 3 in the chain confirms it sits behind the 9K38 Igla (1) and VCR-2 (2). Still unresolved: releases.json records the DGMK4 as a launch gadget (1.0.1.0) while this is a Season 2 track."
 }
