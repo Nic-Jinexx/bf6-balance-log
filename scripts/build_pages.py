@@ -351,9 +351,12 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .factbox td:first-child{color:var(--muted);padding-left:16px}
 .factbox td:last-child{font-family:var(--mono);text-align:right;color:var(--text);padding-right:16px}
 /* a challenge with several tasks: left aligned and wrapping, since right-aligned
-   mono prose is unreadable. Must follow the :last-child rule to win on order. */
+   mono prose is unreadable. Must follow the :last-child rule to win on order.
+   padding-left is load-bearing: the label column shrinks to fit its text, so
+   without it a wrapping task butts straight against the word "Requirement". */
 .factbox td.stack{text-align:left;font-family:var(--sans);white-space:normal;
-  padding-top:9px;padding-bottom:9px}
+  padding-top:9px;padding-bottom:9px;padding-left:18px}
+.factbox tr.stackrow td:first-child{vertical-align:top;padding-top:11px}
 .factbox td.stack .req{display:block;font-size:14px;line-height:1.4}
 .factbox td.stack .req + .req{margin-top:5px}
 .emptynote{color:var(--dim);font-style:italic;font-size:14.5px;margin:12px 0 0}
@@ -361,8 +364,6 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .relgroup h4{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;
   color:var(--dim);margin:0 0 6px;font-weight:600}
 .relgroup a{color:var(--text)}
-.usagebox{border:1px dashed var(--border2);border-radius:6px;background:var(--panel);padding:30px 16px;
-  text-align:center;color:var(--dim);font-family:var(--mono);font-size:13.5px;line-height:1.7}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -532,9 +533,6 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <h2 class="cat {{COLOR}}" id="related"><span class="dot"></span>{{RELTITLE}}</h2>
 {{RELATED}}
 
-<h2 class="cat {{COLOR}}" id="usage"><span class="dot"></span>Usage</h2>
-<div class="usagebox">Usage data is not published for Battlefield 6 yet.<br>This panel is reserved for it.</div>
-
 <p class="backlog"><a href="/#{{SECTIONANCHOR}}">&larr; Back to the full balance log</a></p>
 
 <footer>
@@ -641,9 +639,13 @@ def render_facts(item, color, signature=None, added_in=None, klass=None):
     if avail:
         out.append("<h3>Availability</h3><table>")
         for row in avail:
-            stacked = ' class="stack"' if isinstance(row.get("value"), (list, tuple)) else ""
-            out.append("<tr><td>%s</td><td%s>%s</td></tr>"
-                       % (html.escape(row.get("label", "")), stacked,
+            is_stack = isinstance(row.get("value"), (list, tuple))
+            # The row carries the marker too, so the label can be top-aligned
+            # against a multi-line cell without needing :has().
+            out.append("<tr%s><td>%s</td><td%s>%s</td></tr>"
+                       % (' class="stackrow"' if is_stack else "",
+                          html.escape(row.get("label", "")),
+                          ' class="stack"' if is_stack else "",
                           value_cell(row.get("value"))))
         out.append("</table>")
     if not out:
