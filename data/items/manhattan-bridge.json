@@ -1,0 +1,19 @@
+{
+  "_comment": "Description transcribed verbatim from EA's Battlefield 6 maps page (https://www.ea.com/games/battlefield/battlefield-6/features/maps), read from the page's own __NEXT_DATA__ payload on 2026-08-02. Attributed to that page rather than to the game, because it was not read off an in-game screen. Maps carry no stat block or ratings.",
+  "slug": "manhattan-bridge",
+  "name": "Manhattan Bridge",
+  "branch": "maps",
+  "order": 4,
+  "aliases": [
+    "manhattan bridge"
+  ],
+  "description": {
+    "text": "Engage in close-quarters gunplay on the streets, take to the skies in an attack helicopter, or change the flow of combat with large scale destruction.",
+    "attribution": "EA's Battlefield 6 maps page"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": []
+}

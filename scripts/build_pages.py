@@ -34,6 +34,20 @@ SITE = "https://bf6balancelog.com"
 TREE_START = "<!-- TREE:START -->"
 TREE_END = "<!-- TREE:END -->"
 
+# Where "back to the full balance log" points when an item has no tagged entries
+# to borrow a section from. Several branches share a log section: the log's
+# "Individual Weapons & Attachments" covers both, and "Maps & Mode Balance"
+# covers both maps and modes.
+BRANCH_ANCHOR = {
+    "weapons": "weapons",
+    "attachments": "weapons",
+    "gadgets": "gadgets",
+    "vehicles": "vehicles",
+    "maps": "maps",
+    "modes": "maps",
+    "classes": "progression",
+}
+
 # section id in index.html -> (readable label, colour class used by h2.cat/.tag)
 SECTIONS = {
     "systemic": ("systemic gunplay", "systemic"),
@@ -816,7 +830,8 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
         "HISTORY": render_history(entries, name),
         "RELTITLE": "Compatible attachments" if item["branch"] == "weapons" else "Related items",
         "RELATED": render_related(item, by_slug),
-        "SECTIONANCHOR": entries[0]["section"] if entries and entries[0].get("section") else "weapons",
+        "SECTIONANCHOR": (entries[0]["section"] if entries and entries[0].get("section")
+                          else BRANCH_ANCHOR.get(item["branch"], "weapons")),
         "JS": PAGE_JS,
     }
     page = PAGE_TEMPLATE

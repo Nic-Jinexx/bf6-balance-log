@@ -8,6 +8,7 @@
       "name": "Launch",
       "live": "Oct 10, 2025",
       "_note": "Not an exhaustive launch roster. Weapons are listed here as their pages get built, so that every Added in value comes from this one file.",
+      "_maps_note": "The nine launch maps are not stated by any patch entry, because the log records balance changes and no update added them. Basis for recording them here: all nine are on EA's Battlefield 6 maps page; none appears in any later release entry in this file; the 1.0.1.0 notes already discuss fixes to Siege of Cairo, Iberian Offensive and Operation Firestorm by name; EA's own copy calls Mirak Valley 'the largest map at launch'; and the 1.1.3.0 Breakthrough rebalance retunes seven of them. Recorded 2026-08-02.",
       "added": [
         {"name": "M4A1", "slug": "m4a1", "kind": "Carbine"},
         {"name": "M277", "slug": "m277", "kind": "Carbine"},
@@ -95,7 +96,16 @@
         {"name": "M18", "slug": "m18", "kind": "Throwable"},
         {"name": "AN/M14", "slug": "an-m14", "kind": "Throwable"},
         {"name": "MTN-55", "slug": "mtn-55", "kind": "Throwable"},
-        {"name": "Steel Wing", "slug": "steel-wing", "kind": "Throwable"}
+        {"name": "Steel Wing", "slug": "steel-wing", "kind": "Throwable"},
+        {"name": "Siege of Cairo", "slug": "siege-of-cairo", "kind": "Map"},
+        {"name": "Iberian Offensive", "slug": "iberian-offensive", "kind": "Map"},
+        {"name": "Liberation Peak", "slug": "liberation-peak", "kind": "Map"},
+        {"name": "Empire State", "slug": "empire-state", "kind": "Map"},
+        {"name": "Operation Firestorm", "slug": "operation-firestorm", "kind": "Map"},
+        {"name": "Saints Quarter", "slug": "saints-quarter", "kind": "Map"},
+        {"name": "New Sobek City", "slug": "new-sobek-city", "kind": "Map"},
+        {"name": "Mirak Valley", "slug": "mirak-valley", "kind": "Map"},
+        {"name": "Manhattan Bridge", "slug": "manhattan-bridge", "kind": "Map"}
       ]
     },
     {
@@ -104,11 +114,11 @@
       "season": 1,
       "live": "Oct 28, 2025",
       "added": [
-        {"name": "Fort Lyndon", "kind": "Map", "_note": "REDSEC"},
+        {"name": "Fort Lyndon", "slug": "fort-lyndon", "kind": "Map", "_note": "REDSEC"},
         {"name": "Battle Royale", "kind": "Mode", "_note": "REDSEC"},
         {"name": "Gauntlet", "kind": "Mode", "_note": "REDSEC"},
         {"name": "Portal Updates", "kind": "Feature", "_note": "REDSEC"},
-        {"name": "Blackwell Fields", "kind": "Map"},
+        {"name": "Blackwell Fields", "slug": "blackwell-fields", "kind": "Map"},
         {"name": "Strikepoint", "kind": "Mode"},
         {"name": "Traverser Mark 2", "kind": "Vehicle"},
         {"name": "SOR-300SC", "slug": "sor-300sc", "kind": "Carbine"},
@@ -126,7 +136,7 @@
       "added": [
         {"name": "Rodeo", "kind": "Gauntlet Mission", "_note": "REDSEC"},
         {"name": "Portal Sandbox", "kind": "Feature", "_note": "REDSEC"},
-        {"name": "Eastwood", "kind": "Map"},
+        {"name": "Eastwood", "slug": "eastwood", "kind": "Map"},
         {"name": "Sabotage", "kind": "Mode", "_note": "limited-time"},
         {"name": "Golf Cart", "kind": "Vehicle"},
         {"name": "Battle Pickups", "kind": "Feature"},
@@ -155,7 +165,7 @@
       "live": "Feb 17, 2026",
       "_name_conflict": "The Patch Index in index.html headlines 1.2.1.0 as 'Season 2: Nightfall launch'. The roadmap shows Nightfall is the SECOND Season 2 update (Mar 17); the Feb 17 update is Extreme Measures. The log's headline looks wrong.",
       "added": [
-        {"name": "Contaminated", "kind": "Map"},
+        {"name": "Contaminated", "slug": "contaminated", "kind": "Map"},
         {"name": "VL-7 Strike", "kind": "Mode", "_note": "limited time"},
         {"name": "Gauntlet Altered State", "kind": "Mode", "_note": "REDSEC, limited-time"},
         {"name": "BR - Synthesis", "kind": "Mode", "_note": "REDSEC, limited-time"},
@@ -174,7 +184,7 @@
       "season": 2,
       "live": "Mar 17, 2026",
       "added": [
-        {"name": "Hagental Base", "kind": "Map"},
+        {"name": "Hagental Base", "slug": "hagental-base", "kind": "Map"},
         {"name": "Nightfall", "kind": "Mode", "_note": "limited time"},
         {"name": "Gauntlet Nightfall", "kind": "Mode", "_note": "REDSEC, limited time"},
         {"name": "Defense Testing Complex 3 - Fort Lyndon", "kind": "POI", "_note": "REDSEC. Corroborated: index.html records this addition inside patch 1.2.2.0."},
@@ -203,7 +213,7 @@
       "live": "May 12, 2026",
       "_note": "Was missing from the log entirely. Confirmed 2026-08-01 against EA's own page: Game Update 1.3.1.0, posted May 8 2026, live May 12 2026. Added to index.html and known_versions.json.",
       "added": [
-        {"name": "Railway to Golmud", "kind": "Map"},
+        {"name": "Railway to Golmud", "slug": "railway-to-golmud", "kind": "Map"},
         {"name": "Ranked Battle Royale", "kind": "Mode", "_note": "REDSEC, BF Labs"},
         {"name": "M16A4", "slug": "m16a4", "kind": "Assault Rifle"},
         {"name": "RPK-74M", "slug": "rpk-74m", "kind": "LMG", "_note": "distinct from the RPKM. The 2026-08-01 in-game capture shows both in the LMG roster with different stats (RPKM 35/553/40, RPK-74M 20/685/45); the earlier guess that they were one weapon was wrong."},
@@ -219,7 +229,7 @@
       "season": 3,
       "live": "Jun 9, 2026",
       "added": [
-        {"name": "Cairo Bazaar", "kind": "Map"},
+        {"name": "Cairo Bazaar", "slug": "cairo-bazaar", "kind": "Map"},
         {"name": "Obliteration", "kind": "Mode"},
         {"name": "Explosive Charge", "kind": "Event", "_note": "limited-time"},
         {"name": "PP-19", "slug": "pp-19", "kind": "SMG"},
@@ -248,7 +258,7 @@
       "season": 4,
       "live": "Jul 21, 2026",
       "added": [
-        {"name": "Tsuru Reef", "kind": "Map"},
+        {"name": "Tsuru Reef", "slug": "tsuru-reef", "kind": "Map"},
         {"name": "7.7M NSW RHIB", "kind": "Boat"},
         {"name": "RCB-90", "kind": "Boat"},
         {"name": "Ranked Updates", "kind": "Feature", "_note": "REDSEC, new season"},
@@ -265,7 +275,7 @@
       "season": 4,
       "planned": "Aug 18, 2026",
       "added": [
-        {"name": "Wake Island", "kind": "Map"},
+        {"name": "Wake Island", "slug": "wake-island", "kind": "Map"},
         {"name": "Top Gun: Carrier Strike", "kind": "Mode"},
         {"name": "Top Gun: Fighter Sweep", "kind": "Mode", "_note": "REDSEC"},
         {"name": "Aircraft Carrier", "kind": "POI", "_note": "REDSEC"},

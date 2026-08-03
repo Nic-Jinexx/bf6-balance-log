@@ -1,0 +1,16 @@
+{
+  "_comment": "Recorded from data/releases.json. EA's Battlefield 6 maps page does not list this map, so no description has been transcribed and none is invented; the page renders the not-recorded-yet notice instead.",
+  "_map_note": "Added in 1.2.2.0 and referenced by several later patch entries, but absent from EA's maps page with no REDSEC marker in releases.json to explain the omission. Flagged in updates.md.",
+  "slug": "hagental-base",
+  "name": "Hagental Base",
+  "branch": "maps",
+  "order": 14,
+  "aliases": [
+    "hagental base"
+  ],
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": []
+}

@@ -49,6 +49,12 @@
    "alt": "b36"
   },
   {
+   "name": "Blackwell Fields",
+   "url": "/maps/blackwell-fields/",
+   "cat": "MAPS",
+   "alt": "blackwell fields"
+  },
+  {
    "name": "BROD 3",
    "url": "/weapons/carbines/brod-3/",
    "cat": "CARBINES",
@@ -61,10 +67,22 @@
    "alt": "demolition charge"
   },
   {
+   "name": "Cairo Bazaar",
+   "url": "/maps/cairo-bazaar/",
+   "cat": "MAPS",
+   "alt": "cairo bazaar"
+  },
+  {
    "name": "Combat Knife",
    "url": "/weapons/melee/combat-knife/",
    "cat": "MELEE",
    "alt": ""
+  },
+  {
+   "name": "Contaminated",
+   "url": "/maps/contaminated/",
+   "cat": "MAPS",
+   "alt": "contaminated"
   },
   {
    "name": "CZ3A1",
@@ -97,10 +115,22 @@
    "alt": ""
   },
   {
+   "name": "Eastwood",
+   "url": "/maps/eastwood/",
+   "cat": "MAPS",
+   "alt": "eastwood"
+  },
+  {
    "name": "EF88",
    "url": "/weapons/assault-rifles/ef88/",
    "cat": "ASSAULT RIFLES",
    "alt": "f88 ef-88"
+  },
+  {
+   "name": "Empire State",
+   "url": "/maps/empire-state/",
+   "cat": "MAPS",
+   "alt": "empire state"
   },
   {
    "name": "EOD Bot",
@@ -125,6 +155,12 @@
    "url": "/gadgets/throwables/m84/",
    "cat": "THROWABLES",
    "alt": "flash grenade m84"
+  },
+  {
+   "name": "Fort Lyndon",
+   "url": "/maps/fort-lyndon/",
+   "cat": "MAPS",
+   "alt": "fort lyndon"
   },
   {
    "name": "Fragmentation Grenade",
@@ -157,6 +193,12 @@
    "alt": ""
   },
   {
+   "name": "Hagental Base",
+   "url": "/maps/hagental-base/",
+   "cat": "MAPS",
+   "alt": "hagental base"
+  },
+  {
    "name": "Handheld Jammer",
    "url": "/gadgets/tools/manet-dis-5/",
    "cat": "TOOLS",
@@ -173,6 +215,12 @@
    "url": "/weapons/melee/hunting-knife/",
    "cat": "MELEE",
    "alt": ""
+  },
+  {
+   "name": "Iberian Offensive",
+   "url": "/maps/iberian-offensive/",
+   "cat": "MAPS",
+   "alt": "iberian offensive"
   },
   {
    "name": "Ice Axe",
@@ -227,6 +275,12 @@
    "url": "/gadgets/tools/ltlm-ii/",
    "cat": "TOOLS",
    "alt": "laser designator"
+  },
+  {
+   "name": "Liberation Peak",
+   "url": "/maps/liberation-peak/",
+   "cat": "MAPS",
+   "alt": "liberation peak"
   },
   {
    "name": "LMR27",
@@ -373,6 +427,12 @@
    "alt": ""
   },
   {
+   "name": "Manhattan Bridge",
+   "url": "/maps/manhattan-bridge/",
+   "cat": "MAPS",
+   "alt": "manhattan bridge"
+  },
+  {
    "name": "Maxguard 900",
    "url": "/gadgets/deployables/maxguard-900/",
    "cat": "DEPLOYABLES",
@@ -397,16 +457,34 @@
    "alt": ""
   },
   {
+   "name": "Mirak Valley",
+   "url": "/maps/mirak-valley/",
+   "cat": "MAPS",
+   "alt": "mirak valley"
+  },
+  {
    "name": "MP-APS",
    "url": "/gadgets/deployables/mp-aps/",
    "cat": "DEPLOYABLES",
    "alt": "missile intercept system"
   },
   {
+   "name": "New Sobek City",
+   "url": "/maps/new-sobek-city/",
+   "cat": "MAPS",
+   "alt": "new sobek city"
+  },
+  {
    "name": "NVO-228E",
    "url": "/weapons/assault-rifles/nvo-228e/",
    "cat": "ASSAULT RIFLES",
    "alt": "nvo228e nvo"
+  },
+  {
+   "name": "Operation Firestorm",
+   "url": "/maps/operation-firestorm/",
+   "cat": "MAPS",
+   "alt": "operation firestorm"
   },
   {
    "name": "P18",
@@ -457,6 +535,12 @@
    "alt": "qbz192 qbz"
   },
   {
+   "name": "Railway to Golmud",
+   "url": "/maps/railway-to-golmud/",
+   "cat": "MAPS",
+   "alt": "railway to golmud"
+  },
+  {
    "name": "Recon Drone",
    "url": "/gadgets/tools/xfgm-6d/",
    "cat": "TOOLS",
@@ -479,6 +563,12 @@
    "url": "/weapons/lmgs/rpkm/",
    "cat": "LMGS",
    "alt": ""
+  },
+  {
+   "name": "Saints Quarter",
+   "url": "/maps/saints-quarter/",
+   "cat": "MAPS",
+   "alt": "saints quarter"
   },
   {
    "name": "SCW-10",
@@ -509,6 +599,12 @@
    "url": "/gadgets/launchers/sich-g1-wp/",
    "cat": "LAUNCHERS",
    "alt": "incendiary airburst launcher"
+  },
+  {
+   "name": "Siege of Cairo",
+   "url": "/maps/siege-of-cairo/",
+   "cat": "MAPS",
+   "alt": "siege of cairo"
   },
   {
    "name": "SL9",
@@ -613,6 +709,12 @@
    "alt": "tracer dart"
   },
   {
+   "name": "Tsuru Reef",
+   "url": "/maps/tsuru-reef/",
+   "cat": "MAPS",
+   "alt": "tsuru reef"
+  },
+  {
    "name": "UMG-40",
    "url": "/weapons/smgs/umg-40/",
    "cat": "SMGS",
@@ -647,6 +749,12 @@
    "url": "/weapons/sidearms/vz-61/",
    "cat": "SIDEARMS",
    "alt": ""
+  },
+  {
+   "name": "Wake Island",
+   "url": "/maps/wake-island/",
+   "cat": "MAPS",
+   "alt": "wake island"
   },
   {
    "name": "X95 BRE",

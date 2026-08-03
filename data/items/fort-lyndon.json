@@ -1,0 +1,16 @@
+{
+  "_comment": "Recorded from data/releases.json. EA's Battlefield 6 maps page does not list this map, so no description has been transcribed and none is invented; the page renders the not-recorded-yet notice instead.",
+  "_map_note": "REDSEC. EA's maps page covers multiplayer maps only, which is why this Battle Royale map does not appear on it.",
+  "slug": "fort-lyndon",
+  "name": "Fort Lyndon",
+  "branch": "maps",
+  "order": 11,
+  "aliases": [
+    "fort lyndon"
+  ],
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": []
+}

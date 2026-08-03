@@ -1,0 +1,20 @@
+{
+  "_comment": "Description transcribed verbatim from EA's Battlefield 6 maps page (https://www.ea.com/games/battlefield/battlefield-6/features/maps), read from the page's own __NEXT_DATA__ payload on 2026-08-02. Attributed to that page rather than to the game, because it was not read off an in-game screen. Maps carry no stat block or ratings.",
+  "slug": "tsuru-reef",
+  "name": "Tsuru Reef",
+  "branch": "maps",
+  "order": 17,
+  "aliases": [
+    "tsuru reef"
+  ],
+  "description": {
+    "text": "The biggest all-out battleground yet. Enter a sprawling island chain dense with luxury bungalows, tropical vegetation, and jagged cliff edges. With support for all modes, this archipelago is the ultimate theater of war.",
+    "attribution": "EA's Battlefield 6 maps page"
+  },
+  "_guide": "https://www.ea.com/games/battlefield/battlefield-6/news/tsuru-reef-developer-map-guide",
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": []
+}

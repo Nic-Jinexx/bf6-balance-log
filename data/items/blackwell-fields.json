@@ -1,0 +1,19 @@
+{
+  "_comment": "Description transcribed verbatim from EA's Battlefield 6 maps page (https://www.ea.com/games/battlefield/battlefield-6/features/maps), read from the page's own __NEXT_DATA__ payload on 2026-08-02. Attributed to that page rather than to the game, because it was not read off an in-game screen. Maps carry no stat block or ratings.",
+  "slug": "blackwell-fields",
+  "name": "Blackwell Fields",
+  "branch": "maps",
+  "order": 10,
+  "aliases": [
+    "blackwell fields"
+  ],
+  "description": {
+    "text": "Blackwell Fields is an ominous large-scale All-Out-Warfare map set in Southern California with military facilities and scattered homesteads under siege, all under the backdrop of a breathtaking burning horizon.",
+    "attribution": "EA's Battlefield 6 maps page"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": []
+}

@@ -1,0 +1,19 @@
+{
+  "_comment": "Description transcribed verbatim from EA's Battlefield 6 maps page (https://www.ea.com/games/battlefield/battlefield-6/features/maps), read from the page's own __NEXT_DATA__ payload on 2026-08-02. Attributed to that page rather than to the game, because it was not read off an in-game screen. Maps carry no stat block or ratings.",
+  "slug": "contaminated",
+  "name": "Contaminated",
+  "branch": "maps",
+  "order": 13,
+  "aliases": [
+    "contaminated"
+  ],
+  "description": {
+    "text": "Drop into the European mountainside and evade psychoactive smoke filling the air. Wage all-out war across the crucial German airbase and grapple over rocky terrain in this expansive battleground where crucial satellite intelligence is at stake.",
+    "attribution": "EA's Battlefield 6 maps page"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": []
+}

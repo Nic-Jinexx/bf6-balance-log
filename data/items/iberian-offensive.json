@@ -1,0 +1,19 @@
+{
+  "_comment": "Description transcribed verbatim from EA's Battlefield 6 maps page (https://www.ea.com/games/battlefield/battlefield-6/features/maps), read from the page's own __NEXT_DATA__ payload on 2026-08-02. Attributed to that page rather than to the game, because it was not read off an in-game screen. Maps carry no stat block or ratings.",
+  "slug": "iberian-offensive",
+  "name": "Iberian Offensive",
+  "branch": "maps",
+  "order": 2,
+  "aliases": [
+    "iberian offensive"
+  ],
+  "description": {
+    "text": "Sprint through Gibraltar’s winding streets, stalk its alleyways, dodge heavily-armored tanks, and tear through buildings–Iberian Offensive has many ways to secure a tactical advantage.",
+    "attribution": "EA's Battlefield 6 maps page"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": []
+}
