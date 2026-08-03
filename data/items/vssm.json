@@ -1,5 +1,5 @@
 {
-  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 50/51 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock and Requirement are not shown for an owned weapon, so both stay TBD.",
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture index 50/51 in the 16:03 run). SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. Unlock is the Season 4 Battle Pass, per the project owner 2026-08-03: new guns ship in the Battle Pass for their launch season and only move to seasonal catch-up challenges once that season ends, so there is no challenge Requirement row while the season is current.",
   "slug": "vssm",
   "name": "VSSM",
   "branch": "weapons",
@@ -53,11 +53,7 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
-    },
-    {
-      "label": "Requirement",
-      "value": "TBD"
+      "value": "Season 4 Battle Pass"
     }
   ],
   "related": [

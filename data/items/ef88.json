@@ -1,5 +1,5 @@
 {
-  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture 20260801145510 / 20260801145504). Two shots per weapon: SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. TBD is deliberate: anything not legible on screen stays TBD rather than becoming a plausible-looking guess. Unlock and Requirement are not shown on either screen, so both are TBD. NOTE: the SELECT screen renders this weapon's PRECISION as a greyed-out 000 with an empty bar, unlike every other rifle in the category (17-45). Recorded as 0 because that is literally what the screen shows, but it looks like the UI failed to populate it. Worth re-capturing before this is trusted.",
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-01 (Steam capture 20260801145510 / 20260801145504). Two shots per weapon: SELECT PRIMARY WEAPON for the text and stats, CUSTOMIZE for the art. TBD is deliberate: anything not legible on screen stays TBD rather than becoming a plausible-looking guess. Unlock is the Season 4 Battle Pass, per the project owner 2026-08-03: new guns ship in the Battle Pass for their launch season and only move to seasonal catch-up challenges once that season ends, so there is no challenge Requirement row while the season is current. NOTE: the SELECT screen renders this weapon's PRECISION as a greyed-out 000 with an empty bar, unlike every other rifle in the category (17-45). Recorded as 0 because that is literally what the screen shows, but it looks like the UI failed to populate it. Worth re-capturing before this is trusted.",
   "slug": "ef88",
   "name": "EF88",
   "branch": "weapons",
@@ -55,11 +55,7 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
-    },
-    {
-      "label": "Requirement",
-      "value": "TBD"
+      "value": "Season 4 Battle Pass"
     }
   ],
   "related": [
