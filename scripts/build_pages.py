@@ -48,7 +48,7 @@ BRANCH_ANCHOR = {
     "classes": "progression",
 }
 
-# section id in index.html -> (readable label, colour class used by h2.cat/.tag)
+# section id in index.html -> (readable label, color class used by h2.cat/.tag)
 SECTIONS = {
     "systemic": ("systemic gunplay", "systemic"),
     "player": ("player & movement", "player"),
@@ -60,8 +60,8 @@ SECTIONS = {
     "progression": ("progression", "progression"),
 }
 
-# tree branch -> the category colour it borrows, so the database speaks the
-# same colour language as the log. No new hues are introduced.
+# tree branch -> the category color it borrows, so the database speaks the
+# same color language as the log. No new hues are introduced.
 BRANCH_COLOR = {
     "patchnotes": "patchnotes",
     "weapons": "weapons",

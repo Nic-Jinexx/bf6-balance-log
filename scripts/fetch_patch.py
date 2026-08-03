@@ -46,6 +46,13 @@ TAG = re.compile(r"<[^>]+>")
 # short Title Case strings sitting alone in their own paragraph.
 SECTIONISH = re.compile(r"^[A-Z0-9][A-Z0-9 &/'\-\.]*:?$")
 
+# EA repeats its section names as an in-page nav list at the top of the
+# changelog. Each of those <li>s wraps a <button>, which is the only reliable
+# way to tell them apart from content: matching on text instead dropped two
+# real "Manhattan Bridge" lines out of a bare map list in 1.2.1.0, because that
+# map name also appeared as a heading elsewhere on the page.
+NAV_LI = re.compile(r"^\s*<(?:button|a)\b[^>]*>.*?</(?:button|a)>\s*$", re.I | re.S)
+
 
 def fetch(url, timeout=60):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -98,18 +105,10 @@ def extract(body):
         r"|<p[^>]*>(.*?)</p>",            # paragraph pseudo-headings
         re.I | re.S,
     )
-    # EA repeats its section names as an in-page nav list at the top of the
-    # changelog. Those <li>s are navigation, not patch content, so collect every
-    # heading label first and drop any bullet that is just one of them.
-    labels = set()
-    for m in re.finditer(r"<(h[1-6])[^>]*>(.*?)</\1>|<p[^>]*>(.*?)</p>", region, re.I | re.S):
-        label = text_of(m.group(2) if m.group(2) is not None else m.group(3))
-        if label and len(label) < 90:
-            labels.add(label.rstrip(":").upper())
-
     levels = {}
     para_head = None
     rows = []
+    dropped = []
     for m in token.finditer(region):
         if m.group(1):
             level = int(m.group(1)[1])
@@ -121,11 +120,12 @@ def extract(body):
                 del levels[deeper]
             para_head = None
         elif m.group(3) is not None:
+            if NAV_LI.match(m.group(3)):
+                dropped.append(text_of(m.group(3)))
+                continue  # EA's in-page nav, not patch content
             body_text = text_of(m.group(3))
             if not body_text:
                 continue
-            if body_text.rstrip(":").upper() in labels:
-                continue  # nav link repeating a section name
             trail = [levels[k] for k in sorted(levels)]
             if para_head:
                 trail.append(para_head)
@@ -134,6 +134,7 @@ def extract(body):
             label = text_of(m.group(4))
             if label and len(label) < 90 and SECTIONISH.match(label):
                 para_head = label.rstrip(":")
+    extract.last_dropped = dropped
     return rows
 
 
@@ -143,6 +144,12 @@ def summarise(version, rows):
     print(f"{version}: {len(rows)} bullet(s)")
     for label, n in counts.most_common():
         print(f"   {n:>4}  {label}")
+    # Never drop content silently - a nav item that is actually a patch note
+    # has to be visible in the output, not inferred from a count that moved.
+    dropped = getattr(extract, "last_dropped", [])
+    if dropped:
+        print(f"   dropped {len(dropped)} nav item(s): "
+              + ", ".join(repr(d) for d in dropped[:8]))
 
 
 def main():

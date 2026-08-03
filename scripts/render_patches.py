@@ -200,7 +200,13 @@ def render_category(cat, by_version, meta, summaries, emitted=None, newest=None)
     versions = sorted(by_version, key=version_key, reverse=True)
     for n, version in enumerate(versions):
         entries = by_version[version]
-        posted, url = meta.get(version, ("", ""))
+        if version not in meta:
+            # Silently rendering ("", "") would ship a patch block with a blank
+            # date and href="" - and dates are the whole point of this site.
+            raise SystemExit(
+                "render_patches: %s has entries but no row in data/patch-index.json; "
+                "add it there first (version, posted, live, headline, url)" % version)
+        posted, url = meta[version]
         groups = {}
         order = []
         for e in entries:
@@ -215,7 +221,7 @@ def render_category(cat, by_version, meta, summaries, emitted=None, newest=None)
         out.append('<details class="patch"%s>' % (" open" if version == newest else ""))
         out.append('<summary><span class="ver">%s</span><span class="date">%s</span>'
                    '<span class="tag tag-%s">%s</span></summary>'
-                   % (version, posted, cat, tag))
+                   % (esc(version), esc(posted), cat, tag))
         out.append('<div class="body">')
         note = summaries.get(version)
         if note:
@@ -227,7 +233,7 @@ def render_category(cat, by_version, meta, summaries, emitted=None, newest=None)
             out.extend(render_rows(groups[label], emitted))
         out.append('<div class="src">Source: <a href="%s" target="_blank" rel="noopener">'
                    'Battlefield 6 Game Update %s</a>, posted %s</div>'
-                   % (url, version, posted))
+                   % (H.escape(url, quote=True), esc(version), esc(posted)))
         out.append("</div>")
         out.append("</details>")
     return "\n".join(out)
@@ -238,7 +244,7 @@ def render_index(by_version_all):
     row holding that update's complete notes in EA's original order.
 
     Hidden by default - the table reads exactly as before until a row is
-    clicked. Headers inside the panel are coloured by the category the line
+    clicked. Headers inside the panel are colored by the category the line
     belongs to, so the full read still shows at a glance what kind of change
     each block is.
     """
@@ -250,17 +256,18 @@ def render_index(by_version_all):
             '<tr class="ixrow" data-ver="%s" tabindex="0" role="button" '
             'aria-expanded="false" title="Click to read the full %s notes">'
             '<td><span class="ixcaret">&rsaquo;</span>%s</td><td>%s</td><td>%s</td>'
-            '<td>%s</td><td><a href="%s" target="_blank" rel="noopener" '
-            'onclick="event.stopPropagation()">ea.com &#8599;</a></td></tr>'
+            '<td>%s</td><td><a href="%s" target="_blank" rel="noopener">'
+            'ea.com &#8599;</a></td></tr>'
             % (esc(version), esc(version), esc(version), esc(patch["posted"]),
-               esc(patch["live"]), esc(patch["headline"]), esc(patch["url"])))
+               esc(patch["live"]), esc(patch["headline"]),
+               H.escape(patch["url"], quote=True)))
 
         panel = ['<tr class="ixfull" data-ver="%s" hidden><td colspan="5">' % esc(version)]
         panel.append('<div class="fullpatch">')
         panel.append('<p class="fullmeta">Every line EA published in update %s, in EA\'s '
                      'own words and original order &mdash; %d entries. '
                      '<a href="%s" target="_blank" rel="noopener">Source on ea.com &#8599;</a></p>'
-                     % (esc(version), len(entries), esc(patch["url"])))
+                     % (esc(version), len(entries), H.escape(patch["url"], quote=True)))
         last = None
         open_list = False
         for entry in entries:
@@ -306,6 +313,12 @@ def inject(index_html, cat, body):
     j = index_html.find(end)
     if i < 0 or j < 0:
         raise SystemExit("markers for %r not found in index.html" % cat)
+    if j < i:
+        # Slicing on a reversed pair silently duplicates the page instead of
+        # replacing a region.
+        raise SystemExit("markers for %r are out of order in index.html" % cat)
+    if index_html.count(start) > 1 or index_html.count(end) > 1:
+        raise SystemExit("markers for %r appear more than once in index.html" % cat)
     return index_html[:i + len(start)] + "\n" + body + "\n" + index_html[j:]
 
 

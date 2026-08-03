@@ -1308,6 +1308,17 @@
    "items": []
   },
   {
+   "text": "Manhattan Bridge",
+   "heading": [
+    "CHANGELOG",
+    "MAPS & MODES:"
+   ],
+   "section": "maps",
+   "items": [
+    "manhattan-bridge"
+   ]
+  },
+  {
    "text": "Operation Firestorm",
    "heading": [
     "CHANGELOG",
@@ -1338,6 +1349,17 @@
    "section": "maps",
    "items": [
     "mirak-valley"
+   ]
+  },
+  {
+   "text": "Manhattan Bridge",
+   "heading": [
+    "CHANGELOG",
+    "MAPS & MODES:"
+   ],
+   "section": "maps",
+   "items": [
+    "manhattan-bridge"
    ]
   },
   {

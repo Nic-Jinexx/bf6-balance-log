@@ -20,6 +20,7 @@ import argparse
 import json
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -241,17 +242,23 @@ def check(versions, items, pats):
         body, _ = page_for(version)
         ea = [r["text"] for r in extract(body)]
         have = [e["text"] for e in stored]
-        missing = [t for t in ea if t not in have]
-        extra = [t for t in have if t not in ea]
+
+        # Multisets, not sets: EA does repeat a bullet verbatim within one patch
+        # (1.2.2.0 ships "Improved reload rattle sound effects for the B36A4."
+        # twice). Plain membership would call a dropped duplicate a pass.
+        ea_counts, have_counts = Counter(ea), Counter(have)
+        missing = ea_counts - have_counts
+        extra = have_counts - ea_counts
         if missing or extra:
             problems += 1
-            print(f"{version}: {len(missing)} missing, {len(extra)} not in EA's page")
-            for t in missing[:5]:
-                print(f"    MISSING: {t[:110]}")
-            for t in extra[:5]:
-                print(f"    EXTRA:   {t[:110]}")
+            print(f"{version}: {sum(missing.values())} missing, "
+                  f"{sum(extra.values())} not in EA's page")
+            for t, n in list(missing.items())[:5]:
+                print(f"    MISSING x{n}: {t[:100]}")
+            for t, n in list(extra.items())[:5]:
+                print(f"    EXTRA   x{n}: {t[:100]}")
         else:
-            print(f"{version}: {len(ea)}/{len(ea)} bullets present verbatim")
+            print(f"{version}: {len(have)}/{len(ea)} bullets present verbatim")
     return problems
 
 
