@@ -739,11 +739,14 @@ def render_history(entries, name):
         by_version.setdefault((e["version"], e["date"]), []).append(e)
 
     out = []
-    for (ver, date), group in sorted(by_version.items(),
-                                     key=lambda kv: version_key(kv[0][0]), reverse=True):
+    ordered = sorted(by_version.items(), key=lambda kv: version_key(kv[0][0]), reverse=True)
+    for n, ((ver, date), group) in enumerate(ordered):
         section = group[0].get("section") or ""
         label, color = SECTIONS.get(section, ("balance", "progression"))
-        out.append('<details class="patch" open>')
+        # Only the newest patch opens. Items now carry every EA line that names
+        # them, so an all-open history runs to hundreds of lines on the busier
+        # weapons.
+        out.append('<details class="patch"%s>' % (" open" if n == 0 else ""))
         out.append('<summary><span class="ver">%s</span><span class="date">%s</span>'
                    '<span class="tag tag-%s">%s</span></summary>'
                    % (html.escape(ver), html.escape(date), color, html.escape(label)))

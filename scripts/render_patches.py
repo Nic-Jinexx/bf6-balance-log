@@ -184,7 +184,7 @@ def render_rows(entries, emitted=None):
     return wrapped
 
 
-def render_category(cat, by_version, meta, summaries, emitted=None):
+def render_category(cat, by_version, meta, summaries, emitted=None, newest=None):
     out = []
     versions = sorted(by_version, key=version_key, reverse=True)
     for n, version in enumerate(versions):
@@ -199,7 +199,9 @@ def render_category(cat, by_version, meta, summaries, emitted=None):
                 order.append(label)
             groups[label].append(e)
         tag = "%d line%s" % (len(entries), "" if len(entries) == 1 else "s")
-        out.append('<details class="patch"%s>' % (" open" if n == 0 else ""))
+        # Only the newest update on the site opens. With every EA line present,
+        # one open block per category would be thousands of lines on first paint.
+        out.append('<details class="patch"%s>' % (" open" if version == newest else ""))
         out.append('<summary><span class="ver">%s</span><span class="date">%s</span>'
                    '<span class="tag tag-%s">%s</span></summary>'
                    % (version, posted, cat, tag))
@@ -250,10 +252,13 @@ def main():
     by_cat = load_entries()
     summaries = collect_summaries(by_cat)
 
+    all_versions = {v for cat in RENDERED for v in by_cat.get(cat, {})}
+    newest = max(all_versions, key=version_key) if all_versions else None
+
     updated = index_html
     emitted = []
     for cat in RENDERED:
-        body = render_category(cat, by_cat.get(cat, {}), meta, summaries, emitted)
+        body = render_category(cat, by_cat.get(cat, {}), meta, summaries, emitted, newest)
         updated = inject(updated, cat, body)
 
     # Completeness: every entry in every rendered category must reach the page,
