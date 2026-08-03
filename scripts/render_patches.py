@@ -30,6 +30,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 PATCHES = REPO_ROOT / "data" / "patches"
 INDEX = REPO_ROOT / "index.html"
 KNOWN = REPO_ROOT / "data" / "known_versions.json"
+FULL_JSON = REPO_ROOT / "data" / "patch-full.json"
 
 # Every category on the page is generated. There is no "systemic" category:
 # that was an editorial grouping with no EA equivalent, and its lines now sit in
@@ -54,6 +55,24 @@ TABLE_SHAPES = [
      ["", "Change"], ["item", "rest"]),
 ]
 MIN_TABLE_RUN = 4
+
+# The generic "Name: change" shape is the loose one - it would happily turn four
+# consecutive prose lines that each contain an early colon ("Fixed an issue
+# where X: Y happened") into a table of sentence fragments. An item name is a
+# short designation, not a clause, so reject a left-hand side that reads like
+# prose.
+PROSE_WORDS = re.compile(
+    r"\b(a|an|the|and|or|of|to|for|in|on|with|when|where|while|that|this|"
+    r"issue|issues|fixed|resolved|corrected|updated|added|removed|improved|"
+    r"could|would|should|players?|now)\b", re.I)
+
+
+def looks_like_item(name):
+    if len(name.split()) > 5:
+        return False
+    if PROSE_WORDS.search(name):
+        return False
+    return not name.rstrip().endswith((".", ",", ";"))
 
 
 def esc(s):
@@ -128,7 +147,10 @@ def table_at(entries, i):
             m = pattern.match(entry["text"])
             if not m:
                 break
-            rows.append((entry, [m.group(g).strip() for g in groups]))
+            cells = [m.group(g).strip() for g in groups]
+            if not looks_like_item(cells[0]):
+                break
+            rows.append((entry, cells))
         if len(rows) >= MIN_TABLE_RUN:
             return i + len(rows), headers, rows
     return None
@@ -239,9 +261,35 @@ def render_category(cat, by_version, meta, summaries, emitted=None, newest=None)
     return "\n".join(out)
 
 
+def full_patch_payload(by_version_all):
+    """version -> the complete update, grouped by EA's heading, for the browser.
+
+    This lives in data/patch-full.json rather than in index.html because the
+    expandable view repeats every line that already appears in its category
+    section. Inlining both copies took the page to 928 KB; fetching this on
+    first expand keeps index.html at roughly 600 KB and costs one request that
+    most visitors never make.
+    """
+    payload = {}
+    for patch in patch_index():
+        version = patch["version"]
+        groups = []
+        for entry in by_version_all.get(version, []):
+            label = heading_label(entry) or "General"
+            cat = "redsec" if entry.get("redsec") else entry["section"]
+            if entry.get("redsec"):
+                inner = heading_label(entry)
+                label = "REDSEC" + (" · " + inner if inner else "")
+            if not groups or groups[-1]["label"] != label:
+                groups.append({"label": label, "cat": cat, "lines": []})
+            groups[-1]["lines"].append(entry["text"])
+        payload[version] = {"url": patch["url"], "groups": groups}
+    return payload
+
+
 def render_index(by_version_all):
-    """The Patch Index table body: a row per update, each followed by a hidden
-    row holding that update's complete notes in EA's original order.
+    """The Patch Index table body: a row per update, each followed by an empty
+    hidden row the browser fills from data/patch-full.json on first expand.
 
     Hidden by default - the table reads exactly as before until a row is
     clicked. Headers inside the panel are colored by the category the line
@@ -251,48 +299,21 @@ def render_index(by_version_all):
     out = []
     for patch in patch_index():
         version = patch["version"]
-        entries = by_version_all.get(version, [])
+        count = len(by_version_all.get(version, []))
         out.append(
-            '<tr class="ixrow" data-ver="%s" tabindex="0" role="button" '
+            '<tr class="ixrow" data-ver="%s" data-count="%d" tabindex="0" role="button" '
             'aria-expanded="false" title="Click to read the full %s notes">'
             '<td><span class="ixcaret">&rsaquo;</span>%s</td><td>%s</td><td>%s</td>'
             '<td>%s</td><td><a href="%s" target="_blank" rel="noopener">'
             'ea.com &#8599;</a></td></tr>'
-            % (esc(version), esc(version), esc(version), esc(patch["posted"]),
+            % (esc(version), count, esc(version), esc(version), esc(patch["posted"]),
                esc(patch["live"]), esc(patch["headline"]),
                H.escape(patch["url"], quote=True)))
-
-        panel = ['<tr class="ixfull" data-ver="%s" hidden><td colspan="5">' % esc(version)]
-        panel.append('<div class="fullpatch">')
-        panel.append('<p class="fullmeta">Every line EA published in update %s, in EA\'s '
-                     'own words and original order &mdash; %d entries. '
-                     '<a href="%s" target="_blank" rel="noopener">Source on ea.com &#8599;</a></p>'
-                     % (esc(version), len(entries), H.escape(patch["url"], quote=True)))
-        last = None
-        open_list = False
-        for entry in entries:
-            label = heading_label(entry) or "General"
-            if entry.get("redsec"):
-                label = "REDSEC" + (" · " + label if heading_label(entry) else "")
-            if label != last:
-                if open_list:
-                    panel.append("</ul>")
-                    open_list = False
-                cat = "redsec" if entry.get("redsec") else entry["section"]
-                panel.append('<h4 class="fullhead fh-%s">%s</h4>' % (cat, esc(label)))
-                last = label
-            if not open_list:
-                panel.append('<ul class="plain small">')
-                open_list = True
-            # Deliberately no data-item here: build_pages.py harvests every
-            # tagged li/tr out of index.html, and this panel repeats lines that
-            # already appear in their category section. Tagging them would
-            # duplicate every entry on the item pages.
-            panel.append("<li>%s</li>" % esc(entry["text"]))
-        if open_list:
-            panel.append("</ul>")
-        panel.append("</div></td></tr>")
-        out.extend(panel)
+        # Empty on purpose - filled client-side. No data-item anywhere in here
+        # either way: build_pages.py harvests every tagged li/tr out of
+        # index.html, and these lines already appear in their category section.
+        out.append('<tr class="ixfull" data-ver="%s" hidden><td colspan="5">'
+                   '<div class="fullpatch"></div></td></tr>' % esc(version))
     return "\n".join(out)
 
 
@@ -340,7 +361,22 @@ def main():
     for cat in RENDERED:
         body = render_category(cat, by_cat.get(cat, {}), meta, summaries, emitted, newest)
         updated = inject(updated, cat, body)
-    updated = inject(updated, "index", render_index(load_by_version()))
+
+    by_version_all = load_by_version()
+    updated = inject(updated, "index", render_index(by_version_all))
+    full_json = json.dumps(full_patch_payload(by_version_all),
+                           ensure_ascii=False, separators=(",", ":")) + "\n"
+
+    # The browser view has to carry every line too, or "read the whole patch"
+    # quietly shows a subset.
+    in_payload = sum(len(g["lines"])
+                     for v in full_patch_payload(by_version_all).values()
+                     for g in v["groups"])
+    in_data = sum(len(v) for v in by_version_all.values())
+    if in_payload != in_data:
+        print("render_patches: full-patch payload holds %d of %d lines"
+              % (in_payload, in_data))
+        sys.exit(1)
 
     # Completeness: every entry in every rendered category must reach the page,
     # as a list item or as a table row. "summary" is excluded because those
@@ -359,17 +395,30 @@ def main():
     print("render_patches: %d entries rendered across %d categories"
           % (len(emitted), len(RENDERED)))
 
+    stale_json = (not FULL_JSON.exists()
+                  or FULL_JSON.read_text(encoding="utf-8") != full_json)
+
     if args.check:
+        problems = []
         if updated != index_html:
-            print("render_patches: index.html is stale, re-run without --check")
+            problems.append("index.html")
+        if stale_json:
+            problems.append(FULL_JSON.name)
+        if problems:
+            print("render_patches: stale, re-run without --check: "
+                  + ", ".join(problems))
             sys.exit(1)
         print("render_patches: up to date")
         return
+
+    wrote = []
     if updated != index_html:
         INDEX.write_text(updated, encoding="utf-8")
-        print("render_patches: index.html updated")
-    else:
-        print("render_patches: no change")
+        wrote.append("index.html")
+    if stale_json:
+        FULL_JSON.write_text(full_json, encoding="utf-8")
+        wrote.append(FULL_JSON.name)
+    print("render_patches: " + (", ".join(wrote) + " updated" if wrote else "no change"))
 
 
 if __name__ == "__main__":

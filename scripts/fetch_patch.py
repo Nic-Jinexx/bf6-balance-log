@@ -60,9 +60,22 @@ def fetch(url, timeout=60):
         return resp.read().decode("utf-8", errors="ignore")
 
 
+VERSION_RE = re.compile(r"^\d+(?:\.\d+){1,3}$")
+
+
+def check_version(version):
+    """Versions become filenames and URL fragments, so validate before use."""
+    if not VERSION_RE.match(version):
+        raise SystemExit(
+            "refusing to use %r as a version: expected digits and dots, e.g. 1.4.1.5"
+            % version)
+    return version
+
+
 def page_for(version, refresh=False):
     """Return (html, source). Cached under data/patch-source/ so a re-run is
     free and so the exact bytes a record was built from stay auditable."""
+    check_version(version)
     CACHE.mkdir(parents=True, exist_ok=True)
     cached = CACHE / f"{version}.html"
     if cached.exists() and not refresh:

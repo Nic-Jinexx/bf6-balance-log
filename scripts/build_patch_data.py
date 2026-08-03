@@ -95,22 +95,32 @@ def load_items():
 
 
 def build_patterns(items):
+    """slug -> (regex, probes).
+
+    `probes` are cheap lowercase substrings, one per name form. Running 127
+    regexes over every one of ~2,900 lines is ~370k scans; a plain `in` test
+    first skips almost all of them, since a given line names at most a couple of
+    items. The probe is the longest alphanumeric run in the form, so it is
+    present in any string the regex could match - the regex still decides.
+    """
     pats = {}
     for slug, item in items.items():
         forms = [item["name"]] + (item.get("aliases") or [])
-        alts = []
+        alts, probes = [], []
         for form in forms:
             core = re.sub(r"[^A-Za-z0-9]+", " ", form).strip()
             if len(core) < 2:
                 continue
             alts.append(r"[\s\-\./]*".join(re.escape(c) for c in core.split()))
+            probes.append(max(core.split(), key=len).lower())
         if alts:
             # Trailing s? so a plural still matches: EA writes "Anti-Tank Mines"
             # and "stun grenades", which otherwise slip past the word boundary.
-            pats[slug] = re.compile(
+            rx = re.compile(
                 r"(?<![A-Za-z0-9])(?:"
                 + "|".join(sorted(alts, key=len, reverse=True))
                 + r")s?(?![A-Za-z0-9])", re.I)
+            pats[slug] = (rx, tuple(dict.fromkeys(probes)))
     return pats
 
 
@@ -121,8 +131,11 @@ def match_slugs(text, pats):
     EOD Bot. Whenever one item's match sits entirely inside another's, only the
     longer one is a real mention.
     """
+    low = text.lower()
     spans = []
-    for slug, rx in pats.items():
+    for slug, (rx, probes) in pats.items():
+        if not any(p in low for p in probes):
+            continue
         for m in rx.finditer(text):
             spans.append((m.start(), m.end(), slug))
     keep = set()
@@ -195,17 +208,22 @@ def init(versions, items, pats, force=False, refresh=False):
         # Carry hand-made corrections across a regenerate. Auto-tagging only
         # sees the names EA happens to use, so slugs added by hand - and any
         # corrected section - would otherwise be lost every time this reruns.
+        #
+        # Keyed by text but holding a queue per key, because EA repeats bullets
+        # verbatim within a patch. A plain text->entry dict would collapse those
+        # and give every copy the last one's tags.
         previous = {}
         if target.exists():
             for old in json.loads(target.read_text(encoding="utf-8"))["entries"]:
-                previous[old["text"]] = old
+                previous.setdefault(old["text"], []).append(old)
 
         recs = records_for(version, items, pats, refresh=refresh)
         kept = 0
         for rec in recs:
-            old = previous.get(rec["text"])
-            if not old:
+            queue = previous.get(rec["text"])
+            if not queue:
                 continue
+            old = queue.pop(0)
             merged = sorted(set(rec["items"]) | set(old.get("items", [])))
             if merged != rec["items"]:
                 kept += 1
