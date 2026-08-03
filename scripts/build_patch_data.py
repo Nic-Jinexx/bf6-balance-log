@@ -111,6 +111,29 @@ def build_patterns(items):
     return pats
 
 
+def match_slugs(text, pats):
+    """Slugs named in `text`, with contained matches dropped.
+
+    "M4A1 SLAM" also matches the M4A1 carbine, and "EOD Bot Arm" matches the
+    EOD Bot. Whenever one item's match sits entirely inside another's, only the
+    longer one is a real mention.
+    """
+    spans = []
+    for slug, rx in pats.items():
+        for m in rx.finditer(text):
+            spans.append((m.start(), m.end(), slug))
+    keep = set()
+    for start, end, slug in spans:
+        covered = any(
+            other != slug and o_start <= start and end <= o_end
+            and (o_end - o_start) > (end - start)
+            for o_start, o_end, other in spans
+        )
+        if not covered:
+            keep.add(slug)
+    return keep
+
+
 def classify(heading):
     """(section, redsec, item_slug_from_heading) for a heading trail."""
     trail = [h for h in heading if h.upper().rstrip(":") != "CHANGELOG"]
@@ -143,7 +166,7 @@ def records_for(version, items, pats, refresh=False):
     for row in rows:
         section, redsec, heading_slug = classify(row["heading"])
         text = row["text"]
-        slugs = {s for s, rx in pats.items() if rx.search(text)}
+        slugs = match_slugs(text, pats)
         if heading_slug:
             slugs.add(heading_slug)
         rec = {
