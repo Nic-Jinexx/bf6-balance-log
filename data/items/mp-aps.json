@@ -20,13 +20,14 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
+      "value": "Rank"
     },
     {
       "label": "Requirement",
-      "value": "TBD"
+      "value": "Rank 31"
     }
   ],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Unlock recorded 2026-08-02 from Battlefield 6's own in-game unlock and challenge data. Not from the screenshot cited above: unlock text only displays in-game on items the account does not own."
 }
