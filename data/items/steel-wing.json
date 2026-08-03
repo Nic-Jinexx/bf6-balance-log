@@ -21,13 +21,10 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
-    },
-    {
-      "label": "Requirement",
-      "value": "TBD"
+      "value": "Default"
     }
   ],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Reported unlocked by default on 2026-08-02. Not yet confirmed against an in-game capture: unlock text only displays on items the account does not own, and all throwables are owned."
 }

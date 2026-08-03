@@ -54,11 +54,7 @@
   "availability": [
     {
       "label": "Unlock",
-      "value": "TBD"
-    },
-    {
-      "label": "Requirement",
-      "value": "TBD"
+      "value": "Season 2 Hardware Challenge"
     }
   ],
   "related": [
@@ -79,5 +75,6 @@
       "items": []
     }
   ],
-  "retired_paths": []
+  "retired_paths": [],
+  "_unlock_note": "Season 2 catch-up hardware challenge, reported 2026-08-02. No Requirement row: the challenge text was not supplied, matching how the SOR-300SC's Season 1 challenge is recorded."
 }
