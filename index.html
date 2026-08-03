@@ -42,7 +42,7 @@
      actually deepens the set. Blue and red were already at the floor and could
      not go darker without becoming unreadable. */
   --weapons:#a47621; --vehicles:#4682bb; --gadgets:#558c47; --systemic:#2a8d84; --maps:#976eb3; --redsec:#e63f3f;
-  --progression:#768279; --patchnotes:#c25c8e;
+  --progression:#768279; --patchnotes:#c25c8e; --player:#b8763f;
   --mono:'IBM Plex Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
 }
@@ -66,6 +66,7 @@ nav.toc a:active{transform:translateY(-1px) scale(1.01);box-shadow:0 2px 6px rgb
   nav.toc a:hover,nav.toc a:active{transform:none}
 }
 nav.toc a.t-systemic{background:var(--systemic)}
+nav.toc a.t-player{background:var(--player)}
 nav.toc a.t-weapons{background:var(--weapons)}
 nav.toc a.t-vehicles{background:var(--vehicles)}
 nav.toc a.t-gadgets{background:var(--gadgets)}
@@ -80,6 +81,7 @@ h2.cat.weapons{color:var(--weapons)} h2.cat.weapons .dot{background:var(--weapon
 h2.cat.vehicles{color:var(--vehicles)} h2.cat.vehicles .dot{background:var(--vehicles)}
 h2.cat.gadgets{color:var(--gadgets)} h2.cat.gadgets .dot{background:var(--gadgets)}
 h2.cat.systemic{color:var(--systemic)} h2.cat.systemic .dot{background:var(--systemic)}
+h2.cat.player{color:var(--player)} h2.cat.player .dot{background:var(--player)}
 h2.cat.maps{color:var(--maps)} h2.cat.maps .dot{background:var(--maps)}
 h2.cat.redsec{color:var(--redsec)} h2.cat.redsec .dot{background:var(--redsec)}
 p.cat-note{color:var(--muted);font-size:15px;margin:6px 0 22px;max-width:820px}
@@ -159,6 +161,7 @@ ul.plain.small li b{color:var(--text);font-weight:600}
 .tag.tag-maps{color:var(--maps);border-color:var(--maps)}
 .tag.tag-redsec{color:var(--redsec);border-color:var(--redsec)}
 .tag.tag-progression{color:var(--progression);border-color:#3a463d}
+.tag.tag-player{color:var(--player);border-color:var(--player)}
 
 /* <b class="rs">REDSEC</b> word flag, wherever it appears in body text.
    Red now means REDSEC and nothing else: the Systemic section took the teal. */
@@ -641,6 +644,7 @@ html{-webkit-text-size-adjust:100%}
 
 <nav class="toc">
 <a class="t-systemic" href="#systemic">Systemic Gunplay</a>
+<a class="t-player" href="#player">Player &amp; Movement</a>
 <a class="t-weapons" href="#weapons">Individual Weapons</a>
 <a class="t-vehicles" href="#vehicles">Vehicles</a>
 <a class="t-gadgets" href="#gadgets">Gadgets</a>
@@ -972,6 +976,119 @@ html{-webkit-text-size-adjust:100%}
 </details>
 
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-update-notes-1-0-1-0" target="_blank" rel="noopener">Battlefield 6 Update 1.0.1.0</a>, posted Oct 9, 2025</div>
+</div>
+</details>
+
+<h2 class="cat player" id="player"><span class="dot"></span>Player &amp; Movement</h2>
+<p class="cat-note">Movement, aiming posture and player-state rules that apply to every soldier regardless of loadout: sliding, vaulting, acceleration, revives, and assist windows.</p>
+
+<details class="patch" open>
+<summary><span class="ver">1.4.1.0</span><span class="date">Jul 16, 2026</span><span class="tag tag-player">sliding &middot; water</span></summary>
+<div class="body">
+<ul class="plain">
+<li>Slide activation now requires a slightly higher movement speed, so sliding no longer triggers without sprinting first, or while crouch-sprinting.</li>
+<li>Sliding no longer retriggers while the crouch hold input stays held, and no longer triggers on landing if crouch was released before touching the ground.</li>
+<li>Fall damage slightly reduced when falling into shallow water.</li>
+<li>Drag-and-revive now works in water, and players can spawn on squadmates swimming in deep water.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.4.1.0</a>, posted Jul 16, 2026</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-player">smoke edges</span></summary>
+<div class="body">
+<ul class="plain">
+<li>Spotting and pinging are now more consistent at the perceived edge of Smoke Grenades, without reducing how well the smoke blocks vision.</li>
+<li>Soldiers are no longer pushed away when jumping into a ceiling.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.2.0</a>, posted Jun 5, 2026</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-player">ADS &middot; Engineer skills</span></summary>
+<div class="body">
+<ul class="plain">
+<li>A slight delay now precedes entering ADS locomotion from a standstill, so small position adjustments no longer move the reticle.</li>
+<li>Critical Assist window increased 1.5s &rarr; <span class="delta-up">3s</span>.</li>
+<li>Bipoding while pushed up against a wall is no longer cancelled automatically.</li>
+<li>Taking damage while aiming down sights now moves the weapon opposite the direction of impact, improving damage feedback.</li>
+<li><b>Engineer Field Specialization:</b> Devastating Impact repair reduction &minus;50% &rarr; <span class="delta-down">&minus;25%</span>; Overheat Control vehicle weapon effect &minus;50% &rarr; <span class="delta-down">&minus;10%</span>; Vehicle Regeneration replaced with Mine Sweeping, which highlights mines within 30m.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.0</a>, posted May 8, 2026</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.2.3.0</span><span class="date">Apr 10, 2026</span><span class="tag tag-player">trade kills &middot; acceleration</span></summary>
+<div class="body">
+<ul class="plain">
+<li>Trade-kill distance reduced 50m &rarr; <span class="delta-down">30m</span>, to reduce damage being rejected in mid-range fights.</li>
+<li>Soldier acceleration curves slightly adjusted to better support 30Hz experiences, improving responsiveness at the start of movement.</li>
+<li>Soldiers no longer keep sliding along the ground after exiting a vehicle that is moving uphill.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 10, 2026</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-player">uniform aiming</span></summary>
+<div class="body">
+<ul class="plain">
+<li>Uniform Aiming now ignores the minor FOV shifts caused by firing, calculating sensitivity purely from zoom magnification.</li>
+<li>Walking weapon movement while zoomed now carries physicality that scales with weapon archetype, without deviating the reticle from the target.</li>
+<li>Players operating a deployed mortar can now be roadkilled by air vehicles.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.2.0</a>, posted Mar 13, 2026</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-player">movement overhaul</span></summary>
+<div class="body">
+<ul class="plain">
+<li>Player movement moved from linear accelerations to acceleration curves, for more predictable and consistent movement.</li>
+<li>Slide and jump acceleration curves adjusted to account for the speed carried into them.</li>
+<li>Maximum slide impulse length reduced by <span class="delta-down">25%</span>, for better balance and readability during fast movement.</li>
+<li>Vault detection improved near overhangs while airborne.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.1.0</a>, posted Feb 13, 2026</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-player">recoil input &middot; beacons</span></summary>
+<div class="body">
+<ul class="plain">
+<li>Recoil and aim input now interact more reliably, making recoil compensation more accurate.</li>
+<li>Triggering a redeploy tower or beacon now disables or destroys any other active tower or beacon on the same team.</li>
+<li>Movement responsiveness improved at the start and end of drag-and-revive.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.1.3.0</a>, posted Dec 5, 2025</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-player">vaulting &middot; Danger Ping</span></summary>
+<div class="body">
+<ul class="plain">
+<li>Danger Ping double-tap window increased 0.2s &rarr; <span class="delta-up">0.333s</span>.</li>
+<li>Vault detection improved in cluttered environments.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.1.2.0</a>, posted Nov 17, 2025</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.1.1.0</span><span class="date">Oct 24, 2025</span><span class="tag tag-player">steady aim</span></summary>
+<div class="body">
+<ul class="plain">
+<li>Steady aim and sight centering improved for more consistent precision.</li>
+<li>Bouncing and landing problems when dropping onto certain objects reduced.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-update-1-1-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.1.1.0</a>, posted Oct 24, 2025</div>
+</div>
+</details>
+<details class="patch">
+<summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-player">slide momentum</span></summary>
+<div class="body">
+<ul class="plain">
+<li>Speed carried from sliding into jumping reduced, lowering momentum, especially horizontally.</li>
+</ul>
+<div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-update-notes-1-0-1-0" target="_blank" rel="noopener">Battlefield 6 Update Notes 1.0.1.0</a>, posted Oct 9, 2025</div>
 </div>
 </details>
 
@@ -1649,12 +1766,12 @@ html{-webkit-text-size-adjust:100%}
 </div>
 </details>
 <details class="patch">
-<summary><span class="ver">1.1.2.0</span><span class="date">Nov 14, 2025</span><span class="tag tag-maps">environmental smoke</span></summary>
+<summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-maps">environmental smoke</span></summary>
 <div class="body">
 <ul class="plain">
 <li>Opacity of excessive environmental smoke reduced across multiple maps, improving visibility through it.</li>
 </ul>
-<div class="src">Source: <a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.1.2.0</a>, posted Nov 14, 2025</div>
+<div class="src">Source: <a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.1.2.0</a>, posted Nov 17, 2025</div>
 </div>
 </details>
 <details class="patch">

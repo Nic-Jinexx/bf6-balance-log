@@ -51,6 +51,7 @@ BRANCH_ANCHOR = {
 # section id in index.html -> (readable label, colour class used by h2.cat/.tag)
 SECTIONS = {
     "systemic": ("systemic gunplay", "systemic"),
+    "player": ("player & movement", "player"),
     "weapons": ("weapons", "weapons"),
     "vehicles": ("vehicles", "vehicles"),
     "gadgets": ("gadgets", "gadgets"),
