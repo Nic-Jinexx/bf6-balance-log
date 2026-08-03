@@ -125,6 +125,45 @@ td.item{color:var(--text);font-weight:600}
 .indexTable td{padding:8px 10px;border-bottom:1px solid var(--border);font-family:var(--mono);font-size:14.5px}
 .indexTable a{color:var(--vehicles);text-decoration:none}
 .indexTable a:hover{text-decoration:underline}
+/* Expandable Patch Index rows: click a row to read that whole update in one list. */
+.indexTable tr.ixrow{cursor:pointer}
+.indexTable tr.ixrow:hover td{background:var(--panel2)}
+.indexTable tr.ixrow:focus-visible{outline:2px solid var(--weapons);outline-offset:-2px}
+.ixcaret{display:inline-block;width:14px;color:var(--dim);transition:transform .15s ease}
+.indexTable tr.ixrow[aria-expanded="true"] .ixcaret{transform:rotate(90deg);color:var(--weapons)}
+.indexTable tr.ixfull>td{padding:0;border-bottom:1px solid var(--border2);background:var(--bg)}
+.fullpatch{padding:16px 18px 22px;max-height:70vh;overflow-y:auto}
+.fullmeta{margin:0 0 14px;font-family:var(--mono);font-size:13px;color:var(--dim)}
+.fullhead{margin:18px 0 6px;font-family:var(--mono);font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.6px;padding-left:9px;border-left:3px solid var(--dim)}
+.fullpatch ul{margin:0}
+.fullpatch li{font-size:14.5px;line-height:1.55}
+.fh-player{color:var(--player);border-left-color:var(--player)}
+.fh-weapons{color:var(--weapons);border-left-color:var(--weapons)}
+.fh-vehicles{color:var(--vehicles);border-left-color:var(--vehicles)}
+.fh-gadgets{color:var(--gadgets);border-left-color:var(--gadgets)}
+.fh-maps{color:var(--maps);border-left-color:var(--maps)}
+.fh-redsec{color:var(--redsec);border-left-color:var(--redsec)}
+.fh-progression{color:var(--progression);border-left-color:var(--progression)}
+.fh-ui{color:var(--ui);border-left-color:var(--ui)}
+.fh-audio{color:var(--audio);border-left-color:var(--audio)}
+.fh-portal{color:var(--portal);border-left-color:var(--portal)}
+.fh-ai{color:var(--ai);border-left-color:var(--ai)}
+.fh-misc,.fh-summary{color:var(--muted);border-left-color:var(--border2)}
+/* Back-to-top: appears once the jump-nav has scrolled out of view. */
+#toTop{position:fixed;left:50%;transform:translateX(-50%) translateY(14px);bottom:22px;z-index:60;
+  display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;
+  background:var(--panel2);color:var(--muted);border:1px solid var(--border2);cursor:pointer;
+  font-size:19px;line-height:1;box-shadow:0 6px 20px rgba(0,0,0,.5);
+  opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease,color .18s ease,border-color .18s ease}
+#toTop.show{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+#toTop:hover{color:var(--weapons);border-color:var(--weapons)}
+#toTop:focus-visible{outline:2px solid var(--weapons);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){
+  #toTop{transition:opacity .18s ease}
+  #toTop,#toTop.show{transform:translateX(-50%)}
+  .ixcaret{transition:none}
+}
 footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--border);color:var(--dim);font-size:14px;font-family:var(--mono)}
 .disclaimer{background:var(--panel2);border:1px solid var(--border);border-radius:6px;padding:14px 16px;font-size:14.5px;color:var(--muted);margin:18px 0 6px}
 .searchbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;background:var(--panel);border:1px solid var(--border2);border-radius:6px;padding:10px 14px;margin:20px 0 8px}

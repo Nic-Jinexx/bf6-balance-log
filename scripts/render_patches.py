@@ -64,18 +64,29 @@ def read_index():
     return INDEX.read_text(encoding="utf-8")
 
 
-def patch_meta(index_html):
-    """version -> (posted, url), read from the hand-authored Patch Index."""
-    meta = {}
-    for m in re.finditer(
-            r"<tr><td>(\d[\d.]*)</td><td>([^<]*)</td><td>[^<]*</td><td>[^<]*</td>"
-            r"<td><a href=\"([^\"]+)\"", index_html):
-        meta[m.group(1)] = (m.group(2).strip(), m.group(3))
-    return meta
+INDEX_DATA = REPO_ROOT / "data" / "patch-index.json"
+
+
+def patch_index():
+    return json.loads(INDEX_DATA.read_text(encoding="utf-8"))["patches"]
+
+
+def patch_meta():
+    """version -> (posted, url). Single source for every block's date and link."""
+    return {p["version"]: (p["posted"], p["url"]) for p in patch_index()}
 
 
 def version_key(v):
     return [int(x) for x in v.split(".")]
+
+
+def load_by_version():
+    """version -> [entry] in EA's original document order, all categories."""
+    out = {}
+    for path in sorted(PATCHES.glob("*.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        out[payload["version"]] = list(payload["entries"])
+    return out
 
 
 def load_entries():
@@ -222,6 +233,62 @@ def render_category(cat, by_version, meta, summaries, emitted=None, newest=None)
     return "\n".join(out)
 
 
+def render_index(by_version_all):
+    """The Patch Index table body: a row per update, each followed by a hidden
+    row holding that update's complete notes in EA's original order.
+
+    Hidden by default - the table reads exactly as before until a row is
+    clicked. Headers inside the panel are coloured by the category the line
+    belongs to, so the full read still shows at a glance what kind of change
+    each block is.
+    """
+    out = []
+    for patch in patch_index():
+        version = patch["version"]
+        entries = by_version_all.get(version, [])
+        out.append(
+            '<tr class="ixrow" data-ver="%s" tabindex="0" role="button" '
+            'aria-expanded="false" title="Click to read the full %s notes">'
+            '<td><span class="ixcaret">&rsaquo;</span>%s</td><td>%s</td><td>%s</td>'
+            '<td>%s</td><td><a href="%s" target="_blank" rel="noopener" '
+            'onclick="event.stopPropagation()">ea.com &#8599;</a></td></tr>'
+            % (esc(version), esc(version), esc(version), esc(patch["posted"]),
+               esc(patch["live"]), esc(patch["headline"]), esc(patch["url"])))
+
+        panel = ['<tr class="ixfull" data-ver="%s" hidden><td colspan="5">' % esc(version)]
+        panel.append('<div class="fullpatch">')
+        panel.append('<p class="fullmeta">Every line EA published in update %s, in EA\'s '
+                     'own words and original order &mdash; %d entries. '
+                     '<a href="%s" target="_blank" rel="noopener">Source on ea.com &#8599;</a></p>'
+                     % (esc(version), len(entries), esc(patch["url"])))
+        last = None
+        open_list = False
+        for entry in entries:
+            label = heading_label(entry) or "General"
+            if entry.get("redsec"):
+                label = "REDSEC" + (" · " + label if heading_label(entry) else "")
+            if label != last:
+                if open_list:
+                    panel.append("</ul>")
+                    open_list = False
+                cat = "redsec" if entry.get("redsec") else entry["section"]
+                panel.append('<h4 class="fullhead fh-%s">%s</h4>' % (cat, esc(label)))
+                last = label
+            if not open_list:
+                panel.append('<ul class="plain small">')
+                open_list = True
+            # Deliberately no data-item here: build_pages.py harvests every
+            # tagged li/tr out of index.html, and this panel repeats lines that
+            # already appear in their category section. Tagging them would
+            # duplicate every entry on the item pages.
+            panel.append("<li>%s</li>" % esc(entry["text"]))
+        if open_list:
+            panel.append("</ul>")
+        panel.append("</div></td></tr>")
+        out.extend(panel)
+    return "\n".join(out)
+
+
 def collect_summaries(by_cat):
     """EA's own 'Major Updates for X' lines, kept verbatim, keyed by version."""
     out = {}
@@ -248,7 +315,7 @@ def main():
     args = ap.parse_args()
 
     index_html = read_index()
-    meta = patch_meta(index_html)
+    meta = patch_meta()
     by_cat = load_entries()
     summaries = collect_summaries(by_cat)
 
@@ -260,6 +327,7 @@ def main():
     for cat in RENDERED:
         body = render_category(cat, by_cat.get(cat, {}), meta, summaries, emitted, newest)
         updated = inject(updated, cat, body)
+    updated = inject(updated, "index", render_index(load_by_version()))
 
     # Completeness: every entry in every rendered category must reach the page,
     # as a list item or as a table row. "summary" is excluded because those
