@@ -1,7 +1,7 @@
 {
   "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 110 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
   "slug": "v40",
-  "name": "V40",
+  "name": "Mini Frag Grenade",
   "branch": "gadgets",
   "subcategory": "throwables",
   "order": 5,
@@ -9,7 +9,7 @@
     "mini frag grenade",
     "v40"
   ],
-  "blurb": "Mini Frag Grenade",
+  "blurb": "V40",
   "class": "Engineer",
   "traits": [],
   "description": {

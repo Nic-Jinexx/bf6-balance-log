@@ -25,10 +25,10 @@
    "alt": "ak-4d"
   },
   {
-   "name": "AN/M14",
-   "url": "/gadgets/throwables/an-m14/",
+   "name": "Anti-Vehicle Grenade",
+   "url": "/gadgets/throwables/scg-24/",
    "cat": "THROWABLES",
-   "alt": "incendiary grenade an/m14"
+   "alt": "anti-vehicle grenade scg-24"
   },
   {
    "name": "B36A4",
@@ -115,6 +115,18 @@
    "alt": "sniper decoy"
   },
   {
+   "name": "Flash Grenade",
+   "url": "/gadgets/throwables/m84/",
+   "cat": "THROWABLES",
+   "alt": "flash grenade m84"
+  },
+  {
+   "name": "Fragmentation Grenade",
+   "url": "/gadgets/throwables/m67/",
+   "cat": "THROWABLES",
+   "alt": "fragmentation grenade"
+  },
+  {
    "name": "GGH-22",
    "url": "/weapons/sidearms/ggh-22/",
    "cat": "SIDEARMS",
@@ -155,6 +167,12 @@
    "url": "/weapons/melee/ice-axe/",
    "cat": "MELEE",
    "alt": ""
+  },
+  {
+   "name": "Incendiary Grenade",
+   "url": "/gadgets/throwables/an-m14/",
+   "cat": "THROWABLES",
+   "alt": "incendiary grenade an/m14"
   },
   {
    "name": "KORD 6P67",
@@ -253,12 +271,6 @@
    "alt": "m16"
   },
   {
-   "name": "M18",
-   "url": "/gadgets/throwables/m18/",
-   "cat": "THROWABLES",
-   "alt": "smoke grenade m18"
-  },
-  {
    "name": "M18A1",
    "url": "/gadgets/deployables/m18a1/",
    "cat": "DEPLOYABLES",
@@ -355,18 +367,6 @@
    "alt": "tripwire sensor av mine"
   },
   {
-   "name": "M67",
-   "url": "/gadgets/throwables/m67/",
-   "cat": "THROWABLES",
-   "alt": "fragmentation grenade"
-  },
-  {
-   "name": "M84",
-   "url": "/gadgets/throwables/m84/",
-   "cat": "THROWABLES",
-   "alt": "flash grenade m84"
-  },
-  {
    "name": "M87A1",
    "url": "/weapons/shotguns/m87a1/",
    "cat": "SHOTGUNS",
@@ -391,28 +391,22 @@
    "alt": "auto-guided launcher"
   },
   {
+   "name": "Mini Frag Grenade",
+   "url": "/gadgets/throwables/v40/",
+   "cat": "THROWABLES",
+   "alt": "mini frag grenade v40"
+  },
+  {
    "name": "Mini Scout",
    "url": "/weapons/sniper-rifles/mini-scout/",
    "cat": "SNIPER RIFLES",
    "alt": ""
   },
   {
-   "name": "MK 141 Mod 0",
-   "url": "/gadgets/throwables/mk141/",
-   "cat": "THROWABLES",
-   "alt": "stun grenade"
-  },
-  {
    "name": "MP-APS",
    "url": "/gadgets/deployables/mp-aps/",
    "cat": "DEPLOYABLES",
    "alt": "missile intercept system"
-  },
-  {
-   "name": "MTN-55",
-   "url": "/gadgets/throwables/mtn-55/",
-   "cat": "THROWABLES",
-   "alt": "throwable proximity detector mtn-55"
   },
   {
    "name": "NVO-228E",
@@ -493,12 +487,6 @@
    "alt": ""
   },
   {
-   "name": "SCG-24",
-   "url": "/gadgets/throwables/scg-24/",
-   "cat": "THROWABLES",
-   "alt": "anti-vehicle grenade scg-24"
-  },
-  {
    "name": "SCW-10",
    "url": "/weapons/smgs/scw-10/",
    "cat": "SMGS",
@@ -547,6 +535,12 @@
    "alt": "air-defense launcher"
   },
   {
+   "name": "Smoke Grenade",
+   "url": "/gadgets/throwables/m18/",
+   "cat": "THROWABLES",
+   "alt": "smoke grenade m18"
+  },
+  {
    "name": "SOR-300SC",
    "url": "/weapons/carbines/sor-300sc/",
    "cat": "CARBINES",
@@ -565,10 +559,10 @@
    "alt": "incendiary-round shotgun"
   },
   {
-   "name": "Steel Wing",
-   "url": "/gadgets/throwables/steel-wing/",
+   "name": "Stun Grenade",
+   "url": "/gadgets/throwables/mk141/",
    "cat": "THROWABLES",
-   "alt": "throwing knife steel wing"
+   "alt": "stun grenade"
   },
   {
    "name": "SV-98",
@@ -595,6 +589,18 @@
    "alt": "assault ladder"
   },
   {
+   "name": "Throwable Proximity Detector",
+   "url": "/gadgets/throwables/mtn-55/",
+   "cat": "THROWABLES",
+   "alt": "throwable proximity detector mtn-55"
+  },
+  {
+   "name": "Throwing Knife",
+   "url": "/gadgets/throwables/steel-wing/",
+   "cat": "THROWABLES",
+   "alt": "throwing knife steel wing"
+  },
+  {
    "name": "TR-7",
    "url": "/weapons/assault-rifles/tr-7/",
    "cat": "ASSAULT RIFLES",
@@ -617,12 +623,6 @@
    "url": "/weapons/smgs/usg-90/",
    "cat": "SMGS",
    "alt": ""
-  },
-  {
-   "name": "V40",
-   "url": "/gadgets/throwables/v40/",
-   "cat": "THROWABLES",
-   "alt": "mini frag grenade v40"
   },
   {
    "name": "VCR-2",
