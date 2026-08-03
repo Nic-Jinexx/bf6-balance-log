@@ -1,14 +1,14 @@
 {
   "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 90 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
   "slug": "tarantula-alx",
-  "name": "Tarantula ALX",
+  "name": "Assault Ladder",
   "branch": "gadgets",
   "subcategory": "deployables",
   "order": 1,
   "aliases": [
     "assault ladder"
   ],
-  "blurb": "Assault Ladder",
+  "blurb": "Tarantula ALX",
   "class": "Assault",
   "traits": [],
   "description": {

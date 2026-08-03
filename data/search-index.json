@@ -31,6 +31,18 @@
    "alt": "anti-vehicle grenade scg-24"
   },
   {
+   "name": "Anti-Vehicle Mine",
+   "url": "/gadgets/deployables/m15/",
+   "cat": "DEPLOYABLES",
+   "alt": "anti-vehicle mine"
+  },
+  {
+   "name": "Assault Ladder",
+   "url": "/gadgets/deployables/tarantula-alx/",
+   "cat": "DEPLOYABLES",
+   "alt": "assault ladder"
+  },
+  {
    "name": "B36A4",
    "url": "/weapons/assault-rifles/b36a4/",
    "cat": "ASSAULT RIFLES",
@@ -55,18 +67,6 @@
    "alt": ""
   },
   {
-   "name": "CSB IV",
-   "url": "/gadgets/tools/csb-iv/",
-   "cat": "TOOLS",
-   "alt": "eod bot csb iv"
-  },
-  {
-   "name": "CSS Bundle",
-   "url": "/gadgets/deployables/css-bundle/",
-   "cat": "DEPLOYABLES",
-   "alt": "vehicle supply crate"
-  },
-  {
    "name": "CZ3A1",
    "url": "/weapons/smgs/cz3a1/",
    "cat": "SMGS",
@@ -79,10 +79,16 @@
    "alt": ""
   },
   {
-   "name": "DGMK4",
-   "url": "/gadgets/tools/dgmk4/",
+   "name": "Defibrillator",
+   "url": "/gadgets/tools/powerpulse/",
    "cat": "TOOLS",
-   "alt": "hardware suppression system"
+   "alt": "defibrillator powerpulse"
+  },
+  {
+   "name": "Deploy Beacon",
+   "url": "/gadgets/deployables/qlink-6/",
+   "cat": "DEPLOYABLES",
+   "alt": "deploy beacon"
   },
   {
    "name": "DRS-IAR",
@@ -97,6 +103,12 @@
    "alt": "f88 ef-88"
   },
   {
+   "name": "EOD Bot",
+   "url": "/gadgets/tools/csb-iv/",
+   "cat": "TOOLS",
+   "alt": "eod bot csb iv"
+  },
+  {
    "name": "EOD Bot Arm",
    "url": "/weapons/melee/eod-bot-arm/",
    "cat": "MELEE",
@@ -107,12 +119,6 @@
    "url": "/weapons/sidearms/es-57/",
    "cat": "SIDEARMS",
    "alt": ""
-  },
-  {
-   "name": "Field Dummy No.25",
-   "url": "/gadgets/deployables/field-dummy-25/",
-   "cat": "DEPLOYABLES",
-   "alt": "sniper decoy"
   },
   {
    "name": "Flash Grenade",
@@ -133,12 +139,6 @@
    "alt": ""
   },
   {
-   "name": "Goliath Compact",
-   "url": "/gadgets/deployables/goliath-compact/",
-   "cat": "DEPLOYABLES",
-   "alt": "supply pouch"
-  },
-  {
    "name": "GPDIS",
    "url": "/gadgets/deployables/gpdis/",
    "cat": "DEPLOYABLES",
@@ -155,6 +155,18 @@
    "url": "/weapons/dmrs/grt-cps/",
    "cat": "DMRS",
    "alt": ""
+  },
+  {
+   "name": "Handheld Jammer",
+   "url": "/gadgets/tools/manet-dis-5/",
+   "cat": "TOOLS",
+   "alt": "handheld jammer"
+  },
+  {
+   "name": "Hardware Suppression System",
+   "url": "/gadgets/tools/dgmk4/",
+   "cat": "TOOLS",
+   "alt": "hardware suppression system"
   },
   {
    "name": "Hunting Knife",
@@ -211,22 +223,16 @@
    "alt": "l85"
   },
   {
-   "name": "LMR27",
-   "url": "/weapons/dmrs/lmr27/",
-   "cat": "DMRS",
-   "alt": ""
-  },
-  {
-   "name": "LTLM II",
+   "name": "Laser Designator",
    "url": "/gadgets/tools/ltlm-ii/",
    "cat": "TOOLS",
    "alt": "laser designator"
   },
   {
-   "name": "LWCMS",
-   "url": "/gadgets/deployables/lwcms/",
-   "cat": "DEPLOYABLES",
-   "alt": "portable mortar"
+   "name": "LMR27",
+   "url": "/weapons/dmrs/lmr27/",
+   "cat": "DMRS",
+   "alt": ""
   },
   {
    "name": "M/60",
@@ -257,12 +263,6 @@
    "url": "/gadgets/launchers/m136-at/",
    "cat": "LAUNCHERS",
    "alt": "aim-guided launcher"
-  },
-  {
-   "name": "M15",
-   "url": "/gadgets/deployables/m15/",
-   "cat": "DEPLOYABLES",
-   "alt": "anti-vehicle mine"
   },
   {
    "name": "M16A4",
@@ -373,12 +373,6 @@
    "alt": ""
   },
   {
-   "name": "MANET-DIS 5",
-   "url": "/gadgets/tools/manet-dis-5/",
-   "cat": "TOOLS",
-   "alt": "handheld jammer"
-  },
-  {
    "name": "Maxguard 900",
    "url": "/gadgets/deployables/maxguard-900/",
    "cat": "DEPLOYABLES",
@@ -421,10 +415,10 @@
    "alt": ""
   },
   {
-   "name": "Powerpulse",
-   "url": "/gadgets/tools/powerpulse/",
-   "cat": "TOOLS",
-   "alt": "defibrillator powerpulse"
+   "name": "Portable Mortar",
+   "url": "/gadgets/deployables/lwcms/",
+   "cat": "DEPLOYABLES",
+   "alt": "portable mortar"
   },
   {
    "name": "PP-19",
@@ -463,10 +457,10 @@
    "alt": "qbz192 qbz"
   },
   {
-   "name": "QLINK 6",
-   "url": "/gadgets/deployables/qlink-6/",
-   "cat": "DEPLOYABLES",
-   "alt": "deploy beacon"
+   "name": "Recon Drone",
+   "url": "/gadgets/tools/xfgm-6d/",
+   "cat": "TOOLS",
+   "alt": "recon drone"
   },
   {
    "name": "RPG-7V2",
@@ -541,6 +535,12 @@
    "alt": "smoke grenade m18"
   },
   {
+   "name": "Sniper Decoy",
+   "url": "/gadgets/deployables/field-dummy-25/",
+   "cat": "DEPLOYABLES",
+   "alt": "sniper decoy"
+  },
+  {
    "name": "SOR-300SC",
    "url": "/weapons/carbines/sor-300sc/",
    "cat": "CARBINES",
@@ -565,6 +565,12 @@
    "alt": "stun grenade"
   },
   {
+   "name": "Supply Pouch",
+   "url": "/gadgets/deployables/goliath-compact/",
+   "cat": "DEPLOYABLES",
+   "alt": "supply pouch"
+  },
+  {
    "name": "SV-98",
    "url": "/weapons/sniper-rifles/sv-98/",
    "cat": "SNIPER RIFLES",
@@ -581,12 +587,6 @@
    "url": "/weapons/dmrs/svk-86/",
    "cat": "DMRS",
    "alt": ""
-  },
-  {
-   "name": "Tarantula ALX",
-   "url": "/gadgets/deployables/tarantula-alx/",
-   "cat": "DEPLOYABLES",
-   "alt": "assault ladder"
   },
   {
    "name": "Throwable Proximity Detector",
@@ -607,7 +607,7 @@
    "alt": "tr7"
   },
   {
-   "name": "TRCRV2",
+   "name": "Tracer Dart",
    "url": "/gadgets/tools/trcrv2/",
    "cat": "TOOLS",
    "alt": "tracer dart"
@@ -631,6 +631,12 @@
    "alt": "vcr2"
   },
   {
+   "name": "Vehicle Supply Crate",
+   "url": "/gadgets/deployables/css-bundle/",
+   "cat": "DEPLOYABLES",
+   "alt": "vehicle supply crate"
+  },
+  {
    "name": "VSSM",
    "url": "/weapons/dmrs/vssm/",
    "cat": "DMRS",
@@ -647,12 +653,6 @@
    "url": "/gadgets/launchers/x95-bre/",
    "cat": "LAUNCHERS",
    "alt": "breaching projectile launcher"
-  },
-  {
-   "name": "XFGM-6D",
-   "url": "/gadgets/tools/xfgm-6d/",
-   "cat": "TOOLS",
-   "alt": "recon drone"
   }
  ]
 }

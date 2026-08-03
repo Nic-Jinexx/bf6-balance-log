@@ -1,14 +1,14 @@
 {
   "_comment": "Transcribed from an in-game screenshot taken 2026-08-01 (Steam capture index 114 in the 16:03 run). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the model designation because that is what EA's patch notes use.",
   "slug": "lwcms",
-  "name": "LWCMS",
+  "name": "Portable Mortar",
   "branch": "gadgets",
   "subcategory": "deployables",
   "order": 9,
   "aliases": [
     "portable mortar"
   ],
-  "blurb": "Portable Mortar",
+  "blurb": "LWCMS",
   "class": "Support",
   "traits": [],
   "description": {
