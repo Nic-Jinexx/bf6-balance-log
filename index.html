@@ -563,7 +563,7 @@ html{-webkit-text-size-adjust:100%}
 </details>
 </details>
 <details class="branch b-gadgets">
-<summary>Gadgets<span class="cnt">41</span></summary>
+<summary>Gadgets<span class="cnt">42</span></summary>
 <details class="sub">
 <summary>Throwables<span class="cnt">9</span></summary>
 <a class="leaf" href="/gadgets/throwables/m67/">Fragmentation Grenade</a>
@@ -577,7 +577,7 @@ html{-webkit-text-size-adjust:100%}
 <a class="leaf" href="/gadgets/throwables/steel-wing/">Throwing Knife</a>
 </details>
 <details class="sub">
-<summary>Launchers<span class="cnt">11</span></summary>
+<summary>Launchers<span class="cnt">12</span></summary>
 <a class="leaf" href="/gadgets/launchers/x95-bre/">X95 BRE</a>
 <a class="leaf" href="/gadgets/launchers/m320a1-he/">M320A1 HE</a>
 <a class="leaf" href="/gadgets/launchers/m320a1-thrm/">M320A1 THRM</a>
@@ -589,6 +589,7 @@ html{-webkit-text-size-adjust:100%}
 <a class="leaf" href="/gadgets/launchers/9k38-igla/">9K38 Igla</a>
 <a class="leaf" href="/gadgets/launchers/m320a1-smk/">M320A1 SMK</a>
 <a class="leaf" href="/gadgets/launchers/sich-g1-wp/">SICH G1 WP</a>
+<a class="leaf" href="/gadgets/launchers/mas-148/">Long-Range Launcher</a>
 </details>
 <details class="sub">
 <summary>Deployables<span class="cnt">14</span></summary>
@@ -619,23 +620,18 @@ html{-webkit-text-size-adjust:100%}
 </details>
 </details>
 <details class="branch b-vehicles">
-<summary>Vehicles<span class="cnt">0</span></summary>
-<details class="sub empty">
-<summary>Ground<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
-</details>
-<details class="sub empty">
-<summary>Air<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
-</details>
-<details class="sub empty">
-<summary>Naval<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
-</details>
-<details class="sub empty">
-<summary>Transport<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
-</details>
+<summary>Vehicles<span class="cnt">11</span></summary>
+<a class="leaf" href="/vehicles/main-battle-tank/">Main Battle Tank</a>
+<a class="leaf" href="/vehicles/infantry-fighting-vehicle/">Infantry Fighting Vehicle</a>
+<a class="leaf" href="/vehicles/light-ground-transport/">Light Ground Transport</a>
+<a class="leaf" href="/vehicles/armored-transport/">Armored Transport</a>
+<a class="leaf" href="/vehicles/mobile-anti-air/">Mobile Anti-Air</a>
+<a class="leaf" href="/vehicles/attack-helicopter/">Attack Helicopter</a>
+<a class="leaf" href="/vehicles/scout-helicopter/">Scout Helicopter</a>
+<a class="leaf" href="/vehicles/transport-helicopter/">Transport Helicopter</a>
+<a class="leaf" href="/vehicles/attack-jet/">Attack Jet</a>
+<a class="leaf" href="/vehicles/fighter-jet/">Fighter Jet</a>
+<a class="leaf" href="/vehicles/patrol-boat/">Patrol Boat</a>
 </details>
 <details class="branch b-classes">
 <summary>Classes<span class="cnt">0</span></summary>
@@ -1718,7 +1714,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
 <li>Thermal Smoke Discharge now damages nearby enemies correctly when the vehicle is positioned on a slope.</li>
-<li>Main Battle Tank Canister Shells no longer incorrectly change into Aim-Guided Shells when switching between primary and secondary weapons during a reload.</li>
+<li data-item="main-battle-tank">Main Battle Tank Canister Shells no longer incorrectly change into Aim-Guided Shells when switching between primary and secondary weapons during a reload.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-1-5" target="_blank" rel="noopener">Battlefield 6 Game Update 1.4.1.5</a>, posted Aug 3, 2026</div>
 </div>
@@ -1744,7 +1740,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
 <li>ATPs now reset team ownership correctly when nearby friendlies are downed.</li>
-<li>Attack Helicopter Heavy Rocket damage increased from 94-250 to 120-320 against tanks, from 300 to 356 against helicopters, and from 450 to 520 against jets.</li>
+<li data-item="attack-helicopter">Attack Helicopter Heavy Rocket damage increased from 94-250 to 120-320 against tanks, from 300 to 356 against helicopters, and from 450 to 520 against jets.</li>
 <li>Camera transitions when exiting a tank after using scoped turret view no longer clip through terrain.</li>
 <li>Emergency Countermeasures cooldown acceleration now remains active until Countermeasures are available again.</li>
 <li>Emergency Countermeasures cooldown acceleration reduced from 2x to 1.5x.</li>
@@ -1755,13 +1751,13 @@ html{-webkit-text-size-adjust:100%}
 <li>Radio selection now works correctly when using a controller.</li>
 <li data-item="rpg-7v2">RPG-7V2 damage increased from 173-460 to 188-500 against tanks, and from 1035 to 1125 against helicopters.</li>
 <li>The Smoke Generator now provides damage reduction benefits similar to Thermal Smoke, causing impact damage against vehicles inside the smoke cloud to register as minimum-angle hits.</li>
-<li>MBT 120mm APFSDS Rounds damage reduced from 282-750 to 244-650 against tanks, from 600 to 520 against helicopters, and from 750 to 650 against jets.</li>
-<li>MBT 120mm HEAT-MP-T Rounds total blast radius increased from 4m to 5m, and lethal radius increased from 1m to 1.25m.</li>
-<li>MBT Aim-Guided Shell damage increased from 235-625 to 244-650 against tanks, and from 700 to 720 against helicopters.</li>
-<li>IFV AP Shell initial velocity increased from 375 to 445 metres per second.</li>
-<li>IFV AP Shells now pierce the Projectile Intercept System.</li>
-<li>IFV AP Shells rate of fire increased from 120 to 160 rounds per minute.</li>
-<li>IFV Lock-Guided Missile damage increased from 390 to 450 against tanks, and from 845 to 975 against helicopters.</li>
+<li data-item="main-battle-tank">MBT 120mm APFSDS Rounds damage reduced from 282-750 to 244-650 against tanks, from 600 to 520 against helicopters, and from 750 to 650 against jets.</li>
+<li data-item="main-battle-tank">MBT 120mm HEAT-MP-T Rounds total blast radius increased from 4m to 5m, and lethal radius increased from 1m to 1.25m.</li>
+<li data-item="main-battle-tank">MBT Aim-Guided Shell damage increased from 235-625 to 244-650 against tanks, and from 700 to 720 against helicopters.</li>
+<li data-item="infantry-fighting-vehicle">IFV AP Shell initial velocity increased from 375 to 445 metres per second.</li>
+<li data-item="infantry-fighting-vehicle">IFV AP Shells now pierce the Projectile Intercept System.</li>
+<li data-item="infantry-fighting-vehicle">IFV AP Shells rate of fire increased from 120 to 160 rounds per minute.</li>
+<li data-item="infantry-fighting-vehicle">IFV Lock-Guided Missile damage increased from 390 to 450 against tanks, and from 845 to 975 against helicopters.</li>
 <li>Armour Piercing Anti-Air Ammunition damage against aircraft increased from 160 to 200.</li>
 <li>General Purpose Anti-Air Ammunition damage against aircraft increased from 110 to 130.</li>
 <li>High Velocity Anti-Air Ammunition damage increased from 48 to 52 against helicopters, and from 60 to 65 against jets.</li>
@@ -1782,10 +1778,10 @@ html{-webkit-text-size-adjust:100%}
 <li>Air vehicle radar and minimap range have been expanded when radar is available.</li>
 <li>All ground transports other than bikes now have crawl speed functionality when using keyboard input, similar to tanks.</li>
 <li>Ground transports, excluding bikes, now support crawl speed functionality when using keyboard input, similar to tanks.</li>
-<li>Increased the Anti-Personnel Shell pellet count for the MBT from 16 to 32.</li>
-<li>Mobile Anti-Air now has new secondary weapon options with High Velocity Rockets and Laser-Guided AA Missiles.</li>
-<li>Naming for the PAX Scout Helicopter has been updated to display its correct name, MH-350.</li>
-<li>The Attack Helicopter Radar System is now innate, and Thermal Optics have been added</li>
+<li data-item="main-battle-tank">Increased the Anti-Personnel Shell pellet count for the MBT from 16 to 32.</li>
+<li data-item="mobile-anti-air">Mobile Anti-Air now has new secondary weapon options with High Velocity Rockets and Laser-Guided AA Missiles.</li>
+<li data-item="scout-helicopter">Naming for the PAX Scout Helicopter has been updated to display its correct name, MH-350.</li>
+<li data-item="attack-helicopter">The Attack Helicopter Radar System is now innate, and Thermal Optics have been added</li>
 <li>The ATP Vehicle can now take damage from mounted HMGs and vehicle-mounted LMG weapons.</li>
 <li>ATP Vehicle Mine Countermeasures now always play a visual effect when detonating mines.</li>
 <li>High Velocity Rockets have extremely limited guidance, but are fired rapidly with a higher velocity than other rockets. They require good aim to be effective, but have a higher potential damage output than other options.</li>
@@ -1799,7 +1795,7 @@ html{-webkit-text-size-adjust:100%}
 <div class="body">
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
-<li>Teammates can now deploy on the AH-6 LittleBird when the gunner seat is occupied.</li>
+<li data-item="scout-helicopter">Teammates can now deploy on the AH-6 LittleBird when the gunner seat is occupied.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-5" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.5</a>, posted May 22, 2026</div>
 </div>
@@ -1811,7 +1807,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
 <li>Added previously missing "Activate Equipment Slot 1" to Transport Vehicle keybindings</li>
-<li>Camera on light ground transports now pulls further out at speed to improve driving visibility.</li>
+<li data-item="light-ground-transport">Camera on light ground transports now pulls further out at speed to improve driving visibility.</li>
 <li>Corrected an issue where some vehicles remained in a critical health state after being repaired, resulting in slower health regeneration than intended.</li>
 <li>Corrected an issue where the first-person HUD range finder of the tank would visually interpolate to the actual distance when switching from third- to first-person</li>
 <li>Corrected an issue where the player would be kicked off the Dirt Bike when doing a flip.</li>
@@ -1830,7 +1826,7 @@ html{-webkit-text-size-adjust:100%}
 <li data-item="m15">Tank type vehicles are no longer immobilized by taking high damage (Anti Tank mines will still immobilize Tanks).</li>
 <li>The ground vehicle boost bar is no longer emptied when interrupting boost.</li>
 <li>Boost can now be re-applied even when the bar is recharging, except when it has been fully emptied.</li>
-<li>Turret speeds for the MBT and IFV have been modestly improved.</li>
+<li data-item="infantry-fighting-vehicle main-battle-tank">Turret speeds for the MBT and IFV have been modestly improved.</li>
 <li>Aiming in first-person and zoomed views in the tanks has been tuned to be faster and more responsive.</li>
 <li>Lock-on weapons now always do consistent damage, ignoring zones and angles. Zone and angle damage is reserved for weapons which are manually aimed by players.</li>
 <li>Most land vehicle explosive weapons now have a minimum explosive damage of 20%. This does not increase lethal or total radius, but increases damage at the edges of explosive radius to make hits to kill more consistent.</li>
@@ -1847,15 +1843,15 @@ html{-webkit-text-size-adjust:100%}
 <li>Aim-Guided Shell turning rate reduced from 12.5 to 6 degrees per second.</li>
 <li>Aim-Guided Shells now deal 235-625 damage against tanks, 700 against helicopters, and 1000 against jets.</li>
 <li>Remains lethal against soldiers within 2m.</li>
-<li>Increased all IFV Cannon Reload times from 2.4 to 2.75.</li>
+<li data-item="infantry-fighting-vehicle">Increased all IFV Cannon Reload times from 2.4 to 2.75.</li>
 <li>HEI-T Rounds now deal 10-30 damage against tanks, 100 against helicopters, and 150 against jets.</li>
-<li>Decreased the IFV HE Rounds rate of fire from 200 to 180 RPM.</li>
-<li>Increased the Drag of IFV HE Rounds.</li>
+<li data-item="infantry-fighting-vehicle">Decreased the IFV HE Rounds rate of fire from 200 to 180 RPM.</li>
+<li data-item="infantry-fighting-vehicle">Increased the Drag of IFV HE Rounds.</li>
 <li>AP shells now deal 23-60 damage against tanks, 100 against helicopters, and 100 against jets.</li>
 <li>Decreased the APDS Rounds magazine capacity from 12 to 10.</li>
 <li>Decreased the APDS Rounds rate of fire from 200 to 120 RPM.</li>
-<li>Increased the IFV Canister Rounds magazine capacity from 12 to 16.</li>
-<li>Increased the IFV Canister Rounds rate of fire from 200 to 240 RPM.</li>
+<li data-item="infantry-fighting-vehicle">Increased the IFV Canister Rounds magazine capacity from 12 to 16.</li>
+<li data-item="infantry-fighting-vehicle">Increased the IFV Canister Rounds rate of fire from 200 to 240 RPM.</li>
 <li>Lock-Guided Missiles now deal 390 damage against tanks, 845 against helicopters, and 1000 against jets.</li>
 <li>Light Rockets now deal 75-200 damage against tanks, 550 against helicopters, and 700 against jets.</li>
 <li>Reduced minimum damage of RWS &amp; Coaxial LMG from 21 to 19.</li>
@@ -1874,18 +1870,18 @@ html{-webkit-text-size-adjust:100%}
 <li>Helicopter Smart Rocket area of effect reduced from 5 to 4.75 meters.</li>
 <li>Heavy Rockets now deal 94-250 damage against tanks, 300 against helicopters, and 450 against jets.</li>
 <li>Helicopter Heavy Rocket area of effect reduced from 5.5 to 5.25 meters.</li>
-<li>Attack Helicopter M41A7 TOW2 missiles maximum speed increased from 90 to 120 m/s. Ground vehicle TOW missiles remain at 90 m/s.</li>
-<li>Removed projectile velocity inheritance from Transport Helicopter side gunner seats. This removes the need to ‘lag’ shots when firing from a fast moving helicopter.</li>
-<li>Attack Jet Mk82 High Drag Bombs now deal 300-400 damage against tanks, 1080 against helicopters, and 1000 against jets.</li>
-<li>Fighter Jet GBU-39/B Small Diameter Bombs now deal 410-535 damage against tanks, 1455 against helicopters, and 1000 against jets.</li>
+<li data-item="attack-helicopter">Attack Helicopter M41A7 TOW2 missiles maximum speed increased from 90 to 120 m/s. Ground vehicle TOW missiles remain at 90 m/s.</li>
+<li data-item="transport-helicopter">Removed projectile velocity inheritance from Transport Helicopter side gunner seats. This removes the need to ‘lag’ shots when firing from a fast moving helicopter.</li>
+<li data-item="attack-jet">Attack Jet Mk82 High Drag Bombs now deal 300-400 damage against tanks, 1080 against helicopters, and 1000 against jets.</li>
+<li data-item="fighter-jet">Fighter Jet GBU-39/B Small Diameter Bombs now deal 410-535 damage against tanks, 1455 against helicopters, and 1000 against jets.</li>
 <li>No longer increases the damage resistance of the vehicle.</li>
 <li>No longer increases the weight or reduces the speed of the vehicle.</li>
 <li>When at low health, accelerates the cooldown of Countermeasure equipment.</li>
-<li>Targeting Jammers for the IFV &amp; Mobile AA have their locking resistance increased from 30% to 40%.</li>
-<li>Targeting Jammers for the IFV &amp; Mobile AA no longer deactivate when firing.</li>
-<li>Targeting Jammers for IFV &amp; Mobile AA now deactivate when laser painted.</li>
-<li>Targeting Jammers for IFV &amp; Mobile AA now deactivate when using a lock on weapon.</li>
-<li>Targeting Jammers for IFV &amp; Mobile AA deactivation time increased from 4.5 to 10 seconds.</li>
+<li data-item="infantry-fighting-vehicle">Targeting Jammers for the IFV &amp; Mobile AA have their locking resistance increased from 30% to 40%.</li>
+<li data-item="infantry-fighting-vehicle">Targeting Jammers for the IFV &amp; Mobile AA no longer deactivate when firing.</li>
+<li data-item="infantry-fighting-vehicle">Targeting Jammers for IFV &amp; Mobile AA now deactivate when laser painted.</li>
+<li data-item="infantry-fighting-vehicle">Targeting Jammers for IFV &amp; Mobile AA now deactivate when using a lock on weapon.</li>
+<li data-item="infantry-fighting-vehicle">Targeting Jammers for IFV &amp; Mobile AA deactivation time increased from 4.5 to 10 seconds.</li>
 <li>Now passively provides short duration spotting upon receiving damage. This short spot is not shared with teammates.</li>
 <li>Can be manually activated in order to extend the duration of currently spotted targets, and share the spotting information with your teammates.</li>
 <li>When activated, spotted vehicles are also laser designated for the duration.</li>
@@ -1894,10 +1890,10 @@ html{-webkit-text-size-adjust:100%}
 <li>Reduced the cooldown of the Smoke Screen from 20 to 16 seconds.</li>
 <li>The smoke will now deal moderate damage to nearby enemy infantry who remain within the cloud. This damage will also destroy C-4.</li>
 <li>While remaining inside of your thermal smoke, all hits will be registered as minimum damage hits (75% damage).</li>
-<li data-item="ltlm-ii m18">The IFV no longer has the laser designator equipped by default, it now shares a slot with the Mines Countermeasures &amp; Smoke grenades.</li>
-<li>The Mine Countermeasures, previously available only to the MBT &amp; APT, is now available to the IFV.</li>
-<li>The Mobile Command Centre Passive, previously exclusive to the APT, is now available to the IFV.</li>
-<li>The Transport Helicopter now has the Improved Armor passive equipped by default. This functions identically to the Attack Helicopter’s version of the same passive, reducing the amount of damage taken from small arms fire.</li>
+<li data-item="infantry-fighting-vehicle ltlm-ii m18">The IFV no longer has the laser designator equipped by default, it now shares a slot with the Mines Countermeasures &amp; Smoke grenades.</li>
+<li data-item="infantry-fighting-vehicle main-battle-tank">The Mine Countermeasures, previously available only to the MBT &amp; APT, is now available to the IFV.</li>
+<li data-item="infantry-fighting-vehicle">The Mobile Command Centre Passive, previously exclusive to the APT, is now available to the IFV.</li>
+<li data-item="attack-helicopter transport-helicopter">The Transport Helicopter now has the Improved Armor passive equipped by default. This functions identically to the Attack Helicopter’s version of the same passive, reducing the amount of damage taken from small arms fire.</li>
 <li>Emergency Repair now heals over time instead of healing instantly upon activation.</li>
 <li>Reduced the activation time of Projectile Intercept System from 1s to 0.6s on land vehicles.</li>
 </ul>
@@ -1910,11 +1906,11 @@ html{-webkit-text-size-adjust:100%}
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.3.0&rdquo;: New Content Arrives : Operation Augur arrives alongside the LTV, the Ripper 14”, and a new Battle Pass Bonus Path that expands the rewards available during the fight for survival. Progression Feels More Rewarding : Weapon XP and Vehicle XP are now earned through active use alongside kills and assists, XP rates have been increased slightly across Multiplayer, and Battle Royale and Gauntlet progression now place more weight on time spent in a match, with Battle Royale also awarding higher scores for kills and damage assists. Battle Royale and Gauntlet Improvements : Loot flow has been updated, Strike Packages and Armour Plate availability have been rebalanced, and a wider pass on challenge tracking, objective progression, and End of Round presentation helps both modes play and reward more consistently. Combat Feedback and Gameplay Clarity : Incoming hit audio is now clearer, rapid damage is easier to read, projectile and tracer behaviour is more consistent, and network warning indicators now provide better visibility during live combat. Weapons and Gadgets Receive a Broad Polish Pass : Defibrillators and the AJ-03 COAG Med Pen have been updated, while attachments, animations, unlock presentation, and challenge tracking have all seen further improvements. UI, HUD and Front-End Improvements : Menus, challenges, loadouts, End of Round screens, localisation, Store presentation, and Battle Pass readability have all been updated to improve clarity and consistency across the experience. Portal, AI, Audio and Settings Enhancements : Bot support has been expanded across Multiplayer and Operations, Portal tools and web app behaviour have been improved, audio has received further polish, and new controller tuning support has been added through the Deadzones Draw Tool.</p>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
-<li>Added the LTV, a new NATO variant of the Traverser Mark 2 APC.</li>
+<li data-item="armored-transport">Added the LTV, a new NATO variant of the Traverser Mark 2 APC.</li>
 <li>Camera transitions now snap back to the soldier instantly when redeploying or dying when remote controlling a vehicle.</li>
 <li>Fixed an issue where land vehicles moving at crawl speed could still trigger mines when travelling across bumpy terrain.</li>
 <li>Improved the Legion CWZ Automated AA to help prevent enemy jets from being stolen or spawn-killed.</li>
-<li>Improved the MBT decal customisation flow so the camera point of view now returns to the selected decal position after leaving Inspect View.</li>
+<li data-item="main-battle-tank">Improved the MBT decal customisation flow so the camera point of view now returns to the selected decal position after leaving Inspect View.</li>
 <li>Restored the “Relentless Trample” vehicle decal so it now appears in-game.</li>
 </ul>
 <p class="grp"><b>VEHICLES · RHIB</b></p>
@@ -1926,16 +1922,16 @@ html{-webkit-text-size-adjust:100%}
 <li>Updated the RHIB’s speed and RPM gauges so they now function correctly.</li>
 <li>Updated boat hull simulation to improve how the RHIB interacts with the water surface.</li>
 <li>Adjusted Heavy Rotary Cannon overheat mechanic to compensate for reduced rate of fire.</li>
-<li>Extended Scout Helicopter light rocket ammo regeneration time from 21 to 27 seconds.</li>
-<li>Extended Scout Helicopter smart rocket ammo regeneration time from 16 to 20 seconds.</li>
+<li data-item="scout-helicopter">Extended Scout Helicopter light rocket ammo regeneration time from 21 to 27 seconds.</li>
+<li data-item="scout-helicopter">Extended Scout Helicopter smart rocket ammo regeneration time from 16 to 20 seconds.</li>
 <li>Grenade Launcher Muzzle Velocity Increased.</li>
 <li>Grenade Launcher now has infinite reserve ammo.</li>
 <li>Heavy Rotary Cannon falloff range shortened to 45m.</li>
 <li>Heavy Rotary Cannon rate of fire from 1000 to 800 RPM.</li>
-<li>Reduced lethal range of Attack Helicopter Heavy Rocket explosion from 2m to 1m</li>
-<li>Reduced lethal range of Upgraded Attack Helicopter Heavy Rocket explosion from 2.8m to 2m.</li>
-<li>Reduced the inner explosive radius of all scout helicopter rockets from 1m to 0m.</li>
-<li>Reduced the radius of Attack Helicopter Heavy Rocket explosion from 7m to 5.5m</li>
+<li data-item="attack-helicopter">Reduced lethal range of Attack Helicopter Heavy Rocket explosion from 2m to 1m</li>
+<li data-item="attack-helicopter">Reduced lethal range of Upgraded Attack Helicopter Heavy Rocket explosion from 2.8m to 2m.</li>
+<li data-item="scout-helicopter">Reduced the inner explosive radius of all scout helicopter rockets from 1m to 0m.</li>
+<li data-item="attack-helicopter">Reduced the radius of Attack Helicopter Heavy Rocket explosion from 7m to 5.5m</li>
 <li>Seismic Detector Radius increased from 16 to 36 meters.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 10, 2026</div>
@@ -1947,22 +1943,22 @@ html{-webkit-text-size-adjust:100%}
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
-<li>Added vehicle “deturtling” functionality for light transport vehicles. Using steering controls now apply rotational force to the vehicle, allowing it to flip over and continue driving.</li>
+<li data-item="light-ground-transport">Added vehicle “deturtling” functionality for light transport vehicles. Using steering controls now apply rotational force to the vehicle, allowing it to flip over and continue driving.</li>
 <li>Added the M1030-M1 and TM/O 450 Dirt Bikes.</li>
-<li>Corrected missing decals for the MH350 Scout Helicopter (PAX).</li>
-<li>Decreased speed of the IFV, MBT &amp; Attack Heli Aim Guided Missiles.</li>
+<li data-item="scout-helicopter">Corrected missing decals for the MH350 Scout Helicopter (PAX).</li>
+<li data-item="attack-helicopter infantry-fighting-vehicle main-battle-tank">Decreased speed of the IFV, MBT &amp; Attack Heli Aim Guided Missiles.</li>
 <li>Improved decal zoom behaviour in vehicle customisation across multiple vehicle types.</li>
 <li>Improved helicopter landing stability to prevent the vehicle from sliding across surfaces.</li>
 <li>Improved physics for decorative parts of vehicle skins and how they react when taking damage.</li>
 <li>Improved transport vehicle camera behaviour when driving through objects.</li>
 <li>Improved vehicle camera collision to prevent environment clipping.</li>
 <li>Increased braking power for tanks.</li>
-<li>Increased health of the UH-79 by 20% across all multiplayer modes (excluding Battle Royale).</li>
+<li data-item="transport-helicopter">Increased health of the UH-79 by 20% across all multiplayer modes (excluding Battle Royale).</li>
 <li>Prevented entry into a capsized RHIB.</li>
-<li>Resolved an issue where scout helicopter tracers could be seen behind the muzzle.</li>
+<li data-item="scout-helicopter">Resolved an issue where scout helicopter tracers could be seen behind the muzzle.</li>
 <li>Resolved unintended player ejection from overturned vehicles.</li>
 <li>Restored driver zoom functionality for Transport Vehicles.</li>
-<li>Restricted scout helicopter passengers from using Engineer rocket launchers.</li>
+<li data-item="scout-helicopter">Restricted scout helicopter passengers from using Engineer rocket launchers.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.2.0</a>, posted Mar 13, 2026</div>
 </div>
@@ -1973,12 +1969,12 @@ html{-webkit-text-size-adjust:100%}
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.1.0&rdquo;: Weapon Balance and Recoil Improvements: Delivered a broad recoil tuning pass across automatic weapons, alongside targeted balance fixes to improve consistency, role clarity, and long-term weapon handling. Movement and Traversal Fixes: Improved soldier movement predictability with refined acceleration, slide and jump behaviour, smoother vaulting logic, and improved ladder animations in both first- and third-person. Vehicle and Gadget Reliability: Resolved multiple issues affecting vehicles and gadgets, including anti-vehicle interactions, drone behaviour, deployables, and vehicle damage feedback. Maps and Mode Fixes: Addressed numerous map exploits, traversal issues, capture logic problems, and world reset bugs across Conquest, Breakthrough, Strikepoint, Gauntlet, and other modes. UI, HUD and Progression Polish: Introducing a new stat screen in the Player Profile, as well as Improved clarity and reliability across the HUD, Battle Pass, challenges, End of Round flow, matchmaking, and party systems. Portal Stability and Tooling Updates: Fixed a wide range of issues affecting Portal creation tools, scripting, mutators, assets, exploits, and server stability. Audio, Visual and Stability Improvements: Improved audio reliability, visual consistency, cosmetic presentation, and overall game stability across platforms.</p>
 <p class="grp"><b>New Vehicle</b></p>
 <ul class="plain">
-<li>AH-6 Little Bird: The iconic attack helicopter returns for NATO forces, offering high mobility and lethal firepower in skilled hands.</li>
+<li data-item="attack-helicopter scout-helicopter">AH-6 Little Bird: The iconic attack helicopter returns for NATO forces, offering high mobility and lethal firepower in skilled hands.</li>
 </ul>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
 <li>Disabled angle-based damage mitigation on the Traverser Mark II to better reflect its lighter armour profile. It now takes consistent damage from all directions.</li>
-<li>Fixed an issue where attack helicopter rocket trails could disappear when firing at long distances.</li>
+<li data-item="attack-helicopter">Fixed an issue where attack helicopter rocket trails could disappear when firing at long distances.</li>
 <li>Fixed an issue where helicopter rotary cannon tracers could sometimes originate behind the muzzle.</li>
 <li>Fixed an issue where jet throttle input could remain active after ejecting from the aircraft.</li>
 <li>Fixed an issue where tank turret aiming speeds differed between first-person and third-person zoom views.</li>
@@ -2023,16 +2019,16 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
 <li>Fixed camera reset when entering an GDF-009 AA Stationary Gun after another user.</li>
-<li>Fixed clipping gunner weapons in IFV seats.</li>
-<li>Fixed faint metallic impact sound from M1A2 SEPv3 Main Battle Tank turret wreckage.</li>
-<li>Fixed several cases where IFV's MR Missile could do more damage than intended to MBT, IFV and AA vehicles</li>
-<li>Fixed inconsistent projectile video effects on the Abrams main gun.</li>
+<li data-item="infantry-fighting-vehicle">Fixed clipping gunner weapons in IFV seats.</li>
+<li data-item="main-battle-tank">Fixed faint metallic impact sound from M1A2 SEPv3 Main Battle Tank turret wreckage.</li>
+<li data-item="infantry-fighting-vehicle main-battle-tank">Fixed several cases where IFV's MR Missile could do more damage than intended to MBT, IFV and AA vehicles</li>
+<li data-item="main-battle-tank">Fixed inconsistent projectile video effects on the Abrams main gun.</li>
 <li>Fixed instant 180-degree turn after exiting a vehicle.</li>
 <li>Fixed missing scoring for Vehicle Supply when teammates received ammo.</li>
-<li>Fixed oversized hitbox on UH-79 Helicopter.</li>
-<li>Fixed passenger and gunner placement issues in the UH-79 Helicopter.</li>
+<li data-item="transport-helicopter">Fixed oversized hitbox on UH-79 Helicopter.</li>
+<li data-item="transport-helicopter">Fixed passenger and gunner placement issues in the UH-79 Helicopter.</li>
 <li>Fixed re-entry issues when mounting flipped Quad Bikes.</li>
-<li>Fixed unintended aim-assist from Attack Helicopters gunner missiles.</li>
+<li data-item="attack-helicopter">Fixed unintended aim-assist from Attack Helicopters gunner missiles.</li>
 <li>Fixed unresponsive joystick free-camera controls in transport vehicles.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.1.2.0</a>, posted Nov 17, 2025</div>
@@ -2044,7 +2040,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
 <li>Fixed missing haptic feedback when switching between tank weapons.</li>
-<li>Fixed a visual issue where the player’s hand clipped with the M1A2 SEPv3 handle when sitting in external seats.</li>
+<li data-item="main-battle-tank">Fixed a visual issue where the player’s hand clipped with the M1A2 SEPv3 handle when sitting in external seats.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-update-1-1-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.1.1.0</a>, posted Oct 24, 2025</div>
 </div>
@@ -2086,7 +2082,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Launchers that discard their tubes now continue to reload even if they are no longer the active weapon.</li>
 <li>RPG detonations underwater no longer create dirt impact effects.</li>
 <li data-item="eod-bot-arm sledgehammer">The EOD Bot Arm and the Sledgehammer can no longer be used while swimming.</li>
-<li>The MAS 148 Glaive can no longer lock on to vehicles through rocks or cliffs.</li>
+<li data-item="mas-148">The MAS 148 Glaive can no longer lock on to vehicles through rocks or cliffs.</li>
 <li data-item="sledgehammer">The Sledgehammer can no longer be used for quick swings while swimming.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.4.1.0</a>, posted Jul 16, 2026</div>
@@ -2129,12 +2125,12 @@ html{-webkit-text-size-adjust:100%}
 <li>Lock-on behaviour has been improved to reduce cases where targets were treated as closer than they actually were.</li>
 <li data-item="m18a1">M18A1 AP Mines no longer damages downed players in Multiplayer.</li>
 <li data-item="m18a1">M18A1 AP Mines trigger range and fragmentation damage range have been unified at approximately 3m, and Claymore fragmentation no longer deals self-damage.</li>
-<li>MAS 148 Glaive missile guidance is now more reliable, including improved tracking at low altitudes. If a missile loses tracking, such as after countermeasures are used, it will now continue towards the target’s last known position.</li>
+<li data-item="mas-148">MAS 148 Glaive missile guidance is now more reliable, including improved tracking at low altitudes. If a missile loses tracking, such as after countermeasures are used, it will now continue towards the target’s last known position.</li>
 <li data-item="rpg-7v2">Reworked the trajectory of the RPG-7V2 Projectile. Zeroing range reduced from 100m to 22m.</li>
 <li data-item="ltlm-ii">The LTLM II Portable Laser Designator can no longer be deployed unintentionally by releasing the zoom and fire buttons at the same time, or by repeatedly pressing fire while zooming and then releasing zoom.</li>
 <li data-item="dgmk4 xfgm-6d">The XFGM-6D Recon Drone targeting logic now follows the same behaviour as the DGMK4 Hardware Suppression System, allowing close targets to be destroyed through walls while distant targets require line of sight.</li>
 <li data-item="trcrv2">TRCRv2 Tracer Darts and Incendiary Airburst gadgets can now be fired while combat diving.</li>
-<li>Vehicle Supply Stations now also resupply missiles for the Mobile Anti-Air.</li>
+<li data-item="mobile-anti-air">Vehicle Supply Stations now also resupply missiles for the Mobile Anti-Air.</li>
 <li>Health has been reduced from 250 to 50.</li>
 <li>Placement animations now end correctly in first and third person when placement is unsuccessful.</li>
 <li>Placement no longer causes leg desync in third person.</li>
@@ -2169,7 +2165,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Corrected an issue where deploying the T-UGS would always switch players back to their Primary Weapon instead of their previously equipped item.</li>
 <li>Corrected an issue where the Incendiary Airburst could sometimes fail to properly detect and damage targets inside its burning smoke cloud.</li>
 <li data-item="csb-iv ltlm-ii lwcms xfgm-6d">Player-controlled gadgets, including the Portable Mortar, XFMG-6D Recon Drone, LTLM II Laser Designator, and the CSB IV EOD Bot, now only begin resupplying once the deployed gadget has been destroyed.</li>
-<li data-item="m15 ptkm-1r">PTKM-1R Acoustic Mines and M15 AV Mines no longer trigger for Light Transport or Personal Transport vehicles.</li>
+<li data-item="light-ground-transport m15 ptkm-1r">PTKM-1R Acoustic Mines and M15 AV Mines no longer trigger for Light Transport or Personal Transport vehicles.</li>
 <li data-item="m18a1">Tuned the M18A1 Claymore detection arc to better match the visible laser beams.</li>
 <li>Updated C-4 packs so they now deal 350 damage against tanks, 350 against helicopters, and 1000 against jets.</li>
 <li data-item="m136-at">Updated the M136 AT so they now deal 207-550 damage against tanks, 1000 against helicopters, and 1000 against jets.</li>
@@ -2219,7 +2215,7 @@ html{-webkit-text-size-adjust:100%}
 <li data-item="ltlm-ii mbt-law">Laser Designator no longer reduces lock-on time for anti-air missiles.</li>
 <li data-item="ltlm-ii mbt-law">Gadget now provides a consistent 20% increase to lock-on range across all locking weapons. This also applies to vehicle-mounted laser designators.</li>
 <li data-item="mbt-law">Mine Layer damage against tanks has been updated to 300.</li>
-<li data-item="mbt-law">Mine Layer no longer triggers on Light Transport or Personal Transport vehicles.</li>
+<li data-item="light-ground-transport mbt-law">Mine Layer no longer triggers on Light Transport or Personal Transport vehicles.</li>
 <li data-item="mbt-law">Mine Layer now glints at close range to help distinguish it from level props and debris.</li>
 <li data-item="mbt-law">Mine Layer stacking prevention radius has been increased from 1.5m to 5m.</li>
 <li data-item="csb-iv mbt-law">The EOD Bot now self-destructs when its out-of-bounds timer expires, when control ends while out of bounds, or when pushed out of bounds.</li>
@@ -2245,7 +2241,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Improved the audibility of the XFGM-6D Drone self destruct sound effects.</li>
 <li>Reduced the initial speed, acceleration and maximum speed of the RPG</li>
 <li>Reduced turning response of AT4 and TOW Missiles</li>
-<li>Reworked the MBT Guided Shell to make it faster but much less maneuverable.</li>
+<li data-item="main-battle-tank">Reworked the MBT Guided Shell to make it faster but much less maneuverable.</li>
 <li>Updated vehicle-hit scoring so RPG critical hits and regular hits no longer award the same score.</li>
 <li>Added third-person healing support while prone on your back. (you can now use the shot while on your back).</li>
 <li>Lowered the intensity of the on-screen effect and visual presentation.</li>
@@ -2406,8 +2402,8 @@ html{-webkit-text-size-adjust:100%}
 <div class="body">
 <p class="grp"><b>GADGETS</b></p>
 <ul class="plain">
-<li>Fixed a rare issue where the MAS 148 Glaive could block the first-person view during a combat dive.</li>
-<li>Fixed a MAS 148 Glaive visual issue during combat dives in first-person.</li>
+<li data-item="mas-148">Fixed a rare issue where the MAS 148 Glaive could block the first-person view during a combat dive.</li>
+<li data-item="mas-148">Fixed a MAS 148 Glaive visual issue during combat dives in first-person.</li>
 <li data-item="powerpulse">Fixed an issue where Defibrillators appeared floating during vaulting animations.</li>
 <li data-item="goliath-compact">Fixed an issue where the Supply Pouch would sometimes not resupply correctly.</li>
 <li>Deployable gadgets are not destroyed/removed from debris piles</li>
@@ -2705,21 +2701,21 @@ html{-webkit-text-size-adjust:100%}
 <li>Updated spawning behaviour for Battle Pickups: In Breakthrough, Battle Pickups now spawn when their associated sectors are enabled.</li>
 <li>In Conquest and Escalation, Battle Pickups now spawn when their associated capture points are owned by a team.</li>
 <li>Removed Defender vehicles in Sector 2 and Sector 3.</li>
-<li>Added an additional Attacker IFV in Sector 3.</li>
+<li data-item="infantry-fighting-vehicle">Added an additional Attacker IFV in Sector 3.</li>
 <li>Updated capture volumes across Sectors 1, 2, and 3 to support more consistent attacker progress.</li>
 <li>Removed Defender vehicles in all sectors.</li>
-<li>Adjusted Attacker vehicle counts: Sector 1: Reduced Attacker IFVs from 2 to 1; increased Attacker tanks from 1 to 2.</li>
-<li>Sector 2: Added 1 Attacker IFV.</li>
-<li>Sector 3: Added 1 Attacker IFVs.</li>
+<li data-item="infantry-fighting-vehicle">Adjusted Attacker vehicle counts: Sector 1: Reduced Attacker IFVs from 2 to 1; increased Attacker tanks from 1 to 2.</li>
+<li data-item="infantry-fighting-vehicle">Sector 2: Added 1 Attacker IFV.</li>
+<li data-item="infantry-fighting-vehicle">Sector 3: Added 1 Attacker IFVs.</li>
 <li>Updated capture volumes across all sectors to make attacking easier.</li>
-<li>Sector 2: Added 1 Defender tank and one Defender IFV.</li>
-<li>Sector 3: Added 1 Attacker IFV; removed Defender tank and light transport.</li>
+<li data-item="infantry-fighting-vehicle">Sector 2: Added 1 Defender tank and one Defender IFV.</li>
+<li data-item="infantry-fighting-vehicle light-ground-transport">Sector 3: Added 1 Attacker IFV; removed Defender tank and light transport.</li>
 <li>Updated capture volumes in both sectors to improve attacker flow.</li>
 <li>Sector 2: Adjusted Defender armour (added and removed tank spawns).</li>
-<li>Sector 3: Added 2 Attacker tanks and 1 Attacker IFV; removed the Defender tank.</li>
+<li data-item="infantry-fighting-vehicle">Sector 3: Added 2 Attacker tanks and 1 Attacker IFV; removed the Defender tank.</li>
 <li>Updated capture zones across affected sectors to support attacker momentum.</li>
 <li>Sector 3: Removed Defender tank.</li>
-<li>Sector 5: Added 2 Attacker IFVs; removed the Defender transport.</li>
+<li data-item="infantry-fighting-vehicle">Sector 5: Added 2 Attacker IFVs; removed the Defender transport.</li>
 <li>Updated capture volumes to improve attacker advancement.</li>
 <li>Added an additional Attacker tank in sector 1 and 3.</li>
 <li>Updated capture areas on B flag to improve sector push potential.</li>
@@ -2843,7 +2839,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Improved the clarity of player Ranks and Class during the Pre-Round sequence in Ranked Battle Royale.</li>
 <li>Players now receive RP correctly when a downed enemy disconnects before the kill is confirmed.</li>
 <li>Updated “End of Round” RP tally animations to improve scoring clarity.</li>
-<li>Vehicle Keycards, Main Battle Tanks (MBTs), and Infantry Fighting Vehicles (IFVs) are now removed in Ranked Battle Royale.</li>
+<li data-item="infantry-fighting-vehicle main-battle-tank">Vehicle Keycards, Main Battle Tanks (MBTs), and Infantry Fighting Vehicles (IFVs) are now removed in Ranked Battle Royale.</li>
 </ul>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
@@ -2938,7 +2934,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>GADGETS</b></p>
 <ul class="plain">
 <li>Gadgets placed on the extraction drone landing pad in Gauntlet are now destroyed when the drone lands.</li>
-<li>MAS 148 Glaive placement has been improved when dropped as loot in Battle Royale, preventing it from clipping into the ground.</li>
+<li data-item="mas-148">MAS 148 Glaive placement has been improved when dropped as loot in Battle Royale, preventing it from clipping into the ground.</li>
 </ul>
 <p class="grp"><b>MAP</b></p>
 <ul class="plain">
@@ -3029,20 +3025,20 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
 <li>Added the option for drivers to choose which radio station is preselected when entering a vehicle with the radio turned off.</li>
-<li>Corrected an issue where the Scout Helicopter’s AA missiles would sometimes fail to spawn or track their target correctly.</li>
+<li data-item="scout-helicopter">Corrected an issue where the Scout Helicopter’s AA missiles would sometimes fail to spawn or track their target correctly.</li>
 <li>Helicopters will now lose control when the pilot seat is unoccupied in Battle Royale modes only to limit the effectiveness of seat swapping.</li>
 <li data-item="xfgm-6d">Increased the XFGM-6D Recon Drone cooldown from 120 seconds to 240 seconds.</li>
-<li>Replaced the M1A2 SEPv3 Coaxial 7.62mm LMG with the Coaxial .50 cal HMG.</li>
+<li data-item="main-battle-tank">Replaced the M1A2 SEPv3 Coaxial 7.62mm LMG with the Coaxial .50 cal HMG.</li>
 <li>Tanks now autospot on the enemy minimap from up to 300m away.</li>
-<li>The M1A2 SEPv3 and the M3A3 Bradley’s LMG gunner weapons have now been replaced with Grenade Launchers.</li>
-<li>The M3A3 Bradley's Proximity Scan has been replaced with the Counter-Fire Radar.</li>
+<li data-item="infantry-fighting-vehicle main-battle-tank">The M1A2 SEPv3 and the M3A3 Bradley’s LMG gunner weapons have now been replaced with Grenade Launchers.</li>
+<li data-item="infantry-fighting-vehicle">The M3A3 Bradley's Proximity Scan has been replaced with the Counter-Fire Radar.</li>
 <li>.50 cal MG bullets are now affected by armour and deal a flat 30 damage.</li>
 <li>.50 cal MGs now overheat in approximately 15 shots.</li>
-<li>UH-79 minigun bullets are now affected by armour and deal a flat 20 damage.</li>
-<li>UH-79 miniguns no longer cool down faster than in Multiplayer, and their overheat penalty is now three times longer.</li>
-<li>Corrected an issue where the UH-79 was using the Multiplayer health value of 1500 instead of the Battle Royale value of 1250.</li>
+<li data-item="transport-helicopter">UH-79 minigun bullets are now affected by armour and deal a flat 20 damage.</li>
+<li data-item="transport-helicopter">UH-79 miniguns no longer cool down faster than in Multiplayer, and their overheat penalty is now three times longer.</li>
+<li data-item="transport-helicopter">Corrected an issue where the UH-79 was using the Multiplayer health value of 1500 instead of the Battle Royale value of 1250.</li>
 <li>Increased .50 cal MG dispersion from 0.01/0.5 to 0.03/1.5 degrees.</li>
-<li>Increased UH-79 minigun dispersion from 1.2 to 2.4 degrees.</li>
+<li data-item="transport-helicopter">Increased UH-79 minigun dispersion from 1.2 to 2.4 degrees.</li>
 </ul>
 <p class="grp"><b>STRIKE PACKAGES</b></p>
 <ul class="plain">
@@ -3127,7 +3123,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>UI &amp; HUD</b></p>
 <ul class="plain">
-<li>Corrected an issue where the camera could clip beneath the vehicle when switching to the middle seat of the Armored Transport in Gauntlet.</li>
+<li data-item="armored-transport">Corrected an issue where the camera could clip beneath the vehicle when switching to the middle seat of the Armored Transport in Gauntlet.</li>
 <li>Corrected an issue where the DMR mesh could disappear after a player was revived from a DBNO state.</li>
 <li>Corrected an issue where weapon models could become invisible while customising during the Gauntlet briefing.</li>
 </ul>
@@ -3514,7 +3510,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Corrected the Season 1 Catch-Up Hardware quest so grenade kills and assists now track correctly.</li>
 <li>Improved Season 2 challenge accuracy across Week 1, Week 6, Week 11, “Complete matches in any mode”, “Earn score, counts double in Battle Royale”, the weekly challenge “Earn score, counts double in Battle Royale”, and “Deal damage with Explosives or Incendiaries.” so the in-game presentation now matches the intended design.</li>
 <li>Corrected an issue where weekly free-to-play challenges and missions tagged with “All Modes” now unlock and track properly for eligible players.</li>
-<li>Improved Red Bull challenge setup so “In Gauntlet: RB Supermoto, Capture Red Checkpoints as a squad.” uses the correct tag, “Earn Score while driving land vehicles, counts for double if gained in Gauntlet: RB Supermoto” now tracks and doubles correctly, that “Get total airtime in seconds using the ATV, Motorcycle or Light Infantry Vehicle.” now supports all intended Light Transport vehicles, and the F-97 Kestrel now uses its player-facing name instead of a dev-facing one.</li>
+<li data-item="fighter-jet light-ground-transport">Improved Red Bull challenge setup so “In Gauntlet: RB Supermoto, Capture Red Checkpoints as a squad.” uses the correct tag, “Earn Score while driving land vehicles, counts for double if gained in Gauntlet: RB Supermoto” now tracks and doubles correctly, that “Get total airtime in seconds using the ATV, Motorcycle or Light Infantry Vehicle.” now supports all intended Light Transport vehicles, and the F-97 Kestrel now uses its player-facing name instead of a dev-facing one.</li>
 <li>Improved Weekly Missions “Kill enemies and Revive teammates” so the bonus reward now displays correctly after completion.</li>
 <li>Updated Assault 1 assignments so the incorrect "OR" category no longer appears.</li>
 <li>Updated Multiplayer challenge licensing so MP-only OR challenges now display as locked for free-to-play users.</li>
@@ -3953,7 +3949,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Corrected matchmaking being blocked by a “Waiting for Party Leader” error.</li>
 <li>Corrected missing Battlefield 6 page in EA App store (regional cases).</li>
 <li>Corrected missing Bulletin tab on Xbox.</li>
-<li>Corrected missing default skin icon for the Armored Transport in loadouts.</li>
+<li data-item="armored-transport">Corrected missing default skin icon for the Armored Transport in loadouts.</li>
 <li>Corrected missing ownership/loadout visibility for Season 2 vehicle skin bundle, Burndown after purchasing it.</li>
 <li>Corrected multiple placeholder cosmetic icon tiles.</li>
 <li>Corrected multiple vehicle decal placeholder names and preview issues.</li>
@@ -3965,7 +3961,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Corrected placeholder icons in the “Solar Storm” bundle.</li>
 <li>Corrected placeholder name/icon for the “Brass Tax” player card icon.</li>
 <li>Corrected placeholder names for profile icons Horned Raider and Big Bang.</li>
-<li>Corrected placeholder Scout Helicopter icons in loadouts.</li>
+<li data-item="scout-helicopter">Corrected placeholder Scout Helicopter icons in loadouts.</li>
 <li>Corrected previous equipment briefly appearing after switching loadout slots.</li>
 <li>Corrected profile tile hover state remaining stuck after navigation.</li>
 <li>Corrected squadmates briefly disappearing in Mode Briefing.</li>
@@ -4036,7 +4032,7 @@ html{-webkit-text-size-adjust:100%}
 <ul class="plain">
 <li>Engineer icon changed to improve readability and make role more clear based on community feedback.</li>
 <li>Fixed a localisation issue where the Loadout Zeroing and Attachment prompts could overlap in several languages.</li>
-<li>Fixed an incorrect icon for the M3A3 Bradley.</li>
+<li data-item="infantry-fighting-vehicle">Fixed an incorrect icon for the M3A3 Bradley.</li>
 <li>Fixed an issue causing Field XP UI animations to trigger too frequently.</li>
 <li>Fixed an issue causing low minimap shadow quality and rendering artefacts on some multiplayer maps.</li>
 <li>Fixed an issue on PC where the Big Map displayed keyboard and mouse icons even when using a controller.</li>
@@ -4049,7 +4045,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Fixed an issue where mortar hit indicators and damage numbers were not displayed correctly.</li>
 <li>Fixed an issue where the Big Map and scoreboard button prompts were missing in Gauntlet End of Round screens.</li>
 <li>Fixed an issue where the crosshair could briefly display incorrect spacing when switching weapons.</li>
-<li>Fixed an issue where the gunner seat aiming indicators on attack helicopters remained static while the helicopter was moving, leading to incorrect aiming feedback.</li>
+<li data-item="attack-helicopter">Fixed an issue where the gunner seat aiming indicators on attack helicopters remained static while the helicopter was moving, leading to incorrect aiming feedback.</li>
 <li>Fixed an issue where the “Go to Store” button prompt was not functional for vehicle customization on PlayStation 5.</li>
 <li>Fixed an issue where item previews could persist after exiting Store bundles.</li>
 <li>Fixed an issue where item rotation and zoom could shift to other items when rapidly switching during inspection.</li>
@@ -4302,7 +4298,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.3.2.0&rdquo;: New Content Arrives : The Explosive Charge Event arrives alongside Cairo Bazaar, Obliteration, the PP-19, the Handheld Jammer, and a new Battle Pass Bonus Path that expands the rewards available during the event. Obliteration Returns : The classic Battlefield mode is back with neutral bombs, enemy M-COMs, and intense squad-driven pushes where both teams fight to secure, escort, and detonate the objective. Battle Royale and Gauntlet Improvements : Mission behaviour, Threat Tracker accuracy, loot readability, Insertion Helicopter spacing, Airdrop stability, Tank Containers, Heist Caches, and Rodeo scoring have all been updated for a smoother match flow. Weapons and Attachments Receive a Broad Polish Pass : Burst Fire attachments, Extended Barrels, thermal optics, attachment poses, reload behaviour, Tac-Light unlocks, and weapon previews have all seen further consistency and usability improvements. Gadgets Receive Further Tuning: LWCMS Portable Mortar, M18 Claymores, MAS 148 Glaive, XFGM-6D Recon Drone, CSB IV EOD Bot, LTLM II PLD, Repair Tool, C-4 Explosives, and missile guidance have all been adjusted to improve reliability, scoring, placement behaviour, and counterplay. UI, HUD and Front-End Improvements : End of Round screens, Loadouts, Challenges, Store previews, Battle Pass pagination, “New” Markers, Player Cards, and menu animations have all been updated to improve clarity and presentation. Portal, Audio, Vehicles and Map Enhancements : Portal gains new SDK support, creator tools, Cairo Bazaar for Verified Portal Modes, and Golmud Railway assets, while audio, vehicle behaviour, spawn points, lighting, and map-specific issues receive further polish as well as an updated Custom Conquest Template from ViperStudiosAndy.</p>
 <p class="grp"><b>AUDIO</b></p>
 <ul class="plain">
-<li>New behaviours for crawl speed audio have been added for Quad Bikes, ATP Vehicles, Golf Carts, and Armored Transport Vehicles, as well as a finer tuning of the Vector, Flyer 60, and Jeep/Truck crawl speed behaviours.</li>
+<li data-item="armored-transport">New behaviours for crawl speed audio have been added for Quad Bikes, ATP Vehicles, Golf Carts, and Armored Transport Vehicles, as well as a finer tuning of the Vector, Flyer 60, and Jeep/Truck crawl speed behaviours.</li>
 <li>Parachute audio now stops correctly for soldiers who are downed or killed while their parachute is in use.</li>
 <li>Spot Ping has been updated with a more recognisable sound, and Squad Ping volume has been slightly increased.</li>
 </ul>
@@ -4333,7 +4329,7 @@ html{-webkit-text-size-adjust:100%}
 <li data-item="operation-firestorm">Updated missing explosion audio for the oil containers in Operation Firestorm.</li>
 <li data-item="sor-556-mk2">Updated reload sound not playing for SOR-556 Mk2 when certain magazines are attached.</li>
 <li>Updated the “Mission Ammunition Replenishment” sound when resupply from a support soldier interaction.</li>
-<li>Updated the F97 Kestrel Jet passbys and fixed an issue causing only one variation sound effect to play.</li>
+<li data-item="fighter-jet">Updated the F97 Kestrel Jet passbys and fixed an issue causing only one variation sound effect to play.</li>
 <li>Updated the Spot Ping to a more easily recognizable sound.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.3.1.0</a>, posted May 8, 2026</div>
@@ -4349,10 +4345,10 @@ html{-webkit-text-size-adjust:100%}
 <li>Improved support for spatial audio on PS5.</li>
 <li>Tall grass surfaces now play the correct audio more consistently where appropriate.</li>
 <li>Tweaked Walla sounds for improved ambience.</li>
-<li>Minigun audio on the Little Bird has been polished to blend better in the mix, especially from the chase camera perspective, and new interior firing audio has been added.</li>
+<li data-item="scout-helicopter">Minigun audio on the Little Bird has been polished to blend better in the mix, especially from the chase camera perspective, and new interior firing audio has been added.</li>
 <li>Corrected the Audio Options Voice Chat subsection so it now matches the intended settings design.</li>
 <li>Corrected the Multiplayer Audio options so "Soldier and Campaign voice lines Volume" no longer appears there.</li>
-<li>Fixed missing zoom audio while aiming the bomb camera on the F-61V.</li>
+<li data-item="attack-jet">Fixed missing zoom audio while aiming the bomb camera on the F-61V.</li>
 <li>Improved button audio so selecting Skins or Decals now plays the intended sound.</li>
 <li>Improved Firing Range target audio so death screams no longer play when targets are "killed".</li>
 <li>Added new hurt voice reactions when taking damage from the Repair Tool.</li>
@@ -4530,11 +4526,11 @@ html{-webkit-text-size-adjust:100%}
 <li>Tweaked shotgun firing sounds (amplitude, delays, pitch).</li>
 <li>Updated shotgun audio in different environments (open field, canyon, urban).</li>
 <li>Adjusted audibility of gadget auto-replenish sound when reloading a shotgun in the Assault class’s secondary primary slot.</li>
-<li>Fixed an issue where flares audio was not playing for the UH-79 gunner seat.</li>
+<li data-item="transport-helicopter">Fixed an issue where flares audio was not playing for the UH-79 gunner seat.</li>
 <li>Added unique low-health fire sounds for different vehicle types.</li>
 <li>Fixed an issue where jet “low health fire” sounds continued to play after repairs.</li>
-<li>Fixed an issue where MBT driver smoke discharge audio was not playing.</li>
-<li>Fixed an issue where the MBT Active Protection System audio felt delayed.</li>
+<li data-item="main-battle-tank">Fixed an issue where MBT driver smoke discharge audio was not playing.</li>
+<li data-item="main-battle-tank">Fixed an issue where the MBT Active Protection System audio felt delayed.</li>
 <li>Fixed an issue where medium damage sounds played when vehicles only took light damage.</li>
 <li>Fixed a bug where soldiers in exposed vehicle seats did not display squad overlays correctly.</li>
 <li>Fixed camera shake when firing the RWS helicopter autocannon as the pilot.</li>
@@ -4633,7 +4629,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.3.2.0&rdquo;: New Content Arrives : The Explosive Charge Event arrives alongside Cairo Bazaar, Obliteration, the PP-19, the Handheld Jammer, and a new Battle Pass Bonus Path that expands the rewards available during the event. Obliteration Returns : The classic Battlefield mode is back with neutral bombs, enemy M-COMs, and intense squad-driven pushes where both teams fight to secure, escort, and detonate the objective. Battle Royale and Gauntlet Improvements : Mission behaviour, Threat Tracker accuracy, loot readability, Insertion Helicopter spacing, Airdrop stability, Tank Containers, Heist Caches, and Rodeo scoring have all been updated for a smoother match flow. Weapons and Attachments Receive a Broad Polish Pass : Burst Fire attachments, Extended Barrels, thermal optics, attachment poses, reload behaviour, Tac-Light unlocks, and weapon previews have all seen further consistency and usability improvements. Gadgets Receive Further Tuning: LWCMS Portable Mortar, M18 Claymores, MAS 148 Glaive, XFGM-6D Recon Drone, CSB IV EOD Bot, LTLM II PLD, Repair Tool, C-4 Explosives, and missile guidance have all been adjusted to improve reliability, scoring, placement behaviour, and counterplay. UI, HUD and Front-End Improvements : End of Round screens, Loadouts, Challenges, Store previews, Battle Pass pagination, “New” Markers, Player Cards, and menu animations have all been updated to improve clarity and presentation. Portal, Audio, Vehicles and Map Enhancements : Portal gains new SDK support, creator tools, Cairo Bazaar for Verified Portal Modes, and Golmud Railway assets, while audio, vehicle behaviour, spawn points, lighting, and map-specific issues receive further polish as well as an updated Custom Conquest Template from ViperStudiosAndy.</p>
 <p class="grp"><b>PORTAL</b></p>
 <ul class="plain">
-<li>AH-6 LittleBird helicopter spawns now respect the helicopter spawn delay settings.</li>
+<li data-item="scout-helicopter">AH-6 LittleBird helicopter spawns now respect the helicopter spawn delay settings.</li>
 <li>Attachment Size Warning has been added, giving Portal creators a warning when imported script or string files exceed recommended attachment size limits.</li>
 <li>Background colours have been added to Blockly editor buttons in the top right, improving visibility against blocks in the background.</li>
 <li data-item="cairo-bazaar">Cairo Bazaar has been added for Verified Portal Modes.</li>
@@ -4810,7 +4806,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Resolved an issue where selecting “Purchase” in Experience Details could redirect to an empty screen.</li>
 <li>Resolved an issue where selecting a featured Portal could incorrectly redirect users to Settings.</li>
 <li>Resolved an issue where the “Bot Spawn Type” mutator tooltip displayed incorrect terminology.</li>
-<li>Resolved an issue where the AH-6M ‘Little Bird’ was missing from the Spatial Editor.</li>
+<li data-item="scout-helicopter">Resolved an issue where the AH-6M ‘Little Bird’ was missing from the Spatial Editor.</li>
 <li>Resolved an issue where users could bypass the experience description requirement with the space bar, leading to an undefined error.</li>
 <li>Resolved an issue where users were unable to modify Experiences that were in the “In Review” state via the Web App.</li>
 <li>Restored functionality to the Cookies “Accept” and “Decline” buttons in the Web App.</li>
@@ -4975,7 +4971,7 @@ html{-webkit-text-size-adjust:100%}
 <li data-item="iberian-offensive">Corrected a navigation issue that could cause Bots to get stuck while moving towards Objective B on Iberian Offensive.</li>
 <li>Corrected an issue where Bots did not account for turning radius restrictions when driving multiple vehicles.</li>
 <li>Corrected an issue where Bots did not account for weapon movement limits when using the side gunner seats in the Traverser Mark 2.</li>
-<li data-item="trcrv2">Corrected an issue where Bots using the MAS 148 Glaive and TRCRv2 Tracer Dart did not require line of sight, preventing them from targeting through the environment.</li>
+<li data-item="mas-148 trcrv2">Corrected an issue where Bots using the MAS 148 Glaive and TRCRv2 Tracer Dart did not require line of sight, preventing them from targeting through the environment.</li>
 <li data-item="slm-93a">Corrected an issue where Bots using the SLM-93A could target incorrect vehicle types. It will now only target helicopters and jets, and can lock on more reliably to moving air vehicles.</li>
 <li>Improved Bot navigation when using ziplines and hanging ropes across all experiences.</li>
 <li data-item="manhattan-bridge">Removed a problematic navigation link that could cause Bots to get stuck while traversing a staircase close to Objective B on Manhattan Bridge.</li>
@@ -5018,7 +5014,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>BOTS</b></p>
 <ul class="plain">
-<li>Bot pilots now effectively drive and manoeuvre the AH-6M ‘Little Bird’.</li>
+<li data-item="scout-helicopter">Bot pilots now effectively drive and manoeuvre the AH-6M ‘Little Bird’.</li>
 <li>Bot pilots now effectively drive and manoeuvre the MH-350.</li>
 <li>Bot soldiers now operate the Golf Cart as both driver and passenger.</li>
 <li>Bot soldiers now operate the Quad Bike as both driver and passenger.</li>

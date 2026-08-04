@@ -487,6 +487,19 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .relgroup h4{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;
   color:var(--dim);margin:0 0 6px;font-weight:600}
 .relgroup a{color:var(--text)}
+/* Vehicle loadouts. A slot is a table rather than a list because every option
+   carries three fields, and most of them are TBD until the option is captured. */
+.lo-role{margin:22px 0 0}
+.lo-role > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.9px;color:var(--vehicles);margin:0 0 2px}
+.lo-slot{margin:14px 0 0}
+.lo-slot > h4{font-family:var(--mono);font-size:12.5px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.5px;color:var(--dim);margin:0 0 6px}
+.lo-slot table{margin:0}
+.lo-slot td:first-child{white-space:nowrap;color:var(--text)}
+.lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
+.lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
+.lo-locked b{color:var(--muted);font-style:normal}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -639,7 +652,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </details>
 </details>
 <details class="branch b-gadgets" open>
-<summary>Gadgets<span class="cnt">41</span></summary>
+<summary>Gadgets<span class="cnt">42</span></summary>
 <details class="sub">
 <summary>Throwables<span class="cnt">9</span></summary>
 <a class="leaf" href="/gadgets/throwables/m67/">Fragmentation Grenade</a>
@@ -653,7 +666,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/gadgets/throwables/steel-wing/">Throwing Knife</a>
 </details>
 <details class="sub">
-<summary>Launchers<span class="cnt">11</span></summary>
+<summary>Launchers<span class="cnt">12</span></summary>
 <a class="leaf" href="/gadgets/launchers/x95-bre/">X95 BRE</a>
 <a class="leaf" href="/gadgets/launchers/m320a1-he/">M320A1 HE</a>
 <a class="leaf" href="/gadgets/launchers/m320a1-thrm/">M320A1 THRM</a>
@@ -665,6 +678,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/gadgets/launchers/9k38-igla/">9K38 Igla</a>
 <a class="leaf" href="/gadgets/launchers/m320a1-smk/">M320A1 SMK</a>
 <a class="leaf" href="/gadgets/launchers/sich-g1-wp/">SICH G1 WP</a>
+<a class="leaf" href="/gadgets/launchers/mas-148/">Long-Range Launcher</a>
 </details>
 <details class="sub">
 <summary>Deployables<span class="cnt">14</span></summary>
@@ -695,23 +709,18 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </details>
 </details>
 <details class="branch b-vehicles">
-<summary>Vehicles<span class="cnt">0</span></summary>
-<details class="sub empty">
-<summary>Ground<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
-</details>
-<details class="sub empty">
-<summary>Air<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
-</details>
-<details class="sub empty">
-<summary>Naval<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
-</details>
-<details class="sub empty">
-<summary>Transport<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
-</details>
+<summary>Vehicles<span class="cnt">11</span></summary>
+<a class="leaf" href="/vehicles/main-battle-tank/">Main Battle Tank</a>
+<a class="leaf" href="/vehicles/infantry-fighting-vehicle/">Infantry Fighting Vehicle</a>
+<a class="leaf" href="/vehicles/light-ground-transport/">Light Ground Transport</a>
+<a class="leaf" href="/vehicles/armored-transport/">Armored Transport</a>
+<a class="leaf" href="/vehicles/mobile-anti-air/">Mobile Anti-Air</a>
+<a class="leaf" href="/vehicles/attack-helicopter/">Attack Helicopter</a>
+<a class="leaf" href="/vehicles/scout-helicopter/">Scout Helicopter</a>
+<a class="leaf" href="/vehicles/transport-helicopter/">Transport Helicopter</a>
+<a class="leaf" href="/vehicles/attack-jet/">Attack Jet</a>
+<a class="leaf" href="/vehicles/fighter-jet/">Fighter Jet</a>
+<a class="leaf" href="/vehicles/patrol-boat/">Patrol Boat</a>
 </details>
 <details class="branch b-classes">
 <summary>Classes<span class="cnt">0</span></summary>
@@ -780,6 +789,8 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </table>
 </div>
 </div>
+
+
 
 <h2 class="cat gadgets" id="history"><span class="dot"></span>Patch history</h2>
 <p class="cat-note">15 patch notes mentioning the Recon Drone, newest first. Each entry is the exact line from EA's Game Update notes.</p>

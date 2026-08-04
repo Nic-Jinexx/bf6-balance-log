@@ -392,6 +392,19 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .relgroup h4{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;
   color:var(--dim);margin:0 0 6px;font-weight:600}
 .relgroup a{color:var(--text)}
+/* Vehicle loadouts. A slot is a table rather than a list because every option
+   carries three fields, and most of them are TBD until the option is captured. */
+.lo-role{margin:22px 0 0}
+.lo-role > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.9px;color:var(--vehicles);margin:0 0 2px}
+.lo-slot{margin:14px 0 0}
+.lo-slot > h4{font-family:var(--mono);font-size:12.5px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.5px;color:var(--dim);margin:0 0 6px}
+.lo-slot table{margin:0}
+.lo-slot td:first-child{white-space:nowrap;color:var(--text)}
+.lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
+.lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
+.lo-locked b{color:var(--muted);font-style:normal}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -553,6 +566,8 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 {{FACTS}}
 </div>
 </div>
+
+{{LOADOUT}}
 
 <h2 class="cat {{COLOR}}" id="history"><span class="dot"></span>Patch history</h2>
 <p class="cat-note">{{HISTNOTE}}</p>
@@ -717,6 +732,64 @@ def render_image(item, img):
             % html.escape(item["name"]))
 
 
+def render_loadout(item):
+    """Vehicle customisation slots, grouped by seat.
+
+    Every option tile visible in a capture is listed, even when only its name is
+    legible: a slot screen names the whole row but describes only the highlighted
+    option, so an omitted tile would silently read as "this option does not
+    exist". Unread fields are TBD, same rule as everywhere else.
+    """
+    slots = item.get("loadout") or []
+    if not slots:
+        return ""
+
+    out = ['<h2 class="cat vehicles" id="loadout"><span class="dot"></span>Loadout</h2>']
+    described = sum(1 for s in slots for o in (s.get("options") or [])
+                    if (o.get("description") or "").strip()
+                    and o["description"].strip().upper() != "TBD")
+    total = sum(len(s.get("options") or []) for s in slots)
+    locked = [s for s in slots if s.get("locked")]
+    note = ("Every customisation slot and every option in it, transcribed from the in-game "
+            "screens. %d of %d options have their in-game description recorded; the rest are "
+            "named but not yet described." % (described, total))
+    if locked:
+        note += (" %d slot%s could not be opened on the capturing account and show only the "
+                 "equipped item." % (len(locked), "" if len(locked) == 1 else "s"))
+    out.append('<p class="cat-note">%s</p>' % note)
+
+    by_role = []
+    for slot in slots:
+        role = slot.get("role") or ""
+        if not by_role or by_role[-1][0] != role:
+            by_role.append((role, []))
+        by_role[-1][1].append(slot)
+
+    out.append('<div class="loadout">')
+    for role, group in by_role:
+        out.append('<section class="lo-role"><h3>%s</h3>' % html.escape(role))
+        for slot in group:
+            out.append('<div class="lo-slot"><h4>%s</h4>' % html.escape(slot.get("slot", "")))
+            options = slot.get("options") or []
+            if slot.get("locked") and not options:
+                out.append('<p class="lo-locked">Slot locked; equipped item reads '
+                           '<b>%s</b>. Its alternatives are not selectable, so no option '
+                           'list was captured.</p>' % html.escape(slot.get("equipped") or "TBD"))
+                out.append("</div>")
+                continue
+            out.append("<table>")
+            out.append("<tr><th>Option</th><th>Designation</th><th>In-game description</th></tr>")
+            for opt in options:
+                out.append("<tr><td>%s</td><td>%s</td><td>%s</td></tr>"
+                           % (html.escape(opt.get("name", "")),
+                              value_cell(opt.get("designation")),
+                              value_cell(opt.get("description"))))
+            out.append("</table></div>")
+        out.append("</section>")
+    out.append("</div>")
+    return "\n".join(out)
+
+
 def render_related(item, by_slug):
     groups = item.get("related") or []
     if not any(g.get("items") for g in groups):
@@ -845,6 +918,7 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
         "IMAGE": render_image(item, img),
         "FACTS": render_facts(item, color, item.get("signature"), item.get("_added_in"),
                               item.get("class")),
+        "LOADOUT": render_loadout(item),
         "HISTNOTE": histnote,
         "HISTORY": render_history(entries, name),
         "RELTITLE": "Compatible attachments" if item["branch"] == "weapons" else "Related items",

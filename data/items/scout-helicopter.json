@@ -1,0 +1,152 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154433 (art), 154708-154717 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described. \"Tactical Data Syst…\" is truncated by the game's own tile label, not by us. Recorded as displayed rather than guessed at.",
+  "slug": "scout-helicopter",
+  "name": "Scout Helicopter",
+  "branch": "vehicles",
+  "order": 7,
+  "aliases": [
+    "little bird",
+    "ah-6",
+    "ah6",
+    "scout heli"
+  ],
+  "blurb": "AH-6 Little Bird",
+  "traits": [],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "NATO",
+      "value": "AH-6 Little Bird"
+    },
+    {
+      "label": "Pax Armata",
+      "value": "TBD"
+    }
+  ],
+  "loadout": [
+    {
+      "role": "Driver",
+      "slot": "Primary",
+      "options": [
+        {
+          "name": "Minigun",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Grenade Launcher",
+          "designation": "40mm AGL",
+          "description": "An automatic grenade launcher, effective at targeting infantry and unarmored targets at close range."
+        },
+        {
+          "name": "Heavy Rotary MG",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Secondary",
+      "options": [
+        {
+          "name": "Light Rockets",
+          "designation": "70mm FFAR",
+          "description": "Unguided rockets capable of firing larger volleys but providing less damage per projectile. Effective against light vehicles and infantry."
+        },
+        {
+          "name": "Aim-Guided",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 1",
+      "locked": true,
+      "equipped": "Flares",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 2",
+      "options": [
+        {
+          "name": "Smoke Launcher",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Motion Sensor",
+          "designation": "TBD",
+          "description": "Dropped from the air, this device embeds in the ground where it detects and displays nearby moving enemies, vehicles, and gadgets on team members' minimaps. Enemy infantry can remain undetected while moving in crouch or prone. The device emits a sound audible to hostiles."
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Upgrade",
+      "options": [
+        {
+          "name": "Stabilizer",
+          "title": "Emergency Stabilizer",
+          "designation": "TBD",
+          "description": "Reduces the effect of mobility hits, making it easier to stay in control of the vehicle."
+        },
+        {
+          "name": "Tactical Data Syst…",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Engine Upgrade",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Interference",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Upgrade",
+      "locked": true,
+      "equipped": "Radar System",
+      "options": []
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "locked": true,
+      "equipped": "Thermal Scanner",
+      "options": []
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "options": [
+        {
+          "name": "Target Designator",
+          "designation": "Target Designator",
+          "description": "The designator allows users to mark both vehicles and locations. Designated targets can be locked-on from further away and lose below-radar protection."
+        },
+        {
+          "name": "Directional Jammer",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

@@ -1,0 +1,69 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154439 (art), 154722 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described.",
+  "slug": "transport-helicopter",
+  "name": "Transport Helicopter",
+  "branch": "vehicles",
+  "order": 8,
+  "aliases": [
+    "uh-79",
+    "uh79",
+    "transport heli"
+  ],
+  "blurb": "UH-79",
+  "traits": [],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "NATO",
+      "value": "UH-79"
+    },
+    {
+      "label": "Pax Armata",
+      "value": "TBD"
+    }
+  ],
+  "loadout": [
+    {
+      "role": "Driver",
+      "slot": "Equipment 1",
+      "locked": true,
+      "equipped": "Flares",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 2",
+      "locked": true,
+      "equipped": "Emergency Repair",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Upgrade",
+      "locked": true,
+      "equipped": "Improved Armor",
+      "options": []
+    },
+    {
+      "role": "Left Gunner",
+      "slot": "Mounted Weapon",
+      "locked": true,
+      "equipped": "Minigun",
+      "options": []
+    },
+    {
+      "role": "Right Gunner",
+      "slot": "Mounted Weapon",
+      "locked": true,
+      "equipped": "Minigun",
+      "options": []
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

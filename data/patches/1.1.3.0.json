@@ -990,7 +990,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Updated capture volumes across Sectors 1, 2, and 3 to support more consistent attacker progress.",
@@ -1017,7 +1019,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Sector 2: Added 1 Attacker IFV.",
@@ -1026,7 +1030,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Sector 3: Added 1 Attacker IFVs.",
@@ -1035,7 +1041,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Updated capture volumes across all sectors to make attacking easier.",
@@ -1053,7 +1061,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Sector 3: Added 1 Attacker IFV; removed Defender tank and light transport.",
@@ -1062,7 +1072,10 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle",
+    "light-ground-transport"
+   ]
   },
   {
    "text": "Updated capture volumes in both sectors to improve attacker flow.",
@@ -1089,7 +1102,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Updated capture zones across affected sectors to support attacker momentum.",
@@ -1116,7 +1131,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Updated capture volumes to improve attacker advancement.",

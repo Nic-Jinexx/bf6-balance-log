@@ -259,7 +259,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "mas-148"
+   ]
   },
   {
    "text": "The Sledgehammer can no longer be used for quick swings while swimming.",
@@ -1179,7 +1181,10 @@
     "COMPETITIVE"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "infantry-fighting-vehicle",
+    "main-battle-tank"
+   ],
    "redsec": true
   },
   {

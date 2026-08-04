@@ -1,0 +1,202 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154347 (art), 154528-154549 and 154748 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described.",
+  "slug": "main-battle-tank",
+  "name": "Main Battle Tank",
+  "branch": "vehicles",
+  "order": 1,
+  "aliases": [
+    "mbt",
+    "m1a2",
+    "m1a2 sepv3",
+    "abrams"
+  ],
+  "_alias_note": "No bare \"tank\" alias. The matcher's word boundary treats a hyphen as a break, so \"tank\" would tag every \"anti-tank\" line in the log to this page.",
+  "blurb": "M1A2 SEPV3",
+  "traits": [],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "NATO",
+      "value": "M1A2 SEPV3"
+    },
+    {
+      "label": "Pax Armata",
+      "value": "TBD"
+    }
+  ],
+  "loadout": [
+    {
+      "role": "Driver",
+      "slot": "Primary",
+      "options": [
+        {
+          "name": "Multi-Purpose",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Armor-Piercing",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Anti-Personnel",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "High Explosive",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Aim-Guided",
+          "title": "Aim-Guided Shell",
+          "designation": "120mm Guided Munition",
+          "description": "An effective anti-vehicle shell that can be guided to the target via a weapon's crosshairs."
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Alternate Ammo",
+      "options": [
+        {
+          "name": "Multi-Purpose",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Armor-Piercing",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Anti-Personnel",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "High Explosive",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Aim-Guided",
+          "title": "Aim-Guided Shell",
+          "designation": "120mm Guided Munition",
+          "description": "An effective anti-vehicle shell that can be guided to the target via a weapon's crosshairs."
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Secondary",
+      "options": [
+        {
+          "name": "Coaxial LMG",
+          "title": "Coaxial Light Machine Gun",
+          "designation": "Coaxial 7.62mm MG",
+          "description": "A machine gun ideal for combatting infantry at medium-range. Less effective against lightly armored vehicles."
+        },
+        {
+          "name": "Coaxial HMG",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 1",
+      "options": [
+        {
+          "name": "Thermal-Blocking",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Projectile Intercept",
+          "title": "Projectile Intercept System",
+          "designation": "TBD",
+          "description": "Intercepts and destroys enemy missiles, shells, rockets, grenades, and bombs. Intercepts all projectiles during a window of activation that begins after the initial detection."
+        },
+        {
+          "name": "Emergency Repair",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Upgrade",
+      "options": [
+        {
+          "name": "Field Maintenance",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Emergency Countermeasures",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Enhanced Loading",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Optimized Handling",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "options": [
+        {
+          "name": "Heavy Machine Gun",
+          "designation": "RWS .50 Cal MG",
+          "description": "A machine gun ideal for combatting unarmored vehicles and infantry at long range."
+        },
+        {
+          "name": "Light Machine Gun",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Grenade Launcher",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Equipment 1",
+      "options": [
+        {
+          "name": "Smoke Wall",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Countermeasures",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

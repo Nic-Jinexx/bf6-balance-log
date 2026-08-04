@@ -99,7 +99,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": [],
+   "items": [
+    "armored-transport"
+   ],
    "redsec": true
   },
   {

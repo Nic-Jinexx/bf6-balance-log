@@ -1,0 +1,136 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154459 (art), 154734-154741 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described.",
+  "slug": "patrol-boat",
+  "name": "Patrol Boat",
+  "branch": "vehicles",
+  "order": 11,
+  "aliases": [
+    "rcb-90",
+    "rcb90",
+    "patrol boat"
+  ],
+  "blurb": "RCB-90",
+  "traits": [],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "NATO",
+      "value": "RCB-90"
+    },
+    {
+      "label": "Pax Armata",
+      "value": "TBD"
+    }
+  ],
+  "loadout": [
+    {
+      "role": "Driver",
+      "slot": "Primary",
+      "options": [
+        {
+          "name": "Heavy Rotary MG",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Autocannon",
+          "designation": "30mm Chain Gun",
+          "description": "Flexibly mounted 30mm chain gun effective against personnel and light vehicles."
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Secondary",
+      "options": [
+        {
+          "name": "Aim-Guided",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Coaxial LMG",
+          "title": "Coaxial Light Machine Gun",
+          "designation": "Coaxial 7.62mm MG",
+          "description": "A machine gun ideal for combatting infantry at medium-range. Less effective against lightly armored vehicles."
+        },
+        {
+          "name": "Lock-Guided",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 1",
+      "locked": true,
+      "equipped": "Thermal-Blocking",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 2",
+      "options": [
+        {
+          "name": "Naval Mine",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Sea Spear 74",
+          "designation": "TBD",
+          "description": "Stern launched wire-guided torpedo capable of very high damage to enemy watercraft."
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Upgrade",
+      "locked": true,
+      "equipped": "Deploy Ramp",
+      "options": []
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "locked": true,
+      "equipped": "High Explosive",
+      "options": []
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "options": [
+        {
+          "name": "HE Guided",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "IR Smoke",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Airburst",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Illumination",
+          "title": "Illumination Shell",
+          "designation": "120mm Mortar ILL",
+          "description": "Shell loaded with a parachute flare to mark enemies below."
+        }
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

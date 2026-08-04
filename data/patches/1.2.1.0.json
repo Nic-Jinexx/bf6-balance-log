@@ -32,7 +32,10 @@
     "New Vehicle"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-helicopter",
+    "scout-helicopter"
+   ]
   },
   {
    "text": "M121 A2: A belt-fed machine gun delivering high damage, especially effective at close range.",
@@ -545,7 +548,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-helicopter"
+   ]
   },
   {
    "text": "Fixed an issue where helicopter rotary cannon tracers could sometimes originate behind the muzzle.",
@@ -1494,7 +1499,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Fixed an issue causing Field XP UI animations to trigger too frequently.",
@@ -1611,7 +1618,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "attack-helicopter"
+   ]
   },
   {
    "text": "Fixed an issue where the “Go to Store” button prompt was not functional for vehicle customization on PlayStation 5.",

@@ -24,7 +24,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Improved MTN-55 Proximity Detector spotting so enemy soldiers are revealed more reliably in certain scenarios.",

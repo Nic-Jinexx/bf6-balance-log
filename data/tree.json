@@ -41,13 +41,9 @@
     },
     {
       "key": "vehicles",
+      "_flat_note": "Flat, not subcategorised: a vehicle class holds exactly one entry, which covers both its NATO and Pax Armata variants, so a subcategory layer would only repeat the page title. Sidebar order comes from each item's `order` and is the owner's: ground by weight, then rotary wing, fixed wing, naval. Not alphabetical, not grouped by domain.",
       "label": "Vehicles",
-      "children": [
-        {"key": "ground", "label": "Ground"},
-        {"key": "air", "label": "Air"},
-        {"key": "naval", "label": "Naval"},
-        {"key": "transport", "label": "Transport"}
-      ]
+      "flat": true
     },
     {"key": "classes", "label": "Classes", "flat": true},
     {"key": "maps", "label": "Maps", "flat": true},

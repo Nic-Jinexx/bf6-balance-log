@@ -8,7 +8,9 @@
     "Major Updates for 1.2.3.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "armored-transport"
+   ]
   },
   {
    "text": "Progression Feels More Rewarding : Weapon XP and Vehicle XP are now earned through active use alongside kills and assists, XP rates have been increased slightly across Multiplayer, and Battle Royale and Gauntlet progression now place more weight on time spent in a match, with Battle Royale also awarding higher scores for kills and damage assists.",
@@ -267,7 +269,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "armored-transport"
+   ]
   },
   {
    "text": "Camera transitions now snap back to the soldier instantly when redeploying or dying when remote controlling a vehicle.",
@@ -303,7 +307,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Restored the “Relentless Trample” vehicle decal so it now appears in-game.",
@@ -392,7 +398,9 @@
     "RHIB"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Extended Scout Helicopter smart rocket ammo regeneration time from 16 to 20 seconds.",
@@ -402,7 +410,9 @@
     "RHIB"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Grenade Launcher Muzzle Velocity Increased.",
@@ -452,7 +462,9 @@
     "RHIB"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-helicopter"
+   ]
   },
   {
    "text": "Reduced lethal range of Upgraded Attack Helicopter Heavy Rocket explosion from 2.8m to 2m.",
@@ -462,7 +474,9 @@
     "RHIB"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-helicopter"
+   ]
   },
   {
    "text": "Reduced the inner explosive radius of all scout helicopter rockets from 1m to 0m.",
@@ -472,7 +486,9 @@
     "RHIB"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Reduced the radius of Attack Helicopter Heavy Rocket explosion from 7m to 5.5m",
@@ -482,7 +498,9 @@
     "RHIB"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-helicopter"
+   ]
   },
   {
    "text": "Seismic Detector Radius increased from 16 to 36 meters.",
@@ -584,7 +602,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Updated vehicle-hit scoring so RPG critical hits and regular hits no longer award the same score.",
@@ -1112,7 +1132,10 @@
     "PROGRESSION:"
    ],
    "section": "progression",
-   "items": []
+   "items": [
+    "fighter-jet",
+    "light-ground-transport"
+   ]
   },
   {
    "text": "Improved Weekly Missions “Kill enemies and Revive teammates” so the bonus reward now displays correctly after completion.",
@@ -2423,7 +2446,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Corrected the Audio Options Voice Chat subsection so it now matches the intended settings design.",
@@ -2450,7 +2475,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "attack-jet"
+   ]
   },
   {
    "text": "Improved button audio so selecting Skins or Decals now plays the intended sound.",

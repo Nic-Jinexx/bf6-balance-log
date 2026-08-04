@@ -320,7 +320,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Fixed faint metallic impact sound from M1A2 SEPv3 Main Battle Tank turret wreckage.",
@@ -328,7 +330,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Fixed several cases where IFV's MR Missile could do more damage than intended to MBT, IFV and AA vehicles",
@@ -336,7 +340,10 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle",
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Fixed inconsistent projectile video effects on the Abrams main gun.",
@@ -344,7 +351,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Fixed instant 180-degree turn after exiting a vehicle.",
@@ -368,7 +377,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "transport-helicopter"
+   ]
   },
   {
    "text": "Fixed passenger and gunner placement issues in the UH-79 Helicopter.",
@@ -376,7 +387,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "transport-helicopter"
+   ]
   },
   {
    "text": "Fixed re-entry issues when mounting flipped Quad Bikes.",
@@ -392,7 +405,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-helicopter"
+   ]
   },
   {
    "text": "Fixed unresponsive joystick free-camera controls in transport vehicles.",

@@ -457,7 +457,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "light-ground-transport"
+   ]
   },
   {
    "text": "Corrected an issue where some vehicles remained in a critical health state after being repaired, resulting in slower health regeneration than intended.",
@@ -630,7 +632,10 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle",
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Aiming in first-person and zoomed views in the tanks has been tuned to be faster and more responsive.",
@@ -783,7 +788,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "HEI-T Rounds now deal 10-30 damage against tanks, 100 against helicopters, and 150 against jets.",
@@ -801,7 +808,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Increased the Drag of IFV HE Rounds.",
@@ -810,7 +819,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "AP shells now deal 23-60 damage against tanks, 100 against helicopters, and 100 against jets.",
@@ -846,7 +857,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Increased the IFV Canister Rounds rate of fire from 200 to 240 RPM.",
@@ -855,7 +868,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Lock-Guided Missiles now deal 390 damage against tanks, 845 against helicopters, and 1000 against jets.",
@@ -1026,7 +1041,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-helicopter"
+   ]
   },
   {
    "text": "Removed projectile velocity inheritance from Transport Helicopter side gunner seats. This removes the need to ‘lag’ shots when firing from a fast moving helicopter.",
@@ -1035,7 +1052,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "transport-helicopter"
+   ]
   },
   {
    "text": "Attack Jet Mk82 High Drag Bombs now deal 300-400 damage against tanks, 1080 against helicopters, and 1000 against jets.",
@@ -1044,7 +1063,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-jet"
+   ]
   },
   {
    "text": "Fighter Jet GBU-39/B Small Diameter Bombs now deal 410-535 damage against tanks, 1455 against helicopters, and 1000 against jets.",
@@ -1053,7 +1074,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "fighter-jet"
+   ]
   },
   {
    "text": "No longer increases the damage resistance of the vehicle.",
@@ -1089,7 +1112,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Targeting Jammers for the IFV & Mobile AA no longer deactivate when firing.",
@@ -1098,7 +1123,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Targeting Jammers for IFV & Mobile AA now deactivate when laser painted.",
@@ -1107,7 +1134,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Targeting Jammers for IFV & Mobile AA now deactivate when using a lock on weapon.",
@@ -1116,7 +1145,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Targeting Jammers for IFV & Mobile AA deactivation time increased from 4.5 to 10 seconds.",
@@ -1125,7 +1156,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Now passively provides short duration spotting upon receiving damage. This short spot is not shared with teammates.",
@@ -1209,6 +1242,7 @@
    ],
    "section": "vehicles",
    "items": [
+    "infantry-fighting-vehicle",
     "ltlm-ii",
     "m18"
    ]
@@ -1220,7 +1254,10 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle",
+    "main-battle-tank"
+   ]
   },
   {
    "text": "The Mobile Command Centre Passive, previously exclusive to the APT, is now available to the IFV.",
@@ -1229,7 +1266,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "The Transport Helicopter now has the Improved Armor passive equipped by default. This functions identically to the Attack Helicopter’s version of the same passive, reducing the amount of damage taken from small arms fire.",
@@ -1238,7 +1277,10 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-helicopter",
+    "transport-helicopter"
+   ]
   },
   {
    "text": "Emergency Repair now heals over time instead of healing instantly upon activation.",
@@ -1318,6 +1360,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "light-ground-transport",
     "m15",
     "ptkm-1r"
    ]
@@ -1723,6 +1766,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "light-ground-transport",
     "mbt-law"
    ]
   },
@@ -2908,7 +2952,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "fighter-jet"
+   ]
   },
   {
    "text": "Updated the Spot Ping to a more easily recognizable sound.",
@@ -2956,6 +3002,7 @@
    ],
    "section": "ai",
    "items": [
+    "mas-148",
     "trcrv2"
    ]
   },
@@ -3167,7 +3214,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "scout-helicopter"
+   ],
    "redsec": true
   },
   {
@@ -3199,7 +3248,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "main-battle-tank"
+   ],
    "redsec": true
   },
   {
@@ -3219,7 +3270,10 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "infantry-fighting-vehicle",
+    "main-battle-tank"
+   ],
    "redsec": true
   },
   {
@@ -3229,7 +3283,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "infantry-fighting-vehicle"
+   ],
    "redsec": true
   },
   {
@@ -3259,7 +3315,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "transport-helicopter"
+   ],
    "redsec": true
   },
   {
@@ -3269,7 +3327,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "transport-helicopter"
+   ],
    "redsec": true
   },
   {
@@ -3279,7 +3339,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "transport-helicopter"
+   ],
    "redsec": true
   },
   {
@@ -3299,7 +3361,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "transport-helicopter"
+   ],
    "redsec": true
   },
   {

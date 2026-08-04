@@ -8,7 +8,10 @@
     "Major Updates for 1.2.2.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "light-ground-transport",
+    "transport-helicopter"
+   ]
   },
   {
    "text": "Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance.",
@@ -29,7 +32,8 @@
    "section": "summary",
    "items": [
     "contaminated",
-    "eastwood"
+    "eastwood",
+    "scout-helicopter"
    ]
   },
   {
@@ -384,7 +388,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "light-ground-transport"
+   ]
   },
   {
    "text": "Added the M1030-M1 and TM/O 450 Dirt Bikes.",
@@ -402,7 +408,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Decreased speed of the IFV, MBT & Attack Heli Aim Guided Missiles.",
@@ -411,7 +419,11 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-helicopter",
+    "infantry-fighting-vehicle",
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Improved decal zoom behaviour in vehicle customisation across multiple vehicle types.",
@@ -474,7 +486,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "transport-helicopter"
+   ]
   },
   {
    "text": "Prevented entry into a capsized RHIB.",
@@ -492,7 +506,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Resolved unintended player ejection from overturned vehicles.",
@@ -519,7 +535,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Anti-Tank Mines now despawn 180 seconds after their owner is eliminated.",
@@ -1620,7 +1638,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "armored-transport"
+   ]
   },
   {
    "text": "Corrected missing ownership/loadout visibility for Season 2 vehicle skin bundle, Burndown after purchasing it.",
@@ -1728,7 +1748,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Corrected previous equipment briefly appearing after switching loadout slots.",
@@ -2744,7 +2766,9 @@
     "PORTAL"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Resolved an issue where users could bypass the experience description requirement with the space bar, leading to an undefined error.",
@@ -3029,7 +3053,9 @@
     "BOTS"
    ],
    "section": "ai",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Bot pilots now effectively drive and manoeuvre the MH-350.",

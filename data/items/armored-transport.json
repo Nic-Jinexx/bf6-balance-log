@@ -1,0 +1,129 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154419 (art), 154623-154632 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described.",
+  "slug": "armored-transport",
+  "name": "Armored Transport",
+  "branch": "vehicles",
+  "order": 4,
+  "aliases": [
+    "ltv",
+    "armored transport"
+  ],
+  "_alias_note": "\"ATP\" is the owner's shorthand for the slot, not a name the game or EA uses, so it is not an alias.",
+  "blurb": "LTV",
+  "traits": [],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "NATO",
+      "value": "LTV"
+    },
+    {
+      "label": "Pax Armata",
+      "value": "TBD"
+    }
+  ],
+  "loadout": [
+    {
+      "role": "Driver",
+      "slot": "Equipment 1",
+      "options": [
+        {
+          "name": "Emergency Repair",
+          "designation": "TBD",
+          "description": "Repairs damaged vehicles. Can only be activated when the vehicle is in a low-health state."
+        },
+        {
+          "name": "Smoke Generator",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Upgrade",
+      "options": [
+        {
+          "name": "Integrated Medbay",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Grenade Intercept",
+          "title": "Grenade Intercept System",
+          "designation": "TBD",
+          "description": "Tracks and destroys incoming projectiles such as hand-thrown and launched grenades. Can intercept up to three projectiles during a window of activation that begins after the initial detection."
+        },
+        {
+          "name": "Combat Awareness",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Mobile Command",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "options": [
+        {
+          "name": "Light Machine Gun",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Heavy Machine Gun",
+          "designation": "RWS .50 Cal MG",
+          "description": "A machine gun ideal for combatting unarmored vehicles and infantry at long range."
+        },
+        {
+          "name": "Grenade Launcher",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Equipment 1",
+      "options": [
+        {
+          "name": "Smoke Wall",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Countermeasures",
+          "title": "Mine Countermeasures",
+          "designation": "TBD",
+          "description": "Detects mines and C-4 explosives enabling the operator to activate countermeasures to destroy them."
+        }
+      ]
+    },
+    {
+      "role": "Left Gunner",
+      "slot": "Mounted Weapon",
+      "locked": true,
+      "equipped": "Firing Port Weapon",
+      "options": []
+    },
+    {
+      "role": "Right Gunner",
+      "slot": "Mounted Weapon",
+      "locked": true,
+      "equipped": "Firing Port Weapon",
+      "options": []
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

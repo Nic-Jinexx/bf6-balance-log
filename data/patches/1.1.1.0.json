@@ -448,7 +448,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Fixed a rare issue where the MAS 148 Glaive could block the first-person view during a combat dive.",
@@ -456,7 +458,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "mas-148"
+   ]
   },
   {
    "text": "Fixed a MAS 148 Glaive visual issue during combat dives in first-person.",
@@ -464,7 +468,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "mas-148"
+   ]
   },
   {
    "text": "Fixed an issue where Defibrillators appeared floating during vaulting animations.",

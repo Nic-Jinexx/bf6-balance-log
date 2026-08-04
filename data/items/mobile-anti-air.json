@@ -1,0 +1,128 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154423 (art), 154641-154650 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described.",
+  "slug": "mobile-anti-air",
+  "name": "Mobile Anti-Air",
+  "branch": "vehicles",
+  "order": 5,
+  "aliases": [
+    "cheetah",
+    "cheetah 1a2"
+  ],
+  "_alias_note": "No \"aa\" or \"anti-air\" alias. Both are generic: \"Anti-Air Missile\" is an attack helicopter secondary, so those forms would pull unrelated lines onto this page.",
+  "blurb": "Cheetah 1A2",
+  "traits": [],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "NATO",
+      "value": "Cheetah 1A2"
+    },
+    {
+      "label": "Pax Armata",
+      "value": "TBD"
+    }
+  ],
+  "loadout": [
+    {
+      "role": "Driver",
+      "slot": "Primary",
+      "options": [
+        {
+          "name": "Multi-Purpose",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "High-Velocity",
+          "title": "High Velocity AA Shell",
+          "designation": "35mm AAHV Round",
+          "description": "A quick-firing round effective against fast-moving and lightly armored aircraft. Ineffective against armored ground vehicles."
+        },
+        {
+          "name": "Anti-Armor",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Secondary",
+      "options": [
+        {
+          "name": "Lock-Guided",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Laser-Guided",
+          "title": "Laser-Guided AA Missile",
+          "designation": "MIM-84 SAM",
+          "description": "A highly maneuverable laser-guided surface-to-air missile. Allows proficient users to bypass countermeasures. Guides towards the point of aim."
+        },
+        {
+          "name": "High-Velocity",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 1",
+      "options": [
+        {
+          "name": "Thermal-Blocking",
+          "title": "Thermal-Blocking Smoke",
+          "designation": "TBD",
+          "description": "Discharges a cloud of thermal smoke that obscures the vehicle. Disrupts the guidance systems of incoming lock-on missiles, blocks spotting, and deals moderate damage to enemy infantry inside the smoke radius."
+        },
+        {
+          "name": "Emergency Repair",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Upgrade",
+      "options": [
+        {
+          "name": "Systems Upgrade",
+          "designation": "TBD",
+          "description": "Faster cooldowns enabled on all equipment and increased radar range."
+        },
+        {
+          "name": "Optimized Handling",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Enhanced Loading",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Targeting Jammer",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Upgrade",
+      "locked": true,
+      "equipped": "Radar System",
+      "options": []
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

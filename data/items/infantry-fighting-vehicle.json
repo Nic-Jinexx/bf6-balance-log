@@ -1,0 +1,191 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154408 (art), 154554-154610 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described. Class name is the owner's, not read off a screen: the loadout root screen that carries the in-game class title is the one capture missing from the run. Every other class name here was read directly.",
+  "slug": "infantry-fighting-vehicle",
+  "name": "Infantry Fighting Vehicle",
+  "branch": "vehicles",
+  "order": 2,
+  "aliases": [
+    "ifv",
+    "bradley",
+    "m3a3",
+    "m3a3 bradley"
+  ],
+  "blurb": "M3A3 Bradley",
+  "traits": [],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "NATO",
+      "value": "M3A3 Bradley"
+    },
+    {
+      "label": "Pax Armata",
+      "value": "TBD"
+    }
+  ],
+  "loadout": [
+    {
+      "role": "Driver",
+      "slot": "Primary",
+      "options": [
+        {
+          "name": "High Explosive",
+          "title": "High Explosive Shell",
+          "designation": "HEI-T Round",
+          "description": "A shell designed to combat infantry and non-armored vehicles. Less effective against armored targets."
+        },
+        {
+          "name": "Anti-Personnel",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Armor-Piercing",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Secondary",
+      "options": [
+        {
+          "name": "Aim-Guided",
+          "title": "Aim-Guided Missile",
+          "designation": "M41A7 TOW2 Missile",
+          "description": "An effective anti-vehicle missile that can be guided to the target via a weapon's crosshairs."
+        },
+        {
+          "name": "Lock-Guided",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Light Rockets",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 1",
+      "options": [
+        {
+          "name": "Smoke Generator",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Thermal-Blocking",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Emergency Repair",
+          "designation": "TBD",
+          "description": "Repairs damaged vehicles. Can only be activated when the vehicle is in a low-health state."
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 2",
+      "options": [
+        {
+          "name": "Threat Detector",
+          "title": "Proximity Threat Detector",
+          "designation": "TBD",
+          "description": "Detects nearby enemy soldiers and vehicles and shows them on the minimap for a short duration."
+        },
+        {
+          "name": "Counter-Fire Radar",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Upgrade",
+      "options": [
+        {
+          "name": "Mobile Command",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Field Maintenance",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Targeting Jammer",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Emergency Countermeasures",
+          "designation": "TBD",
+          "description": "Substantially improves the recharge rate of countermeasures when at low health."
+        },
+        {
+          "name": "Systems Upgrade",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "options": [
+        {
+          "name": "Light Machine Gun",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Heavy Machine Gun",
+          "designation": "RWS .50 Cal MG",
+          "description": "A machine gun ideal for combatting unarmored vehicles and infantry at long range."
+        },
+        {
+          "name": "Grenade Launcher",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Equipment 1",
+      "options": [
+        {
+          "name": "Smoke Wall",
+          "title": "Smoke Wall Launcher",
+          "designation": "TBD",
+          "description": "Fires multiple smoke projectiles that detonate to form a smoke wall and obscure the vehicle. Blocks ability to spot targets and clears spotted markers from all infantry inside the smoke radius."
+        },
+        {
+          "name": "Countermeasures",
+          "designation": "TBD",
+          "description": "TBD"
+        },
+        {
+          "name": "Target Designator",
+          "designation": "TBD",
+          "description": "TBD"
+        }
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

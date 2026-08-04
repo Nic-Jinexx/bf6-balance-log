@@ -37,10 +37,28 @@
    "alt": "anti-vehicle mine anti-tank mine at mine m15 m15 av mine"
   },
   {
+   "name": "Armored Transport",
+   "url": "/vehicles/armored-transport/",
+   "cat": "VEHICLES",
+   "alt": "ltv armored transport"
+  },
+  {
    "name": "Assault Ladder",
    "url": "/gadgets/deployables/tarantula-alx/",
    "cat": "DEPLOYABLES",
    "alt": "assault ladder"
+  },
+  {
+   "name": "Attack Helicopter",
+   "url": "/vehicles/attack-helicopter/",
+   "cat": "VEHICLES",
+   "alt": "falchion m77e m77e falchion attack heli"
+  },
+  {
+   "name": "Attack Jet",
+   "url": "/vehicles/attack-jet/",
+   "cat": "VEHICLES",
+   "alt": "f-61v f61v attack jet"
   },
   {
    "name": "B36A4",
@@ -151,6 +169,12 @@
    "alt": ""
   },
   {
+   "name": "Fighter Jet",
+   "url": "/vehicles/fighter-jet/",
+   "cat": "VEHICLES",
+   "alt": "f-97 f97 kestrel f-97 kestrel"
+  },
+  {
    "name": "Flash Grenade",
    "url": "/gadgets/throwables/m84/",
    "cat": "THROWABLES",
@@ -235,6 +259,12 @@
    "alt": "incendiary grenade an/m14"
   },
   {
+   "name": "Infantry Fighting Vehicle",
+   "url": "/vehicles/infantry-fighting-vehicle/",
+   "cat": "VEHICLES",
+   "alt": "ifv bradley m3a3 m3a3 bradley"
+  },
+  {
    "name": "KORD 6P67",
    "url": "/weapons/assault-rifles/kord-6p67/",
    "cat": "ASSAULT RIFLES",
@@ -283,10 +313,22 @@
    "alt": "liberation peak"
   },
   {
+   "name": "Light Ground Transport",
+   "url": "/vehicles/light-ground-transport/",
+   "cat": "VEHICLES",
+   "alt": "glider 96 glider light transport"
+  },
+  {
    "name": "LMR27",
    "url": "/weapons/dmrs/lmr27/",
    "cat": "DMRS",
    "alt": ""
+  },
+  {
+   "name": "Long-Range Launcher",
+   "url": "/gadgets/launchers/mas-148/",
+   "cat": "LAUNCHERS",
+   "alt": "mas 148 mas-148 glaive mas 148 glaive"
   },
   {
    "name": "M/60",
@@ -427,6 +469,12 @@
    "alt": ""
   },
   {
+   "name": "Main Battle Tank",
+   "url": "/vehicles/main-battle-tank/",
+   "cat": "VEHICLES",
+   "alt": "mbt m1a2 m1a2 sepv3 abrams"
+  },
+  {
    "name": "Manhattan Bridge",
    "url": "/maps/manhattan-bridge/",
    "cat": "MAPS",
@@ -463,6 +511,12 @@
    "alt": "mirak valley"
   },
   {
+   "name": "Mobile Anti-Air",
+   "url": "/vehicles/mobile-anti-air/",
+   "cat": "VEHICLES",
+   "alt": "cheetah cheetah 1a2"
+  },
+  {
    "name": "MP-APS",
    "url": "/gadgets/deployables/mp-aps/",
    "cat": "DEPLOYABLES",
@@ -491,6 +545,12 @@
    "url": "/weapons/sidearms/p18/",
    "cat": "SIDEARMS",
    "alt": ""
+  },
+  {
+   "name": "Patrol Boat",
+   "url": "/vehicles/patrol-boat/",
+   "cat": "VEHICLES",
+   "alt": "rcb-90 rcb90 patrol boat"
   },
   {
    "name": "Portable Mortar",
@@ -569,6 +629,12 @@
    "url": "/maps/saints-quarter/",
    "cat": "MAPS",
    "alt": "saints quarter"
+  },
+  {
+   "name": "Scout Helicopter",
+   "url": "/vehicles/scout-helicopter/",
+   "cat": "VEHICLES",
+   "alt": "little bird ah-6 ah6 scout heli"
   },
   {
    "name": "SCW-10",
@@ -707,6 +773,12 @@
    "url": "/gadgets/tools/trcrv2/",
    "cat": "TOOLS",
    "alt": "tracer dart"
+  },
+  {
+   "name": "Transport Helicopter",
+   "url": "/vehicles/transport-helicopter/",
+   "cat": "VEHICLES",
+   "alt": "uh-79 uh79 transport heli"
   },
   {
    "name": "Tsuru Reef",

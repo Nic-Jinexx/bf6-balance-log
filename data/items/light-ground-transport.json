@@ -1,0 +1,41 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154413 (art), 154618 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described.",
+  "slug": "light-ground-transport",
+  "name": "Light Ground Transport",
+  "branch": "vehicles",
+  "order": 3,
+  "aliases": [
+    "glider 96",
+    "glider",
+    "light transport"
+  ],
+  "blurb": "Glider 96",
+  "traits": [],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "NATO",
+      "value": "Glider 96"
+    },
+    {
+      "label": "Pax Armata",
+      "value": "TBD"
+    }
+  ],
+  "loadout": [
+    {
+      "role": "Gunner",
+      "slot": "Mounted Weapon",
+      "locked": true,
+      "equipped": "Heavy Machine Gun",
+      "options": []
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

@@ -1,0 +1,70 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154452 (art), 154729 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described.",
+  "slug": "fighter-jet",
+  "name": "Fighter Jet",
+  "branch": "vehicles",
+  "order": 10,
+  "aliases": [
+    "f-97",
+    "f97",
+    "kestrel",
+    "f-97 kestrel"
+  ],
+  "blurb": "F-97 Kestrel",
+  "traits": [],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "NATO",
+      "value": "F-97 Kestrel"
+    },
+    {
+      "label": "Pax Armata",
+      "value": "TBD"
+    }
+  ],
+  "loadout": [
+    {
+      "role": "Driver",
+      "slot": "Primary",
+      "locked": true,
+      "equipped": "Autocannon",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Secondary",
+      "locked": true,
+      "equipped": "Lock-Guided AA",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 1",
+      "locked": true,
+      "equipped": "Flares",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 2",
+      "locked": true,
+      "equipped": "Aim-Guided Bomb",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Upgrade",
+      "locked": true,
+      "equipped": "Radar System",
+      "options": []
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

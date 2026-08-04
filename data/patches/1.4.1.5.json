@@ -58,7 +58,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "The 1P86 Variable Scope can no longer be used while operating an underbarrel launcher.",

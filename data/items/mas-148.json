@@ -1,0 +1,36 @@
+{
+  "_comment": "Transcribed from an in-game screenshot taken 2026-08-04 (Steam capture 20260804154855). Gadget screens carry a name, a model designation and a description but no stat block or trait chips, so this item has no stats or ratings. Art is cropped from the same shot. The page leads with the in-game name and carries the model designation underneath, same as the other launchers.",
+  "slug": "mas-148",
+  "name": "Long-Range Launcher",
+  "branch": "gadgets",
+  "subcategory": "launchers",
+  "_order_note": "No explicit order: the only ordering evidence is the Engineer Gadget 1 picker, which mixes launchers with deployables and tools and so is not the launcher category order. The generator sorts unordered items last, which is where a newly catalogued item belongs until its real position is confirmed.",
+  "aliases": [
+    "mas 148",
+    "mas-148",
+    "glaive",
+    "mas 148 glaive"
+  ],
+  "blurb": "MAS 148 Glaive",
+  "class": "Engineer",
+  "traits": [],
+  "description": {
+    "text": "A long-range anti-vehicle missile system. Requires lock-on before launch, after which the missile will engage automatic self-guidance. Capable of faster and longer range lock-ons for ground and air targets that have been marked with the Laser Designator or Tracer Dart.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Unlock",
+      "value": "Rank"
+    },
+    {
+      "label": "Requirement",
+      "value": "Rank 47"
+    }
+  ],
+  "related": [],
+  "retired_paths": [],
+  "_class_note": "Class recorded as Engineer because the capture is the Engineer gadget picker, alongside MBT-LAW, RPG-7V2 and the other launchers."
+}

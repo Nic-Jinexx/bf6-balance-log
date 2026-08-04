@@ -1870,7 +1870,9 @@
     "AUDIO"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "transport-helicopter"
+   ]
   },
   {
    "text": "Added unique low-health fire sounds for different vehicle types.",
@@ -1894,7 +1896,9 @@
     "AUDIO"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Fixed an issue where the MBT Active Protection System audio felt delayed.",
@@ -1902,7 +1906,9 @@
     "AUDIO"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Fixed an issue where medium damage sounds played when vehicles only took light damage.",

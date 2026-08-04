@@ -49,6 +49,7 @@
     "csb-iv",
     "lwcms",
     "m18",
+    "mas-148",
     "xfgm-6d"
    ]
   },
@@ -279,7 +280,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Mobile Anti-Air now has new secondary weapon options with High Velocity Rockets and Laser-Guided AA Missiles.",
@@ -288,7 +291,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "mobile-anti-air"
+   ]
   },
   {
    "text": "Naming for the PAX Scout Helicopter has been updated to display its correct name, MH-350.",
@@ -297,7 +302,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "The Attack Helicopter Radar System is now innate, and Thermal Optics have been added",
@@ -306,7 +313,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "attack-helicopter"
+   ]
   },
   {
    "text": "The ATP Vehicle can now take damage from mounted HMGs and vehicle-mounted LMG weapons.",
@@ -464,7 +473,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "mas-148"
+   ]
   },
   {
    "text": "Reworked the trajectory of the RPG-7V2 Projectile. Zeroing range reduced from 100m to 22m.",
@@ -518,7 +529,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "mobile-anti-air"
+   ]
   },
   {
    "text": "Health has been reduced from 250 to 50.",
@@ -1292,7 +1305,9 @@
     "PORTAL"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Attachment Size Warning has been added, giving Portal creators a warning when imported script or string files exceed recommended attachment size limits.",
@@ -1658,7 +1673,9 @@
     "AUDIO"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "armored-transport"
+   ]
   },
   {
    "text": "Parachute audio now stops correctly for soldiers who are downed or killed while their parachute is in use.",
@@ -1754,7 +1771,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": [],
+   "items": [
+    "mas-148"
+   ],
    "redsec": true
   },
   {
