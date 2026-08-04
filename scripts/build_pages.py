@@ -221,6 +221,19 @@ def write_text(path, text):
         fh.write(text)
 
 
+MONTHS = {m: i for i, m in enumerate(
+    "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split(), start=1)}
+
+
+def iso_date(date_text):
+    """'Jul 16, 2026' -> '2026-07-16' for <lastmod>. None if unparseable, which
+    just drops the hint rather than emitting a wrong or invented date."""
+    m = re.match(r"([A-Za-z]{3})[a-z]*\s+(\d{1,2}),\s*(\d{4})", (date_text or "").strip())
+    if not m or m.group(1).title() not in MONTHS:
+        return None
+    return "%s-%02d-%02d" % (m.group(3), MONTHS[m.group(1).title()], int(m.group(2)))
+
+
 def version_key(v):
     parts = re.findall(r"\d+", v or "")
     return tuple(int(p) for p in parts) or (0,)
@@ -730,7 +743,7 @@ def render_related(item, by_slug):
 
 def render_history(entries, name):
     if not entries:
-        return ('<p class="emptynote">No balance change to the %s has been logged yet. '
+        return ('<p class="emptynote">EA has not named the %s in a patch note yet. '
                 'Entries appear here automatically once a patch line in the log is tagged '
                 'for this item.</p>' % html.escape(name))
 
@@ -795,13 +808,15 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
 
     img = find_image(item["slug"])
     canonical = SITE + url
-    desc = ("Every logged Battlefield 6 balance change to the %s, with its patch history, "
-            "stats and in-game description." % name)
+    # Maps are places, so "the Tsuru Reef" reads wrong; weapons and gadgets take
+    # the article. This shows up in search results on 18 map pages.
+    the = "" if item["branch"] == "maps" else "the "
+    desc = ("Every Battlefield 6 patch note mentioning %s%s, quoted from EA's official "
+            "Game Updates, with stats and in-game description." % (the, name))
     n = len(entries)
-    histnote = ("%d change%s to the %s %s been logged, newest first. Each entry is the exact "
-                "line from EA's patch notes." % (n, "" if n == 1 else "s", name,
-                                                 "has" if n == 1 else "have")) if n else \
-               "Nothing logged for this item yet."
+    histnote = ("%d patch note%s mentioning %s%s, newest first. Each entry is the exact "
+                "line from EA's Game Update notes." % (n, "" if n == 1 else "s", the, name)) \
+               if n else "Nothing logged for this item yet."
 
     jsonld = json.dumps({
         "@context": "https://schema.org",
@@ -969,11 +984,34 @@ def main():
     written.append((os.path.join(ROOT, "data", "search-index.json"),
                     json.dumps(search_index, indent=1) + "\n"))
 
-    urls = [SITE + "/"] + [SITE + i["url"] for i in items]
+    # lastmod from the newest patch each page actually carries, not from the
+    # build clock: rebuilding for a template tweak should not tell crawlers that
+    # 127 item pages changed. The home page tracks the newest update overall.
+    def newest_for(entry_list):
+        vers = [e["version"] for e in entry_list if e.get("version") and e.get("date")]
+        if not vers:
+            return None
+        newest = max(vers, key=version_key)
+        for e in entry_list:
+            if e["version"] == newest:
+                return iso_date(e["date"])
+        return None
+
+    all_entries = [e for group in history.values() for e in group]
+    site_lastmod = newest_for(all_entries) if all_entries else None
+
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for u in urls:
-        sitemap.append("  <url><loc>%s</loc></url>" % u)
+
+    def add(url, lastmod):
+        if lastmod:
+            sitemap.append("  <url><loc>%s</loc><lastmod>%s</lastmod></url>" % (url, lastmod))
+        else:
+            sitemap.append("  <url><loc>%s</loc></url>" % url)
+
+    add(SITE + "/", site_lastmod)
+    for i in items:
+        add(SITE + i["url"], newest_for(history.get(i["slug"], [])))
     sitemap.append("</urlset>")
     written.append((os.path.join(ROOT, "sitemap.xml"), "\n".join(sitemap) + "\n"))
 

@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0a0e0c">
-<title>Battlefield 6: Balance Change Log</title>
-<meta name="description" content="A categorized, searchable log of every official Battlefield 6 balance change: weapons, vehicles, gadgets, maps and REDSEC, from EA's own patch notes.">
+<title>Battlefield 6 Patch Notes: Every Update | BF6 Balance Log</title>
+<meta name="description" content="Every line of every Battlefield 6 patch note, quoted from EA and sorted by category: weapons, vehicles, gadgets, maps and REDSEC. Search all 15 updates at once.">
 <link rel="canonical" href="https://bf6balancelog.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Battlefield 6: Balance Change Log">
-<meta property="og:description" content="Every official BF6 balance change, weapons to REDSEC, sourced from EA's patch notes and organized by category. Search it instead of digging through EA's site.">
+<meta property="og:title" content="Battlefield 6 Patch Notes: Every Update, Searchable">
+<meta property="og:description" content="Every line of every BF6 patch note, quoted from EA and sorted by category. Search 15 updates at once instead of digging through EA's site, or open any weapon to see its full history.">
 <meta property="og:url" content="https://bf6balancelog.com/">
 <meta property="og:site_name" content="BF6 Balance Log">
 <meta property="og:image" content="https://bf6balancelog.com/og-image.png">
@@ -17,11 +17,11 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The BF6 Balance Log patch index, listing every Battlefield 6 game update with its version, dates, and headline.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Battlefield 6: Balance Change Log">
-<meta name="twitter:description" content="Every official BF6 balance change, weapons to REDSEC, sourced from EA's patch notes and organized by category.">
+<meta name="twitter:title" content="Battlefield 6 Patch Notes: Every Update, Searchable">
+<meta name="twitter:description" content="Every line of every BF6 patch note, quoted from EA and sorted by category. Search 15 updates at once, or read any one in full.">
 <meta name="twitter:image" content="https://bf6balancelog.com/og-image.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"BF6 Balance Log","url":"https://bf6balancelog.com/"}
+{"@context":"https://schema.org","@type":"WebSite","name":"BF6 Balance Log","alternateName":"Battlefield 6 Patch Notes","url":"https://bf6balancelog.com/","description":"Every line of every Battlefield 6 patch note, quoted from EA's official Game Updates and sorted by category.","inLanguage":"en","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://bf6balancelog.com/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
 </script>
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192">
@@ -5763,6 +5763,18 @@ html{-webkit-text-size-adjust:100%}
     document.getElementById('searchSuggestions').classList.remove('show');
     input.focus();
   };
+
+  // ?q= runs a search on load, so a result is linkable and shareable. This is
+  // also what the SearchAction in the page's structured data points at, so it
+  // has to keep working.
+  try {
+    var q = new URLSearchParams(location.search).get('q');
+    if (q) {
+      var box = document.getElementById('searchInput');
+      if (box) { box.value = q; }
+      filterBalanceLog(q);
+    }
+  } catch (e) { /* no URLSearchParams: search still works by typing */ }
 })();
 </script>
 
