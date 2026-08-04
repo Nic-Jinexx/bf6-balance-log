@@ -287,6 +287,30 @@ def full_patch_payload(by_version_all):
     return payload
 
 
+def render_header(by_version_all):
+    """The header's counts and date window.
+
+    Generated because it rotted: the page shipped "1.0.1.0 - 1.4.1.0 (14
+    updates)" and "Compiled Jul 29, 2026" for a while after 1.4.1.5 landed. Any
+    number that has to be retyped when a patch ships will eventually be wrong.
+    """
+    patches = patch_index()
+    if not patches:
+        return ""
+    ordered = sorted(patches, key=lambda p: version_key(p["version"]))
+    oldest, newest = ordered[0], ordered[-1]
+    lines = sum(len(v) for v in by_version_all.values())
+    return (
+        '<div class="meta-row">\n'
+        '<span><b>Patches covered</b> %s &ndash; %s (%d update%s)</span>\n'
+        '<span><b>Window</b> %s &ndash; %s</span>\n'
+        '<span><b>Lines logged</b> %s, every one quoted from EA</span>\n'
+        '</div>'
+        % (esc(oldest["version"]), esc(newest["version"]), len(patches),
+           "" if len(patches) == 1 else "s",
+           esc(oldest["posted"]), esc(newest["posted"]), format(lines, ",")))
+
+
 def render_index(by_version_all):
     """The Patch Index table body: a row per update, each followed by an empty
     hidden row the browser fills from data/patch-full.json on first expand.
@@ -363,6 +387,7 @@ def main():
         updated = inject(updated, cat, body)
 
     by_version_all = load_by_version()
+    updated = inject(updated, "header", render_header(by_version_all))
     updated = inject(updated, "index", render_index(by_version_all))
     full_json = json.dumps(full_patch_payload(by_version_all),
                            ensure_ascii=False, separators=(",", ":")) + "\n"
