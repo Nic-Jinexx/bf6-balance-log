@@ -95,6 +95,29 @@ def patch_meta():
     return {p["version"]: (p["posted"], p["url"]) for p in patch_index()}
 
 
+EA_HOST = "https://www.ea.com/"
+
+
+def render_locales(url):
+    """Placeholder for the row of flag links to EA's own translations.
+
+    Only the article path is emitted; the twelve <a> elements are built in the
+    browser by buildLocaleLinks() in index.html, which also holds the locale
+    table and the reasoning behind it.
+
+    Spelling all twelve links out here costs ~3 KB per block and a version
+    appears in one block per category, so the full markup added 442 KB to a
+    618 KB page - more than undoing the work that moved the full notes out to
+    data/patch-full.json. The row is decoration around an outbound link, so
+    there is nothing to lose by building it client side.
+
+    Anything that is not an ea.com URL gets no row rather than a guessed link.
+    """
+    if not url.startswith(EA_HOST):
+        return ""
+    return '<div class="i18n" data-i18n="%s"></div>' % H.escape(url[len(EA_HOST):], quote=True)
+
+
 def version_key(v):
     return [int(x) for x in v.split(".")]
 
@@ -245,6 +268,7 @@ def render_category(cat, by_version, meta, summaries, emitted=None, newest=None)
                    '<span class="tag tag-%s">%s</span></summary>'
                    % (esc(version), esc(posted), cat, tag))
         out.append('<div class="body">')
+        out.append(render_locales(url))
         note = summaries.get(version)
         if note:
             out.append('<p class="dev">Dev intent, quoted from EA\'s '
