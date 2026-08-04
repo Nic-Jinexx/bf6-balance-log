@@ -1,0 +1,14 @@
+# core.autocrlf is true on this machine, so a checkout rewrote index.html to
+# CRLF while the generators emit LF. That made `build_pages.py --check` report
+# index.html as stale immediately after `git checkout main`, which is a false
+# alarm in the one tool that exists to catch real staleness.
+#
+# Committed blobs were already LF; this just stops the working tree drifting.
+* text=auto eol=lf
+
+# Binary assets must never be line-ending processed.
+*.png binary
+*.ico binary
+*.jpg binary
+*.avif binary
+*.zip binary
