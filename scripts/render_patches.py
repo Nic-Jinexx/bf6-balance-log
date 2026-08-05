@@ -113,9 +113,38 @@ def render_locales(url):
 
     Anything that is not an ea.com URL gets no row rather than a guessed link.
     """
+    return '<div class="i18n"%s></div>' % locale_attr(url)
+
+
+# EA is inconsistent about this: three of the fifteen source URLs carry an
+# explicit /en/ and the rest carry none. Both serve the same English article,
+# but pasting a locale in front of the /en/ one gives /de/en/... which is a
+# genuine 404 - it shipped 36 dead links before this was caught. Strip any
+# leading locale segment before building the localised URL.
+KNOWN_PREFIXES = {
+    "en", "ar", "de", "es", "es-mx", "fr", "it", "ja", "ko", "pl", "pt-br",
+    "zh-hans", "zh-hant", "cs", "da", "fi", "id", "nb", "nl", "ro", "ru", "sv",
+    "th", "tr", "en-gb", "en-au", "pt", "zh",
+}
+
+
+def article_path(url):
+    """The article path with any locale prefix removed, or None if not an EA URL."""
     if not url.startswith(EA_HOST):
+        return None
+    tail = url[len(EA_HOST):]
+    head, sep, rest = tail.partition("/")
+    if sep and head.lower() in KNOWN_PREFIXES:
+        return rest
+    return tail
+
+
+def locale_attr(url):
+    """` data-i18n="<path>"` for a patch URL, or "" when there is nothing to link."""
+    path = article_path(url)
+    if not path:
         return ""
-    return '<div class="i18n" data-i18n="%s"></div>' % H.escape(url[len(EA_HOST):], quote=True)
+    return ' data-i18n="%s"' % H.escape(path, quote=True)
 
 
 def version_key(v):
@@ -360,8 +389,13 @@ def render_index(by_version_all):
         # Empty on purpose - filled client-side. No data-item anywhere in here
         # either way: build_pages.py harvests every tagged li/tr out of
         # index.html, and these lines already appear in their category section.
+        # The locale row is static markup rather than part of the fetched
+        # payload, so it is there the moment the row opens and survives the
+        # panel being refilled.
         out.append('<tr class="ixfull" data-ver="%s" hidden><td colspan="5">'
-                   '<div class="fullpatch"></div></td></tr>' % esc(version))
+                   '<div class="i18n"%s></div>'
+                   '<div class="fullpatch"></div></td></tr>'
+                   % (esc(version), locale_attr(patch["url"])))
     return "\n".join(out)
 
 

@@ -152,6 +152,9 @@ td.item{color:var(--text);font-weight:600}
 .indexTable tr.ixrow[aria-expanded="true"] .ixcaret{transform:rotate(90deg);color:var(--weapons)}
 .indexTable tr.ixfull>td{padding:0;border-bottom:1px solid var(--border2);background:var(--bg)}
 .fullpatch{padding:16px 18px 22px;max-height:70vh;overflow-y:auto}
+/* the panel cell has no padding of its own, so the locale row has to bring its
+   own inset to line up with .fullpatch below it */
+.indexTable tr.ixfull .i18n{padding:12px 18px 0;margin:0}
 .fullmeta{margin:0 0 14px;font-family:var(--mono);font-size:13px;color:var(--dim)}
 .fullhead{margin:18px 0 6px;font-family:var(--mono);font-size:13px;font-weight:700;
   text-transform:uppercase;letter-spacing:.6px;padding-left:9px;border-left:3px solid var(--dim)}
@@ -732,35 +735,35 @@ html{-webkit-text-size-adjust:100%}
 <tr><th>Version</th><th>Posted</th><th>Live</th><th>Headline</th><th>Link</th></tr>
 <!-- PATCHES:index:START -->
 <tr class="ixrow" data-ver="1.4.1.5" data-count="24" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.4.1.5 notes"><td><span class="ixcaret">&rsaquo;</span>1.4.1.5</td><td>Aug 3, 2026</td><td>Aug 4, 2026</td><td>Quality-of-Life patch (no balance changes)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-1-5" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.4.1.5" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.4.1.5" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-1-5"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.4.1.0" data-count="136" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.4.1.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.4.1.0</td><td>Jul 16, 2026</td><td>Jul 21, 2026</td><td>Season 4: Pacific Front (naval combat)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-1-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.4.1.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.4.1.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-1-0"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.3.3.0" data-count="331" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.3.3.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.3.3.0</td><td>Jun 26, 2026</td><td>Jun 30, 2026</td><td>Season 3: High-Value Target (major gunplay overhaul)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-3-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.3.3.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.3.3.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-3-0"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.3.2.0" data-count="216" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.3.2.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.3.2.0</td><td>Jun 5, 2026</td><td>Jun 9, 2026</td><td>Season 3: Blastpoint (Cairo Bazaar)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-2-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.3.2.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.3.2.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-2-0"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.3.1.5" data-count="16" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.3.1.5 notes"><td><span class="ixcaret">&rsaquo;</span>1.3.1.5</td><td>May 22, 2026</td><td>May 26, 2026</td><td>Quality-of-Life patch (no balance changes)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-5" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.3.1.5" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.3.1.5" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-5"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.3.1.0" data-count="395" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.3.1.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.3.1.0</td><td>May 8, 2026</td><td>May 12, 2026</td><td>Season 3: Warlords: Supremacy launch (vehicle overhaul)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.3.1.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.3.1.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-3-1-0"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.2.3.5" data-count="14" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.2.3.5 notes"><td><span class="ixcaret">&rsaquo;</span>1.2.3.5</td><td>May 4, 2026</td><td>May 5, 2026</td><td>Quality-of-Life patch (no balance changes)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-5" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.2.3.5" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.2.3.5" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-5"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.2.3.0" data-count="316" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.2.3.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.2.3.0</td><td>Apr 10, 2026</td><td>Apr 14, 2026</td><td>Season 2: Hunter / Prey (Operation Augur)</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.2.3.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.2.3.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.2.2.0" data-count="378" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.2.2.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.2.2.0</td><td>Mar 13, 2026</td><td>Mar 17, 2026</td><td>Nightfall content drop (Hagental Base)</td><td><a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.2.2.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.2.2.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.2.1.0" data-count="271" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.2.1.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.2.1.0</td><td>Feb 13, 2026</td><td>Feb 17, 2026</td><td>Season 2: Extreme Measures launch</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-1-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.2.1.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.2.1.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-1-0"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.1.3.5" data-count="34" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.1.3.5 notes"><td><span class="ixcaret">&rsaquo;</span>1.1.3.5</td><td>Jan 16, 2026</td><td>Jan 20, 2026</td><td>Small QoL / jet &amp; melee pass</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-5" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.1.3.5" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.1.3.5" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-5"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.1.3.0" data-count="246" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.1.3.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.1.3.0</td><td>Dec 5, 2025</td><td>Dec 5, 2025</td><td>Winter Offensive</td><td><a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.1.3.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.1.3.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.1.2.0" data-count="148" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.1.2.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.1.2.0</td><td>Nov 17, 2025</td><td>Nov 18, 2025</td><td>California Resistance (Eastwood)</td><td><a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.1.2.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.1.2.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.1.1.0" data-count="128" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.1.1.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.1.1.0</td><td>Oct 24, 2025</td><td>Oct 28, 2025</td><td>Season 1: Rogue Ops launch</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-update-1-1-1-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.1.1.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.1.1.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-update-1-1-1-0"></div><div class="fullpatch"></div></td></tr>
 <tr class="ixrow" data-ver="1.0.1.0" data-count="241" tabindex="0" role="button" aria-expanded="false" title="Click to read the full 1.0.1.0 notes"><td><span class="ixcaret">&rsaquo;</span>1.0.1.0</td><td>Oct 9, 2025</td><td>Oct 9, 2025</td><td>Launch / Day-One patch</td><td><a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-update-notes-1-0-1-0" target="_blank" rel="noopener">ea.com &#8599;</a></td></tr>
-<tr class="ixfull" data-ver="1.0.1.0" hidden><td colspan="5"><div class="fullpatch"></div></td></tr>
+<tr class="ixfull" data-ver="1.0.1.0" hidden><td colspan="5"><div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-update-notes-1-0-1-0"></div><div class="fullpatch"></div></td></tr>
 <!-- PATCHES:index:END -->
 </table>
 
@@ -980,7 +983,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-player">34 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>PLAYER</b></p>
 <ul class="plain">
@@ -1077,7 +1080,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-player">41 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>PLAYER</b></p>
 <ul class="plain">
@@ -1129,7 +1132,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-player">38 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>PLAYER</b></p>
 <ul class="plain">
 <li>Aim Assist: fully reset to Open Beta tuning, with related options reset to default to ensure consistency.</li>
@@ -1550,7 +1553,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-weapons">22 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>WEAPONS</b></p>
 <ul class="plain">
@@ -1662,7 +1665,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-weapons">16 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>WEAPONS</b></p>
 <ul class="plain">
@@ -1689,7 +1692,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-weapons">14 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>WEAPONS</b></p>
 <ul class="plain">
 <li>Dispersion tuning pass: dispersion has been globally reduced slightly to reduce its impact on the experience</li>
@@ -1991,7 +1994,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-vehicles">16 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
@@ -2054,7 +2057,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-vehicles">6 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
@@ -2071,7 +2074,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-vehicles">12 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
 <li>Fixed camera reset when entering an GDF-009 AA Stationary Gun after another user.</li>
@@ -2331,7 +2334,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-gadgets">20 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>GADGETS</b></p>
 <ul class="plain">
@@ -2408,7 +2411,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-gadgets">18 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>GADGETS</b></p>
 <ul class="plain">
@@ -2437,7 +2440,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-gadgets">22 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>GADGETS</b></p>
 <ul class="plain">
 <li>Allowed friendly soldiers to damage and detonate certain friendly gadgets.</li>
@@ -2691,7 +2694,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-maps">11 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>MAPS &amp; MODES</b></p>
 <ul class="plain">
@@ -2758,7 +2761,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-maps">36 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>New Content: Winter Offensive</b></p>
 <ul class="plain">
@@ -2808,7 +2811,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-maps">9 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>MAPS &amp; MODES</b></p>
 <ul class="plain">
 <li>Added Sabotage as a new time-limited event mode.</li>
@@ -3289,7 +3292,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-redsec">40 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>PLAYER</b></p>
 <ul class="plain">
@@ -3449,7 +3452,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-redsec">32 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>PLAYER</b></p>
 <ul class="plain">
@@ -3516,7 +3519,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-redsec">6 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
 <li data-item="ptkm-1r">Fixed the issue where the Golf Cart could set off the PTKM-1R gadget in Gauntlet.</li>
@@ -3622,7 +3625,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-progression">12 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>PROGRESSION</b></p>
 <ul class="plain">
@@ -3668,7 +3671,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-progression">2 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>PROGRESSION</b></p>
 <ul class="plain">
@@ -4006,7 +4009,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-ui">121 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>UI &amp; HUD</b></p>
 <ul class="plain">
@@ -4212,7 +4215,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-ui">39 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>UI &amp; HUD</b></p>
 <ul class="plain">
@@ -4262,7 +4265,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-ui">10 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>UI &amp; HUD</b></p>
 <ul class="plain">
 <li>Added a message when attempting to change stance without sufficient space.</li>
@@ -4482,7 +4485,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-audio">22 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>AUDIO</b></p>
 <ul class="plain">
@@ -4533,7 +4536,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-audio">31 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>AUDIO</b></p>
 <ul class="plain">
@@ -4575,7 +4578,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-audio">22 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>AUDIO</b></p>
 <ul class="plain">
 <li>Added new sound effects for Double Ping; refined single and danger ping sound hierarchy.</li>
@@ -4909,7 +4912,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-portal">38 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>PORTAL</b></p>
 <ul class="plain">
@@ -5003,7 +5006,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-portal">4 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>PORTAL</b></p>
 <ul class="plain">
@@ -5018,7 +5021,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-portal">2 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>PORTAL</b></p>
 <ul class="plain">
 <li>Added new scripting functions for music control: mod.LoadMusic(), mod.UnloadMusic(), mod.PlayMusic(), mod.SetMusicParam().</li>
@@ -5158,7 +5161,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-ai">11 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>BOTS</b></p>
 <ul class="plain">
@@ -5180,7 +5183,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-ai">6 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>AI</b></p>
 <ul class="plain">
@@ -5301,7 +5304,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-misc">24 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>SETTINGS</b></p>
 <ul class="plain">
@@ -5367,7 +5370,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-misc">8 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-0"></div>
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.1.3.0&rdquo;: Improved hit registration across situations that previously felt unreliable , including quick aim adjustments, firing before a zoom completes, and close-quarters fights with many players. These updates make bullet impacts more predictable and damage feedback easier to read in the moment. Enhanced close-range soldier visibility , with stronger character highlights and improved prone animations to help soldiers stand out more clearly in low-contrast or visually busy areas. Refined weapon handling for more consistent accuracy , addressing issues with first-shot behaviour, recoil interaction, and attachment alignment so weapons feel more stable and predictable during firefights. Improved reliability across several core gadgets , including updates to the LWCMS Portable Mortar, Supply Pouch, Smoke Cover, and traversal tools to ensure they behave consistently and provide clearer feedback. Strengthened vehicle clarity and interaction , fixing issues around damage zones, HUD overlaps, seat reticules, and camera behaviour to make vehicle play more stable for both drivers and passengers. Updated Breakthrough and Rush layouts on multiple maps to improve attacker–defender balance, smooth out sector flow, and adjust vehicle distribution based on match outcome data and player feedback. Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.</p>
 <p class="grp"><b>SETTINGS</b></p>
 <ul class="plain">
@@ -5389,7 +5392,7 @@ html{-webkit-text-size-adjust:100%}
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-misc">13 lines</span></summary>
 <div class="body">
-<div class="i18n" data-i18n="en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
+<div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>SETTINGS</b></p>
 <ul class="plain">
 <li>Added a new option allowing players to sprint automatically when pushing the stick fully forward.</li>
@@ -5575,6 +5578,10 @@ html{-webkit-text-size-adjust:100%}
     row.setAttribute('aria-expanded', open ? 'false' : 'true');
     panel.hidden = open;
     if (open) return;
+
+    // Same flag row the category blocks get. Defined in a later script, so
+    // guard: this runs on click, long after both have parsed.
+    if (window.fillLocaleLinks) window.fillLocaleLinks(panel);
 
     var box = panel.querySelector('.fullpatch');
     if (!box || box.dataset.loaded) return;
@@ -6039,6 +6046,9 @@ html{-webkit-text-size-adjust:100%}
   function fillWithin(root){
     (root || document).querySelectorAll('.i18n[data-i18n]').forEach(fill);
   }
+  // The Patch Index rows are table rows, not <details>, so they cannot use the
+  // toggle listener below and call this directly when they open.
+  window.fillLocaleLinks = fillWithin;
   document.querySelectorAll('details.patch[open]').forEach(fillWithin);
   document.addEventListener('toggle', function(e){
     var d = e.target;
