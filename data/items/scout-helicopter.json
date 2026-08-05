@@ -29,8 +29,8 @@
       "options": [
         {
           "name": "Minigun",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "7.62mm Minigun",
+          "description": "A rapid-fire gun for use against infantry and lightly armored vehicles."
         },
         {
           "name": "Grenade Launcher",
@@ -39,8 +39,8 @@
         },
         {
           "name": "Heavy Rotary MG",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": ".50 Cal Rotary MG",
+          "description": "A heavy rotary machine gun ideal for combatting unarmored vehicles and infantry at long range."
         }
       ]
     },
@@ -55,8 +55,9 @@
         },
         {
           "name": "Aim-Guided",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "70mm PGM Rocket",
+          "description": "A rocket designed to combat infantry and light vehicles. Can be guided to the target via a weapon's crosshairs.",
+          "title": "Aim-Guided Rockets"
         }
       ]
     },
@@ -74,7 +75,7 @@
         {
           "name": "Smoke Launcher",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Launches multiple grenades that form a cloud of smoke. Blocks ability to spot targets, and clears spotted markers from all infantry inside the smoke radius."
         },
         {
           "name": "Motion Sensor",
@@ -94,19 +95,20 @@
           "description": "Reduces the effect of mobility hits, making it easier to stay in control of the vehicle."
         },
         {
-          "name": "Tactical Data Syst…",
+          "name": "Tactical Data System",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Enemies spotted by the Scout Helicopter's equipment and radar will have their position marked in-world and on the minimap for all team members, not just the user's squad."
         },
         {
           "name": "Engine Upgrade",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Enables faster acceleration and top speed at the cost of maneuverability."
         },
         {
           "name": "Interference",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Slows the enemy's ability to acquire lock-on and clears the aircraft's spotted marker sooner. System deactivates if aircraft travels too slowly.",
+          "title": "Targeting Interference"
         }
       ]
     },
@@ -135,8 +137,8 @@
         },
         {
           "name": "Directional Jammer",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "Directional Jammer",
+          "description": "Targets handheld and vehicle mounted enemy devices to prevent lock-on against the Scout Helicopter or other vehicles. Extended use will temporarily overheat the equipment."
         }
       ]
     }

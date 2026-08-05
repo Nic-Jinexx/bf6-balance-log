@@ -44,7 +44,7 @@
         {
           "name": "Integrated Medbay",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Increases health regeneration of friendly soldiers within a radius of the vehicle. Remains active even after all soldiers have exited the vehicle but remain nearby."
         },
         {
           "name": "Grenade Intercept",
@@ -55,12 +55,14 @@
         {
           "name": "Combat Awareness",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Hostiles remain spotted for longer when they damage the vehicle or the owner's squadmates while near the vehicle. Remains active even after all soldiers have exited the vehicle but remain nearby.",
+          "title": "Combat Awareness System"
         },
         {
           "name": "Mobile Command",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Increases the rate of capture when the vehicle is inside an objective's capture area. Remains active even after all soldiers have exited the vehicle but remain nearby.",
+          "title": "Mobile Command Station"
         }
       ]
     },

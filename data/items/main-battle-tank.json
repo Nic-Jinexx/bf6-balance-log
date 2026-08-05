@@ -118,7 +118,8 @@
         {
           "name": "Thermal-Blocking",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Discharges a cloud of thermal smoke that obscures the vehicle. Disrupts the guidance systems of incoming lock-on missiles, blocks spotting, and deals moderate damage to enemy infantry inside the smoke radius.",
+          "title": "Thermal-Blocking Smoke"
         },
         {
           "name": "Projectile Intercept",
@@ -129,7 +130,7 @@
         {
           "name": "Emergency Repair",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Repairs damaged vehicles. Can only be activated when the vehicle is in a low-health state."
         }
       ]
     },
@@ -140,22 +141,23 @@
         {
           "name": "Field Maintenance",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Enables faster vehicle health recovery after taking damage. Will also gain ammo faster."
         },
         {
           "name": "Emergency Countermeasures",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Substantially improves the recharge rate of countermeasures when at low health."
         },
         {
           "name": "Enhanced Loading",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Increases primary weapon rate of fire and improves secondary weapon heat recovery. Only active when countermeasures are not on cooldown.",
+          "title": "Enhanced Loading Systems"
         },
         {
           "name": "Optimized Handling",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Improves vehicle turning rate and aiming speed."
         }
       ]
     },
@@ -170,13 +172,13 @@
         },
         {
           "name": "Light Machine Gun",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "RWS 7.62mm MG",
+          "description": "A machine gun ideal for combatting enemy infantry at medium-range. Less effective against lightly armored vehicles."
         },
         {
           "name": "Grenade Launcher",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "RWS 40mm AGL",
+          "description": "An automatic grenade launcher, effective at targeting infantry and unarmored targets at close range."
         }
       ]
     },
@@ -187,12 +189,14 @@
         {
           "name": "Smoke Wall",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Fires multiple smoke projectiles that detonate to form a smoke wall and obscure the vehicle. Blocks ability to spot targets and clears spotted markers from all infantry inside the smoke radius.",
+          "title": "Smoke Wall Launcher"
         },
         {
           "name": "Countermeasures",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Detects mines and C-4 explosives enabling the operator to activate countermeasures to destroy them.",
+          "title": "Mine Countermeasures"
         }
       ]
     }

@@ -1,5 +1,5 @@
 {
-  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154408 (art), 154554-154610 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants; both models were captured, NATO on 2026-08-04 15:43-15:48 and Pax Armata at 16:59-17:00. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described. Class name is the owner's, not read off a screen: the loadout root screen that carries the in-game class title is the one capture missing from the run. Every other class name here was read directly.",
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154408 (art), 154554-154610 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants; both models were captured, NATO on 2026-08-04 15:43-15:48 and Pax Armata at 16:59-17:00. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described. Class name confirmed against the loadout root screen (capture 20260804170512).",
   "slug": "infantry-fighting-vehicle",
   "name": "Infantry Fighting Vehicle",
   "branch": "vehicles",
@@ -40,8 +40,9 @@
         },
         {
           "name": "Armor-Piercing",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "APDS Round",
+          "description": "A shell designed to target heavy armor. Less effective against infantry due to the absence of an explosive charge.",
+          "title": "Armor-Piercing Shell"
         }
       ]
     },
@@ -114,17 +115,18 @@
         {
           "name": "Mobile Command",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Increases the rate of capture when the vehicle is inside an objective's capture area.",
+          "title": "Mobile Command Station"
         },
         {
           "name": "Field Maintenance",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Enables faster vehicle health recovery after taking damage. Will also gain ammo faster."
         },
         {
           "name": "Targeting Jammer",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Slows the enemy's ability to acquire lock-on, clears the vehicle's spotted marker sooner, and reduces its heat signature in thermal imaging."
         },
         {
           "name": "Emergency Countermeasures",
@@ -134,7 +136,7 @@
         {
           "name": "Systems Upgrade",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Faster cooldowns enabled on equipment in slot 1 and increased range and duration on equipment in slot 2."
         }
       ]
     },
@@ -177,7 +179,7 @@
         {
           "name": "Target Designator",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "The designator allows users to mark both vehicles and locations. Designated targets can be locked-on from further away and lose below-radar protection."
         }
       ]
     }

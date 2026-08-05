@@ -27,8 +27,9 @@
       "options": [
         {
           "name": "Multi-Purpose",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "35mm AAMP Round",
+          "description": "A shell designed to combat aircraft. Ineffective against armored ground vehicles.",
+          "title": "Multi-Purpose AA Shell"
         },
         {
           "name": "High-Velocity",
@@ -38,8 +39,9 @@
         },
         {
           "name": "Anti-Armor",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "35mm AAAP Round",
+          "description": "A slow-firing shell with high damage against armored targets. Most effective against slow-moving aircraft. Ineffective against armored ground vehicles.",
+          "title": "Anti-Armor AA Shell"
         }
       ]
     },
@@ -49,8 +51,9 @@
       "options": [
         {
           "name": "Lock-Guided",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "SLM-93A Spire",
+          "description": "A surface-to-air missile designed to enage fast moving aircraft. Requires lock-on before launch, after which missiles will self-guide to the target unless intercepted by countermeasures. Designated targets can be locked on at greater range and lose below-radar protection.",
+          "title": "Lock-Guided AA Missile"
         },
         {
           "name": "Laser-Guided",
@@ -60,8 +63,9 @@
         },
         {
           "name": "High-Velocity",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "R-84E Field-Adapted SAM",
+          "description": "A high velocity surface-to-air missile for enaging larger aircraft. Has limited guidance towards the point of aim. Sacrifices maneuverability for speed.",
+          "title": "High Velocity AA Missile"
         }
       ]
     },
@@ -94,17 +98,18 @@
         {
           "name": "Optimized Handling",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Improves vehicle turning rate and aiming speed."
         },
         {
           "name": "Enhanced Loading",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Increases reload speed on both primary and secondary weapons. System deactivates when vehicle countermeasures are used.",
+          "title": "Enhanced Loading Systems"
         },
         {
           "name": "Targeting Jammer",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Slows the enemy's ability to acquire lock-on, clears the vehicle's spotted marker sooner, and reduces its heat signature in thermal imaging."
         }
       ]
     },

@@ -25,8 +25,8 @@
       "options": [
         {
           "name": "Heavy Rotary MG",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": ".50 Cal Rotary MG",
+          "description": "A heavy rotary machine gun ideal for combatting unarmored vehicles and infantry at long range."
         },
         {
           "name": "Autocannon",
@@ -41,8 +41,9 @@
       "options": [
         {
           "name": "Aim-Guided",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "SKR-70",
+          "description": "Beam-riding anti-air missile that pilots itself once manually guided to the target. Immune to flares during manual guidance, but vulnerable to countermeasures afterwards.",
+          "title": "Aim-Guided Missile"
         },
         {
           "name": "Coaxial LMG",
@@ -52,8 +53,9 @@
         },
         {
           "name": "Lock-Guided",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "Sirocco 4",
+          "description": "A surface-to-air missile designed to enage fast moving aircraft. Requires lock-on before launch, after which missiles will self-guide to the target unless intercepted by countermeasures. Designated targets can be locked on at greater range and lose below-radar protection.",
+          "title": "Lock-Guided AA Missile"
         }
       ]
     },
@@ -71,7 +73,7 @@
         {
           "name": "Naval Mine",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Waterborne mine that detonates on contact with watercraft."
         },
         {
           "name": "Sea Spear 74",
@@ -100,18 +102,21 @@
       "options": [
         {
           "name": "HE Guided",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "120mm HEGM",
+          "description": "Precision guided shell that can lock on to targets marked with the Laser Designator or Tracer Dart.",
+          "title": "HE Guided Shell"
         },
         {
           "name": "IR Smoke",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "IR Smoke Shell",
+          "description": "Shell that deploys a smoke cloud to obscure vision.",
+          "title": "IR Smoke Shell"
         },
         {
           "name": "Airburst",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "120mm Mortar AB",
+          "description": "Smart shell that airbursts when near aircraft, boats, or the ground.",
+          "title": "Airburst Shell"
         },
         {
           "name": "Illumination",

@@ -28,8 +28,9 @@
       "options": [
         {
           "name": "Aim-Guided",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "70mm PGM Rocket",
+          "description": "A rocket designed to combat infantry and light vehicles. Can be guided to the target via a weapon's crosshairs.",
+          "title": "Aim-Guided Rockets"
         },
         {
           "name": "Light Rockets",
@@ -38,8 +39,8 @@
         },
         {
           "name": "Heavy Rockets",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "127mm FFAR",
+          "description": "Unguided rockets capable of firing smaller volleys but providing higher damage per projectile. Effective against most vehicles including armored targets."
         }
       ]
     },
@@ -55,8 +56,9 @@
         },
         {
           "name": "Aim-Guided",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "M41A7 TOW2 Missile",
+          "description": "An anti-tank missile that can be guided to the target via a weapon's crosshairs. Capable of locking onto targets that have been marked with the Laser Designator or Tracer Dart.",
+          "title": "Aim-Guided Missile"
         }
       ]
     },
@@ -79,7 +81,8 @@
         {
           "name": "Target Detection",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Tracks and identifies the location of enemy infantry and vehicles. Attack Helicopter is more vulnerable to lock-on weapons while active.",
+          "title": "Ground Target Detection System"
         }
       ]
     },
@@ -95,17 +98,18 @@
         {
           "name": "Heavy Warheads",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Increases the blast radius lethality of primary weapon payloads as well as ammo capacity. Diminishes aircraft maneuverability."
         },
         {
           "name": "Interference",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Slows the enemy's ability to acquire lock-on and clears the aircraft's spotted marker sooner. System deactivates if aircraft travels too slowly.",
+          "title": "Targeting Interference"
         },
         {
           "name": "Improved Armor",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Improves armor resistance against most infantry weapons."
         }
       ]
     },
