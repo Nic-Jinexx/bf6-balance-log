@@ -130,9 +130,11 @@ td.item{color:var(--text);font-weight:600}
 .i18n:empty{display:none}
 .i18n-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;
   letter-spacing:.5px;color:var(--dim);margin-right:6px}
-.i18n a{text-decoration:none;font-size:14px;padding:1px 3px;border-radius:3px;
-  filter:grayscale(.55) opacity(.72);transition:filter .12s ease,background .12s ease}
+.i18n a{text-decoration:none;display:inline-flex;padding:2px 3px;border-radius:3px;
+  filter:saturate(.85) opacity(.9);transition:filter .12s ease,background .12s ease}
 .i18n a:hover,.i18n a:focus-visible{filter:none;background:rgba(255,255,255,.08)}
+.i18n a svg{width:19px;height:13px;display:block;border-radius:1.5px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.16)}
 @media (max-width:640px){.i18n-label{width:100%;margin:0 0 1px}}
 .src{font-size:13.5px;font-family:var(--mono);color:var(--dim);margin-top:10px}
 .src a{color:var(--vehicles);text-decoration:none}
@@ -5972,19 +5974,39 @@ html{-webkit-text-size-adjust:100%}
  * per category: 145 blocks x 12 links added 442 KB to the page.
  */
 (function(){
+  /* Drawn as inline SVG, not emoji. Windows has never shipped the regional
+   * indicator glyphs, so 🇩🇪 falls back to the letters "DE" in every browser on
+   * this platform - which is most of the audience. These render identically
+   * everywhere. They are simplified to what reads at 19px: correct field
+   * colours and layout, emblems reduced to their silhouette. */
+  var F = {
+    ar: '<rect width="3" height="2" fill="#165d31"/><rect x=".55" y=".62" width="1.9" height=".2" fill="#fff"/><rect x=".55" y="1.16" width="1.9" height=".11" fill="#fff"/>',
+    de: '<rect width="3" height="2" fill="#000"/><rect y=".667" width="3" height=".667" fill="#dd0000"/><rect y="1.334" width="3" height=".666" fill="#ffce00"/>',
+    es: '<rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/>',
+    'es-mx': '<rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#006847"/><rect x="2" width="1" height="2" fill="#ce1126"/><ellipse cx="1.5" cy="1" rx=".2" ry=".16" fill="#8c6239"/>',
+    fr: '<rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#002395"/><rect x="2" width="1" height="2" fill="#ed2939"/>',
+    it: '<rect width="3" height="2" fill="#fff"/><rect width="1" height="2" fill="#009246"/><rect x="2" width="1" height="2" fill="#ce2b37"/>',
+    ja: '<rect width="3" height="2" fill="#fff"/><circle cx="1.5" cy="1" r=".58" fill="#bc002d"/>',
+    ko: '<rect width="3" height="2" fill="#fff"/><circle cx="1.5" cy="1" r=".45" fill="#0047a0"/><path d="M1.05 1a.45.45 0 0 1 .9 0z" fill="#cd2e3a"/><g fill="#000"><rect x=".33" y=".44" width=".38" height=".07"/><rect x=".33" y="1.49" width=".38" height=".07"/><rect x="2.29" y=".44" width=".38" height=".07"/><rect x="2.29" y="1.49" width=".38" height=".07"/></g>',
+    pl: '<rect width="3" height="2" fill="#fff"/><rect y="1" width="3" height="1" fill="#dc143c"/>',
+    'pt-br': '<rect width="3" height="2" fill="#009c3b"/><path d="M1.5.27 2.72 1 1.5 1.73.28 1z" fill="#ffdf00"/><circle cx="1.5" cy="1" r=".32" fill="#002776"/>',
+    'zh-hans': '<rect width="3" height="2" fill="#de2910"/><circle cx=".62" cy=".55" r=".24" fill="#ffde00"/><g fill="#ffde00"><circle cx="1.08" cy=".24" r=".085"/><circle cx="1.29" cy=".5" r=".085"/><circle cx="1.24" cy=".86" r=".085"/><circle cx=".97" cy="1.06" r=".085"/></g>',
+    'zh-hant': '<rect width="3" height="2" fill="#fe0000"/><rect width="1.5" height="1" fill="#000095"/><circle cx=".75" cy=".5" r=".29" fill="#fff"/>'
+  };
+
   var LOCALES = [
-    ['ar','🇸🇦','العربية','Arabic'],
-    ['de','🇩🇪','Deutsch','German'],
-    ['es','🇪🇸','Español','Spanish'],
-    ['es-mx','🇲🇽','Español (México)','Latin American Spanish'],
-    ['fr','🇫🇷','Français','French'],
-    ['it','🇮🇹','Italiano','Italian'],
-    ['ja','🇯🇵','日本語','Japanese'],
-    ['ko','🇰🇷','한국어','Korean'],
-    ['pl','🇵🇱','Polski','Polish'],
-    ['pt-br','🇧🇷','Português (Brasil)','Brazilian Portuguese'],
-    ['zh-hans','🇨🇳','简体中文','Simplified Chinese'],
-    ['zh-hant','🇹🇼','繁體中文','Traditional Chinese']
+    ['ar','العربية','Arabic'],
+    ['de','Deutsch','German'],
+    ['es','Español','Spanish'],
+    ['es-mx','Español (México)','Latin American Spanish'],
+    ['fr','Français','French'],
+    ['it','Italiano','Italian'],
+    ['ja','日本語','Japanese'],
+    ['ko','한국어','Korean'],
+    ['pl','Polski','Polish'],
+    ['pt-br','Português (Brasil)','Brazilian Portuguese'],
+    ['zh-hans','简体中文','Simplified Chinese'],
+    ['zh-hant','繁體中文','Traditional Chinese']
   ];
 
   function fill(box){
@@ -6001,11 +6023,13 @@ html{-webkit-text-size-adjust:100%}
       a.href = 'https://www.ea.com/' + loc[0] + '/' + path;
       a.hreflang = loc[0];
       a.lang = loc[0];
-      a.title = loc[2];
+      a.title = loc[1];
       a.target = '_blank';
       a.rel = 'noopener';
-      a.setAttribute('aria-label', 'Read this update in ' + loc[3] + ' on EA.com');
-      a.textContent = loc[1];
+      a.setAttribute('aria-label', 'Read this update in ' + loc[2] + ' on EA.com');
+      // Constant markup from the table above, never anything user supplied.
+      a.innerHTML = '<svg viewBox="0 0 3 2" role="img" aria-hidden="true" ' +
+                    'preserveAspectRatio="none">' + F[loc[0]] + '</svg>';
       box.appendChild(a);
     });
   }
