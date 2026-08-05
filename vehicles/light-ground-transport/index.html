@@ -128,9 +128,11 @@ td.item{color:var(--text);font-weight:600}
 .i18n:empty{display:none}
 .i18n-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;
   letter-spacing:.5px;color:var(--dim);margin-right:6px}
-.i18n a{text-decoration:none;font-size:14px;padding:1px 3px;border-radius:3px;
-  filter:grayscale(.55) opacity(.72);transition:filter .12s ease,background .12s ease}
+.i18n a{text-decoration:none;display:inline-flex;padding:2px 3px;border-radius:3px;
+  filter:saturate(.85) opacity(.9);transition:filter .12s ease,background .12s ease}
 .i18n a:hover,.i18n a:focus-visible{filter:none;background:rgba(255,255,255,.08)}
+.i18n a svg{width:19px;height:13px;display:block;border-radius:1.5px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.16)}
 @media (max-width:640px){.i18n-label{width:100%;margin:0 0 1px}}
 .src{font-size:13.5px;font-family:var(--mono);color:var(--dim);margin-top:10px}
 .src a{color:var(--vehicles);text-decoration:none}

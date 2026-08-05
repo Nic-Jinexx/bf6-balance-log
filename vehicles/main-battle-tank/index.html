@@ -128,9 +128,11 @@ td.item{color:var(--text);font-weight:600}
 .i18n:empty{display:none}
 .i18n-label{font-family:var(--mono);font-size:11px;text-transform:uppercase;
   letter-spacing:.5px;color:var(--dim);margin-right:6px}
-.i18n a{text-decoration:none;font-size:14px;padding:1px 3px;border-radius:3px;
-  filter:grayscale(.55) opacity(.72);transition:filter .12s ease,background .12s ease}
+.i18n a{text-decoration:none;display:inline-flex;padding:2px 3px;border-radius:3px;
+  filter:saturate(.85) opacity(.9);transition:filter .12s ease,background .12s ease}
 .i18n a:hover,.i18n a:focus-visible{filter:none;background:rgba(255,255,255,.08)}
+.i18n a svg{width:19px;height:13px;display:block;border-radius:1.5px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.16)}
 @media (max-width:640px){.i18n-label{width:100%;margin:0 0 1px}}
 .src{font-size:13.5px;font-family:var(--mono);color:var(--dim);margin-top:10px}
 .src a{color:var(--vehicles);text-decoration:none}
@@ -807,25 +809,25 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </div>
 
 <h2 class="cat vehicles" id="loadout"><span class="dot"></span>Loadout</h2>
-<p class="cat-note">Every customisation slot and every option in it, transcribed from the in-game screens. 5 of 24 options have their in-game description recorded; the rest are named but not yet described.</p>
+<p class="cat-note">Every customisation slot and every option in it, transcribed from the in-game screens. 13 of 24 options have their in-game description recorded; the rest are named but not yet described.</p>
 <div class="loadout">
 <section class="lo-role"><h3>Driver</h3>
 <div class="lo-slot"><h4>Primary</h4>
 <table>
 <tr><th>Option</th><th>Designation</th><th>In-game description</th></tr>
-<tr><td>Multi-Purpose</td><td><span class="tbd">TBD</span></td><td><span class="tbd">TBD</span></td></tr>
-<tr><td>Armor-Piercing</td><td><span class="tbd">TBD</span></td><td><span class="tbd">TBD</span></td></tr>
-<tr><td>Anti-Personnel</td><td><span class="tbd">TBD</span></td><td><span class="tbd">TBD</span></td></tr>
-<tr><td>High Explosive</td><td><span class="tbd">TBD</span></td><td><span class="tbd">TBD</span></td></tr>
+<tr><td>Multi-Purpose</td><td>120mm HEAT-MP-T Round</td><td>A high-explosive shell, moderately effective against both infantry and armored vehicles.</td></tr>
+<tr><td>Armor-Piercing</td><td>120mm APFSDS Round</td><td>A shell designed to target heavy armor. Less effective against infantry due to the absence of an explosive charge.</td></tr>
+<tr><td>Anti-Personnel</td><td>120mm Canister Round</td><td>A shell designed to target infantry at short to medium ranges. Ineffective against armor.</td></tr>
+<tr><td>High Explosive</td><td>120mm HEMP-T Round</td><td>A shell designed for engaging infantry due to the large radius of fragmentation damage. Less effective against armored targets.</td></tr>
 <tr><td>Aim-Guided</td><td>120mm Guided Munition</td><td>An effective anti-vehicle shell that can be guided to the target via a weapon&#x27;s crosshairs.</td></tr>
 </table></div>
 <div class="lo-slot"><h4>Alternate Ammo</h4>
 <table>
 <tr><th>Option</th><th>Designation</th><th>In-game description</th></tr>
-<tr><td>Multi-Purpose</td><td><span class="tbd">TBD</span></td><td><span class="tbd">TBD</span></td></tr>
-<tr><td>Armor-Piercing</td><td><span class="tbd">TBD</span></td><td><span class="tbd">TBD</span></td></tr>
-<tr><td>Anti-Personnel</td><td><span class="tbd">TBD</span></td><td><span class="tbd">TBD</span></td></tr>
-<tr><td>High Explosive</td><td><span class="tbd">TBD</span></td><td><span class="tbd">TBD</span></td></tr>
+<tr><td>Multi-Purpose</td><td>120mm HEAT-MP-T Round</td><td>A high-explosive shell, moderately effective against both infantry and armored vehicles.</td></tr>
+<tr><td>Armor-Piercing</td><td>120mm APFSDS Round</td><td>A shell designed to target heavy armor. Less effective against infantry due to the absence of an explosive charge.</td></tr>
+<tr><td>Anti-Personnel</td><td>120mm Canister Round</td><td>A shell designed to target infantry at short to medium ranges. Ineffective against armor.</td></tr>
+<tr><td>High Explosive</td><td>120mm HEMP-T Round</td><td>A shell designed for engaging infantry due to the large radius of fragmentation damage. Less effective against armored targets.</td></tr>
 <tr><td>Aim-Guided</td><td>120mm Guided Munition</td><td>An effective anti-vehicle shell that can be guided to the target via a weapon&#x27;s crosshairs.</td></tr>
 </table></div>
 <div class="lo-slot"><h4>Secondary</h4>

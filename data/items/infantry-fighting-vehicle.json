@@ -34,8 +34,9 @@
         },
         {
           "name": "Anti-Personnel",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "Canister Round",
+          "description": "A shell designed to target infantry at short to medium ranges. Ineffective against armor.",
+          "title": "Anti-Personnel Shell"
         },
         {
           "name": "Armor-Piercing",
@@ -56,13 +57,14 @@
         },
         {
           "name": "Lock-Guided",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "MR Missile",
+          "description": "An effective anti-vehicle missile. Requires lock-on before launch, after which the missile will guide itself to the target unless intercepted by countermeasures. Capable of faster and longer range lock-ons for targets that have been marked with the Laser Designator or Tracer Dart.",
+          "title": "Lock-Guided Missile"
         },
         {
           "name": "Light Rockets",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "127mm Rockets",
+          "description": "Multi-purpose unguided rockets effective against almost all targets."
         }
       ]
     },
@@ -73,12 +75,13 @@
         {
           "name": "Smoke Generator",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Emits smoke continuously to obscure the vehicle. Can be laid down while driving to create a smoke wall. Blocks ability to spot targets and clears spotted markers from all infantry inside the smoke radius."
         },
         {
           "name": "Thermal-Blocking",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Discharges a cloud of thermal smoke that obscures the vehicle. Disrupts the guidance systems of incoming lock-on missiles, blocks spotting, and deals moderate damage to enemy infantry inside the smoke radius.",
+          "title": "Thermal-Blocking Smoke"
         },
         {
           "name": "Emergency Repair",
@@ -100,7 +103,7 @@
         {
           "name": "Counter-Fire Radar",
           "designation": "TBD",
-          "description": "TBD"
+          "description": "Passively spots sources of incoming damage. Can be activated to extend spotting and designate spotted enemy vehicles."
         }
       ]
     },

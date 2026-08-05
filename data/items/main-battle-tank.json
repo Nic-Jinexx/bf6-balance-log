@@ -28,23 +28,27 @@
       "options": [
         {
           "name": "Multi-Purpose",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "120mm HEAT-MP-T Round",
+          "description": "A high-explosive shell, moderately effective against both infantry and armored vehicles.",
+          "title": "Multi-Purpose HE Shell"
         },
         {
           "name": "Armor-Piercing",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "120mm APFSDS Round",
+          "description": "A shell designed to target heavy armor. Less effective against infantry due to the absence of an explosive charge.",
+          "title": "Armor-Piercing Shell"
         },
         {
           "name": "Anti-Personnel",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "120mm Canister Round",
+          "description": "A shell designed to target infantry at short to medium ranges. Ineffective against armor.",
+          "title": "Anti-Personnel Shell"
         },
         {
           "name": "High Explosive",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "120mm HEMP-T Round",
+          "description": "A shell designed for engaging infantry due to the large radius of fragmentation damage. Less effective against armored targets.",
+          "title": "High Explosive Shell"
         },
         {
           "name": "Aim-Guided",
@@ -60,23 +64,27 @@
       "options": [
         {
           "name": "Multi-Purpose",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "120mm HEAT-MP-T Round",
+          "description": "A high-explosive shell, moderately effective against both infantry and armored vehicles.",
+          "title": "Multi-Purpose HE Shell"
         },
         {
           "name": "Armor-Piercing",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "120mm APFSDS Round",
+          "description": "A shell designed to target heavy armor. Less effective against infantry due to the absence of an explosive charge.",
+          "title": "Armor-Piercing Shell"
         },
         {
           "name": "Anti-Personnel",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "120mm Canister Round",
+          "description": "A shell designed to target infantry at short to medium ranges. Ineffective against armor.",
+          "title": "Anti-Personnel Shell"
         },
         {
           "name": "High Explosive",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "120mm HEMP-T Round",
+          "description": "A shell designed for engaging infantry due to the large radius of fragmentation damage. Less effective against armored targets.",
+          "title": "High Explosive Shell"
         },
         {
           "name": "Aim-Guided",
