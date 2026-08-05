@@ -72,7 +72,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "armored-transport"
+   ]
   },
   {
    "text": "Improved bot logic to reduce unnecessary redeploying.",

@@ -539,7 +539,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "armored-transport"
+   ]
   },
   {
    "text": "Fixed an issue where attack helicopter rocket trails could disappear when firing at long distances.",
@@ -2342,7 +2344,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "armored-transport"
+   ],
    "redsec": true
   },
   {
@@ -2352,7 +2356,9 @@
     "VEHICLES:"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "armored-transport"
+   ],
    "redsec": true
   },
   {

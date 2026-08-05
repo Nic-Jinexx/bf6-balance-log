@@ -3064,7 +3064,9 @@
     "BOTS"
    ],
    "section": "ai",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Bot soldiers now operate the Golf Cart as both driver and passenger.",

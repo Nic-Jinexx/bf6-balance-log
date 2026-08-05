@@ -2992,7 +2992,9 @@
     "AI:"
    ],
    "section": "ai",
-   "items": []
+   "items": [
+    "armored-transport"
+   ]
   },
   {
    "text": "Corrected an issue where Bots using the MAS 148 Glaive and TRCRv2 Tracer Dart did not require line of sight, preventing them from targeting through the environment.",
