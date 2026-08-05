@@ -1,5 +1,5 @@
 {
-  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154433 (art), 154708-154717 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described. \"Tactical Data Syst…\" is truncated by the game's own tile label, not by us. Recorded as displayed rather than guessed at.",
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154433 (art), 154708-154717 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants; both models were captured, NATO on 2026-08-04 15:43-15:48 and Pax Armata at 16:59-17:00. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described. \"Tactical Data Syst…\" is truncated by the game's own tile label, not by us. Recorded as displayed rather than guessed at.",
   "slug": "scout-helicopter",
   "name": "Scout Helicopter",
   "branch": "vehicles",
@@ -8,7 +8,10 @@
     "little bird",
     "ah-6",
     "ah6",
-    "scout heli"
+    "scout heli",
+    "md530",
+    "md530 cayuse",
+    "cayuse"
   ],
   "blurb": "AH-6 Little Bird",
   "traits": [],
@@ -18,16 +21,7 @@
   },
   "stats": [],
   "ratings": [],
-  "availability": [
-    {
-      "label": "NATO",
-      "value": "AH-6 Little Bird"
-    },
-    {
-      "label": "Pax Armata",
-      "value": "TBD"
-    }
-  ],
+  "availability": [],
   "loadout": [
     {
       "role": "Driver",
@@ -148,5 +142,17 @@
     }
   ],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "variants": [
+    {
+      "faction": "NATO",
+      "name": "AH-6 Little Bird",
+      "image": "scout-helicopter"
+    },
+    {
+      "faction": "Pax Armata",
+      "name": "MD530 Cayuse",
+      "image": "scout-helicopter-pax"
+    }
+  ]
 }

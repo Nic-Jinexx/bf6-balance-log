@@ -1,5 +1,5 @@
 {
-  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154445 (art), 154725 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described.",
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154445 (art), 154725 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants; both models were captured, NATO on 2026-08-04 15:43-15:48 and Pax Armata at 16:59-17:00. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described.",
   "slug": "attack-jet",
   "name": "Attack Jet",
   "branch": "vehicles",
@@ -7,7 +7,8 @@
   "aliases": [
     "f-61v",
     "f61v",
-    "attack jet"
+    "attack jet",
+    "f-39e"
   ],
   "blurb": "F-61V",
   "traits": [],
@@ -17,16 +18,7 @@
   },
   "stats": [],
   "ratings": [],
-  "availability": [
-    {
-      "label": "NATO",
-      "value": "F-61V"
-    },
-    {
-      "label": "Pax Armata",
-      "value": "TBD"
-    }
-  ],
+  "availability": [],
   "loadout": [
     {
       "role": "Driver",
@@ -65,5 +57,17 @@
     }
   ],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "variants": [
+    {
+      "faction": "NATO",
+      "name": "F-61V",
+      "image": "attack-jet"
+    },
+    {
+      "faction": "Pax Armata",
+      "name": "F-39E",
+      "image": "attack-jet-pax"
+    }
+  ]
 }

@@ -467,6 +467,13 @@ blockquote.ingame{margin:0;padding:8px 0 8px 16px;border-left:3px solid var(--bo
 .bar i{display:block;height:100%}
 .itemgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;
   margin:26px 0 4px;align-items:start}
+/* no fact box to sit beside: let the art use the full width instead of leaving
+   a dead column, and cap it so a 2-up does not tower over the page */
+.itemgrid.solo{grid-template-columns:minmax(0,1fr)}
+.itemgrid.solo .itemart{flex-direction:row;flex-wrap:wrap}
+.itemgrid.solo figure.itemimg{flex:1 1 320px;min-width:0}
+/* one figure normally, stacked figures when a page covers two faction variants */
+.itemart{display:flex;flex-direction:column;gap:14px}
 figure.itemimg{margin:0}
 figure.itemimg img{width:100%;height:auto;display:block;border:1px solid var(--border);
   border-radius:6px;background:var(--panel)}
@@ -794,7 +801,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </div>
 
 <div class="itemgrid">
-<figure class="itemimg"><img src="/img/items/m15.jpg" alt="Anti-Vehicle Mine in Battlefield 6" loading="lazy"></figure>
+<div class="itemart"><figure class="itemimg"><img src="/img/items/m15.jpg" alt="Anti-Vehicle Mine in Battlefield 6" loading="lazy"></figure></div>
 <div class="factbox">
 <h3>Availability</h3><table>
 <tr><td>Class</td><td>Engineer</td></tr>

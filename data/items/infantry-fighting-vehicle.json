@@ -1,5 +1,5 @@
 {
-  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154408 (art), 154554-154610 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants, because the loadout slots are shared and only the NATO model was captured. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described. Class name is the owner's, not read off a screen: the loadout root screen that carries the in-game class title is the one capture missing from the run. Every other class name here was read directly.",
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-04 (Steam capture 20260804154408 (art), 154554-154610 (loadout)). The page leads with the in-game class name, which is the title the loadout screen shows; the model designation rides underneath. One page covers both faction variants; both models were captured, NATO on 2026-08-04 15:43-15:48 and Pax Armata at 16:59-17:00. TBD is deliberate everywhere: a slot screen names every option in its row but describes only the highlighted one, so most options are named and not yet described. Class name is the owner's, not read off a screen: the loadout root screen that carries the in-game class title is the one capture missing from the run. Every other class name here was read directly.",
   "slug": "infantry-fighting-vehicle",
   "name": "Infantry Fighting Vehicle",
   "branch": "vehicles",
@@ -8,7 +8,9 @@
     "ifv",
     "bradley",
     "m3a3",
-    "m3a3 bradley"
+    "m3a3 bradley",
+    "strf 09",
+    "strf 09 a4"
   ],
   "blurb": "M3A3 Bradley",
   "traits": [],
@@ -18,16 +20,7 @@
   },
   "stats": [],
   "ratings": [],
-  "availability": [
-    {
-      "label": "NATO",
-      "value": "M3A3 Bradley"
-    },
-    {
-      "label": "Pax Armata",
-      "value": "TBD"
-    }
-  ],
+  "availability": [],
   "loadout": [
     {
       "role": "Driver",
@@ -187,5 +180,17 @@
     }
   ],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "variants": [
+    {
+      "faction": "NATO",
+      "name": "M3A3 Bradley",
+      "image": "infantry-fighting-vehicle"
+    },
+    {
+      "faction": "Pax Armata",
+      "name": "STRF 09 A4",
+      "image": "infantry-fighting-vehicle-pax"
+    }
+  ]
 }

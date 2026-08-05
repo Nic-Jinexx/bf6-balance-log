@@ -40,7 +40,7 @@
    "name": "Armored Transport",
    "url": "/vehicles/armored-transport/",
    "cat": "VEHICLES",
-   "alt": "ltv armored transport"
+   "alt": "ltv armored transport traverser mark 2 traverser"
   },
   {
    "name": "Assault Ladder",
@@ -52,13 +52,13 @@
    "name": "Attack Helicopter",
    "url": "/vehicles/attack-helicopter/",
    "cat": "VEHICLES",
-   "alt": "falchion m77e m77e falchion attack heli"
+   "alt": "falchion m77e m77e falchion attack heli panthera panthera kht"
   },
   {
    "name": "Attack Jet",
    "url": "/vehicles/attack-jet/",
    "cat": "VEHICLES",
-   "alt": "f-61v f61v attack jet"
+   "alt": "f-61v f61v attack jet f-39e"
   },
   {
    "name": "B36A4",
@@ -172,7 +172,7 @@
    "name": "Fighter Jet",
    "url": "/vehicles/fighter-jet/",
    "cat": "VEHICLES",
-   "alt": "f-97 f97 kestrel f-97 kestrel"
+   "alt": "f-97 f97 kestrel f-97 kestrel su-57"
   },
   {
    "name": "Flash Grenade",
@@ -262,7 +262,7 @@
    "name": "Infantry Fighting Vehicle",
    "url": "/vehicles/infantry-fighting-vehicle/",
    "cat": "VEHICLES",
-   "alt": "ifv bradley m3a3 m3a3 bradley"
+   "alt": "ifv bradley m3a3 m3a3 bradley strf 09 strf 09 a4"
   },
   {
    "name": "KORD 6P67",
@@ -472,7 +472,7 @@
    "name": "Main Battle Tank",
    "url": "/vehicles/main-battle-tank/",
    "cat": "VEHICLES",
-   "alt": "mbt m1a2 m1a2 sepv3 abrams"
+   "alt": "mbt m1a2 m1a2 sepv3 abrams leo a4"
   },
   {
    "name": "Manhattan Bridge",
@@ -514,7 +514,7 @@
    "name": "Mobile Anti-Air",
    "url": "/vehicles/mobile-anti-air/",
    "cat": "VEHICLES",
-   "alt": "cheetah cheetah 1a2"
+   "alt": "cheetah cheetah 1a2 ge-26 ge-26 pax"
   },
   {
    "name": "MP-APS",
@@ -634,7 +634,7 @@
    "name": "Scout Helicopter",
    "url": "/vehicles/scout-helicopter/",
    "cat": "VEHICLES",
-   "alt": "little bird ah-6 ah6 scout heli"
+   "alt": "little bird ah-6 ah6 scout heli md530 md530 cayuse cayuse"
   },
   {
    "name": "SCW-10",

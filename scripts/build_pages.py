@@ -357,6 +357,13 @@ blockquote.ingame{margin:0;padding:8px 0 8px 16px;border-left:3px solid var(--bo
 .bar i{display:block;height:100%}
 .itemgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;
   margin:26px 0 4px;align-items:start}
+/* no fact box to sit beside: let the art use the full width instead of leaving
+   a dead column, and cap it so a 2-up does not tower over the page */
+.itemgrid.solo{grid-template-columns:minmax(0,1fr)}
+.itemgrid.solo .itemart{flex-direction:row;flex-wrap:wrap}
+.itemgrid.solo figure.itemimg{flex:1 1 320px;min-width:0}
+/* one figure normally, stacked figures when a page covers two faction variants */
+.itemart{display:flex;flex-direction:column;gap:14px}
 figure.itemimg{margin:0}
 figure.itemimg img{width:100%;height:auto;display:block;border:1px solid var(--border);
   border-radius:6px;background:var(--panel)}
@@ -560,11 +567,9 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <div id="searchSuggestions" class="suggestions"></div>
 </div>
 
-<div class="itemgrid">
-<figure class="itemimg">{{IMAGE}}</figure>
-<div class="factbox">
-{{FACTS}}
-</div>
+<div class="itemgrid{{GRIDMOD}}">
+<div class="itemart">{{IMAGE}}</div>
+{{FACTBOX}}
 </div>
 
 {{LOADOUT}}
@@ -691,8 +696,9 @@ def render_facts(item, color, signature=None, added_in=None, klass=None):
                           ' class="stack"' if is_stack else "",
                           value_cell(row.get("value"))))
         out.append("</table>")
-    if not out:
-        out.append('<p class="emptynote">No stats recorded yet.</p>')
+    # Empty means empty: the caller drops the whole box and lets the art span the
+    # row, rather than parking "No stats recorded yet" beside it. Vehicles have
+    # no stat block at all now that faction is carried by the variant captions.
     return "\n".join(out)
 
 
@@ -725,11 +731,37 @@ def render_quote(item):
 
 
 def render_image(item, img):
+    """Art for the page: one figure, or one per faction variant.
+
+    A vehicle class is a single page covering both factions, so it carries a
+    `variants` list and gets a figure each. The caption names the faction and
+    the model, which is why those two no longer need Availability rows.
+    """
+    variants = item.get("variants") or []
+    if variants:
+        out = []
+        for v in variants:
+            base = (v.get("image") or "").strip()
+            src = find_image(base) if base else None
+            label = "%s &middot; %s" % (html.escape(v.get("faction", "")),
+                                        html.escape(v.get("name", "TBD")))
+            if src:
+                body = ('<img src="%s" alt="The %s in Battlefield 6, %s variant" '
+                        'loading="lazy">'
+                        % (src, html.escape(v.get("name", item["name"])),
+                           html.escape(v.get("faction", ""))))
+            else:
+                body = ('<div class="imgpending"><b>%s</b><span>image pending</span></div>'
+                        % html.escape(v.get("name", item["name"])))
+            out.append('<figure class="itemimg">%s<figcaption>%s</figcaption></figure>'
+                       % (body, label))
+        return "\n".join(out)
+
     if img:
-        return ('<img src="%s" alt="%s in Battlefield 6" loading="lazy">'
-                % (img, html.escape(item["name"])))
-    return ('<div class="imgpending"><b>%s</b><span>image pending</span></div>'
-            % html.escape(item["name"]))
+        return ('<figure class="itemimg"><img src="%s" alt="%s in Battlefield 6" '
+                'loading="lazy"></figure>' % (img, html.escape(item["name"])))
+    return ('<figure class="itemimg"><div class="imgpending"><b>%s</b>'
+            '<span>image pending</span></div></figure>' % html.escape(item["name"]))
 
 
 def render_loadout(item):
@@ -880,6 +912,8 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
     crumb += ' / <span style="color:var(--%s)">%s</span>' % (color, html.escape(name))
 
     img = find_image(item["slug"])
+    facts = render_facts(item, color, item.get("signature"), item.get("_added_in"),
+                         item.get("class"))
     canonical = SITE + url
     # Maps are places, so "the Tsuru Reef" reads wrong; weapons and gadgets take
     # the article. This shows up in search results on 18 map pages.
@@ -916,8 +950,8 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
         "TRAITS": render_traits(item),
         "QUOTE": render_quote(item),
         "IMAGE": render_image(item, img),
-        "FACTS": render_facts(item, color, item.get("signature"), item.get("_added_in"),
-                              item.get("class")),
+        "GRIDMOD": "" if facts else " solo",
+        "FACTBOX": '<div class="factbox">\n%s\n</div>' % facts if facts else "",
         "LOADOUT": render_loadout(item),
         "HISTNOTE": histnote,
         "HISTORY": render_history(entries, name),
