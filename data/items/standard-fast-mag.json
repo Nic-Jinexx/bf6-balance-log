@@ -1,0 +1,26 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Split out of the combined Magazines page on 2026-08-06 so patch lines naming this one specifically have somewhere to land.",
+  "slug": "standard-fast-mag",
+  "name": "Standard Fast Mag",
+  "branch": "attachments",
+  "subcategory": "magazines",
+  "order": 3,
+  "aliases": [
+    "Standard Fast Mag",
+    "Standard Fast Magazine"
+  ],
+  "description": {
+    "text": "Standard magazine with mag pull for quicker reloads.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Point cost",
+      "value": "10 of 100"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

@@ -124,7 +124,7 @@
         {"name": "SOR-300SC", "slug": "sor-300sc", "kind": "Carbine"},
         {"name": "GGH-22", "slug": "ggh-22", "kind": "Sidearm"},
         {"name": "Mini Scout", "slug": "mini-scout", "kind": "Sniper Rifle"},
-        {"name": "Rail Cover", "kind": "Attachment", "_note": "dictated from patch notes; not shown on the roadmap"},
+        {"name": "Rail Cover", "slug": "rail-cover", "kind": "Attachment", "_note": "dictated from patch notes; not shown on the roadmap"},
         {"name": "LPVO", "kind": "Attachment", "_note": "dictated from patch notes; not shown on the roadmap"}
       ]
     },
@@ -219,7 +219,7 @@
         {"name": "RPK-74M", "slug": "rpk-74m", "kind": "LMG", "_note": "distinct from the RPKM. The 2026-08-01 in-game capture shows both in the LMG roster with different stats (RPKM 35/553/40, RPK-74M 20/685/45); the earlier guess that they were one weapon was wrong."},
         {"name": "L115", "slug": "l115", "kind": "Sniper Rifle"},
         {"name": "Speed Holster", "kind": "Attachment"},
-        {"name": "Aftermarket Buffer", "kind": "Attachment"},
+        {"name": "Aftermarket Buffer", "slug": "aftermarket-buffer", "kind": "Attachment"},
         {"name": "Burst Mode", "kind": "Attachment"}
       ]
     },
@@ -235,7 +235,7 @@
         {"name": "PP-19", "slug": "pp-19", "kind": "SMG"},
         {"name": "Handheld Jammer", "slug": "manet-dis-5", "kind": "Gadget", "_note": "in-game the page name is the model, MANET-DIS 5; Handheld Jammer is the display name."},
         {"name": "#00 Buckshot", "kind": "Attachment"},
-        {"name": "Cryogenic Barrels", "kind": "Attachment"}
+        {"name": "Cryogenic Barrels", "slug": "cryogenic-barrel", "kind": "Attachment"}
       ]
     },
     {
@@ -248,7 +248,7 @@
         {"name": "Casual Battle Royale", "kind": "Mode", "_note": "REDSEC"},
         {"name": "Wet Work", "kind": "Event", "_note": "limited-time"},
         {"name": "EOD Bot Arm", "slug": "eod-bot-arm", "kind": "Melee"},
-        {"name": "Compensator", "kind": "Attachment"},
+        {"name": "Compensator", "slug": "compensator", "kind": "Attachment"},
         {"name": "Subsonic Ammo", "kind": "Attachment"}
       ]
     },

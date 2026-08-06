@@ -121,24 +121,24 @@
         "options": [
           {
             "name": "415mm Factory",
-            "page": "barrels",
             "cost": 10,
-            "default": true
+            "default": true,
+            "slug": "basic-barrel"
           },
           {
             "name": "415mm Prototype",
-            "page": "barrels",
-            "cost": 10
+            "cost": 10,
+            "slug": "heavy-barrel"
           },
           {
             "name": "415mm Fluted",
-            "page": "barrels",
-            "cost": 20
+            "cost": 20,
+            "slug": "light-barrel"
           },
           {
             "name": "415mm Cryogenic",
-            "page": "barrels",
-            "cost": 20
+            "cost": 20,
+            "slug": "cryogenic-barrel"
           }
         ]
       },
@@ -220,39 +220,39 @@
         "options": [
           {
             "name": "30rnd Magazine",
-            "page": "magazines",
-            "cost": 5
+            "cost": 5,
+            "slug": "standard-magazine"
           },
           {
             "name": "30rnd Fast Mag",
-            "page": "magazines",
-            "cost": 10
+            "cost": 10,
+            "slug": "standard-fast-mag"
           },
           {
             "name": "36rnd Magazine",
-            "page": "magazines",
-            "cost": 15
+            "cost": 15,
+            "slug": "extended-magazine"
           },
           {
             "name": "40rnd Magazine",
-            "page": "magazines",
             "cost": 25,
-            "default": true
+            "default": true,
+            "slug": "extended-magazine"
           },
           {
             "name": "40rnd Fast Mag",
-            "page": "magazines",
-            "cost": 30
+            "cost": 30,
+            "slug": "extended-fast-mag"
           },
           {
             "name": "45rnd Magazine",
-            "page": "magazines",
-            "cost": 35
+            "cost": 35,
+            "slug": "extended-magazine"
           },
           {
             "name": "45rnd Fast Mag",
-            "page": "magazines",
-            "cost": 40
+            "cost": 40,
+            "slug": "extended-fast-mag"
           }
         ]
       },
@@ -287,154 +287,154 @@
         "options": [
           {
             "name": "Iron Sights",
-            "page": "scopes",
-            "cost": 5
+            "cost": 5,
+            "slug": "iron-sights"
           },
           {
             "name": "Mini Flex 1.00x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "mini-flex-100x"
           },
           {
             "name": "R-MR 1.00x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "r-mr-100x"
           },
           {
             "name": "OSA-7 1.00x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "osa-7-100x"
           },
           {
             "name": "CQ RDS 1.25x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "cq-rds-125x"
           },
           {
             "name": "RO-S 1.25x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "ro-s-125x"
           },
           {
             "name": "2PRO 1.25x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "2pro-125x"
           },
           {
             "name": "ROX 1.50x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "rox-150x"
           },
           {
             "name": "SU-123 1.50x",
-            "page": "scopes",
             "cost": 10,
-            "default": true
+            "default": true,
+            "slug": "su-123-150x"
           },
           {
             "name": "1P87 1.50x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "1p87-150x"
           },
           {
             "name": "A-P2 1.75x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "a-p2-175x"
           },
           {
             "name": "RO-M 1.75x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "ro-m-175x"
           },
           {
             "name": "3VZR 1.75x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "3vzr-175x"
           },
           {
             "name": "CCO 2.00x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "cco-200x"
           },
           {
             "name": "R4T 2.00x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "r4t-200x"
           },
           {
             "name": "BF-2M 2.50x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "bf-2m-250x"
           },
           {
             "name": "Baker 3.00x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "baker-300x"
           },
           {
             "name": "SDO 3.50x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "sdo-350x"
           },
           {
             "name": "PVQ-31 4.00x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "pvq-31-400x"
           },
           {
             "name": "LDS 4.50x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "lds-450x"
           },
           {
             "name": "ST Prism 5.00x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "st-prism-500x"
           },
           {
             "name": "SF-G2 5.00x",
-            "page": "scopes",
-            "cost": 10
+            "cost": 10,
+            "slug": "sf-g2-500x"
           },
           {
             "name": "SU-230 LPVO",
-            "page": "scopes",
-            "cost": 20
+            "cost": 20,
+            "slug": "su-230-lpvo"
           },
           {
             "name": "1P86 LPVO",
-            "page": "scopes",
-            "cost": 20
+            "cost": 20,
+            "slug": "1p86-lpvo"
           },
           {
             "name": "MARS-F LPVO",
-            "page": "scopes",
-            "cost": 25
+            "cost": 25,
+            "slug": "mars-f-lpvo"
           },
           {
             "name": "MC-CO LPVO",
-            "page": "scopes",
-            "cost": 25
+            "cost": 25,
+            "slug": "mc-co-lpvo"
           },
           {
             "name": "DVO LPVO",
-            "page": "scopes",
-            "cost": 25
+            "cost": 25,
+            "slug": "dvo-lpvo"
           },
           {
             "name": "GRIM 1.50x",
-            "page": "scopes",
-            "cost": 25
+            "cost": 25,
+            "slug": "grim-150x"
           },
           {
             "name": "PAS-35 3.00x",
-            "page": "scopes",
-            "cost": 25
+            "cost": 25,
+            "slug": "pas-35-300x"
           },
           {
             "name": "TH-RDS 1.00x",
-            "page": "scopes",
-            "cost": 35
+            "cost": 35,
+            "slug": "th-rds-100x"
           }
         ]
       },

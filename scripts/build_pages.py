@@ -964,32 +964,50 @@ def render_paths(item):
     return "\n".join(out)
 
 
-def render_options(item):
+def render_options(item, by_slug=None):
     """A flat table of models on a page that covers a whole attachment family.
 
-    Three attachment pages stand for many in-game tiles rather than one each,
-    and for different reasons. Optics: EA writes one description per
-    magnification band, so 22 of the 30 would otherwise repeat the same
-    sentence. Barrels and Magazines: the tile's full name carries the weapon's
-    own barrel length or magazine capacity (415mm Factory on the KORD 6P67,
-    16" Factory on the EF88), so there is no shared name to title a page with,
-    while the type and its description are shared.
+    These three pages used to BE the attachment - one page standing for thirty
+    optics, nine barrel types and four magazine types. That was right for the
+    prose (EA writes one description per magnification band, so 22 of the 30
+    optics would have repeated the same sentence) and wrong for patch history: a
+    line about the DVO LPVO or Extended Barrels had nowhere of its own to land.
+
+    Since 2026-08-06 each row has its own page and this table is the index into
+    them. The family page is kept rather than dissolved because most of the
+    patch lines tagged here name no model at all - "Fixed clipping and reticle
+    issues in the scope", "Magazine attachment indicator alignment" - and those
+    would be stranded by deleting it.
+
+    Barrels and magazines split by TYPE, not by weapon-specific name: the proper
+    name carries the weapon's own barrel length or capacity, so per weapon would
+    be ~150 near-identical pages, and the type is what EA's notes reference.
     """
     options = item.get("options") or []
     if not options:
         return ""
+    by_slug = by_slug or {}
     color = BRANCH_COLOR.get(item["branch"], "weapons")
     has_desig = any((o.get("designation") or "").strip() for o in options)
+    linked = sum(1 for o in options if by_slug.get(o.get("slug")))
     out = ['<h2 class="cat %s" id="options"><span class="dot"></span>%s</h2>'
            % (color, html.escape(item["name"]))]
-    out.append('<p class="cat-note">%d in the game, transcribed from the in-game '
-               'screens. Point cost is the number on the tile; every weapon has '
-               '100 points to spend across all its slots.</p>' % len(options))
+    note = ('%d in the game, transcribed from the in-game screens. Point cost is '
+            'the number on the tile; every weapon has 100 points to spend across '
+            'all its slots.' % len(options))
+    if linked:
+        note += (' Each one has its own page - follow the name for its own patch '
+                 'history. This page keeps the lines that name no single model.')
+    out.append('<p class="cat-note">%s</p>' % note)
     out.append('<div class="loadout"><div class="lo-slot"><table>')
     head = ["Name"] + (["Tile"] if has_desig else []) + ["Points", "In-game description"]
     out.append("<tr>%s</tr>" % "".join("<th>%s</th>" % h for h in head))
     for o in options:
-        cells = ["<td>%s</td>" % html.escape(o.get("name", ""))]
+        target = by_slug.get(o.get("slug"))
+        label = html.escape(o.get("name", ""))
+        if target:
+            label = '<a href="%s">%s</a>' % (target["url"], label)
+        cells = ["<td>%s</td>" % label]
         if has_desig:
             cells.append("<td>%s</td>" % value_cell(o.get("designation")))
         cells.append("<td>%s</td>" % value_cell(str(o.get("cost", "")) or None))
@@ -1210,7 +1228,7 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
         "FACTBOX": '<div class="factbox">\n%s\n</div>' % facts if facts else "",
         "LOADOUT": render_loadout(item),
         "PATHS": render_paths(item),
-        "OPTIONS": render_options(item),
+        "OPTIONS": render_options(item, by_slug),
         "HISTNOTE": histnote,
         "HISTORY": render_history(entries, name, the),
         "RELATED": render_related(item, by_slug, color),

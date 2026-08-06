@@ -13,6 +13,30 @@
    "alt": ""
   },
   {
+   "name": "1P86 LPVO",
+   "url": "/attachments/optics/1p86-lpvo/",
+   "cat": "OPTICS",
+   "alt": "1P86 LPVO 1P86"
+  },
+  {
+   "name": "1P87 1.50x",
+   "url": "/attachments/optics/1p87-150x/",
+   "cat": "OPTICS",
+   "alt": "1P87 1.50x 1P87"
+  },
+  {
+   "name": "2PRO 1.25x",
+   "url": "/attachments/optics/2pro-125x/",
+   "cat": "OPTICS",
+   "alt": "2PRO 1.25x 2PRO"
+  },
+  {
+   "name": "3VZR 1.75x",
+   "url": "/attachments/optics/3vzr-175x/",
+   "cat": "OPTICS",
+   "alt": "3VZR 1.75x 3VZR"
+  },
+  {
    "name": "5 MW Green",
    "url": "/attachments/accessories/5mw-green/",
    "cat": "ACCESSORIES",
@@ -53,6 +77,12 @@
    "url": "/gadgets/launchers/9k38-igla/",
    "cat": "LAUNCHERS",
    "alt": "active locking air-defense launcher air defense launcher 9k38 igla igla"
+  },
+  {
+   "name": "A-P2 1.75x",
+   "url": "/attachments/optics/a-p2-175x/",
+   "cat": "OPTICS",
+   "alt": "A-P2 1.75x A-P2"
   },
   {
    "name": "A3 Receiver",
@@ -133,10 +163,28 @@
    "alt": "b36"
   },
   {
+   "name": "Baker 3.00x",
+   "url": "/attachments/optics/baker-300x/",
+   "cat": "OPTICS",
+   "alt": "Baker 3.00x"
+  },
+  {
    "name": "Barrels",
    "url": "/attachments/barrels/barrels/",
    "cat": "BARRELS",
    "alt": "barrel extended barrel cryogenic barrel heavy barrel fluted barrel light barrel short barrel"
+  },
+  {
+   "name": "Basic Barrel",
+   "url": "/attachments/barrels/basic-barrel/",
+   "cat": "BARRELS",
+   "alt": "Basic Barrel"
+  },
+  {
+   "name": "BF-2M 2.50x",
+   "url": "/attachments/optics/bf-2m-250x/",
+   "cat": "OPTICS",
+   "alt": "BF-2M 2.50x BF-2M"
   },
   {
    "name": "Bipod",
@@ -187,6 +235,12 @@
    "alt": "canted stubby"
   },
   {
+   "name": "CCO 2.00x",
+   "url": "/attachments/optics/cco-200x/",
+   "cat": "OPTICS",
+   "alt": "CCO 2.00x CCO"
+  },
+  {
    "name": "Classic Grip Pod",
    "url": "/attachments/underbarrel/classic-grip-pod/",
    "cat": "UNDERBARREL",
@@ -229,10 +283,22 @@
    "alt": "contaminated"
   },
   {
+   "name": "CQ RDS 1.25x",
+   "url": "/attachments/optics/cq-rds-125x/",
+   "cat": "OPTICS",
+   "alt": "CQ RDS 1.25x CQ RDS"
+  },
+  {
    "name": "CQB Suppressor",
    "url": "/attachments/muzzles/cqb-suppressor/",
    "cat": "MUZZLES",
    "alt": "cqb suppressor"
+  },
+  {
+   "name": "Cryogenic Barrel",
+   "url": "/attachments/barrels/cryogenic-barrel/",
+   "cat": "BARRELS",
+   "alt": "Cryogenic Barrel Cryogenic Barrels"
   },
   {
    "name": "CZ3A1",
@@ -275,6 +341,12 @@
    "url": "/weapons/lmgs/drs-iar/",
    "cat": "LMGS",
    "alt": ""
+  },
+  {
+   "name": "DVO LPVO",
+   "url": "/attachments/optics/dvo-lpvo/",
+   "cat": "OPTICS",
+   "alt": "DVO LPVO DVO"
   },
   {
    "name": "Eastwood",
@@ -323,6 +395,30 @@
    "url": "/modes/escalation/",
    "cat": "MODES",
    "alt": "escalation"
+  },
+  {
+   "name": "Extended Barrel",
+   "url": "/attachments/barrels/extended-barrel/",
+   "cat": "BARRELS",
+   "alt": "Extended Barrel Extended Barrels"
+  },
+  {
+   "name": "Extended Fast Mag",
+   "url": "/attachments/magazines/extended-fast-mag/",
+   "cat": "MAGAZINES",
+   "alt": "Extended Fast Mag Extended Fast Magazine Extended Fast Mags"
+  },
+  {
+   "name": "Extended Light Barrel",
+   "url": "/attachments/barrels/extended-light-barrel/",
+   "cat": "BARRELS",
+   "alt": "Extended Light Barrel"
+  },
+  {
+   "name": "Extended Magazine",
+   "url": "/attachments/magazines/extended-magazine/",
+   "cat": "MAGAZINES",
+   "alt": "Extended Magazine Extended Magazines"
   },
   {
    "name": "Fighter Jet",
@@ -409,6 +505,12 @@
    "alt": "grenade intercept system"
   },
   {
+   "name": "GRIM 1.50x",
+   "url": "/attachments/optics/grim-150x/",
+   "cat": "OPTICS",
+   "alt": "GRIM 1.50x GRIM"
+  },
+  {
    "name": "GRT-BC",
    "url": "/weapons/carbines/grt-bc/",
    "cat": "CARBINES",
@@ -437,6 +539,18 @@
    "url": "/gadgets/tools/dgmk4/",
    "cat": "TOOLS",
    "alt": "hardware suppression system"
+  },
+  {
+   "name": "Heavy Barrel",
+   "url": "/attachments/barrels/heavy-barrel/",
+   "cat": "BARRELS",
+   "alt": "Heavy Barrel Heavy Barrels"
+  },
+  {
+   "name": "Heavy Extended Barrel",
+   "url": "/attachments/barrels/heavy-extended-barrel/",
+   "cat": "BARRELS",
+   "alt": "Heavy Extended Barrel"
   },
   {
    "name": "Hollow Point",
@@ -479,6 +593,12 @@
    "url": "/vehicles/infantry-fighting-vehicle/",
    "cat": "VEHICLES",
    "alt": "ifv bradley m3a3 m3a3 bradley strf 09 strf 09 a4"
+  },
+  {
+   "name": "Iron Sights",
+   "url": "/attachments/optics/iron-sights/",
+   "cat": "OPTICS",
+   "alt": "Iron Sights Iron Sight iron sights"
   },
   {
    "name": "King of the Hill",
@@ -535,10 +655,22 @@
    "alt": "laser/light combo green"
   },
   {
+   "name": "LDS 4.50x",
+   "url": "/attachments/optics/lds-450x/",
+   "cat": "OPTICS",
+   "alt": "LDS 4.50x LDS"
+  },
+  {
    "name": "Liberation Peak",
    "url": "/maps/liberation-peak/",
    "cat": "MAPS",
    "alt": "liberation peak"
+  },
+  {
+   "name": "Light Barrel",
+   "url": "/attachments/barrels/light-barrel/",
+   "cat": "BARRELS",
+   "alt": "Light Barrel Light Barrels"
   },
   {
    "name": "Light Ground Transport",
@@ -751,6 +883,12 @@
    "alt": "manhattan bridge"
   },
   {
+   "name": "MARS-F LPVO",
+   "url": "/attachments/optics/mars-f-lpvo/",
+   "cat": "OPTICS",
+   "alt": "MARS-F LPVO MARS-F"
+  },
+  {
    "name": "Match Trigger",
    "url": "/attachments/ergonomics/match-trigger/",
    "cat": "ERGONOMICS",
@@ -767,6 +905,18 @@
    "url": "/gadgets/launchers/mbt-law/",
    "cat": "LAUNCHERS",
    "alt": "auto-guided launcher"
+  },
+  {
+   "name": "MC-CO LPVO",
+   "url": "/attachments/optics/mc-co-lpvo/",
+   "cat": "OPTICS",
+   "alt": "MC-CO LPVO MC-CO"
+  },
+  {
+   "name": "Mini Flex 1.00x",
+   "url": "/attachments/optics/mini-flex-100x/",
+   "cat": "OPTICS",
+   "alt": "Mini Flex 1.00x Mini Flex"
   },
   {
    "name": "Mini Frag Grenade",
@@ -823,10 +973,22 @@
    "alt": "operation firestorm"
   },
   {
+   "name": "OSA-7 1.00x",
+   "url": "/attachments/optics/osa-7-100x/",
+   "cat": "OPTICS",
+   "alt": "OSA-7 1.00x OSA-7"
+  },
+  {
    "name": "P18",
    "url": "/weapons/sidearms/p18/",
    "cat": "SIDEARMS",
    "alt": ""
+  },
+  {
+   "name": "PAS-35 3.00x",
+   "url": "/attachments/optics/pas-35-300x/",
+   "cat": "OPTICS",
+   "alt": "PAS-35 3.00x PAS-35"
   },
   {
    "name": "Patrol Boat",
@@ -871,6 +1033,12 @@
    "alt": "ptt grip pod"
   },
   {
+   "name": "PVQ-31 4.00x",
+   "url": "/attachments/optics/pvq-31-400x/",
+   "cat": "OPTICS",
+   "alt": "PVQ-31 4.00x PVQ-31"
+  },
+  {
    "name": "PW5A3",
    "url": "/weapons/smgs/pw5a3/",
    "cat": "SMGS",
@@ -893,6 +1061,18 @@
    "url": "/attachments/underbarrel/qd-grip-pod/",
    "cat": "UNDERBARREL",
    "alt": "qd grip pod"
+  },
+  {
+   "name": "R-MR 1.00x",
+   "url": "/attachments/optics/r-mr-100x/",
+   "cat": "OPTICS",
+   "alt": "R-MR 1.00x R-MR"
+  },
+  {
+   "name": "R4T 2.00x",
+   "url": "/attachments/optics/r4t-200x/",
+   "cat": "OPTICS",
+   "alt": "R4T 2.00x R4T"
   },
   {
    "name": "Rail Cover",
@@ -929,6 +1109,24 @@
    "url": "/attachments/underbarrel/ribbed-vertical/",
    "cat": "UNDERBARREL",
    "alt": "ribbed vertical"
+  },
+  {
+   "name": "RO-M 1.75x",
+   "url": "/attachments/optics/ro-m-175x/",
+   "cat": "OPTICS",
+   "alt": "RO-M 1.75x RO-M"
+  },
+  {
+   "name": "RO-S 1.25x",
+   "url": "/attachments/optics/ro-s-125x/",
+   "cat": "OPTICS",
+   "alt": "RO-S 1.25x RO-S"
+  },
+  {
+   "name": "ROX 1.50x",
+   "url": "/attachments/optics/rox-150x/",
+   "cat": "OPTICS",
+   "alt": "ROX 1.50x ROX"
   },
   {
    "name": "RPG-7V2",
@@ -979,10 +1177,22 @@
    "alt": ""
   },
   {
+   "name": "SDO 3.50x",
+   "url": "/attachments/optics/sdo-350x/",
+   "cat": "OPTICS",
+   "alt": "SDO 3.50x SDO"
+  },
+  {
    "name": "Serrated Blade",
    "url": "/weapons/melee/serrated-blade/",
    "cat": "MELEE",
    "alt": ""
+  },
+  {
+   "name": "SF-G2 5.00x",
+   "url": "/attachments/optics/sf-g2-500x/",
+   "cat": "OPTICS",
+   "alt": "SF-G2 5.00x SF-G2"
   },
   {
    "name": "SG 553R",
@@ -995,6 +1205,18 @@
    "url": "/weapons/smgs/sgx/",
    "cat": "SMGS",
    "alt": ""
+  },
+  {
+   "name": "Short Barrel",
+   "url": "/attachments/barrels/short-barrel/",
+   "cat": "BARRELS",
+   "alt": "Short Barrel Short Barrels"
+  },
+  {
+   "name": "Short Light Barrel",
+   "url": "/attachments/barrels/short-light-barrel/",
+   "cat": "BARRELS",
+   "alt": "Short Light Barrel"
   },
   {
    "name": "SICH G1 WP",
@@ -1075,6 +1297,24 @@
    "alt": "incendiary-round shotgun"
   },
   {
+   "name": "ST Prism 5.00x",
+   "url": "/attachments/optics/st-prism-500x/",
+   "cat": "OPTICS",
+   "alt": "ST Prism 5.00x ST Prism"
+  },
+  {
+   "name": "Standard Fast Mag",
+   "url": "/attachments/magazines/standard-fast-mag/",
+   "cat": "MAGAZINES",
+   "alt": "Standard Fast Mag Standard Fast Magazine"
+  },
+  {
+   "name": "Standard Magazine",
+   "url": "/attachments/magazines/standard-magazine/",
+   "cat": "MAGAZINES",
+   "alt": "Standard Magazine"
+  },
+  {
    "name": "Standard Suppressor",
    "url": "/attachments/muzzles/standard-suppressor/",
    "cat": "MUZZLES",
@@ -1091,6 +1331,18 @@
    "url": "/gadgets/throwables/mk141/",
    "cat": "THROWABLES",
    "alt": "stun grenade"
+  },
+  {
+   "name": "SU-123 1.50x",
+   "url": "/attachments/optics/su-123-150x/",
+   "cat": "OPTICS",
+   "alt": "SU-123 1.50x SU-123"
+  },
+  {
+   "name": "SU-230 LPVO",
+   "url": "/attachments/optics/su-230-lpvo/",
+   "cat": "OPTICS",
+   "alt": "SU-230 LPVO SU-230"
   },
   {
    "name": "Supply Pouch",
@@ -1145,6 +1397,12 @@
    "url": "/modes/team-deathmatch/",
    "cat": "MODES",
    "alt": "team deathmatch tdm"
+  },
+  {
+   "name": "TH-RDS 1.00x",
+   "url": "/attachments/optics/th-rds-100x/",
+   "cat": "OPTICS",
+   "alt": "TH-RDS 1.00x TH-RDS"
   },
   {
    "name": "Throwable Proximity Detector",

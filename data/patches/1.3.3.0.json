@@ -644,6 +644,7 @@
    ],
    "section": "weapons",
    "items": [
+    "iron-sights",
     "l115"
    ]
   },
@@ -699,6 +700,7 @@
    ],
    "section": "weapons",
    "items": [
+    "extended-fast-mag",
     "l115",
     "magazines"
    ]
@@ -721,7 +723,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "taclight-hip"
+   ]
   },
   {
    "text": "Thermal Scopes no longer cause sudden full-screen brightness spikes while playing on Eastwood.",
@@ -744,6 +748,7 @@
    "section": "weapons",
    "items": [
     "barrels",
+    "extended-barrel",
     "l115"
    ]
   },
@@ -819,6 +824,7 @@
    ],
    "section": "weapons",
    "items": [
+    "iron-sights",
     "m16a4"
    ]
   },
@@ -830,6 +836,7 @@
    ],
    "section": "weapons",
    "items": [
+    "iron-sights",
     "m16a4"
    ]
   },
@@ -841,6 +848,7 @@
    ],
    "section": "weapons",
    "items": [
+    "iron-sights",
     "m16a4"
    ]
   },

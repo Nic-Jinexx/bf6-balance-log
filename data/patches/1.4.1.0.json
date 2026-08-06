@@ -568,6 +568,7 @@
    ],
    "section": "ui",
    "items": [
+    "iron-sights",
     "m39-emr",
     "rpk-74m",
     "scopes"

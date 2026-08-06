@@ -1,0 +1,31 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Split out of the combined Scopes & Sights page on 2026-08-06 so patch lines naming this one specifically have somewhere to land.",
+  "slug": "iron-sights",
+  "name": "Iron Sights",
+  "branch": "attachments",
+  "subcategory": "optics",
+  "order": 2,
+  "aliases": [
+    "Iron Sights",
+    "Iron Sight",
+    "iron sights"
+  ],
+  "description": {
+    "text": "Basic sights with reduced weapon sway.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Tile label",
+      "value": "Basic Sight"
+    },
+    {
+      "label": "Point cost",
+      "value": "5 of 100"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

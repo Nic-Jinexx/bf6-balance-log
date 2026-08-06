@@ -221,6 +221,7 @@
    ],
    "section": "player",
    "items": [
+    "iron-sights",
     "scopes"
    ]
   },
@@ -2676,6 +2677,7 @@
    ],
    "section": "ui",
    "items": [
+    "iron-sights",
     "m121-a2",
     "scopes"
    ]
@@ -2725,6 +2727,7 @@
    "section": "ui",
    "items": [
     "cz3a1",
+    "dvo-lpvo",
     "grt-cps",
     "m121-a2",
     "scopes"

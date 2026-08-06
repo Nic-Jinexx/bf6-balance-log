@@ -906,7 +906,8 @@
    ],
    "section": "weapons",
    "items": [
-    "scopes"
+    "scopes",
+    "th-rds-100x"
    ]
   },
   {
@@ -919,7 +920,8 @@
    "items": [
     "b36a4",
     "scopes",
-    "svdm"
+    "svdm",
+    "th-rds-100x"
    ]
   },
   {
@@ -1419,6 +1421,7 @@
    "section": "ui",
    "items": [
     "cz3a1",
+    "iron-sights",
     "scopes"
    ]
   },
@@ -1716,7 +1719,8 @@
    ],
    "section": "ui",
    "items": [
-    "scopes"
+    "scopes",
+    "su-230-lpvo"
    ]
   },
   {
@@ -1867,7 +1871,8 @@
    "section": "ui",
    "items": [
     "barrels",
-    "cz3a1"
+    "cz3a1",
+    "extended-barrel"
    ]
   },
   {

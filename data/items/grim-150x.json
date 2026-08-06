@@ -1,0 +1,30 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Split out of the combined Scopes & Sights page on 2026-08-06 so patch lines naming this one specifically have somewhere to land.",
+  "slug": "grim-150x",
+  "name": "GRIM 1.50x",
+  "branch": "attachments",
+  "subcategory": "optics",
+  "order": 29,
+  "aliases": [
+    "GRIM 1.50x",
+    "GRIM"
+  ],
+  "description": {
+    "text": "Slightly magnified optic with thermal mode that detects heat signatures. Smoke volumes can disrupt thermal detection.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Tile label",
+      "value": "Thermal 1.50x"
+    },
+    {
+      "label": "Point cost",
+      "value": "25 of 100"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

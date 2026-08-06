@@ -1,0 +1,25 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Split out of the combined Magazines page on 2026-08-06 so patch lines naming this one specifically have somewhere to land.",
+  "slug": "standard-magazine",
+  "name": "Standard Magazine",
+  "branch": "attachments",
+  "subcategory": "magazines",
+  "order": 2,
+  "aliases": [
+    "Standard Magazine"
+  ],
+  "description": {
+    "text": "Standard magazine that improves weapon draw speed.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Point cost",
+      "value": "5 of 100"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

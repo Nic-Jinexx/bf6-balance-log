@@ -118,44 +118,44 @@
         "options": [
           {
             "name": "16\" Standard",
-            "page": "barrels",
-            "cost": 10
+            "cost": 10,
+            "slug": "basic-barrel"
           },
           {
             "name": "20\" Standard",
-            "page": "barrels",
-            "cost": 5
+            "cost": 5,
+            "slug": "extended-barrel"
           },
           {
             "name": "24\" HBAR",
-            "page": "barrels",
-            "cost": 10
+            "cost": 10,
+            "slug": "heavy-extended-barrel"
           },
           {
             "name": "20\" Marksman",
-            "page": "barrels",
-            "cost": 25
+            "cost": 25,
+            "slug": "extended-light-barrel"
           },
           {
             "name": "14.5\" Standard",
-            "page": "barrels",
-            "cost": 15
+            "cost": 15,
+            "slug": "short-barrel"
           },
           {
             "name": "14.5\" CQB",
-            "page": "barrels",
-            "cost": 25
+            "cost": 25,
+            "slug": "short-light-barrel"
           },
           {
             "name": "16\" Factory",
-            "page": "barrels",
             "cost": 20,
-            "default": true
+            "default": true,
+            "slug": "light-barrel"
           },
           {
             "name": "16\" Cryogenic",
-            "page": "barrels",
-            "cost": 20
+            "cost": 20,
+            "slug": "cryogenic-barrel"
           }
         ]
       },

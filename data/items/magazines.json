@@ -1,5 +1,5 @@
 {
-  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Name and description are identical on every weapon that takes it, verified across the eleven assault rifles in that run. One page rather than one per weapon. Magazine tiles are named by round count, which is weapon-specific (the KORD 6P67 offers 30/36/40/45, the EF88 30/36/42), but there are only four underlying types and their descriptions are shared. Capacities are recorded on each weapon.",
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Name and description are identical on every weapon that takes it, verified across the eleven assault rifles in that run. One page rather than one per weapon. Magazine tiles are named by round count, which is weapon-specific (the KORD 6P67 offers 30/36/40/45, the EF88 30/36/42), but there are only four underlying types and their descriptions are shared. Capacities are recorded on each weapon. Each row now has its own page; this one stays as the family index and as the home for patch lines that name no single model.",
   "slug": "magazines",
   "name": "Magazines",
   "branch": "attachments",
@@ -25,22 +25,26 @@
     {
       "name": "Standard Magazine",
       "cost": "5",
-      "description": "Standard magazine that improves weapon draw speed."
+      "description": "Standard magazine that improves weapon draw speed.",
+      "slug": "standard-magazine"
     },
     {
       "name": "Standard Fast Mag",
       "cost": "10",
-      "description": "Standard magazine with mag pull for quicker reloads."
+      "description": "Standard magazine with mag pull for quicker reloads.",
+      "slug": "standard-fast-mag"
     },
     {
       "name": "Extended Magazine",
       "cost": "15-35",
-      "description": "Extended magazine with increased capacity at the cost of movement speed while aiming down sights (ADS)."
+      "description": "Extended magazine with increased capacity at the cost of movement speed while aiming down sights (ADS).",
+      "slug": "extended-magazine"
     },
     {
       "name": "Extended Fast Mag",
       "cost": "30-40",
-      "description": "Extended magazine with mag pull for faster reloads. Increases capacity at the cost of weapon draw speed and movement speed while aiming down sights (ADS)."
+      "description": "Extended magazine with mag pull for faster reloads. Increases capacity at the cost of weapon draw speed and movement speed while aiming down sights (ADS).",
+      "slug": "extended-fast-mag"
     }
   ],
   "_alias_note": "No bare \"mag\" alias. It collides with \"mag pull\", \"Mag Catch\" and \"Magwell Flare\", which are an ergonomics attachment and a magazine feature, not the magazine itself."

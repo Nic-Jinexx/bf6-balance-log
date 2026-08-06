@@ -1,0 +1,30 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Split out of the combined Scopes & Sights page on 2026-08-06 so patch lines naming this one specifically have somewhere to land.",
+  "slug": "lds-450x",
+  "name": "LDS 4.50x",
+  "branch": "attachments",
+  "subcategory": "optics",
+  "order": 21,
+  "aliases": [
+    "LDS 4.50x",
+    "LDS"
+  ],
+  "description": {
+    "text": "Moderately magnified optic with a clear sight picture.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Tile label",
+      "value": "4.50x"
+    },
+    {
+      "label": "Point cost",
+      "value": "10 of 100"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

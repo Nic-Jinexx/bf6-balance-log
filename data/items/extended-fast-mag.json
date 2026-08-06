@@ -1,0 +1,27 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Split out of the combined Magazines page on 2026-08-06 so patch lines naming this one specifically have somewhere to land.",
+  "slug": "extended-fast-mag",
+  "name": "Extended Fast Mag",
+  "branch": "attachments",
+  "subcategory": "magazines",
+  "order": 5,
+  "aliases": [
+    "Extended Fast Mag",
+    "Extended Fast Magazine",
+    "Extended Fast Mags"
+  ],
+  "description": {
+    "text": "Extended magazine with mag pull for faster reloads. Increases capacity at the cost of weapon draw speed and movement speed while aiming down sights (ADS).",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Point cost",
+      "value": "30-40 of 100"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

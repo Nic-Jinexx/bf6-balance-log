@@ -437,6 +437,7 @@
    ],
    "section": "weapons",
    "items": [
+    "iron-sights",
     "scopes"
    ]
   },
@@ -494,7 +495,8 @@
    ],
    "section": "weapons",
    "items": [
-    "scopes"
+    "scopes",
+    "su-230-lpvo"
    ]
   },
   {

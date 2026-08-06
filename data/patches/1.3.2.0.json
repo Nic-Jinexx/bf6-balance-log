@@ -41,6 +41,7 @@
    "section": "summary",
    "items": [
     "barrels",
+    "extended-barrel",
     "scopes"
    ]
   },
@@ -713,7 +714,8 @@
    ],
    "section": "weapons",
    "items": [
-    "barrels"
+    "barrels",
+    "extended-barrel"
    ]
   },
   {
