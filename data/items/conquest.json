@@ -1,0 +1,19 @@
+{
+  "_comment": "Mode roster read off the in-game Custom Search screen, captured 2026-08-05 (Steam capture 20260805170513). That screen names every mode in its list but describes only the highlighted one, so the description here is TBD until the tile is opened and read. A named-but-undescribed mode is recorded rather than omitted, same rule as the vehicle option tiles: dropping it would read as 'this mode does not exist'.",
+  "slug": "conquest",
+  "name": "Conquest",
+  "branch": "modes",
+  "order": 2,
+  "aliases": [
+    "conquest"
+  ],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": []
+}

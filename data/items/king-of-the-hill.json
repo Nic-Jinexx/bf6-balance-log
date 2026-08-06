@@ -1,0 +1,20 @@
+{
+  "_comment": "Not present in the in-game Custom Search mode list as of 2026-08-05 (Steam capture 20260805170513). EA published no changelog line for the removal, so the in-game screen is the only source; the 'Removed' row comes from data/releases.json, which is authoritative for it. The page is kept because the mode has real patch history in the log. Scope: Custom Search covers core multiplayer only, so this says nothing about REDSEC, Battle Royale, Gauntlet or Portal.",
+  "slug": "king-of-the-hill",
+  "name": "King of the Hill",
+  "branch": "modes",
+  "order": 7,
+  "aliases": [
+    "king of the hill",
+    "koth"
+  ],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": []
+}

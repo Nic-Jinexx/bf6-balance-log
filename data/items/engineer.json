@@ -1,0 +1,96 @@
+{
+  "_comment": "Transcribed from in-game screens captured 2026-08-05 (Steam captures 20260805170320 NATO art, 170312 Pax Armata art, 170304 Anti-Armor, 170306 Combat Engineer). The class active ability is recorded once on the class rather than on each training path because both path screens show the same LVL 03 entry. Descriptions are reproduced exactly as the game prints them, including the acute accent the game uses in place of an apostrophe.",
+  "slug": "engineer",
+  "name": "Engineer",
+  "branch": "classes",
+  "order": 2,
+  "aliases": [
+    "engineer class"
+  ],
+  "_alias_note": "No bare \"engineer\" alias. It would tag every Combat Engineer line to the class page as well as to the training path, and EA uses the word in prose about vehicle repair.",
+  "description": {
+    "text": "The battlefield´s leading vehicle and equipment technician. Execute repairs to keep allies combat effective, or strike hostile armor with force to break their attack.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Signature Gadget",
+      "value": "Repair Tool"
+    },
+    {
+      "label": "Signature Weapon",
+      "value": "SMG Proficiency"
+    },
+    {
+      "label": "Signature Trait",
+      "value": "Mechanized Infantry"
+    }
+  ],
+  "ability": {
+    "level": "LVL 03",
+    "name": "Thermal Overdrive",
+    "description": "Repair Tool fixes with +50% efficiency for 10s."
+  },
+  "training_paths": [
+    {
+      "name": "Anti-Armor",
+      "description": "Specialists in combating enemy armor. Operate launchers more efficiently and utilize extra ammo to eliminate ground and air threats.",
+      "abilities": [
+        {
+          "level": "LVL 02",
+          "name": "Devastating Impact",
+          "description": "Damaging enemy vehicles reduces their repair effectiveness by 25% for 10s."
+        },
+        {
+          "level": "LVL 01",
+          "name": "Launcher Proficiency",
+          "description": "15% faster reload times for launchers."
+        },
+        {
+          "level": "LVL 00",
+          "name": "Extra Rockets",
+          "description": "Increases the amount of rockets carried by two."
+        }
+      ]
+    },
+    {
+      "name": "Combat Engineer",
+      "description": "Experts in maintaining combat equipment. Repair vehicles and gadgets more efficiently and keep them operating with maximum effect.",
+      "abilities": [
+        {
+          "level": "LVL 02",
+          "name": "Mine Detection",
+          "description": "Spot mines within a 30m radius while in a vehicle or on foot."
+        },
+        {
+          "level": "LVL 01",
+          "name": "Overheat Control",
+          "description": "Heat buildup is 50% slower on gadgets and 10% slower on vehicle weapons."
+        },
+        {
+          "level": "LVL 00",
+          "name": "Gadget Fortification",
+          "description": "Repairing a friendly gadget permanently increases its maximum health."
+        }
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": [],
+  "variants": [
+    {
+      "faction": "NATO",
+      "image": "engineer"
+    },
+    {
+      "faction": "Pax Armata",
+      "image": "engineer-pax"
+    }
+  ],
+  "tag_deny": [
+    "thunder engineer"
+  ],
+  "_tag_deny_note": "Thunder Engineer is a cosmetic skin, not the class."
+}

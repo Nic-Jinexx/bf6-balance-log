@@ -230,7 +230,7 @@
       "live": "Jun 9, 2026",
       "added": [
         {"name": "Cairo Bazaar", "slug": "cairo-bazaar", "kind": "Map"},
-        {"name": "Obliteration", "kind": "Mode"},
+        {"name": "Obliteration", "slug": "obliteration", "kind": "Mode"},
         {"name": "Explosive Charge", "kind": "Event", "_note": "limited-time"},
         {"name": "PP-19", "slug": "pp-19", "kind": "SMG"},
         {"name": "Handheld Jammer", "slug": "manet-dis-5", "kind": "Gadget", "_note": "in-game the page name is the model, MANET-DIS 5; Handheld Jammer is the display name."},
@@ -265,6 +265,19 @@
         {"name": "EF88", "slug": "ef88", "kind": "Assault Rifle"},
         {"name": "BROD 3", "slug": "brod-3", "kind": "Carbine"},
         {"name": "VSSM", "slug": "vssm", "kind": "DMR"}
+      ]
+    }
+  ],
+  "_removed_comment": "Content that was live and is not any more. Kept separate from 'releases' because a removal has no version: EA has published no changelog line for any of these, so the only source is an in-game screen read on a given date. Each block records what was seen, when, and where; build_pages.py turns it into a 'Removed' Availability row using the literal 'value' string, so nothing is assembled or inferred at render time. An entry here does NOT delete the item's page. The patch history stays and the row is what stops the page implying the content is still playable. See docs/adr/0007.",
+  "removed": [
+    {
+      "observed": "Aug 5, 2026",
+      "source": "In-game Custom Search mode list (Steam capture 20260805170513)",
+      "value": "Not in Custom Search as of Aug 5, 2026",
+      "_scope_note": "Custom Search lists core multiplayer modes only, so this is not evidence either way about REDSEC, Battle Royale, Gauntlet or Portal playlists. Team Deathmatch was checked on the same screen and is still listed, so it is not recorded here.",
+      "entries": [
+        {"name": "King of the Hill", "slug": "king-of-the-hill", "kind": "Mode"},
+        {"name": "Rush", "slug": "rush", "kind": "Mode"}
       ]
     }
   ],

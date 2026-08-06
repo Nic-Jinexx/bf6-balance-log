@@ -527,6 +527,14 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
+/* Class training paths. The ability table is the same three-column shape as a
+   loadout slot, so it reuses .lo-slot; only the group heading and the path's own
+   blurb are new. The heading takes the systemic hue because that is the color the
+   classes branch borrows in BRANCH_COLOR. */
+.tp-path{margin:22px 0 0}
+.tp-path > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.9px;color:var(--systemic);margin:0 0 2px}
+.tp-desc{color:var(--muted);font-size:14.5px;margin:6px 0 10px;max-width:70ch}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -750,8 +758,11 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/vehicles/patrol-boat/">Patrol Boat</a>
 </details>
 <details class="branch b-classes">
-<summary>Classes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Classes<span class="cnt">4</span></summary>
+<a class="leaf" href="/classes/assault/">Assault</a>
+<a class="leaf" href="/classes/engineer/">Engineer</a>
+<a class="leaf" href="/classes/support/">Support</a>
+<a class="leaf" href="/classes/recon/">Recon</a>
 </details>
 <details class="branch b-maps" open>
 <summary>Maps<span class="cnt">18</span></summary>
@@ -775,8 +786,15 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/maps/wake-island/">Wake Island</a>
 </details>
 <details class="branch b-modes">
-<summary>Modes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Modes<span class="cnt">8</span></summary>
+<a class="leaf" href="/modes/breakthrough/">Breakthrough</a>
+<a class="leaf" href="/modes/conquest/">Conquest</a>
+<a class="leaf" href="/modes/domination/">Domination</a>
+<a class="leaf" href="/modes/escalation/">Escalation</a>
+<a class="leaf" href="/modes/obliteration/">Obliteration</a>
+<a class="leaf" href="/modes/team-deathmatch/">Team Deathmatch</a>
+<a class="leaf" href="/modes/king-of-the-hill/">King of the Hill</a>
+<a class="leaf" href="/modes/rush/">Rush</a>
 </details>
 </nav>
 <!-- TREE:END -->
@@ -816,8 +834,9 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 
 
 
+
 <h2 class="cat maps" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">8 patch notes mentioning Siege of Cairo, newest first. Each entry is the exact line from EA's Game Update notes.</p>
+<p class="cat-note">11 patch notes mentioning Siege of Cairo, newest first. Each entry is the exact line from EA's Game Update notes.</p>
 <details class="patch" open>
 <summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-maps">maps &amp; modes</span></summary>
 <div class="body">
@@ -839,7 +858,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <summary><span class="ver">1.2.2.0</span><span class="date">Mar 13, 2026</span><span class="tag tag-maps">maps &amp; modes</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="siege-of-cairo">Resolved an issue in Breakthrough on Siege of Cairo where Defenders were unable to deploy on Point B while Point A was contested or captured in Sector 3.</li>
+<li data-item="breakthrough siege-of-cairo">Resolved an issue in Breakthrough on Siege of Cairo where Defenders were unable to deploy on Point B while Point A was contested or captured in Sector 3.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#maps">1.2.2.0 in the balance log</a></div>
 </div></details>
@@ -852,12 +871,22 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <div class="src">Full patch entry and EA source link: <a href="/#maps">1.2.1.0 in the balance log</a></div>
 </div></details>
 <details class="patch">
-<summary><span class="ver">1.1.1.0</span><span class="date">Oct 24, 2025</span><span class="tag tag-progression">balance</span></summary>
+<summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-maps">maps &amp; modes</span></summary>
 <div class="body">
 <ul class="plain">
+<li data-item="siege-of-cairo">Added an additional Attacker tank in sector 1 and 3.</li>
+<li data-item="siege-of-cairo">Updated capture areas on B flag to improve sector push potential.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#maps">1.1.3.0 in the balance log</a></div>
+</div></details>
+<details class="patch">
+<summary><span class="ver">1.1.1.0</span><span class="date">Oct 24, 2025</span><span class="tag tag-maps">maps &amp; modes</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="escalation siege-of-cairo">Fixed overlapping territory lines and boundaries during the briefing screen in Escalation.</li>
 <li data-item="siege-of-cairo">Fixed missing or incorrect ambient and destruction sounds across several maps, including Siege of Cairo, as well as missing explosion sounds for silos and tanker trailers.</li>
 </ul>
-<div class="src">Full patch entry and EA source link: <a href="/#audio">1.1.1.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#maps">1.1.1.0 in the balance log</a></div>
 </div></details>
 <details class="patch">
 <summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-maps">maps &amp; modes</span></summary>

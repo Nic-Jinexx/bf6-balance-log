@@ -527,6 +527,14 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
+/* Class training paths. The ability table is the same three-column shape as a
+   loadout slot, so it reuses .lo-slot; only the group heading and the path's own
+   blurb are new. The heading takes the systemic hue because that is the color the
+   classes branch borrows in BRANCH_COLOR. */
+.tp-path{margin:22px 0 0}
+.tp-path > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.9px;color:var(--systemic);margin:0 0 2px}
+.tp-desc{color:var(--muted);font-size:14.5px;margin:6px 0 10px;max-width:70ch}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -750,8 +758,11 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/vehicles/patrol-boat/">Patrol Boat</a>
 </details>
 <details class="branch b-classes">
-<summary>Classes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Classes<span class="cnt">4</span></summary>
+<a class="leaf" href="/classes/assault/">Assault</a>
+<a class="leaf" href="/classes/engineer/">Engineer</a>
+<a class="leaf" href="/classes/support/">Support</a>
+<a class="leaf" href="/classes/recon/">Recon</a>
 </details>
 <details class="branch b-maps">
 <summary>Maps<span class="cnt">18</span></summary>
@@ -775,8 +786,15 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/maps/wake-island/">Wake Island</a>
 </details>
 <details class="branch b-modes">
-<summary>Modes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Modes<span class="cnt">8</span></summary>
+<a class="leaf" href="/modes/breakthrough/">Breakthrough</a>
+<a class="leaf" href="/modes/conquest/">Conquest</a>
+<a class="leaf" href="/modes/domination/">Domination</a>
+<a class="leaf" href="/modes/escalation/">Escalation</a>
+<a class="leaf" href="/modes/obliteration/">Obliteration</a>
+<a class="leaf" href="/modes/team-deathmatch/">Team Deathmatch</a>
+<a class="leaf" href="/modes/king-of-the-hill/">King of the Hill</a>
+<a class="leaf" href="/modes/rush/">Rush</a>
 </details>
 </nav>
 <!-- TREE:END -->
@@ -818,8 +836,9 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 
 
 
+
 <h2 class="cat gadgets" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">9 patch notes mentioning the Laser Designator, newest first. Each entry is the exact line from EA's Game Update notes.</p>
+<p class="cat-note">19 patch notes mentioning the Laser Designator, newest first. Each entry is the exact line from EA's Game Update notes.</p>
 <details class="patch" open>
 <summary><span class="ver">1.4.1.0</span><span class="date">Jul 16, 2026</span><span class="tag tag-progression">balance</span></summary>
 <div class="body">
@@ -842,6 +861,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <ul class="plain">
 <li data-item="infantry-fighting-vehicle ltlm-ii m18">The IFV no longer has the laser designator equipped by default, it now shares a slot with the Mines Countermeasures &amp; Smoke grenades.</li>
 <li data-item="csb-iv ltlm-ii lwcms xfgm-6d">Player-controlled gadgets, including the Portable Mortar, XFMG-6D Recon Drone, LTLM II Laser Designator, and the CSB IV EOD Bot, now only begin resupplying once the deployed gadget has been destroyed.</li>
+<li data-item="ltlm-ii mbt-law">Effect duration has been reduced from 20 to 9 seconds for both soldier and vehicle designators.</li>
 <li data-item="ltlm-ii mbt-law">Laser Designator no longer reduces lock-on time for anti-air missiles.</li>
 <li data-item="ltlm-ii mbt-law">Gadget now provides a consistent 20% increase to lock-on range across all locking weapons. This also applies to vehicle-mounted laser designators.</li>
 </ul>
@@ -859,10 +879,26 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <summary><span class="ver">1.1.3.0</span><span class="date">Dec 5, 2025</span><span class="tag tag-progression">progression</span></summary>
 <div class="body">
 <ul class="plain">
-<li data-item="ltlm-ii">Fixed an issue where enemies spotted by the LTLM II Portable Laser Designator did not count towards the “Spot enemies with Recon Gadgets” weekly challenge.</li>
+<li data-item="ltlm-ii recon">Fixed an issue where enemies spotted by the LTLM II Portable Laser Designator did not count towards the “Spot enemies with Recon Gadgets” weekly challenge.</li>
 <li data-item="ltlm-ii">Fixed an issue where the different painted states of the LTLM II Portable Laser Designator weren’t correctly represented by the gadgets HUD warning label.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#progression">1.1.3.0 in the balance log</a></div>
+</div></details>
+<details class="patch">
+<summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-progression">balance</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="ltlm-ii ss26">Spotting angle and maximum spotting distance in binocular mode have been made more forgiving.</li>
+<li data-item="ltlm-ii ss26">Can no longer laser paint the environment.</li>
+<li data-item="ltlm-ii ss26">Now removes laser paint marks when a vehicle enters thermal smoke.</li>
+<li data-item="ltlm-ii ss26">Now correctly spots vehicles when laser painting them.</li>
+<li data-item="ltlm-ii ss26">Thermal view toggle now updates the UI correctly.</li>
+<li data-item="ltlm-ii ss26">Zoom now activates instantly and returns to your previous zoom level.</li>
+<li data-item="ltlm-ii ss26">Deploy animation now plays correctly.</li>
+<li data-item="ltlm-ii ss26">Will now rotate properly for other players when deployed.</li>
+<li data-item="ltlm-ii ss26">Improved the Game Hint to show RMB (Zoom) instead of E/R (Interact/Reload).</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#other">1.0.1.0 in the balance log</a></div>
 </div></details>
 
 <h2 class="cat gadgets" id="related"><span class="dot"></span>Related items</h2>

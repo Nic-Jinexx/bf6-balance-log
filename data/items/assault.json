@@ -1,0 +1,100 @@
+{
+  "_comment": "Transcribed from in-game screens captured 2026-08-05 (Steam captures 20260805170252 NATO art, 170239 Pax Armata art, 170234 Breacher, 170236 Frontliner). The class active ability is recorded once on the class rather than on each training path because both path screens show the same LVL 03 entry. Descriptions are reproduced exactly as the game prints them, including the acute accent the game uses in place of an apostrophe.",
+  "slug": "assault",
+  "name": "Assault",
+  "branch": "classes",
+  "order": 1,
+  "aliases": [
+    "assault class"
+  ],
+  "_alias_note": "No bare \"assault\" alias. The matcher treats word boundaries as breaks, so it would tag every Assault Rifle and Assault Ladder line in the log to this page. Training path and ability names are distinctive enough to stand on their own.",
+  "description": {
+    "text": "The ultimate frontline fighter, skilled at punching through enemy defenses. Dominate close to mid-range encounters and limit the enemy´s ability to fight.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Signature Gadget",
+      "value": "Adrenaline Injector"
+    },
+    {
+      "label": "Signature Weapon",
+      "value": "Assault Rifle Proficiency"
+    },
+    {
+      "label": "Signature Trait",
+      "value": "Mission Focused"
+    }
+  ],
+  "ability": {
+    "level": "LVL 03",
+    "name": "Rally Squad",
+    "description": "You and nearby squad members gain a temporary adrenaline effect. Its effects on you can be extended with kills."
+  },
+  "training_paths": [
+    {
+      "name": "Breacher",
+      "description": "Highly combat effective and skilled at maneuvering. Break through enemy lines with effective use of small explosives and grenade launchers.",
+      "abilities": [
+        {
+          "level": "LVL 02",
+          "name": "Unrelenting Reload",
+          "description": "15% faster reload for the Incendiary-Round Shotgun and the Grenade and Breaching Projectile Launchers."
+        },
+        {
+          "level": "LVL 01",
+          "name": "Agile Shooter",
+          "description": "Reduced movement speed penalty when firing while moving."
+        },
+        {
+          "level": "LVL 00",
+          "name": "Extra Grenades",
+          "description": "Increases the amount of grenades carried by one."
+        }
+      ]
+    },
+    {
+      "name": "Frontliner",
+      "description": "Experts at leading their squad into hostile territory. Locate enemy positions to launch surprise attacks and gain the upper hand.",
+      "abilities": [
+        {
+          "level": "LVL 02",
+          "name": "Quick Recovery",
+          "description": "Passive health regeneration triggers 50% faster and provides a 50% improvement on healing."
+        },
+        {
+          "level": "LVL 01",
+          "name": "Soft Landing",
+          "description": "Reduced impact from falling or jumping from heights."
+        },
+        {
+          "level": "LVL 00",
+          "name": "Adrenaline Rush",
+          "description": "Squadmates that deploy on you gain the effects of the Adrenaline Injector for 2s. Effects also apply to you or squadmates when deploying on your Deploy Beacon."
+        }
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": [],
+  "variants": [
+    {
+      "faction": "NATO",
+      "image": "assault"
+    },
+    {
+      "faction": "Pax Armata",
+      "image": "assault-pax"
+    }
+  ],
+  "tag_deny": [
+    "assault rifle",
+    "assault rifles",
+    "assault ladder",
+    "assault ladders",
+    "conquest assault"
+  ],
+  "_tag_deny_note": "Three different things wear this word. The Assault Ladder and the assault rifle category have their own pages; Conquest Assault is a Portal variant of a mode. Masked out before matching so the class page only collects lines about the class."
+}

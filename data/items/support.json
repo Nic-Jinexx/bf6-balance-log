@@ -1,0 +1,106 @@
+{
+  "_comment": "Transcribed from in-game screens captured 2026-08-05 (Steam captures 20260805170353 NATO art, 170349 Combat Medic, 170350 Fire Support). The class active ability is recorded once on the class rather than on each training path because both path screens show the same LVL 03 entry. The Pax Armata portrait was not captured in this run, so its variant figure renders as pending rather than borrowing the NATO shot.",
+  "slug": "support",
+  "name": "Support",
+  "branch": "classes",
+  "order": 3,
+  "aliases": [
+    "support class",
+    "support classes",
+    "support soldier",
+    "support soldiers",
+    "playing support",
+    "as support",
+    "fire support",
+    "support fire",
+    "combat medic",
+    "logistics expert",
+    "restock allies",
+    "supply bag",
+    "field sustainment"
+  ],
+  "_alias_note": "No bare \"support\" alias. EA uses the word constantly in prose (\"controller support\", \"support for\"), so it would tag dozens of unrelated lines. \"support fire\" is EA's own inversion of the Fire Support training path, published in 1.3.2.0; 1.1.3.0 gets it the right way round. Carried as an alias so the line still connects, same pattern as the other as-published names. No \"steady aim\" alias: 1.2.1.0 uses that exact phrase for the bolt-action hold-breath prompt, which is a different mechanic from the Fire Support ability of the same name.",
+  "description": {
+    "text": "The backbone of any combat unit for defense and sustained fighting. Heal and resupply friendly forces, while fortifying defensive positions to keep them protected.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Signature Gadget",
+      "value": "Supply Bag"
+    },
+    {
+      "label": "Signature Weapon",
+      "value": "LMG Proficiency"
+    },
+    {
+      "label": "Signature Trait",
+      "value": "Field Sustainment"
+    }
+  ],
+  "ability": {
+    "level": "LVL 03",
+    "name": "Restock Allies",
+    "description": "Resupply and heal nearby friendly forces for 10 seconds. Reviving teammates takes only 1.7 seconds."
+  },
+  "training_paths": [
+    {
+      "name": "Combat Medic",
+      "description": "Elite practitioners in battlefield medicine. Heal casualties to quickly get them back in the fight and provide cover with more efficient defensive gadgets.",
+      "abilities": [
+        {
+          "level": "LVL 02",
+          "name": "Defense-Focused",
+          "description": "Defensive gadgets have a +25% resupply rate. GPDIS and MP-APS intercept two more projectiles and tracking duration is extended by 5s. Deployable Cover takes 10% less damage."
+        },
+        {
+          "level": "LVL 01",
+          "name": "Revive Recovery",
+          "description": "Reviving downed teammates triggers passive health regeneration. Incoming damage temporarily halts the effect for 1s."
+        },
+        {
+          "level": "LVL 00",
+          "name": "Urgent Aid",
+          "description": "Drag downed soldiers 20% faster and revive them 2.5s quicker."
+        }
+      ]
+    },
+    {
+      "name": "Fire Support",
+      "description": "Skilled in enemy suppression tactics. Keep ammo restocked and utilize better weapon control to lay down cover fire and help push the attack.",
+      "abilities": [
+        {
+          "level": "LVL 02",
+          "name": "Steady Aim",
+          "description": "Improved weapons control when shooting from mounted positions."
+        },
+        {
+          "level": "LVL 01",
+          "name": "Explosives Resistant",
+          "description": "25% reduction on incoming explosive splash damage while prone or shooting from mounted positions."
+        },
+        {
+          "level": "LVL 00",
+          "name": "Logistics Expert",
+          "description": "Faster ammo resupply when using the Supply Bag."
+        }
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": [],
+  "variants": [
+    {
+      "faction": "NATO",
+      "image": "support"
+    },
+    {
+      "faction": "Pax Armata",
+      "image": "support-pax"
+    }
+  ],
+  "tag_name": false,
+  "_tag_name_note": "The bare word \"support\" is ordinary English and matched 32 lines about DLSS support, bot support and support for capture points, none of which are about the class. Name matching is off; the phrasings that really do mean the class are aliases instead, so a future \"Support soldiers now...\" line is still caught."
+}

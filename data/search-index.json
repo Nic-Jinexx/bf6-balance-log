@@ -43,6 +43,12 @@
    "alt": "ltv armored transport traverser mark 2 traverser"
   },
   {
+   "name": "Assault",
+   "url": "/classes/assault/",
+   "cat": "CLASSES",
+   "alt": "assault class"
+  },
+  {
    "name": "Assault Ladder",
    "url": "/gadgets/deployables/tarantula-alx/",
    "cat": "DEPLOYABLES",
@@ -73,6 +79,12 @@
    "alt": "blackwell fields"
   },
   {
+   "name": "Breakthrough",
+   "url": "/modes/breakthrough/",
+   "cat": "MODES",
+   "alt": "breakthrough"
+  },
+  {
    "name": "BROD 3",
    "url": "/weapons/carbines/brod-3/",
    "cat": "CARBINES",
@@ -82,7 +94,7 @@
    "name": "C-4 Explosives",
    "url": "/gadgets/deployables/c-4/",
    "cat": "DEPLOYABLES",
-   "alt": "demolition charge"
+   "alt": "demolition charge c-4 c4"
   },
   {
    "name": "Cairo Bazaar",
@@ -95,6 +107,12 @@
    "url": "/weapons/melee/combat-knife/",
    "cat": "MELEE",
    "alt": ""
+  },
+  {
+   "name": "Conquest",
+   "url": "/modes/conquest/",
+   "cat": "MODES",
+   "alt": "conquest"
   },
   {
    "name": "Contaminated",
@@ -127,6 +145,12 @@
    "alt": "deploy beacon"
   },
   {
+   "name": "Domination",
+   "url": "/modes/domination/",
+   "cat": "MODES",
+   "alt": "domination"
+  },
+  {
    "name": "DRS-IAR",
    "url": "/weapons/lmgs/drs-iar/",
    "cat": "LMGS",
@@ -151,6 +175,12 @@
    "alt": "empire state"
   },
   {
+   "name": "Engineer",
+   "url": "/classes/engineer/",
+   "cat": "CLASSES",
+   "alt": "engineer class"
+  },
+  {
    "name": "EOD Bot",
    "url": "/gadgets/tools/csb-iv/",
    "cat": "TOOLS",
@@ -167,6 +197,12 @@
    "url": "/weapons/sidearms/es-57/",
    "cat": "SIDEARMS",
    "alt": ""
+  },
+  {
+   "name": "Escalation",
+   "url": "/modes/escalation/",
+   "cat": "MODES",
+   "alt": "escalation"
   },
   {
    "name": "Fighter Jet",
@@ -263,6 +299,12 @@
    "url": "/vehicles/infantry-fighting-vehicle/",
    "cat": "VEHICLES",
    "alt": "ifv bradley m3a3 m3a3 bradley strf 09 strf 09 a4"
+  },
+  {
+   "name": "King of the Hill",
+   "url": "/modes/king-of-the-hill/",
+   "cat": "MODES",
+   "alt": "king of the hill koth"
   },
   {
    "name": "KORD 6P67",
@@ -535,6 +577,12 @@
    "alt": "nvo228e nvo"
   },
   {
+   "name": "Obliteration",
+   "url": "/modes/obliteration/",
+   "cat": "MODES",
+   "alt": "obliteration"
+  },
+  {
    "name": "Operation Firestorm",
    "url": "/maps/operation-firestorm/",
    "cat": "MAPS",
@@ -601,6 +649,12 @@
    "alt": "railway to golmud"
   },
   {
+   "name": "Recon",
+   "url": "/classes/recon/",
+   "cat": "CLASSES",
+   "alt": "recon class"
+  },
+  {
    "name": "Recon Drone",
    "url": "/gadgets/tools/xfgm-6d/",
    "cat": "TOOLS",
@@ -610,7 +664,7 @@
    "name": "RPG-7V2",
    "url": "/gadgets/launchers/rpg-7v2/",
    "cat": "LAUNCHERS",
-   "alt": "unguided rocket launcher"
+   "alt": "unguided rocket launcher rpg-7 rpg"
   },
   {
    "name": "RPK-74M",
@@ -623,6 +677,12 @@
    "url": "/weapons/lmgs/rpkm/",
    "cat": "LMGS",
    "alt": ""
+  },
+  {
+   "name": "Rush",
+   "url": "/modes/rush/",
+   "cat": "MODES",
+   "alt": "rush mode"
   },
   {
    "name": "Saints Quarter",
@@ -733,6 +793,12 @@
    "alt": "supply pouch"
   },
   {
+   "name": "Support",
+   "url": "/classes/support/",
+   "cat": "CLASSES",
+   "alt": "support class support classes support soldier support soldiers playing support as support fire support support fire combat medic logistics expert restock allies supply bag field sustainment"
+  },
+  {
    "name": "SV-98",
    "url": "/weapons/sniper-rifles/sv-98/",
    "cat": "SNIPER RIFLES",
@@ -749,6 +815,12 @@
    "url": "/weapons/dmrs/svk-86/",
    "cat": "DMRS",
    "alt": ""
+  },
+  {
+   "name": "Team Deathmatch",
+   "url": "/modes/team-deathmatch/",
+   "cat": "MODES",
+   "alt": "team deathmatch tdm"
   },
   {
    "name": "Throwable Proximity Detector",
@@ -808,7 +880,7 @@
    "name": "Vehicle Supply Crate",
    "url": "/gadgets/deployables/css-bundle/",
    "cat": "DEPLOYABLES",
-   "alt": "vehicle supply crate"
+   "alt": "vehicle supply crate engineers supply crate supply crate"
   },
   {
    "name": "VSSM",

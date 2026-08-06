@@ -412,6 +412,14 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
+/* Class training paths. The ability table is the same three-column shape as a
+   loadout slot, so it reuses .lo-slot; only the group heading and the path's own
+   blurb are new. The heading takes the systemic hue because that is the color the
+   classes branch borrows in BRANCH_COLOR. */
+.tp-path{margin:22px 0 0}
+.tp-path > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.9px;color:var(--systemic);margin:0 0 2px}
+.tp-desc{color:var(--muted);font-size:14.5px;margin:6px 0 10px;max-width:70ch}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -573,6 +581,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 </div>
 
 {{LOADOUT}}
+{{PATHS}}
 
 <h2 class="cat {{COLOR}}" id="history"><span class="dot"></span>Patch history</h2>
 <p class="cat-note">{{HISTNOTE}}</p>
@@ -642,7 +651,7 @@ def render_subtitle(item):
     return '<p class="itemsub">%s</p>' % html.escape(text)
 
 
-def render_facts(item, color, signature=None, added_in=None, klass=None):
+def render_facts(item, color, signature=None, added_in=None, klass=None, removed=None):
     out = []
     stats = item.get("stats") or []
     if stats:
@@ -678,6 +687,13 @@ def render_facts(item, color, signature=None, added_in=None, klass=None):
         for r in avail:
             if (r.get("label") or "").strip().lower() == "added in":
                 r["value"] = added_in
+    # ...and for Removed, which has no version because EA never published one.
+    # The value is the literal string from releases.json, so nothing is assembled
+    # here. It goes last: the page reads added, then gone.
+    if removed:
+        avail = [r for r in avail
+                 if (r.get("label") or "").strip().lower() != "removed"]
+        avail.append({"label": "Removed", "value": removed})
     if signature and not any((r.get("label") or "").strip().lower() == "signature weapon"
                              for r in avail):
         avail.insert(0, {"label": "Signature Weapon", "value": signature})
@@ -743,16 +759,26 @@ def render_image(item, img):
         for v in variants:
             base = (v.get("image") or "").strip()
             src = find_image(base) if base else None
-            label = "%s &middot; %s" % (html.escape(v.get("faction", "")),
-                                        html.escape(v.get("name", "TBD")))
-            if src:
+            # A vehicle variant carries the faction's model designation, so the
+            # caption names both. A class variant has no second name to give, so
+            # it captions with the faction alone rather than a bare TBD.
+            if (v.get("name") or "").strip():
+                label = "%s &middot; %s" % (html.escape(v.get("faction", "")),
+                                            html.escape(v["name"]))
+            else:
+                label = html.escape(v.get("faction", ""))
+            if src and (v.get("name") or "").strip():
                 body = ('<img src="%s" alt="The %s in Battlefield 6, %s variant" '
                         'loading="lazy">'
-                        % (src, html.escape(v.get("name", item["name"])),
+                        % (src, html.escape(v["name"]), html.escape(v.get("faction", ""))))
+            elif src:
+                body = ('<img src="%s" alt="%s, %s variant, in Battlefield 6" '
+                        'loading="lazy">'
+                        % (src, html.escape(item["name"]),
                            html.escape(v.get("faction", ""))))
             else:
                 body = ('<div class="imgpending"><b>%s</b><span>image pending</span></div>'
-                        % html.escape(v.get("name", item["name"])))
+                        % html.escape(v.get("name") or v.get("faction") or item["name"]))
             out.append('<figure class="itemimg">%s<figcaption>%s</figcaption></figure>'
                        % (body, label))
         return "\n".join(out)
@@ -822,6 +848,52 @@ def render_loadout(item):
     return "\n".join(out)
 
 
+def render_paths(item):
+    """Class training paths, and the active ability the paths share.
+
+    The ability is recorded once on the class rather than twice in the data,
+    because both of a class's path screens show the same LVL 03 entry. It leads
+    the section so the page states plainly that picking a path does not change
+    it. Levels are the game's own labels (LVL 03 down to LVL 00), kept as
+    strings rather than numbers because that is how the screen prints them.
+    """
+    paths = item.get("training_paths") or []
+    ability = item.get("ability") or {}
+    if not paths and not ability:
+        return ""
+
+    color = BRANCH_COLOR.get(item["branch"], "weapons")
+    out = ['<h2 class="cat %s" id="paths"><span class="dot"></span>Training paths</h2>' % color]
+    out.append('<p class="cat-note">Every training path for this class and every ability in it, '
+               'transcribed from the in-game screens. The class active ability is shared: it is '
+               'the same on both paths, so choosing one does not change it.</p>')
+    out.append('<div class="loadout">')
+
+    def table(rows):
+        cells = ['<table>',
+                 '<tr><th>Level</th><th>Ability</th><th>In-game description</th></tr>']
+        for r in rows:
+            cells.append("<tr><td>%s</td><td>%s</td><td>%s</td></tr>"
+                         % (value_cell(r.get("level")),
+                            html.escape(r.get("name", "")),
+                            value_cell(r.get("description"))))
+        cells.append("</table>")
+        return "\n".join(cells)
+
+    if ability:
+        out.append('<section class="tp-path"><h3>Class active ability</h3>')
+        out.append('<div class="lo-slot">%s</div></section>' % table([ability]))
+    for path in paths:
+        out.append('<section class="tp-path"><h3>%s</h3>' % html.escape(path.get("name", "")))
+        desc = (path.get("description") or "").strip()
+        if desc and desc.upper() != "TBD":
+            out.append('<p class="tp-desc">%s</p>' % html.escape(desc))
+        out.append('<div class="lo-slot">%s</div></section>'
+                   % table(path.get("abilities") or []))
+    out.append("</div>")
+    return "\n".join(out)
+
+
 def render_related(item, by_slug):
     groups = item.get("related") or []
     if not any(g.get("items") for g in groups):
@@ -846,11 +918,13 @@ def render_related(item, by_slug):
     return "\n".join(out)
 
 
-def render_history(entries, name):
+def render_history(entries, name, the="the "):
     if not entries:
-        return ('<p class="emptynote">EA has not named the %s in a patch note yet. '
+        # Same article rule as the meta description: a map, class or mode is a
+        # proper noun and takes no "the".
+        return ('<p class="emptynote">EA has not named %s%s in a patch note yet. '
                 'Entries appear here automatically once a patch line in the log is tagged '
-                'for this item.</p>' % html.escape(name))
+                'for this item.</p>' % (the, html.escape(name)))
 
     by_version = {}
     for e in entries:
@@ -913,11 +987,13 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
 
     img = find_image(item["slug"])
     facts = render_facts(item, color, item.get("signature"), item.get("_added_in"),
-                         item.get("class"))
+                         item.get("class"), item.get("_removed"))
     canonical = SITE + url
-    # Maps are places, so "the Tsuru Reef" reads wrong; weapons and gadgets take
-    # the article. This shows up in search results on 18 map pages.
-    the = "" if item["branch"] == "maps" else "the "
+    # Maps are places, and a class or a mode is named the way a proper noun is:
+    # "the Tsuru Reef", "the Assault" and "the Rush" all read wrong, while
+    # weapons, gadgets and vehicles take the article. This shows up in search
+    # results on every page in those branches.
+    the = "" if item["branch"] in ("maps", "classes", "modes") else "the "
     desc = ("Every Battlefield 6 patch note mentioning %s%s, quoted from EA's official "
             "Game Updates, with stats and in-game description." % (the, name))
     n = len(entries)
@@ -953,8 +1029,9 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
         "GRIDMOD": "" if facts else " solo",
         "FACTBOX": '<div class="factbox">\n%s\n</div>' % facts if facts else "",
         "LOADOUT": render_loadout(item),
+        "PATHS": render_paths(item),
         "HISTNOTE": histnote,
-        "HISTORY": render_history(entries, name),
+        "HISTORY": render_history(entries, name, the),
         "RELTITLE": "Compatible attachments" if item["branch"] == "weapons" else "Related items",
         "RELATED": render_related(item, by_slug),
         "SECTIONANCHOR": (entries[0]["section"] if entries and entries[0].get("section")
@@ -1025,6 +1102,26 @@ def main():
             else:
                 unbuilt.append((entry.get("name", "?"), entry.get("kind", "?"), ver))
 
+    # ---- content removals: the source for the Removed row ----
+    # No version to check against known_versions.json: EA has published no
+    # changelog line for any removal so far, so a block carries an observation
+    # date and its source instead. The rendered string is taken literally.
+    removed_in = {}
+    unbuilt_removed = []
+    for block in releases.get("removed") or []:
+        value = (block.get("value") or "").strip()
+        if not value:
+            problems.append("releases.json: a removed block has no 'value' to render")
+            continue
+        if not (block.get("source") or "").strip():
+            problems.append("releases.json: removed block %r has no 'source'" % value)
+        for entry in block.get("entries") or []:
+            if entry.get("slug"):
+                removed_in[entry["slug"]] = value
+            else:
+                unbuilt_removed.append((entry.get("name", "?"), entry.get("kind", "?"),
+                                        block.get("observed", "?")))
+
     items_dir = os.path.join(ROOT, "data", "items")
     items = []
     if os.path.isdir(items_dir):
@@ -1052,6 +1149,7 @@ def main():
                     problems.append("%s: Added in %r in the item file disagrees with %r in "
                                     "releases.json" % (fname, own, release_value))
                 item["_added_in"] = release_value
+            item["_removed"] = removed_in.get(item["slug"])
             items.append(item)
 
     by_slug = {i["slug"]: i for i in items}
@@ -1158,6 +1256,18 @@ def main():
         print("\nreleased but no page yet (from data/releases.json):")
         for name, kind, ver in unbuilt:
             print("  %-22s %-12s %s" % (name, kind, ver))
+
+    if unbuilt_removed:
+        print("\nrecorded as removed but no page yet (from data/releases.json):")
+        for name, kind, observed in unbuilt_removed:
+            print("  %-22s %-12s observed %s" % (name, kind, observed))
+
+    # A removal that points at a slug with no item file would render nowhere, so
+    # the removal would silently not be stated anywhere on the site.
+    for slug in sorted(set(removed_in) - set(by_slug)):
+        problems.append("releases.json: %r is recorded as removed but has no "
+                        "data/items/%s.json, so nothing renders the Removed row"
+                        % (slug, slug))
 
     empty = [i["name"] for i in items if not history.get(i["slug"])]
     if empty:

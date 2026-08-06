@@ -527,6 +527,14 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
+/* Class training paths. The ability table is the same three-column shape as a
+   loadout slot, so it reuses .lo-slot; only the group heading and the path's own
+   blurb are new. The heading takes the systemic hue because that is the color the
+   classes branch borrows in BRANCH_COLOR. */
+.tp-path{margin:22px 0 0}
+.tp-path > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.9px;color:var(--systemic);margin:0 0 2px}
+.tp-desc{color:var(--muted);font-size:14.5px;margin:6px 0 10px;max-width:70ch}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -750,8 +758,11 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/vehicles/patrol-boat/">Patrol Boat</a>
 </details>
 <details class="branch b-classes">
-<summary>Classes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Classes<span class="cnt">4</span></summary>
+<a class="leaf" href="/classes/assault/">Assault</a>
+<a class="leaf" href="/classes/engineer/">Engineer</a>
+<a class="leaf" href="/classes/support/">Support</a>
+<a class="leaf" href="/classes/recon/">Recon</a>
 </details>
 <details class="branch b-maps">
 <summary>Maps<span class="cnt">18</span></summary>
@@ -775,8 +786,15 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/maps/wake-island/">Wake Island</a>
 </details>
 <details class="branch b-modes">
-<summary>Modes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Modes<span class="cnt">8</span></summary>
+<a class="leaf" href="/modes/breakthrough/">Breakthrough</a>
+<a class="leaf" href="/modes/conquest/">Conquest</a>
+<a class="leaf" href="/modes/domination/">Domination</a>
+<a class="leaf" href="/modes/escalation/">Escalation</a>
+<a class="leaf" href="/modes/obliteration/">Obliteration</a>
+<a class="leaf" href="/modes/team-deathmatch/">Team Deathmatch</a>
+<a class="leaf" href="/modes/king-of-the-hill/">King of the Hill</a>
+<a class="leaf" href="/modes/rush/">Rush</a>
 </details>
 </nav>
 <!-- TREE:END -->
@@ -872,8 +890,9 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </section>
 </div>
 
+
 <h2 class="cat vehicles" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">19 patch notes mentioning the Main Battle Tank, newest first. Each entry is the exact line from EA's Game Update notes.</p>
+<p class="cat-note">30 patch notes mentioning the Main Battle Tank, newest first. Each entry is the exact line from EA's Game Update notes.</p>
 <details class="patch" open>
 <summary><span class="ver">1.4.1.5</span><span class="date">Aug 3, 2026</span><span class="tag tag-vehicles">vehicles</span></summary>
 <div class="body">
@@ -891,14 +910,14 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <div class="src">Full patch entry and EA source link: <a href="/#redsec">1.4.1.0 in the balance log</a></div>
 </div></details>
 <details class="patch">
-<summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-vehicles">vehicles</span></summary>
+<summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-progression">balance</span></summary>
 <div class="body">
 <ul class="plain">
 <li data-item="main-battle-tank">MBT 120mm APFSDS Rounds damage reduced from 282-750 to 244-650 against tanks, from 600 to 520 against helicopters, and from 750 to 650 against jets.</li>
 <li data-item="main-battle-tank">MBT 120mm HEAT-MP-T Rounds total blast radius increased from 4m to 5m, and lethal radius increased from 1m to 1.25m.</li>
 <li data-item="main-battle-tank">MBT Aim-Guided Shell damage increased from 235-625 to 244-650 against tanks, and from 700 to 720 against helicopters.</li>
 </ul>
-<div class="src">Full patch entry and EA source link: <a href="/#vehicles">1.3.3.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#other">1.3.3.0 in the balance log</a></div>
 </div></details>
 <details class="patch">
 <summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-vehicles">vehicles</span></summary>
@@ -913,6 +932,17 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <div class="body">
 <ul class="plain">
 <li data-item="infantry-fighting-vehicle main-battle-tank">Turret speeds for the MBT and IFV have been modestly improved.</li>
+<li data-item="main-battle-tank">120mm HEAT-MP-T Rounds now deal 210-560 damage against tanks, 1360 against helicopters, and 1000 against jets.</li>
+<li data-item="main-battle-tank">120mm HEMP-T Rounds now deal 180-480 damage against tanks, 1180 against helicopters, and 1000 against jets.</li>
+<li data-item="main-battle-tank">Increased the inner blast radius of 120mm HEMP-T Rounds from 2 to 2.25 meters.</li>
+<li data-item="main-battle-tank">120mm APFSDS Rounds now deal 282-750 damage against tanks, 600 against helicopters, and 750 against jets.</li>
+<li data-item="main-battle-tank">Aim-Guided Shell beam-riding offset increased from 75 to 100 meters, reducing the rate of turning response.</li>
+<li data-item="main-battle-tank">Aim-Guided Shell engine time to live reduced from 1.25 to 1 second.</li>
+<li data-item="main-battle-tank">Aim-Guided Shell now experiences Drag after engine cutoff.</li>
+<li data-item="main-battle-tank">Aim-Guided Shell time to live decreased from 6 to 4 seconds.</li>
+<li data-item="main-battle-tank">Aim-Guided Shell turning rate reduced from 12.5 to 6 degrees per second.</li>
+<li data-item="main-battle-tank">Aim-Guided Shells now deal 235-625 damage against tanks, 700 against helicopters, and 1000 against jets.</li>
+<li data-item="main-battle-tank">Remains lethal against soldiers within 2m.</li>
 <li data-item="infantry-fighting-vehicle main-battle-tank">The Mine Countermeasures, previously available only to the MBT &amp; APT, is now available to the IFV.</li>
 <li data-item="main-battle-tank">Replaced the M1A2 SEPv3 Coaxial 7.62mm LMG with the Coaxial .50 cal HMG.</li>
 <li data-item="infantry-fighting-vehicle main-battle-tank">The M1A2 SEPv3 and the M3A3 Bradley’s LMG gunner weapons have now been replaced with Grenade Launchers.</li>

@@ -2,31 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bf6balancelog.com/</loc><lastmod>2026-08-03</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/shotguns/18-5ks-k/</loc><lastmod>2026-04-10</lastmod></url>
-  <url><loc>https://bf6balancelog.com/gadgets/launchers/9k38-igla/</loc><lastmod>2026-04-10</lastmod></url>
+  <url><loc>https://bf6balancelog.com/gadgets/launchers/9k38-igla/</loc><lastmod>2026-05-08</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/carbines/ak-205/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/assault-rifles/ak4d/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/throwables/an-m14/</loc><lastmod>2026-04-10</lastmod></url>
   <url><loc>https://bf6balancelog.com/vehicles/armored-transport/</loc><lastmod>2026-06-05</lastmod></url>
+  <url><loc>https://bf6balancelog.com/classes/assault/</loc><lastmod>2026-06-05</lastmod></url>
   <url><loc>https://bf6balancelog.com/vehicles/attack-helicopter/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/vehicles/attack-jet/</loc><lastmod>2026-05-08</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/assault-rifles/b36a4/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/blackwell-fields/</loc><lastmod>2026-02-13</lastmod></url>
+  <url><loc>https://bf6balancelog.com/modes/breakthrough/</loc><lastmod>2026-08-03</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/carbines/brod-3/</loc></url>
   <url><loc>https://bf6balancelog.com/gadgets/deployables/c-4/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/cairo-bazaar/</loc><lastmod>2026-08-03</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/melee/combat-knife/</loc><lastmod>2026-01-16</lastmod></url>
+  <url><loc>https://bf6balancelog.com/modes/conquest/</loc><lastmod>2026-06-05</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/contaminated/</loc><lastmod>2026-04-10</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/tools/csb-iv/</loc><lastmod>2026-06-05</lastmod></url>
-  <url><loc>https://bf6balancelog.com/gadgets/deployables/css-bundle/</loc><lastmod>2026-03-13</lastmod></url>
+  <url><loc>https://bf6balancelog.com/gadgets/deployables/css-bundle/</loc><lastmod>2026-08-03</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/smgs/cz3a1/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/shotguns/db-12/</loc><lastmod>2026-07-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/tools/dgmk4/</loc><lastmod>2026-06-26</lastmod></url>
+  <url><loc>https://bf6balancelog.com/modes/domination/</loc><lastmod>2026-05-08</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/lmgs/drs-iar/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/eastwood/</loc><lastmod>2026-07-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/assault-rifles/ef88/</loc></url>
-  <url><loc>https://bf6balancelog.com/maps/empire-state/</loc><lastmod>2025-12-05</lastmod></url>
+  <url><loc>https://bf6balancelog.com/maps/empire-state/</loc><lastmod>2026-02-13</lastmod></url>
+  <url><loc>https://bf6balancelog.com/classes/engineer/</loc><lastmod>2026-06-05</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/melee/eod-bot-arm/</loc><lastmod>2026-07-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/sidearms/es-57/</loc><lastmod>2026-06-26</lastmod></url>
+  <url><loc>https://bf6balancelog.com/modes/escalation/</loc><lastmod>2026-06-05</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/deployables/field-dummy-25/</loc><lastmod>2026-06-05</lastmod></url>
   <url><loc>https://bf6balancelog.com/vehicles/fighter-jet/</loc><lastmod>2026-05-08</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/fort-lyndon/</loc><lastmod>2026-05-08</lastmod></url>
@@ -40,6 +46,7 @@
   <url><loc>https://bf6balancelog.com/maps/iberian-offensive/</loc><lastmod>2026-08-03</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/melee/ice-axe/</loc><lastmod>2026-01-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/vehicles/infantry-fighting-vehicle/</loc><lastmod>2026-07-16</lastmod></url>
+  <url><loc>https://bf6balancelog.com/modes/king-of-the-hill/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/assault-rifles/kord-6p67/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/lmgs/kts100-mk8/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/smgs/kv9/</loc><lastmod>2026-06-26</lastmod></url>
@@ -87,11 +94,12 @@
   <url><loc>https://bf6balancelog.com/weapons/sniper-rifles/mini-scout/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/mirak-valley/</loc><lastmod>2026-06-05</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/throwables/mk141/</loc><lastmod>2026-02-13</lastmod></url>
-  <url><loc>https://bf6balancelog.com/vehicles/mobile-anti-air/</loc><lastmod>2026-06-05</lastmod></url>
+  <url><loc>https://bf6balancelog.com/vehicles/mobile-anti-air/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/deployables/mp-aps/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/throwables/mtn-55/</loc><lastmod>2026-05-22</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/new-sobek-city/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/assault-rifles/nvo-228e/</loc><lastmod>2026-06-26</lastmod></url>
+  <url><loc>https://bf6balancelog.com/modes/obliteration/</loc><lastmod>2026-07-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/operation-firestorm/</loc><lastmod>2026-07-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/sidearms/p18/</loc><lastmod>2026-06-05</lastmod></url>
   <url><loc>https://bf6balancelog.com/vehicles/patrol-boat/</loc></url>
@@ -104,9 +112,11 @@
   <url><loc>https://bf6balancelog.com/weapons/carbines/qbz-192/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/deployables/qlink-6/</loc><lastmod>2026-03-13</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/railway-to-golmud/</loc><lastmod>2026-08-03</lastmod></url>
-  <url><loc>https://bf6balancelog.com/gadgets/launchers/rpg-7v2/</loc><lastmod>2026-06-26</lastmod></url>
+  <url><loc>https://bf6balancelog.com/classes/recon/</loc><lastmod>2026-08-03</lastmod></url>
+  <url><loc>https://bf6balancelog.com/gadgets/launchers/rpg-7v2/</loc><lastmod>2026-07-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/lmgs/rpk-74m/</loc><lastmod>2026-07-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/lmgs/rpkm/</loc><lastmod>2026-06-26</lastmod></url>
+  <url><loc>https://bf6balancelog.com/modes/rush/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/saints-quarter/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/throwables/scg-24/</loc><lastmod>2025-10-24</lastmod></url>
   <url><loc>https://bf6balancelog.com/vehicles/scout-helicopter/</loc><lastmod>2026-06-05</lastmod></url>
@@ -123,10 +133,12 @@
   <url><loc>https://bf6balancelog.com/weapons/assault-rifles/sor-556-mk2/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/launchers/ss26/</loc><lastmod>2026-07-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/throwables/steel-wing/</loc><lastmod>2025-12-05</lastmod></url>
+  <url><loc>https://bf6balancelog.com/classes/support/</loc><lastmod>2026-06-05</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/sniper-rifles/sv-98/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/dmrs/svdm/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/dmrs/svk-86/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/deployables/tarantula-alx/</loc><lastmod>2026-06-26</lastmod></url>
+  <url><loc>https://bf6balancelog.com/modes/team-deathmatch/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/assault-rifles/tr-7/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/vehicles/transport-helicopter/</loc><lastmod>2026-05-08</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/tools/trcrv2/</loc><lastmod>2026-06-26</lastmod></url>

@@ -1,0 +1,99 @@
+{
+  "_comment": "Transcribed from in-game screens captured 2026-08-05 (Steam captures 20260805170411 NATO art, 170414 Pax Armata art, 170359 Sniper, 170400 Spec Ops). The class active ability is recorded once on the class rather than on each training path because both path screens show the same LVL 03 entry.",
+  "slug": "recon",
+  "name": "Recon",
+  "branch": "classes",
+  "order": 4,
+  "aliases": [
+    "recon class"
+  ],
+  "_alias_note": "No bare \"recon\" alias. It would tag every Recon Drone line, and the Wraith Recon skin, to the class page.",
+  "description": {
+    "text": "The perfect intelligence and counterintelligence operative. Neutralize targets from a distance, or infiltrate, gathering intel and disrupting hostile forces.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Signature Gadget",
+      "value": "Motion Sensor"
+    },
+    {
+      "label": "Signature Weapon",
+      "value": "Sniper Rifle Proficiency"
+    },
+    {
+      "label": "Signature Trait",
+      "value": "Passive Spotting"
+    }
+  ],
+  "ability": {
+    "level": "LVL 03",
+    "name": "UAV Overwatch",
+    "description": "Call in a UAV to shadow you in a 100m radius and spot enemy combatants for 60s."
+  },
+  "training_paths": [
+    {
+      "name": "Sniper",
+      "description": "Specialists in long-range engagements. Spot enemies more efficiently and target threats with lethal headshots.",
+      "abilities": [
+        {
+          "level": "LVL 02",
+          "name": "Confirmed Kill",
+          "description": "Enemy soldiers you kill with headshots from a sniper rifle cannot be revived by their teammates."
+        },
+        {
+          "level": "LVL 01",
+          "name": "Target Acquired",
+          "description": "Inflicting damage on enemies spots them, marking their position in-world and on the minimap."
+        },
+        {
+          "level": "LVL 00",
+          "name": "Enhanced Perception",
+          "description": "Improved Auto-Spotting range with 33% increased distance and 10% wider angle of detection from weapon crosshair. Spotting is quicker and lasts 3s longer."
+        }
+      ]
+    },
+    {
+      "name": "Spec Ops",
+      "description": "Masters of infiltration and sabotage. Operate with stealth to remain undetected for longer and silently neutralize enemy targets.",
+      "abilities": [
+        {
+          "level": "LVL 02",
+          "name": "Low Profile",
+          "description": "Going prone clears your in-combat state 1.5s faster and reduces your spotted status duration by 33%."
+        },
+        {
+          "level": "LVL 01",
+          "name": "Gadget Awareness",
+          "description": "Spot nearby enemy gadgets, marking their position in-world and on the minimap. Ability inactive while sprinting."
+        },
+        {
+          "level": "LVL 00",
+          "name": "Stealth Tactics",
+          "description": "Reduces sounds you make when crouched or prone. Also applies when performing takedowns on an enemy."
+        }
+      ]
+    }
+  ],
+  "related": [],
+  "retired_paths": [],
+  "variants": [
+    {
+      "faction": "NATO",
+      "image": "recon"
+    },
+    {
+      "faction": "Pax Armata",
+      "image": "recon-pax"
+    }
+  ],
+  "tag_deny": [
+    "recon drone",
+    "recon drones",
+    "wraith recon",
+    "recon device"
+  ],
+  "_tag_deny_note": "The XFGM-6D Recon Drone has its own page and accounts for most uses of the word. Wraith Recon is a skin. \"Recon device\" is EA's phrasing for the HTI-Mk2 gadget."
+}

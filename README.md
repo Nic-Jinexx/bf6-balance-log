@@ -2,9 +2,14 @@
 
 Every line of every official Battlefield 6 patch note, quoted from EA and sorted by category —
 weapons, vehicles, gadgets, maps, REDSEC, progression, UI, audio, Portal and AI — with each line
-linked to the weapons, gadgets and maps it names. Nothing summarized, nothing left out.
+linked to the weapons, vehicles, gadgets and maps it names. Nothing summarized, nothing left out.
 
 **Live:** https://bf6balancelog.com
+
+Each linked item gets its own page carrying every patch note that names it, plus what the game
+itself says about it: in-game description, stats, and for vehicles the full customisation loadout
+and both faction variants. Every update also links out to EA's own translation of it, in the twelve
+languages EA genuinely translates.
 
 ## How it is built
 

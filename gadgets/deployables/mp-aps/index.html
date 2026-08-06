@@ -527,6 +527,14 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
+/* Class training paths. The ability table is the same three-column shape as a
+   loadout slot, so it reuses .lo-slot; only the group heading and the path's own
+   blurb are new. The heading takes the systemic hue because that is the color the
+   classes branch borrows in BRANCH_COLOR. */
+.tp-path{margin:22px 0 0}
+.tp-path > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.9px;color:var(--systemic);margin:0 0 2px}
+.tp-desc{color:var(--muted);font-size:14.5px;margin:6px 0 10px;max-width:70ch}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -750,8 +758,11 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/vehicles/patrol-boat/">Patrol Boat</a>
 </details>
 <details class="branch b-classes">
-<summary>Classes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Classes<span class="cnt">4</span></summary>
+<a class="leaf" href="/classes/assault/">Assault</a>
+<a class="leaf" href="/classes/engineer/">Engineer</a>
+<a class="leaf" href="/classes/support/">Support</a>
+<a class="leaf" href="/classes/recon/">Recon</a>
 </details>
 <details class="branch b-maps">
 <summary>Maps<span class="cnt">18</span></summary>
@@ -775,8 +786,15 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/maps/wake-island/">Wake Island</a>
 </details>
 <details class="branch b-modes">
-<summary>Modes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Modes<span class="cnt">8</span></summary>
+<a class="leaf" href="/modes/breakthrough/">Breakthrough</a>
+<a class="leaf" href="/modes/conquest/">Conquest</a>
+<a class="leaf" href="/modes/domination/">Domination</a>
+<a class="leaf" href="/modes/escalation/">Escalation</a>
+<a class="leaf" href="/modes/obliteration/">Obliteration</a>
+<a class="leaf" href="/modes/team-deathmatch/">Team Deathmatch</a>
+<a class="leaf" href="/modes/king-of-the-hill/">King of the Hill</a>
+<a class="leaf" href="/modes/rush/">Rush</a>
 </details>
 </nav>
 <!-- TREE:END -->
@@ -819,6 +837,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 
 
 
+
 <h2 class="cat gadgets" id="history"><span class="dot"></span>Patch history</h2>
 <p class="cat-note">4 patch notes mentioning the MP-APS, newest first. Each entry is the exact line from EA's Game Update notes.</p>
 <details class="patch" open>
@@ -830,13 +849,13 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.3.3.0 in the balance log</a></div>
 </div></details>
 <details class="patch">
-<summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
+<summary><span class="ver">1.3.2.0</span><span class="date">Jun 5, 2026</span><span class="tag tag-progression">balance</span></summary>
 <div class="body">
 <ul class="plain">
 <li data-item="lwcms mp-aps">The Portable Mortar and Missile Intercept System can no longer be equipped together.</li>
 <li data-item="lwcms mp-aps">The Portable Mortar and Missile Intercept System can no longer be placed near each other.</li>
 </ul>
-<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.3.2.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#other">1.3.2.0 in the balance log</a></div>
 </div></details>
 <details class="patch">
 <summary><span class="ver">1.1.2.0</span><span class="date">Nov 17, 2025</span><span class="tag tag-gadgets">gadgets</span></summary>

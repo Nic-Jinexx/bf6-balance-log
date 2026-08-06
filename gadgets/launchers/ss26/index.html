@@ -527,6 +527,14 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
+/* Class training paths. The ability table is the same three-column shape as a
+   loadout slot, so it reuses .lo-slot; only the group heading and the path's own
+   blurb are new. The heading takes the systemic hue because that is the color the
+   classes branch borrows in BRANCH_COLOR. */
+.tp-path{margin:22px 0 0}
+.tp-path > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.9px;color:var(--systemic);margin:0 0 2px}
+.tp-desc{color:var(--muted);font-size:14.5px;margin:6px 0 10px;max-width:70ch}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -750,8 +758,11 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/vehicles/patrol-boat/">Patrol Boat</a>
 </details>
 <details class="branch b-classes">
-<summary>Classes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Classes<span class="cnt">4</span></summary>
+<a class="leaf" href="/classes/assault/">Assault</a>
+<a class="leaf" href="/classes/engineer/">Engineer</a>
+<a class="leaf" href="/classes/support/">Support</a>
+<a class="leaf" href="/classes/recon/">Recon</a>
 </details>
 <details class="branch b-maps">
 <summary>Maps<span class="cnt">18</span></summary>
@@ -775,8 +786,15 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/maps/wake-island/">Wake Island</a>
 </details>
 <details class="branch b-modes">
-<summary>Modes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Modes<span class="cnt">8</span></summary>
+<a class="leaf" href="/modes/breakthrough/">Breakthrough</a>
+<a class="leaf" href="/modes/conquest/">Conquest</a>
+<a class="leaf" href="/modes/domination/">Domination</a>
+<a class="leaf" href="/modes/escalation/">Escalation</a>
+<a class="leaf" href="/modes/obliteration/">Obliteration</a>
+<a class="leaf" href="/modes/team-deathmatch/">Team Deathmatch</a>
+<a class="leaf" href="/modes/king-of-the-hill/">King of the Hill</a>
+<a class="leaf" href="/modes/rush/">Rush</a>
 </details>
 </nav>
 <!-- TREE:END -->
@@ -819,6 +837,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 
 
 
+
 <h2 class="cat gadgets" id="history"><span class="dot"></span>Patch history</h2>
 <p class="cat-note">18 patch notes mentioning the SS26, newest first. Each entry is the exact line from EA's Game Update notes.</p>
 <details class="patch" open>
@@ -852,18 +871,18 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <li data-item="ss26">Fire damage now only applies once to soldiers.</li>
 <li data-item="ss26">Damage drop-off has been adjusted.</li>
 <li data-item="ss26">Unlock requirement reduced from Rank 1 to Rank 0.</li>
-<li data-item="ss26">Spotting angle and maximum spotting distance in binocular mode have been made more forgiving.</li>
-<li data-item="ss26">Can no longer laser paint the environment.</li>
-<li data-item="ss26">Now removes laser paint marks when a vehicle enters thermal smoke.</li>
-<li data-item="ss26">Now correctly spots vehicles when laser painting them.</li>
-<li data-item="ss26">Thermal view toggle now updates the UI correctly.</li>
-<li data-item="ss26">Zoom now activates instantly and returns to your previous zoom level.</li>
-<li data-item="ss26">Deploy animation now plays correctly.</li>
-<li data-item="ss26">Will now rotate properly for other players when deployed.</li>
-<li data-item="ss26">Improved the Game Hint to show RMB (Zoom) instead of E/R (Interact/Reload).</li>
-<li data-item="ss26">Now allows only one spawn per player (4 per squad total) before self-destruct.</li>
+<li data-item="ltlm-ii ss26">Spotting angle and maximum spotting distance in binocular mode have been made more forgiving.</li>
+<li data-item="ltlm-ii ss26">Can no longer laser paint the environment.</li>
+<li data-item="ltlm-ii ss26">Now removes laser paint marks when a vehicle enters thermal smoke.</li>
+<li data-item="ltlm-ii ss26">Now correctly spots vehicles when laser painting them.</li>
+<li data-item="ltlm-ii ss26">Thermal view toggle now updates the UI correctly.</li>
+<li data-item="ltlm-ii ss26">Zoom now activates instantly and returns to your previous zoom level.</li>
+<li data-item="ltlm-ii ss26">Deploy animation now plays correctly.</li>
+<li data-item="ltlm-ii ss26">Will now rotate properly for other players when deployed.</li>
+<li data-item="ltlm-ii ss26">Improved the Game Hint to show RMB (Zoom) instead of E/R (Interact/Reload).</li>
+<li data-item="qlink-6 ss26">Now allows only one spawn per player (4 per squad total) before self-destruct.</li>
 <li data-item="qlink-6 ss26">Enemy Deploy Beacons now display an icon on the minimap when pinged.</li>
-<li data-item="ss26">Can now be deployed at a soldier’s feet if the original location is blocked.</li>
+<li data-item="qlink-6 ss26">Can now be deployed at a soldier’s feet if the original location is blocked.</li>
 </ul>
 <div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.0.1.0 in the balance log</a></div>
 </div></details>

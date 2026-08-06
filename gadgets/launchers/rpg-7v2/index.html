@@ -527,6 +527,14 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
+/* Class training paths. The ability table is the same three-column shape as a
+   loadout slot, so it reuses .lo-slot; only the group heading and the path's own
+   blurb are new. The heading takes the systemic hue because that is the color the
+   classes branch borrows in BRANCH_COLOR. */
+.tp-path{margin:22px 0 0}
+.tp-path > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.9px;color:var(--systemic);margin:0 0 2px}
+.tp-desc{color:var(--muted);font-size:14.5px;margin:6px 0 10px;max-width:70ch}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -750,8 +758,11 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/vehicles/patrol-boat/">Patrol Boat</a>
 </details>
 <details class="branch b-classes">
-<summary>Classes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Classes<span class="cnt">4</span></summary>
+<a class="leaf" href="/classes/assault/">Assault</a>
+<a class="leaf" href="/classes/engineer/">Engineer</a>
+<a class="leaf" href="/classes/support/">Support</a>
+<a class="leaf" href="/classes/recon/">Recon</a>
 </details>
 <details class="branch b-maps">
 <summary>Maps<span class="cnt">18</span></summary>
@@ -775,8 +786,15 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <a class="leaf" href="/maps/wake-island/">Wake Island</a>
 </details>
 <details class="branch b-modes">
-<summary>Modes<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Modes<span class="cnt">8</span></summary>
+<a class="leaf" href="/modes/breakthrough/">Breakthrough</a>
+<a class="leaf" href="/modes/conquest/">Conquest</a>
+<a class="leaf" href="/modes/domination/">Domination</a>
+<a class="leaf" href="/modes/escalation/">Escalation</a>
+<a class="leaf" href="/modes/obliteration/">Obliteration</a>
+<a class="leaf" href="/modes/team-deathmatch/">Team Deathmatch</a>
+<a class="leaf" href="/modes/king-of-the-hill/">King of the Hill</a>
+<a class="leaf" href="/modes/rush/">Rush</a>
 </details>
 </nav>
 <!-- TREE:END -->
@@ -819,9 +837,18 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 
 
 
+
 <h2 class="cat gadgets" id="history"><span class="dot"></span>Patch history</h2>
-<p class="cat-note">5 patch notes mentioning the RPG-7V2, newest first. Each entry is the exact line from EA's Game Update notes.</p>
+<p class="cat-note">12 patch notes mentioning the RPG-7V2, newest first. Each entry is the exact line from EA's Game Update notes.</p>
 <details class="patch" open>
+<summary><span class="ver">1.4.1.0</span><span class="date">Jul 16, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="rpg-7v2">RPG detonations underwater no longer create dirt impact effects.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.4.1.0 in the balance log</a></div>
+</div></details>
+<details class="patch">
 <summary><span class="ver">1.3.3.0</span><span class="date">Jun 26, 2026</span><span class="tag tag-vehicles">vehicles</span></summary>
 <div class="body">
 <ul class="plain">
@@ -838,14 +865,41 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.3.2.0 in the balance log</a></div>
 </div></details>
 <details class="patch">
-<summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-gadgets">gadgets</span></summary>
+<summary><span class="ver">1.3.1.0</span><span class="date">May 8, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
 <div class="body">
 <ul class="plain">
+<li data-item="rpg-7v2">Updated the RPG so it now deals 173-460 damage against tanks, 1035 against helicopters, and 1000 against jets.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.3.1.0 in the balance log</a></div>
+</div></details>
+<details class="patch">
+<summary><span class="ver">1.2.3.0</span><span class="date">Apr 10, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="rpg-7v2">Reduced the initial speed, acceleration and maximum speed of the RPG</li>
+<li data-item="rpg-7v2">Updated vehicle-hit scoring so RPG critical hits and regular hits no longer award the same score.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.2.3.0 in the balance log</a></div>
+</div></details>
+<details class="patch">
+<summary><span class="ver">1.2.1.0</span><span class="date">Feb 13, 2026</span><span class="tag tag-gadgets">gadgets</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="mbt-law rpg-7v2">Fixed an issue where the RPG-7 and the MBT-LAW launchers would be inaccurate if fired right after the zoom transition is completed.</li>
+<li data-item="rpg-7v2">Fixed an issue where the RPG-7 could fire unintentionally when switching weapons after releasing the trigger.</li>
+</ul>
+<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.2.1.0 in the balance log</a></div>
+</div></details>
+<details class="patch">
+<summary><span class="ver">1.0.1.0</span><span class="date">Oct 9, 2025</span><span class="tag tag-vehicles">vehicles</span></summary>
+<div class="body">
+<ul class="plain">
+<li data-item="rpg-7v2">Helicopters have been given more power and responsiveness, making them easier to fly, adjust mid-flight, and survive attack runs, including better chances to dodge incoming RPGs.</li>
 <li data-item="rpg-7v2">Adjusted sight and reticle for better aiming.</li>
 <li data-item="rpg-7v2">Increased dispersion when aiming down sights to discourage quick-scoping.</li>
 <li data-item="rpg-7v2">Fixed projectiles hitting nearby cover incorrectly when aimed just above it.</li>
 </ul>
-<div class="src">Full patch entry and EA source link: <a href="/#gadgets">1.0.1.0 in the balance log</a></div>
+<div class="src">Full patch entry and EA source link: <a href="/#vehicles">1.0.1.0 in the balance log</a></div>
 </div></details>
 
 <h2 class="cat gadgets" id="related"><span class="dot"></span>Related items</h2>

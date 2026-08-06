@@ -1,0 +1,19 @@
+{
+  "_comment": "Description transcribed from the in-game Custom Search screen, captured 2026-08-05 (Steam capture 20260805170513), which had Breakthrough selected and so showed its full text. The other five live modes are named on the same screen but not described.",
+  "slug": "breakthrough",
+  "name": "Breakthrough",
+  "branch": "modes",
+  "order": 1,
+  "aliases": [
+    "breakthrough"
+  ],
+  "description": {
+    "text": "Fight on one side of a frontline battle for territory. As attackers, capture objectives to take enemy sectors. As defenders, hold your positions and stop the enemy advance.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": []
+}
