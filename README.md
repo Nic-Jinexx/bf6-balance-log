@@ -25,11 +25,17 @@ python scripts/build_pages.py                  # item pages, sitemap, search ind
 python scripts/build_patch_data.py --check     # every EA bullet still present, verbatim
 python scripts/render_patches.py --check       # index.html matches the data
 python scripts/build_pages.py --check          # generated pages are fresh
+python scripts/check_tags.py --check           # no patch line names an item untagged
 ```
 
 `data/patches/*.json` is the source of truth. Each entry's `text` is EA's exact wording and is
 guarded by `--check`, which re-reads EA's page and fails if a line is missing or altered. The
 `section` and `items` fields are editorial and meant to be corrected by hand.
 
-A weekly GitHub Action detects new EA patch versions and opens an issue. It deliberately does not
-write content.
+`check_tags.py` is the coverage net. Tagging used to happen only when a patch was first imported,
+so a patch logged before an item existed was never re-scanned once that item was added. It now
+matches every item against every bullet in both directions and fails on any pair that is neither
+tagged nor recorded as a reviewed rejection, so neither a new patch nor a new item can slip past.
+
+Two GitHub Actions: one runs all four checks on every push, and a weekly one detects new EA patch
+versions and opens an issue. The weekly one deliberately does not write content.
