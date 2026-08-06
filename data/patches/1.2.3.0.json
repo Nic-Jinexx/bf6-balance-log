@@ -125,7 +125,9 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "flashlight"
+   ]
   },
   {
    "text": "Ping voice-over callouts now have a slight 0.15 second delay to improve timing and readability.",
@@ -849,7 +851,10 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "hollow-point",
+    "synthetic-tip"
+   ]
   },
   {
    "text": "Range Finder now plays sound cues when a range check starts and when it completes.",
@@ -900,7 +905,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "The TH-RDS optic now appears correctly on the B36A4 and SVDM.",
@@ -911,6 +918,7 @@
    "section": "weapons",
    "items": [
     "b36a4",
+    "scopes",
     "svdm"
    ]
   },
@@ -1353,6 +1361,7 @@
    ],
    "section": "ui",
    "items": [
+    "barrels",
     "vz-61"
    ]
   },
@@ -1409,7 +1418,8 @@
    ],
    "section": "ui",
    "items": [
-    "cz3a1"
+    "cz3a1",
+    "scopes"
    ]
   },
   {
@@ -1705,7 +1715,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Improved the VOIP consent flow.",
@@ -1854,6 +1866,7 @@
    ],
    "section": "ui",
    "items": [
+    "barrels",
     "cz3a1"
    ]
   },

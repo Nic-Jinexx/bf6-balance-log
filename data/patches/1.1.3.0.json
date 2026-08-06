@@ -370,7 +370,9 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "flashlight"
+   ]
   },
   {
    "text": "Fixed an issue where the death camera could appear beneath the map when dying inside a vehicle.",
@@ -561,7 +563,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Fixed a visual issue where the Adjustable Angled Grip sat slightly higher on the weapon than intended.",
@@ -579,7 +583,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Fixed an issue that caused quick melee attacks to sometimes not return the player to their previous weapon after striking.",
@@ -597,7 +603,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Fixed an issue where target dummies in the firing range remained down after being shot.",
@@ -615,7 +623,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "fmj"
+   ]
   },
   {
    "text": "Fixed an issue where underslung attachments were not always restored correctly when picking up another soldier’s kit.",
@@ -633,7 +643,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "flashlight"
+   ]
   },
   {
    "text": "Fixed the “peekaboo” timing bug affecting target dummies on the firing range.",
@@ -679,7 +691,8 @@
    "section": "weapons",
    "items": [
     "l110",
-    "m123k"
+    "m123k",
+    "magazines"
    ]
   },
   {

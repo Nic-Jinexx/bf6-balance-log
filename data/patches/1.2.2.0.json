@@ -197,7 +197,9 @@
     "PLAYER"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Resolved an issue where sprint vaulting over deployable cover placed near a vehicle could launch the soldier unexpectedly.",
@@ -734,7 +736,8 @@
    ],
    "section": "gadgets",
    "items": [
-    "9k38-igla"
+    "9k38-igla",
+    "scopes"
    ]
   },
   {
@@ -787,7 +790,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "50mw-violet"
+   ]
   },
   {
    "text": "Added Taclight - Hip rifle weapon attachment.",
@@ -796,7 +801,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "taclight-hip"
+   ]
   },
   {
    "text": "Added Taclight - Aimed rifle weapon attachment.",
@@ -805,7 +812,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "taclight-aimed"
+   ]
   },
   {
    "text": "Added Taclight - Aimed pistol weapon attachment.",
@@ -814,7 +823,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "taclight-aimed"
+   ]
   },
   {
    "text": "Adjusted DB-12 recoil values to align with intended performance.",
@@ -855,6 +866,7 @@
    ],
    "section": "weapons",
    "items": [
+    "bipod",
     "m250"
    ]
   },
@@ -865,7 +877,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "bipod"
+   ]
   },
   {
    "text": "Improved reload rattle sound effects for the B36A4.",
@@ -916,7 +930,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "bipod"
+   ]
   },
   {
    "text": "Resolved an issue where dispersion was too high when re-entering ADS shortly after previously leaving ADS.",
@@ -935,6 +951,7 @@
    ],
    "section": "weapons",
    "items": [
+    "bipod",
     "m250"
    ]
   },
@@ -3262,7 +3279,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": [],
+   "items": [
+    "magazines"
+   ],
    "redsec": true
   },
   {
@@ -3272,7 +3291,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": [],
+   "items": [
+    "magazines"
+   ],
    "redsec": true
   },
   {

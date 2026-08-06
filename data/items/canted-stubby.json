@@ -1,0 +1,25 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Name and description are identical on every weapon that takes it, verified across the eleven assault rifles in that run.",
+  "slug": "canted-stubby",
+  "name": "Canted Stubby",
+  "branch": "attachments",
+  "subcategory": "underbarrel",
+  "order": 8,
+  "aliases": [
+    "canted stubby"
+  ],
+  "description": {
+    "text": "Moderately reduces recoil and enables a slightly faster transition to aim down sights (ADS), at the cost of ADS accuracy while moving.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Point cost",
+      "value": "30 of 100"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

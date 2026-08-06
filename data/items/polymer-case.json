@@ -1,0 +1,25 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Name and description are identical on every weapon that takes it, verified across the eleven assault rifles in that run.",
+  "slug": "polymer-case",
+  "name": "Polymer Case",
+  "branch": "attachments",
+  "subcategory": "ammunition",
+  "order": 3,
+  "aliases": [
+    "polymer case"
+  ],
+  "description": {
+    "text": "Lightweight, standard-penetration ammunition that provides improved aim down sights (ADS) movement speed.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Point cost",
+      "value": "10 of 100"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

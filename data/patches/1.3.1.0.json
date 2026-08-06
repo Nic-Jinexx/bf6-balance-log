@@ -46,7 +46,10 @@
     "Major Updates for 1.3.1.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "magnifier",
+    "scopes"
+   ]
   },
   {
    "text": "Core Gameplay, Netcode, and Combat Feedback Improvements: Pinging is now faster and more consistent, hit reactions and damage indicators are clearer, drag and revive has been further polished, and multiple netcode fixes improve readability during combat without interfering with gunfight outcomes.",
@@ -197,7 +200,9 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "flashlight"
+   ]
   },
   {
    "text": "Corrected a performance issue in the Firing Range when large numbers of bullet holes appeared on glass surfaces.",
@@ -215,7 +220,9 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Corrected an issue where magnifier attachments could partially or fully block the view while aiming down sights.",
@@ -224,7 +231,9 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "magnifier"
+   ]
   },
   {
    "text": "Improve third-person soldier locomotion animations when moving on top of vehicles",
@@ -369,7 +378,9 @@
     "Netcode"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "bipod"
+   ]
   },
   {
    "text": "Corrected an issue where enemy weapons could appear sideways and not properly aligned with their actual aim direction in certain states, such as while jumping.",
@@ -921,7 +932,8 @@
    ],
    "section": "vehicles",
    "items": [
-    "infantry-fighting-vehicle"
+    "infantry-fighting-vehicle",
+    "magazines"
    ]
   },
   {
@@ -945,7 +957,8 @@
    ],
    "section": "vehicles",
    "items": [
-    "infantry-fighting-vehicle"
+    "infantry-fighting-vehicle",
+    "magazines"
    ]
   },
   {
@@ -1854,8 +1867,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "mas-148",
-    "mbt-law"
+    "mas-148"
    ]
   },
   {
@@ -1867,8 +1879,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "mas-148",
-    "mbt-law"
+    "mas-148"
    ]
   },
   {
@@ -1880,8 +1891,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "mas-148",
-    "mbt-law"
+    "mas-148"
    ]
   },
   {
@@ -1893,8 +1903,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "mas-148",
-    "mbt-law"
+    "mas-148"
    ]
   },
   {
@@ -1906,8 +1915,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "ltlm-ii",
-    "mbt-law"
+    "ltlm-ii"
    ]
   },
   {
@@ -1919,8 +1927,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "ltlm-ii",
-    "mbt-law"
+    "ltlm-ii"
    ]
   },
   {
@@ -1932,8 +1939,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "ltlm-ii",
-    "mbt-law"
+    "ltlm-ii"
    ]
   },
   {
@@ -1945,8 +1951,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "csb-iv",
-    "mbt-law"
+    "csb-iv"
    ]
   },
   {
@@ -1959,8 +1964,7 @@
    "section": "gadgets",
    "items": [
     "csb-iv",
-    "light-ground-transport",
-    "mbt-law"
+    "light-ground-transport"
    ]
   },
   {
@@ -1972,8 +1976,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "csb-iv",
-    "mbt-law"
+    "csb-iv"
    ]
   },
   {
@@ -1985,8 +1988,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "csb-iv",
-    "mbt-law"
+    "csb-iv"
    ]
   },
   {
@@ -1998,8 +2000,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "csb-iv",
-    "mbt-law"
+    "csb-iv"
    ]
   },
   {
@@ -2011,8 +2012,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "dgmk4",
-    "mbt-law"
+    "dgmk4"
    ]
   },
   {
@@ -2024,8 +2024,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "dgmk4",
-    "mbt-law"
+    "dgmk4"
    ]
   },
   {
@@ -2037,8 +2036,7 @@
    ],
    "section": "gadgets",
    "items": [
-    "dgmk4",
-    "mbt-law"
+    "dgmk4"
    ]
   },
   {
@@ -2061,7 +2059,8 @@
    "section": "weapons",
    "items": [
     "m1014",
-    "m87a1"
+    "m87a1",
+    "magazines"
    ]
   },
   {
@@ -2071,7 +2070,10 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "magnifier",
+    "scopes"
+   ]
   },
   {
    "text": "Additionally increased recoil for the high DPS automatic weapons, reducing their long and mid range capabilities and giving them outsized opportunity costs and making other weapons more attractive to use. ** Weapons most affected: SG553R, SCW-10, KV9, CZ3A1, SGX, TR-7, M4A1, M121 A2, VCR-2, M433, PW5A3, M123K, and GRT-BC.",
@@ -2137,6 +2139,7 @@
    ],
    "section": "weapons",
    "items": [
+    "flash-hider",
     "sor-556-mk2"
    ]
   },
@@ -2166,6 +2169,7 @@
    ],
    "section": "weapons",
    "items": [
+    "bipod",
     "svk-86"
    ]
   },
@@ -2480,6 +2484,7 @@
    ],
    "section": "ui",
    "items": [
+    "magazines",
     "vz-61"
    ]
   },
@@ -2671,7 +2676,8 @@
    ],
    "section": "ui",
    "items": [
-    "m121-a2"
+    "m121-a2",
+    "scopes"
    ]
   },
   {
@@ -2720,7 +2726,8 @@
    "items": [
     "cz3a1",
     "grt-cps",
-    "m121-a2"
+    "m121-a2",
+    "scopes"
    ]
   },
   {
@@ -2840,7 +2847,9 @@
     "PORTAL:"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "magazines"
+   ]
   },
   {
    "text": "Updated the Ammo Crate so it now provides one magazine for primary and secondary weapons.",
@@ -2849,7 +2858,9 @@
     "PORTAL:"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "magazines"
+   ]
   },
   {
    "text": "Corrected mismatched icon art for several weapon packages.",
@@ -2922,6 +2933,7 @@
    ],
    "section": "portal",
    "items": [
+    "magazines",
     "support"
    ]
   },
@@ -3146,6 +3158,7 @@
    ],
    "section": "audio",
    "items": [
+    "magazines",
     "sor-556-mk2"
    ]
   },

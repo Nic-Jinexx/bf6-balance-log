@@ -436,7 +436,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Fixed several issues with underbarrel attachment alignment",
@@ -452,7 +454,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "barrels"
+   ]
   },
   {
    "text": "Fixed missing or incorrect magazine icons, naming, and mesh assignments.",
@@ -460,7 +464,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "magazines"
+   ]
   },
   {
    "text": "Fixed the issue where the SV-98 displayed lower damage stats when equipping the 5 MW Red attachment.",
@@ -469,6 +475,7 @@
    ],
    "section": "weapons",
    "items": [
+    "5mw-red",
     "sv-98"
    ]
   },
@@ -486,7 +493,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Fixed the issue where two Green Lasers for the DRS-IAR shared identical Hipfire stat boosts.",

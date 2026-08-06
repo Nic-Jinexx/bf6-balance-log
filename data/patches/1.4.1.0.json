@@ -221,6 +221,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "scopes",
     "sich-g1-wp"
    ]
   },
@@ -286,6 +287,7 @@
    ],
    "section": "weapons",
    "items": [
+    "compensator",
     "pw5a3",
     "scw-10",
     "umg-40"
@@ -446,7 +448,8 @@
    ],
    "section": "ui",
    "items": [
-    "m60"
+    "m60",
+    "magazines"
    ]
   },
   {
@@ -457,6 +460,7 @@
    ],
    "section": "ui",
    "items": [
+    "magazines",
     "sl9"
    ]
   },
@@ -565,7 +569,8 @@
    "section": "ui",
    "items": [
     "m39-emr",
-    "rpk-74m"
+    "rpk-74m",
+    "scopes"
    ]
   },
   {

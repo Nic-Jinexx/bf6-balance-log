@@ -531,7 +531,8 @@
    "section": "gadgets",
    "items": [
     "m320a1-smk",
-    "m320a1-thrm"
+    "m320a1-thrm",
+    "scopes"
    ]
   },
   {
@@ -630,7 +631,10 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "hollow-point",
+    "synthetic-tip"
+   ]
   },
   {
    "text": "L115 iron sight attachment cost increased from 5 to 15, bringing it in line with other Bolt-Action Rifles.",
@@ -650,7 +654,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "magazines"
+   ]
   },
   {
    "text": "M45A1 and Vz.61 sidearms now use Subsonic Ammo by default.",
@@ -672,7 +678,8 @@
    ],
    "section": "weapons",
    "items": [
-    "m87a1"
+    "m87a1",
+    "magazines"
    ]
   },
   {
@@ -692,7 +699,8 @@
    ],
    "section": "weapons",
    "items": [
-    "l115"
+    "l115",
+    "magazines"
    ]
   },
   {
@@ -723,7 +731,8 @@
    ],
    "section": "weapons",
    "items": [
-    "eastwood"
+    "eastwood",
+    "scopes"
    ]
   },
   {
@@ -734,6 +743,7 @@
    ],
    "section": "weapons",
    "items": [
+    "barrels",
     "l115"
    ]
   },
@@ -774,7 +784,8 @@
    ],
    "section": "weapons",
    "items": [
-    "ak-205"
+    "ak-205",
+    "barrels"
    ]
   },
   {
@@ -785,7 +796,8 @@
    ],
    "section": "weapons",
    "items": [
-    "ak-205"
+    "ak-205",
+    "barrels"
    ]
   },
   {
@@ -851,7 +863,8 @@
    ],
    "section": "weapons",
    "items": [
-    "m16a4"
+    "m16a4",
+    "magazines"
    ]
   },
   {
@@ -895,6 +908,7 @@
    ],
    "section": "weapons",
    "items": [
+    "magazines",
     "rpk-74m"
    ]
   },

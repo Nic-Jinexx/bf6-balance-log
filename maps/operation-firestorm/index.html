@@ -483,6 +483,14 @@ figure.itemimg{margin:0}
 figure.itemimg img{width:100%;height:auto;display:block;border:1px solid var(--border);
   border-radius:6px;background:var(--panel)}
 figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:8px}
+/* Mode badges. The game draws these as a small square glyph beside GAME MODE,
+   so they keep that scale instead of being stretched across the art column, and
+   opt out of the solo grid's flex-grow. */
+figure.itemimg.icon{flex:0 0 auto}
+figure.itemimg.icon img{width:104px;height:104px;border-radius:5px}
+figure.itemimg.icon .imgpending{width:104px;height:104px;aspect-ratio:auto;padding:8px;gap:4px}
+figure.itemimg.icon .imgpending b{font-size:12px;line-height:1.2}
+figure.itemimg.icon .imgpending span{font-size:11px}
 .imgpending{aspect-ratio:16/9;border:1px dashed var(--border2);border-radius:6px;background:var(--panel);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
   color:var(--dim);font-family:var(--mono);font-size:13px;text-align:center;padding:16px}
@@ -664,26 +672,85 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 </details>
 </details>
 <details class="branch b-attachments">
-<summary>Attachments<span class="cnt">0</span></summary>
-<details class="sub empty">
-<summary>Optics<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<summary>Attachments<span class="cnt">55</span></summary>
+<details class="sub">
+<summary>Optics<span class="cnt">1</span></summary>
+<a class="leaf" href="/attachments/optics/scopes/">Scopes &amp; Sights</a>
 </details>
-<details class="sub empty">
-<summary>Barrels<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<details class="sub">
+<summary>Muzzles<span class="cnt">11</span></summary>
+<a class="leaf" href="/attachments/muzzles/flash-hider/">Flash Hider</a>
+<a class="leaf" href="/attachments/muzzles/flash-comp/">Flash Comp</a>
+<a class="leaf" href="/attachments/muzzles/single-port-brake/">Single-Port Brake</a>
+<a class="leaf" href="/attachments/muzzles/double-port-brake/">Double-Port Brake</a>
+<a class="leaf" href="/attachments/muzzles/compensated-brake/">Compensated Brake</a>
+<a class="leaf" href="/attachments/muzzles/compensator/">Compensator</a>
+<a class="leaf" href="/attachments/muzzles/linear-comp/">Linear Comp</a>
+<a class="leaf" href="/attachments/muzzles/standard-suppressor/">Standard Suppressor</a>
+<a class="leaf" href="/attachments/muzzles/long-suppressor/">Long Suppressor</a>
+<a class="leaf" href="/attachments/muzzles/cqb-suppressor/">CQB Suppressor</a>
+<a class="leaf" href="/attachments/muzzles/lightened-suppressor/">Lightened Suppressor</a>
 </details>
-<details class="sub empty">
-<summary>Underbarrel<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<details class="sub">
+<summary>Barrels<span class="cnt">1</span></summary>
+<a class="leaf" href="/attachments/barrels/barrels/">Barrels</a>
 </details>
-<details class="sub empty">
-<summary>Magazines<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<details class="sub">
+<summary>Underbarrel<span class="cnt">17</span></summary>
+<a class="leaf" href="/attachments/underbarrel/folding-vertical/">Folding Vertical</a>
+<a class="leaf" href="/attachments/underbarrel/alloy-vertical/">Alloy Vertical</a>
+<a class="leaf" href="/attachments/underbarrel/ribbed-vertical/">Ribbed Vertical</a>
+<a class="leaf" href="/attachments/underbarrel/6h64-vertical/">6H64 Vertical</a>
+<a class="leaf" href="/attachments/underbarrel/classic-vertical/">Classic Vertical</a>
+<a class="leaf" href="/attachments/underbarrel/folding-stubby/">Folding Stubby</a>
+<a class="leaf" href="/attachments/underbarrel/ribbed-stubby/">Ribbed Stubby</a>
+<a class="leaf" href="/attachments/underbarrel/canted-stubby/">Canted Stubby</a>
+<a class="leaf" href="/attachments/underbarrel/stippled-stubby/">Stippled Stubby</a>
+<a class="leaf" href="/attachments/underbarrel/low-profile-stubby/">Low-Profile Stubby</a>
+<a class="leaf" href="/attachments/underbarrel/slim-handstop/">Slim Handstop</a>
+<a class="leaf" href="/attachments/underbarrel/slim-angled/">Slim Angled</a>
+<a class="leaf" href="/attachments/underbarrel/full-angled/">Full Angled</a>
+<a class="leaf" href="/attachments/underbarrel/bipod/">Bipod</a>
+<a class="leaf" href="/attachments/underbarrel/ptt-grip-pod/">PTT Grip Pod</a>
+<a class="leaf" href="/attachments/underbarrel/qd-grip-pod/">QD Grip Pod</a>
+<a class="leaf" href="/attachments/underbarrel/classic-grip-pod/">Classic Grip Pod</a>
 </details>
-<details class="sub empty">
-<summary>Ammunition<span class="cnt">0</span></summary>
-<div class="leaf-none">nothing catalogued yet</div>
+<details class="sub">
+<summary>Magazines<span class="cnt">1</span></summary>
+<a class="leaf" href="/attachments/magazines/magazines/">Magazines</a>
+</details>
+<details class="sub">
+<summary>Ammunition<span class="cnt">6</span></summary>
+<a class="leaf" href="/attachments/ammunition/fmj/">FMJ</a>
+<a class="leaf" href="/attachments/ammunition/tungsten-core/">Tungsten Core</a>
+<a class="leaf" href="/attachments/ammunition/polymer-case/">Polymer Case</a>
+<a class="leaf" href="/attachments/ammunition/hollow-point/">Hollow Point</a>
+<a class="leaf" href="/attachments/ammunition/frangible/">Frangible</a>
+<a class="leaf" href="/attachments/ammunition/synthetic-tip/">Synthetic Tip</a>
+</details>
+<details class="sub">
+<summary>Accessories<span class="cnt">11</span></summary>
+<a class="leaf" href="/attachments/accessories/taclight-aimed/">Taclight - Aimed</a>
+<a class="leaf" href="/attachments/accessories/flashlight/">Flashlight</a>
+<a class="leaf" href="/attachments/accessories/taclight-hip/">Taclight - Hip</a>
+<a class="leaf" href="/attachments/accessories/5mw-red/">5 MW Red</a>
+<a class="leaf" href="/attachments/accessories/50mw-violet/">50 MW Violet</a>
+<a class="leaf" href="/attachments/accessories/5mw-green/">5 MW Green</a>
+<a class="leaf" href="/attachments/accessories/50mw-green/">50 MW Green</a>
+<a class="leaf" href="/attachments/accessories/50mw-blue/">50 MW Blue</a>
+<a class="leaf" href="/attachments/accessories/120mw-blue/">120 MW Blue</a>
+<a class="leaf" href="/attachments/accessories/laser-light-combo-green/">Laser/Light Combo Green</a>
+<a class="leaf" href="/attachments/accessories/magnifier/">Magnifier</a>
+</details>
+<details class="sub">
+<summary>Ergonomics<span class="cnt">7</span></summary>
+<a class="leaf" href="/attachments/ergonomics/improved-mag-catch/">Improved Mag Catch</a>
+<a class="leaf" href="/attachments/ergonomics/rail-cover/">Rail Cover</a>
+<a class="leaf" href="/attachments/ergonomics/aftermarket-buffer/">Aftermarket Buffer</a>
+<a class="leaf" href="/attachments/ergonomics/magwell-flare/">Magwell Flare</a>
+<a class="leaf" href="/attachments/ergonomics/match-trigger/">Match Trigger</a>
+<a class="leaf" href="/attachments/ergonomics/burst-training/">Burst Training</a>
+<a class="leaf" href="/attachments/ergonomics/a3-receiver/">A3 Receiver</a>
 </details>
 </details>
 <details class="branch b-gadgets">
@@ -835,6 +902,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 
 
 
+
 <h2 class="cat maps" id="history"><span class="dot"></span>Patch history</h2>
 <p class="cat-note">14 patch notes mentioning Operation Firestorm, newest first. Each entry is the exact line from EA's Game Update notes.</p>
 <details class="patch" open>
@@ -894,8 +962,7 @@ figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim
 <div class="src">Full patch entry and EA source link: <a href="/#maps">1.0.1.0 in the balance log</a></div>
 </div></details>
 
-<h2 class="cat maps" id="related"><span class="dot"></span>Related items</h2>
-<p class="emptynote">Compatibility is not catalogued yet. Once attachments are added they will be listed here, and each attachment will link back to this page.</p>
+
 
 <p class="backlog"><a href="/#maps">&larr; Back to the full balance log</a></p>
 

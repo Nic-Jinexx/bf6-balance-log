@@ -90,7 +90,8 @@
     }
   ],
   "tag_deny": [
-    "thunder engineer"
+    "thunder engineer",
+    "engineers supply crate"
   ],
-  "_tag_deny_note": "Thunder Engineer is a cosmetic skin, not the class."
+  "_tag_deny_note": "Thunder Engineer is a cosmetic skin, not the class. \"Engineers Supply Crate\" is EA's name for the vehicle supply crate gadget, which has its own page; a gadget that has a page keeps its lines there rather than also filling the class page. The Repair Tool is tagged here for the opposite reason: it has no page of its own."
 }

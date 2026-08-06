@@ -1,0 +1,211 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Name and description are identical on every weapon that takes it, verified across the eleven assault rifles in that run. One page rather than thirty: EA writes one description per magnification band, so 22 of the 30 optics would otherwise carry the same sentence. The model name, magnification and point cost are what actually differ, so they are rows here.",
+  "slug": "scopes",
+  "name": "Scopes & Sights",
+  "branch": "attachments",
+  "subcategory": "optics",
+  "order": 1,
+  "aliases": [
+    "scope",
+    "optic",
+    "reflex sight",
+    "red dot",
+    "iron sights",
+    "lpvo",
+    "holographic"
+  ],
+  "blurb": "30 optics, from Iron Sights to Thermal Hybrid",
+  "description": {
+    "text": "Basic optic with a clear sight picture.",
+    "attribution": "In-game description (1.00x optics)"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": [],
+  "_note_1p86": "The 1P86 LPVO sits in the Variable 1.5-4.5x tile but its in-game text reads \"1x and 4x\", the same string as the 1-4x SU-230. Reproduced as published.",
+  "options": [
+    {
+      "name": "Iron Sights",
+      "designation": "Basic Sight",
+      "cost": 5,
+      "description": "Basic sights with reduced weapon sway."
+    },
+    {
+      "name": "Mini Flex 1.00x",
+      "designation": "1.00x",
+      "cost": 10,
+      "description": "Basic optic with a clear sight picture."
+    },
+    {
+      "name": "R-MR 1.00x",
+      "designation": "1.00x",
+      "cost": 10,
+      "description": "Basic optic with a clear sight picture."
+    },
+    {
+      "name": "OSA-7 1.00x",
+      "designation": "1.00x",
+      "cost": 10,
+      "description": "Basic optic with a clear sight picture."
+    },
+    {
+      "name": "CQ RDS 1.25x",
+      "designation": "1.25x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "RO-S 1.25x",
+      "designation": "1.25x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "2PRO 1.25x",
+      "designation": "1.25x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "ROX 1.50x",
+      "designation": "1.50x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "SU-123 1.50x",
+      "designation": "1.50x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "1P87 1.50x",
+      "designation": "1.50x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "A-P2 1.75x",
+      "designation": "1.75x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "RO-M 1.75x",
+      "designation": "1.75x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "3VZR 1.75x",
+      "designation": "1.75x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "CCO 2.00x",
+      "designation": "2.00x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "R4T 2.00x",
+      "designation": "2.00x",
+      "cost": 10,
+      "description": "Slightly magnified optic with a clear sight picture."
+    },
+    {
+      "name": "BF-2M 2.50x",
+      "designation": "2.50x",
+      "cost": 10,
+      "description": "Moderately magnified optic with a clear sight picture."
+    },
+    {
+      "name": "Baker 3.00x",
+      "designation": "3.00x",
+      "cost": 10,
+      "description": "Moderately magnified optic with a clear sight picture."
+    },
+    {
+      "name": "SDO 3.50x",
+      "designation": "3.50x",
+      "cost": 10,
+      "description": "Moderately magnified optic with a clear sight picture."
+    },
+    {
+      "name": "PVQ-31 4.00x",
+      "designation": "4.00x",
+      "cost": 10,
+      "description": "Moderately magnified optic with a clear sight picture."
+    },
+    {
+      "name": "LDS 4.50x",
+      "designation": "4.50x",
+      "cost": 10,
+      "description": "Moderately magnified optic with a clear sight picture."
+    },
+    {
+      "name": "ST Prism 5.00x",
+      "designation": "5.00x",
+      "cost": 10,
+      "description": "Moderately magnified optic with a clear sight picture."
+    },
+    {
+      "name": "SF-G2 5.00x",
+      "designation": "5.00x",
+      "cost": 10,
+      "description": "Moderately magnified optic with a clear sight picture."
+    },
+    {
+      "name": "SU-230 LPVO",
+      "designation": "Variable 1-4x",
+      "cost": 20,
+      "description": "Provides a clear sight picture with 1x and 4x magnification levels, which can be manually cycled through."
+    },
+    {
+      "name": "1P86 LPVO",
+      "designation": "Variable 1.5-4.5x",
+      "cost": 20,
+      "description": "Provides a clear sight picture with 1x and 4x magnification levels, which can be manually cycled through."
+    },
+    {
+      "name": "MARS-F LPVO",
+      "designation": "Variable 1-5x",
+      "cost": 25,
+      "description": "Provides a clear sight picture with magnification levels between 1x and 5x, which can be manually cycled through."
+    },
+    {
+      "name": "MC-CO LPVO",
+      "designation": "Variable 1-6x",
+      "cost": 25,
+      "description": "Provides a clear sight picture with magnification levels between 1x and 6x, which can be manually cycled through."
+    },
+    {
+      "name": "DVO LPVO",
+      "designation": "Variable 1-6x",
+      "cost": 25,
+      "description": "Provides a clear sight picture with magnification levels between 1x and 6x, which can be manually cycled through."
+    },
+    {
+      "name": "GRIM 1.50x",
+      "designation": "Thermal 1.50x",
+      "cost": 25,
+      "description": "Slightly magnified optic with thermal mode that detects heat signatures. Smoke volumes can disrupt thermal detection."
+    },
+    {
+      "name": "PAS-35 3.00x",
+      "designation": "Thermal 3.00x",
+      "cost": 25,
+      "description": "Moderately magnified optic with thermal mode that detects heat signatures. Smoke volumes can disrupt thermal detection."
+    },
+    {
+      "name": "TH-RDS 1.00x",
+      "designation": "Thermal Hybrid",
+      "cost": 35,
+      "description": "Basic optic overlaid with a thermal mode that detects heat signatures, which can be manually cycled through."
+    }
+  ],
+  "_alias_note": "No bare \"sight\" alias. \"Aiming down sights\" is a movement/aiming mechanic that EA writes on almost every weapon line, and it matched 60+ lines that have nothing to do with optics. \"scope\" is safe: the boundary rule treats a hyphen as part of the word, so \"quick-scoping\" does not match."
+}

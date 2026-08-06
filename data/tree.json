@@ -20,13 +20,17 @@
     },
     {
       "key": "attachments",
+      "_family_note": "Subcategories are attachment FAMILIES, not the game's slots. A slot is not a stable home: 5 MW Red sits in Right Accessory on the KORD 6P67 and in Top Accessory on the EF88, with the same name, cost and description, and the AK4D has a Left Accessory where the EF88 has none. Which slot an attachment occupies is a property of the pairing and lives on the weapon's compatibility entry, next to its point cost and whether it is that weapon's default.",
       "label": "Attachments",
       "children": [
         {"key": "optics", "label": "Optics"},
+        {"key": "muzzles", "label": "Muzzles"},
         {"key": "barrels", "label": "Barrels"},
         {"key": "underbarrel", "label": "Underbarrel"},
         {"key": "magazines", "label": "Magazines"},
-        {"key": "ammunition", "label": "Ammunition"}
+        {"key": "ammunition", "label": "Ammunition"},
+        {"key": "accessories", "label": "Accessories"},
+        {"key": "ergonomics", "label": "Ergonomics"}
       ]
     },
     {

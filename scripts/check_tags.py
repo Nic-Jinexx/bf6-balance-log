@@ -81,8 +81,13 @@ def boundary(term):
     Plain \\b treats a hyphen as a break, which is how "tank" would tag every
     "anti-tank" line. That footgun is documented on the Main Battle Tank item;
     this makes it not a footgun.
+
+    The trailing `s?` matches build_patch_data.py's pattern, and must: EA writes
+    "Supply Crates" and "Attacker IFVs", and without it this checker silently
+    fails to see lines the auto-tagger does. That is the worst kind of bug for a
+    safety net, because it under-reports rather than over-reports.
     """
-    return r"(?<![\w-])" + re.escape(term) + r"(?![\w-])"
+    return r"(?<![\w-])" + re.escape(term) + r"s?(?![\w-])"
 
 
 def entry_key(version, heading, text):

@@ -1,0 +1,74 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Name and description are identical on every weapon that takes it, verified across the eleven assault rifles in that run. One page rather than one per weapon. A barrel's full name is weapon-specific because it carries that weapon's length (415mm Factory on the KORD 6P67, 16\" Factory on the EF88, 480mm Factory on the B36A4), but the tile TYPE and its description are shared. Lengths are recorded on each weapon.",
+  "slug": "barrels",
+  "name": "Barrels",
+  "branch": "attachments",
+  "subcategory": "barrels",
+  "order": 1,
+  "aliases": [
+    "barrel",
+    "extended barrel",
+    "cryogenic barrel",
+    "heavy barrel",
+    "fluted barrel",
+    "light barrel",
+    "short barrel"
+  ],
+  "blurb": "Nine barrel types, named per weapon by length",
+  "description": {
+    "text": "Standard barrel that enables a fast transition to aim down sights (ADS).",
+    "attribution": "In-game description (Basic barrel)"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": [],
+  "options": [
+    {
+      "name": "Basic",
+      "cost": 10,
+      "description": "Standard barrel that enables a fast transition to aim down sights (ADS)."
+    },
+    {
+      "name": "Heavy",
+      "cost": 10,
+      "description": "Heavy barrel that improves accuracy during sustained fire."
+    },
+    {
+      "name": "Extended",
+      "cost": 5,
+      "description": "Long barrel that increases projectile velocity."
+    },
+    {
+      "name": "Heavy Ext.",
+      "cost": 10,
+      "description": "Long heavy barrel that increases projectile velocity and improves accuracy during sustained fire at the cost of weapon draw speed."
+    },
+    {
+      "name": "Ext. Light",
+      "cost": 25,
+      "description": "Fluted long barrel that improves aim down sights (ADS) accuracy while moving, enables a fast transition to ADS, and  increases projectile velocity."
+    },
+    {
+      "name": "Short",
+      "cost": 15,
+      "description": "Short barrel that improves hip-fire accuracy and enables a fast transition to aim down sights (ADS), but reduces projectile velocity."
+    },
+    {
+      "name": "Short Light",
+      "cost": 25,
+      "description": "Fluted short barrel that improves aim down sights (ADS) accuracy while moving, enables a fast transition to ADS, and improves hip-fire accuracy, but reduces projectile velocity."
+    },
+    {
+      "name": "Light",
+      "cost": 20,
+      "description": "Lightened barrel that improves aim down sights (ADS) accuracy while moving and enables a fast transition to ADS."
+    },
+    {
+      "name": "Cryo",
+      "cost": 20,
+      "description": "Cryogenically-treated barrel that enables a quick transition to aim down sights (ADS) and improves accuracy during sustained fire."
+    }
+  ]
+}

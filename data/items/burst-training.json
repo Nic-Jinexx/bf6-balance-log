@@ -1,0 +1,25 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Name and description are identical on every weapon that takes it, verified across the eleven assault rifles in that run.",
+  "slug": "burst-training",
+  "name": "Burst Training",
+  "branch": "attachments",
+  "subcategory": "ergonomics",
+  "order": 6,
+  "aliases": [
+    "burst training"
+  ],
+  "description": {
+    "text": "2-round burst fire mode reduces horizontal recoil in favor of more stable vertical recoil and minimally reduces overall recoil.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Point cost",
+      "value": "15 of 100"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}

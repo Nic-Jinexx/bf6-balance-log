@@ -53,7 +53,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "bipod"
+   ]
   },
   {
    "text": "Fixed an issue where the GRIM 1.50x optic on the DB-12 cost fewer loadout points than intended (15 instead of 25).",
@@ -63,7 +65,8 @@
    ],
    "section": "weapons",
    "items": [
-    "db-12"
+    "db-12",
+    "scopes"
    ]
   },
   {
@@ -74,7 +77,9 @@
    ],
    "section": "weapons",
    "items": [
-    "rpkm"
+    "barrels",
+    "rpkm",
+    "scopes"
    ]
   },
   {
@@ -85,6 +90,7 @@
    ],
    "section": "weapons",
    "items": [
+    "barrels",
     "tr-7"
    ]
   },
@@ -95,7 +101,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "bipod"
+   ]
   },
   {
    "text": "Improved attack speed for knife melee attacks.",
@@ -192,7 +200,8 @@
    ],
    "section": "gadgets",
    "items": [
-    "field-dummy-25"
+    "field-dummy-25",
+    "scopes"
    ]
   },
   {
@@ -238,7 +247,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Fixed an issue where home screen focus navigation could become locked to the bulletin.",
@@ -283,7 +294,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Adjusted explosion particle effects by lowering the shockwave force.",

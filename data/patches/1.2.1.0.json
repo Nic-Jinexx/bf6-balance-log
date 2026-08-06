@@ -63,7 +63,8 @@
    ],
    "section": "weapons",
    "items": [
-    "grt-cps"
+    "grt-cps",
+    "magazines"
    ]
   },
   {
@@ -777,7 +778,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "flash-hider"
+   ]
   },
   {
    "text": "Adjusted minimap spotting range when firing suppressed weapons, increasing it from 15 to 21 metres to better align with intended balance.",
@@ -834,6 +837,7 @@
    ],
    "section": "weapons",
    "items": [
+    "5mw-green",
     "drs-iar"
    ]
   },
@@ -844,7 +848,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "flashlight"
+   ]
   },
   {
    "text": "Fixed an issue where the LA-23 Laser pad could appear floating when equipped on the RPKM.",
@@ -865,7 +871,8 @@
    ],
    "section": "weapons",
    "items": [
-    "m18"
+    "m18",
+    "scopes"
    ]
   },
   {
@@ -884,7 +891,10 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "flashlight",
+    "scopes"
+   ]
   },
   {
    "text": "Fixed the LMR27s Fast 15- and 20-round magazines not reducing reload time as intended.",
@@ -894,7 +904,8 @@
    ],
    "section": "weapons",
    "items": [
-    "lmr27"
+    "lmr27",
+    "magazines"
    ]
   },
   {
@@ -924,7 +935,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Knife takedowns against enemies who are prone on their back now correctly connect with the defender.",
@@ -965,7 +978,8 @@
    ],
    "section": "weapons",
    "items": [
-    "m433"
+    "m433",
+    "magazines"
    ]
   },
   {
@@ -994,6 +1008,7 @@
    ],
    "section": "weapons",
    "items": [
+    "barrels",
     "tr-7"
    ]
   },
@@ -2584,7 +2599,9 @@
     "Battle Royale"
    ],
    "section": "ui",
-   "items": [],
+   "items": [
+    "flashlight"
+   ],
    "redsec": true
   },
   {

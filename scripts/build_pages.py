@@ -368,6 +368,14 @@ figure.itemimg{margin:0}
 figure.itemimg img{width:100%;height:auto;display:block;border:1px solid var(--border);
   border-radius:6px;background:var(--panel)}
 figure.itemimg figcaption{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:8px}
+/* Mode badges. The game draws these as a small square glyph beside GAME MODE,
+   so they keep that scale instead of being stretched across the art column, and
+   opt out of the solo grid's flex-grow. */
+figure.itemimg.icon{flex:0 0 auto}
+figure.itemimg.icon img{width:104px;height:104px;border-radius:5px}
+figure.itemimg.icon .imgpending{width:104px;height:104px;aspect-ratio:auto;padding:8px;gap:4px}
+figure.itemimg.icon .imgpending b{font-size:12px;line-height:1.2}
+figure.itemimg.icon .imgpending span{font-size:11px}
 .imgpending{aspect-ratio:16/9;border:1px dashed var(--border2);border-radius:6px;background:var(--panel);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
   color:var(--dim);font-family:var(--mono);font-size:13px;text-align:center;padding:16px}
@@ -582,12 +590,12 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 
 {{LOADOUT}}
 {{PATHS}}
+{{OPTIONS}}
 
 <h2 class="cat {{COLOR}}" id="history"><span class="dot"></span>Patch history</h2>
 <p class="cat-note">{{HISTNOTE}}</p>
 {{HISTORY}}
 
-<h2 class="cat {{COLOR}}" id="related"><span class="dot"></span>{{RELTITLE}}</h2>
 {{RELATED}}
 
 <p class="backlog"><a href="/#{{SECTIONANCHOR}}">&larr; Back to the full balance log</a></p>
@@ -783,11 +791,24 @@ def render_image(item, img):
                        % (body, label))
         return "\n".join(out)
 
+    # A mode's art is the badge the game prints beside GAME MODE, not a scene.
+    # Blown up to the width of the art column it would be a wall of grey, so it
+    # renders at its own size and the alt text says what it is.
+    icon = (item.get("art") or "").strip().lower() == "icon"
+    cls = "itemimg icon" if icon else "itemimg"
     if img:
-        return ('<figure class="itemimg"><img src="%s" alt="%s in Battlefield 6" '
-                'loading="lazy"></figure>' % (img, html.escape(item["name"])))
-    return ('<figure class="itemimg"><div class="imgpending"><b>%s</b>'
-            '<span>image pending</span></div></figure>' % html.escape(item["name"]))
+        alt = ("%s mode badge in Battlefield 6" if icon else "%s in Battlefield 6")
+        return ('<figure class="%s"><img src="%s" alt="%s" loading="lazy"></figure>'
+                % (cls, img, html.escape(alt % item["name"])))
+    # Attachments have no art and are not waiting for any: they are tiny parts
+    # shown as line drawings in game, and a full-width "image pending" placeholder
+    # would be the largest thing on a page whose real content is a table.
+    if item["branch"] == "attachments":
+        return ""
+    return ('<figure class="%s"><div class="imgpending"><b>%s</b>'
+            '<span>%s</span></div></figure>'
+            % (cls, html.escape(item["name"]),
+               "no badge" if icon else "image pending"))
 
 
 def render_loadout(item):
@@ -894,13 +915,61 @@ def render_paths(item):
     return "\n".join(out)
 
 
-def render_related(item, by_slug):
+def render_options(item):
+    """A flat table of models on a page that covers a whole attachment family.
+
+    Three attachment pages stand for many in-game tiles rather than one each,
+    and for different reasons. Optics: EA writes one description per
+    magnification band, so 22 of the 30 would otherwise repeat the same
+    sentence. Barrels and Magazines: the tile's full name carries the weapon's
+    own barrel length or magazine capacity (415mm Factory on the KORD 6P67,
+    16" Factory on the EF88), so there is no shared name to title a page with,
+    while the type and its description are shared.
+    """
+    options = item.get("options") or []
+    if not options:
+        return ""
+    color = BRANCH_COLOR.get(item["branch"], "weapons")
+    has_desig = any((o.get("designation") or "").strip() for o in options)
+    out = ['<h2 class="cat %s" id="options"><span class="dot"></span>%s</h2>'
+           % (color, html.escape(item["name"]))]
+    out.append('<p class="cat-note">%d in the game, transcribed from the in-game '
+               'screens. Point cost is the number on the tile; every weapon has '
+               '100 points to spend across all its slots.</p>' % len(options))
+    out.append('<div class="loadout"><div class="lo-slot"><table>')
+    head = ["Name"] + (["Tile"] if has_desig else []) + ["Points", "In-game description"]
+    out.append("<tr>%s</tr>" % "".join("<th>%s</th>" % h for h in head))
+    for o in options:
+        cells = ["<td>%s</td>" % html.escape(o.get("name", ""))]
+        if has_desig:
+            cells.append("<td>%s</td>" % value_cell(o.get("designation")))
+        cells.append("<td>%s</td>" % value_cell(str(o.get("cost", "")) or None))
+        cells.append("<td>%s</td>" % value_cell(o.get("description")))
+        out.append("<tr>%s</tr>" % "".join(cells))
+    out.append("</table></div></div>")
+    return "\n".join(out)
+
+
+def render_related(item, by_slug, color):
+    """Compatible attachments. Weapons only.
+
+    This started as a generic "Related items" block on every page and was empty
+    on all 151 of them, which is just a heading promising something the site
+    does not have. Attachments are the one real relationship in the data, and
+    they only ever hang off a weapon, so the section renders there and nowhere
+    else. A vehicle, gadget, map, mode or class simply ends at its patch history.
+    """
+    if item["branch"] != "weapons":
+        return ""
+
+    head = ('<h2 class="cat %s" id="related"><span class="dot"></span>'
+            'Compatible attachments</h2>' % color)
     groups = item.get("related") or []
     if not any(g.get("items") for g in groups):
-        return ('<p class="emptynote">Compatibility is not catalogued yet. '
+        return (head + '\n<p class="emptynote">Compatibility is not catalogued yet. '
                 'Once attachments are added they will be listed here, and each '
                 'attachment will link back to this page.</p>')
-    out = []
+    out = [head]
     for g in groups:
         entries = g.get("items") or []
         if not entries:
@@ -1030,10 +1099,10 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
         "FACTBOX": '<div class="factbox">\n%s\n</div>' % facts if facts else "",
         "LOADOUT": render_loadout(item),
         "PATHS": render_paths(item),
+        "OPTIONS": render_options(item),
         "HISTNOTE": histnote,
         "HISTORY": render_history(entries, name, the),
-        "RELTITLE": "Compatible attachments" if item["branch"] == "weapons" else "Related items",
-        "RELATED": render_related(item, by_slug),
+        "RELATED": render_related(item, by_slug, color),
         "SECTIONANCHOR": (entries[0]["section"] if entries and entries[0].get("section")
                           else BRANCH_ANCHOR.get(item["branch"], "weapons")),
         "JS": PAGE_JS,

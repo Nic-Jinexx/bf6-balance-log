@@ -544,7 +544,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Fixed an issue where mounting a bipod while zoomed only changed the FOV instead of using the correct optic.",
@@ -552,7 +554,10 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "bipod",
+    "scopes"
+   ]
   },
   {
    "text": "Fixed an issue where the Long Suppressor used the wrong attachment point cost for some weapons.",
@@ -560,7 +565,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "long-suppressor"
+   ]
   },
   {
    "text": "Improved reticle settling for automatic weapons to make burst firing more efficient.",
@@ -576,7 +583,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "bipod"
+   ]
   },
   {
    "text": "Balanced sledgehammer damage against world objects for better consistency.",

@@ -70,7 +70,9 @@
     "WEAPONS"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "scopes"
+   ]
   },
   {
    "text": "Underbarrel attachment models on the M123K now update correctly when changing the equipped underbarrel attachment.",

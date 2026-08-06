@@ -1,16 +1,70 @@
 {
  "items": [
   {
+   "name": "120 MW Blue",
+   "url": "/attachments/accessories/120mw-blue/",
+   "cat": "ACCESSORIES",
+   "alt": "120 mw blue"
+  },
+  {
    "name": "18.5KS-K",
    "url": "/weapons/shotguns/18-5ks-k/",
    "cat": "SHOTGUNS",
    "alt": ""
   },
   {
+   "name": "5 MW Green",
+   "url": "/attachments/accessories/5mw-green/",
+   "cat": "ACCESSORIES",
+   "alt": "5 mw green"
+  },
+  {
+   "name": "5 MW Red",
+   "url": "/attachments/accessories/5mw-red/",
+   "cat": "ACCESSORIES",
+   "alt": "5 mw red"
+  },
+  {
+   "name": "50 MW Blue",
+   "url": "/attachments/accessories/50mw-blue/",
+   "cat": "ACCESSORIES",
+   "alt": "50 mw blue"
+  },
+  {
+   "name": "50 MW Green",
+   "url": "/attachments/accessories/50mw-green/",
+   "cat": "ACCESSORIES",
+   "alt": "50 mw green"
+  },
+  {
+   "name": "50 MW Violet",
+   "url": "/attachments/accessories/50mw-violet/",
+   "cat": "ACCESSORIES",
+   "alt": "50 mw violet"
+  },
+  {
+   "name": "6H64 Vertical",
+   "url": "/attachments/underbarrel/6h64-vertical/",
+   "cat": "UNDERBARREL",
+   "alt": "6h64 vertical"
+  },
+  {
    "name": "9K38 Igla",
    "url": "/gadgets/launchers/9k38-igla/",
    "cat": "LAUNCHERS",
    "alt": "active locking air-defense launcher air defense launcher 9k38 igla igla"
+  },
+  {
+   "name": "A3 Receiver",
+   "url": "/attachments/ergonomics/a3-receiver/",
+   "cat": "ERGONOMICS",
+   "alt": "a3 receiver"
+  },
+  {
+   "name": "Aftermarket Buffer",
+   "url": "/attachments/ergonomics/aftermarket-buffer/",
+   "cat": "ERGONOMICS",
+   "alt": "aftermarket buffer"
   },
   {
    "name": "AK-205",
@@ -23,6 +77,12 @@
    "url": "/weapons/assault-rifles/ak4d/",
    "cat": "ASSAULT RIFLES",
    "alt": "ak-4d"
+  },
+  {
+   "name": "Alloy Vertical",
+   "url": "/attachments/underbarrel/alloy-vertical/",
+   "cat": "UNDERBARREL",
+   "alt": "alloy vertical"
   },
   {
    "name": "Anti-Vehicle Grenade",
@@ -73,6 +133,18 @@
    "alt": "b36"
   },
   {
+   "name": "Barrels",
+   "url": "/attachments/barrels/barrels/",
+   "cat": "BARRELS",
+   "alt": "barrel extended barrel cryogenic barrel heavy barrel fluted barrel light barrel short barrel"
+  },
+  {
+   "name": "Bipod",
+   "url": "/attachments/underbarrel/bipod/",
+   "cat": "UNDERBARREL",
+   "alt": "bipod"
+  },
+  {
    "name": "Blackwell Fields",
    "url": "/maps/blackwell-fields/",
    "cat": "MAPS",
@@ -91,6 +163,12 @@
    "alt": "brod3 brod"
   },
   {
+   "name": "Burst Training",
+   "url": "/attachments/ergonomics/burst-training/",
+   "cat": "ERGONOMICS",
+   "alt": "burst training"
+  },
+  {
    "name": "C-4 Explosives",
    "url": "/gadgets/deployables/c-4/",
    "cat": "DEPLOYABLES",
@@ -103,10 +181,40 @@
    "alt": "cairo bazaar"
   },
   {
+   "name": "Canted Stubby",
+   "url": "/attachments/underbarrel/canted-stubby/",
+   "cat": "UNDERBARREL",
+   "alt": "canted stubby"
+  },
+  {
+   "name": "Classic Grip Pod",
+   "url": "/attachments/underbarrel/classic-grip-pod/",
+   "cat": "UNDERBARREL",
+   "alt": "classic grip pod"
+  },
+  {
+   "name": "Classic Vertical",
+   "url": "/attachments/underbarrel/classic-vertical/",
+   "cat": "UNDERBARREL",
+   "alt": "classic vertical"
+  },
+  {
    "name": "Combat Knife",
    "url": "/weapons/melee/combat-knife/",
    "cat": "MELEE",
    "alt": ""
+  },
+  {
+   "name": "Compensated Brake",
+   "url": "/attachments/muzzles/compensated-brake/",
+   "cat": "MUZZLES",
+   "alt": "compensated brake"
+  },
+  {
+   "name": "Compensator",
+   "url": "/attachments/muzzles/compensator/",
+   "cat": "MUZZLES",
+   "alt": "compensator"
   },
   {
    "name": "Conquest",
@@ -119,6 +227,12 @@
    "url": "/maps/contaminated/",
    "cat": "MAPS",
    "alt": "contaminated"
+  },
+  {
+   "name": "CQB Suppressor",
+   "url": "/attachments/muzzles/cqb-suppressor/",
+   "cat": "MUZZLES",
+   "alt": "cqb suppressor"
   },
   {
    "name": "CZ3A1",
@@ -149,6 +263,12 @@
    "url": "/modes/domination/",
    "cat": "MODES",
    "alt": "domination"
+  },
+  {
+   "name": "Double-Port Brake",
+   "url": "/attachments/muzzles/double-port-brake/",
+   "cat": "MUZZLES",
+   "alt": "double-port brake"
   },
   {
    "name": "DRS-IAR",
@@ -211,10 +331,46 @@
    "alt": "f-97 f97 kestrel f-97 kestrel su-57"
   },
   {
+   "name": "Flash Comp",
+   "url": "/attachments/muzzles/flash-comp/",
+   "cat": "MUZZLES",
+   "alt": "flash comp"
+  },
+  {
    "name": "Flash Grenade",
    "url": "/gadgets/throwables/m84/",
    "cat": "THROWABLES",
    "alt": "flash grenade m84"
+  },
+  {
+   "name": "Flash Hider",
+   "url": "/attachments/muzzles/flash-hider/",
+   "cat": "MUZZLES",
+   "alt": "flash hider"
+  },
+  {
+   "name": "Flashlight",
+   "url": "/attachments/accessories/flashlight/",
+   "cat": "ACCESSORIES",
+   "alt": "flashlight"
+  },
+  {
+   "name": "FMJ",
+   "url": "/attachments/ammunition/fmj/",
+   "cat": "AMMUNITION",
+   "alt": "fmj"
+  },
+  {
+   "name": "Folding Stubby",
+   "url": "/attachments/underbarrel/folding-stubby/",
+   "cat": "UNDERBARREL",
+   "alt": "folding stubby"
+  },
+  {
+   "name": "Folding Vertical",
+   "url": "/attachments/underbarrel/folding-vertical/",
+   "cat": "UNDERBARREL",
+   "alt": "folding vertical"
   },
   {
    "name": "Fort Lyndon",
@@ -227,6 +383,18 @@
    "url": "/gadgets/throwables/m67/",
    "cat": "THROWABLES",
    "alt": "fragmentation grenade"
+  },
+  {
+   "name": "Frangible",
+   "url": "/attachments/ammunition/frangible/",
+   "cat": "AMMUNITION",
+   "alt": "frangible"
+  },
+  {
+   "name": "Full Angled",
+   "url": "/attachments/underbarrel/full-angled/",
+   "cat": "UNDERBARREL",
+   "alt": "full angled"
   },
   {
    "name": "GGH-22",
@@ -271,6 +439,12 @@
    "alt": "hardware suppression system"
   },
   {
+   "name": "Hollow Point",
+   "url": "/attachments/ammunition/hollow-point/",
+   "cat": "AMMUNITION",
+   "alt": "hollow point"
+  },
+  {
    "name": "Hunting Knife",
    "url": "/weapons/melee/hunting-knife/",
    "cat": "MELEE",
@@ -287,6 +461,12 @@
    "url": "/weapons/melee/ice-axe/",
    "cat": "MELEE",
    "alt": "ice climbing axe"
+  },
+  {
+   "name": "Improved Mag Catch",
+   "url": "/attachments/ergonomics/improved-mag-catch/",
+   "cat": "ERGONOMICS",
+   "alt": "improved mag catch"
   },
   {
    "name": "Incendiary Grenade",
@@ -349,6 +529,12 @@
    "alt": "laser designator"
   },
   {
+   "name": "Laser/Light Combo Green",
+   "url": "/attachments/accessories/laser-light-combo-green/",
+   "cat": "ACCESSORIES",
+   "alt": "laser/light combo green"
+  },
+  {
    "name": "Liberation Peak",
    "url": "/maps/liberation-peak/",
    "cat": "MAPS",
@@ -361,16 +547,40 @@
    "alt": "glider 96 glider light transport"
   },
   {
+   "name": "Lightened Suppressor",
+   "url": "/attachments/muzzles/lightened-suppressor/",
+   "cat": "MUZZLES",
+   "alt": "lightened suppressor"
+  },
+  {
+   "name": "Linear Comp",
+   "url": "/attachments/muzzles/linear-comp/",
+   "cat": "MUZZLES",
+   "alt": "linear comp"
+  },
+  {
    "name": "LMR27",
    "url": "/weapons/dmrs/lmr27/",
    "cat": "DMRS",
    "alt": ""
   },
   {
+   "name": "Long Suppressor",
+   "url": "/attachments/muzzles/long-suppressor/",
+   "cat": "MUZZLES",
+   "alt": "long suppressor"
+  },
+  {
    "name": "Long-Range Launcher",
    "url": "/gadgets/launchers/mas-148/",
    "cat": "LAUNCHERS",
    "alt": "mas 148 mas-148 glaive mas 148 glaive"
+  },
+  {
+   "name": "Low-Profile Stubby",
+   "url": "/attachments/underbarrel/low-profile-stubby/",
+   "cat": "UNDERBARREL",
+   "alt": "low-profile stubby"
   },
   {
    "name": "M/60",
@@ -511,6 +721,24 @@
    "alt": ""
   },
   {
+   "name": "Magazines",
+   "url": "/attachments/magazines/magazines/",
+   "cat": "MAGAZINES",
+   "alt": "magazine extended magazine fast mag drum magazine"
+  },
+  {
+   "name": "Magnifier",
+   "url": "/attachments/accessories/magnifier/",
+   "cat": "ACCESSORIES",
+   "alt": "magnifier"
+  },
+  {
+   "name": "Magwell Flare",
+   "url": "/attachments/ergonomics/magwell-flare/",
+   "cat": "ERGONOMICS",
+   "alt": "magwell flare"
+  },
+  {
    "name": "Main Battle Tank",
    "url": "/vehicles/main-battle-tank/",
    "cat": "VEHICLES",
@@ -521,6 +749,12 @@
    "url": "/maps/manhattan-bridge/",
    "cat": "MAPS",
    "alt": "manhattan bridge"
+  },
+  {
+   "name": "Match Trigger",
+   "url": "/attachments/ergonomics/match-trigger/",
+   "cat": "ERGONOMICS",
+   "alt": "match trigger"
   },
   {
    "name": "Maxguard 900",
@@ -601,6 +835,12 @@
    "alt": "rcb-90 rcb90 patrol boat"
   },
   {
+   "name": "Polymer Case",
+   "url": "/attachments/ammunition/polymer-case/",
+   "cat": "AMMUNITION",
+   "alt": "polymer case"
+  },
+  {
    "name": "Portable Mortar",
    "url": "/gadgets/deployables/lwcms/",
    "cat": "DEPLOYABLES",
@@ -625,6 +865,12 @@
    "alt": "acoustic sensor av mine"
   },
   {
+   "name": "PTT Grip Pod",
+   "url": "/attachments/underbarrel/ptt-grip-pod/",
+   "cat": "UNDERBARREL",
+   "alt": "ptt grip pod"
+  },
+  {
    "name": "PW5A3",
    "url": "/weapons/smgs/pw5a3/",
    "cat": "SMGS",
@@ -643,6 +889,18 @@
    "alt": "qbz192 qbz"
   },
   {
+   "name": "QD Grip Pod",
+   "url": "/attachments/underbarrel/qd-grip-pod/",
+   "cat": "UNDERBARREL",
+   "alt": "qd grip pod"
+  },
+  {
+   "name": "Rail Cover",
+   "url": "/attachments/ergonomics/rail-cover/",
+   "cat": "ERGONOMICS",
+   "alt": "rail cover"
+  },
+  {
    "name": "Railway to Golmud",
    "url": "/maps/railway-to-golmud/",
    "cat": "MAPS",
@@ -659,6 +917,18 @@
    "url": "/gadgets/tools/xfgm-6d/",
    "cat": "TOOLS",
    "alt": "recon drone"
+  },
+  {
+   "name": "Ribbed Stubby",
+   "url": "/attachments/underbarrel/ribbed-stubby/",
+   "cat": "UNDERBARREL",
+   "alt": "ribbed stubby"
+  },
+  {
+   "name": "Ribbed Vertical",
+   "url": "/attachments/underbarrel/ribbed-vertical/",
+   "cat": "UNDERBARREL",
+   "alt": "ribbed vertical"
   },
   {
    "name": "RPG-7V2",
@@ -689,6 +959,12 @@
    "url": "/maps/saints-quarter/",
    "cat": "MAPS",
    "alt": "saints quarter"
+  },
+  {
+   "name": "Scopes & Sights",
+   "url": "/attachments/optics/scopes/",
+   "cat": "OPTICS",
+   "alt": "scope optic reflex sight red dot iron sights lpvo holographic"
   },
   {
    "name": "Scout Helicopter",
@@ -733,6 +1009,12 @@
    "alt": "siege of cairo"
   },
   {
+   "name": "Single-Port Brake",
+   "url": "/attachments/muzzles/single-port-brake/",
+   "cat": "MUZZLES",
+   "alt": "single-port brake"
+  },
+  {
    "name": "SL9",
    "url": "/weapons/smgs/sl9/",
    "cat": "SMGS",
@@ -743,6 +1025,18 @@
    "url": "/weapons/melee/sledgehammer/",
    "cat": "MELEE",
    "alt": ""
+  },
+  {
+   "name": "Slim Angled",
+   "url": "/attachments/underbarrel/slim-angled/",
+   "cat": "UNDERBARREL",
+   "alt": "slim angled"
+  },
+  {
+   "name": "Slim Handstop",
+   "url": "/attachments/underbarrel/slim-handstop/",
+   "cat": "UNDERBARREL",
+   "alt": "slim handstop"
   },
   {
    "name": "SLM-93A Spire",
@@ -781,6 +1075,18 @@
    "alt": "incendiary-round shotgun"
   },
   {
+   "name": "Standard Suppressor",
+   "url": "/attachments/muzzles/standard-suppressor/",
+   "cat": "MUZZLES",
+   "alt": "standard suppressor"
+  },
+  {
+   "name": "Stippled Stubby",
+   "url": "/attachments/underbarrel/stippled-stubby/",
+   "cat": "UNDERBARREL",
+   "alt": "stippled stubby"
+  },
+  {
    "name": "Stun Grenade",
    "url": "/gadgets/throwables/mk141/",
    "cat": "THROWABLES",
@@ -815,6 +1121,24 @@
    "url": "/weapons/dmrs/svk-86/",
    "cat": "DMRS",
    "alt": ""
+  },
+  {
+   "name": "Synthetic Tip",
+   "url": "/attachments/ammunition/synthetic-tip/",
+   "cat": "AMMUNITION",
+   "alt": "synthetic tip"
+  },
+  {
+   "name": "Taclight - Aimed",
+   "url": "/attachments/accessories/taclight-aimed/",
+   "cat": "ACCESSORIES",
+   "alt": "taclight - aimed"
+  },
+  {
+   "name": "Taclight - Hip",
+   "url": "/attachments/accessories/taclight-hip/",
+   "cat": "ACCESSORIES",
+   "alt": "taclight - hip"
   },
   {
    "name": "Team Deathmatch",
@@ -857,6 +1181,12 @@
    "url": "/maps/tsuru-reef/",
    "cat": "MAPS",
    "alt": "tsuru reef"
+  },
+  {
+   "name": "Tungsten Core",
+   "url": "/attachments/ammunition/tungsten-core/",
+   "cat": "AMMUNITION",
+   "alt": "tungsten core"
   },
   {
    "name": "UMG-40",

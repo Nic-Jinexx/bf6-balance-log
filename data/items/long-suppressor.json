@@ -1,0 +1,25 @@
+{
+  "_comment": "Transcribed from the in-game customisation screens, captured 2026-08-06 (Steam captures 20260806011221-011900 and 023313-023457). Point cost is the number on the tile; every weapon has 100 points to spend across all slots. Name and description are identical on every weapon that takes it, verified across the eleven assault rifles in that run.",
+  "slug": "long-suppressor",
+  "name": "Long Suppressor",
+  "branch": "attachments",
+  "subcategory": "muzzles",
+  "order": 9,
+  "aliases": [
+    "long suppressor"
+  ],
+  "description": {
+    "text": "Fully hides in-world spotting and reduces the range where a soldier is spotted on the minimap while firing. Reduces recoil buildup and improves recoil recovery at the cost of hip-fire accuracy and weapon sway.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Point cost",
+      "value": "25 of 100"
+    }
+  ],
+  "related": [],
+  "retired_paths": []
+}
