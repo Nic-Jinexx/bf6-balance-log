@@ -46,6 +46,16 @@ TAG = re.compile(r"<[^>]+>")
 # short Title Case strings sitting alone in their own paragraph.
 SECTIONISH = re.compile(r"^[A-Z0-9][A-Z0-9 &/'\-\.]*:?$")
 
+# EA's other sub-heading shape: a paragraph holding nothing but one <em> or
+# <strong>. Those labels are mixed case - "M15 AV Mine", "Deploy Beacon",
+# "Scout Helicopter", "Mirak Valley" - so the caps-only test above dropped 108
+# of them across the 15 pages, and every bullet underneath lost its heading
+# trail. 1.3.1.0 is the clearest case: SLM-93A and 9K93 IGLA were kept because
+# they happen to be all caps, while the M15 AV Mine block directly above them
+# was not, so six balance lines carrying real numbers reached no page at all.
+# Structural, not textual, so it does not care about casing.
+WHOLE_EMPHASIS = re.compile(r"^\s*<(em|strong)\b[^>]*>(.*?)</\1>\s*$", re.I | re.S)
+
 # EA repeats its section names as an in-page nav list at the top of the
 # changelog. Each of those <li>s wraps a <button>, which is the only reliable
 # way to tell them apart from content: matching on text instead dropped two
@@ -144,8 +154,10 @@ def extract(body):
                 trail.append(para_head)
             rows.append({"heading": trail, "text": body_text})
         else:
-            label = text_of(m.group(4))
-            if label and len(label) < 90 and SECTIONISH.match(label):
+            raw = (m.group(4) or "").strip()
+            label = text_of(raw)
+            if label and len(label) < 90 and (SECTIONISH.match(label)
+                                              or WHOLE_EMPHASIS.match(raw)):
                 para_head = label.rstrip(":")
     extract.last_dropped = dropped
     return rows

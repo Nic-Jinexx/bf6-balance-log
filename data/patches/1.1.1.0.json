@@ -534,7 +534,9 @@
     "WEAPONS:"
    ],
    "section": "weapons",
-   "items": []
+   "items": [
+    "recon"
+   ]
   },
   {
    "text": "Fixed a misalignment issue with top-mounted red dot sights.",
@@ -632,7 +634,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "rush"
+   ]
   },
   {
    "text": "Updated overtime UI visualization across all modes.",
@@ -664,7 +668,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "king-of-the-hill"
+   ]
   },
   {
    "text": "Fixed an issue where players could encounter a bouncing animation when spawning at HQs after capturing new territories in Escalation across multiple maps.",
@@ -672,87 +678,128 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "escalation"
+   ]
   },
   {
    "text": "Fixed a misaligned zipline mesh in Conquest.",
    "heading": [
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Mirak Valley"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "conquest",
+    "mirak-valley"
+   ]
   },
   {
    "text": "Fixed an issue where the deploy camera in Rush displayed attackers on the wrong side of the map.",
    "heading": [
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Mirak Valley"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "mirak-valley",
+    "rush"
+   ]
   },
   {
    "text": "Fixed an issue that prevented players from arming M-COM A in Rush due to a misplaced asset.",
    "heading": [
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Mirak Valley"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "mirak-valley",
+    "rush"
+   ]
   },
   {
    "text": "Fixed overlapping territory lines and boundaries during the briefing screen in Escalation.",
    "heading": [
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Siege of Cairo"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "escalation",
+    "siege-of-cairo"
+   ]
   },
   {
    "text": "Fixed an issue in Escalation where a portion of the map on the NATO side was disconnected during the first period of the match.",
    "heading": [
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Liberation Peak"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "escalation",
+    "liberation-peak"
+   ]
   },
   {
    "text": "Fixed an issue in Rush where part of the Attacker’s HQ area was incorrectly marked as out of bounds.",
    "heading": [
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Liberation Peak"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "liberation-peak",
+    "rush"
+   ]
   },
   {
    "text": "Fixed an issue preventing players from capturing part of Flag C in Escalation.",
    "heading": [
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "New Sobek City"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "escalation",
+    "new-sobek-city"
+   ]
   },
   {
    "text": "Fixed an issue where players could ignite when spawning near a burning lorry in Team Deathmatch.",
    "heading": [
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "New Sobek City"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "new-sobek-city",
+    "team-deathmatch"
+   ]
   },
   {
    "text": "Adjusted an infantry vehicle spawn that was placed too close to a building in the PAX Armata HQ area.",
    "heading": [
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "New Sobek City"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "new-sobek-city"
+   ]
   },
   {
    "text": "Fixed an issue in Breakthrough where players could become stuck on the End of Round screen if the party leader left during the EOR sequence.",
    "heading": [
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Manhattan Bridge"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "breakthrough",
+    "manhattan-bridge"
+   ]
   },
   {
    "text": "Added new markers for newly unlocked weapons, weapon packages, attachments, gadgets, and throwables.",

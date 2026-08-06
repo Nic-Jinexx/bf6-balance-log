@@ -19,6 +19,8 @@
    ],
    "section": "maps",
    "items": [
+    "conquest",
+    "domination",
     "empire-state"
    ]
   },
@@ -101,7 +103,10 @@
     "Major Updates for 1.1.3.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "breakthrough",
+    "rush"
+   ]
   },
   {
    "text": "Delivered a broad audio pass improving combat readability , including clearer footsteps and movement cues, more reliable armour-break feedback, and tuning across several high-priority gameplay sounds.",
@@ -722,7 +727,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Fixed an issue where Supply Crates deployed by enemy players were visible on the mini map.",
@@ -731,7 +738,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "css-bundle"
+   ]
   },
   {
    "text": "Fixed an issue where Throwing Knife animations lasted longer than intended.",
@@ -770,52 +779,8 @@
    "text": "Fixed an issue where an incorrect shell type was used during firing and reload animations.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
-   ],
-   "section": "gadgets",
-   "items": []
-  },
-  {
-   "text": "Fixed an issue where firing a Smoke Shell did not shake the camera or tube.",
-   "heading": [
-    "CHANGELOG",
-    "GADGETS:"
-   ],
-   "section": "gadgets",
-   "items": []
-  },
-  {
-   "text": "Fixed an issue where Smoke Shell clouds were smaller than intended.",
-   "heading": [
-    "CHANGELOG",
-    "GADGETS:"
-   ],
-   "section": "gadgets",
-   "items": []
-  },
-  {
-   "text": "Fixed an issue where the fire rate was lower than intended.",
-   "heading": [
-    "CHANGELOG",
-    "GADGETS:"
-   ],
-   "section": "gadgets",
-   "items": []
-  },
-  {
-   "text": "Fixed an issue where the Smoke Shell always regenerated via Supply Crates.",
-   "heading": [
-    "CHANGELOG",
-    "GADGETS:"
-   ],
-   "section": "gadgets",
-   "items": []
-  },
-  {
-   "text": "Logistics Expert in the Fire Support tree now slightly enhances the Supply Crate’s effect on the Portable Mortar’s fire rate.",
-   "heading": [
-    "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "LWCMS Portable Mortar"
    ],
    "section": "gadgets",
    "items": [
@@ -823,19 +788,86 @@
    ]
   },
   {
+   "text": "Fixed an issue where firing a Smoke Shell did not shake the camera or tube.",
+   "heading": [
+    "CHANGELOG",
+    "GADGETS:",
+    "LWCMS Portable Mortar"
+   ],
+   "section": "gadgets",
+   "items": [
+    "lwcms"
+   ]
+  },
+  {
+   "text": "Fixed an issue where Smoke Shell clouds were smaller than intended.",
+   "heading": [
+    "CHANGELOG",
+    "GADGETS:",
+    "LWCMS Portable Mortar"
+   ],
+   "section": "gadgets",
+   "items": [
+    "lwcms"
+   ]
+  },
+  {
+   "text": "Fixed an issue where the fire rate was lower than intended.",
+   "heading": [
+    "CHANGELOG",
+    "GADGETS:",
+    "LWCMS Portable Mortar"
+   ],
+   "section": "gadgets",
+   "items": [
+    "lwcms"
+   ]
+  },
+  {
+   "text": "Fixed an issue where the Smoke Shell always regenerated via Supply Crates.",
+   "heading": [
+    "CHANGELOG",
+    "GADGETS:",
+    "LWCMS Portable Mortar"
+   ],
+   "section": "gadgets",
+   "items": [
+    "css-bundle",
+    "lwcms"
+   ]
+  },
+  {
+   "text": "Logistics Expert in the Fire Support tree now slightly enhances the Supply Crate’s effect on the Portable Mortar’s fire rate.",
+   "heading": [
+    "CHANGELOG",
+    "GADGETS:",
+    "LWCMS Portable Mortar"
+   ],
+   "section": "gadgets",
+   "items": [
+    "css-bundle",
+    "lwcms",
+    "support"
+   ]
+  },
+  {
    "text": "Smoke Shell ammunition now starts at 0 and regenerates every 45 seconds.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "LWCMS Portable Mortar"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "lwcms"
+   ]
   },
   {
    "text": "Fixed an issue where the Supply Pouch instantly regenerated health on deployment.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Supply Pouch"
    ],
    "section": "gadgets",
    "items": [
@@ -846,16 +878,20 @@
    "text": "Fixed an issue with incorrect ammunition setup that caused inconsistent resupply behaviour.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Supply Pouch"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "goliath-compact"
+   ]
   },
   {
    "text": "Removed the initial heal on gadget deployment; the Supply Pouch now only heals over time.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Supply Pouch"
    ],
    "section": "gadgets",
    "items": [
@@ -866,10 +902,13 @@
    "text": "Thrown Supply Pouches now prioritise players who are low on, or have requested, health or ammunition.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Supply Pouch"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "goliath-compact"
+   ]
   },
   {
    "text": "Adjusted Conquest and Escalation capture areas on Manhattan Bridge so objectives can no longer be captured from rooftop positions.",
@@ -879,6 +918,8 @@
    ],
    "section": "maps",
    "items": [
+    "conquest",
+    "escalation",
     "manhattan-bridge"
    ]
   },
@@ -922,7 +963,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "escalation"
+   ]
   },
   {
    "text": "Made improvements to reduce cases of players matching into games that were near the end of a round.",
@@ -963,7 +1006,9 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "breakthrough"
+   ]
   },
   {
    "text": "In Conquest and Escalation, Battle Pickups now spawn when their associated capture points are owned by a team.",
@@ -972,213 +1017,271 @@
     "MAPS & MODES:"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "conquest",
+    "escalation"
+   ]
   },
   {
    "text": "Removed Defender vehicles in Sector 2 and Sector 3.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Manhattan Bridge"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "manhattan-bridge"
+   ]
   },
   {
    "text": "Added an additional Attacker IFV in Sector 3.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Manhattan Bridge"
    ],
    "section": "maps",
    "items": [
-    "infantry-fighting-vehicle"
+    "infantry-fighting-vehicle",
+    "manhattan-bridge"
    ]
   },
   {
    "text": "Updated capture volumes across Sectors 1, 2, and 3 to support more consistent attacker progress.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Manhattan Bridge"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "manhattan-bridge"
+   ]
   },
   {
    "text": "Removed Defender vehicles in all sectors.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Mirak Valley"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "mirak-valley"
+   ]
   },
   {
    "text": "Adjusted Attacker vehicle counts: Sector 1: Reduced Attacker IFVs from 2 to 1; increased Attacker tanks from 1 to 2.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Mirak Valley"
    ],
    "section": "maps",
    "items": [
-    "infantry-fighting-vehicle"
+    "infantry-fighting-vehicle",
+    "mirak-valley"
    ]
   },
   {
    "text": "Sector 2: Added 1 Attacker IFV.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Mirak Valley"
    ],
    "section": "maps",
    "items": [
-    "infantry-fighting-vehicle"
+    "infantry-fighting-vehicle",
+    "mirak-valley"
    ]
   },
   {
    "text": "Sector 3: Added 1 Attacker IFVs.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Mirak Valley"
    ],
    "section": "maps",
    "items": [
-    "infantry-fighting-vehicle"
+    "infantry-fighting-vehicle",
+    "mirak-valley"
    ]
   },
   {
    "text": "Updated capture volumes across all sectors to make attacking easier.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Mirak Valley"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "mirak-valley"
+   ]
   },
   {
    "text": "Sector 2: Added 1 Defender tank and one Defender IFV.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "New Sobek City"
    ],
    "section": "maps",
    "items": [
-    "infantry-fighting-vehicle"
+    "infantry-fighting-vehicle",
+    "new-sobek-city"
    ]
   },
   {
    "text": "Sector 3: Added 1 Attacker IFV; removed Defender tank and light transport.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "New Sobek City"
    ],
    "section": "maps",
    "items": [
     "infantry-fighting-vehicle",
-    "light-ground-transport"
+    "light-ground-transport",
+    "new-sobek-city"
    ]
   },
   {
    "text": "Updated capture volumes in both sectors to improve attacker flow.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "New Sobek City"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "new-sobek-city"
+   ]
   },
   {
    "text": "Sector 2: Adjusted Defender armour (added and removed tank spawns).",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Operation Firestorm"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "operation-firestorm"
+   ]
   },
   {
    "text": "Sector 3: Added 2 Attacker tanks and 1 Attacker IFV; removed the Defender tank.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Operation Firestorm"
    ],
    "section": "maps",
    "items": [
-    "infantry-fighting-vehicle"
+    "infantry-fighting-vehicle",
+    "operation-firestorm"
    ]
   },
   {
    "text": "Updated capture zones across affected sectors to support attacker momentum.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Operation Firestorm"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "operation-firestorm"
+   ]
   },
   {
    "text": "Sector 3: Removed Defender tank.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Liberation Peak"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "liberation-peak"
+   ]
   },
   {
    "text": "Sector 5: Added 2 Attacker IFVs; removed the Defender transport.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Liberation Peak"
    ],
    "section": "maps",
    "items": [
-    "infantry-fighting-vehicle"
+    "infantry-fighting-vehicle",
+    "liberation-peak"
    ]
   },
   {
    "text": "Updated capture volumes to improve attacker advancement.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Liberation Peak"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "liberation-peak"
+   ]
   },
   {
    "text": "Added an additional Attacker tank in sector 1 and 3.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Siege of Cairo"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "siege-of-cairo"
+   ]
   },
   {
    "text": "Updated capture areas on B flag to improve sector push potential.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Siege of Cairo"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "siege-of-cairo"
+   ]
   },
   {
    "text": "Sector 1: Updated capture volume on B flag.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Empire State"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "empire-state"
+   ]
   },
   {
    "text": "Sector 2: Updated capture volumes on A and B flags.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Empire State"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "empire-state"
+   ]
   },
   {
    "text": "Fixed an issue where enemies spotted by the LTLM II Portable Laser Designator did not count towards the “Spot enemies with Recon Gadgets” weekly challenge.",
@@ -1188,7 +1291,8 @@
    ],
    "section": "progression",
    "items": [
-    "ltlm-ii"
+    "ltlm-ii",
+    "recon"
    ]
   },
   {
@@ -1199,7 +1303,8 @@
    ],
    "section": "progression",
    "items": [
-    "sich-g1-wp"
+    "sich-g1-wp",
+    "support"
    ]
   },
   {
@@ -1726,7 +1831,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "css-bundle"
+   ]
   },
   {
    "text": "Fixed an issue where the “Advance to Next Sector” audio cue played “Out-of-Bounds” sound effect.",
@@ -1804,7 +1911,8 @@
    "text": "Balanced enemy-specific layers for clearer cloth and gear cues.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1813,7 +1921,8 @@
    "text": "Further reduced or removed the momentary dampening of enemy movement audio triggered by damage, low-health states, game notifications, or occlusion effects.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1822,7 +1931,8 @@
    "text": "Improved distance-based acoustics for clearer separation between close, mid, and far ranges.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1831,7 +1941,8 @@
    "text": "Improved distant world reflections to better convey space and positioning.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1840,7 +1951,8 @@
    "text": "Increased enemy movement audio at distance for greater readability.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1849,7 +1961,8 @@
    "text": "Increased overall enemy movement volume, with an additional boost when an enemy is behind the player.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1858,7 +1971,8 @@
    "text": "Reduced how heavily sneaking stances (crouch walking, crawling) lower enemy movement audio.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1867,7 +1981,8 @@
    "text": "Reduced how much the “Spec-Op” trait lowers footstep audio when sneaking.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1876,7 +1991,8 @@
    "text": "Reduced scuff and scrape audio from movement against walls and ground.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1885,7 +2001,8 @@
    "text": "Reduced self and friendly footstep volume in Wartapes, Wartapes VAL, and REDSEC.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1894,7 +2011,8 @@
    "text": "Refactored footstep triggers to be more reliable across different speeds and stances.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1903,7 +2021,8 @@
    "text": "Removed limitations on the maximum number of close-range enemy audio sources.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1912,7 +2031,8 @@
    "text": "Small balancing tweaks to footsteps on different materials for outliers, such as slow speed on gravel and different directions (up, down, sideways) on wooden stairs.",
    "heading": [
     "CHANGELOG",
-    "AUDIO:"
+    "AUDIO:",
+    "Footsteps"
    ],
    "section": "audio",
    "items": []
@@ -1978,7 +2098,9 @@
     "AI:"
    ],
    "section": "ai",
-   "items": []
+   "items": [
+    "king-of-the-hill"
+   ]
   },
   {
    "text": "Fixed instances where AI soldiers could take too long to find a valid path to their objective, causing them to remain stationary.",
@@ -2185,7 +2307,8 @@
    "text": "Improved loot box placement across the map for more reliable accessibility.",
    "heading": [
     "REDSEC",
-    "MAP:"
+    "MAP:",
+    "Battle Royale"
    ],
    "section": "maps",
    "items": [],
@@ -2195,7 +2318,8 @@
    "text": "Fixed an issue where M-COMs in Wreckage would not reactivate after being destroyed.",
    "heading": [
     "REDSEC",
-    "MAP:"
+    "MAP:",
+    "Gauntlet"
    ],
    "section": "maps",
    "items": [],
@@ -2215,7 +2339,8 @@
    "text": "Added clearer distinction between player and squad member inventory requests.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2225,7 +2350,8 @@
    "text": "Added upgrade notifications to the loot feed when a weapon is improved.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2235,7 +2361,8 @@
    "text": "Fixed an issue where ping icons of lootable vehicles would disappear from the mini map when the players get more than 25m away from them.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2245,7 +2372,8 @@
    "text": "Fixed an issue where the Tank Hunter mission UI could remain active if the targeted squad destroyed its own tank.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2255,7 +2383,8 @@
    "text": "Updated the artwork for mission rewards to reflect new keycard changes.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2265,9 +2394,10 @@
    "text": "Added correct interaction prompts for counter-mission teams when defusing explosives in Wreckage.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
@@ -2275,9 +2405,10 @@
    "text": "Fixed an issue where the scoreboard was sorted by deaths instead of score.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
@@ -2285,9 +2416,10 @@
    "text": "Fixed an issue where the Loadout screen overlay could incorrectly appear over the Gauntlet Mission Briefing on Aftermath.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
@@ -2295,9 +2427,10 @@
    "text": "Fixed team-ownership colours for M-COMs in Wreckage missions.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },

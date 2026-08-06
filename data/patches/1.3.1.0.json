@@ -35,6 +35,7 @@
    ],
    "section": "summary",
    "items": [
+    "css-bundle",
     "dgmk4",
     "lwcms"
    ]
@@ -328,34 +329,44 @@
    "text": "Reduced the Devastating Impact repair reduction from -50% to -25%.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Updated the Engineer Field Specialization passive skills"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Reduced the Overheat Control Vehicle weapon effect from -50% to -10%.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Updated the Engineer Field Specialization passive skills"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Replaced the Vehicle Regeneration passive skill with a new Mine Sweeping skill. When learned, the Mine Sweeping passive skill will highlight mines in a 30m area around the player.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Updated the Engineer Field Specialization passive skills"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Corrected animation stuttering when unmounting from bipod at an angle",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Netcode"
    ],
    "section": "player",
    "items": []
@@ -364,7 +375,8 @@
    "text": "Corrected an issue where enemy weapons could appear sideways and not properly aligned with their actual aim direction in certain states, such as while jumping.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Netcode"
    ],
    "section": "player",
    "items": []
@@ -373,7 +385,8 @@
    "text": "Corrected an issue where first-person death animations would start with some delay which led to unclarity on the state of change.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Netcode"
    ],
    "section": "player",
    "items": []
@@ -382,7 +395,8 @@
    "text": "Corrected an issue where first-person hit reactions could play when incoming bullets missed the player and passed behind them.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Netcode"
    ],
    "section": "player",
    "items": []
@@ -391,7 +405,8 @@
    "text": "Corrected an issue where high latency players would not deal armor damage and not apply expected damage modifications.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Netcode"
    ],
    "section": "player",
    "items": []
@@ -400,7 +415,8 @@
    "text": "Corrected an issue where projectiles could fire from the wrong position height during stance transitions under poor network conditions causing bullet hits to be rejected by the server.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Netcode"
    ],
    "section": "player",
    "items": []
@@ -409,7 +425,8 @@
    "text": "Corrected an issue where some UI elements like the inventory would not be immediately hidden when killed",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Netcode"
    ],
    "section": "player",
    "items": []
@@ -418,7 +435,8 @@
    "text": "Incoming damage UI indicators now animate and scale based on the amount of damage taken, improving the clarity of rapid consecutive hits and making it easier to distinguish between low and high damage.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Netcode"
    ],
    "section": "player",
    "items": []
@@ -427,7 +445,8 @@
    "text": "Reduced network bandwidth usage when switching state from “Alive” to “ManDown”.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Netcode"
    ],
    "section": "player",
    "items": []
@@ -436,7 +455,8 @@
    "text": "Taking damage while aiming down sights now triggers hit reactions that move the weapon opposite to the direction of impact, improving damage feedback without interfering with the outcome of gunfights.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Netcode"
    ],
    "section": "player",
    "items": []
@@ -519,7 +539,8 @@
    "text": "Damage to turrets always deals 75% damage.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Angle & Zone Damage Rework"
    ],
    "section": "vehicles",
    "items": []
@@ -528,7 +549,8 @@
    "text": "Damage to the Body of the tank always deals at least 100% damage.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Angle & Zone Damage Rework"
    ],
    "section": "vehicles",
    "items": []
@@ -537,7 +559,8 @@
    "text": "Hits at a favourable angle from the side of the tank will deal 150% damage.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Angle & Zone Damage Rework"
    ],
    "section": "vehicles",
    "items": []
@@ -546,7 +569,8 @@
    "text": "Hits at a favourable angle from the rear of the tank will deal 200% damage.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Angle & Zone Damage Rework"
    ],
    "section": "vehicles",
    "items": []
@@ -555,7 +579,8 @@
    "text": "Regeneration delay increased from 6 seconds to 12 seconds.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Reworking Regeneration Brackets"
    ],
    "section": "vehicles",
    "items": []
@@ -564,7 +589,8 @@
    "text": "Regeneration now continues to full health instead of only to the next health bracket.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Reworking Regeneration Brackets"
    ],
    "section": "vehicles",
    "items": []
@@ -573,7 +599,8 @@
    "text": "Regeneration rate increased from roughly 5% per second to 10% per second.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Reworking Regeneration Brackets"
    ],
    "section": "vehicles",
    "items": []
@@ -582,7 +609,8 @@
    "text": "While in critical health, regeneration is now slowed by 80% instead of being fully disabled.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Reworking Regeneration Brackets"
    ],
    "section": "vehicles",
    "items": []
@@ -591,7 +619,8 @@
    "text": "Updated all tracked vehicles with a new transmission and steering system, delivering smoother and more responsive acceleration, tighter and more consistent turning at all speeds, a smoother steering feel, and more effective handbrake turns.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Handling Changes"
    ],
    "section": "vehicles",
    "items": []
@@ -600,7 +629,8 @@
    "text": "Tank type vehicles are no longer immobilized by taking high damage (Anti Tank mines will still immobilize Tanks).",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Handling Changes"
    ],
    "section": "vehicles",
    "items": [
@@ -611,7 +641,8 @@
    "text": "The ground vehicle boost bar is no longer emptied when interrupting boost.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Handling Changes"
    ],
    "section": "vehicles",
    "items": []
@@ -620,7 +651,8 @@
    "text": "Boost can now be re-applied even when the bar is recharging, except when it has been fully emptied.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Handling Changes"
    ],
    "section": "vehicles",
    "items": []
@@ -629,7 +661,8 @@
    "text": "Turret speeds for the MBT and IFV have been modestly improved.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Handling Changes"
    ],
    "section": "vehicles",
    "items": [
@@ -641,7 +674,8 @@
    "text": "Aiming in first-person and zoomed views in the tanks has been tuned to be faster and more responsive.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Handling Changes"
    ],
    "section": "vehicles",
    "items": []
@@ -650,7 +684,8 @@
    "text": "Lock-on weapons now always do consistent damage, ignoring zones and angles. Zone and angle damage is reserved for weapons which are manually aimed by players.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "General Changes"
    ],
    "section": "vehicles",
    "items": []
@@ -659,7 +694,8 @@
    "text": "Most land vehicle explosive weapons now have a minimum explosive damage of 20%. This does not increase lethal or total radius, but increases damage at the edges of explosive radius to make hits to kill more consistent.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "General Changes"
    ],
    "section": "vehicles",
    "items": []
@@ -668,7 +704,8 @@
    "text": "The Aim-Guided Missile now deals 207-550 damage against tanks, 1000 against helicopters, and 1000 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "General Changes"
    ],
    "section": "vehicles",
    "items": []
@@ -677,7 +714,8 @@
    "text": "Air-to-Ground Missiles now deal 450 damage against tanks, 975 against helicopters, and 1000 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "General Changes"
    ],
    "section": "vehicles",
    "items": []
@@ -686,106 +724,140 @@
    "text": "120mm HEAT-MP-T Rounds now deal 210-560 damage against tanks, 1360 against helicopters, and 1000 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "120mm HEMP-T Rounds now deal 180-480 damage against tanks, 1180 against helicopters, and 1000 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Increased the inner blast radius of 120mm HEMP-T Rounds from 2 to 2.25 meters.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "120mm APFSDS Rounds now deal 282-750 damage against tanks, 600 against helicopters, and 750 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Aim-Guided Shell beam-riding offset increased from 75 to 100 meters, reducing the rate of turning response.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Aim-Guided Shell engine time to live reduced from 1.25 to 1 second.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Aim-Guided Shell now experiences Drag after engine cutoff.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Aim-Guided Shell time to live decreased from 6 to 4 seconds.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Aim-Guided Shell turning rate reduced from 12.5 to 6 degrees per second.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Aim-Guided Shells now deal 235-625 damage against tanks, 700 against helicopters, and 1000 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Remains lethal against soldiers within 2m.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M1A2 SEPv3 and Leo A4 Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "main-battle-tank"
+   ]
   },
   {
    "text": "Increased all IFV Cannon Reload times from 2.4 to 2.75.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
    "items": [
@@ -796,16 +868,20 @@
    "text": "HEI-T Rounds now deal 10-30 damage against tanks, 100 against helicopters, and 150 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Decreased the IFV HE Rounds rate of fire from 200 to 180 RPM.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
    "items": [
@@ -816,7 +892,8 @@
    "text": "Increased the Drag of IFV HE Rounds.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
    "items": [
@@ -827,34 +904,44 @@
    "text": "AP shells now deal 23-60 damage against tanks, 100 against helicopters, and 100 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Decreased the APDS Rounds magazine capacity from 12 to 10.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Decreased the APDS Rounds rate of fire from 200 to 120 RPM.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Increased the IFV Canister Rounds magazine capacity from 12 to 16.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
    "items": [
@@ -865,7 +952,8 @@
    "text": "Increased the IFV Canister Rounds rate of fire from 200 to 240 RPM.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
    "items": [
@@ -876,25 +964,32 @@
    "text": "Lock-Guided Missiles now deal 390 damage against tanks, 845 against helicopters, and 1000 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Light Rockets now deal 75-200 damage against tanks, 550 against helicopters, and 700 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "M3A3 Bradley and Strf 09 A4 IFV Weapons"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "infantry-fighting-vehicle"
+   ]
   },
   {
    "text": "Reduced minimum damage of RWS & Coaxial LMG from 21 to 19.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "RWS Gunner & Coax Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -903,7 +998,8 @@
    "text": "Reduced muzzle velocity of RWS & Coaxial LMG from 850 to 670 m/s.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "RWS Gunner & Coax Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -912,7 +1008,8 @@
    "text": "Extended falloff start distance of RWS & Coaxial LMG from 20 to 25 meters.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "RWS Gunner & Coax Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -921,7 +1018,8 @@
    "text": "Shortened falloff end distance of RWS & Coaxial LMG from 75 to 60 meters.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "RWS Gunner & Coax Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -930,7 +1028,8 @@
    "text": "Reduced minimum damage (75+ meters) of RWS and Coaxial HMG from 30 to 24.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "RWS Gunner & Coax Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -939,7 +1038,8 @@
    "text": "Reduced muzzle velocity of RWS & Coaxial HMG from 890 to 760 m/s.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "RWS Gunner & Coax Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -948,7 +1048,8 @@
    "text": "Reduced the maximum spread and spread gain per shot of RWS and Coaxial HMGs.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "RWS Gunner & Coax Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -957,7 +1058,8 @@
    "text": "Reduced the spread recovery rate of RWS and Coaxial HMGs.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "RWS Gunner & Coax Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -966,7 +1068,8 @@
    "text": "Reduced the reload time of the Automatic Grenade Launcher RWS Weapon from 3 to 2 seconds.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "RWS Gunner & Coax Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -975,7 +1078,8 @@
    "text": "Removed projectile velocity inheritance from the Automatic Grenade Launcher RWS Weapon. This will improve consistency when aiming from a moving vehicle.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "RWS Gunner & Coax Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -984,7 +1088,8 @@
    "text": "Light Rockets now deal 23-60 damage against tanks, 225 against helicopters, and 330 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Helicopter Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -993,7 +1098,8 @@
    "text": "Helicopter Light Rocket area of effect reduced from 5 to 4.75 meters.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Helicopter Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -1002,7 +1108,8 @@
    "text": "Aim-Guided Rockets now deal 50-132 damage against tanks, 320 against helicopters, and 460 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Helicopter Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -1011,7 +1118,8 @@
    "text": "Helicopter Smart Rocket area of effect reduced from 5 to 4.75 meters.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Helicopter Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -1020,7 +1128,8 @@
    "text": "Heavy Rockets now deal 94-250 damage against tanks, 300 against helicopters, and 450 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Helicopter Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -1029,7 +1138,8 @@
    "text": "Helicopter Heavy Rocket area of effect reduced from 5.5 to 5.25 meters.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Helicopter Weapons"
    ],
    "section": "vehicles",
    "items": []
@@ -1038,7 +1148,8 @@
    "text": "Attack Helicopter M41A7 TOW2 missiles maximum speed increased from 90 to 120 m/s. Ground vehicle TOW missiles remain at 90 m/s.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Helicopter Weapons"
    ],
    "section": "vehicles",
    "items": [
@@ -1049,7 +1160,8 @@
    "text": "Removed projectile velocity inheritance from Transport Helicopter side gunner seats. This removes the need to ‘lag’ shots when firing from a fast moving helicopter.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Helicopter Weapons"
    ],
    "section": "vehicles",
    "items": [
@@ -1060,7 +1172,8 @@
    "text": "Attack Jet Mk82 High Drag Bombs now deal 300-400 damage against tanks, 1080 against helicopters, and 1000 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Jet Weapons"
    ],
    "section": "vehicles",
    "items": [
@@ -1071,7 +1184,8 @@
    "text": "Fighter Jet GBU-39/B Small Diameter Bombs now deal 410-535 damage against tanks, 1455 against helicopters, and 1000 against jets.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Jet Weapons"
    ],
    "section": "vehicles",
    "items": [
@@ -1082,7 +1196,8 @@
    "text": "No longer increases the damage resistance of the vehicle.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "The Reinforced Plating Passive has been removed and replaced with Contingency Systems"
    ],
    "section": "vehicles",
    "items": []
@@ -1091,7 +1206,8 @@
    "text": "No longer increases the weight or reduces the speed of the vehicle.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "The Reinforced Plating Passive has been removed and replaced with Contingency Systems"
    ],
    "section": "vehicles",
    "items": []
@@ -1100,7 +1216,8 @@
    "text": "When at low health, accelerates the cooldown of Countermeasure equipment.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "The Reinforced Plating Passive has been removed and replaced with Contingency Systems"
    ],
    "section": "vehicles",
    "items": []
@@ -1109,7 +1226,8 @@
    "text": "Targeting Jammers for the IFV & Mobile AA have their locking resistance increased from 30% to 40%.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Targeting Jammer passives have been improved"
    ],
    "section": "vehicles",
    "items": [
@@ -1120,7 +1238,8 @@
    "text": "Targeting Jammers for the IFV & Mobile AA no longer deactivate when firing.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Targeting Jammer passives have been improved"
    ],
    "section": "vehicles",
    "items": [
@@ -1131,7 +1250,8 @@
    "text": "Targeting Jammers for IFV & Mobile AA now deactivate when laser painted.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Targeting Jammer passives have been improved"
    ],
    "section": "vehicles",
    "items": [
@@ -1142,7 +1262,8 @@
    "text": "Targeting Jammers for IFV & Mobile AA now deactivate when using a lock on weapon.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Targeting Jammer passives have been improved"
    ],
    "section": "vehicles",
    "items": [
@@ -1153,7 +1274,8 @@
    "text": "Targeting Jammers for IFV & Mobile AA deactivation time increased from 4.5 to 10 seconds.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Targeting Jammer passives have been improved"
    ],
    "section": "vehicles",
    "items": [
@@ -1164,7 +1286,8 @@
    "text": "Now passively provides short duration spotting upon receiving damage. This short spot is not shared with teammates.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Counterfire Radar has been partially reworked"
    ],
    "section": "vehicles",
    "items": []
@@ -1173,7 +1296,8 @@
    "text": "Can be manually activated in order to extend the duration of currently spotted targets, and share the spotting information with your teammates.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Counterfire Radar has been partially reworked"
    ],
    "section": "vehicles",
    "items": []
@@ -1182,7 +1306,8 @@
    "text": "When activated, spotted vehicles are also laser designated for the duration.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Counterfire Radar has been partially reworked"
    ],
    "section": "vehicles",
    "items": []
@@ -1191,7 +1316,8 @@
    "text": "Increased active duration by 3 seconds so it now matches the visual effect duration.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Thermal Smoke Updates"
    ],
    "section": "vehicles",
    "items": []
@@ -1200,7 +1326,8 @@
    "text": "Now blocks the PTKM-1R Acoustic Sensor AV Mine from detecting the vehicle while active.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Thermal Smoke Updates"
    ],
    "section": "vehicles",
    "items": [
@@ -1211,7 +1338,8 @@
    "text": "Reduced the cooldown of the Smoke Screen from 20 to 16 seconds.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Thermal Smoke Updates"
    ],
    "section": "vehicles",
    "items": []
@@ -1220,16 +1348,20 @@
    "text": "The smoke will now deal moderate damage to nearby enemy infantry who remain within the cloud. This damage will also destroy C-4.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Thermal Smoke Updates"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "c-4"
+   ]
   },
   {
    "text": "While remaining inside of your thermal smoke, all hits will be registered as minimum damage hits (75% damage).",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Thermal Smoke Updates"
    ],
    "section": "vehicles",
    "items": []
@@ -1238,7 +1370,8 @@
    "text": "The IFV no longer has the laser designator equipped by default, it now shares a slot with the Mines Countermeasures & Smoke grenades.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "General Equipment Changes"
    ],
    "section": "vehicles",
    "items": [
@@ -1251,7 +1384,8 @@
    "text": "The Mine Countermeasures, previously available only to the MBT & APT, is now available to the IFV.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "General Equipment Changes"
    ],
    "section": "vehicles",
    "items": [
@@ -1263,7 +1397,8 @@
    "text": "The Mobile Command Centre Passive, previously exclusive to the APT, is now available to the IFV.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "General Equipment Changes"
    ],
    "section": "vehicles",
    "items": [
@@ -1274,7 +1409,8 @@
    "text": "The Transport Helicopter now has the Improved Armor passive equipped by default. This functions identically to the Attack Helicopter’s version of the same passive, reducing the amount of damage taken from small arms fire.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "General Equipment Changes"
    ],
    "section": "vehicles",
    "items": [
@@ -1286,7 +1422,8 @@
    "text": "Emergency Repair now heals over time instead of healing instantly upon activation.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "General Equipment Changes"
    ],
    "section": "vehicles",
    "items": []
@@ -1295,7 +1432,8 @@
    "text": "Reduced the activation time of Projectile Intercept System from 1s to 0.6s on land vehicles.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES:"
+    "VEHICLES:",
+    "General Equipment Changes"
    ],
    "section": "vehicles",
    "items": []
@@ -1318,7 +1456,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "css-bundle"
+   ]
   },
   {
    "text": "Corrected an issue where deploying the T-UGS would always switch players back to their Primary Weapon instead of their previously equipped item.",
@@ -1383,7 +1523,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "c-4"
+   ]
   },
   {
    "text": "Updated the M136 AT so they now deal 207-550 damage against tanks, 1000 against helicopters, and 1000 against jets.",
@@ -1403,7 +1545,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "css-bundle"
+   ]
   },
   {
    "text": "Updated the M18A1 Claymore fragmentation base close range damage from 65 to 50. Damage drop-off now starts at the edge of the detection arc.",
@@ -1445,61 +1589,81 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "rpg-7v2"
+   ]
   },
   {
    "text": "Damage against tanks has been updated to 390.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "M15 AV Mine"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Deployment is now only blocked inside enemy HQs.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "M15 AV Mine"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Increased the maximum number of mines that can be placed from 6 to 9.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "M15 AV Mine"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Mines no longer despawns 3 minutes after its owner dies.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "M15 AV Mine"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Now displays a warning when players attempt to place it in out-of-bounds areas.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "M15 AV Mine"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Mines now glint at close range to help distinguish it from level props and debris.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "M15 AV Mine"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m15"
+   ]
   },
   {
    "text": "Base lock-on range has been reduced from 650 to 550 metres.",
@@ -1509,7 +1673,9 @@
     "SLM-93A"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "slm-93a"
+   ]
   },
   {
    "text": "Damage against vehicles has been updated to 200 against tanks, 650 against helicopters, and 650 against jets.",
@@ -1519,7 +1685,9 @@
     "SLM-93A"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "slm-93a"
+   ]
   },
   {
    "text": "Maximum missile speed has been reduced from 540 to 480 m/s.",
@@ -1529,7 +1697,9 @@
     "SLM-93A"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "slm-93a"
+   ]
   },
   {
    "text": "Damage against vehicles has been updated to 200 against tanks, 650 against helicopters, and 650 against jets.",
@@ -1539,7 +1709,9 @@
     "9K93 IGLA"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "9k38-igla"
+   ]
   },
   {
    "text": "Lock-on time has been reduced from 1.2 to 1 second.",
@@ -1549,7 +1721,9 @@
     "9K93 IGLA"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "9k38-igla"
+   ]
   },
   {
    "text": "Maximum missile speed has been reduced from 640 to 480 m/s.",
@@ -1559,7 +1733,9 @@
     "9K93 IGLA"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "9k38-igla"
+   ]
   },
   {
    "text": "Missile acceleration has been increased from 65 to 100 m/s.",
@@ -1569,7 +1745,9 @@
     "9K93 IGLA"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "9k38-igla"
+   ]
   },
   {
    "text": "Can now be triggered regardless of vehicle movement speed.",
@@ -1579,7 +1757,9 @@
     "M4A1 SLAM"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m4a1-slam"
+   ]
   },
   {
    "text": "Damage against tanks has been updated to range between 199-363.",
@@ -1589,7 +1769,9 @@
     "M4A1 SLAM"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m4a1-slam"
+   ]
   },
   {
    "text": "Now triggers a warning when players attempt to place it in out-of-bounds areas.",
@@ -1599,7 +1781,9 @@
     "M4A1 SLAM"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m4a1-slam"
+   ]
   },
   {
    "text": "The mine now has a short arming delay before becoming active after placement.",
@@ -1609,7 +1793,9 @@
     "M4A1 SLAM"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "m4a1-slam"
+   ]
   },
   {
    "text": "Damage against vehicles has been updated to 240 against tanks, 520 against helicopters, and 800 against jets.",
@@ -1664,10 +1850,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
    "section": "gadgets",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
@@ -1676,10 +1863,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
    "section": "gadgets",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
@@ -1688,10 +1876,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
    "section": "gadgets",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
@@ -1700,10 +1889,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
    "section": "gadgets",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
@@ -1712,10 +1902,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "LTLM II Laser Designator"
    ],
    "section": "gadgets",
    "items": [
+    "ltlm-ii",
     "mbt-law"
    ]
   },
@@ -1724,7 +1915,7 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "LTLM II Laser Designator"
    ],
    "section": "gadgets",
    "items": [
@@ -1737,7 +1928,7 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "LTLM II Laser Designator"
    ],
    "section": "gadgets",
    "items": [
@@ -1750,10 +1941,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "CSB IV EOD Bot"
    ],
    "section": "gadgets",
    "items": [
+    "csb-iv",
     "mbt-law"
    ]
   },
@@ -1762,10 +1954,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "CSB IV EOD Bot"
    ],
    "section": "gadgets",
    "items": [
+    "csb-iv",
     "light-ground-transport",
     "mbt-law"
    ]
@@ -1775,10 +1968,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "CSB IV EOD Bot"
    ],
    "section": "gadgets",
    "items": [
+    "csb-iv",
     "mbt-law"
    ]
   },
@@ -1787,10 +1981,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "CSB IV EOD Bot"
    ],
    "section": "gadgets",
    "items": [
+    "csb-iv",
     "mbt-law"
    ]
   },
@@ -1799,7 +1994,7 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "CSB IV EOD Bot"
    ],
    "section": "gadgets",
    "items": [
@@ -1812,10 +2007,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "Hardware Suppression System"
    ],
    "section": "gadgets",
    "items": [
+    "dgmk4",
     "mbt-law"
    ]
   },
@@ -1824,10 +2020,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "Hardware Suppression System"
    ],
    "section": "gadgets",
    "items": [
+    "dgmk4",
     "mbt-law"
    ]
   },
@@ -1836,10 +2033,11 @@
    "heading": [
     "CHANGELOG",
     "GADGETS:",
-    "MBT-LAW"
+    "Hardware Suppression System"
    ],
    "section": "gadgets",
    "items": [
+    "dgmk4",
     "mbt-law"
    ]
   },
@@ -2046,6 +2244,9 @@
    ],
    "section": "maps",
    "items": [
+    "breakthrough",
+    "conquest",
+    "escalation",
     "mirak-valley"
    ]
   },
@@ -2119,7 +2320,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "breakthrough"
+   ]
   },
   {
    "text": "Corrected an issue where as an Engineer driving a tank, a request repair icon sometimes could be unintendedly visible.",
@@ -2128,7 +2331,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Corrected an issue where Battle Pass paths with fewer tiers could appear off-centre on the page.",
@@ -2191,7 +2396,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Corrected an issue where the “bleed out” timer icon for friendly downed players could freeze sometimes.",
@@ -2714,7 +2921,9 @@
     "PORTAL:"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "support"
+   ]
   },
   {
    "text": "Improved how Portal measures script memory usage to more accurately account for script content, stack memory, dynamic allocation, and unresolved promises, helping prevent scripts from stopping earlier than intended.",
@@ -2831,7 +3040,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "breakthrough"
+   ]
   },
   {
    "text": "Corrected an issue in Domination where Commander voice-over did not trigger when the enemy captured a friendly objective.",
@@ -2840,7 +3051,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "domination"
+   ]
   },
   {
    "text": "Corrected an issue where the “destroyed” voice line would sometimes not play when a player destroyed a vehicle.",
@@ -2943,7 +3156,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "support"
+   ]
   },
   {
    "text": "Updated the F97 Kestrel Jet passbys and fixed an issue causing only one variation sound effect to play.",
@@ -3294,30 +3509,40 @@
    "text": ".50 cal MG bullets are now affected by armour and deal a flat 30 damage.",
    "heading": [
     "REDSEC",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Rebalance changes to the UH-79 Transport and Glider 96 Helicopters"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "light-ground-transport",
+    "transport-helicopter"
+   ],
    "redsec": true
   },
   {
    "text": ".50 cal MGs now overheat in approximately 15 shots.",
    "heading": [
     "REDSEC",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Rebalance changes to the UH-79 Transport and Glider 96 Helicopters"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "light-ground-transport",
+    "transport-helicopter"
+   ],
    "redsec": true
   },
   {
    "text": "UH-79 minigun bullets are now affected by armour and deal a flat 20 damage.",
    "heading": [
     "REDSEC",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Rebalance changes to the UH-79 Transport and Glider 96 Helicopters"
    ],
    "section": "vehicles",
    "items": [
+    "light-ground-transport",
     "transport-helicopter"
    ],
    "redsec": true
@@ -3326,10 +3551,12 @@
    "text": "UH-79 miniguns no longer cool down faster than in Multiplayer, and their overheat penalty is now three times longer.",
    "heading": [
     "REDSEC",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Rebalance changes to the UH-79 Transport and Glider 96 Helicopters"
    ],
    "section": "vehicles",
    "items": [
+    "light-ground-transport",
     "transport-helicopter"
    ],
    "redsec": true
@@ -3338,10 +3565,12 @@
    "text": "Corrected an issue where the UH-79 was using the Multiplayer health value of 1500 instead of the Battle Royale value of 1250.",
    "heading": [
     "REDSEC",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Rebalance changes to the UH-79 Transport and Glider 96 Helicopters"
    ],
    "section": "vehicles",
    "items": [
+    "light-ground-transport",
     "transport-helicopter"
    ],
    "redsec": true
@@ -3350,20 +3579,26 @@
    "text": "Increased .50 cal MG dispersion from 0.01/0.5 to 0.03/1.5 degrees.",
    "heading": [
     "REDSEC",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Rebalance changes to the UH-79 Transport and Glider 96 Helicopters"
    ],
    "section": "vehicles",
-   "items": [],
+   "items": [
+    "light-ground-transport",
+    "transport-helicopter"
+   ],
    "redsec": true
   },
   {
    "text": "Increased UH-79 minigun dispersion from 1.2 to 2.4 degrees.",
    "heading": [
     "REDSEC",
-    "VEHICLES:"
+    "VEHICLES:",
+    "Rebalance changes to the UH-79 Transport and Glider 96 Helicopters"
    ],
    "section": "vehicles",
    "items": [
+    "light-ground-transport",
     "transport-helicopter"
    ],
    "redsec": true
@@ -3396,7 +3631,8 @@
    "text": "Corrected an issue where Defibrillator charges could regenerate incorrectly.",
    "heading": [
     "REDSEC",
-    "GADGETS:"
+    "GADGETS:",
+    "Battle Royale"
    ],
    "section": "gadgets",
    "items": [
@@ -3408,60 +3644,78 @@
    "text": "Corrected an issue where T-UGS motion sensors could cause mission reward crates to flip over.",
    "heading": [
     "REDSEC",
-    "GADGETS:"
+    "GADGETS:",
+    "Battle Royale"
    ],
    "section": "gadgets",
-   "items": [],
+   "items": [
+    "recon"
+   ],
    "redsec": true
   },
   {
    "text": "The MQ-9 in the UAV Overwatch call-in no longer attempts to flare incoming missiles.",
    "heading": [
     "REDSEC",
-    "GADGETS:"
+    "GADGETS:",
+    "Battle Royale"
    ],
    "section": "gadgets",
-   "items": [],
+   "items": [
+    "recon"
+   ],
    "redsec": true
   },
   {
    "text": "Updated the Engineers Supply Crate so it can no longer be picked up after resupplying a vehicle.",
    "heading": [
     "REDSEC",
-    "GADGETS:"
+    "GADGETS:",
+    "Battle Royale"
    ],
    "section": "gadgets",
-   "items": [],
+   "items": [
+    "css-bundle"
+   ],
    "redsec": true
   },
   {
    "text": "Can no longer pass through the front of safe doors.",
    "heading": [
     "REDSEC",
-    "GADGETS:"
+    "GADGETS:",
+    "C-4 Explosives"
    ],
    "section": "gadgets",
-   "items": [],
+   "items": [
+    "c-4"
+   ],
    "redsec": true
   },
   {
    "text": "No longer remains suspended if placed on a delivery van roll-up door before it is opened.",
    "heading": [
     "REDSEC",
-    "GADGETS:"
+    "GADGETS:",
+    "C-4 Explosives"
    ],
    "section": "gadgets",
-   "items": [],
+   "items": [
+    "c-4"
+   ],
    "redsec": true
   },
   {
    "text": "Now sticks correctly to the sides and rear of safes.",
    "heading": [
     "REDSEC",
-    "GADGETS:"
+    "GADGETS:",
+    "C-4 Explosives"
    ],
    "section": "gadgets",
-   "items": [],
+   "items": [
+    "c-4"
+   ],
    "redsec": true
   },
   {
@@ -3723,14 +3977,17 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": [],
+   "items": [
+    "engineer"
+   ],
    "redsec": true
   },
   {
    "text": "Corrected an issue where the Squad Eliminated message would show only briefly for the second place team.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -3740,7 +3997,8 @@
    "text": "Updated Recon Drone weapon names for better clarity on the killcard.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [
@@ -3752,19 +4010,23 @@
    "text": "Updated the description for the Hazmat Breacher field upgrade’s VL-7 Breaching Launcher.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
-   "items": [],
+   "items": [
+    "assault"
+   ],
    "redsec": true
   },
   {
    "text": "Corrected a bug where the pause menu would cause the overhead camera to appear during a Gauntlet mission brief, as well as the mission brief overlaying in the Player Profile tab.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },

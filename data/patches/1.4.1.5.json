@@ -8,7 +8,9 @@
     "PLAYER"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "recon"
+   ]
   },
   {
    "text": "Soldier models, HUD, and UI elements now appear more quickly after deploying into a match.",
@@ -105,6 +107,7 @@
    ],
    "section": "maps",
    "items": [
+    "breakthrough",
     "tsuru-reef"
    ]
   },
@@ -184,7 +187,9 @@
     "PORTAL"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "css-bundle"
+   ]
   },
   {
    "text": "Corrected an issue on PC where certain NVIDIA GPUs could experience a driver crash when changing attachments on the SOR-300SC, using Custom Search, or playing on maps with large bodies of water.",

@@ -60,34 +60,45 @@
   {
    "text": "Adjusted an Escalation alternate spawn point near Objective B to prevent players from spawning high above the ground.",
    "heading": [
-    "MAPS & MODES"
+    "Railway to Golmud"
    ],
-   "section": "maps",
-   "items": []
+   "section": "misc",
+   "items": [
+    "escalation",
+    "railway-to-golmud"
+   ]
   },
   {
    "text": "Destroyed houses near Objective E in Conquest no longer leave floating debris behind.",
    "heading": [
-    "MAPS & MODES"
+    "Railway to Golmud"
    ],
-   "section": "maps",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest",
+    "railway-to-golmud"
+   ]
   },
   {
    "text": "Objective D in Conquest can no longer be captured from the top of the communications towers.",
    "heading": [
-    "MAPS & MODES"
+    "Railway to Golmud"
    ],
-   "section": "maps",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest",
+    "railway-to-golmud"
+   ]
   },
   {
    "text": "Resolved an issue where a placeholder Battle Royale loading screen image could appear.",
    "heading": [
-    "MAPS & MODES"
+    "Railway to Golmud"
    ],
-   "section": "maps",
-   "items": []
+   "section": "misc",
+   "items": [
+    "railway-to-golmud"
+   ]
   },
   {
    "text": "Updated the “Portal Next - Complex 3” description in Maps & Modes filters.",

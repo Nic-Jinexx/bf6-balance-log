@@ -32,7 +32,9 @@
     "PROGRESSION:"
    ],
    "section": "progression",
-   "items": []
+   "items": [
+    "assault"
+   ]
   },
   {
    "text": "Corrected an issue where the “Game Started” UI could be missing when joining Operation Augur after the match had already begun.",

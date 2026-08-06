@@ -6,7 +6,9 @@
   "subcategory": "deployables",
   "order": 6,
   "aliases": [
-    "vehicle supply crate"
+    "vehicle supply crate",
+    "engineers supply crate",
+    "supply crate"
   ],
   "blurb": "CSS Bundle",
   "class": "Engineer",
@@ -31,5 +33,6 @@
     }
   ],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "_alias_note": "EA calls it the \"Engineers Supply Crate\". Distinct from the Support class's Supply Bag, which is a different item."
 }

@@ -79,5 +79,9 @@
       "items": []
     }
   ],
-  "retired_paths": []
+  "retired_paths": [],
+  "tag_deny": [
+    "m4a1 slam"
+  ],
+  "_tag_deny_note": "The M4A1 SLAM is an anti-vehicle mine with its own page and has nothing to do with the M4A1 carbine beyond the designation."
 }

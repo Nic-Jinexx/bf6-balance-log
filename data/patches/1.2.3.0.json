@@ -185,7 +185,8 @@
    "text": "Added a new “Bad” Time Nudge network warning icon.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Networking & Hit Registration Improvements"
    ],
    "section": "player",
    "items": []
@@ -194,7 +195,8 @@
    "text": "Added value readouts to network warning icons when visible, including Packet Loss Up, Packet Loss Down, Time Nudge, High Latency, Latency Variation, and Server Tick Rate.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Networking & Hit Registration Improvements"
    ],
    "section": "player",
    "items": []
@@ -203,7 +205,8 @@
    "text": "Grenades are now correctly dropped if a player is killed while preparing a throw.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Networking & Hit Registration Improvements"
    ],
    "section": "player",
    "items": []
@@ -212,7 +215,8 @@
    "text": "Hit damage feedback audio now plays more promptly when taking incoming fire.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Networking & Hit Registration Improvements"
    ],
    "section": "player",
    "items": []
@@ -221,7 +225,8 @@
    "text": "Incoming hit audio has been fine-tuned so quick consecutive hits are clearer, especially during engagements against high rate of fire weapons.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Networking & Hit Registration Improvements"
    ],
    "section": "player",
    "items": []
@@ -230,7 +235,8 @@
    "text": "Network bandwidth usage has been optimised so more weapon data can be sent in a single update.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Networking & Hit Registration Improvements"
    ],
    "section": "player",
    "items": []
@@ -239,7 +245,8 @@
    "text": "Projectiles will no longer occasionally spawn at the wrong height during stance transitions under poor network conditions, which could previously lead to shots not registering.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Networking & Hit Registration Improvements"
    ],
    "section": "player",
    "items": []
@@ -248,7 +255,8 @@
    "text": "Trade-kill distance has been reduced to 30m from 50m to reduce cases where damage could be rejected during mid-range engagements.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Networking & Hit Registration Improvements"
    ],
    "section": "player",
    "items": []
@@ -257,7 +265,8 @@
    "text": "Visual bullet tracers now line up more reliably with the damage you receive.",
    "heading": [
     "CHANGELOG",
-    "PLAYER:"
+    "PLAYER:",
+    "Networking & Hit Registration Improvements"
    ],
    "section": "player",
    "items": []
@@ -385,17 +394,19 @@
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Extended Scout Helicopter light rocket ammo regeneration time from 21 to 27 seconds.",
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
    "items": [
@@ -407,7 +418,7 @@
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
    "items": [
@@ -419,51 +430,60 @@
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Grenade Launcher now has infinite reserve ammo.",
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Heavy Rotary Cannon falloff range shortened to 45m.",
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Heavy Rotary Cannon rate of fire from 1000 to 800 RPM.",
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Reduced lethal range of Attack Helicopter Heavy Rocket explosion from 2m to 1m",
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
    "items": [
-    "attack-helicopter"
+    "attack-helicopter",
+    "scout-helicopter"
    ]
   },
   {
@@ -471,11 +491,12 @@
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
    "items": [
-    "attack-helicopter"
+    "attack-helicopter",
+    "scout-helicopter"
    ]
   },
   {
@@ -483,7 +504,7 @@
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
    "items": [
@@ -495,11 +516,12 @@
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
    "items": [
-    "attack-helicopter"
+    "attack-helicopter",
+    "scout-helicopter"
    ]
   },
   {
@@ -507,10 +529,12 @@
    "heading": [
     "CHANGELOG",
     "VEHICLES:",
-    "RHIB"
+    "Scout Helicopter"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "scout-helicopter"
+   ]
   },
   {
    "text": "Added a missing recoil animation on the HTI-MK2",
@@ -584,7 +608,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "rpg-7v2"
+   ]
   },
   {
    "text": "Reduced turning response of AT4 and TOW Missiles",
@@ -613,13 +639,16 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "rpg-7v2"
+   ]
   },
   {
    "text": "Added third-person healing support while prone on your back. (you can now use the shot while on your back).",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "AJ-03 COAG Med Pen"
    ],
    "section": "gadgets",
    "items": []
@@ -628,7 +657,8 @@
    "text": "Lowered the intensity of the on-screen effect and visual presentation.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "AJ-03 COAG Med Pen"
    ],
    "section": "gadgets",
    "items": []
@@ -637,7 +667,8 @@
    "text": "Retimed the gameplay effect to better match the updated animation and audio.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "AJ-03 COAG Med Pen"
    ],
    "section": "gadgets",
    "items": []
@@ -646,7 +677,8 @@
    "text": "Shortened the injection animation.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "AJ-03 COAG Med Pen"
    ],
    "section": "gadgets",
    "items": []
@@ -655,7 +687,8 @@
    "text": "Updated the pen visual effects to better match the new animation.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "AJ-03 COAG Med Pen"
    ],
    "section": "gadgets",
    "items": []
@@ -664,7 +697,8 @@
    "text": "Added a low battery warning visual to better indicate battery shortage.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Protective Mask"
    ],
    "section": "gadgets",
    "items": []
@@ -673,7 +707,8 @@
    "text": "Corrected an issue where the mask could fade off the player’s face instead of playing its take-off animation when durability ran out while holding a melee weapon.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Protective Mask"
    ],
    "section": "gadgets",
    "items": []
@@ -682,91 +717,121 @@
    "text": "Added a progress crosshair UI while charging.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Defibrillators"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Damage now scales from 50 to 100 based on charge level, in 10-point increments.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Defibrillators"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Fixed cases where downed soldiers could not be revived when pressed into corners or when lying on stairs.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Defibrillators"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Full charge time has been increased to 1 second from 0.65 seconds.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Defibrillators"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Fully charged shocks now deal 100 damage again, up from 60.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Defibrillators"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Now use 3 charges that regenerate over time, with 1 charge restored every 4 seconds.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Defibrillators"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Now requires a 0.35 second charge before a revive can be performed.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Defibrillators"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "The rate of fire is slightly reduced.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Defibrillators"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Revives now restore between 50 and 100 health based on charge level, in 10-point increments.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Defibrillators"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Updated deploy timing so charging can begin faster after selecting the gadget.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Defibrillators"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "powerpulse"
+   ]
   },
   {
    "text": "Added the Ripper 14” Machete melee weapon as a part of the Hunter/Prey Battlepass Progression.",
@@ -1015,7 +1080,11 @@
     "PROGRESSION:"
    ],
    "section": "progression",
-   "items": []
+   "items": [
+    "breakthrough",
+    "conquest",
+    "escalation"
+   ]
   },
   {
    "text": "Corrected daily mission “Get kills and assists with Shotguns. Kills and Assists in Battle Royale counts triple.” so its in-game criteria now matches the design reference.",
@@ -1153,7 +1222,9 @@
     "PROGRESSION:"
    ],
    "section": "progression",
-   "items": []
+   "items": [
+    "assault"
+   ]
   },
   {
    "text": "Updated Multiplayer challenge licensing so MP-only OR challenges now display as locked for free-to-play users.",
@@ -1375,7 +1446,10 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "conquest",
+    "escalation"
+   ]
   },
   {
    "text": "Corrected the Featured row so \"^Test Tile\" no longer appears.",
@@ -2205,16 +2279,20 @@
    "text": "Corrected Granite Duo and Escalation Verified modes so placeholder titles and descriptions no longer appear in the Web App.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "escalation"
+   ]
   },
   {
    "text": "Corrected language selection so UK English, Australian English, and Chinese now display correctly in the Web App drop-down.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": []
@@ -2223,7 +2301,8 @@
    "text": "Corrected Hagental Base setup so \"Include Default Spatial Data\" is now available, preventing missing HQs.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": [
@@ -2234,7 +2313,8 @@
    "text": "Corrected Primary Weapon restriction behaviour so players no longer become unable to move after deploying.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": []
@@ -2243,7 +2323,8 @@
    "text": "Corrected profanity filtering so non-prohibited words are no longer censored.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": []
@@ -2252,7 +2333,8 @@
    "text": "Corrected the Experience Image button flow so it now works properly after resetting or refreshing an experience.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": []
@@ -2261,7 +2343,8 @@
    "text": "Corrected the Gauntlet Web Builder so the Mission tab is no longer accessible where it should not be.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": []
@@ -2270,7 +2353,8 @@
    "text": "Corrected the MapsItem block in Web App 1.2.1.0 so missing maps now appear correctly.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": []
@@ -2279,7 +2363,8 @@
    "text": "Corrected the Mission Order tab for Verified Gauntlet so it now functions correctly.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": []
@@ -2288,7 +2373,8 @@
    "text": "Corrected the Psy Gas Strike entry in Restrictions so it no longer uses placeholder icon and name.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": []
@@ -2297,7 +2383,8 @@
    "text": "Improved experience creation so importing spatial data no longer prevents experiences from being created.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": []
@@ -2306,7 +2393,8 @@
    "text": "Improved hosting stability for experiences using multiple Granite POIs with specific spatial data.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Builder & Web App"
    ],
    "section": "portal",
    "items": []
@@ -2315,7 +2403,8 @@
    "text": "Corrected OfficeBuilding_02_B so it now uses the proper mesh in the Spatial Editor.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Spatial Editor & Content"
    ],
    "section": "portal",
    "items": []
@@ -2324,7 +2413,8 @@
    "text": "Corrected the Fixed Camera asset so it now matches the in-game camera orientation.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Spatial Editor & Content"
    ],
    "section": "portal",
    "items": []
@@ -2333,7 +2423,8 @@
    "text": "Corrected the Community Concat function so it now behaves as intended.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Stability & Scripting"
    ],
    "section": "portal",
    "items": []
@@ -2342,7 +2433,8 @@
    "text": "Corrected overload mismatch errors so Emplacement Spawner functions now show the provided parameter list correctly.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Stability & Scripting"
    ],
    "section": "portal",
    "items": []
@@ -2351,7 +2443,8 @@
    "text": "Improved stability around transform tracker registration.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Stability & Scripting"
    ],
    "section": "portal",
    "items": []
@@ -2360,7 +2453,8 @@
    "text": "Improved stability around area-check validation.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Stability & Scripting"
    ],
    "section": "portal",
    "items": []
@@ -2369,7 +2463,8 @@
    "text": "Corrected SS26 restrictions so it no longer appears twice in the Restrictions tab.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Verified Experiences & Gauntlet"
    ],
    "section": "portal",
    "items": [
@@ -2380,7 +2475,8 @@
    "text": "Corrected the Verified Experience start flow so rounds can no longer begin without meeting the intended pre-round player requirement.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Verified Experiences & Gauntlet"
    ],
    "section": "portal",
    "items": []
@@ -2389,7 +2485,8 @@
    "text": "Corrected the Verified Gauntlet scoreboard so squads joining after the local squad now appear correctly during the match.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Verified Experiences & Gauntlet"
    ],
    "section": "portal",
    "items": []
@@ -2398,7 +2495,8 @@
    "text": "Improved hosting compatibility so Verified Experiences created on previous patches no longer return an unknown error.",
    "heading": [
     "CHANGELOG",
-    "PORTAL:"
+    "PORTAL:",
+    "Verified Experiences & Gauntlet"
    ],
    "section": "portal",
    "items": []
@@ -2504,7 +2602,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Reduced repetition on generic impact sounds for the Repair Tool.",
@@ -2513,7 +2613,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Enabled bot backfill support in Operations.",
@@ -2605,7 +2707,9 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": [],
+   "items": [
+    "assault"
+   ],
    "redsec": true
   },
   {
@@ -2672,29 +2776,36 @@
    "text": "Corrected C4 inventory behaviour so charges are now removed properly even when detonated without using the clacker.",
    "heading": [
     "REDSEC",
-    "GADGETS:"
+    "GADGETS:",
+    "Battle Royale"
    ],
    "section": "gadgets",
-   "items": [],
+   "items": [
+    "c-4"
+   ],
    "redsec": true
   },
   {
    "text": "Corrected C4 inventory behaviour so it is no longer removed unexpectedly.",
    "heading": [
     "REDSEC",
-    "GADGETS:"
+    "GADGETS:",
+    "Gauntlet"
    ],
-   "section": "gadgets",
-   "items": [],
+   "section": "maps",
+   "items": [
+    "c-4"
+   ],
    "redsec": true
   },
   {
    "text": "Corrected initial spawn beacons so they now sit properly on the ground.",
    "heading": [
     "REDSEC",
-    "GADGETS:"
+    "GADGETS:",
+    "Gauntlet"
    ],
-   "section": "gadgets",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
@@ -2816,7 +2927,8 @@
    "text": "Added icons to bunker entrances and exits.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2826,7 +2938,8 @@
    "text": "Updated local killfeed colours so free-to-play squadmates display correctly.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2836,7 +2949,8 @@
    "text": "Corrected Loot Card weapon zoom information so it now displays as intended.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2846,9 +2960,10 @@
    "text": "Updated the in-game Gauntlet presentation to better match the Battlefield Labs reference.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
@@ -2886,7 +3001,8 @@
    "text": "Corrected the Class Challenge for completing matches as a class so it now updates correctly without requiring a Battle Royale win.",
    "heading": [
     "REDSEC",
-    "PROGRESSION:"
+    "PROGRESSION:",
+    "Battle Royale"
    ],
    "section": "progression",
    "items": [],
@@ -2896,7 +3012,8 @@
    "text": "Corrected Weekly Challenge “Deal damage with gadgets, counts double in Battle Royale.” so gadget damage now awards the intended double-value progress.",
    "heading": [
     "REDSEC",
-    "PROGRESSION:"
+    "PROGRESSION:",
+    "Battle Royale"
    ],
    "section": "progression",
    "items": [],
@@ -2906,27 +3023,34 @@
    "text": "Corrected Weekly Challenge “Spot enemies and earn Spot Assists with Recon gadgets. Counts triple in Battle Royale.” so Battle Royale modes now award the intended triple progression.",
    "heading": [
     "REDSEC",
-    "PROGRESSION:"
+    "PROGRESSION:",
+    "Battle Royale"
    ],
    "section": "progression",
-   "items": [],
+   "items": [
+    "recon"
+   ],
    "redsec": true
   },
   {
    "text": "Corrected Weekly Challenge “Spot enemies and earn Spot Assists with Recon gadgets. Counts triple in Battle Royale.” so spotting with Recon gadgets now awards the intended triple-value progress.",
    "heading": [
     "REDSEC",
-    "PROGRESSION:"
+    "PROGRESSION:",
+    "Battle Royale"
    ],
    "section": "progression",
-   "items": [],
+   "items": [
+    "recon"
+   ],
    "redsec": true
   },
   {
    "text": "Improved End of Round Stats Cinematic weighting so players’ standout performances are highlighted more accurately.",
    "heading": [
     "REDSEC",
-    "PROGRESSION:"
+    "PROGRESSION:",
+    "Battle Royale"
    ],
    "section": "progression",
    "items": [],
@@ -2936,7 +3060,8 @@
    "text": "Increased the score awarded from kills and damage assists in Battle Royale by 50%.",
    "heading": [
     "REDSEC",
-    "PROGRESSION:"
+    "PROGRESSION:",
+    "Battle Royale"
    ],
    "section": "progression",
    "items": [],
@@ -2946,9 +3071,10 @@
    "text": "Corrected Weekly Challenge “Capture and Neutralize objectives in Multiplayer or Complete objectives in Gauntlet.” so objective completion now tracks correctly in supported Gauntlet modes.",
    "heading": [
     "REDSEC",
-    "PROGRESSION:"
+    "PROGRESSION:",
+    "Gauntlet"
    ],
-   "section": "progression",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
@@ -2956,9 +3082,10 @@
    "text": "Corrected the Gauntlet Special Forces Operator Challenge 4 progression flow so it now advances after reaching the intended unlock criteria.",
    "heading": [
     "REDSEC",
-    "PROGRESSION:"
+    "PROGRESSION:",
+    "Gauntlet"
    ],
-   "section": "progression",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
@@ -2966,9 +3093,10 @@
    "text": "Updated Weekly Mission “Complete matches in any mode.” so it now appears and tracks correctly in Multiplayer instead of only Gauntlet.",
    "heading": [
     "REDSEC",
-    "PROGRESSION:"
+    "PROGRESSION:",
+    "Gauntlet"
    ],
-   "section": "progression",
+   "section": "maps",
    "items": [],
    "redsec": true
   }

@@ -208,7 +208,9 @@
     "VEHICLES"
    ],
    "section": "vehicles",
-   "items": []
+   "items": [
+    "rpg-7v2"
+   ]
   },
   {
    "text": "Increased tank turret speed.",
@@ -444,7 +446,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Repair Tool and Defibrillators can now damage enemy gadgets.",
@@ -453,6 +457,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "engineer",
     "powerpulse"
    ]
   },
@@ -591,6 +596,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "engineer",
     "mbt-law"
    ]
   },
@@ -647,119 +653,130 @@
   {
    "text": "Missile trajectory updated to better reflect real-world behavior.",
    "heading": [
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
   {
    "text": "Two zoom levels introduced.",
    "heading": [
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
   {
    "text": "Can now lock on to stationary weapons and vehicles (AA, TOW, heavy MG).",
    "heading": [
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
   {
    "text": "Lock-on distance changed and now cannot lock onto targets closer than 40m.",
    "heading": [
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
   {
    "text": "Fixed clipping and reticle issues in the scope.",
    "heading": [
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
   {
    "text": "Blast damage now correctly applies to vehicles.",
    "heading": [
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
   {
    "text": "Hipfire crosshair no longer appears when aiming down sights.",
    "heading": [
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
   {
    "text": "LEDs now correctly show lock progress, thermal setting, and zoom level.",
    "heading": [
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
   {
    "text": "Field of view now transitions more smoothly when zooming.",
    "heading": [
-    "MBT-LAW"
+    "MAS 148 Glaive"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "mas-148",
     "mbt-law"
    ]
   },
   {
    "text": "Gadget can no longer lock on to air vehicles below radar level.",
    "heading": [
-    "MBT-LAW"
+    "SLM-93A Spire"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
-    "mbt-law"
+    "mbt-law",
+    "slm-93a"
    ]
   },
   {
    "text": "Fixed an issue where missiles sometimes did not deal damage.",
    "heading": [
-    "MBT-LAW"
+    "SLM-93A Spire"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
-    "mbt-law"
+    "mbt-law",
+    "slm-93a"
    ]
   },
   {
    "text": "The projectile now detonates on collision.",
    "heading": [
-    "MBT-LAW"
+    "Airburst Incendiary"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "mbt-law"
    ]
@@ -767,9 +784,9 @@
   {
    "text": "The projectile now credits the correct damage owner in kill feed and cards.",
    "heading": [
-    "MBT-LAW"
+    "Airburst Incendiary"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "mbt-law"
    ]
@@ -777,9 +794,9 @@
   {
    "text": "The projectiles deal less structural damage (more hits required to destroy facades).",
    "heading": [
-    "MBT-LAW"
+    "Airburst Incendiary"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "mbt-law"
    ]
@@ -787,9 +804,9 @@
   {
    "text": "Gadget now cannot be aimed down sights while reloading.",
    "heading": [
-    "MBT-LAW"
+    "Airburst Incendiary"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "mbt-law"
    ]
@@ -797,9 +814,9 @@
   {
    "text": "Blast and shockwave radius are now aligned with destruction values.",
    "heading": [
-    "MBT-LAW"
+    "Airburst Incendiary"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "mbt-law"
    ]
@@ -807,9 +824,9 @@
   {
    "text": "Smoke from the Airburst Incendiary now blocks spotting and lock-ons for soldiers and vehicles.",
    "heading": [
-    "MBT-LAW"
+    "Airburst Incendiary"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "mbt-law"
    ]
@@ -817,9 +834,9 @@
   {
    "text": "Sight size no longer scales incorrectly with field of view.",
    "heading": [
-    "MBT-LAW"
+    "Bravo3"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "mbt-law"
    ]
@@ -857,109 +874,119 @@
   {
    "text": "Spotting angle and maximum spotting distance in binocular mode have been made more forgiving.",
    "heading": [
-    "SS26"
+    "LTLM II (Portable Laser Designator)"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "ltlm-ii",
     "ss26"
    ]
   },
   {
    "text": "Can no longer laser paint the environment.",
    "heading": [
-    "SS26"
+    "LTLM II (Portable Laser Designator)"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "ltlm-ii",
     "ss26"
    ]
   },
   {
    "text": "Now removes laser paint marks when a vehicle enters thermal smoke.",
    "heading": [
-    "SS26"
+    "LTLM II (Portable Laser Designator)"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "ltlm-ii",
     "ss26"
    ]
   },
   {
    "text": "Now correctly spots vehicles when laser painting them.",
    "heading": [
-    "SS26"
+    "LTLM II (Portable Laser Designator)"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "ltlm-ii",
     "ss26"
    ]
   },
   {
    "text": "Thermal view toggle now updates the UI correctly.",
    "heading": [
-    "SS26"
+    "LTLM II (Portable Laser Designator)"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "ltlm-ii",
     "ss26"
    ]
   },
   {
    "text": "Zoom now activates instantly and returns to your previous zoom level.",
    "heading": [
-    "SS26"
+    "LTLM II (Portable Laser Designator)"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "ltlm-ii",
     "ss26"
    ]
   },
   {
    "text": "Deploy animation now plays correctly.",
    "heading": [
-    "SS26"
+    "LTLM II (Portable Laser Designator)"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "ltlm-ii",
     "ss26"
    ]
   },
   {
    "text": "Will now rotate properly for other players when deployed.",
    "heading": [
-    "SS26"
+    "LTLM II (Portable Laser Designator)"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "ltlm-ii",
     "ss26"
    ]
   },
   {
    "text": "Improved the Game Hint to show RMB (Zoom) instead of E/R (Interact/Reload).",
    "heading": [
-    "SS26"
+    "LTLM II (Portable Laser Designator)"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "ltlm-ii",
     "ss26"
    ]
   },
   {
    "text": "Now allows only one spawn per player (4 per squad total) before self-destruct.",
    "heading": [
-    "SS26"
+    "Deploy Beacon"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "qlink-6",
     "ss26"
    ]
   },
   {
    "text": "Enemy Deploy Beacons now display an icon on the minimap when pinged.",
    "heading": [
-    "SS26"
+    "Deploy Beacon"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "qlink-6",
     "ss26"
@@ -968,10 +995,11 @@
   {
    "text": "Can now be deployed at a soldier’s feet if the original location is blocked.",
    "heading": [
-    "SS26"
+    "Deploy Beacon"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
+    "qlink-6",
     "ss26"
    ]
   },
@@ -994,74 +1022,95 @@
   {
    "text": "Now flies faster when carrying C4, but battery drains faster as a trade-off.",
    "heading": [
-    "T-UGS"
+    "XFGM-6D Recon Drone"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "c-4",
+    "xfgm-6d"
+   ]
   },
   {
    "text": "No longer receives unwanted force when carrying C4, making flight smoother.",
    "heading": [
-    "T-UGS"
+    "XFGM-6D Recon Drone"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "c-4",
+    "xfgm-6d"
+   ]
   },
   {
    "text": "Movement improved for a more realistic feel.",
    "heading": [
-    "T-UGS"
+    "XFGM-6D Recon Drone"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "xfgm-6d"
+   ]
   },
   {
    "text": "The Drone now self-destructs after 3 seconds when flown out of bounds.",
    "heading": [
-    "T-UGS"
+    "XFGM-6D Recon Drone"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "xfgm-6d"
+   ]
   },
   {
    "text": "Can no longer be picked up once deployed.",
    "heading": [
-    "T-UGS"
+    "Supply Pouch"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "goliath-compact"
+   ]
   },
   {
    "text": "No longer restores health to vehicles.",
    "heading": [
-    "T-UGS"
+    "Supply Pouch"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "goliath-compact"
+   ]
   },
   {
    "text": "No longer pushes players into map geometry.",
    "heading": [
-    "T-UGS"
+    "Supply Pouch"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "goliath-compact"
+   ]
   },
   {
    "text": "Now follows the same ping rules as repair stations (VO, ping log, icon).",
    "heading": [
-    "T-UGS"
+    "Supply Pouch"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "goliath-compact"
+   ]
   },
   {
    "text": "Now resupplies as intended and grants one additional C4 as overstock.",
    "heading": [
-    "T-UGS"
+    "Supply Pouch"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "c-4",
+    "goliath-compact"
+   ]
   },
   {
    "text": "General recoil adjustments across multiple weapons.",
@@ -1135,7 +1184,9 @@
     "MAPS & MODES"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "rush"
+   ]
   },
   {
    "text": "Several Breakthrough layouts have been updated based on Open Beta feedback.",
@@ -1143,7 +1194,9 @@
     "MAPS & MODES"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "breakthrough"
+   ]
   },
   {
    "text": "Fixed spawn killing issues on Siege of Cairo.",
@@ -1326,7 +1379,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "support"
+   ]
   },
   {
    "text": "Navigation controls on the deploy screen and big map have been improved.",
@@ -1470,7 +1525,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "c-4"
+   ]
   },
   {
    "text": "Air vehicle resupply stations now have a clear in-world icon.",
@@ -1862,7 +1919,9 @@
     "AUDIO"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "assault"
+   ]
   },
   {
    "text": "Fixed an issue where flares audio was not playing for the UH-79 gunner seat.",

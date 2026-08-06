@@ -8,7 +8,9 @@
     "New Map: Contaminated"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "contaminated"
+   ]
   },
   {
    "text": "Includes land vehicles and helicopters",
@@ -16,7 +18,9 @@
     "New Map: Contaminated"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "contaminated"
+   ]
   },
   {
    "text": "Available across Conquest, Breakthrough, Escalation, Squad Death Match, and Strikepoint",
@@ -24,7 +28,12 @@
     "New Map: Contaminated"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "breakthrough",
+    "conquest",
+    "contaminated",
+    "escalation"
+   ]
   },
   {
    "text": "AH-6 Little Bird: The iconic attack helicopter returns for NATO forces, offering high mobility and lethal firepower in skilled hands.",
@@ -74,7 +83,8 @@
    ],
    "section": "gadgets",
    "items": [
-    "9k38-igla"
+    "9k38-igla",
+    "engineer"
    ]
   },
   {
@@ -135,7 +145,10 @@
     "Major Updates for 1.2.1.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "breakthrough",
+    "conquest"
+   ]
   },
   {
    "text": "UI, HUD and Progression Polish: Introducing a new stat screen in the Player Profile, as well as Improved clarity and reliability across the HUD, Battle Pass, challenges, End of Round flow, matchmaking, and party systems.",
@@ -359,7 +372,9 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "king-of-the-hill"
+   ]
   },
   {
    "text": "Fixed an issue where unlocking characters via the Battle Pass deeplink would not correctly unlock the character.",
@@ -639,7 +654,8 @@
    ],
    "section": "gadgets",
    "items": [
-    "mbt-law"
+    "mbt-law",
+    "rpg-7v2"
    ]
   },
   {
@@ -650,7 +666,8 @@
    ],
    "section": "gadgets",
    "items": [
-    "m18"
+    "m18",
+    "support"
    ]
   },
   {
@@ -693,7 +710,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Fixed an issue where the Repair Tool would not repair vehicles when targeting glass components.",
@@ -702,7 +721,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Fixed an issue where the RPG-7 could fire unintentionally when switching weapons after releasing the trigger.",
@@ -711,7 +732,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "rpg-7v2"
+   ]
   },
   {
    "text": "Fixed a bug that prevent the player from returning properly to the previous weapon after throwing a supply pouch and would keep throwing more supply pouches",
@@ -1130,7 +1153,8 @@
    ],
    "section": "maps",
    "items": [
-    "mirak-valley"
+    "mirak-valley",
+    "rush"
    ]
   },
   {
@@ -1141,6 +1165,7 @@
    ],
    "section": "maps",
    "items": [
+    "escalation",
     "operation-firestorm"
    ]
   },
@@ -1202,43 +1227,56 @@
    "text": "Fixed an issue where destroying a garage by D objective could trigger a whiteout effect across the map.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Manhattan Bridge"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "manhattan-bridge"
+   ]
   },
   {
    "text": "Fixed an issue where destroying an office building by F objective could incorrectly trigger a blackout and cause other players to see random colors and bright lights across the map.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Manhattan Bridge"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "manhattan-bridge"
+   ]
   },
   {
    "text": "Fixed an issue where destroying parts of a plaster ridge at C objective could expose occlusion problems, causing large sections of the map to disappear when viewed from certain positions.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Manhattan Bridge"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "manhattan-bridge"
+   ]
   },
   {
    "text": "Fixed an issue where players could stand on top of the bridge, creating unintended gameplay advantages.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Manhattan Bridge"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "manhattan-bridge"
+   ]
   },
   {
    "text": "Fixed an issue where points of interest on the minimap were incorrectly labelled as “Dumbo” instead of Manhattan Bridge.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Manhattan Bridge"
    ],
    "section": "maps",
    "items": [
@@ -1249,19 +1287,25 @@
    "text": "Fixed an issue where players could capture Point B (Sector 2) on Breakthrough from an unintended upper floor.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Empire State"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "breakthrough",
+    "empire-state"
+   ]
   },
   {
    "text": "Fixed an issue where players could place the Assault Ladder on invisible collision near the NATO HQ.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Empire State"
    ],
    "section": "maps",
    "items": [
+    "empire-state",
     "tarantula-alx"
    ]
   },
@@ -1269,16 +1313,20 @@
    "text": "Fixed an issue where players could reach unintended areas above the D flag after being launched into the air.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Empire State"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "empire-state"
+   ]
   },
   {
    "text": "Fixed an issue on Liberation Peak, Operation Firestorm, and Iberian Offensive where multiple world and vehicle assets would not restore correctly after the halftime world reset.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Strikepoint"
    ],
    "section": "maps",
    "items": [
@@ -1291,7 +1339,8 @@
    "text": "Fixed an issue where matches could end prematurely when teams were tied at 5:5.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Strikepoint"
    ],
    "section": "maps",
    "items": []
@@ -1300,7 +1349,8 @@
    "text": "Fixed an issue where players joining a match late could spawn under the map.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Strikepoint"
    ],
    "section": "maps",
    "items": []
@@ -1309,7 +1359,8 @@
    "text": "Fixed a rare issue where a wiped team could be incorrectly awarded a point.",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Strikepoint"
    ],
    "section": "maps",
    "items": []
@@ -1318,10 +1369,12 @@
    "text": "Manhattan Bridge",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Conquest"
    ],
    "section": "maps",
    "items": [
+    "conquest",
     "manhattan-bridge"
    ]
   },
@@ -1329,10 +1382,12 @@
    "text": "Operation Firestorm",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Conquest"
    ],
    "section": "maps",
    "items": [
+    "conquest",
     "operation-firestorm"
    ]
   },
@@ -1340,10 +1395,12 @@
    "text": "New Sobek City",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Conquest"
    ],
    "section": "maps",
    "items": [
+    "conquest",
     "new-sobek-city"
    ]
   },
@@ -1351,10 +1408,12 @@
    "text": "Mirak Valley",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Conquest"
    ],
    "section": "maps",
    "items": [
+    "conquest",
     "mirak-valley"
    ]
   },
@@ -1362,10 +1421,12 @@
    "text": "Manhattan Bridge",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Escalation"
    ],
    "section": "maps",
    "items": [
+    "escalation",
     "manhattan-bridge"
    ]
   },
@@ -1373,21 +1434,25 @@
    "text": "Eastwood",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Escalation"
    ],
    "section": "maps",
    "items": [
-    "eastwood"
+    "eastwood",
+    "escalation"
    ]
   },
   {
    "text": "Operation Firestorm",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Escalation"
    ],
    "section": "maps",
    "items": [
+    "escalation",
     "operation-firestorm"
    ]
   },
@@ -1395,10 +1460,12 @@
    "text": "New Sobek City",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Escalation"
    ],
    "section": "maps",
    "items": [
+    "escalation",
     "new-sobek-city"
    ]
   },
@@ -1406,10 +1473,12 @@
    "text": "Mirak Valley",
    "heading": [
     "CHANGELOG",
-    "MAPS & MODES:"
+    "MAPS & MODES:",
+    "Escalation"
    ],
    "section": "maps",
    "items": [
+    "escalation",
     "mirak-valley"
    ]
   },
@@ -1483,7 +1552,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Fixed a localisation issue where the Loadout Zeroing and Attachment prompts could overlap in several languages.",
@@ -1811,7 +1882,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Fixed missing or incorrect game mode tiles appearing on launch or after finishing a match.",
@@ -2229,7 +2302,9 @@
     "AUDIO:"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Improved audibility of enemy ziplines and parachutes, as well as friendly blowtorches, when many sounds are playing.",
@@ -2472,7 +2547,8 @@
    "text": "Fixed an issue where helicopter insertion flight paths on the Big Map could become misaligned when the helicopter or endpoint icons were off-screen.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2482,7 +2558,8 @@
    "text": "Fixed an issue where the Decryption Beacon displayed an incorrect texture.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2492,7 +2569,8 @@
    "text": "Fixed an issue where the loot feed could incorrectly increment the number looted when picking up the same item repeatedly.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2502,7 +2580,8 @@
    "text": "Fixed an issue where players could toggle flashlight and laser attachments while navigating the inventory.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2512,7 +2591,8 @@
    "text": "Fixed an issue where the UAV icon was too small on the minimap and big map.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2522,7 +2602,8 @@
    "text": "Fixed multiple issues with the Second Chance UI, including incorrect timers, widgets persisting after squad wipes, and incorrect visibility when players left the match.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2532,7 +2613,8 @@
    "text": "Removed outdated soldier voice-over lines referencing “supply drops” when pinging crates or supply vehicles.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -2542,9 +2624,10 @@
    "text": "Fixed an issue where the Beacon Pulse icon could appear too far away when first picked up by an enemy.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
@@ -2552,9 +2635,10 @@
    "text": "Fixed an issue where the countdown icon on the Mobile Respawn gadget could disappear too early.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
@@ -2562,9 +2646,10 @@
    "text": "Fixed overlapping UI elements when rapidly exiting the Edit Loadout menu.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
@@ -2572,9 +2657,10 @@
    "text": "Fixed overlapping UI elements where “Random Deploy” could appear behind class selection buttons on the redeploy screen.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },

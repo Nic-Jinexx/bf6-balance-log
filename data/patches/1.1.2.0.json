@@ -128,7 +128,9 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "assault"
+   ]
   },
   {
    "text": "Fixed an issue where weapons could become invisible when crouching before vaulting.",
@@ -184,7 +186,10 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "assault",
+    "rush"
+   ]
   },
   {
    "text": "Fixed incorrect prone aiming angles on slopes.",
@@ -565,7 +570,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "recon"
+   ]
   },
   {
    "text": "Fixed broken M320A1 Grenade Launcher ground model.",
@@ -581,7 +588,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "c-4"
+   ]
   },
   {
    "text": "Fixed clipping of the UAV remote when activating it while using certain weapons like rifles.",
@@ -632,6 +641,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "c-4",
     "m4a1-slam"
    ]
   },
@@ -700,7 +710,9 @@
     "GADGETS:"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "c-4"
+   ]
   },
   {
    "text": "Fixed MP-APS smoke-propagation failure between friendlies.",
@@ -768,7 +780,10 @@
    ],
    "section": "maps",
    "items": [
-    "qlink-6"
+    "domination",
+    "king-of-the-hill",
+    "qlink-6",
+    "team-deathmatch"
    ]
   },
   {
@@ -849,7 +864,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "assault"
+   ]
   },
   {
    "text": "Fixed incorrect colour usage on squad-mate health bars.",

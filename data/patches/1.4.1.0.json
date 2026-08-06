@@ -48,7 +48,9 @@
     "Major Updates for 1.4.1.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "obliteration"
+   ]
   },
   {
    "text": "REDSEC and Ranked Battle Royale Polish: REDSEC receives further polish to improve match flow, scoring, and navigation, while Ranked Battle Royale End of Round updates make RP changes clearer and easier to follow.",
@@ -238,7 +240,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "rpg-7v2"
+   ]
   },
   {
    "text": "The EOD Bot Arm and the Sledgehammer can no longer be used while swimming.",
@@ -325,7 +329,9 @@
     "MAPS & MODES"
    ],
    "section": "maps",
-   "items": []
+   "items": [
+    "obliteration"
+   ]
   },
   {
    "text": "Operation Firestorm Team Death Match spawn points have been adjusted to prevent players from spawning inside objects.",
@@ -354,7 +360,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "obliteration"
+   ]
   },
   {
    "text": "Category icons now appear correctly in the Challenges menu during gameplay.",
@@ -408,7 +416,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "obliteration"
+   ]
   },
   {
    "text": "Interior map details now appear correctly on the minimap.",
@@ -592,7 +602,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "obliteration"
+   ]
   },
   {
    "text": "The Challenges button has been removed from the in-game attachment screen to prevent UI overlap.",
@@ -758,7 +770,9 @@
     "PORTAL"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "breakthrough"
+   ]
   },
   {
    "text": "Corrected errors that could occur when publishing the Moving Platform Example.",
@@ -868,7 +882,9 @@
     "AUDIO"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "obliteration"
+   ]
   },
   {
    "text": "Added female soldier voice-over lines for drowning and surfacing.",
@@ -886,7 +902,9 @@
     "AUDIO"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "obliteration"
+   ]
   },
   {
    "text": "Added new Season 4 Battle Pass radio station music.",
@@ -913,7 +931,9 @@
     "AUDIO"
    ],
    "section": "audio",
-   "items": []
+   "items": [
+    "obliteration"
+   ]
   },
   {
    "text": "Corrected a phasing issue with stationary launcher audio while aiming down sights.",

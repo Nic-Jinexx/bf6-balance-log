@@ -30,5 +30,9 @@
   ],
   "related": [],
   "retired_paths": [],
-  "_unlock_note": "Unlock recorded 2026-08-02 from Battlefield 6's own in-game unlock and challenge data. Not from the screenshot cited above: unlock text only displays in-game on items the account does not own."
+  "_unlock_note": "Unlock recorded 2026-08-02 from Battlefield 6's own in-game unlock and challenge data. Not from the screenshot cited above: unlock text only displays in-game on items the account does not own.",
+  "tag_deny": [
+    "eod bot arm"
+  ],
+  "_tag_deny_note": "The EOD Bot Arm is a melee weapon with its own page, not the EOD Bot gadget."
 }

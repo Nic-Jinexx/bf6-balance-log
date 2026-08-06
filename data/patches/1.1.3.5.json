@@ -179,6 +179,7 @@
    ],
    "section": "gadgets",
    "items": [
+    "engineer",
     "powerpulse",
     "xfgm-6d"
    ]
@@ -198,28 +199,37 @@
    "text": "Fixed an issue where ladders positioned above the player could not be entered.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Assault Ladder"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "tarantula-alx"
+   ]
   },
   {
    "text": "Fixed an issue where soldiers could be launched unexpectedly when attempting to enter a ladder.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Assault Ladder"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "tarantula-alx"
+   ]
   },
   {
    "text": "Improved the soldier animations while climbing ladders.",
    "heading": [
     "CHANGELOG",
-    "GADGETS:"
+    "GADGETS:",
+    "Assault Ladder"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "tarantula-alx"
+   ]
   },
   {
    "text": "Added a new option allowing players to customize the reticle colour inside weapon and gadget scopes.",
@@ -308,7 +318,8 @@
    "text": "Fixed an issue where the armor bar could disappear intermittently.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -318,7 +329,8 @@
    "text": "Fixed an issue where the Airburst Incendiary Launcher icon appeared as a grenade in the loot feed.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Battle Royale"
    ],
    "section": "ui",
    "items": [],
@@ -328,9 +340,10 @@
    "text": "Fixed an issue where the armor bar could disappear after quickly editing a loadout.",
    "heading": [
     "REDSEC",
-    "UI & HUD:"
+    "UI & HUD:",
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   }

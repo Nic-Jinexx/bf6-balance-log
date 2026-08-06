@@ -1,0 +1,43 @@
+name: Verify build and tag coverage
+
+# The safety net. Until now every check was something a person had to remember
+# to run, which is how the classes and modes shipped on 2026-08-05 with 141
+# patch lines that named them and pointed nowhere, and how EA's mixed-case
+# sub-headings went unnoticed for 15 patches.
+#
+# check_tags.py is the one that closes the loop in both directions: a new patch
+# is matched against every existing item, and a newly added item is matched
+# against every existing patch. Neither can slip past silently again.
+
+on:
+  push:
+    branches: [main, database]
+  pull_request:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # No pip install anywhere: every script here is stdlib-only, on purpose.
+
+      - name: Every EA bullet still present, verbatim
+        run: python scripts/build_patch_data.py --check
+
+      - name: index.html matches the patch data
+        run: python scripts/render_patches.py --check
+
+      - name: Item pages, sitemap and search index are fresh
+        run: python scripts/build_pages.py --check
+
+      - name: No patch line names an item without being tagged to it
+        run: python scripts/check_tags.py --check

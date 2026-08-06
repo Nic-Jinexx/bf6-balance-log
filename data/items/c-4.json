@@ -6,7 +6,9 @@
   "subcategory": "deployables",
   "order": 14,
   "aliases": [
-    "demolition charge"
+    "demolition charge",
+    "c-4",
+    "c4"
   ],
   "blurb": "Demolition Charge",
   "class": "Recon",
@@ -31,5 +33,6 @@
     }
   ],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "_alias_note": "EA writes \"C-4 packs\" and bare \"C-4\" more often than the full display name, which is why those lines used to land nowhere."
 }

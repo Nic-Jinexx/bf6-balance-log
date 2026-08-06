@@ -105,7 +105,15 @@ def build_patterns(items):
     """
     pats = {}
     for slug, item in items.items():
-        forms = [item["name"]] + (item.get("aliases") or [])
+        # `tag_name: false` drops the bare display name from matching, for items
+        # whose name is ordinary English -- the Support class matched 35 lines
+        # about DLSS support and bot support. `tag_deny` masks specific phrases
+        # that wear another item's name. Both are read by scripts/check_tags.py
+        # too; the two matchers must agree or a regenerate re-adds exactly the
+        # tags the review pass rejected.
+        forms = list(item.get("aliases") or [])
+        if item.get("tag_name", True):
+            forms = [item["name"]] + forms
         alts, probes = [], []
         for form in forms:
             core = re.sub(r"[^A-Za-z0-9]+", " ", form).strip()
@@ -120,7 +128,18 @@ def build_patterns(items):
                 r"(?<![A-Za-z0-9])(?:"
                 + "|".join(sorted(alts, key=len, reverse=True))
                 + r")s?(?![A-Za-z0-9])", re.I)
-            pats[slug] = (rx, tuple(dict.fromkeys(probes)))
+            deny = None
+            phrases = item.get("tag_deny") or []
+            if phrases:
+                deny = re.compile(
+                    "|".join(
+                        r"(?<![A-Za-z0-9])"
+                        + r"[\s\-\./]*".join(
+                            re.escape(c) for c in
+                            re.sub(r"[^A-Za-z0-9]+", " ", p).strip().split())
+                        + r"s?(?![A-Za-z0-9])"
+                        for p in sorted(phrases, key=len, reverse=True)), re.I)
+            pats[slug] = (rx, tuple(dict.fromkeys(probes)), deny)
     return pats
 
 
@@ -133,10 +152,15 @@ def match_slugs(text, pats):
     """
     low = text.lower()
     spans = []
-    for slug, (rx, probes) in pats.items():
+    for slug, (rx, probes, deny) in pats.items():
         if not any(p in low for p in probes):
             continue
-        for m in rx.finditer(text):
+        hay = text
+        if deny:
+            # blank the denied phrases, keeping offsets so the containment
+            # check below still lines up with the original string
+            hay = deny.sub(lambda m: " " * len(m.group(0)), hay)
+        for m in rx.finditer(hay):
             spans.append((m.start(), m.end(), slug))
     keep = set()
     for start, end, slug in spans:
@@ -185,6 +209,18 @@ def records_for(version, items, pats, refresh=False):
         slugs = match_slugs(text, pats)
         if heading_slug:
             slugs.add(heading_slug)
+        # EA names an item once, in a sub-heading, then lists its changes as
+        # bare bullets that never repeat the name -- the same shape as the
+        # map-name headings that once hid the Golmud change. ITEM_HEADINGS only
+        # covers labels someone thought to add by hand, so match the deepest
+        # heading against the items themselves and let every bullet under it
+        # inherit that. This is what attaches "Damage against tanks has been
+        # updated to 390" to the M15 AV Mine.
+        for label in reversed(row["heading"]):
+            inherited = match_slugs(label, pats)
+            if inherited:
+                slugs |= inherited
+                break
         rec = {
             "text": text,
             "heading": row["heading"],

@@ -11,6 +11,7 @@
    "items": [
     "cairo-bazaar",
     "manet-dis-5",
+    "obliteration",
     "pp-19"
    ]
   },
@@ -20,7 +21,9 @@
     "Major Updates for 1.3.2.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "obliteration"
+   ]
   },
   {
    "text": "Battle Royale and Gauntlet Improvements : Mission behaviour, Threat Tracker accuracy, loot readability, Insertion Helicopter spacing, Airdrop stability, Tank Containers, Heist Caches, and Rodeo scoring have all been updated for a smoother match flow.",
@@ -47,6 +50,7 @@
    "items": [
     "c-4",
     "csb-iv",
+    "engineer",
     "lwcms",
     "m18",
     "mas-148",
@@ -68,7 +72,8 @@
    ],
    "section": "summary",
    "items": [
-    "cairo-bazaar"
+    "cairo-bazaar",
+    "conquest"
    ]
   },
   {
@@ -87,7 +92,9 @@
     "PLAYER"
    ],
    "section": "player",
-   "items": []
+   "items": [
+    "support"
+   ]
   },
   {
    "text": "Teammates being revived now detach properly if they are killed during Drag and Revive.",
@@ -339,19 +346,23 @@
    "text": "High Velocity Rockets have extremely limited guidance, but are fired rapidly with a higher velocity than other rockets. They require good aim to be effective, but have a higher potential damage output than other options.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES"
+    "New secondary weapon options for Mobile Anti-Air"
    ],
-   "section": "vehicles",
-   "items": []
+   "section": "misc",
+   "items": [
+    "mobile-anti-air"
+   ]
   },
   {
    "text": "Aim Guided Anti-Air Missiles carry smaller payloads than the aim guided weapons on other vehicles, but make up for it with substantially improved velocity and maneuverability.",
    "heading": [
     "CHANGELOG",
-    "VEHICLES"
+    "New secondary weapon options for Mobile Anti-Air"
    ],
-   "section": "vehicles",
-   "items": []
+   "section": "misc",
+   "items": [
+    "mobile-anti-air"
+   ]
   },
   {
    "text": "C-4 detonations triggered with a Drone now award XP.",
@@ -360,7 +371,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "c-4"
+   ]
   },
   {
    "text": "Corrected an issue where the repair tool would get stuck when activating the Engineer's Field Upgrade Ability.",
@@ -369,7 +382,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "CSB IV EOD Bot mines can no longer be placed within 5m of another EOD Bot mine, M15 AV Mine, or M4A1 SLAM.",
@@ -413,7 +428,10 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "engineer",
+    "recon"
+   ]
   },
   {
    "text": "Enemy gadgets destroyed with the Repair Tool now award score as intended.",
@@ -422,7 +440,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "Hardware Suppression System now plays the intended weapon locomotion animations when moving while zoomed.",
@@ -537,36 +557,42 @@
    "text": "Health has been reduced from 250 to 50.",
    "heading": [
     "CHANGELOG",
-    "GADGETS"
+    "LWCMS Portable Mortar"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "lwcms"
+   ]
   },
   {
    "text": "Placement animations now end correctly in first and third person when placement is unsuccessful.",
    "heading": [
     "CHANGELOG",
-    "GADGETS"
+    "LWCMS Portable Mortar"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "lwcms"
+   ]
   },
   {
    "text": "Placement no longer causes leg desync in third person.",
    "heading": [
     "CHANGELOG",
-    "GADGETS"
+    "LWCMS Portable Mortar"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "lwcms"
+   ]
   },
   {
    "text": "Portable Mortar play has been adjusted to encourage more mobile deployment and repositioning. It is now easier to fire and relocate, while static placement is more vulnerable and easier to counter.",
    "heading": [
     "CHANGELOG",
-    "GADGETS"
+    "LWCMS Portable Mortar"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "lwcms"
    ]
@@ -575,36 +601,42 @@
    "text": "Replenish time has been increased from 10s to 30s.",
    "heading": [
     "CHANGELOG",
-    "GADGETS"
+    "LWCMS Portable Mortar"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "lwcms"
+   ]
   },
   {
    "text": "The “Enter” prompt radius has been decreased from 1.5m to 1m.",
    "heading": [
     "CHANGELOG",
-    "GADGETS"
+    "LWCMS Portable Mortar"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "lwcms"
+   ]
   },
   {
    "text": "The “Pick Up” prompt radius has been increased from 1.5m minimum to 1m minimum.",
    "heading": [
     "CHANGELOG",
-    "GADGETS"
+    "LWCMS Portable Mortar"
    ],
-   "section": "gadgets",
-   "items": []
+   "section": "misc",
+   "items": [
+    "lwcms"
+   ]
   },
   {
    "text": "The Portable Mortar and Missile Intercept System can no longer be equipped together.",
    "heading": [
     "CHANGELOG",
-    "GADGETS"
+    "LWCMS Portable Mortar"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "lwcms",
     "mp-aps"
@@ -614,9 +646,9 @@
    "text": "The Portable Mortar and Missile Intercept System can no longer be placed near each other.",
    "heading": [
     "CHANGELOG",
-    "GADGETS"
+    "LWCMS Portable Mortar"
    ],
-   "section": "gadgets",
+   "section": "misc",
    "items": [
     "lwcms",
     "mp-aps"
@@ -823,6 +855,7 @@
    ],
    "section": "maps",
    "items": [
+    "escalation",
     "mirak-valley"
    ]
   },
@@ -1047,7 +1080,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "assault"
+   ]
   },
   {
    "text": "Loadouts menu text layout has been improved to prevent overlap.",
@@ -1170,7 +1205,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "engineer"
+   ]
   },
   {
    "text": "The Big Map and deploy map now support rendering underground areas.",
@@ -1515,91 +1552,110 @@
    "text": "Air Combat Logic has been removed, as it is no longer required with Surrounding Combat Area functionality now working.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Air vehicles can now access the official surrounding combat area.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Andy’s Custom Conquest Template has been updated in the official SDK to version 10.0.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Bots now support the Conquest Assault logic.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Bots will now leave vehicles if they are unable to continue driving.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Complex 3 has been added, with special thanks to Mancour.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Conquest Assault toggle has been added.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Custom out-of-bounds logic has been kept for backward compatibility.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Dirt Bikes have been added to select maps.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Hagental Base has been added.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
+   "section": "misc",
    "items": [
+    "conquest",
     "hagental-base"
    ]
   },
@@ -1607,64 +1663,78 @@
    "text": "New Prefab Spatial has been included, containing essentials that can be copied into any map and edited.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Night Vision Goggles toggle has been added for players.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Spatial maps have been updated for the new HQ and Surrounding Combat Area logic.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "Starting tickets per team have been added for Conquest Assault.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "The template now uses official Combat Area, official Surrounding Combat Area, and official Exclusive HQ areas.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "UI no longer flashes when players join.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "UI now clears when undeploying in rare cases where the exit capture point does not trigger the player UI to clear.",
    "heading": [
     "CHANGELOG",
-    "PORTAL"
+    "ViperStudiosAndy Portal Custom Conquest Template"
    ],
-   "section": "portal",
-   "items": []
+   "section": "misc",
+   "items": [
+    "conquest"
+   ]
   },
   {
    "text": "New behaviours for crawl speed audio have been added for Quad Bikes, ATP Vehicles, Golf Carts, and Armored Transport Vehicles, as well as a finer tuning of the Vector, Flyer 60, and Jeep/Truck crawl speed behaviours.",
@@ -1718,9 +1788,9 @@
    "text": "“Evasion” and “Headhunter” missions now complete correctly when the targeted player is downed.",
    "heading": [
     "REDSEC",
-    "PLAYER"
+    "Battle Royale"
    ],
-   "section": "player",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -1728,9 +1798,9 @@
    "text": "Failing missions while targeted no longer awards XP or mission completion.",
    "heading": [
     "REDSEC",
-    "PLAYER"
+    "Battle Royale"
    ],
-   "section": "player",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -1738,9 +1808,9 @@
    "text": "Players no longer jump when accepting missions in Battle Royale.",
    "heading": [
     "REDSEC",
-    "PLAYER"
+    "Battle Royale"
    ],
-   "section": "player",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -1748,9 +1818,9 @@
    "text": "Fixed wrong loot being awarded in air drop containers as well as air drop containers containing no loot inside.",
    "heading": [
     "REDSEC",
-    "PLAYER"
+    "Battle Royale"
    ],
-   "section": "player",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -1825,7 +1895,9 @@
     "MAP"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "css-bundle"
+   ],
    "redsec": true
   },
   {
@@ -1842,9 +1914,9 @@
    "text": "Data Drive drops now display the intended game mode message.",
    "heading": [
     "REDSEC",
-    "MAP"
+    "Battle Royale"
    ],
-   "section": "maps",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -1852,9 +1924,9 @@
    "text": "Insertion helicopters now maintain proper spacing during round start.",
    "heading": [
     "REDSEC",
-    "MAP"
+    "Battle Royale"
    ],
-   "section": "maps",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -1862,7 +1934,7 @@
    "text": "Fast Rope insertion now spawns rope and helicopter meshes correctly.",
    "heading": [
     "REDSEC",
-    "MAP"
+    "Gauntlet"
    ],
    "section": "maps",
    "items": [],
@@ -1872,7 +1944,7 @@
    "text": "Heist Caches now spawn in their intended locations.",
    "heading": [
     "REDSEC",
-    "MAP"
+    "Gauntlet"
    ],
    "section": "maps",
    "items": [],
@@ -1882,7 +1954,7 @@
    "text": "M-COMs in Gauntlet: Wreckage can now be interacted with from all angles.",
    "heading": [
     "REDSEC",
-    "MAP"
+    "Gauntlet"
    ],
    "section": "maps",
    "items": [],
@@ -1892,7 +1964,7 @@
    "text": "Mission objects no longer cause vehicles to move when landing on them.",
    "heading": [
     "REDSEC",
-    "MAP"
+    "Gauntlet"
    ],
    "section": "maps",
    "items": [],
@@ -1902,7 +1974,7 @@
    "text": "Tank Containers now close properly when a wrecked vehicle or player is near the container.",
    "heading": [
     "REDSEC",
-    "MAP"
+    "Gauntlet"
    ],
    "section": "maps",
    "items": [],
@@ -1912,7 +1984,7 @@
    "text": "Vehicle containers in Gauntlet: Rodeo now award 3 points when opened, in addition to the mission’s other scoring criteria.",
    "heading": [
     "REDSEC",
-    "MAP"
+    "Gauntlet"
    ],
    "section": "maps",
    "items": [],
@@ -2024,9 +2096,9 @@
    "text": "Bolt Cutter pickups and drops now display their intended game mode message.",
    "heading": [
     "REDSEC",
-    "UI & HUD"
+    "Battle Royale"
    ],
-   "section": "ui",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -2034,9 +2106,9 @@
    "text": "End of Round sequence now preserves the Profile Menu camera correctly.",
    "heading": [
     "REDSEC",
-    "UI & HUD"
+    "Battle Royale"
    ],
-   "section": "ui",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -2044,9 +2116,9 @@
    "text": "Mission titles now appear correctly in the Mission Menu.",
    "heading": [
     "REDSEC",
-    "UI & HUD"
+    "Battle Royale"
    ],
-   "section": "ui",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -2054,9 +2126,9 @@
    "text": "Picking up the bomb in the Wreckage mission no longer briefly displays a player's name.",
    "heading": [
     "REDSEC",
-    "UI & HUD"
+    "Battle Royale"
    ],
-   "section": "ui",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -2064,9 +2136,9 @@
    "text": "Threat Tracker accuracy has been improved for enemy distance to mission objectives.",
    "heading": [
     "REDSEC",
-    "UI & HUD"
+    "Battle Royale"
    ],
-   "section": "ui",
+   "section": "misc",
    "items": [],
    "redsec": true
   },
@@ -2074,9 +2146,9 @@
    "text": "Heist base outlines now appear correctly in the Underground POI layout.",
    "heading": [
     "REDSEC",
-    "UI & HUD"
+    "Gauntlet"
    ],
-   "section": "ui",
+   "section": "maps",
    "items": [],
    "redsec": true
   },
