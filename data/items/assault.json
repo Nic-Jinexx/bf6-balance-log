@@ -77,6 +77,21 @@
       ]
     }
   ],
+  "documented_paths": [
+    {
+      "name": "Hazmat Breacher",
+      "scope": "Battle Royale",
+      "note": "Named by EA but never captured. 1.2.3.0 adds it “for the Assault Class in Battle Royale”, and 1.3.1.0 files a change to it under REDSEC → UI & HUD → Battle Royale, referring to “the Hazmat Breacher field upgrade’s VL-7 Breaching Launcher”. The level below is quoted in EA’s numbering, which is not the LVL 00–LVL 03 scale the captured paths print, so it is deliberately not mapped onto one.",
+      "abilities": [
+        {
+          "level": "Level 3",
+          "name": "Tracker",
+          "description": "TBD"
+        }
+      ]
+    }
+  ],
+  "_documented_paths_note": "Kept out of training_paths because that array is transcribed from in-game screens and this was read off the changelog. Only the ability EA actually named is listed; its description stays TBD rather than being written from the patch line, which describes an edit to the text and not the text itself.",
   "related": [],
   "retired_paths": [],
   "variants": [

@@ -428,6 +428,14 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .tp-path > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
   letter-spacing:.9px;color:var(--systemic);margin:0 0 2px}
 .tp-desc{color:var(--muted);font-size:14.5px;margin:6px 0 10px;max-width:70ch}
+/* Paths EA's notes name but no capture covers. Visually subordinate to the
+   captured ones on purpose: a dashed rule and a dimmer heading, so the page
+   never implies these were read off a screen like the rest. */
+.tp-doc{border-top:1px dashed var(--line);margin-top:28px;padding-top:20px}
+.tp-doc > h3{color:var(--muted)}
+.tp-scope{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.6px;
+  text-transform:uppercase;color:var(--dim);border:1px solid var(--line);border-radius:3px;
+  padding:1px 6px;margin-left:8px;vertical-align:1px}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -880,7 +888,8 @@ def render_paths(item):
     """
     paths = item.get("training_paths") or []
     ability = item.get("ability") or {}
-    if not paths and not ability:
+    documented = item.get("documented_paths") or []
+    if not paths and not ability and not documented:
         return ""
 
     color = BRANCH_COLOR.get(item["branch"], "weapons")
@@ -912,6 +921,34 @@ def render_paths(item):
         out.append('<div class="lo-slot">%s</div></section>'
                    % table(path.get("abilities") or []))
     out.append("</div>")
+
+    # Paths EA's changelog names that the capture never covered. They are kept
+    # apart from the transcribed ones rather than merged in, because the note
+    # above promises every row came off an in-game screen and these did not.
+    # Only what EA actually printed goes in an ability row; the rest stays TBD.
+    if documented:
+        out.append('<section class="tp-doc">')
+        out.append('<h3>Documented, not captured</h3>')
+        out.append('<p class="cat-note">EA\'s patch notes name these paths, but the '
+                   'customisation capture covers core multiplayer only, so no screen for them '
+                   'has been read. Everything below is quoted from the changelog and nothing is '
+                   'filled in around it — an ability appears only if EA named it, and its '
+                   'description stays TBD until the screen is captured.</p>')
+        out.append('<div class="loadout">')
+        for path in documented:
+            scope = (path.get("scope") or "").strip()
+            head = html.escape(path.get("name", ""))
+            if scope:
+                head += '<span class="tp-scope">%s</span>' % html.escape(scope)
+            out.append('<section class="tp-path"><h3>%s</h3>' % head)
+            note = (path.get("note") or "").strip()
+            if note:
+                out.append('<p class="tp-desc">%s</p>' % html.escape(note))
+            rows = path.get("abilities") or []
+            if rows:
+                out.append('<div class="lo-slot">%s</div>' % table(rows))
+            out.append('</section>')
+        out.append("</div></section>")
     return "\n".join(out)
 
 

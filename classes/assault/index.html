@@ -543,6 +543,14 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .tp-path > h3{font-family:var(--mono);font-size:13px;font-weight:600;text-transform:uppercase;
   letter-spacing:.9px;color:var(--systemic);margin:0 0 2px}
 .tp-desc{color:var(--muted);font-size:14.5px;margin:6px 0 10px;max-width:70ch}
+/* Paths EA's notes name but no capture covers. Visually subordinate to the
+   captured ones on purpose: a dashed rule and a dimmer heading, so the page
+   never implies these were read off a screen like the rest. */
+.tp-doc{border-top:1px dashed var(--line);margin-top:28px;padding-top:20px}
+.tp-doc > h3{color:var(--muted)}
+.tp-scope{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.6px;
+  text-transform:uppercase;color:var(--dim);border:1px solid var(--line);border-radius:3px;
+  padding:1px 6px;margin-left:8px;vertical-align:1px}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -928,6 +936,18 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 <tr><td>LVL 00</td><td>Adrenaline Rush</td><td>Squadmates that deploy on you gain the effects of the Adrenaline Injector for 2s. Effects also apply to you or squadmates when deploying on your Deploy Beacon.</td></tr>
 </table></div></section>
 </div>
+<section class="tp-doc">
+<h3>Documented, not captured</h3>
+<p class="cat-note">EA's patch notes name these paths, but the customisation capture covers core multiplayer only, so no screen for them has been read. Everything below is quoted from the changelog and nothing is filled in around it — an ability appears only if EA named it, and its description stays TBD until the screen is captured.</p>
+<div class="loadout">
+<section class="tp-path"><h3>Hazmat Breacher<span class="tp-scope">Battle Royale</span></h3>
+<p class="tp-desc">Named by EA but never captured. 1.2.3.0 adds it “for the Assault Class in Battle Royale”, and 1.3.1.0 files a change to it under REDSEC → UI &amp; HUD → Battle Royale, referring to “the Hazmat Breacher field upgrade’s VL-7 Breaching Launcher”. The level below is quoted in EA’s numbering, which is not the LVL 00–LVL 03 scale the captured paths print, so it is deliberately not mapped onto one.</p>
+<div class="lo-slot"><table>
+<tr><th>Level</th><th>Ability</th><th>In-game description</th></tr>
+<tr><td>Level 3</td><td>Tracker</td><td><span class="tbd">TBD</span></td></tr>
+</table></div>
+</section>
+</div></section>
 
 
 <h2 class="cat systemic" id="history"><span class="dot"></span>Patch history</h2>
