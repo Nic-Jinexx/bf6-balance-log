@@ -65,23 +65,445 @@
       ]
     }
   ],
-  "related": [
-    {
-      "group": "Optics",
-      "items": []
-    },
-    {
-      "group": "Barrels",
-      "items": []
-    },
-    {
-      "group": "Underbarrel",
-      "items": []
-    },
-    {
-      "group": "Magazines",
-      "items": []
-    }
-  ],
-  "retired_paths": []
+  "retired_paths": [],
+  "compatibility": {
+    "points": 100,
+    "source": "Transcribed from the in-game CUSTOMIZE and SELECT screens, Steam captures 2026-08-06. All eight slots opened; 85 options.",
+    "slots": [
+      {
+        "slot": "Muzzle",
+        "options": [
+          {
+            "slug": "flash-hider",
+            "cost": 10
+          },
+          {
+            "slug": "flash-comp",
+            "cost": 20
+          },
+          {
+            "slug": "single-port-brake",
+            "cost": 5
+          },
+          {
+            "slug": "double-port-brake",
+            "cost": 10
+          },
+          {
+            "slug": "compensated-brake",
+            "cost": 20,
+            "default": true
+          },
+          {
+            "slug": "linear-comp",
+            "cost": 10
+          },
+          {
+            "slug": "standard-suppressor",
+            "cost": 20
+          },
+          {
+            "slug": "long-suppressor",
+            "cost": 25
+          },
+          {
+            "slug": "cqb-suppressor",
+            "cost": 30
+          },
+          {
+            "slug": "lightened-suppressor",
+            "cost": 30
+          }
+        ]
+      },
+      {
+        "slot": "Barrel",
+        "options": [
+          {
+            "name": "415mm Factory",
+            "page": "barrels",
+            "cost": 10,
+            "default": true
+          },
+          {
+            "name": "415mm Prototype",
+            "page": "barrels",
+            "cost": 10
+          },
+          {
+            "name": "415mm Fluted",
+            "page": "barrels",
+            "cost": 20
+          },
+          {
+            "name": "415mm Cryogenic",
+            "page": "barrels",
+            "cost": 20
+          }
+        ]
+      },
+      {
+        "slot": "Underbarrel",
+        "options": [
+          {
+            "slug": "folding-vertical",
+            "cost": 10
+          },
+          {
+            "slug": "alloy-vertical",
+            "cost": 20
+          },
+          {
+            "slug": "ribbed-vertical",
+            "cost": 20
+          },
+          {
+            "slug": "6h64-vertical",
+            "cost": 25
+          },
+          {
+            "slug": "classic-vertical",
+            "cost": 35
+          },
+          {
+            "slug": "folding-stubby",
+            "cost": 20
+          },
+          {
+            "slug": "ribbed-stubby",
+            "cost": 30
+          },
+          {
+            "slug": "canted-stubby",
+            "cost": 30
+          },
+          {
+            "slug": "stippled-stubby",
+            "cost": 35
+          },
+          {
+            "slug": "low-profile-stubby",
+            "cost": 45
+          },
+          {
+            "slug": "slim-handstop",
+            "cost": 15
+          },
+          {
+            "slug": "slim-angled",
+            "cost": 25
+          },
+          {
+            "slug": "full-angled",
+            "cost": 25
+          },
+          {
+            "slug": "bipod",
+            "cost": 10
+          },
+          {
+            "slug": "ptt-grip-pod",
+            "cost": 20
+          },
+          {
+            "slug": "qd-grip-pod",
+            "cost": 30
+          },
+          {
+            "slug": "classic-grip-pod",
+            "cost": 30
+          }
+        ]
+      },
+      {
+        "slot": "Magazine",
+        "options": [
+          {
+            "name": "30rnd Magazine",
+            "page": "magazines",
+            "cost": 5
+          },
+          {
+            "name": "30rnd Fast Mag",
+            "page": "magazines",
+            "cost": 10
+          },
+          {
+            "name": "36rnd Magazine",
+            "page": "magazines",
+            "cost": 15
+          },
+          {
+            "name": "40rnd Magazine",
+            "page": "magazines",
+            "cost": 25,
+            "default": true
+          },
+          {
+            "name": "40rnd Fast Mag",
+            "page": "magazines",
+            "cost": 30
+          },
+          {
+            "name": "45rnd Magazine",
+            "page": "magazines",
+            "cost": 35
+          },
+          {
+            "name": "45rnd Fast Mag",
+            "page": "magazines",
+            "cost": 40
+          }
+        ]
+      },
+      {
+        "slot": "Ammunition",
+        "options": [
+          {
+            "slug": "fmj",
+            "cost": 5,
+            "default": true
+          },
+          {
+            "slug": "tungsten-core",
+            "cost": 5
+          },
+          {
+            "slug": "polymer-case",
+            "cost": 10
+          },
+          {
+            "slug": "frangible",
+            "cost": 20
+          },
+          {
+            "slug": "hollow-point",
+            "cost": 15
+          }
+        ]
+      },
+      {
+        "slot": "Scope",
+        "options": [
+          {
+            "name": "Iron Sights",
+            "page": "scopes",
+            "cost": 5
+          },
+          {
+            "name": "Mini Flex 1.00x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "R-MR 1.00x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "OSA-7 1.00x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "CQ RDS 1.25x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "RO-S 1.25x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "2PRO 1.25x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "ROX 1.50x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "SU-123 1.50x",
+            "page": "scopes",
+            "cost": 10,
+            "default": true
+          },
+          {
+            "name": "1P87 1.50x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "A-P2 1.75x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "RO-M 1.75x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "3VZR 1.75x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "CCO 2.00x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "R4T 2.00x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "BF-2M 2.50x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "Baker 3.00x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "SDO 3.50x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "PVQ-31 4.00x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "LDS 4.50x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "ST Prism 5.00x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "SF-G2 5.00x",
+            "page": "scopes",
+            "cost": 10
+          },
+          {
+            "name": "SU-230 LPVO",
+            "page": "scopes",
+            "cost": 20
+          },
+          {
+            "name": "1P86 LPVO",
+            "page": "scopes",
+            "cost": 20
+          },
+          {
+            "name": "MARS-F LPVO",
+            "page": "scopes",
+            "cost": 25
+          },
+          {
+            "name": "MC-CO LPVO",
+            "page": "scopes",
+            "cost": 25
+          },
+          {
+            "name": "DVO LPVO",
+            "page": "scopes",
+            "cost": 25
+          },
+          {
+            "name": "GRIM 1.50x",
+            "page": "scopes",
+            "cost": 25
+          },
+          {
+            "name": "PAS-35 3.00x",
+            "page": "scopes",
+            "cost": 25
+          },
+          {
+            "name": "TH-RDS 1.00x",
+            "page": "scopes",
+            "cost": 35
+          }
+        ]
+      },
+      {
+        "slot": "Right Accessory",
+        "options": [
+          {
+            "slug": "taclight-aimed",
+            "cost": 5
+          },
+          {
+            "slug": "flashlight",
+            "cost": 10,
+            "default": true
+          },
+          {
+            "slug": "taclight-hip",
+            "cost": 15
+          },
+          {
+            "slug": "5mw-red",
+            "cost": 10
+          },
+          {
+            "slug": "50mw-violet",
+            "cost": 10
+          },
+          {
+            "slug": "5mw-green",
+            "cost": 10
+          },
+          {
+            "slug": "50mw-green",
+            "cost": 20
+          },
+          {
+            "slug": "50mw-blue",
+            "cost": 20
+          },
+          {
+            "slug": "120mw-blue",
+            "cost": 30
+          },
+          {
+            "slug": "laser-light-combo-green",
+            "cost": 20
+          }
+        ]
+      },
+      {
+        "slot": "Ergonomics",
+        "options": [
+          {
+            "slug": "match-trigger",
+            "cost": 15
+          },
+          {
+            "slug": "burst-training",
+            "cost": 15
+          }
+        ]
+      }
+    ],
+    "slots_present": [
+      {
+        "slot": "Optic Accessory",
+        "note": "Present on the overview screen as an empty node, but never opened, so its tile grid is unread."
+      }
+    ],
+    "note": "The only rifle whose every slot was opened. Lasers and lights share the one Right Accessory slot here; the EF88 splits them across Right and Top."
+  }
 }

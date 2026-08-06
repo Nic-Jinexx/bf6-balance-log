@@ -64,24 +64,35 @@
       ]
     }
   ],
-  "related": [
-    {
-      "group": "Optics",
-      "items": []
-    },
-    {
-      "group": "Barrels",
-      "items": []
-    },
-    {
-      "group": "Underbarrel",
-      "items": []
-    },
-    {
-      "group": "Magazines",
-      "items": []
-    }
-  ],
   "retired_paths": [],
-  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 3 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses."
+  "_unlock_note": "Transcribed from the in-game Challenges screen, Season 3 tab, captured 2026-08-02. Task text is verbatim; the target count is appended in parentheses.",
+  "compatibility": {
+    "points": 100,
+    "source": "Slot inventory read off this rifle's CUSTOMIZE overview screen, 2026-08-06. No slot was opened, so which attachments each holds is not recorded.",
+    "slots": [],
+    "slots_present": [
+      {
+        "slot": "Underbarrel"
+      },
+      {
+        "slot": "Right Accessory"
+      },
+      {
+        "slot": "Top Accessory"
+      },
+      {
+        "slot": "Optic Accessory"
+      },
+      {
+        "slot": "Ergonomics",
+        "observed": [
+          "Aftermarket Buffer",
+          "Rail Cover",
+          "Magwell Flare",
+          "A3 Receiver"
+        ]
+      }
+    ],
+    "note": "The A3 Receiver was seen only here."
+  }
 }

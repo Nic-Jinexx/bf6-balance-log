@@ -62,23 +62,33 @@
       "value": "Rank 25"
     }
   ],
-  "related": [
-    {
-      "group": "Optics",
-      "items": []
-    },
-    {
-      "group": "Barrels",
-      "items": []
-    },
-    {
-      "group": "Underbarrel",
-      "items": []
-    },
-    {
-      "group": "Magazines",
-      "items": []
-    }
-  ],
-  "retired_paths": []
+  "retired_paths": [],
+  "compatibility": {
+    "points": 100,
+    "source": "Slot inventory read off this rifle's CUSTOMIZE overview screen, 2026-08-06. No slot was opened, so which attachments each holds is not recorded.",
+    "slots": [],
+    "slots_present": [
+      {
+        "slot": "Underbarrel"
+      },
+      {
+        "slot": "Right Accessory"
+      },
+      {
+        "slot": "Top Accessory"
+      },
+      {
+        "slot": "Optic Accessory"
+      },
+      {
+        "slot": "Ergonomics",
+        "observed": [
+          "Aftermarket Buffer",
+          "Rail Cover",
+          "Magwell Flare"
+        ]
+      }
+    ],
+    "note": "Its Magazine slot holds nine options; only four were selectable on the capturing account, and the other five are compatible all the same."
+  }
 }

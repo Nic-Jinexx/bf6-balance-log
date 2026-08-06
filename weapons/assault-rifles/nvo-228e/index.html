@@ -551,6 +551,18 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .tp-scope{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.6px;
   text-transform:uppercase;color:var(--dim);border:1px solid var(--line);border-radius:3px;
   padding:1px 6px;margin-left:8px;vertical-align:1px}
+/* Compatibility tables. The cost column is the narrow one and reads as a figure,
+   so it takes the mono face the stat rows use rather than the body face. */
+.opt-cost{font-family:var(--mono);font-size:13px;color:var(--muted);
+  white-space:nowrap;width:1%;text-align:right}
+.opt-def{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.6px;
+  text-transform:uppercase;color:var(--bg);background:var(--muted);border-radius:3px;
+  padding:1px 5px;margin-left:8px;vertical-align:1px}
+.opt-note{display:block;color:var(--dim);font-size:13px;margin-top:3px;max-width:60ch}
+.slotlist{margin:10px 0 0;padding-left:20px;color:var(--muted);font-size:14.5px;
+  max-width:74ch}
+.slotlist li{margin:0 0 7px}
+.slotlist b{color:var(--text)}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -956,7 +968,16 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 </div></details>
 
 <h2 class="cat weapons" id="related"><span class="dot"></span>Compatible attachments</h2>
-<p class="emptynote">Compatibility is not catalogued yet. Once attachments are added they will be listed here, and each attachment will link back to this page.</p>
+<p class="cat-note">Slot inventory read off this rifle&#x27;s CUSTOMIZE overview screen, 2026-08-06. No slot was opened, so which attachments each holds is not recorded.</p>
+<section class="tp-doc"><h3>Slots not opened</h3>
+<p class="cat-note">The overview screen shows this weapon has these slots, but their tile grids were never opened, so what each one holds is not recorded. They are listed rather than left out, because an absent slot and an uncaptured slot are different facts.</p><ul class="slotlist">
+<li><b>Underbarrel</b></li>
+<li><b>Left Accessory</b></li>
+<li><b>Right Accessory</b></li>
+<li><b>Top Accessory</b></li>
+<li><b>Optic Accessory</b></li>
+<li><b>Ergonomics</b></li>
+</ul></section>
 
 <p class="backlog"><a href="/#weapons">&larr; Back to the full balance log</a></p>
 

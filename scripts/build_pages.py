@@ -436,6 +436,18 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .tp-scope{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.6px;
   text-transform:uppercase;color:var(--dim);border:1px solid var(--line);border-radius:3px;
   padding:1px 6px;margin-left:8px;vertical-align:1px}
+/* Compatibility tables. The cost column is the narrow one and reads as a figure,
+   so it takes the mono face the stat rows use rather than the body face. */
+.opt-cost{font-family:var(--mono);font-size:13px;color:var(--muted);
+  white-space:nowrap;width:1%;text-align:right}
+.opt-def{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.6px;
+  text-transform:uppercase;color:var(--bg);background:var(--muted);border-radius:3px;
+  padding:1px 5px;margin-left:8px;vertical-align:1px}
+.opt-note{display:block;color:var(--dim);font-size:13px;margin-top:3px;max-width:60ch}
+.slotlist{margin:10px 0 0;padding-left:20px;color:var(--muted);font-size:14.5px;
+  max-width:74ch}
+.slotlist li{margin:0 0 7px}
+.slotlist b{color:var(--text)}
 .backlog{margin-top:26px;font-family:var(--mono);font-size:14px}
 .backlog a{color:var(--vehicles);text-decoration:none}
 .backlog a:hover{text-decoration:underline}
@@ -995,32 +1007,94 @@ def render_related(item, by_slug, color):
     does not have. Attachments are the one real relationship in the data, and
     they only ever hang off a weapon, so the section renders there and nowhere
     else. A vehicle, gadget, map, mode or class simply ends at its patch history.
+
+    Two tiers, and the difference is the whole point. `slots` is a slot whose
+    tile grid was captured, so the list under it is complete. `slots_present` is
+    a slot the overview screen proves exists but that was never opened, so its
+    contents are unknown - listing it as an empty table would read as "this slot
+    holds nothing", which is the opposite of what the capture showed.
+
+    Slot, point cost and the Default flag all live on the pairing rather than on
+    the attachment, because the same attachment moves between slots and defaults
+    differ per weapon: 5 MW Red is Right Accessory on the KORD 6P67 and Top
+    Accessory on the EF88, and Compensated Brake is the KORD's default muzzle
+    where the EF88's is the Flash Hider.
     """
     if item["branch"] != "weapons":
         return ""
 
     head = ('<h2 class="cat %s" id="related"><span class="dot"></span>'
             'Compatible attachments</h2>' % color)
-    groups = item.get("related") or []
-    if not any(g.get("items") for g in groups):
+    compat = item.get("compatibility") or {}
+    captured = compat.get("slots") or []
+    present = compat.get("slots_present") or []
+    if not captured and not present:
         return (head + '\n<p class="emptynote">Compatibility is not catalogued yet. '
                 'Once attachments are added they will be listed here, and each '
                 'attachment will link back to this page.</p>')
+
     out = [head]
-    for g in groups:
-        entries = g.get("items") or []
-        if not entries:
-            continue
-        out.append('<div class="relgroup"><h4>%s</h4><p>' % html.escape(g.get("group", "")))
-        links = []
-        for e in entries:
-            target = by_slug.get(e.get("slug"))
-            if target:
-                links.append('<a href="%s">%s</a>' % (target["url"], html.escape(e.get("name", ""))))
-            else:
-                links.append('<span class="tbd">%s</span>' % html.escape(e.get("name", "")))
-        out.append(" &middot; ".join(links))
-        out.append("</p></div>")
+    note = (compat.get("source") or "").strip()
+    # only worth explaining the budget where a cost column actually renders
+    if compat.get("points") and captured:
+        note += (" Every weapon has %d attachment points to spend, so the cost "
+                 "column is what each option takes out of that budget."
+                 % compat["points"])
+    if note:
+        out.append('<p class="cat-note">%s</p>' % html.escape(note))
+
+    def link(opt):
+        target = by_slug.get(opt.get("slug") or opt.get("page"))
+        # `slug` means the option has its own page; `page` means it is a row on a
+        # shared one, so the name shown stays the weapon's own name for it.
+        label = opt.get("name") or (target["name"] if target else "")
+        if label.strip().upper() == "TBD":
+            return '<span class="tbd">TBD</span>'
+        if target:
+            return '<a href="%s">%s</a>' % (target["url"], html.escape(label))
+        return html.escape(label)
+
+    if captured:
+        out.append('<div class="loadout">')
+        for group in captured:
+            opts = group.get("options") or []
+            out.append('<section class="tp-path"><h3>%s<span class="tp-scope">%d</span>'
+                       '</h3>' % (html.escape(group.get("slot", "")), len(opts)))
+            rows = ['<table><tr><th>Attachment</th><th>Points</th></tr>']
+            for opt in opts:
+                cell = link(opt)
+                if opt.get("default"):
+                    cell += '<span class="opt-def">Default</span>'
+                if opt.get("note"):
+                    cell += ('<span class="opt-note">%s</span>'
+                             % html.escape(opt["note"]))
+                rows.append('<tr><td>%s</td><td class="opt-cost">%s</td></tr>'
+                            % (cell, html.escape(str(opt.get("cost", "TBD")))))
+            rows.append('</table>')
+            out.append('<div class="lo-slot">%s</div></section>' % "\n".join(rows))
+        out.append('</div>')
+
+    if present:
+        out.append('<section class="tp-doc"><h3>Slots not opened</h3>')
+        out.append('<p class="cat-note">The overview screen shows this weapon has '
+                   'these slots, but their tile grids were never opened, so what '
+                   'each one holds is not recorded. They are listed rather than '
+                   'left out, because an absent slot and an uncaptured slot are '
+                   'different facts.</p><ul class="slotlist">')
+        for group in present:
+            line = '<b>%s</b>' % html.escape(group.get("slot", ""))
+            if group.get("note"):
+                line += ' &mdash; %s' % html.escape(group["note"])
+            seen = group.get("observed") or []
+            if seen:
+                line += (' Seen on this weapon elsewhere in the capture: %s. That '
+                         'is a floor, not the full list.'
+                         % html.escape(", ".join(seen)))
+            out.append('<li>%s</li>' % line)
+        out.append('</ul></section>')
+
+    if compat.get("note"):
+        out.append('<p class="cat-note">%s</p>' % html.escape(compat["note"]))
     return "\n".join(out)
 
 

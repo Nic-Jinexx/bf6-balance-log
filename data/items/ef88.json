@@ -58,23 +58,170 @@
       "value": "Season 4 Battle Pass"
     }
   ],
-  "related": [
-    {
-      "group": "Optics",
-      "items": []
-    },
-    {
-      "group": "Barrels",
-      "items": []
-    },
-    {
-      "group": "Underbarrel",
-      "items": []
-    },
-    {
-      "group": "Magazines",
-      "items": []
-    }
-  ],
-  "retired_paths": []
+  "retired_paths": [],
+  "compatibility": {
+    "points": 100,
+    "source": "Transcribed from the in-game CUSTOMIZE and SELECT screens, Steam captures 2026-08-06. Four slots opened in full; the rest were not.",
+    "slots": [
+      {
+        "slot": "Muzzle",
+        "options": [
+          {
+            "slug": "flash-hider",
+            "cost": 10,
+            "default": true
+          },
+          {
+            "slug": "flash-comp",
+            "cost": 20
+          },
+          {
+            "slug": "single-port-brake",
+            "cost": 5
+          },
+          {
+            "slug": "double-port-brake",
+            "cost": 10
+          },
+          {
+            "slug": "compensated-brake",
+            "cost": 20
+          },
+          {
+            "slug": "linear-comp",
+            "cost": 10
+          },
+          {
+            "slug": "standard-suppressor",
+            "cost": 20
+          },
+          {
+            "slug": "long-suppressor",
+            "cost": 25
+          },
+          {
+            "slug": "cqb-suppressor",
+            "cost": 30
+          },
+          {
+            "slug": "lightened-suppressor",
+            "cost": 30
+          },
+          {
+            "slug": "compensator",
+            "cost": 10
+          }
+        ]
+      },
+      {
+        "slot": "Barrel",
+        "options": [
+          {
+            "name": "16\" Standard",
+            "page": "barrels",
+            "cost": 10
+          },
+          {
+            "name": "20\" Standard",
+            "page": "barrels",
+            "cost": 5
+          },
+          {
+            "name": "24\" HBAR",
+            "page": "barrels",
+            "cost": 10
+          },
+          {
+            "name": "20\" Marksman",
+            "page": "barrels",
+            "cost": 25
+          },
+          {
+            "name": "14.5\" Standard",
+            "page": "barrels",
+            "cost": 15
+          },
+          {
+            "name": "14.5\" CQB",
+            "page": "barrels",
+            "cost": 25
+          },
+          {
+            "name": "16\" Factory",
+            "page": "barrels",
+            "cost": 20,
+            "default": true
+          },
+          {
+            "name": "16\" Cryogenic",
+            "page": "barrels",
+            "cost": 20
+          }
+        ]
+      },
+      {
+        "slot": "Right Accessory",
+        "options": [
+          {
+            "slug": "taclight-aimed",
+            "cost": 5
+          },
+          {
+            "slug": "flashlight",
+            "cost": 10
+          },
+          {
+            "slug": "taclight-hip",
+            "cost": 15
+          }
+        ]
+      },
+      {
+        "slot": "Top Accessory",
+        "options": [
+          {
+            "slug": "5mw-red",
+            "cost": 10
+          },
+          {
+            "slug": "50mw-violet",
+            "cost": 10
+          },
+          {
+            "slug": "5mw-green",
+            "cost": 10
+          },
+          {
+            "slug": "50mw-green",
+            "cost": 20
+          },
+          {
+            "name": "TBD",
+            "cost": 20,
+            "note": "BLUE LASER tile, 20 points. Never selected, so its real name was never shown. Matches 50 MW Blue's cost, but that is not evidence and is not recorded as a link."
+          },
+          {
+            "name": "TBD",
+            "cost": 30,
+            "note": "BLUE LASER tile, 30 points, likewise never selected."
+          }
+        ]
+      }
+    ],
+    "slots_present": [
+      {
+        "slot": "Underbarrel",
+        "note": "Occupied on the overview screen, so the slot exists, but the grid was never opened."
+      },
+      {
+        "slot": "Ergonomics",
+        "note": "Occupied on the overview screen; grid never opened.",
+        "observed": [
+          "Improved Mag Catch",
+          "Aftermarket Buffer"
+        ]
+      }
+    ],
+    "note": "The Compensator is the one muzzle the KORD 6P67 does not offer. This rifle has no Left or Optic Accessory slot, and puts its lasers in Top Accessory rather than alongside the lights."
+  }
 }
