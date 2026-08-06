@@ -15,5 +15,7 @@
   "ratings": [],
   "availability": [],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "art": "icon",
+  "_art_note": "Art is the little badge the game prints beside GAME MODE on the Custom Search screen, not a scene, so it renders at icon size rather than filling the art column. Cut from the same capture as the description."
 }

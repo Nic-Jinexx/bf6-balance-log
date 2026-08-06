@@ -16,5 +16,7 @@
   "ratings": [],
   "availability": [],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "art": "icon",
+  "_art_note": "Art is the little badge the game prints beside GAME MODE on the Custom Search screen, not a scene, so it renders at icon size rather than filling the art column. Cut from the same capture as the description. No badge exists for this one: it is no longer listed on that screen, so there is nothing to capture and the tile stays pending rather than borrowing another mode's glyph."
 }
