@@ -208,17 +208,65 @@ def table_at(entries, i):
     return None
 
 
-def delta_class(cell):
+# Which direction is the better outcome, per stat. EA groups its stat tables
+# under a heading that names the stat, and that heading is the only thing that
+# says whether a smaller number is a buff or a nerf - the sign alone cannot.
+# Colouring by sign was what painted all 49 muzzle-velocity reductions green, as
+# though a slower bullet were an improvement, while the recoil table beside it
+# happened to come out right for the same reason.
+#
+# Matched as substrings against the lowercased heading. A heading that matches
+# neither list - or both - gets no colour at all. That is deliberate and is meant
+# to be hit often: a colour asserts that a change is good or bad, and a wrong
+# assertion is exactly what this site exists to avoid. Grey is not a failure.
+LOWER_IS_BETTER = (
+    "recoil", "spread", "dispersion", "sway", "bloom", "kick", "flinch",
+    "cooldown", "cool down", "delay", "deploy time", "reload time", "ads time",
+    "penalty", "cost", "overheat",
+    # these exist to collide with "damage" and force the neutral case: a smaller
+    # damage drop-off is a buff, so neither list alone gets that heading right
+    "drop-off", "dropoff", "drop off", "falloff", "fall-off", "fall off",
+)
+HIGHER_IS_BETTER = (
+    "velocity", "damage", "range", "rate of fire", "fire rate", "magazine",
+    "capacity", "ammo", "ammunition", "health", "armor", "armour",
+    "accuracy", "handling", "mobility", "speed",
+)
+
+
+def stat_polarity(label):
+    """+1 where a bigger number is better, -1 where smaller is, 0 where unknown."""
+    t = (label or "").lower()
+    hi = any(k in t for k in HIGHER_IS_BETTER)
+    lo = any(k in t for k in LOWER_IS_BETTER)
+    if hi and not lo:
+        return 1
+    if lo and not hi:
+        return -1
+    # Both matched ("damage drop-off", "recoil recovery speed") or neither.
+    return 0
+
+
+def delta_class(cell, label):
+    """Colour a change cell by outcome, not by direction."""
     t = cell.replace("−", "-")
     if re.match(r"^\+", t):
-        return " delta-up"
-    if re.match(r"^-", t):
-        return " delta-down"
-    return ""
+        sign = 1
+    elif re.match(r"^-", t):
+        sign = -1
+    else:
+        return ""
+    polarity = stat_polarity(label)
+    if polarity == 0:
+        return ""
+    return " delta-buff" if sign == polarity else " delta-nerf"
 
 
-def render_rows(entries, emitted=None):
+def render_rows(entries, emitted=None, label=None):
     """A heading group -> markup. Tables where EA's shape allows, else a list.
+
+    `label` is the group heading, needed only so the change column can be
+    coloured by outcome rather than by sign - see stat_polarity.
 
     Every entry consumed is recorded in `emitted` so main() can prove that no
     line was silently dropped on the way to the page.
@@ -237,7 +285,8 @@ def render_rows(entries, emitted=None):
                 attr = ' data-item="%s"' % " ".join(entry["items"]) if entry["items"] else ""
                 tds = ['<td class="item">%s</td>' % esc(cells[0])]
                 for cell in cells[1:]:
-                    tds.append('<td class="num%s">%s</td>' % (delta_class(cell), esc(cell)))
+                    tds.append('<td class="num%s">%s</td>'
+                               % (delta_class(cell, label), esc(cell)))
                 out.append("<tr%s>%s</tr>" % (attr, "".join(tds)))
             out.append("</table>")
             i = end
@@ -305,7 +354,7 @@ def render_category(cat, by_version, meta, summaries, emitted=None, newest=None)
         for label in order:
             if label:
                 out.append('<p class="grp"><b>%s</b></p>' % esc(label))
-            out.extend(render_rows(groups[label], emitted))
+            out.extend(render_rows(groups[label], emitted, label))
         out.append('<div class="src">Source: <a href="%s" target="_blank" rel="noopener">'
                    'Battlefield 6 Game Update %s</a>, posted %s</div>'
                    % (H.escape(url, quote=True), esc(version), esc(posted)))

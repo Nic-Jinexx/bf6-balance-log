@@ -115,8 +115,13 @@ tr:last-child td{border-bottom:none}
 tr:nth-child(even) td{background:rgba(255,255,255,0.045)}
 td.num{font-family:var(--mono);color:var(--text);white-space:nowrap}
 td.item{color:var(--text);font-weight:600}
-.delta-down,td.num.delta-down{color:#7bbf6a}
-.delta-up,td.num.delta-up{color:#e0645a}
+/* Named for the outcome, not the direction. These were .delta-down/.delta-up and
+   coloured by the sign of the number, which is only right for stats where less
+   is better: it read a 7% muzzle-velocity cut as a buff. render_patches.py now
+   decides from the stat heading, and leaves the cell uncoloured when it cannot
+   tell. */
+.delta-buff,td.num.delta-buff{color:#7bbf6a}
+.delta-nerf,td.num.delta-nerf{color:#e0645a}
 /* EA's own translations of the update, one flag per language. Deliberately
    quiet: it sits above the notes, so it must not compete with them. The flags
    carry an aria-label naming the language, since an emoji alone is not a link
@@ -984,7 +989,7 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 <div class="body">
 <table>
 <tr><th></th><th>From</th><th>To</th><th>Change</th></tr>
-<tr data-item="svk-86"><td class="item">SVK-8.6</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">-5.56%</td></tr>
+<tr data-item="svk-86"><td class="item">SVK-8.6</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-nerf">-5.56%</td></tr>
 </table>
 <div class="src">Full patch entry and EA source link: <a href="/#other">1.3.3.0 in the balance log</a></div>
 </div></details>

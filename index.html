@@ -117,8 +117,13 @@ tr:last-child td{border-bottom:none}
 tr:nth-child(even) td{background:rgba(255,255,255,0.045)}
 td.num{font-family:var(--mono);color:var(--text);white-space:nowrap}
 td.item{color:var(--text);font-weight:600}
-.delta-down,td.num.delta-down{color:#7bbf6a}
-.delta-up,td.num.delta-up{color:#e0645a}
+/* Named for the outcome, not the direction. These were .delta-down/.delta-up and
+   coloured by the sign of the number, which is only right for stats where less
+   is better: it read a 7% muzzle-velocity cut as a buff. render_patches.py now
+   decides from the stat heading, and leaves the cell uncoloured when it cannot
+   tell. */
+.delta-buff,td.num.delta-buff{color:#7bbf6a}
+.delta-nerf,td.num.delta-nerf{color:#e0645a}
 /* EA's own translations of the update, one flag per language. Deliberately
    quiet: it sits above the notes, so it must not compete with them. The flags
    carry an aria-label naming the language, since an emoji alone is not a link
@@ -5386,99 +5391,99 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>Muzzle Velocity Adjustments</b></p>
 <table>
 <tr><th></th><th>From</th><th>To</th><th>Change</th></tr>
-<tr data-item="es-57"><td class="item">ES 5.7</td><td class="num">650 m/s</td><td class="num">510 m/s</td><td class="num delta-down">-21.54%</td></tr>
-<tr data-item="lmr27"><td class="item">LMR27</td><td class="num">880 m/s</td><td class="num">800 m/s</td><td class="num delta-down">-9.09%</td></tr>
-<tr data-item="scw-10"><td class="item">SCW-10</td><td class="num">428 m/s</td><td class="num">398 m/s</td><td class="num delta-down">-7.01%</td></tr>
-<tr data-item="sg-553r"><td class="item">SG 553R</td><td class="num">519 m/s</td><td class="num">483 m/s</td><td class="num delta-down">-6.94%</td></tr>
-<tr data-item="tr-7"><td class="item">TR7</td><td class="num">648 m/s</td><td class="num">604 m/s</td><td class="num delta-down">-6.79%</td></tr>
-<tr data-item="nvo-228e"><td class="item">NVO-228E</td><td class="num">671 m/s</td><td class="num">626 m/s</td><td class="num delta-down">-6.71%</td></tr>
-<tr data-item="m417-a2"><td class="item">M417A2</td><td class="num">600 m/s</td><td class="num">560 m/s</td><td class="num delta-down">-6.67%</td></tr>
-<tr data-item="m121-a2"><td class="item">M121 A2</td><td class="num">600 m/s</td><td class="num">560 m/s</td><td class="num delta-down">-6.67%</td></tr>
-<tr data-item="cz3a1"><td class="item">CZ3A1</td><td class="num">360 m/s</td><td class="num">336 m/s</td><td class="num delta-down">-6.67%</td></tr>
-<tr data-item="m240l"><td class="item">M240L</td><td class="num">630 m/s</td><td class="num">590 m/s</td><td class="num delta-down">-6.35%</td></tr>
-<tr data-item="m4a1"><td class="item">M4A1</td><td class="num">630 m/s</td><td class="num">590 m/s</td><td class="num delta-down">-6.35%</td></tr>
-<tr data-item="vcr-2"><td class="item">VCR-2</td><td class="num">704 m/s</td><td class="num">660 m/s</td><td class="num delta-down">-6.25%</td></tr>
-<tr data-item="sor-300sc"><td class="item">SOR-300SC</td><td class="num">563 m/s</td><td class="num">528 m/s</td><td class="num delta-down">-6.22%</td></tr>
-<tr data-item="grt-bc"><td class="item">GRT-BC</td><td class="num">599 m/s</td><td class="num">563 m/s</td><td class="num delta-down">-6.01%</td></tr>
-<tr data-item="rpkm"><td class="item">RPKM</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-down">-5.97%</td></tr>
-<tr data-item="m123k"><td class="item">M123K</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-down">-5.97%</td></tr>
-<tr data-item="m433"><td class="item">M433</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-down">-5.97%</td></tr>
-<tr data-item="sgx"><td class="item">SGX</td><td class="num">402 m/s</td><td class="num">378 m/s</td><td class="num delta-down">-5.97%</td></tr>
-<tr data-item="qbz-192"><td class="item">QBZ-192</td><td class="num">644 m/s</td><td class="num">608 m/s</td><td class="num delta-down">-5.59%</td></tr>
-<tr data-item="drs-iar"><td class="item">DRS-IAR</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">-5.56%</td></tr>
-<tr data-item="m60"><td class="item">M/60</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">-5.56%</td></tr>
-<tr data-item="ak4d"><td class="item">AK4D</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">-5.56%</td></tr>
-<tr data-item="pw5a3"><td class="item">PW5A3</td><td class="num">432 m/s</td><td class="num">408 m/s</td><td class="num delta-down">-5.56%</td></tr>
-<tr data-item="m16a4"><td class="item">M16A4</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">-5.56%</td></tr>
-<tr data-item="svk-86"><td class="item">SVK-8.6</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">-5.56%</td></tr>
-<tr data-item="psr"><td class="item">PSR</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">-5.56%</td></tr>
-<tr data-item="sv-98"><td class="item">SV-98</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-down">-5.56%</td></tr>
-<tr data-item="l115"><td class="item">L115</td><td class="num">703 m/s</td><td class="num">664 m/s</td><td class="num delta-down">-5.55%</td></tr>
-<tr data-item="l110"><td class="item">L110</td><td class="num">780 m/s</td><td class="num">740 m/s</td><td class="num delta-down">-5.13%</td></tr>
-<tr data-item="b36a4"><td class="item">B36A4</td><td class="num">780 m/s</td><td class="num">740 m/s</td><td class="num delta-down">-5.13%</td></tr>
-<tr data-item="m277"><td class="item">M277</td><td class="num">624 m/s</td><td class="num">592 m/s</td><td class="num delta-down">-5.13%</td></tr>
-<tr data-item="pp-19"><td class="item">PP-19</td><td class="num">468 m/s</td><td class="num">444 m/s</td><td class="num delta-down">-5.13%</td></tr>
-<tr data-item="m39-emr"><td class="item">M39 EMR</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">-5.00%</td></tr>
-<tr data-item="svdm"><td class="item">SVDM</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">-5.00%</td></tr>
-<tr data-item="grt-cps"><td class="item">GRT-CPS</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">-5.00%</td></tr>
-<tr data-item="m2010-esr"><td class="item">M2010 ESR</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">-5.00%</td></tr>
-<tr data-item="mini-scout"><td class="item">Mini Scout</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-down">-5.00%</td></tr>
-<tr data-item="m250"><td class="item">M250</td><td class="num">760 m/s</td><td class="num">724 m/s</td><td class="num delta-down">-4.74%</td></tr>
-<tr data-item="kord-6p67"><td class="item">Kord 6P67</td><td class="num">760 m/s</td><td class="num">724 m/s</td><td class="num delta-down">-4.74%</td></tr>
-<tr data-item="usg-90"><td class="item">USG-90</td><td class="num">570 m/s</td><td class="num">543 m/s</td><td class="num delta-down">-4.74%</td></tr>
-<tr data-item="sl9"><td class="item">SL9</td><td class="num">510 m/s</td><td class="num">486 m/s</td><td class="num delta-down">-4.71%</td></tr>
-<tr data-item="l85a3"><td class="item">L85A3</td><td class="num">814 m/s</td><td class="num">778 m/s</td><td class="num delta-down">-4.42%</td></tr>
-<tr data-item="umg-40"><td class="item">UMG-40</td><td class="num">488 m/s</td><td class="num">467 m/s</td><td class="num delta-down">-4.30%</td></tr>
-<tr data-item="sor-556-mk2"><td class="item">SOR-556Mk2</td><td class="num">800 m/s</td><td class="num">768 m/s</td><td class="num delta-down">-4.00%</td></tr>
-<tr data-item="pw7a2"><td class="item">PW7A2</td><td class="num">600 m/s</td><td class="num">576 m/s</td><td class="num delta-down">-4.00%</td></tr>
-<tr data-item="vz-61"><td class="item">VZ.61</td><td class="num">326 m/s</td><td class="num">313 m/s</td><td class="num delta-down">-3.99%</td></tr>
-<tr data-item="ak-205"><td class="item">AK-205</td><td class="num">737 m/s</td><td class="num">708 m/s</td><td class="num delta-down">-3.93%</td></tr>
-<tr data-item="kts100-mk8"><td class="item">KTS100MK8</td><td class="num">840 m/s</td><td class="num">808 m/s</td><td class="num delta-down">-3.81%</td></tr>
-<tr data-item="rpk-74m"><td class="item">RPK-74M</td><td class="num">840 m/s</td><td class="num">808 m/s</td><td class="num delta-down">-3.81%</td></tr>
-<tr data-item="kv9"><td class="item">KV9</td><td class="num">348 m/s</td><td class="num">362 m/s</td><td class="num delta-up">+4.02%</td></tr>
+<tr data-item="es-57"><td class="item">ES 5.7</td><td class="num">650 m/s</td><td class="num">510 m/s</td><td class="num delta-nerf">-21.54%</td></tr>
+<tr data-item="lmr27"><td class="item">LMR27</td><td class="num">880 m/s</td><td class="num">800 m/s</td><td class="num delta-nerf">-9.09%</td></tr>
+<tr data-item="scw-10"><td class="item">SCW-10</td><td class="num">428 m/s</td><td class="num">398 m/s</td><td class="num delta-nerf">-7.01%</td></tr>
+<tr data-item="sg-553r"><td class="item">SG 553R</td><td class="num">519 m/s</td><td class="num">483 m/s</td><td class="num delta-nerf">-6.94%</td></tr>
+<tr data-item="tr-7"><td class="item">TR7</td><td class="num">648 m/s</td><td class="num">604 m/s</td><td class="num delta-nerf">-6.79%</td></tr>
+<tr data-item="nvo-228e"><td class="item">NVO-228E</td><td class="num">671 m/s</td><td class="num">626 m/s</td><td class="num delta-nerf">-6.71%</td></tr>
+<tr data-item="m417-a2"><td class="item">M417A2</td><td class="num">600 m/s</td><td class="num">560 m/s</td><td class="num delta-nerf">-6.67%</td></tr>
+<tr data-item="m121-a2"><td class="item">M121 A2</td><td class="num">600 m/s</td><td class="num">560 m/s</td><td class="num delta-nerf">-6.67%</td></tr>
+<tr data-item="cz3a1"><td class="item">CZ3A1</td><td class="num">360 m/s</td><td class="num">336 m/s</td><td class="num delta-nerf">-6.67%</td></tr>
+<tr data-item="m240l"><td class="item">M240L</td><td class="num">630 m/s</td><td class="num">590 m/s</td><td class="num delta-nerf">-6.35%</td></tr>
+<tr data-item="m4a1"><td class="item">M4A1</td><td class="num">630 m/s</td><td class="num">590 m/s</td><td class="num delta-nerf">-6.35%</td></tr>
+<tr data-item="vcr-2"><td class="item">VCR-2</td><td class="num">704 m/s</td><td class="num">660 m/s</td><td class="num delta-nerf">-6.25%</td></tr>
+<tr data-item="sor-300sc"><td class="item">SOR-300SC</td><td class="num">563 m/s</td><td class="num">528 m/s</td><td class="num delta-nerf">-6.22%</td></tr>
+<tr data-item="grt-bc"><td class="item">GRT-BC</td><td class="num">599 m/s</td><td class="num">563 m/s</td><td class="num delta-nerf">-6.01%</td></tr>
+<tr data-item="rpkm"><td class="item">RPKM</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-nerf">-5.97%</td></tr>
+<tr data-item="m123k"><td class="item">M123K</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-nerf">-5.97%</td></tr>
+<tr data-item="m433"><td class="item">M433</td><td class="num">670 m/s</td><td class="num">630 m/s</td><td class="num delta-nerf">-5.97%</td></tr>
+<tr data-item="sgx"><td class="item">SGX</td><td class="num">402 m/s</td><td class="num">378 m/s</td><td class="num delta-nerf">-5.97%</td></tr>
+<tr data-item="qbz-192"><td class="item">QBZ-192</td><td class="num">644 m/s</td><td class="num">608 m/s</td><td class="num delta-nerf">-5.59%</td></tr>
+<tr data-item="drs-iar"><td class="item">DRS-IAR</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-nerf">-5.56%</td></tr>
+<tr data-item="m60"><td class="item">M/60</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-nerf">-5.56%</td></tr>
+<tr data-item="ak4d"><td class="item">AK4D</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-nerf">-5.56%</td></tr>
+<tr data-item="pw5a3"><td class="item">PW5A3</td><td class="num">432 m/s</td><td class="num">408 m/s</td><td class="num delta-nerf">-5.56%</td></tr>
+<tr data-item="m16a4"><td class="item">M16A4</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-nerf">-5.56%</td></tr>
+<tr data-item="svk-86"><td class="item">SVK-8.6</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-nerf">-5.56%</td></tr>
+<tr data-item="psr"><td class="item">PSR</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-nerf">-5.56%</td></tr>
+<tr data-item="sv-98"><td class="item">SV-98</td><td class="num">720 m/s</td><td class="num">680 m/s</td><td class="num delta-nerf">-5.56%</td></tr>
+<tr data-item="l115"><td class="item">L115</td><td class="num">703 m/s</td><td class="num">664 m/s</td><td class="num delta-nerf">-5.55%</td></tr>
+<tr data-item="l110"><td class="item">L110</td><td class="num">780 m/s</td><td class="num">740 m/s</td><td class="num delta-nerf">-5.13%</td></tr>
+<tr data-item="b36a4"><td class="item">B36A4</td><td class="num">780 m/s</td><td class="num">740 m/s</td><td class="num delta-nerf">-5.13%</td></tr>
+<tr data-item="m277"><td class="item">M277</td><td class="num">624 m/s</td><td class="num">592 m/s</td><td class="num delta-nerf">-5.13%</td></tr>
+<tr data-item="pp-19"><td class="item">PP-19</td><td class="num">468 m/s</td><td class="num">444 m/s</td><td class="num delta-nerf">-5.13%</td></tr>
+<tr data-item="m39-emr"><td class="item">M39 EMR</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-nerf">-5.00%</td></tr>
+<tr data-item="svdm"><td class="item">SVDM</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-nerf">-5.00%</td></tr>
+<tr data-item="grt-cps"><td class="item">GRT-CPS</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-nerf">-5.00%</td></tr>
+<tr data-item="m2010-esr"><td class="item">M2010 ESR</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-nerf">-5.00%</td></tr>
+<tr data-item="mini-scout"><td class="item">Mini Scout</td><td class="num">800 m/s</td><td class="num">760 m/s</td><td class="num delta-nerf">-5.00%</td></tr>
+<tr data-item="m250"><td class="item">M250</td><td class="num">760 m/s</td><td class="num">724 m/s</td><td class="num delta-nerf">-4.74%</td></tr>
+<tr data-item="kord-6p67"><td class="item">Kord 6P67</td><td class="num">760 m/s</td><td class="num">724 m/s</td><td class="num delta-nerf">-4.74%</td></tr>
+<tr data-item="usg-90"><td class="item">USG-90</td><td class="num">570 m/s</td><td class="num">543 m/s</td><td class="num delta-nerf">-4.74%</td></tr>
+<tr data-item="sl9"><td class="item">SL9</td><td class="num">510 m/s</td><td class="num">486 m/s</td><td class="num delta-nerf">-4.71%</td></tr>
+<tr data-item="l85a3"><td class="item">L85A3</td><td class="num">814 m/s</td><td class="num">778 m/s</td><td class="num delta-nerf">-4.42%</td></tr>
+<tr data-item="umg-40"><td class="item">UMG-40</td><td class="num">488 m/s</td><td class="num">467 m/s</td><td class="num delta-nerf">-4.30%</td></tr>
+<tr data-item="sor-556-mk2"><td class="item">SOR-556Mk2</td><td class="num">800 m/s</td><td class="num">768 m/s</td><td class="num delta-nerf">-4.00%</td></tr>
+<tr data-item="pw7a2"><td class="item">PW7A2</td><td class="num">600 m/s</td><td class="num">576 m/s</td><td class="num delta-nerf">-4.00%</td></tr>
+<tr data-item="vz-61"><td class="item">VZ.61</td><td class="num">326 m/s</td><td class="num">313 m/s</td><td class="num delta-nerf">-3.99%</td></tr>
+<tr data-item="ak-205"><td class="item">AK-205</td><td class="num">737 m/s</td><td class="num">708 m/s</td><td class="num delta-nerf">-3.93%</td></tr>
+<tr data-item="kts100-mk8"><td class="item">KTS100MK8</td><td class="num">840 m/s</td><td class="num">808 m/s</td><td class="num delta-nerf">-3.81%</td></tr>
+<tr data-item="rpk-74m"><td class="item">RPK-74M</td><td class="num">840 m/s</td><td class="num">808 m/s</td><td class="num delta-nerf">-3.81%</td></tr>
+<tr data-item="kv9"><td class="item">KV9</td><td class="num">348 m/s</td><td class="num">362 m/s</td><td class="num delta-buff">+4.02%</td></tr>
 </table>
 <p class="grp"><b>Recoil Variation Adjustments</b></p>
 <table>
 <tr><th></th><th>From</th><th>To</th><th>Change</th></tr>
-<tr data-item="tr-7"><td class="item">TR-7</td><td class="num">47.1°</td><td class="num">40.8°</td><td class="num delta-down">-13.4%</td></tr>
-<tr data-item="ak4d"><td class="item">AK4D</td><td class="num">25.4°</td><td class="num">20.0°</td><td class="num delta-down">-21.3%</td></tr>
-<tr data-item="nvo-228e"><td class="item">NVO-228E</td><td class="num">36.8°</td><td class="num">28.9°</td><td class="num delta-down">-21.5%</td></tr>
-<tr data-item="vcr-2"><td class="item">VCR-2</td><td class="num">64.9°</td><td class="num">50.3°</td><td class="num delta-down">-22.5%</td></tr>
-<tr data-item="m433"><td class="item">M433</td><td class="num">50.9°</td><td class="num">41.4°</td><td class="num delta-down">-18.7%</td></tr>
-<tr data-item="m16a4"><td class="item">M16A4</td><td class="num">46.4°</td><td class="num">37.5°</td><td class="num delta-down">-19.2%</td></tr>
-<tr data-item="b36a4"><td class="item">B36A4</td><td class="num">37.4°</td><td class="num">28.0°</td><td class="num delta-down">-25.1%</td></tr>
-<tr data-item="l85a3"><td class="item">L85A3</td><td class="num">29.4°</td><td class="num">22.8°</td><td class="num delta-down">-22.4%</td></tr>
-<tr data-item="sor-556-mk2"><td class="item">SOR-556 MK2</td><td class="num">17.3°</td><td class="num">12.7°</td><td class="num delta-down">-26.6%</td></tr>
-<tr data-item="kord-6p67"><td class="item">KORD 6P67</td><td class="num">35.3°</td><td class="num">28.9°</td><td class="num delta-down">-18.1%</td></tr>
-<tr data-item="m417-a2"><td class="item">M417A2</td><td class="num">19.8°</td><td class="num">15.4°</td><td class="num delta-down">-22.2%</td></tr>
-<tr data-item="sg-553r"><td class="item">SG 553R</td><td class="num">43.3°</td><td class="num">35.8°</td><td class="num delta-down">-17.3%</td></tr>
-<tr data-item="sor-300sc"><td class="item">SOR-300SC</td><td class="num">19.2°</td><td class="num">15.8°</td><td class="num delta-down">-17.7%</td></tr>
-<tr data-item="m277"><td class="item">M277</td><td class="num">39.4°</td><td class="num">34.4°</td><td class="num delta-down">-12.7%</td></tr>
-<tr data-item="m4a1"><td class="item">M4A1</td><td class="num">37.9°</td><td class="num">30.7°</td><td class="num delta-down">-19.0%</td></tr>
-<tr data-item="grt-bc"><td class="item">GRT-BC</td><td class="num">31.2°</td><td class="num">26.1°</td><td class="num delta-down">-16.3%</td></tr>
-<tr data-item="qbz-192"><td class="item">QBZ-192</td><td class="num">23.5°</td><td class="num">19.9°</td><td class="num delta-down">-15.3%</td></tr>
-<tr data-item="ak-205"><td class="item">AK-205</td><td class="num">7.8°</td><td class="num">7.4°</td><td class="num delta-down">-5.1%</td></tr>
-<tr data-item="rpkm"><td class="item">RPKM</td><td class="num">22.7°</td><td class="num">17.5°</td><td class="num delta-down">-22.9%</td></tr>
-<tr data-item="drs-iar"><td class="item">DRS-IAR</td><td class="num">35.2°</td><td class="num">29.3°</td><td class="num delta-down">-16.8%</td></tr>
-<tr data-item="kts100-mk8"><td class="item">KTS100 MK8</td><td class="num">10.9°</td><td class="num">9.5°</td><td class="num delta-down">-12.8%</td></tr>
-<tr data-item="rpk-74m"><td class="item">RPK-74M</td><td class="num">18.9°</td><td class="num">16.1°</td><td class="num delta-down">-14.8%</td></tr>
-<tr data-item="m121-a2"><td class="item">M121 A2</td><td class="num">39.5°</td><td class="num">31.8°</td><td class="num delta-down">-19.5%</td></tr>
-<tr data-item="m240l"><td class="item">M240L</td><td class="num">41.8°</td><td class="num">34.5°</td><td class="num delta-down">-17.5%</td></tr>
-<tr data-item="m60"><td class="item">M/60</td><td class="num">38.8°</td><td class="num">29.9°</td><td class="num delta-down">-22.9%</td></tr>
-<tr data-item="m250"><td class="item">M250</td><td class="num">39.7°</td><td class="num">35.9°</td><td class="num delta-down">-9.6%</td></tr>
-<tr data-item="m123k"><td class="item">M123K</td><td class="num">55.9°</td><td class="num">47.7°</td><td class="num delta-down">-14.7%</td></tr>
-<tr data-item="l110"><td class="item">L110</td><td class="num">39.4°</td><td class="num">31.0°</td><td class="num delta-down">-21.3%</td></tr>
-<tr data-item="scw-10"><td class="item">SCW-10</td><td class="num">35.0°</td><td class="num">33.5°</td><td class="num delta-down">-4.3%</td></tr>
-<tr data-item="umg-40"><td class="item">UMG-40</td><td class="num">17.4°</td><td class="num">13.0°</td><td class="num delta-down">-25.3%</td></tr>
-<tr data-item="kv9"><td class="item">KV9</td><td class="num">57.6°</td><td class="num">50.0°</td><td class="num delta-down">-13.2%</td></tr>
-<tr data-item="cz3a1"><td class="item">CZ3A1</td><td class="num">59.1°</td><td class="num">50.8°</td><td class="num delta-down">-14.0%</td></tr>
-<tr data-item="sgx"><td class="item">SGX</td><td class="num">39.8°</td><td class="num">31.7°</td><td class="num delta-down">-20.4%</td></tr>
-<tr data-item="pw5a3"><td class="item">PW5A3</td><td class="num">33.2°</td><td class="num">28.3°</td><td class="num delta-down">-14.8%</td></tr>
-<tr data-item="pp-19"><td class="item">PP-19</td><td class="num">21.4°</td><td class="num">18.0°</td><td class="num delta-down">-15.9%</td></tr>
-<tr data-item="sl9"><td class="item">SL9</td><td class="num">16.2°</td><td class="num">13.0°</td><td class="num delta-down">-19.8%</td></tr>
-<tr data-item="usg-90"><td class="item">USG-90</td><td class="num">42.8°</td><td class="num">35.5°</td><td class="num delta-down">-17.1%</td></tr>
-<tr data-item="pw7a2"><td class="item">PW7A2</td><td class="num">33.3°</td><td class="num">27.8°</td><td class="num delta-down">-16.5%</td></tr>
-<tr data-item="vz-61"><td class="item">VZ. 61</td><td class="num">20.8°</td><td class="num">18.4°</td><td class="num delta-down">-11.5%</td></tr>
+<tr data-item="tr-7"><td class="item">TR-7</td><td class="num">47.1°</td><td class="num">40.8°</td><td class="num delta-buff">-13.4%</td></tr>
+<tr data-item="ak4d"><td class="item">AK4D</td><td class="num">25.4°</td><td class="num">20.0°</td><td class="num delta-buff">-21.3%</td></tr>
+<tr data-item="nvo-228e"><td class="item">NVO-228E</td><td class="num">36.8°</td><td class="num">28.9°</td><td class="num delta-buff">-21.5%</td></tr>
+<tr data-item="vcr-2"><td class="item">VCR-2</td><td class="num">64.9°</td><td class="num">50.3°</td><td class="num delta-buff">-22.5%</td></tr>
+<tr data-item="m433"><td class="item">M433</td><td class="num">50.9°</td><td class="num">41.4°</td><td class="num delta-buff">-18.7%</td></tr>
+<tr data-item="m16a4"><td class="item">M16A4</td><td class="num">46.4°</td><td class="num">37.5°</td><td class="num delta-buff">-19.2%</td></tr>
+<tr data-item="b36a4"><td class="item">B36A4</td><td class="num">37.4°</td><td class="num">28.0°</td><td class="num delta-buff">-25.1%</td></tr>
+<tr data-item="l85a3"><td class="item">L85A3</td><td class="num">29.4°</td><td class="num">22.8°</td><td class="num delta-buff">-22.4%</td></tr>
+<tr data-item="sor-556-mk2"><td class="item">SOR-556 MK2</td><td class="num">17.3°</td><td class="num">12.7°</td><td class="num delta-buff">-26.6%</td></tr>
+<tr data-item="kord-6p67"><td class="item">KORD 6P67</td><td class="num">35.3°</td><td class="num">28.9°</td><td class="num delta-buff">-18.1%</td></tr>
+<tr data-item="m417-a2"><td class="item">M417A2</td><td class="num">19.8°</td><td class="num">15.4°</td><td class="num delta-buff">-22.2%</td></tr>
+<tr data-item="sg-553r"><td class="item">SG 553R</td><td class="num">43.3°</td><td class="num">35.8°</td><td class="num delta-buff">-17.3%</td></tr>
+<tr data-item="sor-300sc"><td class="item">SOR-300SC</td><td class="num">19.2°</td><td class="num">15.8°</td><td class="num delta-buff">-17.7%</td></tr>
+<tr data-item="m277"><td class="item">M277</td><td class="num">39.4°</td><td class="num">34.4°</td><td class="num delta-buff">-12.7%</td></tr>
+<tr data-item="m4a1"><td class="item">M4A1</td><td class="num">37.9°</td><td class="num">30.7°</td><td class="num delta-buff">-19.0%</td></tr>
+<tr data-item="grt-bc"><td class="item">GRT-BC</td><td class="num">31.2°</td><td class="num">26.1°</td><td class="num delta-buff">-16.3%</td></tr>
+<tr data-item="qbz-192"><td class="item">QBZ-192</td><td class="num">23.5°</td><td class="num">19.9°</td><td class="num delta-buff">-15.3%</td></tr>
+<tr data-item="ak-205"><td class="item">AK-205</td><td class="num">7.8°</td><td class="num">7.4°</td><td class="num delta-buff">-5.1%</td></tr>
+<tr data-item="rpkm"><td class="item">RPKM</td><td class="num">22.7°</td><td class="num">17.5°</td><td class="num delta-buff">-22.9%</td></tr>
+<tr data-item="drs-iar"><td class="item">DRS-IAR</td><td class="num">35.2°</td><td class="num">29.3°</td><td class="num delta-buff">-16.8%</td></tr>
+<tr data-item="kts100-mk8"><td class="item">KTS100 MK8</td><td class="num">10.9°</td><td class="num">9.5°</td><td class="num delta-buff">-12.8%</td></tr>
+<tr data-item="rpk-74m"><td class="item">RPK-74M</td><td class="num">18.9°</td><td class="num">16.1°</td><td class="num delta-buff">-14.8%</td></tr>
+<tr data-item="m121-a2"><td class="item">M121 A2</td><td class="num">39.5°</td><td class="num">31.8°</td><td class="num delta-buff">-19.5%</td></tr>
+<tr data-item="m240l"><td class="item">M240L</td><td class="num">41.8°</td><td class="num">34.5°</td><td class="num delta-buff">-17.5%</td></tr>
+<tr data-item="m60"><td class="item">M/60</td><td class="num">38.8°</td><td class="num">29.9°</td><td class="num delta-buff">-22.9%</td></tr>
+<tr data-item="m250"><td class="item">M250</td><td class="num">39.7°</td><td class="num">35.9°</td><td class="num delta-buff">-9.6%</td></tr>
+<tr data-item="m123k"><td class="item">M123K</td><td class="num">55.9°</td><td class="num">47.7°</td><td class="num delta-buff">-14.7%</td></tr>
+<tr data-item="l110"><td class="item">L110</td><td class="num">39.4°</td><td class="num">31.0°</td><td class="num delta-buff">-21.3%</td></tr>
+<tr data-item="scw-10"><td class="item">SCW-10</td><td class="num">35.0°</td><td class="num">33.5°</td><td class="num delta-buff">-4.3%</td></tr>
+<tr data-item="umg-40"><td class="item">UMG-40</td><td class="num">17.4°</td><td class="num">13.0°</td><td class="num delta-buff">-25.3%</td></tr>
+<tr data-item="kv9"><td class="item">KV9</td><td class="num">57.6°</td><td class="num">50.0°</td><td class="num delta-buff">-13.2%</td></tr>
+<tr data-item="cz3a1"><td class="item">CZ3A1</td><td class="num">59.1°</td><td class="num">50.8°</td><td class="num delta-buff">-14.0%</td></tr>
+<tr data-item="sgx"><td class="item">SGX</td><td class="num">39.8°</td><td class="num">31.7°</td><td class="num delta-buff">-20.4%</td></tr>
+<tr data-item="pw5a3"><td class="item">PW5A3</td><td class="num">33.2°</td><td class="num">28.3°</td><td class="num delta-buff">-14.8%</td></tr>
+<tr data-item="pp-19"><td class="item">PP-19</td><td class="num">21.4°</td><td class="num">18.0°</td><td class="num delta-buff">-15.9%</td></tr>
+<tr data-item="sl9"><td class="item">SL9</td><td class="num">16.2°</td><td class="num">13.0°</td><td class="num delta-buff">-19.8%</td></tr>
+<tr data-item="usg-90"><td class="item">USG-90</td><td class="num">42.8°</td><td class="num">35.5°</td><td class="num delta-buff">-17.1%</td></tr>
+<tr data-item="pw7a2"><td class="item">PW7A2</td><td class="num">33.3°</td><td class="num">27.8°</td><td class="num delta-buff">-16.5%</td></tr>
+<tr data-item="vz-61"><td class="item">VZ. 61</td><td class="num">20.8°</td><td class="num">18.4°</td><td class="num delta-buff">-11.5%</td></tr>
 </table>
 <p class="grp"><b>Automatic Weapons Damage Multipliers</b></p>
 <table>
