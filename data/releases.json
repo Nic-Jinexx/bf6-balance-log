@@ -268,16 +268,35 @@
       ]
     }
   ],
-  "_removed_comment": "Content that was live and is not any more. Kept separate from 'releases' because a removal has no version: EA has published no changelog line for any of these, so the only source is an in-game screen read on a given date. Each block records what was seen, when, and where; build_pages.py turns it into a 'Removed' Availability row using the literal 'value' string, so nothing is assembled or inferred at render time. An entry here does NOT delete the item's page. The patch history stays and the row is what stops the page implying the content is still playable. See docs/adr/0007.",
+  "_removed_comment": "Availability observations: content that was live and is not any more, and content that came back. Kept separate from 'releases' because none of this has a version: EA has published no changelog line for any of it, so the only source is an in-game screen read on a given date. Each block records what was seen, when, and where; build_pages.py turns it into an Availability row using the literal 'value' string, so nothing is assembled or inferred at render time. The row is labelled 'Removed' unless the block sets its own 'label' — needed because content returns, and 'Removed' would then state the opposite of what was seen. Blocks are read in file order, so a later observation of the same slug supersedes an earlier one. An entry here does NOT delete the item's page. The patch history stays and the row is what stops the page implying the content is still playable. See docs/adr/0007.",
   "removed": [
     {
-      "observed": "Aug 5, 2026",
-      "source": "In-game Custom Search mode list (Steam capture 20260805170513)",
-      "value": "Not in Custom Search as of Aug 5, 2026",
-      "_scope_note": "Custom Search lists core multiplayer modes only, so this is not evidence either way about REDSEC, Battle Royale, Gauntlet or Portal playlists. Team Deathmatch was checked on the same screen and is still listed, so it is not recorded here.",
+      "observed": "Aug 12, 2026",
+      "source": "In-game Custom Search mode list (Steam capture 20260805170513, then re-checked by the owner on Aug 12, 2026)",
+      "value": "Not in Custom Search as of Aug 5, 2026; still absent Aug 12, 2026",
+      "_scope_note": "Custom Search lists core multiplayer modes only, so this is not evidence either way about REDSEC, Battle Royale, Gauntlet or Portal playlists.",
       "entries": [
-        {"name": "King of the Hill", "slug": "king-of-the-hill", "kind": "Mode"},
         {"name": "Rush", "slug": "rush", "kind": "Mode"}
+      ]
+    },
+    {
+      "observed": "Aug 12, 2026",
+      "source": "In-game Custom Search mode list (owner observation)",
+      "value": "Not in Custom Search as of Aug 12, 2026",
+      "_scope_note": "Custom Search lists core multiplayer modes only, so this is not evidence either way about REDSEC, Battle Royale, Gauntlet or Portal playlists. Domination was still listed in the Aug 5, 2026 capture, so it went in a later wave than that screen. Team Deathmatch was checked on the same Aug 12 screen and is still listed, so it is not recorded here.",
+      "entries": [
+        {"name": "Domination", "slug": "domination", "kind": "Mode"}
+      ]
+    },
+    {
+      "observed": "Aug 12, 2026",
+      "label": "Rotation",
+      "source": "In-game Custom Search mode list (owner observation, Aug 12, 2026); EA announcement on X, Aug 7, 2026",
+      "value": "Back in Custom Search as of Aug 11, 2026; EA announced the return “next week” on Aug 7, 2026.",
+      "_scope_note": "Absent from the Aug 5, 2026 capture and present again when checked on Aug 12, so this supersedes that observation rather than adding to it. Battlefield Studios describes these as playlist rotation rather than deletion, which is what this row records.",
+      "_date_basis": "Owner's call: the row states Aug 11, the sighting was Aug 12. EA's Aug 7 post said only “next week” and named no date; Aug 11 is the Tuesday of that week, which is EA's usual update slot. So the stated date is derived from EA's cadence plus the announcement, not read off a screen — the one place on the site where that is true. If a source ever gives an exact date, correct it here.",
+      "entries": [
+        {"name": "King of the Hill", "slug": "king-of-the-hill", "kind": "Mode"}
       ]
     }
   ],

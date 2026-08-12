@@ -1,0 +1,170 @@
+{
+  "_comment": "EA's Battlefield 6 Community Updates, read from EA's own news listing payload. Regenerate with scripts/fetch_community_updates.py. Rendered as the Community Updates block at the foot of the sidebar, by scripts/build_pages.py.",
+  "_source": "https://www.ea.com/games/battlefield/battlefield-6/news",
+  "_date": "EA's publishingDate, date part only -- it is what EA's own listing prints. The timezone offsets in the payload are inconsistent (+08:00, +01:00, -07:00, Z) and shifting to UTC would move some articles off the date EA shows.",
+  "_title": "EA's exact wording. `label` is DERIVED from it for the sidebar and may be hand-corrected; a re-fetch keeps a hand-edited label while the title is unchanged.",
+  "_scanned": "120 BF6 news articles scanned, 23 are Community Updates",
+  "updates": [
+    {
+      "date": "2025-08-04",
+      "title": "Community Update - Open Beta and the Road to Launch",
+      "label": "Open Beta and the Road to Launch",
+      "slug": "community-update-open-beta-and-the-road-to-launch",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/community-update-open-beta-and-the-road-to-launch"
+    },
+    {
+      "date": "2025-08-21",
+      "title": "COMMUNITY UPDATE - OPEN BETA DEBRIEF",
+      "label": "Open Beta Debrief",
+      "slug": "community-update-open-beta-debrief",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/community-update-open-beta-debrief"
+    },
+    {
+      "date": "2025-08-28",
+      "title": "COMMUNITY UPDATE -  BATTLEFIELD LABS TESTING",
+      "label": "Battlefield Labs Testing",
+      "slug": "community-update-battlefield-labs-testing",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/community-update-battlefield-labs-testing"
+    },
+    {
+      "date": "2025-09-10",
+      "title": "BATTLEFIELD LABS - COMMUNITY UPDATE - BATTLE ROYALE TESTING",
+      "label": "Battle Royale Testing",
+      "slug": "community-update-battle-royale-testing",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/community-update-battle-royale-testing"
+    },
+    {
+      "date": "2025-10-06",
+      "title": "BATTLEFIELD 6 - COMMUNITY UPDATE - PLAY YOUR WAY",
+      "label": "Play Your Way",
+      "slug": "community-update-play-your-way",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/community-update-play-your-way"
+    },
+    {
+      "date": "2025-10-24",
+      "title": "Battlefield 6 - Community Update - Latest Changes and Preparing for Season 1",
+      "label": "Latest Changes and Preparing for Season 1",
+      "slug": "battlefield-6-community-update-latest-changes-and-preparing-for-season-1",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-latest-changes-and-preparing-for-season-1"
+    },
+    {
+      "date": "2025-11-12",
+      "title": "Battlefield 6 - Community Update – Latest Updates Ahead of California Resistance",
+      "label": "Latest Updates Ahead of California Resistance",
+      "slug": "updates-ahead-of-california-resistance",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/updates-ahead-of-california-resistance"
+    },
+    {
+      "date": "2025-12-03",
+      "title": "Battlefield 6 - Community Update – Latest Updates Ahead of Winter Offensive",
+      "label": "Latest Updates Ahead of Winter Offensive",
+      "slug": "battlefield-6-community-update-incoming-winter-offensive",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-incoming-winter-offensive"
+    },
+    {
+      "date": "2025-12-11",
+      "title": "Battlefield 6 - Community Update - Winter Offensive Launch and Player Feedback",
+      "label": "Winter Offensive Launch and Player Feedback",
+      "slug": "battlefield-6-community-update-winter-offensive-launch-and-player-feedback",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-winter-offensive-launch-and-player-feedback"
+    },
+    {
+      "date": "2025-12-19",
+      "title": "Battlefield 6 - Community Update - Holiday Wrap-Up",
+      "label": "Holiday Wrap-Up",
+      "slug": "battlefield-6-community-update-holiday-wrap-up",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-holiday-wrap-up"
+    },
+    {
+      "date": "2026-01-22",
+      "title": "BATTLEFIELD 6 - COMMUNITY UPDATE - BATTLEFIELD LABS SEASON 2 TESTING AND BEYOND",
+      "label": "Battlefield Labs Season 2 Testing and Beyond",
+      "slug": "battlefield-6-community-update-battlefield-labs-season-2-testing-and-beyond",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-battlefield-labs-season-2-testing-and-beyond"
+    },
+    {
+      "date": "2026-02-10",
+      "title": "Battlefield 6 - Community Update - Looking Ahead to Season 2",
+      "label": "Looking Ahead to Season 2",
+      "slug": "battlefield-6-community-update-looking-ahead-to-season-2",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-looking-ahead-to-season-2"
+    },
+    {
+      "date": "2026-03-02",
+      "title": "Battlefield 6 - Community Update - Season 2 Reactions and BR Solos Testing",
+      "label": "Season 2 Reactions and BR Solos Testing",
+      "slug": "battlefield-6-community-update-season-2-reactions-and-br-solo-testing",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-season-2-reactions-and-br-solo-testing"
+    },
+    {
+      "date": "2026-03-06",
+      "title": "BATTLEFIELD 6 - COMMUNITY UPDATE - ONGOING QUALITY OF LIFE IMPROVEMENTS",
+      "label": "Ongoing Quality of Life Improvements",
+      "slug": "battlefield-6-community-update-ongoing-quality-of-life-improvements",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-ongoing-quality-of-life-improvements"
+    },
+    {
+      "date": "2026-04-02",
+      "title": "Battlefield 6 - Community Update - Nightfall Debrief and What’s Next",
+      "label": "Nightfall Debrief and What’s Next",
+      "slug": "battlefield-6-community-update-nightfall-debrief-and-whats-next",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-nightfall-debrief-and-whats-next"
+    },
+    {
+      "date": "2026-04-30",
+      "title": "Battlefield 6 - Community Update - Railway to Golmud, Ranked BR, and More",
+      "label": "Railway to Golmud, Ranked BR, and More",
+      "slug": "battlefield-6-community-update-railway-to-golmud-ranked-br-and-more",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-railway-to-golmud-ranked-br-and-more"
+    },
+    {
+      "date": "2026-05-01",
+      "title": "Battlefield 6 - Community Update - Land Vehicle Improvements",
+      "label": "Land Vehicle Improvements",
+      "slug": "battlefield-6-community-update-land-vehicle-improvements",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-land-vehicle-improvements"
+    },
+    {
+      "date": "2026-05-28",
+      "title": "Battlefield 6 - Community Update - Blastpoint Introduces Cairo Bazaar & BR Solos",
+      "label": "Blastpoint Introduces Cairo Bazaar & BR Solos",
+      "slug": "battlefield-6-community-update-blastpoint-introduces-cairo-bazaar-and-br-solos",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-blastpoint-introduces-cairo-bazaar-and-br-solos"
+    },
+    {
+      "date": "2026-06-04",
+      "title": "Battlefield 6 - Community Update - 2026 Roadmap Updates and Season 4",
+      "label": "2026 Roadmap Updates and Season 4",
+      "slug": "community-update-2026-roadmap-updates-and-season-4",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/community-update-2026-roadmap-updates-and-season-4"
+    },
+    {
+      "date": "2026-06-18",
+      "title": "Battlefield 6 - Community Update - What’s Coming in the Final Phase of Season 3",
+      "label": "What’s Coming in the Final Phase of Season 3",
+      "slug": "battlefield-6-community-update-whats-coming-in-the-final-phase-of-season-3",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-whats-coming-in-the-final-phase-of-season-3"
+    },
+    {
+      "date": "2026-07-15",
+      "title": "Battlefield 6 - Community Update - Naval Warfare and Our Journey Since Launch",
+      "label": "Naval Warfare and Our Journey Since Launch",
+      "slug": "community-update-naval-warfare-and-our-journey-since-launch",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/community-update-naval-warfare-and-our-journey-since-launch"
+    },
+    {
+      "date": "2026-07-30",
+      "title": "BATTLEFIELD 6 - COMMUNITY UPDATE - NEW MAPS, FEATURES, AND MORE",
+      "label": "New Maps, Features, and More",
+      "slug": "battlefield-6-community-update-new-maps-features-and-more",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-new-maps-features-and-more"
+    },
+    {
+      "date": "2026-08-06",
+      "title": "Battlefield 6 - Community Update - Top Gun Incoming",
+      "label": "Top Gun Incoming",
+      "slug": "battlefield-6-community-update-top-gun-incoming",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-top-gun-incoming"
+    }
+  ]
+}

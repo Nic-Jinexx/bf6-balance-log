@@ -317,6 +317,59 @@ def _leaves(entries, current_url):
     return rows
 
 
+# the reverse of MONTHS above, which maps name -> number for iso_date()
+MONTH_NAMES = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+def pretty_date(iso):
+    """2026-08-06 -> Aug 6, 2026, matching the Patch Index's date style.
+
+    Anything that is not a plain ISO date is passed through untouched rather
+    than guessed at -- the same rule the rest of the data follows.
+    """
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", iso or "")
+    if not m:
+        return iso or ""
+    year, month, day = m.groups()
+    return "%s %d, %s" % (MONTH_NAMES[int(month) - 1], int(day), year)
+
+
+def render_community(updates):
+    """EA's Community Updates, at the foot of the sidebar.
+
+    These are outbound links to ea.com, not pages on this site, so they sit in
+    their own <nav> after the item database rather than as another branch of it
+    -- and every row is marked as leaving the site. EA writes these alongside
+    the Game Updates and they carry the reasoning the changelogs leave out
+    (the Aug 6, 2026 one is the only place EA acknowledges the playlist
+    removals at all), which is why they are worth linking even though the log
+    itself only mirrors the changelogs.
+    """
+    if not updates:
+        return ""
+    out = ['<nav class="tree-nav tree-extra" aria-label="EA community updates">',
+           '<details class="branch b-community">',
+           '<summary>Community Updates<span class="cnt">%d</span></summary>'
+           % len(updates)]
+    # newest first: the data file is oldest-first so a new one appends cleanly
+    for u in sorted(updates, key=lambda x: (x.get("date") or "", x.get("slug") or ""),
+                    reverse=True):
+        out.append('<a class="leaf cu" href="%s" target="_blank" rel="noopener" '
+                   'title="%s">'
+                   '<span class="cu-date">%s</span>'
+                   '<span class="cu-label">%s</span></a>'
+                   % (html.escape(u["url"], quote=True),
+                      html.escape(u.get("title") or "", quote=True),
+                      html.escape(pretty_date(u.get("date"))),
+                      html.escape(u.get("label") or u.get("title") or "")))
+    out.append('<p class="cu-note">EA\'s own community posts, on ea.com. '
+               'This log mirrors the Game Updates only.</p>')
+    out.append("</details>")
+    out.append("</nav>")
+    return "\n".join(out)
+
+
 def inject_tree(page_html, tree_html):
     start = page_html.find(TREE_START)
     end = page_html.find(TREE_END)
@@ -716,13 +769,18 @@ def render_facts(item, color, signature=None, added_in=None, klass=None, removed
         for r in avail:
             if (r.get("label") or "").strip().lower() == "added in":
                 r["value"] = added_in
-    # ...and for Removed, which has no version because EA never published one.
-    # The value is the literal string from releases.json, so nothing is assembled
-    # here. It goes last: the page reads added, then gone.
+    # ...and for the availability observation, which has no version because EA
+    # never published one. Both halves come from releases.json literally, so
+    # nothing is assembled here. It goes last: the page reads added, then gone.
+    # The label is per block because content comes back: King of the Hill was
+    # out of Custom Search on Aug 5, 2026 and in it again on Aug 12, and
+    # "Removed" states the opposite of what was seen.
     if removed:
+        removed_label, removed_value = removed
+        drop = {"removed", removed_label.strip().lower()}
         avail = [r for r in avail
-                 if (r.get("label") or "").strip().lower() != "removed"]
-        avail.append({"label": "Removed", "value": removed})
+                 if (r.get("label") or "").strip().lower() not in drop]
+        avail.append({"label": removed_label, "value": removed_value})
     if signature and not any((r.get("label") or "").strip().lower() == "signature weapon"
                              for r in avail):
         avail.insert(0, {"label": "Signature Weapon", "value": signature})
@@ -1075,7 +1133,8 @@ def render_history(entries, name, the="the "):
     return "\n".join(out)
 
 
-def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
+def build_page(item, entries, tree, items_by_place, by_slug, shared_css,
+               community_html=""):
     url = item["url"]
     name = item["name"]
     color = BRANCH_COLOR.get(item["branch"], "weapons")
@@ -1140,7 +1199,7 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css):
     page = PAGE_TEMPLATE
     for key, val in fields.items():
         page = page.replace("{{%s}}" % key, val)
-    return inject_tree(page, render_tree(tree, items_by_place, url))
+    return inject_tree(page, render_tree(tree, items_by_place, url) + community_html)
 
 
 # --------------------------------------------------------------------------
@@ -1173,6 +1232,23 @@ def main():
 
     problems = []
 
+    # ---- EA's community updates: the sidebar block under the item database ----
+    # Absent file is not an error: the block simply does not render, so a fresh
+    # clone still builds. Regenerate it with scripts/fetch_community_updates.py.
+    community_path = os.path.join(ROOT, "data", "community-updates.json")
+    community = []
+    if os.path.isfile(community_path):
+        community = json.loads(read_text(community_path)).get("updates") or []
+        for u in community:
+            missing = [f for f in ("date", "title", "url") if not u.get(f)]
+            if missing:
+                problems.append("community-updates.json: %r is missing %s"
+                                % (u.get("slug") or u, ", ".join(missing)))
+            if not (u.get("url") or "").startswith("https://www.ea.com/"):
+                problems.append("community-updates.json: %r does not link to ea.com"
+                                % (u.get("slug") or u))
+    community_html = ("\n" + render_community(community)) if community else ""
+
     # ---- content releases: the source for Added in ----
     releases_path = os.path.join(ROOT, "data", "releases.json")
     releases = {"releases": []}
@@ -1201,14 +1277,18 @@ def main():
             else:
                 unbuilt.append((entry.get("name", "?"), entry.get("kind", "?"), ver))
 
-    # ---- content removals: the source for the Removed row ----
+    # ---- availability observations: the source for the Removed row ----
     # No version to check against known_versions.json: EA has published no
     # changelog line for any removal so far, so a block carries an observation
     # date and its source instead. The rendered string is taken literally.
+    # A block may set its own 'label' when "Removed" would misstate what was
+    # seen; blocks are read in file order, so a later observation of the same
+    # slug supersedes an earlier one.
     removed_in = {}
     unbuilt_removed = []
     for block in releases.get("removed") or []:
         value = (block.get("value") or "").strip()
+        label = (block.get("label") or "Removed").strip()
         if not value:
             problems.append("releases.json: a removed block has no 'value' to render")
             continue
@@ -1216,7 +1296,7 @@ def main():
             problems.append("releases.json: removed block %r has no 'source'" % value)
         for entry in block.get("entries") or []:
             if entry.get("slug"):
-                removed_in[entry["slug"]] = value
+                removed_in[entry["slug"]] = (label, value)
             else:
                 unbuilt_removed.append((entry.get("name", "?"), entry.get("kind", "?"),
                                         block.get("observed", "?")))
@@ -1267,7 +1347,7 @@ def main():
     written = []
     for item in items:
         page = build_page(item, history.get(item["slug"], []), tree,
-                          items_by_place, by_slug, shared_css)
+                          items_by_place, by_slug, shared_css, community_html)
         out_path = os.path.join(ROOT, item["url"].strip("/").replace("/", os.sep), "index.html")
         written.append((out_path, page))
         for old in item.get("retired_paths") or []:
@@ -1321,7 +1401,8 @@ def main():
     written.append((os.path.join(ROOT, "sitemap.xml"), "\n".join(sitemap) + "\n"))
 
     # "/" so the Patch Notes link marks itself current on the home page
-    written.append((index_path, inject_tree(index_raw, render_tree(tree, items_by_place, "/"))))
+    written.append((index_path, inject_tree(
+        index_raw, render_tree(tree, items_by_place, "/") + community_html)))
 
     changed = []
     for path, content in written:

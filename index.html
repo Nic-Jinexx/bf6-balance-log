@@ -314,6 +314,29 @@ b.rs{color:var(--redsec) !important;font-weight:800}
 .tree a.leaf[aria-current="page"]{color:var(--text);background:rgba(255,255,255,.06);border-left-color:var(--weapons)}
 .tree .leaf-none{padding:4px 16px 8px 46px;font-size:14px;color:var(--dim);font-style:italic}
 
+/* EA's community updates, at the foot of the sidebar. A separate <nav> from the
+   item database above it, because every row leaves the site: these are links to
+   ea.com, not pages here. The rule and the top margin are what say "different
+   thing", since the rows otherwise reuse the tree's own styling. */
+.tree .tree-extra{margin-top:18px;padding-top:14px;border-top:1px solid var(--border)}
+/* deliberately the quietest label in the sidebar: this block is not part of the
+   item database, and a category-bright color would read as another branch of it */
+.tree .branch.b-community>summary{color:var(--progression)}
+/* two lines per row: the date is what makes a list of 23 posts scannable, and it
+   is the same Mon D, YYYY the Patch Index prints. Taller rows than a leaf, so
+   the left padding drops the extra indent a one-line item name can carry. */
+.tree a.leaf.cu{display:block;padding:8px 16px 8px 30px;line-height:1.35}
+.tree a.leaf.cu .cu-date{display:block;font-family:var(--mono);font-size:11.5px;
+      color:var(--dim);letter-spacing:.3px}
+.tree a.leaf.cu .cu-label{display:block;font-size:14.5px}
+/* every row here opens ea.com in a new tab, and nothing else in the sidebar
+   does. VS15 forces the text glyph: bare U+2197 renders as a color emoji in
+   some Windows font stacks, which would be a lot louder than intended. */
+.tree a.leaf.cu .cu-label::after{content:"\2197\FE0E";margin-left:5px;font-size:11px;
+      color:var(--dim);vertical-align:1px}
+.tree a.leaf.cu:hover .cu-date{color:var(--muted)}
+.tree .cu-note{margin:8px 16px 4px 30px;font-size:12.5px;line-height:1.45;color:var(--dim)}
+
 /* mobile drawer, CSS-only so the tree still opens with JS disabled */
 #treeToggle{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
       clip:rect(0 0 0 0);white-space:nowrap;border:0}
@@ -798,6 +821,35 @@ html{-webkit-text-size-adjust:100%}
 <a class="leaf" href="/modes/team-deathmatch/">Team Deathmatch</a>
 <a class="leaf" href="/modes/king-of-the-hill/">King of the Hill</a>
 <a class="leaf" href="/modes/rush/">Rush</a>
+</details>
+</nav>
+<nav class="tree-nav tree-extra" aria-label="EA community updates">
+<details class="branch b-community">
+<summary>Community Updates<span class="cnt">23</span></summary>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-top-gun-incoming" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Top Gun Incoming"><span class="cu-date">Aug 6, 2026</span><span class="cu-label">Top Gun Incoming</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-new-maps-features-and-more" target="_blank" rel="noopener" title="BATTLEFIELD 6 - COMMUNITY UPDATE - NEW MAPS, FEATURES, AND MORE"><span class="cu-date">Jul 30, 2026</span><span class="cu-label">New Maps, Features, and More</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/community-update-naval-warfare-and-our-journey-since-launch" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Naval Warfare and Our Journey Since Launch"><span class="cu-date">Jul 15, 2026</span><span class="cu-label">Naval Warfare and Our Journey Since Launch</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-whats-coming-in-the-final-phase-of-season-3" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - What’s Coming in the Final Phase of Season 3"><span class="cu-date">Jun 18, 2026</span><span class="cu-label">What’s Coming in the Final Phase of Season 3</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/community-update-2026-roadmap-updates-and-season-4" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - 2026 Roadmap Updates and Season 4"><span class="cu-date">Jun 4, 2026</span><span class="cu-label">2026 Roadmap Updates and Season 4</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-blastpoint-introduces-cairo-bazaar-and-br-solos" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Blastpoint Introduces Cairo Bazaar &amp; BR Solos"><span class="cu-date">May 28, 2026</span><span class="cu-label">Blastpoint Introduces Cairo Bazaar &amp; BR Solos</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-land-vehicle-improvements" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Land Vehicle Improvements"><span class="cu-date">May 1, 2026</span><span class="cu-label">Land Vehicle Improvements</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-railway-to-golmud-ranked-br-and-more" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Railway to Golmud, Ranked BR, and More"><span class="cu-date">Apr 30, 2026</span><span class="cu-label">Railway to Golmud, Ranked BR, and More</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-nightfall-debrief-and-whats-next" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Nightfall Debrief and What’s Next"><span class="cu-date">Apr 2, 2026</span><span class="cu-label">Nightfall Debrief and What’s Next</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-ongoing-quality-of-life-improvements" target="_blank" rel="noopener" title="BATTLEFIELD 6 - COMMUNITY UPDATE - ONGOING QUALITY OF LIFE IMPROVEMENTS"><span class="cu-date">Mar 6, 2026</span><span class="cu-label">Ongoing Quality of Life Improvements</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-season-2-reactions-and-br-solo-testing" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Season 2 Reactions and BR Solos Testing"><span class="cu-date">Mar 2, 2026</span><span class="cu-label">Season 2 Reactions and BR Solos Testing</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-looking-ahead-to-season-2" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Looking Ahead to Season 2"><span class="cu-date">Feb 10, 2026</span><span class="cu-label">Looking Ahead to Season 2</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-battlefield-labs-season-2-testing-and-beyond" target="_blank" rel="noopener" title="BATTLEFIELD 6 - COMMUNITY UPDATE - BATTLEFIELD LABS SEASON 2 TESTING AND BEYOND"><span class="cu-date">Jan 22, 2026</span><span class="cu-label">Battlefield Labs Season 2 Testing and Beyond</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-holiday-wrap-up" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Holiday Wrap-Up"><span class="cu-date">Dec 19, 2025</span><span class="cu-label">Holiday Wrap-Up</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-winter-offensive-launch-and-player-feedback" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Winter Offensive Launch and Player Feedback"><span class="cu-date">Dec 11, 2025</span><span class="cu-label">Winter Offensive Launch and Player Feedback</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-incoming-winter-offensive" target="_blank" rel="noopener" title="Battlefield 6 - Community Update – Latest Updates Ahead of Winter Offensive"><span class="cu-date">Dec 3, 2025</span><span class="cu-label">Latest Updates Ahead of Winter Offensive</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/updates-ahead-of-california-resistance" target="_blank" rel="noopener" title="Battlefield 6 - Community Update – Latest Updates Ahead of California Resistance"><span class="cu-date">Nov 12, 2025</span><span class="cu-label">Latest Updates Ahead of California Resistance</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-latest-changes-and-preparing-for-season-1" target="_blank" rel="noopener" title="Battlefield 6 - Community Update - Latest Changes and Preparing for Season 1"><span class="cu-date">Oct 24, 2025</span><span class="cu-label">Latest Changes and Preparing for Season 1</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/community-update-play-your-way" target="_blank" rel="noopener" title="BATTLEFIELD 6 - COMMUNITY UPDATE - PLAY YOUR WAY"><span class="cu-date">Oct 6, 2025</span><span class="cu-label">Play Your Way</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/community-update-battle-royale-testing" target="_blank" rel="noopener" title="BATTLEFIELD LABS - COMMUNITY UPDATE - BATTLE ROYALE TESTING"><span class="cu-date">Sep 10, 2025</span><span class="cu-label">Battle Royale Testing</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/community-update-battlefield-labs-testing" target="_blank" rel="noopener" title="COMMUNITY UPDATE -  BATTLEFIELD LABS TESTING"><span class="cu-date">Aug 28, 2025</span><span class="cu-label">Battlefield Labs Testing</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/community-update-open-beta-debrief" target="_blank" rel="noopener" title="COMMUNITY UPDATE - OPEN BETA DEBRIEF"><span class="cu-date">Aug 21, 2025</span><span class="cu-label">Open Beta Debrief</span></a>
+<a class="leaf cu" href="https://www.ea.com/games/battlefield/battlefield-6/news/community-update-open-beta-and-the-road-to-launch" target="_blank" rel="noopener" title="Community Update - Open Beta and the Road to Launch"><span class="cu-date">Aug 4, 2025</span><span class="cu-label">Open Beta and the Road to Launch</span></a>
+<p class="cu-note">EA's own community posts, on ea.com. This log mirrors the Game Updates only.</p>
 </details>
 </nav>
 <!-- TREE:END -->

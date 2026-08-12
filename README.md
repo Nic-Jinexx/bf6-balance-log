@@ -12,6 +12,11 @@ where captured, the full customisation detail — a vehicle's loadout and both f
 a class's training paths. Every update also links out to EA's own translation of it, in the twelve
 languages EA genuinely translates.
 
+The sidebar ends with **Community Updates** — every community post EA has published, linked to
+ea.com. Those posts are not mirrored here and never become patch lines; the log stays a verbatim
+mirror of the Game Updates. They are linked because EA sometimes changes the game without a
+changelog line, and the community post is the only place they say so.
+
 ## How it is built
 
 No framework and no dependencies; the build is a few stdlib-only Python scripts. Run them in order,
@@ -22,6 +27,8 @@ python scripts/fetch_patch.py <version>        # cache EA's page, extract every 
 python scripts/build_patch_data.py --init      # -> data/patches/<version>.json
 python scripts/render_patches.py               # fill the generated regions of index.html
 python scripts/build_pages.py                  # item pages, sitemap, search index
+
+python scripts/fetch_community_updates.py      # -> data/community-updates.json (sidebar block)
 
 python scripts/build_patch_data.py --check     # every EA bullet still present, verbatim
 python scripts/render_patches.py --check       # index.html matches the data
