@@ -27,12 +27,10 @@
       "options": [
         {
           "name": "Emergency Repair",
-          "designation": "TBD",
           "description": "Repairs damaged vehicles. Can only be activated when the vehicle is in a low-health state."
         },
         {
           "name": "Smoke Generator",
-          "designation": "TBD",
           "description": "TBD"
         }
       ]
@@ -43,24 +41,20 @@
       "options": [
         {
           "name": "Integrated Medbay",
-          "designation": "TBD",
           "description": "Increases health regeneration of friendly soldiers within a radius of the vehicle. Remains active even after all soldiers have exited the vehicle but remain nearby."
         },
         {
           "name": "Grenade Intercept",
           "title": "Grenade Intercept System",
-          "designation": "TBD",
           "description": "Tracks and destroys incoming projectiles such as hand-thrown and launched grenades. Can intercept up to three projectiles during a window of activation that begins after the initial detection."
         },
         {
           "name": "Combat Awareness",
-          "designation": "TBD",
           "description": "Hostiles remain spotted for longer when they damage the vehicle or the owner's squadmates while near the vehicle. Remains active even after all soldiers have exited the vehicle but remain nearby.",
           "title": "Combat Awareness System"
         },
         {
           "name": "Mobile Command",
-          "designation": "TBD",
           "description": "Increases the rate of capture when the vehicle is inside an objective's capture area. Remains active even after all soldiers have exited the vehicle but remain nearby.",
           "title": "Mobile Command Station"
         }
@@ -93,13 +87,11 @@
       "options": [
         {
           "name": "Smoke Wall",
-          "designation": "TBD",
           "description": "TBD"
         },
         {
           "name": "Countermeasures",
           "title": "Mine Countermeasures",
-          "designation": "TBD",
           "description": "Detects mines and C-4 explosives enabling the operator to activate countermeasures to destroy them."
         }
       ]

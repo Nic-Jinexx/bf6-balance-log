@@ -72,12 +72,10 @@
       "options": [
         {
           "name": "Naval Mine",
-          "designation": "TBD",
           "description": "Waterborne mine that detonates on contact with watercraft."
         },
         {
           "name": "Sea Spear 74",
-          "designation": "TBD",
           "description": "Stern launched wire-guided torpedo capable of very high damage to enemy watercraft."
         }
       ]

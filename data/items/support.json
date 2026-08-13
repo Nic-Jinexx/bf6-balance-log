@@ -102,5 +102,64 @@
     }
   ],
   "tag_name": false,
-  "_tag_name_note": "The bare word \"support\" is ordinary English and matched 32 lines about DLSS support, bot support and support for capture points, none of which are about the class. Name matching is off; the phrasings that really do mean the class are aliases instead, so a future \"Support soldiers now...\" line is still caught."
+  "_tag_name_note": "The bare word \"support\" is ordinary English and matched 32 lines about DLSS support, bot support and support for capture points, none of which are about the class. Name matching is off; the phrasings that really do mean the class are aliases instead, so a future \"Support soldiers now...\" line is still caught.",
+  "redsec": {
+    "_source": "Transcribed from the in-game REDSEC class details screen, Steam capture 20260812180245. The lobby banner reads 33/100 players, so this is a Battle Royale lobby and not core multiplayer.",
+    "signature_set": [
+      {
+        "slot": "Gadget 1",
+        "name": "Supply Bag",
+        "description": "Once dropped, the bag resupplies all nearby infantry with ammo for gadgets and weapons and regenerates health more efficiently, even when under fire. Gadget resupply does not occur in Battle Royale."
+      },
+      {
+        "slot": "Gadget 2",
+        "name": "Smoke Grenade Launcher",
+        "description": "Fires impact-triggered grenades designed to create temporary smoke screens. Blocks ability to spot targets and clears spotted markers from all infantry inside the smoke radius. Can be carried standalone or underslung on weapons with a Gadget Mount attachment for faster access."
+      },
+      {
+        "slot": "Signature Weapon",
+        "name": "LMG Proficiency",
+        "description": "Faster transition to aim down sights (ADS) and no sprint speed penalty when carrying LMGs."
+      },
+      {
+        "slot": "Signature Trait",
+        "name": "Field Sustainment",
+        "description": "Distribute health packs to teammates when they directly interact with you."
+      }
+    ],
+    "passive": {
+      "level": "LVL 04",
+      "name": "Stockpile",
+      "description": "Class gadget resupply rate increases by 10% with each improvement. Effect resets upon death."
+    },
+    "training": [
+      {
+        "level": "LVL 03",
+        "name": "Hemostatic Smoke",
+        "description": "Smoke Grenade Launcher speeds up revival to 2.2s for all classes, provides 12.5hp/s health regen after 2.5s, and slows downed bleedout."
+      },
+      {
+        "level": "LVL 02",
+        "name": "Swift Aid",
+        "description": "Drag downed soldiers 20% faster and revive them 2.5s quicker. Sprint faster when under heavy fire."
+      },
+      {
+        "level": "LVL 01",
+        "name": "Supply Line",
+        "description": "Armor carrying capacity increased by 2 plates. Ammo carrying capacity increased for all ammo types."
+      }
+    ],
+    "universal_equipment": [
+      {
+        "category": "Infantry Body Armor",
+        "name": "Upgraded Armor",
+        "description": "Standard small-arms issue tactical vest insert. Provides base-line ballistic protection."
+      },
+      {
+        "category": "Anti-Tank",
+        "name": "Thermite Sabotage",
+        "description": "Improvised sabotage device which slowly damages a tank and its crew."
+      }
+    ]
+  }
 }

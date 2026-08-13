@@ -471,6 +471,14 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .lo-slot table{margin:0}
 .lo-slot td:first-child{white-space:nowrap;color:var(--text)}
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
+/* The nowrap above assumes the first two columns are short, which holds for a
+   loadout slot ("Thermal-Blocking" / "TBD") and for a training row ("LVL 04" /
+   "Stockpile"). It does not hold where both are long -- "Signature Weapon" and
+   "Assault Rifle Proficiency" together starve the description column down to a
+   few characters on a phone. Those tables opt out. */
+.lo-slot.lo-wrap td:first-child,
+.lo-slot.lo-wrap td:nth-child(2){white-space:normal}
+.lo-slot.lo-wrap td:nth-child(2){min-width:9ch}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
 /* Class training paths. The ability table is the same three-column shape as a
@@ -935,15 +943,104 @@ def render_loadout(item):
                            'list was captured.</p>' % html.escape(slot.get("equipped") or "TBD"))
                 out.append("</div>")
                 continue
+            # Only weapon and ammo slots carry a designation: the detail screen
+            # prints the model name under the option name for a gun or a shell
+            # ("LIGHT MACHINE GUN" over "RWS 7.62MM MG") and prints nothing there
+            # for equipment and upgrades, which have a name and a description and
+            # no model at all. So the column is per slot, and a slot where no
+            # option has one drops it rather than showing a column of TBDs -- a
+            # TBD claims the value is unknown, when in fact there is none.
+            has_desig = any((o.get("designation") or "").strip() for o in options)
             out.append("<table>")
-            out.append("<tr><th>Option</th><th>Designation</th><th>In-game description</th></tr>")
+            head = ["Option"] + (["Designation"] if has_desig else []) + ["In-game description"]
+            out.append("<tr>%s</tr>" % "".join("<th>%s</th>" % h for h in head))
             for opt in options:
-                out.append("<tr><td>%s</td><td>%s</td><td>%s</td></tr>"
-                           % (html.escape(opt.get("name", "")),
-                              value_cell(opt.get("designation")),
-                              value_cell(opt.get("description"))))
+                cells = ["<td>%s</td>" % html.escape(opt.get("name", ""))]
+                if has_desig:
+                    cells.append("<td>%s</td>" % value_cell(opt.get("designation")))
+                cells.append("<td>%s</td>" % value_cell(opt.get("description")))
+                out.append("<tr>%s</tr>" % "".join(cells))
             out.append("</table></div>")
         out.append("</section>")
+    out.append("</div>")
+    return "\n".join(out)
+
+
+def render_redsec(item):
+    """The REDSEC variant of a class.
+
+    REDSEC runs a different class system rather than a reskin of the core
+    multiplayer one, so it gets its own section instead of being folded into the
+    tables above -- a page listing both Rally Squad and Stockpile as "the class
+    ability" would be wrong in both directions. The differences are structural:
+    a class PASSIVE where core MP has a class ACTIVE, one four-level training
+    track instead of two named paths you choose between, abilities built on
+    armor plating (a mechanic core MP does not have at all), and a Universal
+    Equipment block with no core-MP equivalent. Several signature descriptions
+    also carry Battle Royale-only clauses, which is why the signature set is
+    repeated here rather than assumed to match.
+
+    Recon has no block: it was not captured, and a class page that silently
+    omitted it would read as "Recon has no REDSEC variant", which is not known.
+    """
+    rs = item.get("redsec") or {}
+    if not rs:
+        return ""
+
+    color = BRANCH_COLOR.get(item["branch"], "weapons")
+    out = ['<h2 class="cat %s" id="redsec"><span class="dot"></span>In REDSEC</h2>' % color]
+    out.append('<p class="cat-note">REDSEC gives this class a different training system, '
+               'transcribed from its own in-game screens. The class ability is '
+               '<b>passive</b> here where core multiplayer has an <b>active</b> one, there is a '
+               'single four-level track rather than two training paths to choose between, and '
+               'some abilities work on armor plating, which core multiplayer does not use. '
+               'Where a signature description differs from the core-multiplayer wording, the '
+               'REDSEC wording is the one printed below.</p>')
+    out.append('<div class="loadout">')
+
+    def ability_table(rows):
+        cells = ['<table>',
+                 '<tr><th>Level</th><th>Ability</th><th>In-game description</th></tr>']
+        for r in rows:
+            cells.append("<tr><td>%s</td><td>%s</td><td>%s</td></tr>"
+                         % (value_cell(r.get("level")),
+                            html.escape(r.get("name", "")),
+                            value_cell(r.get("description"))))
+        cells.append("</table>")
+        return "\n".join(cells)
+
+    sig = rs.get("signature_set") or []
+    if sig:
+        out.append('<section class="tp-path"><h3>Class signature set</h3>'
+                   '<div class="lo-slot lo-wrap">')
+        out.append('<table><tr><th>Slot</th><th>Name</th><th>In-game description</th></tr>')
+        for s in sig:
+            out.append("<tr><td>%s</td><td>%s</td><td>%s</td></tr>"
+                       % (html.escape(s.get("slot", "")),
+                          html.escape(s.get("name", "")),
+                          value_cell(s.get("description"))))
+        out.append("</table></div></section>")
+
+    passive = rs.get("passive") or {}
+    training = rs.get("training") or []
+    if passive or training:
+        out.append('<section class="tp-path"><h3>Training</h3><div class="lo-slot">')
+        out.append(ability_table(([passive] if passive else []) + training))
+        out.append("</div></section>")
+
+    universal = rs.get("universal_equipment") or []
+    if universal:
+        out.append('<section class="tp-path"><h3>Universal equipment</h3>')
+        out.append('<p class="tp-desc">Shared across every class in REDSEC, so these rows are '
+                   'the same on each class page.</p><div class="lo-slot lo-wrap">')
+        out.append('<table><tr><th>Category</th><th>Name</th><th>In-game description</th></tr>')
+        for u in universal:
+            out.append("<tr><td>%s</td><td>%s</td><td>%s</td></tr>"
+                       % (html.escape(u.get("category", "")),
+                          html.escape(u.get("name", "")),
+                          value_cell(u.get("description"))))
+        out.append("</table></div></section>")
+
     out.append("</div>")
     return "\n".join(out)
 
@@ -1188,7 +1285,10 @@ def build_page(item, entries, tree, items_by_place, by_slug, shared_css,
         "GRIDMOD": "" if facts else " solo",
         "FACTBOX": '<div class="factbox">\n%s\n</div>' % facts if facts else "",
         "LOADOUT": render_loadout(item),
-        "PATHS": render_paths(item),
+        # REDSEC rides in the PATHS slot rather than taking a template slot of
+        # its own: an empty {{REDSEC}} line would add a blank line to all 246
+        # pages that are not classes, for nothing.
+        "PATHS": "\n".join(x for x in (render_paths(item), render_redsec(item)) if x),
         "OPTIONS": render_options(item, by_slug),
         "HISTNOTE": histnote,
         "HISTORY": render_history(entries, name, the),

@@ -76,12 +76,10 @@
         {
           "name": "Thermal-Blocking",
           "title": "Thermal-Blocking Smoke",
-          "designation": "TBD",
           "description": "Discharges a cloud of thermal smoke that obscures the vehicle. Disrupts the guidance systems of incoming lock-on missiles, blocks spotting, and deals moderate damage to enemy infantry inside the smoke radius."
         },
         {
           "name": "Emergency Repair",
-          "designation": "TBD",
           "description": "TBD"
         }
       ]
@@ -92,23 +90,19 @@
       "options": [
         {
           "name": "Systems Upgrade",
-          "designation": "TBD",
           "description": "Faster cooldowns enabled on all equipment and increased radar range."
         },
         {
           "name": "Optimized Handling",
-          "designation": "TBD",
           "description": "Improves vehicle turning rate and aiming speed."
         },
         {
           "name": "Enhanced Loading",
-          "designation": "TBD",
           "description": "Increases reload speed on both primary and secondary weapons. System deactivates when vehicle countermeasures are used.",
           "title": "Enhanced Loading Systems"
         },
         {
           "name": "Targeting Jammer",
-          "designation": "TBD",
           "description": "Slows the enemy's ability to acquire lock-on, clears the vehicle's spotted marker sooner, and reduces its heat signature in thermal imaging."
         }
       ]

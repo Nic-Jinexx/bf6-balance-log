@@ -77,12 +77,10 @@
       "options": [
         {
           "name": "Smoke Launcher",
-          "designation": "TBD",
           "description": "Launches multiple grenades that form a cloud of smoke. Blocks ability to spot targets, and clears spotted markers from all infantry inside the smoke radius."
         },
         {
           "name": "Motion Sensor",
-          "designation": "TBD",
           "description": "Dropped from the air, this device embeds in the ground where it detects and displays nearby moving enemies, vehicles, and gadgets on team members' minimaps. Enemy infantry can remain undetected while moving in crouch or prone. The device emits a sound audible to hostiles."
         }
       ]
@@ -94,22 +92,18 @@
         {
           "name": "Stabilizer",
           "title": "Emergency Stabilizer",
-          "designation": "TBD",
           "description": "Reduces the effect of mobility hits, making it easier to stay in control of the vehicle."
         },
         {
           "name": "Tactical Data System",
-          "designation": "TBD",
           "description": "Enemies spotted by the Scout Helicopter's equipment and radar will have their position marked in-world and on the minimap for all team members, not just the user's squad."
         },
         {
           "name": "Engine Upgrade",
-          "designation": "TBD",
           "description": "Enables faster acceleration and top speed at the cost of maneuverability."
         },
         {
           "name": "Interference",
-          "designation": "TBD",
           "description": "Slows the enemy's ability to acquire lock-on and clears the aircraft's spotted marker sooner. System deactivates if aircraft travels too slowly.",
           "title": "Targeting Interference"
         }

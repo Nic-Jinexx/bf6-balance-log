@@ -75,18 +75,15 @@
       "options": [
         {
           "name": "Smoke Generator",
-          "designation": "TBD",
           "description": "Emits smoke continuously to obscure the vehicle. Can be laid down while driving to create a smoke wall. Blocks ability to spot targets and clears spotted markers from all infantry inside the smoke radius."
         },
         {
           "name": "Thermal-Blocking",
-          "designation": "TBD",
           "description": "Discharges a cloud of thermal smoke that obscures the vehicle. Disrupts the guidance systems of incoming lock-on missiles, blocks spotting, and deals moderate damage to enemy infantry inside the smoke radius.",
           "title": "Thermal-Blocking Smoke"
         },
         {
           "name": "Emergency Repair",
-          "designation": "TBD",
           "description": "Repairs damaged vehicles. Can only be activated when the vehicle is in a low-health state."
         }
       ]
@@ -98,12 +95,10 @@
         {
           "name": "Threat Detector",
           "title": "Proximity Threat Detector",
-          "designation": "TBD",
           "description": "Detects nearby enemy soldiers and vehicles and shows them on the minimap for a short duration."
         },
         {
           "name": "Counter-Fire Radar",
-          "designation": "TBD",
           "description": "Passively spots sources of incoming damage. Can be activated to extend spotting and designate spotted enemy vehicles."
         }
       ]
@@ -114,28 +109,23 @@
       "options": [
         {
           "name": "Mobile Command",
-          "designation": "TBD",
           "description": "Increases the rate of capture when the vehicle is inside an objective's capture area.",
           "title": "Mobile Command Station"
         },
         {
           "name": "Field Maintenance",
-          "designation": "TBD",
           "description": "Enables faster vehicle health recovery after taking damage. Will also gain ammo faster."
         },
         {
           "name": "Targeting Jammer",
-          "designation": "TBD",
           "description": "Slows the enemy's ability to acquire lock-on, clears the vehicle's spotted marker sooner, and reduces its heat signature in thermal imaging."
         },
         {
           "name": "Emergency Countermeasures",
-          "designation": "TBD",
           "description": "Substantially improves the recharge rate of countermeasures when at low health."
         },
         {
           "name": "Systems Upgrade",
-          "designation": "TBD",
           "description": "Faster cooldowns enabled on equipment in slot 1 and increased range and duration on equipment in slot 2."
         }
       ]
@@ -146,8 +136,8 @@
       "options": [
         {
           "name": "Light Machine Gun",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "RWS 7.62mm MG",
+          "description": "A machine gun ideal for combatting enemy infantry at medium-range. Less effective against lightly armored vehicles."
         },
         {
           "name": "Heavy Machine Gun",
@@ -156,8 +146,8 @@
         },
         {
           "name": "Grenade Launcher",
-          "designation": "TBD",
-          "description": "TBD"
+          "designation": "RWS 40mm AGL",
+          "description": "An automatic grenade launcher, effective at targeting infantry and unarmored targets at close range."
         }
       ]
     },
@@ -168,17 +158,14 @@
         {
           "name": "Smoke Wall",
           "title": "Smoke Wall Launcher",
-          "designation": "TBD",
           "description": "Fires multiple smoke projectiles that detonate to form a smoke wall and obscure the vehicle. Blocks ability to spot targets and clears spotted markers from all infantry inside the smoke radius."
         },
         {
           "name": "Countermeasures",
-          "designation": "TBD",
-          "description": "TBD"
+          "description": "Detects mines and C-4 explosives enabling the operator to activate countermeasures to destroy them."
         },
         {
           "name": "Target Designator",
-          "designation": "TBD",
           "description": "The designator allows users to mark both vehicles and locations. Designated targets can be locked-on from further away and lose below-radar protection."
         }
       ]

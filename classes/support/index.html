@@ -561,6 +561,14 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .lo-slot table{margin:0}
 .lo-slot td:first-child{white-space:nowrap;color:var(--text)}
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
+/* The nowrap above assumes the first two columns are short, which holds for a
+   loadout slot ("Thermal-Blocking" / "TBD") and for a training row ("LVL 04" /
+   "Stockpile"). It does not hold where both are long -- "Signature Weapon" and
+   "Assault Rifle Proficiency" together starve the description column down to a
+   few characters on a phone. Those tables opt out. */
+.lo-slot.lo-wrap td:first-child,
+.lo-slot.lo-wrap td:nth-child(2){white-space:normal}
+.lo-slot.lo-wrap td:nth-child(2){min-width:9ch}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
 /* Class training paths. The ability table is the same three-column shape as a
@@ -1042,6 +1050,32 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 <tr><td>LVL 02</td><td>Steady Aim</td><td>Improved weapons control when shooting from mounted positions.</td></tr>
 <tr><td>LVL 01</td><td>Explosives Resistant</td><td>25% reduction on incoming explosive splash damage while prone or shooting from mounted positions.</td></tr>
 <tr><td>LVL 00</td><td>Logistics Expert</td><td>Faster ammo resupply when using the Supply Bag.</td></tr>
+</table></div></section>
+</div>
+<h2 class="cat systemic" id="redsec"><span class="dot"></span>In REDSEC</h2>
+<p class="cat-note">REDSEC gives this class a different training system, transcribed from its own in-game screens. The class ability is <b>passive</b> here where core multiplayer has an <b>active</b> one, there is a single four-level track rather than two training paths to choose between, and some abilities work on armor plating, which core multiplayer does not use. Where a signature description differs from the core-multiplayer wording, the REDSEC wording is the one printed below.</p>
+<div class="loadout">
+<section class="tp-path"><h3>Class signature set</h3><div class="lo-slot lo-wrap">
+<table><tr><th>Slot</th><th>Name</th><th>In-game description</th></tr>
+<tr><td>Gadget 1</td><td>Supply Bag</td><td>Once dropped, the bag resupplies all nearby infantry with ammo for gadgets and weapons and regenerates health more efficiently, even when under fire. Gadget resupply does not occur in Battle Royale.</td></tr>
+<tr><td>Gadget 2</td><td>Smoke Grenade Launcher</td><td>Fires impact-triggered grenades designed to create temporary smoke screens. Blocks ability to spot targets and clears spotted markers from all infantry inside the smoke radius. Can be carried standalone or underslung on weapons with a Gadget Mount attachment for faster access.</td></tr>
+<tr><td>Signature Weapon</td><td>LMG Proficiency</td><td>Faster transition to aim down sights (ADS) and no sprint speed penalty when carrying LMGs.</td></tr>
+<tr><td>Signature Trait</td><td>Field Sustainment</td><td>Distribute health packs to teammates when they directly interact with you.</td></tr>
+</table></div></section>
+<section class="tp-path"><h3>Training</h3><div class="lo-slot">
+<table>
+<tr><th>Level</th><th>Ability</th><th>In-game description</th></tr>
+<tr><td>LVL 04</td><td>Stockpile</td><td>Class gadget resupply rate increases by 10% with each improvement. Effect resets upon death.</td></tr>
+<tr><td>LVL 03</td><td>Hemostatic Smoke</td><td>Smoke Grenade Launcher speeds up revival to 2.2s for all classes, provides 12.5hp/s health regen after 2.5s, and slows downed bleedout.</td></tr>
+<tr><td>LVL 02</td><td>Swift Aid</td><td>Drag downed soldiers 20% faster and revive them 2.5s quicker. Sprint faster when under heavy fire.</td></tr>
+<tr><td>LVL 01</td><td>Supply Line</td><td>Armor carrying capacity increased by 2 plates. Ammo carrying capacity increased for all ammo types.</td></tr>
+</table>
+</div></section>
+<section class="tp-path"><h3>Universal equipment</h3>
+<p class="tp-desc">Shared across every class in REDSEC, so these rows are the same on each class page.</p><div class="lo-slot lo-wrap">
+<table><tr><th>Category</th><th>Name</th><th>In-game description</th></tr>
+<tr><td>Infantry Body Armor</td><td>Upgraded Armor</td><td>Standard small-arms issue tactical vest insert. Provides base-line ballistic protection.</td></tr>
+<tr><td>Anti-Tank</td><td>Thermite Sabotage</td><td>Improvised sabotage device which slowly damages a tank and its crew.</td></tr>
 </table></div></section>
 </div>
 

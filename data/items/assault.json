@@ -111,5 +111,64 @@
     "assault ladders",
     "conquest assault"
   ],
-  "_tag_deny_note": "Three different things wear this word. The Assault Ladder and the assault rifle category have their own pages; Conquest Assault is a Portal variant of a mode. Masked out before matching so the class page only collects lines about the class."
+  "_tag_deny_note": "Three different things wear this word. The Assault Ladder and the assault rifle category have their own pages; Conquest Assault is a Portal variant of a mode. Masked out before matching so the class page only collects lines about the class.",
+  "redsec": {
+    "_source": "Transcribed from the in-game REDSEC class details screen, Steam capture 20260812180236. The lobby banner reads 17/100 players, so this is a Battle Royale lobby and not core multiplayer.",
+    "signature_set": [
+      {
+        "slot": "Gadget 1",
+        "name": "Assault Ladder",
+        "description": "This equipment provides access to higher vantage points. Depending on the angle of placement, it can act as a bridge between buildings, or a ramp to help traverse obstacles on the battlefield."
+      },
+      {
+        "slot": "Gadget 2",
+        "name": "High Explosive Launcher",
+        "description": "Fires impact-triggered grenades designed for damaging structures and targeting infantry behind cover. Can be carried standalone or underslung on weapons with a Gadget Mount attachment for faster access."
+      },
+      {
+        "slot": "Signature Weapon",
+        "name": "Assault Rifle Proficiency",
+        "description": "Faster draw times and fire sooner when exiting a sprint with Assault Rifles."
+      },
+      {
+        "slot": "Signature Trait",
+        "name": "Mission Focused",
+        "description": "Nearby squadmates get faster progress with objectives, including arming and disarming M-COM explosives. In Battle Royale, respawn towers will capture quicker, and in modes where squadmates can redeploy on you, a quicker cooldown for your in-combat state lets them deploy on you sooner."
+      }
+    ],
+    "passive": {
+      "level": "LVL 04",
+      "name": "Stockpile",
+      "description": "Class gadget resupply rate increases by 10% with each improvement. Effect resets upon death."
+    },
+    "training": [
+      {
+        "level": "LVL 03",
+        "name": "Cluster Munitions",
+        "description": "High Explosive Launcher explosions generate 5 fused submunitions."
+      },
+      {
+        "level": "LVL 02",
+        "name": "Grenadier",
+        "description": "High Explosive Launcher carrying capacity increased to 5 rounds."
+      },
+      {
+        "level": "LVL 01",
+        "name": "Quick Plating",
+        "description": "Armor replating is 33% faster."
+      }
+    ],
+    "universal_equipment": [
+      {
+        "category": "Infantry Body Armor",
+        "name": "Upgraded Armor",
+        "description": "Standard small-arms issue tactical vest insert. Provides base-line ballistic protection."
+      },
+      {
+        "category": "Anti-Tank",
+        "name": "Thermite Sabotage",
+        "description": "Improvised sabotage device which slowly damages a tank and its crew."
+      }
+    ]
+  }
 }

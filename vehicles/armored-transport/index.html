@@ -561,6 +561,14 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .lo-slot table{margin:0}
 .lo-slot td:first-child{white-space:nowrap;color:var(--text)}
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
+/* The nowrap above assumes the first two columns are short, which holds for a
+   loadout slot ("Thermal-Blocking" / "TBD") and for a training row ("LVL 04" /
+   "Stockpile"). It does not hold where both are long -- "Signature Weapon" and
+   "Assault Rifle Proficiency" together starve the description column down to a
+   few characters on a phone. Those tables opt out. */
+.lo-slot.lo-wrap td:first-child,
+.lo-slot.lo-wrap td:nth-child(2){white-space:normal}
+.lo-slot.lo-wrap td:nth-child(2){min-width:9ch}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
 /* Class training paths. The ability table is the same three-column shape as a
@@ -1018,17 +1026,17 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 <section class="lo-role"><h3>Driver</h3>
 <div class="lo-slot"><h4>Equipment 1</h4>
 <table>
-<tr><th>Option</th><th>Designation</th><th>In-game description</th></tr>
-<tr><td>Emergency Repair</td><td><span class="tbd">TBD</span></td><td>Repairs damaged vehicles. Can only be activated when the vehicle is in a low-health state.</td></tr>
-<tr><td>Smoke Generator</td><td><span class="tbd">TBD</span></td><td><span class="tbd">TBD</span></td></tr>
+<tr><th>Option</th><th>In-game description</th></tr>
+<tr><td>Emergency Repair</td><td>Repairs damaged vehicles. Can only be activated when the vehicle is in a low-health state.</td></tr>
+<tr><td>Smoke Generator</td><td><span class="tbd">TBD</span></td></tr>
 </table></div>
 <div class="lo-slot"><h4>Upgrade</h4>
 <table>
-<tr><th>Option</th><th>Designation</th><th>In-game description</th></tr>
-<tr><td>Integrated Medbay</td><td><span class="tbd">TBD</span></td><td>Increases health regeneration of friendly soldiers within a radius of the vehicle. Remains active even after all soldiers have exited the vehicle but remain nearby.</td></tr>
-<tr><td>Grenade Intercept</td><td><span class="tbd">TBD</span></td><td>Tracks and destroys incoming projectiles such as hand-thrown and launched grenades. Can intercept up to three projectiles during a window of activation that begins after the initial detection.</td></tr>
-<tr><td>Combat Awareness</td><td><span class="tbd">TBD</span></td><td>Hostiles remain spotted for longer when they damage the vehicle or the owner&#x27;s squadmates while near the vehicle. Remains active even after all soldiers have exited the vehicle but remain nearby.</td></tr>
-<tr><td>Mobile Command</td><td><span class="tbd">TBD</span></td><td>Increases the rate of capture when the vehicle is inside an objective&#x27;s capture area. Remains active even after all soldiers have exited the vehicle but remain nearby.</td></tr>
+<tr><th>Option</th><th>In-game description</th></tr>
+<tr><td>Integrated Medbay</td><td>Increases health regeneration of friendly soldiers within a radius of the vehicle. Remains active even after all soldiers have exited the vehicle but remain nearby.</td></tr>
+<tr><td>Grenade Intercept</td><td>Tracks and destroys incoming projectiles such as hand-thrown and launched grenades. Can intercept up to three projectiles during a window of activation that begins after the initial detection.</td></tr>
+<tr><td>Combat Awareness</td><td>Hostiles remain spotted for longer when they damage the vehicle or the owner&#x27;s squadmates while near the vehicle. Remains active even after all soldiers have exited the vehicle but remain nearby.</td></tr>
+<tr><td>Mobile Command</td><td>Increases the rate of capture when the vehicle is inside an objective&#x27;s capture area. Remains active even after all soldiers have exited the vehicle but remain nearby.</td></tr>
 </table></div>
 </section>
 <section class="lo-role"><h3>Gunner</h3>
@@ -1041,9 +1049,9 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 </table></div>
 <div class="lo-slot"><h4>Equipment 1</h4>
 <table>
-<tr><th>Option</th><th>Designation</th><th>In-game description</th></tr>
-<tr><td>Smoke Wall</td><td><span class="tbd">TBD</span></td><td><span class="tbd">TBD</span></td></tr>
-<tr><td>Countermeasures</td><td><span class="tbd">TBD</span></td><td>Detects mines and C-4 explosives enabling the operator to activate countermeasures to destroy them.</td></tr>
+<tr><th>Option</th><th>In-game description</th></tr>
+<tr><td>Smoke Wall</td><td><span class="tbd">TBD</span></td></tr>
+<tr><td>Countermeasures</td><td>Detects mines and C-4 explosives enabling the operator to activate countermeasures to destroy them.</td></tr>
 </table></div>
 </section>
 <section class="lo-role"><h3>Left Gunner</h3>

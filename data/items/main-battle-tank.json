@@ -117,19 +117,16 @@
       "options": [
         {
           "name": "Thermal-Blocking",
-          "designation": "TBD",
           "description": "Discharges a cloud of thermal smoke that obscures the vehicle. Disrupts the guidance systems of incoming lock-on missiles, blocks spotting, and deals moderate damage to enemy infantry inside the smoke radius.",
           "title": "Thermal-Blocking Smoke"
         },
         {
           "name": "Projectile Intercept",
           "title": "Projectile Intercept System",
-          "designation": "TBD",
           "description": "Intercepts and destroys enemy missiles, shells, rockets, grenades, and bombs. Intercepts all projectiles during a window of activation that begins after the initial detection."
         },
         {
           "name": "Emergency Repair",
-          "designation": "TBD",
           "description": "Repairs damaged vehicles. Can only be activated when the vehicle is in a low-health state."
         }
       ]
@@ -140,23 +137,19 @@
       "options": [
         {
           "name": "Field Maintenance",
-          "designation": "TBD",
           "description": "Enables faster vehicle health recovery after taking damage. Will also gain ammo faster."
         },
         {
           "name": "Emergency Countermeasures",
-          "designation": "TBD",
           "description": "Substantially improves the recharge rate of countermeasures when at low health."
         },
         {
           "name": "Enhanced Loading",
-          "designation": "TBD",
           "description": "Increases primary weapon rate of fire and improves secondary weapon heat recovery. Only active when countermeasures are not on cooldown.",
           "title": "Enhanced Loading Systems"
         },
         {
           "name": "Optimized Handling",
-          "designation": "TBD",
           "description": "Improves vehicle turning rate and aiming speed."
         }
       ]
@@ -188,13 +181,11 @@
       "options": [
         {
           "name": "Smoke Wall",
-          "designation": "TBD",
           "description": "Fires multiple smoke projectiles that detonate to form a smoke wall and obscure the vehicle. Blocks ability to spot targets and clears spotted markers from all infantry inside the smoke radius.",
           "title": "Smoke Wall Launcher"
         },
         {
           "name": "Countermeasures",
-          "designation": "TBD",
           "description": "Detects mines and C-4 explosives enabling the operator to activate countermeasures to destroy them.",
           "title": "Mine Countermeasures"
         }

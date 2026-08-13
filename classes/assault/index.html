@@ -561,6 +561,14 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .lo-slot table{margin:0}
 .lo-slot td:first-child{white-space:nowrap;color:var(--text)}
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
+/* The nowrap above assumes the first two columns are short, which holds for a
+   loadout slot ("Thermal-Blocking" / "TBD") and for a training row ("LVL 04" /
+   "Stockpile"). It does not hold where both are long -- "Signature Weapon" and
+   "Assault Rifle Proficiency" together starve the description column down to a
+   few characters on a phone. Those tables opt out. */
+.lo-slot.lo-wrap td:first-child,
+.lo-slot.lo-wrap td:nth-child(2){white-space:normal}
+.lo-slot.lo-wrap td:nth-child(2){min-width:9ch}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
 /* Class training paths. The ability table is the same three-column shape as a
@@ -1056,6 +1064,32 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 </table></div>
 </section>
 </div></section>
+<h2 class="cat systemic" id="redsec"><span class="dot"></span>In REDSEC</h2>
+<p class="cat-note">REDSEC gives this class a different training system, transcribed from its own in-game screens. The class ability is <b>passive</b> here where core multiplayer has an <b>active</b> one, there is a single four-level track rather than two training paths to choose between, and some abilities work on armor plating, which core multiplayer does not use. Where a signature description differs from the core-multiplayer wording, the REDSEC wording is the one printed below.</p>
+<div class="loadout">
+<section class="tp-path"><h3>Class signature set</h3><div class="lo-slot lo-wrap">
+<table><tr><th>Slot</th><th>Name</th><th>In-game description</th></tr>
+<tr><td>Gadget 1</td><td>Assault Ladder</td><td>This equipment provides access to higher vantage points. Depending on the angle of placement, it can act as a bridge between buildings, or a ramp to help traverse obstacles on the battlefield.</td></tr>
+<tr><td>Gadget 2</td><td>High Explosive Launcher</td><td>Fires impact-triggered grenades designed for damaging structures and targeting infantry behind cover. Can be carried standalone or underslung on weapons with a Gadget Mount attachment for faster access.</td></tr>
+<tr><td>Signature Weapon</td><td>Assault Rifle Proficiency</td><td>Faster draw times and fire sooner when exiting a sprint with Assault Rifles.</td></tr>
+<tr><td>Signature Trait</td><td>Mission Focused</td><td>Nearby squadmates get faster progress with objectives, including arming and disarming M-COM explosives. In Battle Royale, respawn towers will capture quicker, and in modes where squadmates can redeploy on you, a quicker cooldown for your in-combat state lets them deploy on you sooner.</td></tr>
+</table></div></section>
+<section class="tp-path"><h3>Training</h3><div class="lo-slot">
+<table>
+<tr><th>Level</th><th>Ability</th><th>In-game description</th></tr>
+<tr><td>LVL 04</td><td>Stockpile</td><td>Class gadget resupply rate increases by 10% with each improvement. Effect resets upon death.</td></tr>
+<tr><td>LVL 03</td><td>Cluster Munitions</td><td>High Explosive Launcher explosions generate 5 fused submunitions.</td></tr>
+<tr><td>LVL 02</td><td>Grenadier</td><td>High Explosive Launcher carrying capacity increased to 5 rounds.</td></tr>
+<tr><td>LVL 01</td><td>Quick Plating</td><td>Armor replating is 33% faster.</td></tr>
+</table>
+</div></section>
+<section class="tp-path"><h3>Universal equipment</h3>
+<p class="tp-desc">Shared across every class in REDSEC, so these rows are the same on each class page.</p><div class="lo-slot lo-wrap">
+<table><tr><th>Category</th><th>Name</th><th>In-game description</th></tr>
+<tr><td>Infantry Body Armor</td><td>Upgraded Armor</td><td>Standard small-arms issue tactical vest insert. Provides base-line ballistic protection.</td></tr>
+<tr><td>Anti-Tank</td><td>Thermite Sabotage</td><td>Improvised sabotage device which slowly damages a tank and its crew.</td></tr>
+</table></div></section>
+</div>
 
 
 <h2 class="cat systemic" id="history"><span class="dot"></span>Patch history</h2>

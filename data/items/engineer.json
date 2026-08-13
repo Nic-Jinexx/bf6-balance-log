@@ -93,5 +93,64 @@
     "thunder engineer",
     "engineers supply crate"
   ],
-  "_tag_deny_note": "Thunder Engineer is a cosmetic skin, not the class. \"Engineers Supply Crate\" is EA's name for the vehicle supply crate gadget, which has its own page; a gadget that has a page keeps its lines there rather than also filling the class page. The Repair Tool is tagged here for the opposite reason: it has no page of its own."
+  "_tag_deny_note": "Thunder Engineer is a cosmetic skin, not the class. \"Engineers Supply Crate\" is EA's name for the vehicle supply crate gadget, which has its own page; a gadget that has a page keeps its lines there rather than also filling the class page. The Repair Tool is tagged here for the opposite reason: it has no page of its own.",
+  "redsec": {
+    "_source": "Transcribed from the in-game REDSEC class details screen, Steam capture 20260812180241. The lobby banner reads 32/100 players, so this is a Battle Royale lobby and not core multiplayer.",
+    "signature_set": [
+      {
+        "slot": "Gadget 1",
+        "name": "Repair Tool",
+        "description": "A blow torch to repair friendly vehicles and equipment. Can also damage enemy assets. Extended use will temporarily overheat the tool. In Battle Royale, it has the additional ability to open locked safes."
+      },
+      {
+        "slot": "Gadget 2",
+        "name": "Aim-Guided Launcher",
+        "description": "An anti-vehicle launcher that can be upgraded to enable missile guidance to the target via the weapon's crosshairs. Inflicts greater damage on the sides, top, and rear of vehicles where armor is thinner."
+      },
+      {
+        "slot": "Signature Weapon",
+        "name": "SMG Proficiency",
+        "description": "Improved hip-fire control when using SMGs."
+      },
+      {
+        "slot": "Signature Trait",
+        "name": "Mechanized Infantry",
+        "description": "Take less explosives damage when near friendly vehicles and prevent them from being occupied by hostiles in the event that all vehicle crew exit. Repair vehicle health to keep both effects active."
+      }
+    ],
+    "passive": {
+      "level": "LVL 04",
+      "name": "Stockpile",
+      "description": "Class gadget resupply rate increases by 10% with each improvement. Effect resets upon death."
+    },
+    "training": [
+      {
+        "level": "LVL 03",
+        "name": "Mobility-Kill Warhead",
+        "description": "Aim-Guided Launcher hits temporarily immobilize vehicles for 5s."
+      },
+      {
+        "level": "LVL 02",
+        "name": "Devastating Impact",
+        "description": "Damaging enemy vehicles reduces their repair effectiveness by 25% for 10s."
+      },
+      {
+        "level": "LVL 01",
+        "name": "Enhanced Targeting",
+        "description": "Launcher is now aim-guided via magnified optic."
+      }
+    ],
+    "universal_equipment": [
+      {
+        "category": "Infantry Body Armor",
+        "name": "Upgraded Armor",
+        "description": "Standard small-arms issue tactical vest insert. Provides base-line ballistic protection."
+      },
+      {
+        "category": "Anti-Tank",
+        "name": "Thermite Sabotage",
+        "description": "Improvised sabotage device which slowly damages a tank and its crew."
+      }
+    ]
+  }
 }

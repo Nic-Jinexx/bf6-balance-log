@@ -561,6 +561,14 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .lo-slot table{margin:0}
 .lo-slot td:first-child{white-space:nowrap;color:var(--text)}
 .lo-slot td:nth-child(2){font-family:var(--mono);font-size:13px;color:var(--muted);white-space:nowrap}
+/* The nowrap above assumes the first two columns are short, which holds for a
+   loadout slot ("Thermal-Blocking" / "TBD") and for a training row ("LVL 04" /
+   "Stockpile"). It does not hold where both are long -- "Signature Weapon" and
+   "Assault Rifle Proficiency" together starve the description column down to a
+   few characters on a phone. Those tables opt out. */
+.lo-slot.lo-wrap td:first-child,
+.lo-slot.lo-wrap td:nth-child(2){white-space:normal}
+.lo-slot.lo-wrap td:nth-child(2){min-width:9ch}
 .lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
 .lo-locked b{color:var(--muted);font-style:normal}
 /* Class training paths. The ability table is the same three-column shape as a

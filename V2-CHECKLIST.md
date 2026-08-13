@@ -51,36 +51,36 @@ item pages — every one ever released carries no slug, from `Portal Updates` to
 
 ---
 
-## 1. TBD values — 86 across 21 items
+## 1. TBD values — 30 across 20 items
 
-Was 84/20 on Aug 7. The two new ones are EF88's, and they are **not** a real gap — see below.
+**Was 86 on Aug 12 morning. The Aug 12 captures and the designation rule cleared 56 of them.**
 
-### Vehicles — 75 TBDs, still the big one
+**Most of the vehicle pile was never real work.** 50 of the 55 missing `designation` values were on
+Equipment and Upgrade tiles, which *have no designation* — the screen prints a name and a
+description and nothing else. Across all 11 vehicles those slots held 50 options and not one ever
+had a real designation, while the weapon and ammo slots held 49. The key is now absent on them and
+the Designation column drops per slot. See the rule in `CLAUDE.md`.
 
-**The Aug 7 breakdown was wrong** and this is worth knowing before you start: it recorded 64
-"loadout option descriptions". The actual split is **55 missing `designation` values** and only
-**9 missing `description` values**, plus the 11 `description.text`. The designation is the model
-name on the tile (`120mm HEMP-T Round`), so most of this is transcription, not prose.
+### Vehicles — 20 TBDs (was 75)
 
 | Vehicle | TBDs | designation | option description | page description |
 |---|---|---|---|---|
-| Infantry Fighting Vehicle | 19 | 15 | 3 | 1 |
-| Armored Transport | 15 | 10 | 4 | 1 |
-| Main Battle Tank | 12 | 10 | 1 | 1 |
-| Mobile Anti-Air | 8 | 6 | 1 | 1 |
-| Attack Helicopter | 7 | 6 | — | 1 |
-| Scout Helicopter | 7 | 6 | — | 1 |
-| Patrol Boat | 3 | 2 | — | 1 |
-| Attack Jet | 1 | — | — | 1 |
-| Fighter Jet | 1 | — | — | 1 |
-| Light Ground Transport | 1 | — | — | 1 |
-| Transport Helicopter | 1 | — | — | 1 |
+| Armored Transport | 7 | 2 | 4 | 1 |
+| Main Battle Tank | 3 | 1 | 1 | 1 |
+| Mobile Anti-Air | 2 | — | 1 | 1 |
+| Attack Helicopter, Attack Jet, Fighter Jet, IFV, Light Ground Transport, Patrol Boat, Scout Helicopter, Transport Helicopter | 1 each | — | — | 1 each |
 
-- [ ] Fill the **55 loadout `designation`** values — read off each vehicle's own customisation
-      screen. **Never share text between vehicles**: the MBT's High Explosive is a 120mm HEMP-T and
-      the IFV's is an HEI-T. Role is part of the key too.
-- [ ] Fill the **9 loadout option `description`** values, same rule.
-- [ ] Fill the **11 vehicle `description.text`** values.
+- [ ] Fill the **11 vehicle `description.text`** values — now the bulk of what's left.
+- [ ] Fill the **6 loadout option `description`** values (4 Armored Transport, 1 MBT, 1 Mobile
+      Anti-Air). **Never share text between vehicles**: the MBT's High Explosive is a 120mm HEMP-T
+      and the IFV's is an HEI-T. Role is part of the key too.
+- [ ] Fill the **3 remaining `designation` values**, all in real weapon slots so they genuinely
+      exist: Armored Transport's Light Machine Gun and Grenade Launcher (Gunner / Remote Weapon),
+      and the MBT's Coaxial HMG (Driver / Secondary).
+
+✅ **Infantry Fighting Vehicle is complete** — 0 TBDs. The Aug 12 captures filled the Remote Weapon
+LMG (`RWS 7.62mm MG`) and Grenade Launcher (`RWS 40mm AGL`) and the Gunner Countermeasures
+description; the rest were the designation drop.
 
 ### Weapons — 7 TBDs across 6 items
 
@@ -90,15 +90,18 @@ name on the tile (`120mm HEMP-T Round`), so most of this is transcription, not p
   attachments section was removed Aug 8 and **nothing reads `compatibility`**. These render nowhere.
   They're kept so the captured EF88 grid isn't lost. Not work.
 
-### Modes — 2 TBDs
+### Modes — 1 TBD (was 2)
 
-- [ ] `description.text` for **King of the Hill** and **Rush**. KotH is playable again as of Aug 11,
-      so its screen is readable now; Rush is still out of Custom Search.
+- [ ] `description.text` for **Rush** — still out of Custom Search, so the screen isn't readable.
+- ✅ **King of the Hill** filled from the Aug 12 Custom Search capture: *"Battle for control over
+  multiple objectives that activate across the combat area."*
 
 ### Classes — 1 TBD
 
-- [ ] `documented_paths[].abilities[].description` for **Assault** — a training path EA names but no
-      capture covers
+- [ ] `documented_paths[].abilities[].description` for **Assault** — this is the **Hazmat Breacher**,
+      a Battle Royale field upgrade EA named in `1.2.3.0` and `1.3.1.0` but never captured. The
+      Aug 12 captures do **not** cover it; Breacher and Frontliner were already complete and the
+      captures match them exactly. Needs the REDSEC field-upgrade screen, not the class screen.
 
 ### Attachments — 1 TBD
 
@@ -112,7 +115,9 @@ Was 101. **Wake Island is now done** — added Aug 12 as a 1500px progressive JP
 where §5 wants the map art to go rather than adding a 24th oversized PNG.
 
 - [ ] **98 attachment pages** have no image at all. Every page under `/attachments/` is text-only.
-      Still the biggest single visual gap on the site.
+      **Owner's leaning as of Aug 12: probably not doing this.** 98 crops is a lot of work for
+      small parts that mostly look alike, and the pages read fine without art. Left open rather
+      than closed — undecided, not rejected.
 - [ ] **King of the Hill** and **Rush** — the only two modes without one. KotH is back in rotation,
       so it can be captured now.
 
@@ -120,18 +125,56 @@ Vehicle faction variants are all present — both NATO and Pax Armata images res
 
 ---
 
-## 3. Missing `Added in` — 118 items
+## 2b. Open questions from the Aug 12 captures
+
+- ✅ **REDSEC classes shipped Aug 12 as an "In REDSEC" section on each class page.** Owner's choice
+      of the three options. Assault, Engineer and Support each carry a `redsec` block —
+      signature set, the `Stockpile` passive, the three-ability training track, and the shared
+      Universal Equipment rows — transcribed from captures `20260812180236` / `180241` / `180245`.
+      Rule in `CLAUDE.md`.
+- [ ] **Capture the REDSEC Recon class.** The only one of the four missing. Its page deliberately
+      has **no** In REDSEC section rather than a guessed one, so the gap is currently invisible to
+      a reader — worth closing next time you're in a Battle Royale lobby.
+- [ ] **The 7.7M NSW RHIB has no page, and may deserve one.** Confirmed by the owner as a new boat
+      at the Season 4 launch (`1.4.1.0`, Jul 16 2026), alongside the RCB-90 Patrol Boat and Tsuru
+      Reef. It is a drivable vehicle with its own handling — `1.2.3.0` alone carries three lines
+      about RHIB handling, speed gauges and hull simulation — but the `vehicles` branch is one page
+      per class and this class has none, so those lines point nowhere. Decide whether it is its own
+      class page. (A RHIB is referenced from `1.1.2.0`, so the earlier boat and the 7.7M NSW model
+      are not the same thing; a page would need to say which it covers.)
+- ✅ **The Pax Armata Scout Helicopter name is correct as-is — resolved Aug 12.** The variant stays
+      **MD530 Cayuse**: the owner confirmed that is what the game currently displays, and the game
+      is the source for item names. EA's notes disagree — `1.2.2.0` writes "MH350 Scout Helicopter
+      (PAX)" and `1.3.2.0` says *"Naming for the PAX Scout Helicopter has been updated to display
+      its correct name, MH-350"* — but that is exactly the case the alias rule exists for, and
+      `mh-350` and `mh350` were **already** in the item's aliases, so every patch line naming
+      MH-350 already resolves to this page. No conflict and nothing to change. Don't "fix" this
+      later off the changelog.
+
+---
+
+## 3. Missing `Added in` — 116 items
 
 `data/releases.json` is the only source for this row. 131 slugs are recorded; these are not:
 
 - [ ] **94 attachments** (of 98)
-- [ ] **11 vehicles** (all of them)
+- [ ] **9 vehicles** (was 11)
 - [ ] **7 modes** — Breakthrough, Conquest, Domination, Escalation, King of the Hill, Rush,
       Team Deathmatch
 - [ ] **4 classes** — Assault, Engineer, Recon, Support
 - [ ] **1 gadget** — Long-Range Launcher
 - **1 map** — Wake Island, *(by design)*: it's in `scheduled` and must not carry an `Added in`
-  until Aug 18. This is the +1 against Aug 7's count of 117; it is not new work.
+  until Aug 18. Not work.
+
+✅ **Two filled Aug 12, from the patch notes rather than memory:**
+- **Scout Helicopter → `1.2.1.0` (Extreme Measures).** Both faction models shipped in that update —
+  `AH-6 Little Bird: The iconic attack helicopter returns for NATO forces` and the MH-350 for Pax
+  Armata — and patch lines reference it continuously from `1.2.2.0`. The slug sits on the Little
+  Bird entry; a class page covers both factions, so either would give the same answer.
+- **Patrol Boat → `1.4.1.0` (Pacific Front).** The page's model is the **RCB-90**, listed there.
+  Note this is Season 4, not Season 3. The `7.7M NSW RHIB` in the same update deliberately has **no
+  slug**: a RHIB appears in patch lines from `1.1.2.0`, so it is a model shipping in `1.4.1.0`
+  rather than the first boat, and it is not the Patrol Boat.
 
 Most of the rest shipped at launch (`1.0.1.0`), whose entry already warns it is *"not an exhaustive
 launch roster."* Filling it is mostly confirming which were launch content and adding them to that

@@ -169,8 +169,8 @@
         {"name": "VL-7 Strike", "kind": "Mode", "_note": "limited time"},
         {"name": "Gauntlet Altered State", "kind": "Mode", "_note": "REDSEC, limited-time"},
         {"name": "BR - Synthesis", "kind": "Mode", "_note": "REDSEC, limited-time"},
-        {"name": "AH-6 Little Bird", "kind": "Vehicle"},
-        {"name": "MH-350", "kind": "Vehicle", "_note": "roadmap pairs these as 'AH-6 LITTLE BIRD AND MH-350', new vehicles"},
+        {"name": "AH-6 Little Bird", "slug": "scout-helicopter", "kind": "Vehicle", "_note": "NATO model of the Scout Helicopter. The slug sits here rather than on the MH-350 because a class holds one page covering both factions; both shipped in this update, so either would give the same Added in."},
+        {"name": "MH-350", "kind": "Vehicle", "_note": "roadmap pairs these as 'AH-6 LITTLE BIRD AND MH-350', new vehicles. Pax Armata model of the same Scout Helicopter page, so it carries no slug of its own. 1.3.2.0 states its correct name is MH-350."},
         {"name": "GRT-CPS", "slug": "grt-cps", "kind": "DMR"},
         {"name": "VCR-2", "slug": "vcr-2", "kind": "Assault Rifle"},
         {"name": "HTI-MK2", "kind": "Gadget"},
@@ -259,8 +259,8 @@
       "live": "Jul 21, 2026",
       "added": [
         {"name": "Tsuru Reef", "slug": "tsuru-reef", "kind": "Map"},
-        {"name": "7.7M NSW RHIB", "kind": "Boat"},
-        {"name": "RCB-90", "kind": "Boat"},
+        {"name": "7.7M NSW RHIB", "kind": "Boat", "_note": "A new RHIB shipping with Season 4, and not the Patrol Boat, which is the RCB-90. Both boats and Tsuru Reef came together at this launch update. No page yet: the vehicles branch is one page per class and this class has none. Note a RHIB is already referenced in patch lines from 1.1.2.0 onward, so the earlier boat and this 7.7M NSW model are not the same thing."},
+        {"name": "RCB-90", "slug": "patrol-boat", "kind": "Boat", "_note": "The Patrol Boat page's model, both factions."},
         {"name": "Ranked Updates", "kind": "Feature", "_note": "REDSEC, new season"},
         {"name": "EF88", "slug": "ef88", "kind": "Assault Rifle"},
         {"name": "BROD 3", "slug": "brod-3", "kind": "Carbine"},
@@ -272,7 +272,7 @@
   "removed": [
     {
       "observed": "Aug 12, 2026",
-      "source": "In-game Custom Search mode list (Steam capture 20260805170513, then re-checked by the owner on Aug 12, 2026)",
+      "source": "In-game Custom Search mode list (Steam captures 20260805170513 and 20260812180003)",
       "value": "Not in Custom Search as of Aug 5, 2026; still absent Aug 12, 2026",
       "_scope_note": "Custom Search lists core multiplayer modes only, so this is not evidence either way about REDSEC, Battle Royale, Gauntlet or Portal playlists.",
       "entries": [
@@ -281,9 +281,9 @@
     },
     {
       "observed": "Aug 12, 2026",
-      "source": "In-game Custom Search mode list (owner observation)",
+      "source": "In-game Custom Search mode list (Steam capture 20260812180003)",
       "value": "Not in Custom Search as of Aug 12, 2026",
-      "_scope_note": "Custom Search lists core multiplayer modes only, so this is not evidence either way about REDSEC, Battle Royale, Gauntlet or Portal playlists. Domination was still listed in the Aug 5, 2026 capture, so it went in a later wave than that screen. Team Deathmatch was checked on the same Aug 12 screen and is still listed, so it is not recorded here.",
+      "_scope_note": "Custom Search lists core multiplayer modes only, so this is not evidence either way about REDSEC, Battle Royale, Gauntlet or Portal playlists. The Aug 12 capture shows the MODES column in full and it holds six: Breakthrough, Conquest, Escalation, King of the Hill, Obliteration, Team Deathmatch. Domination was still listed in the Aug 5, 2026 capture, so it went in a later wave than that screen. Team Deathmatch is on the same Aug 12 screen and is still listed, so it is not recorded here.",
       "entries": [
         {"name": "Domination", "slug": "domination", "kind": "Mode"}
       ]
@@ -291,7 +291,7 @@
     {
       "observed": "Aug 12, 2026",
       "label": "Rotation",
-      "source": "In-game Custom Search mode list (owner observation, Aug 12, 2026); EA announcement on X, Aug 7, 2026",
+      "source": "In-game Custom Search mode list (Steam capture 20260812180003); EA announcement on X, Aug 7, 2026",
       "value": "Back in Custom Search as of Aug 11, 2026; EA announced the return “next week” on Aug 7, 2026.",
       "_scope_note": "Absent from the Aug 5, 2026 capture and present again when checked on Aug 12, so this supersedes that observation rather than adding to it. Battlefield Studios describes these as playlist rotation rather than deletion, which is what this row records.",
       "_date_basis": "Owner's call: the row states Aug 11, the sighting was Aug 12. EA's Aug 7 post said only “next week” and named no date; Aug 11 is the Tuesday of that week, which is EA's usual update slot. So the stated date is derived from EA's cadence plus the announcement, not read off a screen — the one place on the site where that is true. If a source ever gives an exact date, correct it here.",
