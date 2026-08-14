@@ -9,8 +9,8 @@ linked to the things it names. Nothing summarized, nothing left out.
 Every weapon, attachment, vehicle, gadget, map, mode and class gets its own page carrying every
 patch note that names it, plus what the game itself says about it: in-game description, stats, and
 where captured, the full customisation detail — a vehicle's loadout and both faction variants, and
-a class's training paths. Every update also links out to EA's own translation of it, in the twelve
-languages EA genuinely translates.
+a class's training paths, including the separate set REDSEC gives it. Every update also links out to
+EA's own translation of it, in the twelve languages EA genuinely translates.
 
 The sidebar ends with **Community Updates** — every community post EA has published, linked to
 ea.com. Those posts are not mirrored here and never become patch lines; the log stays a verbatim

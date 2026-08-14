@@ -9,7 +9,13 @@ correct as-is and listed only so it isn't mistaken for a gap.
 
 ---
 
-## 0. Season 4 / Top Gun — ships Aug 18, six days out
+## 0. Season 4 phase 2 — Top Gun, ships Aug 18, six days out
+
+**This is a mid-season phase, not a new season.** Season 4 launched at `1.4.1.0` (Pacific Front,
+Jul 16 2026); `1.4.1.5` was the QoL patch between. Aug 18 is **`1.4.2.0`**, the same slot Blastpoint
+occupied in Season 3. Vocabulary in `CONTEXT.md`; the version scheme is `1.<season>.<phase>.<qol>`,
+so the expected version follows from the structure rather than being a guess — but still take it
+from EA's page like every other number.
 
 The nearest deadline, so it goes first. `releases.json` `scheduled` lists 8 items under Top Gun;
 the generator ignores that array, so **none of this can be filled until it actually ships** — but
@@ -40,8 +46,9 @@ item pages — every one ever released carries no slug, from `Portal Updates` to
       Assault** may be the real name — **deliberately not written in**, on the owner's instruction
       and the standing rule that names come from EA's own page, never from recollection or press.
 - [ ] **On patch day: run `fetch_patch.py` first**, then the build chain, then all four checks.
-      Expect the version to be **`1.4.2.0`** on the `1.<season>.<part>.0` scheme — that's read off
-      the pattern, *not* confirmed, so take it from EA's page like every other number.
+      The Patch Index row should read **`Season 4: Top Gun`**, matching how every other phase is
+      labelled (`Season 3: Blastpoint`, `Season 4: Pacific Front`). The phase name comes from the
+      roadmap art, never the news article's title.
 - [ ] **Run `check_tags.py` after adding any new item file.** That is exactly the case it exists for:
       a patch logged before an item exists is never re-scanned when the item appears.
 - [ ] **Refresh `fetch_community_updates.py`** — EA usually posts a Community Update alongside a
