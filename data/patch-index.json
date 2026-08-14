@@ -2,6 +2,13 @@
  "_comment": "The Patch Index table, and the source of every patch block's date and EA link. Verified field by field against EA's own page - never write a date here from memory. scripts/render_patches.py generates the table and the expandable full-patch view from this file.",
  "patches": [
   {
+   "version": "1.4.2.0",
+   "posted": "Aug 14, 2026",
+   "live": "Aug 18, 2026",
+   "headline": "Season 4: Top Gun (Wake Island returns, two fighter jets)",
+   "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-2-0"
+  },
+  {
    "version": "1.4.1.5",
    "posted": "Aug 3, 2026",
    "live": "Aug 4, 2026",
