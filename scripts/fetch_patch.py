@@ -122,16 +122,26 @@ def changelog_region(body):
 def extract(body):
     """Every <li> in the changelog region, with the heading trail above it."""
     region = changelog_region(body)
+    # The \b after each tag name is load-bearing, not decoration. Without it
+    # <p[^>]*> also matches <picture>, <pre>, <param>, <path> and <polygon>,
+    # and <li[^>]*> matches <link>, <line> and <linearGradient> - the SVG ones
+    # matter because EA's pages carry inline SVG icons. 1.4.2.0 is the case
+    # that caught it: a <picture> embed inside SETTINGS was read as a paragraph
+    # opener, so .*?</p> ran 4,346 characters to the next real </p> and ate
+    # three bullets plus the PORTAL heading, which silently re-filed all 18
+    # Portal lines under SETTINGS. Same \b convention as WHOLE_EMPHASIS and
+    # NAV_LI above.
     token = re.compile(
-        r"<(h[1-6])[^>]*>(.*?)</\1>"      # real headings
-        r"|<li[^>]*>(.*?)</li>"           # bullets
-        r"|<p[^>]*>(.*?)</p>",            # paragraph pseudo-headings
+        r"<(h[1-6])\b[^>]*>(.*?)</\1>"    # real headings
+        r"|<li\b[^>]*>(.*?)</li>"         # bullets
+        r"|<p\b[^>]*>(.*?)</p>",          # paragraph pseudo-headings
         re.I | re.S,
     )
     levels = {}
     para_head = None
     rows = []
     dropped = []
+    prose_spans = []
     for m in token.finditer(region):
         if m.group(1):
             level = int(m.group(1)[1])
@@ -142,6 +152,7 @@ def extract(body):
             for deeper in [k for k in levels if k > level]:
                 del levels[deeper]
             para_head = None
+            prose_spans.append((m.start(), m.end()))
         elif m.group(3) is not None:
             if NAV_LI.match(m.group(3)):
                 dropped.append(text_of(m.group(3)))
@@ -154,11 +165,30 @@ def extract(body):
                 trail.append(para_head)
             rows.append({"heading": trail, "text": body_text})
         else:
+            prose_spans.append((m.start(), m.end()))
             raw = (m.group(4) or "").strip()
             label = text_of(raw)
             if label and len(label) < 90 and (SECTIONISH.match(label)
                                               or WHOLE_EMPHASIS.match(raw)):
                 para_head = label.rstrip(":")
+    # Swallow guard. A bullet inside a matched <p>/<h> span is unreachable -
+    # the paragraph alternative ran past it to a later closing tag, so it can
+    # never become a row. That is what the <picture> bug did to 1.4.2.0, and it
+    # is invisible in the counts alone: it dropped 3 lines and silently re-filed
+    # 18 more under the wrong heading, which reads as a plausible section split
+    # rather than as damage.
+    #
+    # Deliberately narrow. It does NOT count the two shapes EA emits that look
+    # similar but lose nothing: a nested <li> (outer lead-in and inner bullet
+    # merge into one row, all text kept - 5 of the 15 logged patches do this),
+    # and 1.0.1.0's unclosed "<li>***" separator. Firing on those would put a
+    # standing warning on known-good patches, and a warning that is always on
+    # is one nobody reads.
+    swallowed = sum(
+        any(start < lm.start() < end for start, end in prose_spans)
+        for lm in re.finditer(r"<li\b", region, re.I)
+    )
+    extract.last_swallowed = swallowed
     extract.last_dropped = dropped
     return rows
 
@@ -175,6 +205,12 @@ def summarise(version, rows):
     if dropped:
         print(f"   dropped {len(dropped)} nav item(s): "
               + ", ".join(repr(d) for d in dropped[:8]))
+    swallowed = getattr(extract, "last_swallowed", 0)
+    if swallowed:
+        print(f"   WARNING: {swallowed} bullet(s) sit inside a matched "
+              f"paragraph and can never be extracted. EA has changed the "
+              f"markup shape; fix the extractor rather than accepting "
+              f"this count.")
 
 
 def main():
