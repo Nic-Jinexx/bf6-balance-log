@@ -595,6 +595,12 @@
    "alt": "ifv bradley m3a3 m3a3 bradley strf 09 strf 09 a4"
   },
   {
+   "name": "Interceptor Jet",
+   "url": "/vehicles/interceptor-jet/",
+   "cat": "VEHICLES",
+   "alt": "interceptor jet f-74a seacat f74a seacat f-74a f74a seacat"
+  },
+  {
    "name": "Iron Sights",
    "url": "/attachments/optics/iron-sights/",
    "cat": "OPTICS",
@@ -947,6 +953,12 @@
    "url": "/gadgets/deployables/mp-aps/",
    "cat": "DEPLOYABLES",
    "alt": "missile intercept system"
+  },
+  {
+   "name": "Multirole Jet",
+   "url": "/vehicles/multirole-jet/",
+   "cat": "VEHICLES",
+   "alt": "multirole jet f/a-81f super spectre fa-81f super spectre f/a-81f fa-81f super spectre"
   },
   {
    "name": "New Sobek City",

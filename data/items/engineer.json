@@ -95,7 +95,7 @@
   ],
   "_tag_deny_note": "Thunder Engineer is a cosmetic skin, not the class. \"Engineers Supply Crate\" is EA's name for the vehicle supply crate gadget, which has its own page; a gadget that has a page keeps its lines there rather than also filling the class page. The Repair Tool is tagged here for the opposite reason: it has no page of its own.",
   "redsec": {
-    "_source": "Transcribed from the in-game REDSEC class details screen, Steam capture 20260812180241. The lobby banner reads 32/100 players, so this is a Battle Royale lobby and not core multiplayer.",
+    "_source": "Transcribed from the in-game REDSEC class details screen, Steam capture 20260812180241. The lobby banner reads 32/100 players, so this is a Battle Royale lobby and not core multiplayer. Training path transcribed from the in-game SELECT TRAINING PATH screen, Steam capture 20260815211135, in a 98/100-player Battle Royale lobby.",
     "signature_set": [
       {
         "slot": "Gadget 1",
@@ -123,21 +123,27 @@
       "name": "Stockpile",
       "description": "Class gadget resupply rate increases by 10% with each improvement. Effect resets upon death."
     },
-    "training": [
+    "training_paths": [
       {
-        "level": "LVL 03",
-        "name": "Mobility-Kill Warhead",
-        "description": "Aim-Guided Launcher hits temporarily immobilize vehicles for 5s."
-      },
-      {
-        "level": "LVL 02",
-        "name": "Devastating Impact",
-        "description": "Damaging enemy vehicles reduces their repair effectiveness by 25% for 10s."
-      },
-      {
-        "level": "LVL 01",
-        "name": "Enhanced Targeting",
-        "description": "Launcher is now aim-guided via magnified optic."
+        "name": "Field Mechanic",
+        "description": "Disable incoming armored threats and maintain combat vehicles to keep them mission-ready.",
+        "abilities": [
+          {
+            "level": "LVL 03",
+            "name": "Mobility-Kill Warhead",
+            "description": "Aim-Guided Launcher hits temporarily immobilize vehicles for 5s."
+          },
+          {
+            "level": "LVL 02",
+            "name": "Devastating Impact",
+            "description": "Damaging enemy vehicles reduces their repair effectiveness by 25% for 10s."
+          },
+          {
+            "level": "LVL 01",
+            "name": "Enhanced Targeting",
+            "description": "Launcher is now aim-guided via magnified optic."
+          }
+        ]
       }
     ],
     "universal_equipment": [
@@ -151,6 +157,7 @@
         "name": "Thermite Sabotage",
         "description": "Improvised sabotage device which slowly damages a tank and its crew."
       }
-    ]
+    ],
+    "_paths_note": "One path tile was present on the selector when it was captured, and its three abilities are the ones the Aug 12 CLASS DETAILS screen had already recorded unnamed. Recorded as seen: one tile on that account at that moment is not proof the class has only one path, since Assault's second tile is a field upgrade EA describes as unlocked rather than given."
   }
 }

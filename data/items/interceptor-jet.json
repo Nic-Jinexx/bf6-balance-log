@@ -1,0 +1,90 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-18, the day 1.4.2.0 went live (Steam captures 20260818125320 Pax Armata art, 125323 Pax Armata loadout, 125329 NATO loadout). The page leads with the in-game class name, which is the title the vehicle screen shows; the model designation rides underneath. No slot screen was opened on this airframe, so every slot records only the option the loadout bar showed as equipped. Sibling class Multirole Jet was captured in full on the same day and shares several of these option names, but nothing has been copied across: two jets naming a slot the same way is not evidence they carry the same weapon, and the Attack Helicopter / IFV precedent is that they often do not.",
+  "slug": "interceptor-jet",
+  "name": "Interceptor Jet",
+  "branch": "vehicles",
+  "order": 11,
+  "aliases": [
+    "interceptor jet",
+    "f-74a seacat",
+    "f74a seacat",
+    "f-74a",
+    "f74a",
+    "seacat"
+  ],
+  "_alias_note": "EA's own 1.4.2.0 changelog spells it both ways - \"F-74A Seacat\" in the summary and \"F74A Seacat\" in the Portal line - so both are aliases.",
+  "blurb": "F-74A Seacat",
+  "traits": [
+    "2 Seats",
+    "Anti-Vehicle",
+    "Soft Target"
+  ],
+  "_traits_note": "The pill row printed under the class name on the vehicle screen. The other eleven vehicles carry the same row in game and it was simply not recorded when they were captured, so its absence there is a gap and not a difference.",
+  "description": {
+    "text": "This fleet defense fighter specializes in air-to-air combat with limited air-to-ground capability.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "loadout": [
+    {
+      "role": "Driver",
+      "slot": "Primary",
+      "equipped": "API Cannon",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Secondary",
+      "equipped": "Lock-Guided",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 1",
+      "equipped": "Flares",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 2",
+      "equipped": "Sweep Stance",
+      "options": []
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "equipped": "Aim-Guided",
+      "options": []
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "equipped": "Active-Lock",
+      "options": []
+    },
+    {
+      "role": "Gunner",
+      "slot": "Equipment 1",
+      "equipped": "Flares",
+      "options": []
+    }
+  ],
+  "_loadout_note": "Seven slots, and no Upgrade slot on either seat - every other jet has a Driver Upgrade. Recorded as seen: the loadout row was captured whole on both factions and shows four Driver tiles and three Gunner tiles with nothing cut off. Two Gunner slots share the name Remote Weapon, which is the same shape the Attack Helicopter, Scout Helicopter and Patrol Boat already use. No slot screen was opened on this airframe, so every row gives only the equipped item; none is marked locked, because locked means the screen was opened and the alternatives were not selectable, and that was never tested here - including on the two Flares slots, which are locked on every other aircraft in the database.",
+  "related": [],
+  "retired_paths": [],
+  "variants": [
+    {
+      "faction": "NATO",
+      "name": "F-74A Seacat",
+      "image": "interceptor-jet"
+    },
+    {
+      "faction": "Pax Armata",
+      "name": "F-74A Seacat",
+      "image": "interceptor-jet-pax"
+    }
+  ],
+  "_variant_note": "Both factions field the same model here; only the livery differs, so the two captures show one aircraft in NATO and Pax Armata colors. The same is true of the Transport Helicopter and the Patrol Boat."
+}

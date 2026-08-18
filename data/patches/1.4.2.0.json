@@ -20,7 +20,9 @@
    ],
    "section": "summary",
    "items": [
-    "fighter-jet"
+    "fighter-jet",
+    "multirole-jet",
+    "interceptor-jet"
    ]
   },
   {
@@ -1327,7 +1329,9 @@
    ],
    "section": "portal",
    "items": [
-    "patrol-boat"
+    "patrol-boat",
+    "multirole-jet",
+    "interceptor-jet"
    ]
   },
   {

@@ -916,12 +916,26 @@ def render_loadout(item):
                     and o["description"].strip().upper() != "TBD")
     total = sum(len(s.get("options") or []) for s in slots)
     locked = [s for s in slots if s.get("locked")]
-    note = ("Every customisation slot and every option in it, transcribed from the in-game "
-            "screens. %d of %d options have their in-game description recorded; the rest are "
-            "named but not yet described." % (described, total))
+    # A slot with no options is one of two different things, and saying "locked"
+    # for both would assert something unread. `locked` means the screen was
+    # opened and the alternatives were not selectable; a slot with only
+    # `equipped` means nobody opened it, and its options are simply unknown.
+    unread = [s for s in slots
+              if not s.get("locked") and not (s.get("options") or []) and s.get("equipped")]
+    if total:
+        note = ("Every customisation slot and every option in it, transcribed from the in-game "
+                "screens. %d of %d options have their in-game description recorded; the rest "
+                "are named but not yet described." % (described, total))
+    else:
+        note = ("Every customisation slot this vehicle shows, read off the in-game loadout row. "
+                "No slot screen has been opened yet, so each row gives the equipped item and "
+                "nothing is claimed about the alternatives.")
     if locked:
         note += (" %d slot%s could not be opened on the capturing account and show only the "
                  "equipped item." % (len(locked), "" if len(locked) == 1 else "s"))
+    if unread and total:
+        note += (" %d slot%s not been opened yet and likewise show only the equipped item."
+                 % (len(unread), " has" if len(unread) == 1 else "s have"))
     out.append('<p class="cat-note">%s</p>' % note)
 
     by_role = []
@@ -941,6 +955,12 @@ def render_loadout(item):
                 out.append('<p class="lo-locked">Slot locked; equipped item reads '
                            '<b>%s</b>. Its alternatives are not selectable, so no option '
                            'list was captured.</p>' % html.escape(slot.get("equipped") or "TBD"))
+                out.append("</div>")
+                continue
+            if not options and slot.get("equipped"):
+                out.append('<p class="lo-locked">Slot screen not opened. The loadout row '
+                           'showed <b>%s</b> equipped; what else this slot offers is not '
+                           'recorded.</p>' % html.escape(slot["equipped"]))
                 out.append("</div>")
                 continue
             # Only weapon and ammo slots carry a designation: the detail screen
@@ -973,12 +993,21 @@ def render_redsec(item):
     multiplayer one, so it gets its own section instead of being folded into the
     tables above -- a page listing both Rally Squad and Stockpile as "the class
     ability" would be wrong in both directions. The differences are structural:
-    a class PASSIVE where core MP has a class ACTIVE, one four-level training
-    track instead of two named paths you choose between, abilities built on
-    armor plating (a mechanic core MP does not have at all), and a Universal
-    Equipment block with no core-MP equivalent. Several signature descriptions
-    also carry Battle Royale-only clauses, which is why the signature set is
-    repeated here rather than assumed to match.
+    a class PASSIVE where core MP has a class ACTIVE, a track numbered LVL 04
+    down to LVL 01 instead of core MP's LVL 03 down to LVL 00, wholly different
+    paths under different names, abilities built on armor plating (a mechanic
+    core MP does not have at all), and a Universal Equipment block with no
+    core-MP equivalent. Several signature descriptions also carry Battle
+    Royale-only clauses, which is why the signature set is repeated here rather
+    than assumed to match.
+
+    REDSEC does have named training paths you choose between, and this used to
+    say it did not. The Aug 12 captures were the class DETAILS screen, which
+    prints the equipped path's abilities under a bare TRAINING heading and never
+    names it; the Aug 15 capture of the SELECT TRAINING PATH screen showed
+    Assault's two, Pointman and Hazmat Breacher. A class still carrying a flat
+    `training` list is one whose selector was not captured, not one without
+    paths.
 
     Recon has no block: it was not captured, and a class page that silently
     omitted it would read as "Recon has no REDSEC variant", which is not known.
@@ -991,8 +1020,9 @@ def render_redsec(item):
     out = ['<h2 class="cat %s" id="redsec"><span class="dot"></span>In REDSEC</h2>' % color]
     out.append('<p class="cat-note">REDSEC gives this class a different training system, '
                'transcribed from its own in-game screens. The class ability is '
-               '<b>passive</b> here where core multiplayer has an <b>active</b> one, there is a '
-               'single four-level track rather than two training paths to choose between, and '
+               '<b>passive</b> here where core multiplayer has an <b>active</b> one, the levels '
+               'run LVL 04 down to LVL 01 rather than LVL 03 down to LVL 00, the training paths '
+               'are different ones under different names, and '
                'some abilities work on armor plating, which core multiplayer does not use. '
                'Where a signature description differs from the core-multiplayer wording, the '
                'REDSEC wording is the one printed below.</p>')
@@ -1023,10 +1053,28 @@ def render_redsec(item):
 
     passive = rs.get("passive") or {}
     training = rs.get("training") or []
-    if passive or training:
-        out.append('<section class="tp-path"><h3>Training</h3><div class="lo-slot">')
-        out.append(ability_table(([passive] if passive else []) + training))
-        out.append("</div></section>")
+    paths = rs.get("training_paths") or []
+    # The passive is printed on every path screen, so it leads the section rather
+    # than sitting inside whichever path happened to be equipped when captured.
+    if passive:
+        out.append('<section class="tp-path"><h3>Class passive ability</h3>'
+                   '<div class="lo-slot">%s</div></section>' % ability_table([passive]))
+    for path in paths:
+        out.append('<section class="tp-path"><h3>%s</h3>' % html.escape(path.get("name", "")))
+        desc = (path.get("description") or "").strip()
+        if desc and desc.upper() != "TBD":
+            out.append('<p class="tp-desc">%s</p>' % html.escape(desc))
+        out.append('<div class="lo-slot">%s</div></section>'
+                   % ability_table(path.get("abilities") or []))
+    # A class whose path selector was never opened keeps its abilities under a
+    # bare Training heading. The class details screen shows the equipped path
+    # without naming it, so calling this "a path" would name something unread.
+    if training:
+        out.append('<section class="tp-path"><h3>Training</h3>')
+        out.append('<p class="tp-desc">Which path these belong to is not recorded. The class '
+                   'details screen prints the equipped path’s abilities without naming '
+                   'it, and the screen that names it was not captured for this class.</p>')
+        out.append('<div class="lo-slot">%s</div></section>' % ability_table(training))
 
     universal = rs.get("universal_equipment") or []
     if universal:

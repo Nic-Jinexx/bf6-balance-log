@@ -1,0 +1,148 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-18, the day 1.4.2.0 went live (Steam captures 20260818125336 NATO art, 125340 NATO loadout, 125343 Pax Armata loadout, then 125348-125417 for the slot screens). Every slot screen was read on the Pax Armata airframe. The page leads with the in-game class name, which is the title the vehicle screen shows; the model designation rides underneath.",
+  "slug": "multirole-jet",
+  "name": "Multirole Jet",
+  "branch": "vehicles",
+  "order": 12,
+  "aliases": [
+    "multirole jet",
+    "f/a-81f super spectre",
+    "fa-81f super spectre",
+    "f/a-81f",
+    "fa-81f",
+    "super spectre"
+  ],
+  "blurb": "F/A-81F Super Spectre",
+  "traits": [
+    "2 Seats",
+    "Anti-Vehicle",
+    "Anti-Soldier",
+    "Soft Target"
+  ],
+  "_traits_note": "The pill row printed under the class name on the vehicle screen. The other eleven vehicles carry the same row in game and it was simply not recorded when they were captured, so its absence there is a gap and not a difference.",
+  "description": {
+    "text": "This multirole fighter is a flexible aircraft capable of both aerial dogfights and ground troop support.",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "loadout": [
+    {
+      "role": "Driver",
+      "slot": "Primary",
+      "options": [
+        {
+          "name": "API Cannon",
+          "designation": "20mm API Cannon",
+          "description": "Cannon loaded with Armor Piercing Incendiary rounds, best used against aircraft and other light vehicles."
+        },
+        {
+          "name": "APHEI Cannon",
+          "designation": "20mm APHEI Cannon",
+          "description": "Cannon loaded with Armor-Piercing High-Explosive Incendiary rounds effective against most targets, though its lower muzzle velocity makes engaging fast-moving targets more challenging."
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Secondary",
+      "options": [
+        {
+          "name": "Lock-Guided",
+          "title": "Lock-Guided AA Missile",
+          "designation": "AIM-84 Air-to-Air Missile",
+          "description": "Locks on or utilizes laser guidance to target any aircraft."
+        },
+        {
+          "name": "Auto-Guided",
+          "title": "Auto-Guided AA Missile",
+          "designation": "HAM-88",
+          "description": "Anti-radiation missile which homes in on vehicles with anti-air missile weapon systems. Damage temporarily jams struck targets. Effective against surface targets and slow-moving aircraft"
+        }
+      ]
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 1",
+      "locked": true,
+      "equipped": "Flares",
+      "options": []
+    },
+    {
+      "role": "Driver",
+      "slot": "Equipment 2",
+      "options": [
+        {
+          "name": "Heavy Rockets",
+          "description": "Unguided rockets capable of firing smaller volleys but providing higher damage per projectile. Effective against most vehicles including armored targets."
+        },
+        {
+          "name": "Cluster",
+          "title": "Anti-Armor Cluster Bomb",
+          "description": "Cluster bomb which dispenses numerous anti-armor submunitions over a target location."
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "options": [
+        {
+          "name": "Directional Jammer",
+          "designation": "Directional Jammer",
+          "description": "Targets handheld and vehicle mounted enemy devices to prevent lock-on against the jet or other vehicles. Extended use will temporarily overheat the equipment."
+        },
+        {
+          "name": "Active-Lock",
+          "title": "Active-Lock AA Missile",
+          "designation": "ARH-7",
+          "description": "Air-to-air missile designed to engage enemy aircraft. User must maintain sight lock until impact."
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Remote Weapon",
+      "options": [
+        {
+          "name": "Bomb",
+          "title": "Precision Penetration Bomb",
+          "designation": "230kg PGM",
+          "description": "A large aerial bomb that will guide itself to the targeting crosshair position at the time of release. Capable of penetrating subsurface structures."
+        },
+        {
+          "name": "Optic-Guided",
+          "title": "Optical Missile",
+          "designation": "AGM-2000H/K",
+          "description": "Precison munition controlled by optical feed, allowing for mid-flight adjustments. Primarily for armored ground targets, but can be used creatively against structures, infantry, and aircraft."
+        }
+      ]
+    },
+    {
+      "role": "Gunner",
+      "slot": "Equipment 1",
+      "locked": true,
+      "equipped": "Flares",
+      "options": []
+    }
+  ],
+  "_loadout_note": "Seven slots, and no Upgrade slot on either seat - every other jet has a Driver Upgrade. Recorded as seen: the loadout row was captured whole on both factions and shows four Driver tiles and three Gunner tiles with nothing cut off. Two Gunner slots share the name Remote Weapon, which is the same shape the Attack Helicopter, Scout Helicopter and Patrol Boat already use; they hold different options and are recorded separately, in the order the row prints them. Both Flares tiles are name-only because neither screen was opened.",
+  "_transcription_note": "Two in-game strings are reproduced exactly as printed rather than corrected: the Auto-Guided AA Missile description ends without a full stop, and the Optical Missile description spells it \"Precison\". Same rule the patch log follows for EA's own typos - keep the wording, never quietly fix it.",
+  "_designation_note": "The Directional Jammer prints a designation line that simply repeats its name. It is recorded because it was printed: this is a Remote Weapon slot, and weapon slots are exactly where designations appear. The two Equipment tiles that were opened, Heavy Rockets and Cluster, print no designation, which matches the rule that equipment slots have none.",
+  "related": [],
+  "retired_paths": [],
+  "variants": [
+    {
+      "faction": "NATO",
+      "name": "F/A-81F Super Spectre",
+      "image": "multirole-jet"
+    },
+    {
+      "faction": "Pax Armata",
+      "name": "F/A-81F Super Spectre",
+      "image": "multirole-jet-pax"
+    }
+  ],
+  "_variant_note": "Both factions field the same model here; only the livery differs, so the two captures show one aircraft in NATO and Pax Armata colors. The same is true of the Transport Helicopter and the Patrol Boat."
+}

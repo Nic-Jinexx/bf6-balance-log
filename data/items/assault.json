@@ -77,21 +77,6 @@
       ]
     }
   ],
-  "documented_paths": [
-    {
-      "name": "Hazmat Breacher",
-      "scope": "Battle Royale",
-      "note": "Named by EA but never captured. 1.2.3.0 adds it “for the Assault Class in Battle Royale”, and 1.3.1.0 files a change to it under REDSEC → UI & HUD → Battle Royale, referring to “the Hazmat Breacher field upgrade’s VL-7 Breaching Launcher”. The level below is quoted in EA’s numbering, which is not the LVL 00–LVL 03 scale the captured paths print, so it is deliberately not mapped onto one.",
-      "abilities": [
-        {
-          "level": "Level 3",
-          "name": "Tracker",
-          "description": "TBD"
-        }
-      ]
-    }
-  ],
-  "_documented_paths_note": "Kept out of training_paths because that array is transcribed from in-game screens and this was read off the changelog. Only the ability EA actually named is listed; its description stays TBD rather than being written from the patch line, which describes an edit to the text and not the text itself.",
   "related": [],
   "retired_paths": [],
   "variants": [
@@ -113,7 +98,7 @@
   ],
   "_tag_deny_note": "Three different things wear this word. The Assault Ladder and the assault rifle category have their own pages; Conquest Assault is a Portal variant of a mode. Masked out before matching so the class page only collects lines about the class.",
   "redsec": {
-    "_source": "Transcribed from the in-game REDSEC class details screen, Steam capture 20260812180236. The lobby banner reads 17/100 players, so this is a Battle Royale lobby and not core multiplayer.",
+    "_source": "Transcribed from the in-game REDSEC class details screen, Steam capture 20260812180236. The lobby banner reads 17/100 players, so this is a Battle Royale lobby and not core multiplayer. Training paths transcribed from the in-game SELECT TRAINING PATH screen, Steam captures 20260815211122 (Pointman) and 20260815211121 (Hazmat Breacher). The lobby banner reads 98/100 players, so this is a Battle Royale lobby and not core multiplayer.",
     "signature_set": [
       {
         "slot": "Gadget 1",
@@ -141,21 +126,49 @@
       "name": "Stockpile",
       "description": "Class gadget resupply rate increases by 10% with each improvement. Effect resets upon death."
     },
-    "training": [
+    "training_paths": [
       {
-        "level": "LVL 03",
-        "name": "Cluster Munitions",
-        "description": "High Explosive Launcher explosions generate 5 fused submunitions."
+        "name": "Pointman",
+        "description": "Gain the high ground and eliminate enemies from defilade.",
+        "abilities": [
+          {
+            "level": "LVL 03",
+            "name": "Cluster Munitions",
+            "description": "High Explosive Launcher explosions generate 5 fused submunitions."
+          },
+          {
+            "level": "LVL 02",
+            "name": "Grenadier",
+            "description": "High Explosive Launcher carrying capacity increased to 5 rounds."
+          },
+          {
+            "level": "LVL 01",
+            "name": "Quick Plating",
+            "description": "Armor replating is 33% faster."
+          }
+        ]
       },
       {
-        "level": "LVL 02",
-        "name": "Grenadier",
-        "description": "High Explosive Launcher carrying capacity increased to 5 rounds."
-      },
-      {
-        "level": "LVL 01",
-        "name": "Quick Plating",
-        "description": "Armor replating is 33% faster."
+        "name": "Hazmat Breacher",
+        "description": "Learn to thrive on a hazardous battlefield and utilize special equipment to break through enemy front lines.",
+        "_note": "EA named this path in 1.2.3.0 and 1.3.1.0 long before it was captured, calling Tracker “Level 3” in its own numbering. The screen prints LVL 03, so the two agree.",
+        "abilities": [
+          {
+            "level": "LVL 03",
+            "name": "Tracker",
+            "description": "Equipping the Protective Mask within 20m of an enemy affected by VL-7 reveals their position."
+          },
+          {
+            "level": "LVL 02",
+            "name": "Resilience",
+            "description": "Passive health regeneration triggers 50% faster and provides a 50% improvement on healing. Revive sickness recovery time reduced by 50%."
+          },
+          {
+            "level": "LVL 01",
+            "name": "Enhanced Filtration",
+            "description": "While in use the Protective Mask improves sprint speed by 10%. Increases Protective Mask duration and recharge rate by 20%."
+          }
+        ]
       }
     ],
     "universal_equipment": [
@@ -169,6 +182,7 @@
         "name": "Thermite Sabotage",
         "description": "Improvised sabotage device which slowly damages a tank and its crew."
       }
-    ]
+    ],
+    "_paths_note": "The Aug 12 capture is the CLASS DETAILS screen, which prints the equipped path's abilities under a bare TRAINING heading and never names the path. The Aug 15 capture is the SELECT TRAINING PATH screen, which names it and shows the tiles: this class has two, and the three abilities recorded on Aug 12 are Pointman's. That supersedes the earlier reading that REDSEC runs a single unnamed four-level track. The LVL 04 passive is printed on both path screens, so it sits above them rather than inside either."
   }
 }

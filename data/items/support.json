@@ -160,6 +160,7 @@
         "name": "Thermite Sabotage",
         "description": "Improvised sabotage device which slowly damages a tank and its crew."
       }
-    ]
+    ],
+    "_training_note": "The path this belongs to is not recorded. Only the CLASS DETAILS screen was captured for this class, and it prints the equipped path's abilities without naming the path; the SELECT TRAINING PATH screen, which names it, was captured for Assault and Engineer only. So these three abilities are known to be one path's, and which one is not."
   }
 }

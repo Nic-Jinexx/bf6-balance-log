@@ -280,8 +280,8 @@
         {"name": "Aircraft Carrier", "kind": "POI", "_note": "REDSEC. The roadmap art says Aircraft Carrier; the 1.4.2.0 changelog says Fort Lyndon gains “the new Crashed Carrier POI”. A POI inside Fort Lyndon, so no slug of its own — see fort-lyndon."},
         {"name": "Interdictor", "kind": "Weapon", "_note": "EA's changelog calls it “the new Interdictor sniper rifle”. Page not built yet."},
         {"name": "Spectator Mode + Custom Lobbies", "kind": "Feature", "_note": "BF Labs on the roadmap; shipped through Portal. EA calls Custom Lobbies “an early implementation designed primarily for org” play, and says both it and Spectating “remain works in progress”. No page, by design."},
-        {"name": "F/A-81F Super Spectre", "kind": "Vehicle", "_note": "Two-seat fighter jet, pilot plus wingman. Page not built yet."},
-        {"name": "F-74A Seacat", "kind": "Vehicle", "_note": "Two-seat fighter jet, pilot plus wingman. Page not built yet."},
+        {"name": "F/A-81F Super Spectre", "slug": "multirole-jet", "kind": "Vehicle", "_note": "Two-seat fighter jet, pilot plus wingman. The roadmap and EA's changelog both name the model; in game the class is the Multirole Jet, which is what the page is called, with the model in its blurb. Both factions field this same model."},
+        {"name": "F-74A Seacat", "slug": "interceptor-jet", "kind": "Vehicle", "_note": "Two-seat fighter jet, pilot plus wingman. The roadmap and EA's changelog both name the model; in game the class is the Interceptor Jet, which is what the page is called, with the model in its blurb. Both factions field this same model."},
         {"name": "CJTF Helix", "kind": "Squad Unit", "_note": "Not on the roadmap art — named only in the 1.4.2.0 changelog, as “the CJTF Helix squad unit”. No page."}
       ]
     }
