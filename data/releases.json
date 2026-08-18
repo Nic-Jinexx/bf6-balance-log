@@ -266,6 +266,24 @@
         {"name": "BROD 3", "slug": "brod-3", "kind": "Carbine"},
         {"name": "VSSM", "slug": "vssm", "kind": "DMR"}
       ]
+    },
+    {
+      "version": "1.4.2.0",
+      "name": "Top Gun",
+      "season": 4,
+      "live": "Aug 18, 2026",
+      "_note": "Season 4 phase 2. Names are the roadmap art's, per _source. Where the 1.4.2.0 changelog names the same content differently, both are recorded: the roadmap name in 'name', EA's changelog wording in '_note'. Moved here from 'scheduled' on Aug 18, 2026, the day the update went live (08:00 UTC; recorded 18:04 UTC).",
+      "added": [
+        {"name": "Wake Island", "slug": "wake-island", "kind": "Map", "_note": "A return, not a debut. The changelog line is “Wake Island has been added to Verified Experiences.”"},
+        {"name": "Top Gun: Carrier Strike", "kind": "Mode", "_note": "EA's changelog uses the same name and calls it Carrier Assault “reimagined”. No page yet."},
+        {"name": "Top Gun: Fighter Sweep", "kind": "Mode", "_note": "REDSEC. The roadmap art says Top Gun: Fighter Sweep; the 1.4.2.0 changelog says “Gauntlet: Fighter Sweep”. Roadmap name kept per _source; EA's recorded here rather than chosen between. No page yet."},
+        {"name": "Aircraft Carrier", "kind": "POI", "_note": "REDSEC. The roadmap art says Aircraft Carrier; the 1.4.2.0 changelog says Fort Lyndon gains “the new Crashed Carrier POI”. A POI inside Fort Lyndon, so no slug of its own — see fort-lyndon."},
+        {"name": "Interdictor", "kind": "Weapon", "_note": "EA's changelog calls it “the new Interdictor sniper rifle”. Page not built yet."},
+        {"name": "Spectator Mode + Custom Lobbies", "kind": "Feature", "_note": "BF Labs on the roadmap; shipped through Portal. EA calls Custom Lobbies “an early implementation designed primarily for org” play, and says both it and Spectating “remain works in progress”. No page, by design."},
+        {"name": "F/A-81F Super Spectre", "kind": "Vehicle", "_note": "Two-seat fighter jet, pilot plus wingman. Page not built yet."},
+        {"name": "F-74A Seacat", "kind": "Vehicle", "_note": "Two-seat fighter jet, pilot plus wingman. Page not built yet."},
+        {"name": "CJTF Helix", "kind": "Squad Unit", "_note": "Not on the roadmap art — named only in the 1.4.2.0 changelog, as “the CJTF Helix squad unit”. No page."}
+      ]
     }
   ],
   "_removed_comment": "Availability observations: content that was live and is not any more, and content that came back. Kept separate from 'releases' because none of this has a version: EA has published no changelog line for any of it, so the only source is an in-game screen read on a given date. Each block records what was seen, when, and where; build_pages.py turns it into an Availability row using the literal 'value' string, so nothing is assembled or inferred at render time. The row is labelled 'Removed' unless the block sets its own 'label' — needed because content returns, and 'Removed' would then state the opposite of what was seen. Blocks are read in file order, so a later observation of the same slug supersedes an earlier one. An entry here does NOT delete the item's page. The patch history stays and the row is what stops the page implying the content is still playable. See docs/adr/0007.",
@@ -300,23 +318,8 @@
       ]
     }
   ],
-  "_scheduled_comment": "Announced on the Season 4 roadmap but not yet released as of 2026-08-01. Deliberately NOT in 'releases': nothing here has a version, and none of it should fill an Added in value until it actually ships.",
+  "_scheduled_comment": "Announced on the Season 4 roadmap but not yet released as of 2026-08-18, when Top Gun shipped and moved to 'releases'. Deliberately NOT in 'releases': nothing here has a version, and none of it should fill an Added in value until it actually ships.",
   "scheduled": [
-    {
-      "name": "Top Gun",
-      "season": 4,
-      "planned": "Aug 18, 2026",
-      "added": [
-        {"name": "Wake Island", "slug": "wake-island", "kind": "Map"},
-        {"name": "Top Gun: Carrier Strike", "kind": "Mode"},
-        {"name": "Top Gun: Fighter Sweep", "kind": "Mode", "_note": "REDSEC"},
-        {"name": "Aircraft Carrier", "kind": "POI", "_note": "REDSEC"},
-        {"name": "Interdictor", "kind": "Weapon"},
-        {"name": "Spectator Mode + Custom Lobbies", "kind": "Feature", "_note": "BF Labs"},
-        {"name": "F/A-81F Super Spectre", "kind": "Vehicle", "_note": "2-seater jet"},
-        {"name": "F-74A Seacat", "kind": "Vehicle", "_note": "2-seater jet"}
-      ]
-    },
     {
       "name": "Tidal Strike",
       "season": 4,
