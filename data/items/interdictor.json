@@ -1,0 +1,74 @@
+{
+  "_comment": "Transcribed from in-game screenshots taken 2026-08-18, the day 1.4.2.0 went live (Steam captures 20260818150059 SELECT PRIMARY WEAPON for the text and stats, 20260818150105 CUSTOMIZE for the art; 20260818175050 is a second shot of the same weapon screen and matches it field for field). Unlock and Requirement are not shown for an owned weapon, and the Challenges screen was not captured, so availability stays empty rather than guessed.",
+  "slug": "interdictor",
+  "name": "Interdictor",
+  "branch": "weapons",
+  "subcategory": "sniper-rifles",
+  "order": 6,
+  "aliases": [],
+  "blurb": "",
+  "variant": "Factory",
+  "traits": [
+    "Hard-Hitting",
+    "Extreme Range",
+    "Bolt-Action"
+  ],
+  "description": {
+    "text": "Lightweight and compact for its 10.4x83mm chambering, the Interdictor has drawn increasing military interest. Its lethality peaks between 120m and 150m.",
+    "attribution": "In-game description"
+  },
+  "stats_as_of": "1.4.2.0",
+  "stats": [
+    {
+      "label": "Damage",
+      "value": "150"
+    },
+    {
+      "label": "Rate of fire",
+      "value": "31"
+    },
+    {
+      "label": "Magazine",
+      "value": "5"
+    }
+  ],
+  "ratings": [
+    {
+      "label": "Hipfire",
+      "value": 29
+    },
+    {
+      "label": "Precision",
+      "value": 1
+    },
+    {
+      "label": "Control",
+      "value": 17
+    },
+    {
+      "label": "Mobility",
+      "value": 35
+    }
+  ],
+  "_ratings_note": "Precision really is 1, not 100 or a misread of it. The screen prints these zero-padded to three digits and this one reads 001 with an empty bar and its marker hard left, checked at magnification because the value is such an outlier for a bolt-action sniper: the L115 is 100 and the PSR, SV-98, M2010 ESR and Mini Scout are all far above this. Recorded as printed. If a later capture disagrees, the capture wins - this is not a value anyone should quietly round toward what looks sensible.",
+  "availability": [],
+  "related": [
+    {
+      "group": "Optics",
+      "items": []
+    },
+    {
+      "group": "Barrels",
+      "items": []
+    },
+    {
+      "group": "Underbarrel",
+      "items": []
+    },
+    {
+      "group": "Magazines",
+      "items": []
+    }
+  ],
+  "retired_paths": []
+}

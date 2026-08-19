@@ -601,6 +601,12 @@
    "alt": "interceptor jet f-74a seacat f74a seacat f-74a f74a seacat"
   },
   {
+   "name": "Interdictor",
+   "url": "/weapons/sniper-rifles/interdictor/",
+   "cat": "SNIPER RIFLES",
+   "alt": ""
+  },
+  {
    "name": "Iron Sights",
    "url": "/attachments/optics/iron-sights/",
    "cat": "OPTICS",
