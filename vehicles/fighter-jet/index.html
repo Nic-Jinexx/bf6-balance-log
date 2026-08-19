@@ -569,8 +569,9 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .lo-slot.lo-wrap td:first-child,
 .lo-slot.lo-wrap td:nth-child(2){white-space:normal}
 .lo-slot.lo-wrap td:nth-child(2){min-width:9ch}
-.lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
-.lo-locked b{color:var(--muted);font-style:normal}
+/* A slot with nothing to choose between prints its item and nothing else, so it
+   is styled like the first column of a slot table rather than like a remark. */
+.lo-fixed{color:var(--text);font-size:15px;margin:0}
 /* Class training paths. The ability table is the same three-column shape as a
    loadout slot, so it reuses .lo-slot; only the group heading and the path's own
    blurb are new. The heading takes the systemic hue because that is the color the
@@ -1024,23 +1025,22 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 </div>
 
 <h2 class="cat vehicles" id="loadout"><span class="dot"></span>Loadout</h2>
-<p class="cat-note">Every slot on this vehicle is locked, so each row names the equipped item and there is no option list to show.</p>
 <div class="loadout">
 <section class="lo-role"><h3>Driver</h3>
 <div class="lo-slot"><h4>Primary</h4>
-<p class="lo-locked">Slot locked; equipped item reads <b>Autocannon</b>. Its alternatives are not selectable, so no option list was captured.</p>
+<p class="lo-fixed">Autocannon</p>
 </div>
 <div class="lo-slot"><h4>Secondary</h4>
-<p class="lo-locked">Slot locked; equipped item reads <b>Lock-Guided AA</b>. Its alternatives are not selectable, so no option list was captured.</p>
+<p class="lo-fixed">Lock-Guided AA</p>
 </div>
 <div class="lo-slot"><h4>Equipment 1</h4>
-<p class="lo-locked">Slot locked; equipped item reads <b>Flares</b>. Its alternatives are not selectable, so no option list was captured.</p>
+<p class="lo-fixed">Flares</p>
 </div>
 <div class="lo-slot"><h4>Equipment 2</h4>
-<p class="lo-locked">Slot locked; equipped item reads <b>Aim-Guided Bomb</b>. Its alternatives are not selectable, so no option list was captured.</p>
+<p class="lo-fixed">Aim-Guided Bomb</p>
 </div>
 <div class="lo-slot"><h4>Upgrade</h4>
-<p class="lo-locked">Slot locked; equipped item reads <b>Radar System</b>. Its alternatives are not selectable, so no option list was captured.</p>
+<p class="lo-fixed">Radar System</p>
 </div>
 </section>
 </div>

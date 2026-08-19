@@ -569,8 +569,9 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .lo-slot.lo-wrap td:first-child,
 .lo-slot.lo-wrap td:nth-child(2){white-space:normal}
 .lo-slot.lo-wrap td:nth-child(2){min-width:9ch}
-.lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
-.lo-locked b{color:var(--muted);font-style:normal}
+/* A slot with nothing to choose between prints its item and nothing else, so it
+   is styled like the first column of a slot table rather than like a remark. */
+.lo-fixed{color:var(--text);font-size:15px;margin:0}
 /* Class training paths. The ability table is the same three-column shape as a
    loadout slot, so it reuses .lo-slot; only the group heading and the path's own
    blurb are new. The heading takes the systemic hue because that is the color the
@@ -1028,7 +1029,6 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 </div>
 
 <h2 class="cat vehicles" id="loadout"><span class="dot"></span>Loadout</h2>
-<p class="cat-note">Every customisation slot and every option in it, transcribed from the in-game screens. 13 of 13 options have their in-game description recorded; the rest are named but not yet described. 3 slots are locked, naming the equipped item and offering no alternatives.</p>
 <div class="loadout">
 <section class="lo-role"><h3>Driver</h3>
 <div class="lo-slot"><h4>Primary</h4>
@@ -1045,7 +1045,7 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 <tr><td>Aim-Guided</td><td>70mm PGM Rocket</td><td>A rocket designed to combat infantry and light vehicles. Can be guided to the target via a weapon&#x27;s crosshairs.</td></tr>
 </table></div>
 <div class="lo-slot"><h4>Equipment 1</h4>
-<p class="lo-locked">Slot locked; equipped item reads <b>Flares</b>. Its alternatives are not selectable, so no option list was captured.</p>
+<p class="lo-fixed">Flares</p>
 </div>
 <div class="lo-slot"><h4>Equipment 2</h4>
 <table>
@@ -1064,10 +1064,10 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 </section>
 <section class="lo-role"><h3>Gunner</h3>
 <div class="lo-slot"><h4>Upgrade</h4>
-<p class="lo-locked">Slot locked; equipped item reads <b>Radar System</b>. Its alternatives are not selectable, so no option list was captured.</p>
+<p class="lo-fixed">Radar System</p>
 </div>
 <div class="lo-slot"><h4>Remote Weapon</h4>
-<p class="lo-locked">Slot locked; equipped item reads <b>Thermal Scanner</b>. Its alternatives are not selectable, so no option list was captured.</p>
+<p class="lo-fixed">Thermal Scanner</p>
 </div>
 <div class="lo-slot"><h4>Remote Weapon</h4>
 <table>

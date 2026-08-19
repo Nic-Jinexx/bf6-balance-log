@@ -479,8 +479,9 @@ figure.itemimg.icon .imgpending span{font-size:11px}
 .lo-slot.lo-wrap td:first-child,
 .lo-slot.lo-wrap td:nth-child(2){white-space:normal}
 .lo-slot.lo-wrap td:nth-child(2){min-width:9ch}
-.lo-locked{color:var(--dim);font-style:italic;font-size:14.5px;margin:0}
-.lo-locked b{color:var(--muted);font-style:normal}
+/* A slot with nothing to choose between prints its item and nothing else, so it
+   is styled like the first column of a slot table rather than like a remark. */
+.lo-fixed{color:var(--text);font-size:15px;margin:0}
 /* Class training paths. The ability table is the same three-column shape as a
    loadout slot, so it reuses .lo-slot; only the group heading and the path's own
    blurb are new. The heading takes the systemic hue because that is the color the
@@ -911,39 +912,6 @@ def render_loadout(item):
         return ""
 
     out = ['<h2 class="cat vehicles" id="loadout"><span class="dot"></span>Loadout</h2>']
-    described = sum(1 for s in slots for o in (s.get("options") or [])
-                    if (o.get("description") or "").strip()
-                    and o["description"].strip().upper() != "TBD")
-    total = sum(len(s.get("options") or []) for s in slots)
-    locked = [s for s in slots if s.get("locked")]
-    # A slot with no options is one of two different things, and saying "locked"
-    # for both would assert something unread. `locked` means the screen was
-    # opened and the alternatives were not selectable; a slot with only
-    # `equipped` means nobody opened it, and its options are simply unknown.
-    unread = [s for s in slots
-              if not s.get("locked") and not (s.get("options") or []) and s.get("equipped")]
-    if total:
-        note = ("Every customisation slot and every option in it, transcribed from the in-game "
-                "screens. %d of %d options have their in-game description recorded; the rest "
-                "are named but not yet described." % (described, total))
-    elif len(locked) == len(slots):
-        note = ("Every slot on this vehicle is locked, so each row names the equipped item and "
-                "there is no option list to show.")
-    else:
-        note = ("Every customisation slot this vehicle shows, read off the in-game loadout row. "
-                "No slot screen has been opened yet, so each row gives the equipped item and "
-                "nothing is claimed about the alternatives.")
-    # Deliberately not "could not be opened on the capturing account". That framing
-    # explains the lock as an account limitation, which was never established, and it
-    # contradicts the per-slot line, which has always said the alternatives are not
-    # selectable. This states what is true either way.
-    if locked and not (not total and len(locked) == len(slots)):
-        note += (" %d slot%s locked, naming the equipped item and offering no alternatives."
-                 % (len(locked), " is" if len(locked) == 1 else "s are"))
-    if unread and total:
-        note += (" %d slot%s not been opened yet and likewise show only the equipped item."
-                 % (len(unread), " has" if len(unread) == 1 else "s have"))
-    out.append('<p class="cat-note">%s</p>' % note)
 
     by_role = []
     for slot in slots:
@@ -958,16 +926,13 @@ def render_loadout(item):
         for slot in group:
             out.append('<div class="lo-slot"><h4>%s</h4>' % html.escape(slot.get("slot", "")))
             options = slot.get("options") or []
-            if slot.get("locked") and not options:
-                out.append('<p class="lo-locked">Slot locked; equipped item reads '
-                           '<b>%s</b>. Its alternatives are not selectable, so no option '
-                           'list was captured.</p>' % html.escape(slot.get("equipped") or "TBD"))
-                out.append("</div>")
-                continue
-            if not options and slot.get("equipped"):
-                out.append('<p class="lo-locked">Slot screen not opened. The loadout row '
-                           'showed <b>%s</b> equipped; what else this slot offers is not '
-                           'recorded.</p>' % html.escape(slot["equipped"]))
+            # A slot with nothing to choose between is just its item. The page used
+            # to spell out that the slot was locked and no option list was captured;
+            # that is provenance, it belongs in the item file's notes, and on the
+            # page it was noise on every aircraft. Owner's call, 2026-08-18.
+            if not options and (slot.get("locked") or slot.get("equipped")):
+                out.append('<p class="lo-fixed">%s</p>'
+                           % value_cell(slot.get("equipped")))
                 out.append("</div>")
                 continue
             # Only weapon and ammo slots carry a designation: the detail screen
