@@ -31,47 +31,54 @@
     {
       "role": "Driver",
       "slot": "Primary",
+      "locked": true,
       "equipped": "API Cannon",
       "options": []
     },
     {
       "role": "Driver",
       "slot": "Secondary",
+      "locked": true,
       "equipped": "Lock-Guided",
       "options": []
     },
     {
       "role": "Driver",
       "slot": "Equipment 1",
+      "locked": true,
       "equipped": "Flares",
       "options": []
     },
     {
       "role": "Driver",
       "slot": "Equipment 2",
+      "locked": true,
       "equipped": "Sweep Stance",
       "options": []
     },
     {
       "role": "Gunner",
       "slot": "Remote Weapon",
+      "locked": true,
       "equipped": "Aim-Guided",
       "options": []
     },
     {
       "role": "Gunner",
       "slot": "Remote Weapon",
+      "locked": true,
       "equipped": "Active-Lock",
       "options": []
     },
     {
       "role": "Gunner",
       "slot": "Equipment 1",
+      "locked": true,
       "equipped": "Flares",
       "options": []
     }
   ],
-  "_loadout_note": "Seven slots, and no Upgrade slot on either seat - every other jet has a Driver Upgrade. Recorded as seen: the loadout row was captured whole on both factions and shows four Driver tiles and three Gunner tiles with nothing cut off. Two Gunner slots share the name Remote Weapon, which is the same shape the Attack Helicopter, Scout Helicopter and Patrol Boat already use. No slot screen was opened on this airframe, so every row gives only the equipped item; none is marked locked, because locked means the screen was opened and the alternatives were not selectable, and that was never tested here - including on the two Flares slots, which are locked on every other aircraft in the database.",
+  "_loadout_note": "Seven slots, and no Upgrade slot on either seat - every other jet has a Driver Upgrade. Every slot is locked: this aircraft cannot be customised at all, confirmed by the project owner from play on 2026-08-18, which is why the rows give the equipped item and no option list. That is a stronger claim than the capture alone supports - the loadout row was shot on both factions but no slot screen was opened - so the source for it is the owner and not the screenshots. Flares is likewise fixed and not customisable anywhere, which matches every other aircraft in the database. Two Gunner slots share the name Remote Weapon, the same shape the Attack Helicopter, Scout Helicopter and Patrol Boat already use.",
   "related": [],
   "retired_paths": [],
   "variants": [
@@ -86,5 +93,6 @@
       "image": "interceptor-jet-pax"
     }
   ],
-  "_variant_note": "Both factions field the same model here; only the livery differs, so the two captures show one aircraft in NATO and Pax Armata colors. The same is true of the Transport Helicopter and the Patrol Boat."
+  "_variant_note": "Both factions field the same model here; only the livery differs, so the two captures show one aircraft in NATO and Pax Armata colors. The same is true of the Transport Helicopter and the Patrol Boat.",
+  "_image_note": "Cropped from the Customize screen (Steam captures 20260818175000 NATO, 20260818175004 Pax Armata), not the Cosmetic Customization screen the other eleven vehicles use, because no capture of that screen exists for these two. Consequences, so nobody wonders later: the frame is 1500x422 rather than the 1500x780 the rest share, because the only band clear of the header, the callout and the loadout row is that shallow; and a faint callout leader line and the small square hardpoint reticle sit on the airframe, since both are drawn over the aircraft and no crop removes them. Both figures on a page use one geometry so they match each other. Nothing was painted out - cropping is framing, retouching would be inventing. Replace these if the Cosmetic Customization screen is ever captured."
 }

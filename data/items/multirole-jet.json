@@ -127,7 +127,7 @@
       "options": []
     }
   ],
-  "_loadout_note": "Seven slots, and no Upgrade slot on either seat - every other jet has a Driver Upgrade. Recorded as seen: the loadout row was captured whole on both factions and shows four Driver tiles and three Gunner tiles with nothing cut off. Two Gunner slots share the name Remote Weapon, which is the same shape the Attack Helicopter, Scout Helicopter and Patrol Boat already use; they hold different options and are recorded separately, in the order the row prints them. Both Flares tiles are name-only because neither screen was opened.",
+  "_loadout_note": "Seven slots, and no Upgrade slot on either seat - every other jet has a Driver Upgrade. Recorded as seen: the loadout row was captured whole on both factions and shows four Driver tiles and three Gunner tiles with nothing cut off. Two Gunner slots share the name Remote Weapon, which is the same shape the Attack Helicopter, Scout Helicopter and Patrol Boat already use; they hold different options and are recorded separately, in the order the row prints them. Both Flares tiles are name-only and marked locked: Flares is fixed and not customisable, confirmed by the project owner from play on 2026-08-18, which matches every other aircraft in the database.",
   "_transcription_note": "Two in-game strings are reproduced exactly as printed rather than corrected: the Auto-Guided AA Missile description ends without a full stop, and the Optical Missile description spells it \"Precison\". Same rule the patch log follows for EA's own typos - keep the wording, never quietly fix it.",
   "_designation_note": "The Directional Jammer prints a designation line that simply repeats its name. It is recorded because it was printed: this is a Remote Weapon slot, and weapon slots are exactly where designations appear. The two Equipment tiles that were opened, Heavy Rockets and Cluster, print no designation, which matches the rule that equipment slots have none.",
   "related": [],
@@ -144,5 +144,6 @@
       "image": "multirole-jet-pax"
     }
   ],
-  "_variant_note": "Both factions field the same model here; only the livery differs, so the two captures show one aircraft in NATO and Pax Armata colors. The same is true of the Transport Helicopter and the Patrol Boat."
+  "_variant_note": "Both factions field the same model here; only the livery differs, so the two captures show one aircraft in NATO and Pax Armata colors. The same is true of the Transport Helicopter and the Patrol Boat.",
+  "_image_note": "Cropped from the Customize screen (Steam captures 20260818175013 NATO, 20260818175010 Pax Armata), not the Cosmetic Customization screen the other eleven vehicles use, because no capture of that screen exists for these two. Consequences, so nobody wonders later: the frame is 1500x422 rather than the 1500x780 the rest share, because the only band clear of the header, the callout and the loadout row is that shallow; and a faint callout leader line and the small square hardpoint reticle sit on the airframe, since both are drawn over the aircraft and no crop removes them. Both figures on a page use one geometry so they match each other. Nothing was painted out - cropping is framing, retouching would be inventing. Replace these if the Cosmetic Customization screen is ever captured."
 }

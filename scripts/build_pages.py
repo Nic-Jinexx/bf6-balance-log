@@ -926,13 +926,20 @@ def render_loadout(item):
         note = ("Every customisation slot and every option in it, transcribed from the in-game "
                 "screens. %d of %d options have their in-game description recorded; the rest "
                 "are named but not yet described." % (described, total))
+    elif len(locked) == len(slots):
+        note = ("Every slot on this vehicle is locked, so each row names the equipped item and "
+                "there is no option list to show.")
     else:
         note = ("Every customisation slot this vehicle shows, read off the in-game loadout row. "
                 "No slot screen has been opened yet, so each row gives the equipped item and "
                 "nothing is claimed about the alternatives.")
-    if locked:
-        note += (" %d slot%s could not be opened on the capturing account and show only the "
-                 "equipped item." % (len(locked), "" if len(locked) == 1 else "s"))
+    # Deliberately not "could not be opened on the capturing account". That framing
+    # explains the lock as an account limitation, which was never established, and it
+    # contradicts the per-slot line, which has always said the alternatives are not
+    # selectable. This states what is true either way.
+    if locked and not (not total and len(locked) == len(slots)):
+        note += (" %d slot%s locked, naming the equipped item and offering no alternatives."
+                 % (len(locked), " is" if len(locked) == 1 else "s are"))
     if unread and total:
         note += (" %d slot%s not been opened yet and likewise show only the equipped item."
                  % (len(unread), " has" if len(unread) == 1 else "s have"))
