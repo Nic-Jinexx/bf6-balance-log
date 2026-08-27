@@ -69,7 +69,20 @@ def listing_page(n):
     m = NEXT_DATA.search(fetch(url))
     if not m:
         raise RuntimeError("no __NEXT_DATA__ on %s -- EA changed their page" % url)
-    data = json.loads(m.group(1))["props"]["pageProps"]["newsDataFallback"]
+    props = json.loads(m.group(1))["props"]["pageProps"]
+    # EA renamed this key from newsDataFallback to initialNewsData some time
+    # between 2026-08-14 and 2026-08-27; the inner shape (items / featured /
+    # totalItems) did not change. Accept either rather than pinning to one name,
+    # and fail loudly if a future rename drops both -- a silent empty list here
+    # would read as "EA published nothing", which is the wrong conclusion.
+    for key in ("initialNewsData", "newsDataFallback"):
+        if isinstance(props.get(key), dict):
+            data = props[key]
+            break
+    else:
+        raise RuntimeError(
+            "no news payload on %s -- pageProps holds %s. EA renamed the key again."
+            % (url, ", ".join(sorted(props))))
     return data.get("items") or [], data.get("featured"), data.get("totalItems")
 
 
