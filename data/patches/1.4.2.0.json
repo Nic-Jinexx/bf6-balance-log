@@ -9,6 +9,8 @@
    ],
    "section": "summary",
    "items": [
+    "carrier-strike",
+    "fighter-sweep",
     "tsuru-reef",
     "wake-island"
    ]
@@ -21,9 +23,9 @@
    "section": "summary",
    "items": [
     "fighter-jet",
-    "multirole-jet",
     "interceptor-jet",
-    "interdictor"
+    "interdictor",
+    "multirole-jet"
    ]
   },
   {
@@ -33,7 +35,8 @@
    ],
    "section": "summary",
    "items": [
-    "assault"
+    "assault",
+    "carrier-strike"
    ]
   },
   {
@@ -1330,9 +1333,9 @@
    ],
    "section": "portal",
    "items": [
-    "patrol-boat",
+    "interceptor-jet",
     "multirole-jet",
-    "interceptor-jet"
+    "patrol-boat"
    ]
   },
   {

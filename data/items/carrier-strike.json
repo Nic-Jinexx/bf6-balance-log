@@ -1,0 +1,22 @@
+{
+  "_comment": "Created 2026-09-01 with no in-game capture, so the description is EA's own wording from the 1.4.2.0 update notes rather than the Custom Search screen, and is attributed as such. Art pending. EA and the roadmap both write the full name as \"Top Gun: Carrier Strike\"; the page leads with the short name players use, per the owner. \"carrier assault\" is deliberately not an alias: EA calls this mode a reimagining of Carrier Assault, and tagging the older mode's lines here would assert the two are the same thing. The one summary line naming both already tags through \"Carrier Strike\".",
+  "slug": "carrier-strike",
+  "name": "Carrier Strike",
+  "branch": "modes",
+  "order": 9,
+  "aliases": [
+    "carrier strike",
+    "top gun: carrier strike"
+  ],
+  "description": {
+    "text": "Land, naval, and aviation squads must work together to break through enemy lines, seize the opposing aircraft carrier, and bring it down while defending against threats across land, sea, and air.",
+    "attribution": "EA's 1.4.2.0 update notes"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [],
+  "related": [],
+  "retired_paths": [],
+  "art": "icon",
+  "_art_note": "Art is the little badge the game prints beside GAME MODE on the Custom Search screen, not a scene, so it renders at icon size rather than filling the art column. Not captured yet; the tile stays pending rather than borrowing another mode's glyph."
+}

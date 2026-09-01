@@ -1,0 +1,28 @@
+{
+  "_comment": "Created 2026-09-01 with no in-game capture, so the description is TBD rather than guessed. Art pending. EA is inconsistent about the full name: the roadmap art says \"Top Gun: Fighter Sweep\" and both the 1.4.2.0 and 1.4.2.5 changelogs say \"Gauntlet: Fighter Sweep\". data/releases.json records that disagreement rather than choosing between them, and this page does the same - it leads with the short name players use, per the owner, and both prefixes reach it through the aliases. The Playlist row is sourced, not inferred: EA files every line about it under its REDSEC heading and names it after Gauntlet in the changelog text itself.",
+  "slug": "fighter-sweep",
+  "name": "Fighter Sweep",
+  "branch": "modes",
+  "order": 10,
+  "aliases": [
+    "fighter sweep",
+    "gauntlet: fighter sweep",
+    "top gun: fighter sweep"
+  ],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Playlist",
+      "value": "REDSEC — Gauntlet"
+    }
+  ],
+  "related": [],
+  "retired_paths": [],
+  "art": "icon",
+  "_art_note": "Art is the little badge the game prints beside GAME MODE on the Custom Search screen, not a scene, so it renders at icon size rather than filling the art column. Not captured yet; the tile stays pending rather than borrowing another mode's glyph. Custom Search covers core multiplayer only, so this mode may never appear on that screen at all - a REDSEC capture is the likelier source."
+}

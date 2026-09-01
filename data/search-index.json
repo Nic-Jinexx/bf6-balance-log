@@ -235,6 +235,12 @@
    "alt": "canted stubby"
   },
   {
+   "name": "Carrier Strike",
+   "url": "/modes/carrier-strike/",
+   "cat": "MODES",
+   "alt": "carrier strike top gun: carrier strike"
+  },
+  {
    "name": "CCO 2.00x",
    "url": "/attachments/optics/cco-200x/",
    "cat": "OPTICS",
@@ -425,6 +431,12 @@
    "url": "/vehicles/fighter-jet/",
    "cat": "VEHICLES",
    "alt": "f-97 f97 kestrel f-97 kestrel su-57"
+  },
+  {
+   "name": "Fighter Sweep",
+   "url": "/modes/fighter-sweep/",
+   "cat": "MODES",
+   "alt": "fighter sweep gauntlet: fighter sweep top gun: fighter sweep"
   },
   {
    "name": "Flash Comp",

@@ -33,6 +33,7 @@
    ],
    "section": "vehicles",
    "items": [
+    "carrier-strike",
     "interceptor-jet",
     "multirole-jet"
    ]
@@ -143,7 +144,9 @@
     "MAP & MODES"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "fighter-sweep"
+   ],
    "redsec": true
   }
  ]

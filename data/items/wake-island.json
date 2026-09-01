@@ -14,12 +14,8 @@
   },
   "stats": [],
   "ratings": [],
-  "availability": [
-    {
-      "label": "Status",
-      "value": "Scheduled — Top Gun, Aug 18, 2026. Not yet released."
-    }
-  ],
+  "availability": [],
   "related": [],
-  "retired_paths": []
+  "retired_paths": [],
+  "_availability_note": "The Status row said \"Scheduled - Top Gun, Aug 18, 2026. Not yet released.\" It was written before the map shipped and was never cleared, so from Aug 18 to Sep 1, 2026 the live page asserted both \"Added in 1.4.2.0\" and \"not yet released\". Removed 2026-09-01. Availability now comes only from data/releases.json, which is authoritative for it -- do not hand-write a scheduling claim into an item file, because nothing expires it."
 }
