@@ -4,6 +4,7 @@
 Each category section on the page owns a region:
 
     <!-- PATCHES:ui:START -->   ... generated ...   <!-- PATCHES:ui:END -->
+    <!-- PATCHES:meta:START --> ... generated ...   <!-- PATCHES:meta:END -->
 
 Everything outside those markers stays hand-authored. Inside them, every line
 is EA's exact sentence: this script never rewrites text, it only groups,
@@ -413,6 +414,66 @@ def render_header(by_version_all):
            esc(oldest["posted"]), esc(newest["posted"]), format(lines, ",")))
 
 
+# The front page's social and search metadata. Only the update count moves, but
+# it moved wrong: the page shipped "Search all 15 updates at once" to Google
+# while the header beside it correctly read 17, because the <head> is
+# hand-authored and nothing re-counted it. Same failure render_header() was
+# written for - any number that has to be retyped when a patch ships will
+# eventually be wrong - so the whole block is generated and the count comes from
+# data/patch-index.json like every other count on the page.
+#
+# The prose lives here rather than in the data because it is page copy, not
+# patch data. Edit these three strings, not index.html.
+#
+# Plural only: the log holds 17 updates and only grows, so a singular form is
+# unreachable and writing one would be noise.
+META_DESCRIPTION = ("Every line of every Battlefield 6 patch note, quoted from EA and"
+                    " sorted by category: weapons, vehicles, gadgets, maps and REDSEC."
+                    " Search all %d updates at once.")
+OG_DESCRIPTION = ("Every line of every BF6 patch note, quoted from EA and sorted by"
+                  " category. Search %d updates at once instead of digging through"
+                  " EA's site, or open any weapon to see its full history.")
+TWITTER_DESCRIPTION = ("Every line of every BF6 patch note, quoted from EA and sorted"
+                       " by category. Search %d updates at once, or read any one in full.")
+
+# Google truncates the snippet around here. A description that grows past it is
+# a silent problem - the tag still renders, it just gets cut mid-sentence in the
+# results - so the build fails instead of shipping one.
+DESCRIPTION_LIMIT = 160
+
+
+def render_meta():
+    """The <head> block whose copy carries the update count."""
+    patches = patch_index()
+    if not patches:
+        return ""
+    n = len(patches)
+    description = META_DESCRIPTION % n
+    if len(description) > DESCRIPTION_LIMIT:
+        print("render_patches: meta description is %d chars, over the %d-char"
+              " limit. Shorten META_DESCRIPTION."
+              % (len(description), DESCRIPTION_LIMIT))
+        sys.exit(1)
+    return "\n".join([
+        '<meta name="description" content="%s">' % esc(description),
+        '<link rel="canonical" href="https://bf6balancelog.com/">',
+        '<meta property="og:type" content="website">',
+        '<meta property="og:title" content="Battlefield 6 Patch Notes: Every Update, Searchable">',
+        '<meta property="og:description" content="%s">' % esc(OG_DESCRIPTION % n),
+        '<meta property="og:url" content="https://bf6balancelog.com/">',
+        '<meta property="og:site_name" content="BF6 Balance Log">',
+        '<meta property="og:image" content="https://bf6balancelog.com/og-image.png">',
+        '<meta property="og:image:width" content="1200">',
+        '<meta property="og:image:height" content="630">',
+        '<meta property="og:image:alt" content="The BF6 Balance Log patch index,'
+        ' listing every Battlefield 6 game update with its version, dates, and headline.">',
+        '<meta name="twitter:card" content="summary_large_image">',
+        '<meta name="twitter:title" content="Battlefield 6 Patch Notes: Every Update, Searchable">',
+        '<meta name="twitter:description" content="%s">' % esc(TWITTER_DESCRIPTION % n),
+        '<meta name="twitter:image" content="https://bf6balancelog.com/og-image.png">',
+    ])
+
+
 def render_index(by_version_all):
     """The Patch Index table body: a row per update, each followed by an empty
     hidden row the browser fills from data/patch-full.json on first expand.
@@ -494,6 +555,7 @@ def main():
         updated = inject(updated, cat, body)
 
     by_version_all = load_by_version()
+    updated = inject(updated, "meta", render_meta())
     updated = inject(updated, "header", render_header(by_version_all))
     updated = inject(updated, "index", render_index(by_version_all))
     full_json = json.dumps(full_patch_payload(by_version_all),
