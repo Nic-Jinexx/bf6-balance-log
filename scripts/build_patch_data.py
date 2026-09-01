@@ -82,7 +82,9 @@ ITEM_HEADINGS = {
     "AK-205": ("weapons", "ak-205"),
 }
 
-SUMMARY_RE = re.compile(r"^MAJOR UPDATES FOR ", re.I)
+# EA renamed this heading in 1.4.2.5: "Major Updates for X" became "Update
+# Highlights for X". Both spellings mean the same block, so match either.
+SUMMARY_RE = re.compile(r"^(MAJOR UPDATES|UPDATE HIGHLIGHTS) FOR ", re.I)
 NEWCONTENT_RE = re.compile(r"^(NEW CONTENT|NEW MAP)\b", re.I)
 
 
