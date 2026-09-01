@@ -106,8 +106,19 @@ def all_articles():
             raise RuntimeError("paged past 40 pages without reaching totalItems")
         n += 1
         time.sleep(0.3)
-    if total and len(seen) != total:
-        raise RuntimeError("collected %d articles, EA says %d" % (len(seen), total))
+    # EA's payload started reporting totalItems as 0 on 2026-09-01, which made
+    # this assertion inert: `if total and ...` skips it entirely on a falsy
+    # total, so the sweep quietly fell back to "page until EA returns nothing"
+    # with nothing left checking the result. Say so out loud rather than let a
+    # completeness guarantee lapse unnoticed -- that is the silent-miss mode
+    # this script exists to avoid. Not fatal: paging still terminates correctly.
+    if total:
+        if len(seen) != total:
+            raise RuntimeError("collected %d articles, EA says %d" % (len(seen), total))
+    else:
+        print("warning: EA's payload no longer reports totalItems (got %r), so the"
+              " article count cannot be cross-checked. Paged to an empty page and"
+              " collected %d article(s)." % (total, len(seen)))
     return [seen[s] for s in order], total
 
 
@@ -142,7 +153,7 @@ def derive_label(title):
 
 
 def collect():
-    articles, total = all_articles()
+    articles, _total = all_articles()
     updates = []
     for art in articles:
         if not IS_COMMUNITY_UPDATE.search(art.get("title") or ""):
@@ -156,7 +167,9 @@ def collect():
         })
     # oldest first in the file so a new one appends; the renderer reverses it
     updates.sort(key=lambda u: (u["date"], u["slug"]))
-    return updates, total
+    # the count EA's own totalItems used to confirm; report what was actually
+    # read so the file records a real number even while totalItems reads 0
+    return updates, len(articles)
 
 
 def load_existing():
@@ -166,13 +179,37 @@ def load_existing():
         return json.load(fh)
 
 
+KEEP_FIELDS = ("keep", "keep_note")
+
+
+def kept(entry):
+    """True for an entry marked to survive EA dropping it from the listing."""
+    return bool(entry.get("keep"))
+
+
 def write(updates, total):
     existing = {u["slug"]: u for u in load_existing().get("updates") or []}
     for u in updates:
         old = existing.get(u["slug"])
+        if not old:
+            continue
         # keep a hand-corrected label, but only while EA's title is unchanged
-        if old and old.get("title") == u["title"] and old.get("label"):
+        if old.get("title") == u["title"] and old.get("label"):
             u["label"] = old["label"]
+        # a keep decision is ours, not EA's, so it survives every re-fetch
+        for field in KEEP_FIELDS:
+            if old.get(field) is not None:
+                u[field] = old[field]
+    # EA delists articles whose pages are still live. Dropping one here would
+    # remove a working link from the sidebar on EA's say-so alone, and an
+    # absence from a listing is an observation, not proof the article is gone
+    # -- the same reasoning releases.json applies to `removed`. An entry marked
+    # `keep` is re-inserted; everything else still tracks EA exactly.
+    live = {u["slug"] for u in updates}
+    for slug, old in existing.items():
+        if slug not in live and kept(old):
+            updates.append(old)
+    updates.sort(key=lambda u: (u["date"], u["slug"]))
     doc = {
         "_comment": "EA's Battlefield 6 Community Updates, read from EA's own news"
                     " listing payload. Regenerate with scripts/fetch_community_updates.py."
@@ -202,21 +239,31 @@ def check(updates):
     for slug in sorted(set(live) - set(have)):
         problems.append("NEW on ea.com, not in the data file: %s  %s"
                         % (live[slug]["date"], live[slug]["title"]))
+    delisted = []
     for slug in sorted(set(have) - set(live)):
-        problems.append("in the data file, no longer listed by EA: %s  %s"
-                        % (have[slug].get("date"), have[slug].get("title")))
+        line = "%s  %s" % (have[slug].get("date"), have[slug].get("title"))
+        if kept(have[slug]):
+            delisted.append(line)
+        else:
+            problems.append("in the data file, no longer listed by EA: " + line)
     for slug in sorted(set(have) & set(live)):
         for field in ("date", "title"):
             if have[slug].get(field) != live[slug][field]:
                 problems.append("%s: %s drifted\n    ours: %r\n    EA:   %r"
                                 % (slug, field, have[slug].get(field), live[slug][field]))
+    if delisted:
+        print("kept though EA no longer lists them (%d) -- their pages are still"
+              " live; see keep_note in the data file:" % len(delisted))
+        for line in delisted:
+            print("  " + line)
     if problems:
         print("Community Updates out of date -- %d problem(s):" % len(problems))
         for p in problems:
             print("  " + p)
         print("\nRun: python scripts/fetch_community_updates.py")
         return 1
-    print("Community Updates: %d, all matching ea.com." % len(live))
+    print("Community Updates: %d listed by EA, %d kept, all matching ea.com."
+          % (len(live), len(delisted)))
     return 0
 
 

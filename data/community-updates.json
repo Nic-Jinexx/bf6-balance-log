@@ -3,7 +3,7 @@
   "_source": "https://www.ea.com/games/battlefield/battlefield-6/news",
   "_date": "EA's publishingDate, date part only -- it is what EA's own listing prints. The timezone offsets in the payload are inconsistent (+08:00, +01:00, -07:00, Z) and shifting to UTC would move some articles off the date EA shows.",
   "_title": "EA's exact wording. `label` is DERIVED from it for the sidebar and may be hand-corrected; a re-fetch keeps a hand-edited label while the title is unchanged.",
-  "_scanned": "120 BF6 news articles scanned, 23 are Community Updates",
+  "_scanned": "125 BF6 news articles scanned, 23 are Community Updates",
   "updates": [
     {
       "date": "2025-08-04",
@@ -143,7 +143,9 @@
       "title": "Battlefield 6 - Community Update - What’s Coming in the Final Phase of Season 3",
       "label": "What’s Coming in the Final Phase of Season 3",
       "slug": "battlefield-6-community-update-whats-coming-in-the-final-phase-of-season-3",
-      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-whats-coming-in-the-final-phase-of-season-3"
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-whats-coming-in-the-final-phase-of-season-3",
+      "keep": true,
+      "keep_note": "EA dropped this from its news listing between Aug 14 and Sep 1, 2026, but the article itself is still live (HTTP 200 on Sep 1, 2026). Kept so the sidebar does not lose a working link."
     },
     {
       "date": "2026-07-15",
