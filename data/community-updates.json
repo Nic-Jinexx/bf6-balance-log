@@ -3,7 +3,7 @@
   "_source": "https://www.ea.com/games/battlefield/battlefield-6/news",
   "_date": "EA's publishingDate, date part only -- it is what EA's own listing prints. The timezone offsets in the payload are inconsistent (+08:00, +01:00, -07:00, Z) and shifting to UTC would move some articles off the date EA shows.",
   "_title": "EA's exact wording. `label` is DERIVED from it for the sidebar and may be hand-corrected; a re-fetch keeps a hand-edited label while the title is unchanged.",
-  "_scanned": "125 BF6 news articles scanned, 23 are Community Updates",
+  "_scanned": "129 BF6 news articles scanned, 24 are Community Updates",
   "updates": [
     {
       "date": "2025-08-04",
@@ -167,6 +167,13 @@
       "label": "Top Gun Incoming",
       "slug": "battlefield-6-community-update-top-gun-incoming",
       "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-top-gun-incoming"
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Battlefield 6 - Community Update - Tidal Strike",
+      "label": "Tidal Strike",
+      "slug": "battlefield-6-community-update-tidal-strike",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-tidal-strike"
     }
   ]
 }
