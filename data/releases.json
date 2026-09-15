@@ -284,6 +284,19 @@
         {"name": "F-74A Seacat", "slug": "interceptor-jet", "kind": "Vehicle", "_note": "Two-seat fighter jet, pilot plus wingman. The roadmap and EA's changelog both name the model; in game the class is the Interceptor Jet, which is what the page is called, with the model in its blurb. Both factions field this same model."},
         {"name": "CJTF Helix", "kind": "Squad Unit", "_note": "Not on the roadmap art — named only in the 1.4.2.0 changelog, as “the CJTF Helix squad unit”. No page."}
       ]
+    },
+    {
+      "version": "1.4.3.0",
+      "name": "Tidal Strike",
+      "season": 4,
+      "live": "Sep 15, 2026",
+      "_note": "Season 4 phase 3. Names are the roadmap art's, per _source; EA's changelog wording is recorded in each '_note'. Moved here from 'scheduled' on Sep 15, 2026, the day the update went live. EA's page gives 08:00 UTC for the download and 12:00 UTC for Tidal Strike content; recorded 19:30 UTC. The go-live is EA's published schedule, not an in-game observation.",
+      "added": [
+        {"name": "Deep Six: Collection Event", "kind": "Event", "_note": "EA's changelog says “Deep Six Collection Event”, running Sep 15 through Oct 12, 2026. Time-limited. No page."},
+        {"name": "Phantom Program", "kind": "Feature", "_note": "REDSEC. EA calls it “a new version of the Phantom Program” and “a limited-time REDSEC operation”, so a return in a new form, not a debut. No page."},
+        {"name": "Proximity Chat", "kind": "Feature", "_note": "REDSEC, Battlefield Labs. EA says it “arrives in Battlefield Labs for Live” in Battle Royale and “may be switched on or off” during the testing period. No page."},
+        {"name": "Diver's Knife", "kind": "Melee", "_note": "EA's changelog heading is “New Melee Weapon: Diver’s Knife”; the body calls it “the Royal Navy Dive Knife”. The final reward of the Deep Six Collection Event. No page yet: no melee item exists."}
+      ]
     }
   ],
   "_removed_comment": "Availability observations: content that was live and is not any more, and content that came back. Kept separate from 'releases' because none of this has a version: EA has published no changelog line for any of it, so the only source is an in-game screen read on a given date. Each block records what was seen, when, and where; build_pages.py turns it into an Availability row using the literal 'value' string, so nothing is assembled or inferred at render time. The row is labelled 'Removed' unless the block sets its own 'label' — needed because content returns, and 'Removed' would then state the opposite of what was seen. Blocks are read in file order, so a later observation of the same slug supersedes an earlier one. An entry here does NOT delete the item's page. The patch history stays and the row is what stops the page implying the content is still playable. See docs/adr/0007.",
@@ -318,18 +331,6 @@
       ]
     }
   ],
-  "_scheduled_comment": "Announced on the Season 4 roadmap but not yet released as of 2026-08-18, when Top Gun shipped and moved to 'releases'. Deliberately NOT in 'releases': nothing here has a version, and none of it should fill an Added in value until it actually ships.",
-  "scheduled": [
-    {
-      "name": "Tidal Strike",
-      "season": 4,
-      "planned": "Sep 15, 2026",
-      "added": [
-        {"name": "Deep Six: Collection Event", "kind": "Event", "_note": "new challenges"},
-        {"name": "Phantom Program", "kind": "Feature", "_note": "REDSEC, discoverable secrets"},
-        {"name": "Proximity Chat", "kind": "Feature", "_note": "REDSEC, BF Labs"},
-        {"name": "Diver's Knife", "kind": "Melee"}
-      ]
-    }
-  ]
+  "_scheduled_comment": "Announced on a roadmap but not yet released. Empty since 2026-09-15, when Tidal Strike, the last announced Season 4 phase, shipped and moved to 'releases'. Deliberately NOT in 'releases': nothing here has a version, and none of it should fill an Added in value until it actually ships.",
+  "scheduled": []
 }

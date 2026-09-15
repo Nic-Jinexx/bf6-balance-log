@@ -59,6 +59,9 @@ SECTION_MAP = {
     "UI&HUD": "ui",
     "AUDIO": "audio",
     "PORTAL": "portal",
+    # Own heading from 1.4.3.0. Custom Lobbies ship through Portal, and every
+    # earlier Custom Lobby line sits under PORTAL.
+    "CUSTOM LOBBIES": "portal",
     "AI": "ai",
     "BOTS": "ai",
     # No category of their own, by decision 2026-08-03 - these render in the
