@@ -348,10 +348,10 @@ def render_category(cat, by_version, meta, summaries, emitted=None, newest=None)
                    % (esc(version), esc(posted), cat, tag))
         out.append('<div class="body">')
         out.append(render_locales(url))
-        note = summaries.get(version)
-        if note:
+        if version in summaries:
+            heading, note = summaries[version]
             out.append('<p class="dev">Dev intent, quoted from EA\'s '
-                       '&ldquo;Major Updates for %s&rdquo;: %s</p>' % (version, esc(note)))
+                       '&ldquo;%s&rdquo;: %s</p>' % (esc(heading), esc(note)))
         for label in order:
             if label:
                 out.append('<p class="grp"><b>%s</b></p>' % esc(label))
@@ -510,12 +510,19 @@ def render_index(by_version_all):
 
 
 def collect_summaries(by_cat):
-    """EA's own 'Major Updates for X' lines, kept verbatim, keyed by version."""
+    """EA's own 'Major Updates for X' lines, kept verbatim, keyed by version.
+
+    Each value is (heading, text). The heading is EA's own, because EA has
+    renamed it twice ("Update Highlights for X", "Key Updates for X") and the
+    page quotes it; a fixed "Major Updates" would misquote those patches.
+    """
     out = {}
     for version, entries in by_cat.get("summary", {}).items():
         texts = [e["text"] for e in entries]
         if texts:
-            out[version] = " ".join(texts)
+            trail = entries[0].get("heading") or []
+            heading = trail[-1] if trail else "Major Updates for %s" % version
+            out[version] = (heading, " ".join(texts))
     return out
 
 

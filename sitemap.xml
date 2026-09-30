@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://bf6balancelog.com/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://bf6balancelog.com/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/accessories/120mw-blue/</loc></url>
   <url><loc>https://bf6balancelog.com/weapons/shotguns/18-5ks-k/</loc><lastmod>2026-04-10</lastmod></url>
-  <url><loc>https://bf6balancelog.com/attachments/optics/1p86-lpvo/</loc><lastmod>2026-08-03</lastmod></url>
+  <url><loc>https://bf6balancelog.com/attachments/optics/1p86-lpvo/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/optics/1p87-150x/</loc></url>
-  <url><loc>https://bf6balancelog.com/attachments/optics/2pro-125x/</loc></url>
-  <url><loc>https://bf6balancelog.com/attachments/optics/3vzr-175x/</loc></url>
+  <url><loc>https://bf6balancelog.com/attachments/optics/2pro-125x/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://bf6balancelog.com/attachments/optics/3vzr-175x/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/accessories/50mw-blue/</loc></url>
   <url><loc>https://bf6balancelog.com/attachments/accessories/50mw-green/</loc></url>
   <url><loc>https://bf6balancelog.com/attachments/accessories/50mw-violet/</loc><lastmod>2026-08-14</lastmod></url>
@@ -38,8 +38,8 @@
   <url><loc>https://bf6balancelog.com/gadgets/deployables/c-4/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/cairo-bazaar/</loc><lastmod>2026-09-14</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/underbarrel/canted-stubby/</loc></url>
-  <url><loc>https://bf6balancelog.com/modes/carrier-strike/</loc><lastmod>2026-09-14</lastmod></url>
-  <url><loc>https://bf6balancelog.com/attachments/optics/cco-200x/</loc></url>
+  <url><loc>https://bf6balancelog.com/modes/carrier-strike/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://bf6balancelog.com/attachments/optics/cco-200x/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/underbarrel/classic-grip-pod/</loc></url>
   <url><loc>https://bf6balancelog.com/attachments/underbarrel/classic-vertical/</loc></url>
   <url><loc>https://bf6balancelog.com/weapons/melee/combat-knife/</loc><lastmod>2026-01-16</lastmod></url>
@@ -165,7 +165,7 @@
   <url><loc>https://bf6balancelog.com/vehicles/mobile-anti-air/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/deployables/mp-aps/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/throwables/mtn-55/</loc><lastmod>2026-05-22</lastmod></url>
-  <url><loc>https://bf6balancelog.com/vehicles/multirole-jet/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://bf6balancelog.com/vehicles/multirole-jet/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/new-sobek-city/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/assault-rifles/nvo-228e/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://bf6balancelog.com/modes/obliteration/</loc><lastmod>2026-09-14</lastmod></url>
@@ -187,13 +187,13 @@
   <url><loc>https://bf6balancelog.com/attachments/underbarrel/qd-grip-pod/</loc></url>
   <url><loc>https://bf6balancelog.com/gadgets/deployables/qlink-6/</loc><lastmod>2026-03-13</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/optics/r-mr-100x/</loc></url>
-  <url><loc>https://bf6balancelog.com/attachments/optics/r4t-200x/</loc></url>
+  <url><loc>https://bf6balancelog.com/attachments/optics/r4t-200x/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/ergonomics/rail-cover/</loc></url>
   <url><loc>https://bf6balancelog.com/maps/railway-to-golmud/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://bf6balancelog.com/classes/recon/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/underbarrel/ribbed-stubby/</loc></url>
   <url><loc>https://bf6balancelog.com/attachments/underbarrel/ribbed-vertical/</loc></url>
-  <url><loc>https://bf6balancelog.com/attachments/optics/ro-m-175x/</loc><lastmod>2026-02-13</lastmod></url>
+  <url><loc>https://bf6balancelog.com/attachments/optics/ro-m-175x/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/optics/ro-s-125x/</loc></url>
   <url><loc>https://bf6balancelog.com/attachments/optics/rox-150x/</loc></url>
   <url><loc>https://bf6balancelog.com/gadgets/launchers/rpg-7v2/</loc><lastmod>2026-07-16</lastmod></url>
@@ -202,7 +202,7 @@
   <url><loc>https://bf6balancelog.com/modes/rush/</loc><lastmod>2026-09-14</lastmod></url>
   <url><loc>https://bf6balancelog.com/maps/saints-quarter/</loc><lastmod>2026-08-14</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/throwables/scg-24/</loc><lastmod>2025-10-24</lastmod></url>
-  <url><loc>https://bf6balancelog.com/attachments/optics/scopes/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://bf6balancelog.com/attachments/optics/scopes/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/vehicles/scout-helicopter/</loc><lastmod>2026-09-14</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/smgs/scw-10/</loc><lastmod>2026-07-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/optics/sdo-350x/</loc></url>
@@ -229,7 +229,7 @@
   <url><loc>https://bf6balancelog.com/attachments/muzzles/standard-suppressor/</loc></url>
   <url><loc>https://bf6balancelog.com/gadgets/throwables/steel-wing/</loc><lastmod>2025-12-05</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/underbarrel/stippled-stubby/</loc></url>
-  <url><loc>https://bf6balancelog.com/attachments/optics/su-123-150x/</loc></url>
+  <url><loc>https://bf6balancelog.com/attachments/optics/su-123-150x/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/optics/su-230-lpvo/</loc><lastmod>2026-04-10</lastmod></url>
   <url><loc>https://bf6balancelog.com/classes/support/</loc><lastmod>2026-09-14</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/sniper-rifles/sv-98/</loc><lastmod>2026-06-26</lastmod></url>
@@ -244,7 +244,7 @@
   <url><loc>https://bf6balancelog.com/weapons/assault-rifles/tr-7/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/vehicles/transport-helicopter/</loc><lastmod>2026-09-14</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/tools/trcrv2/</loc><lastmod>2026-08-14</lastmod></url>
-  <url><loc>https://bf6balancelog.com/maps/tsuru-reef/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://bf6balancelog.com/maps/tsuru-reef/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/attachments/ammunition/tungsten-core/</loc></url>
   <url><loc>https://bf6balancelog.com/weapons/smgs/umg-40/</loc><lastmod>2026-07-16</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/smgs/usg-90/</loc><lastmod>2026-06-26</lastmod></url>
@@ -252,7 +252,7 @@
   <url><loc>https://bf6balancelog.com/weapons/assault-rifles/vcr-2/</loc><lastmod>2026-06-26</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/dmrs/vssm/</loc><lastmod>2026-09-14</lastmod></url>
   <url><loc>https://bf6balancelog.com/weapons/sidearms/vz-61/</loc><lastmod>2026-09-14</lastmod></url>
-  <url><loc>https://bf6balancelog.com/maps/wake-island/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://bf6balancelog.com/maps/wake-island/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/launchers/x95-bre/</loc><lastmod>2025-11-17</lastmod></url>
   <url><loc>https://bf6balancelog.com/gadgets/tools/xfgm-6d/</loc><lastmod>2026-06-05</lastmod></url>
 </urlset>

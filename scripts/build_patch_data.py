@@ -86,8 +86,9 @@ ITEM_HEADINGS = {
 }
 
 # EA renamed this heading in 1.4.2.5: "Major Updates for X" became "Update
-# Highlights for X". Both spellings mean the same block, so match either.
-SUMMARY_RE = re.compile(r"^(MAJOR UPDATES|UPDATE HIGHLIGHTS) FOR ", re.I)
+# Highlights for X", and again in 1.4.3.5, to "Key Updates for X". Every
+# spelling means the same block, so match any of them.
+SUMMARY_RE = re.compile(r"^(MAJOR UPDATES|UPDATE HIGHLIGHTS|KEY UPDATES) FOR ", re.I)
 NEWCONTENT_RE = re.compile(r"^(NEW CONTENT|NEW MAP)\b", re.I)
 
 

@@ -2,6 +2,13 @@
  "_comment": "The Patch Index table, and the source of every patch block's date and EA link. Verified field by field against EA's own page - never write a date here from memory. scripts/render_patches.py generates the table and the expandable full-patch view from this file.",
  "patches": [
   {
+   "version": "1.4.3.5",
+   "posted": "Sep 28, 2026",
+   "live": "Sep 30, 2026",
+   "headline": "Quality-of-Life patch (Top Gun skin class restrictions removed)",
+   "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-3-5"
+  },
+  {
    "version": "1.4.3.0",
    "posted": "Sep 14, 2026",
    "live": "Sep 15, 2026",

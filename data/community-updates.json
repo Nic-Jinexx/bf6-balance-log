@@ -3,7 +3,7 @@
   "_source": "https://www.ea.com/games/battlefield/battlefield-6/news",
   "_date": "EA's publishingDate, date part only -- it is what EA's own listing prints. The timezone offsets in the payload are inconsistent (+08:00, +01:00, -07:00, Z) and shifting to UTC would move some articles off the date EA shows.",
   "_title": "EA's exact wording. `label` is DERIVED from it for the sidebar and may be hand-corrected; a re-fetch keeps a hand-edited label while the title is unchanged.",
-  "_scanned": "129 BF6 news articles scanned, 24 are Community Updates",
+  "_scanned": "135 BF6 news articles scanned, 25 are Community Updates",
   "updates": [
     {
       "date": "2025-08-04",
@@ -152,7 +152,9 @@
       "title": "Battlefield 6 - Community Update - Naval Warfare and Our Journey Since Launch",
       "label": "Naval Warfare and Our Journey Since Launch",
       "slug": "community-update-naval-warfare-and-our-journey-since-launch",
-      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/community-update-naval-warfare-and-our-journey-since-launch"
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/community-update-naval-warfare-and-our-journey-since-launch",
+      "keep": true,
+      "keep_note": "EA dropped this from its news listing between Sep 5 and Sep 30, 2026, but the article itself is still live (HTTP 200 on Sep 30, 2026). Kept so the sidebar does not lose a working link."
     },
     {
       "date": "2026-07-30",
@@ -174,6 +176,13 @@
       "label": "Tidal Strike",
       "slug": "battlefield-6-community-update-tidal-strike",
       "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-tidal-strike"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "Battlefield 6 - Community Update - Siege of Vegas Incoming",
+      "label": "Siege of Vegas Incoming",
+      "slug": "battlefield-6-community-update-siege-of-vegas-incoming",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-siege-of-vegas-incoming"
     }
   ]
 }
