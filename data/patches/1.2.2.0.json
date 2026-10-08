@@ -2588,7 +2588,9 @@
     "PORTAL"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Corrected ModBuilder Transform and movement logic.",
@@ -2671,7 +2673,9 @@
     "PORTAL"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Corrected Web App tooltip and subtitle inconsistencies.",
@@ -2698,7 +2702,9 @@
     "PORTAL"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Improved experience save stability.",
@@ -2761,7 +2767,9 @@
     "PORTAL"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Resolved a UI overlap issue where the compass could overlap the menu in HoH Parkour Extraction.",
@@ -3199,7 +3207,9 @@
     "PLAYER"
    ],
    "section": "player",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -3367,7 +3377,9 @@
     "MAP"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -3487,7 +3499,9 @@
     "UI&HUD"
    ],
    "section": "ui",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -3587,7 +3601,9 @@
     "AUDIO"
    ],
    "section": "audio",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {

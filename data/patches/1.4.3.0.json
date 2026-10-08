@@ -576,7 +576,8 @@
    ],
    "section": "misc",
    "items": [
-    "carrier-strike"
+    "carrier-strike",
+    "gauntlet"
    ]
   },
   {
@@ -2226,7 +2227,9 @@
     "GAUNTLET"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {

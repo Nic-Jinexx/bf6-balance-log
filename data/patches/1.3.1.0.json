@@ -3367,7 +3367,9 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -3923,7 +3925,9 @@
     "MAP:"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -4043,7 +4047,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {

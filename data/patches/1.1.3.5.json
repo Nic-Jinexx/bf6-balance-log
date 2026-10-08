@@ -328,7 +328,9 @@
     "MAP & MODES:"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -361,7 +363,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   }
  ]

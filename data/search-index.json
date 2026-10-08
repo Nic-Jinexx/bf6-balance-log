@@ -505,6 +505,12 @@
    "alt": "full angled"
   },
   {
+   "name": "Gauntlet",
+   "url": "/modes/gauntlet/",
+   "cat": "MODES",
+   "alt": "gauntlet"
+  },
+  {
    "name": "GGH-22",
    "url": "/weapons/sidearms/ggh-22/",
    "cat": "SIDEARMS",

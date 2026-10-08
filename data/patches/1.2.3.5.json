@@ -104,7 +104,8 @@
    ],
    "section": "ui",
    "items": [
-    "armored-transport"
+    "armored-transport",
+    "gauntlet"
    ],
    "redsec": true
   },
@@ -125,7 +126,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   }
  ]

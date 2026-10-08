@@ -1,0 +1,26 @@
+{
+  "_comment": "Created 2026-10-07 with no in-game capture, so the description is TBD rather than guessed. Art pending. Built ahead of Season 5 because EA's Sep 30, 2026 Community Update (\"Siege of Vegas Incoming\") says \"With Season 5, we're prioritizing Rapid Royale Solos and will be removing Gauntlet from the active playlist lineup\" - a removal is recorded in data/releases.json, and a 'removed' slug with no item file is a hard failure. That sentence is an announcement, not an observation: no Removed row until the playlist is actually seen without it. The Playlist row is sourced: data/releases.json lists Gauntlet under REDSEC in 1.1.1.0, and EA files its lines under its REDSEC heading. The bare alias deliberately catches EA's variant names too (\"Gauntlet: Fighter Sweep\", \"Gauntlet: Rodeo\", \"Gauntlet Nightfall\", \"Ice Lock Gauntlet\"): EA names each one as a Gauntlet mode, so those lines belong here as well as on any variant's own page.",
+  "slug": "gauntlet",
+  "name": "Gauntlet",
+  "branch": "modes",
+  "order": 11,
+  "aliases": [
+    "gauntlet"
+  ],
+  "description": {
+    "text": "TBD",
+    "attribution": "In-game description"
+  },
+  "stats": [],
+  "ratings": [],
+  "availability": [
+    {
+      "label": "Playlist",
+      "value": "REDSEC"
+    }
+  ],
+  "related": [],
+  "retired_paths": [],
+  "art": "icon",
+  "_art_note": "Art is the little badge the game prints beside GAME MODE, not a scene, so it renders at icon size rather than filling the art column. Not captured yet; the tile stays pending rather than borrowing another mode's glyph. Custom Search covers core multiplayer only, so a REDSEC capture is the likelier source - and after Season 5 removes the mode from the playlist there may be no screen left to capture it from."
+}

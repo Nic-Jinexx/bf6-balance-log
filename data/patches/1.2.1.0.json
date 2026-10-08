@@ -148,7 +148,8 @@
    "section": "summary",
    "items": [
     "breakthrough",
-    "conquest"
+    "conquest",
+    "gauntlet"
    ]
   },
   {
@@ -1541,7 +1542,9 @@
     "PROGRESSION:"
    ],
    "section": "progression",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Fixed incorrect progress display for Week 2 challenges.",
@@ -1689,7 +1692,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Fixed an issue where the crosshair could briefly display incorrect spacing when switching weapons.",
@@ -2436,7 +2441,8 @@
    ],
    "section": "vehicles",
    "items": [
-    "armored-transport"
+    "armored-transport",
+    "gauntlet"
    ],
    "redsec": true
   },
@@ -2546,7 +2552,9 @@
     "UI & HUD:"
    ],
    "section": "ui",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2646,7 +2654,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2657,7 +2667,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2668,7 +2680,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2679,7 +2693,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {

@@ -21,7 +21,8 @@
    "items": [
     "conquest",
     "domination",
-    "empire-state"
+    "empire-state",
+    "gauntlet"
    ]
   },
   {
@@ -2229,7 +2230,9 @@
     "GAUNTLET:"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2335,7 +2338,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2411,7 +2416,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2422,7 +2429,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2433,7 +2442,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2444,7 +2455,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {

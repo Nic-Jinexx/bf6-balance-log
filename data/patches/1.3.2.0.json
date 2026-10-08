@@ -31,7 +31,9 @@
     "Major Updates for 1.3.2.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Weapons and Attachments Receive a Broad Polish Pass : Burst Fire attachments, Extended Barrels, thermal optics, attachment poses, reload behaviour, Tac-Light unlocks, and weapon previews have all seen further consistency and usability improvements.",
@@ -1817,7 +1819,9 @@
     "GADGETS"
    ],
    "section": "gadgets",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -1923,7 +1927,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -1933,7 +1939,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -1943,7 +1951,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -1953,7 +1963,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -1963,7 +1975,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -1973,7 +1987,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2136,7 +2152,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {

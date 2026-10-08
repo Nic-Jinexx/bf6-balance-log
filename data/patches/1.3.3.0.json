@@ -3247,7 +3247,9 @@
     "MAP"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -3287,7 +3289,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {

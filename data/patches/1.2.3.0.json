@@ -18,7 +18,9 @@
     "Major Updates for 1.2.3.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Battle Royale and Gauntlet Improvements : Loot flow has been updated, Strike Packages and Armour Plate availability have been rebalanced, and a wider pass on challenge tracking, objective progression, and End of Round presentation helps both modes play and reward more consistently.",
@@ -26,7 +28,9 @@
     "Major Updates for 1.2.3.0"
    ],
    "section": "summary",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Combat Feedback and Gameplay Clarity : Incoming hit audio is now clearer, rapid damage is easier to read, projectile and tracer behaviour is more consistent, and network warning indicators now provide better visibility during live combat.",
@@ -1213,6 +1217,7 @@
    "section": "progression",
    "items": [
     "fighter-jet",
+    "gauntlet",
     "light-ground-transport"
    ]
   },
@@ -2365,7 +2370,9 @@
     "Builder & Web App"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Corrected the MapsItem block in Web App 1.2.1.0 so missing maps now appear correctly.",
@@ -2385,7 +2392,9 @@
     "Builder & Web App"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Corrected the Psy Gas Strike entry in Restrictions so it no longer uses placeholder icon and name.",
@@ -2486,6 +2495,7 @@
    ],
    "section": "portal",
    "items": [
+    "gauntlet",
     "ss26"
    ]
   },
@@ -2497,7 +2507,9 @@
     "Verified Experiences & Gauntlet"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Corrected the Verified Gauntlet scoreboard so squads joining after the local squad now appear correctly during the match.",
@@ -2507,7 +2519,9 @@
     "Verified Experiences & Gauntlet"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Improved hosting compatibility so Verified Experiences created on previous patches no longer return an unknown error.",
@@ -2517,7 +2531,9 @@
     "Verified Experiences & Gauntlet"
    ],
    "section": "portal",
-   "items": []
+   "items": [
+    "gauntlet"
+   ]
   },
   {
    "text": "Improved sound obstruction on vehicles.",
@@ -2747,7 +2763,9 @@
     "PLAYER:"
    ],
    "section": "player",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2812,7 +2830,8 @@
    ],
    "section": "maps",
    "items": [
-    "c-4"
+    "c-4",
+    "gauntlet"
    ],
    "redsec": true
   },
@@ -2824,7 +2843,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -2982,7 +3003,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -3012,7 +3035,9 @@
     "PROGRESSION:"
    ],
    "section": "progression",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -3093,7 +3118,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -3104,7 +3131,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -3115,7 +3144,9 @@
     "Gauntlet"
    ],
    "section": "maps",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   }
  ]

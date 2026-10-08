@@ -116,7 +116,7 @@
       "added": [
         {"name": "Fort Lyndon", "slug": "fort-lyndon", "kind": "Map", "_note": "REDSEC"},
         {"name": "Battle Royale", "kind": "Mode", "_note": "REDSEC"},
-        {"name": "Gauntlet", "kind": "Mode", "_note": "REDSEC"},
+        {"name": "Gauntlet", "slug": "gauntlet", "kind": "Mode", "_note": "REDSEC"},
         {"name": "Portal Updates", "kind": "Feature", "_note": "REDSEC"},
         {"name": "Blackwell Fields", "slug": "blackwell-fields", "kind": "Map"},
         {"name": "Strikepoint", "kind": "Mode"},

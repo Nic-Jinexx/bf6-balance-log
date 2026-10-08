@@ -145,7 +145,8 @@
    ],
    "section": "maps",
    "items": [
-    "fighter-sweep"
+    "fighter-sweep",
+    "gauntlet"
    ],
    "redsec": true
   }

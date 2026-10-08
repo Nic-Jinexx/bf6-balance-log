@@ -11,6 +11,7 @@
    "items": [
     "carrier-strike",
     "fighter-sweep",
+    "gauntlet",
     "tsuru-reef",
     "wake-island"
    ]
@@ -81,7 +82,8 @@
    ],
    "section": "summary",
    "items": [
-    "fort-lyndon"
+    "fort-lyndon",
+    "gauntlet"
    ]
   },
   {
@@ -1630,7 +1632,9 @@
     "MODES"
    ],
    "section": "misc",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -1641,6 +1645,7 @@
    ],
    "section": "misc",
    "items": [
+    "gauntlet",
     "infantry-fighting-vehicle"
    ],
    "redsec": true
@@ -1692,7 +1697,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {
@@ -1722,7 +1729,9 @@
     "UI & HUD"
    ],
    "section": "ui",
-   "items": [],
+   "items": [
+    "gauntlet"
+   ],
    "redsec": true
   },
   {

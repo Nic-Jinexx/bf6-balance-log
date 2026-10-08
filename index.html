@@ -817,7 +817,7 @@ html{-webkit-text-size-adjust:100%}
 <a class="leaf" href="/maps/wake-island/">Wake Island</a>
 </details>
 <details class="branch b-modes">
-<summary>Modes<span class="cnt">10</span></summary>
+<summary>Modes<span class="cnt">11</span></summary>
 <a class="leaf" href="/modes/breakthrough/">Breakthrough</a>
 <a class="leaf" href="/modes/conquest/">Conquest</a>
 <a class="leaf" href="/modes/domination/">Domination</a>
@@ -828,6 +828,7 @@ html{-webkit-text-size-adjust:100%}
 <a class="leaf" href="/modes/rush/">Rush</a>
 <a class="leaf" href="/modes/carrier-strike/">Carrier Strike</a>
 <a class="leaf" href="/modes/fighter-sweep/">Fighter Sweep</a>
+<a class="leaf" href="/modes/gauntlet/">Gauntlet</a>
 </details>
 </nav>
 <nav class="tree-nav tree-extra" aria-label="EA community updates">
@@ -3137,7 +3138,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>New Content: Winter Offensive</b></p>
 <ul class="plain">
 <li data-item="empire-state">New Time-Limited Map: Ice Lock Empire State . A winter-shrouded version of Empire State featuring frozen streets and seasonal environmental visuals.</li>
-<li data-item="conquest domination empire-state">New Time-Limited Multiplayer and Gauntlet Mode: A themed event mode playable across Domination, Conquest, and Gauntlet mission variations on Ice Lock Empire State featuring the event-limited “Freeze” mechanic.</li>
+<li data-item="conquest domination empire-state gauntlet">New Time-Limited Multiplayer and Gauntlet Mode: A themed event mode playable across Domination, Conquest, and Gauntlet mission variations on Ice Lock Empire State featuring the event-limited “Freeze” mechanic.</li>
 <li data-item="ice-axe">New Melee Weapon: the Ice Climbing Axe . Unlocked through the Winter Offensive Bonus Path.</li>
 <li data-item="empire-state">Portal updates: Ice Lock Empire State is available for use in supported Portal experiences during the event window.</li>
 <li data-item="ice-axe">Battle Pass: Winter Offensive Bonus Path: an 11-tier, time-limited reward track featuring event cosmetics, XP Boosters, and the Ice Climbing Axe.</li>
@@ -3338,7 +3339,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>GAUNTLET</b></p>
 <ul class="plain">
-<li>Corrected an issue where a player's banner could become cropped during the End of Round sequence.</li>
+<li data-item="gauntlet">Corrected an issue where a player's banner could become cropped during the End of Round sequence.</li>
 </ul>
 <p class="grp"><b>RANKED</b></p>
 <ul class="plain">
@@ -3372,7 +3373,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>MAP &amp; MODES</b></p>
 <ul class="plain">
 <li>Destroying structures at the Combat Training POI no longer leaves visual artefacts.</li>
-<li data-item="fighter-sweep">Gauntlet: Fighter Sweep now correctly limits squads to two players.</li>
+<li data-item="fighter-sweep gauntlet">Gauntlet: Fighter Sweep now correctly limits squads to two players.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-4-2-5" target="_blank" rel="noopener">Battlefield 6 Game Update 1.4.2.5</a>, posted Aug 31, 2026</div>
 </div>
@@ -3392,8 +3393,8 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>MODES</b></p>
 <ul class="plain">
-<li>Tank eliminations in Gauntlet: Rodeo now award the correct number of points.</li>
-<li data-item="infantry-fighting-vehicle">The Bradley tank now spawns correctly in the Gauntlet: Rodeo mission.</li>
+<li data-item="gauntlet">Tank eliminations in Gauntlet: Rodeo now award the correct number of points.</li>
+<li data-item="gauntlet infantry-fighting-vehicle">The Bradley tank now spawns correctly in the Gauntlet: Rodeo mission.</li>
 </ul>
 <p class="grp"><b>UI &amp; HUD</b></p>
 <ul class="plain">
@@ -3401,10 +3402,10 @@ html{-webkit-text-size-adjust:100%}
 <li>Battle Royale mission HUD widgets are now correctly aligned and no longer overlap.</li>
 <li>Character appearances in the Victory Presentation extraction cinematic for Battle Royale now correctly match each squad member’s Player Card and Stat Highlights.</li>
 <li>Custom Weapon Drops have been adjusted to now display their interaction prompt within the intended viewing range and angle, and correctly deform the terrain when they land.</li>
-<li>Mode Details for Gauntlet and Battle Royale can now be viewed from the pre-round lobby.</li>
+<li data-item="gauntlet">Mode Details for Gauntlet and Battle Royale can now be viewed from the pre-round lobby.</li>
 <li>Rank Discrepancy warnings no longer appear on non-Ranked playlists.</li>
 <li>RP earned in the previous match no longer briefly appears on the HUD at the start of the next Rookie match.</li>
-<li>Subtitles now continue to appear correctly after dying in Gauntlet.</li>
+<li data-item="gauntlet">Subtitles now continue to appear correctly after dying in Gauntlet.</li>
 <li>The Big Map now displays 3D building overlays correctly during the Battle Royale insertion phase.</li>
 <li>The incorrect “Enemy squad locations compromised” notification no longer appears after performing a takedown in Battle Royale Solos.</li>
 <li>The Repair Tool requirement prompt on Safes no longer appears through walls.</li>
@@ -3435,7 +3436,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.4.1.0&rdquo;: Water Gameplay Improvements: Water gameplay has received a broad Season 4 update, making swimming, resurfacing, Drag and Revive, underwater visibility, parachute deployment near water, and water interactions feel more consistent across combat and traversal. Player Movement and Combat Polish: Player movement has been tightened with improvements to sliding, mounting, squad spawning, ziplines, and soldier presentation, reducing cases where movement or animations could behave unexpectedly during active gameplay. Vehicle and Water Interaction Updates: Vehicles now interact more naturally with water and the surrounding environment, with improved visual feedback for boats, ground vehicles, and amphibious vehicles, alongside more realistic helicopter rotor wash effects on vegetation. UI, HUD and Menu Clarity: Menus and in-game HUD elements have received a broad clarity pass, improving how Challenges, Rewards, Loadouts, Store purchases, Player Profile stats, Hit Feedback, Kill Indicators, and Underwater Spotting Information are displayed. Portal Creator Updates: Portal creators receive new tools and fixes across the SDK, Rules Editor, Spatial Editor, custom modes, M-COM behaviour, Bomb actions, team settings, and publishing flow, helping custom experiences behave more predictably when building and testing. Audio Improvements: Audio feedback has been improved across vehicles, stationary weapons, sea movement, underwater moments, Battle Royale insertion, and Obliteration, making key gameplay states and voice-over moments clearer during play. REDSEC and Ranked Battle Royale Polish: REDSEC receives further polish to improve match flow, scoring, and navigation, while Ranked Battle Royale End of Round updates make RP changes clearer and easier to follow.</p>
 <p class="grp"><b>PLAYER</b></p>
 <ul class="plain">
-<li>Opening a tank container while parachuting in Gauntlet no longer prevents the tank from spawning.</li>
+<li data-item="gauntlet">Opening a tank container while parachuting in Gauntlet no longer prevents the tank from spawning.</li>
 <li>“Squad Wipe” score events now trigger correctly after eliminating an enemy squad.</li>
 </ul>
 <p class="grp"><b>UI &amp; HUD</b></p>
@@ -3443,7 +3444,7 @@ html{-webkit-text-size-adjust:100%}
 <li>In-world icons no longer flicker on the Big Map when hovering over them in Battle Royale.</li>
 <li>Neutral vehicle map icons now remain visible as intended when entering a vehicle underground in Battle Royale.</li>
 <li>Selecting “Edit Favourite Weapons” in Battle Royale now opens the “Favourite Weapons” tab directly.</li>
-<li>Squad colours now display correctly on the Gauntlet End of Round screen.</li>
+<li data-item="gauntlet">Squad colours now display correctly on the Gauntlet End of Round screen.</li>
 <li>The Tactical Armory can now be pinged correctly in Battle Royale.</li>
 </ul>
 <p class="grp"><b>AUDIO</b></p>
@@ -3516,14 +3517,14 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>MAP</b></p>
 <ul class="plain">
 <li>Lighting has been improved to address visual glitches across the Downtown area.</li>
-<li>Psygas now appears as intended in the Downtown layout in Gauntlet.</li>
+<li data-item="gauntlet">Psygas now appears as intended in the Downtown layout in Gauntlet.</li>
 <li>REDSEC missions have been removed from the “Defense Testing Complex 3” area.</li>
 <li>The REDSEC Signal Hack antenna placement has been adjusted in the Chemical Storage area.</li>
 </ul>
 <p class="grp"><b>UI &amp; HUD</b></p>
 <ul class="plain">
 <li>Distance limits for displaying nearby medics while downed have been adjusted to 100m in Battle Royale.</li>
-<li>Matchmaking screen no longer overlaps with loadouts when deploying in Gauntlet while the Loadout menu is open.</li>
+<li data-item="gauntlet">Matchmaking screen no longer overlaps with loadouts when deploying in Gauntlet while the Loadout menu is open.</li>
 <li data-item="pp-19">PP-19 loot and upgrade feed entries now display the correct SMG icon.</li>
 <li>The Compass UI now correctly shows the presence of shooting enemies in Battle Royale.</li>
 <li>Updated several Contract and Counter Mission icons.</li>
@@ -3564,7 +3565,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>GADGETS</b></p>
 <ul class="plain">
-<li>Gadgets placed on the extraction drone landing pad in Gauntlet are now destroyed when the drone lands.</li>
+<li data-item="gauntlet">Gadgets placed on the extraction drone landing pad in Gauntlet are now destroyed when the drone lands.</li>
 <li data-item="mas-148">MAS 148 Glaive placement has been improved when dropped as loot in Battle Royale, preventing it from clipping into the ground.</li>
 </ul>
 <p class="grp"><b>MAP</b></p>
@@ -3578,13 +3579,13 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>Gauntlet</b></p>
 <ul class="plain">
-<li>Fast Rope insertion now spawns rope and helicopter meshes correctly.</li>
-<li>Heist Caches now spawn in their intended locations.</li>
-<li>M-COMs in Gauntlet: Wreckage can now be interacted with from all angles.</li>
-<li>Mission objects no longer cause vehicles to move when landing on them.</li>
-<li>Tank Containers now close properly when a wrecked vehicle or player is near the container.</li>
-<li>Vehicle containers in Gauntlet: Rodeo now award 3 points when opened, in addition to the mission’s other scoring criteria.</li>
-<li>Heist base outlines now appear correctly in the Underground POI layout.</li>
+<li data-item="gauntlet">Fast Rope insertion now spawns rope and helicopter meshes correctly.</li>
+<li data-item="gauntlet">Heist Caches now spawn in their intended locations.</li>
+<li data-item="gauntlet">M-COMs in Gauntlet: Wreckage can now be interacted with from all angles.</li>
+<li data-item="gauntlet">Mission objects no longer cause vehicles to move when landing on them.</li>
+<li data-item="gauntlet">Tank Containers now close properly when a wrecked vehicle or player is near the container.</li>
+<li data-item="gauntlet">Vehicle containers in Gauntlet: Rodeo now award 3 points when opened, in addition to the mission’s other scoring criteria.</li>
+<li data-item="gauntlet">Heist base outlines now appear correctly in the Underground POI layout.</li>
 </ul>
 <p class="grp"><b>UI &amp; HUD</b></p>
 <ul class="plain">
@@ -3643,7 +3644,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Corrected an issue where pings would not be placed correctly when pinging while in the REDSEC insertion helicopter.</li>
 <li>Corrected an issue where players could be spawned outside of the ring using the Mobile Respawn gadget.</li>
 <li>Corrected an issue where shadows could break if graphics quality was changed after the match had started.</li>
-<li>Corrected an issue where weapon shadows were visible under the player during the Gauntlet fast rope insertion sequence.</li>
+<li data-item="gauntlet">Corrected an issue where weapon shadows were visible under the player during the Gauntlet fast rope insertion sequence.</li>
 <li>Corrected and clarified a tutorial for the Second Chance mechanic.</li>
 <li>Eliminated players can no longer place pings on the map.</li>
 <li>Improved game performance by reducing frame spikes.</li>
@@ -3713,7 +3714,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Placing a Mortar in a safe no longer causes the safe to fall over.</li>
 <li>The Box Truck has been renamed to the Explosive Ordnance Transporter and its loot pool has been refreshed to better counter vehicles and provide more explosive ordnance options.</li>
 <li>Updated Anti-Vehicle Drop loot to provide more reliable counters to enemy tanks.</li>
-<li>Corrected an issue that could cause a user to become spawn camped on the Circuits mission in Gauntlet.</li>
+<li data-item="gauntlet">Corrected an issue that could cause a user to become spawn camped on the Circuits mission in Gauntlet.</li>
 <li>Corrected an issue where dead player bodies could block the ability to pick up mission objects.</li>
 <li>Corrected an issue where the Decryption mission pickup would immediately snap to terrain when picked up.</li>
 </ul>
@@ -3733,7 +3734,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>UI &amp; HUD · Gauntlet</b></p>
 <ul class="plain">
-<li>Corrected a bug where the pause menu would cause the overhead camera to appear during a Gauntlet mission brief, as well as the mission brief overlaying in the Player Profile tab.</li>
+<li data-item="gauntlet">Corrected a bug where the pause menu would cause the overhead camera to appear during a Gauntlet mission brief, as well as the mission brief overlaying in the Player Profile tab.</li>
 </ul>
 <p class="grp"><b>AI</b></p>
 <ul class="plain">
@@ -3768,9 +3769,9 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>UI &amp; HUD</b></p>
 <ul class="plain">
-<li data-item="armored-transport">Corrected an issue where the camera could clip beneath the vehicle when switching to the middle seat of the Armored Transport in Gauntlet.</li>
+<li data-item="armored-transport gauntlet">Corrected an issue where the camera could clip beneath the vehicle when switching to the middle seat of the Armored Transport in Gauntlet.</li>
 <li>Corrected an issue where the DMR mesh could disappear after a player was revived from a DBNO state.</li>
-<li>Corrected an issue where weapon models could become invisible while customising during the Gauntlet briefing.</li>
+<li data-item="gauntlet">Corrected an issue where weapon models could become invisible while customising during the Gauntlet briefing.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-5" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.5</a>, posted May 4, 2026</div>
 </div>
@@ -3784,7 +3785,7 @@ html{-webkit-text-size-adjust:100%}
 <ul class="plain">
 <li data-item="assault">Added the new Training Path: Hazmat Breacher for the Assault Class in Battle Royale.</li>
 <li>Corrected the RGM Second Chance tutorial flow so it now triggers after meeting the intended criteria.</li>
-<li>Improved the round-end transition in Gauntlet so players no longer become stuck on a black screen after dying out of bounds at the end of the previous round.</li>
+<li data-item="gauntlet">Improved the round-end transition in Gauntlet so players no longer become stuck on a black screen after dying out of bounds at the end of the previous round.</li>
 </ul>
 <p class="grp"><b>STRIKE PACKAGES</b></p>
 <ul class="plain">
@@ -3799,8 +3800,8 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>GADGETS · Gauntlet</b></p>
 <ul class="plain">
-<li data-item="c-4">Corrected C4 inventory behaviour so it is no longer removed unexpectedly.</li>
-<li>Corrected initial spawn beacons so they now sit properly on the ground.</li>
+<li data-item="c-4 gauntlet">Corrected C4 inventory behaviour so it is no longer removed unexpectedly.</li>
+<li data-item="gauntlet">Corrected initial spawn beacons so they now sit properly on the ground.</li>
 </ul>
 <p class="grp"><b>MAP</b></p>
 <ul class="plain">
@@ -3827,7 +3828,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>UI &amp; HUD · Gauntlet</b></p>
 <ul class="plain">
-<li>Updated the in-game Gauntlet presentation to better match the Battlefield Labs reference.</li>
+<li data-item="gauntlet">Updated the in-game Gauntlet presentation to better match the Battlefield Labs reference.</li>
 </ul>
 <p class="grp"><b>AUDIO</b></p>
 <ul class="plain">
@@ -3836,7 +3837,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>PROGRESSION</b></p>
 <ul class="plain">
-<li>Reworked XP progression in Battle Royale and Gauntlet to better reward time invested, resulting in a significant increase for the average player with only a slight reduction for the top 1%.</li>
+<li data-item="gauntlet">Reworked XP progression in Battle Royale and Gauntlet to better reward time invested, resulting in a significant increase for the average player with only a slight reduction for the top 1%.</li>
 </ul>
 <p class="grp"><b>PROGRESSION · Battle Royale</b></p>
 <ul class="plain">
@@ -3849,9 +3850,9 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>PROGRESSION · Gauntlet</b></p>
 <ul class="plain">
-<li>Corrected Weekly Challenge “Capture and Neutralize objectives in Multiplayer or Complete objectives in Gauntlet.” so objective completion now tracks correctly in supported Gauntlet modes.</li>
-<li>Corrected the Gauntlet Special Forces Operator Challenge 4 progression flow so it now advances after reaching the intended unlock criteria.</li>
-<li>Updated Weekly Mission “Complete matches in any mode.” so it now appears and tracks correctly in Multiplayer instead of only Gauntlet.</li>
+<li data-item="gauntlet">Corrected Weekly Challenge “Capture and Neutralize objectives in Multiplayer or Complete objectives in Gauntlet.” so objective completion now tracks correctly in supported Gauntlet modes.</li>
+<li data-item="gauntlet">Corrected the Gauntlet Special Forces Operator Challenge 4 progression flow so it now advances after reaching the intended unlock criteria.</li>
+<li data-item="gauntlet">Updated Weekly Mission “Complete matches in any mode.” so it now appears and tracks correctly in Multiplayer instead of only Gauntlet.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 10, 2026</div>
 </div>
@@ -3863,7 +3864,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="dev">Dev intent, quoted from EA's &ldquo;Major Updates for 1.2.2.0&rdquo;: Vehicle Gameplay Improvements: Added light transport vehicle “deturtling”, improved helicopter landing stability, refined vehicle camera behaviour, increased tank braking power, and boosted UH-79 survivability across multiplayer. Portable Mortar and Gadget Updates: Expanded Portable Mortar deployment rules to HQ areas, improved minimap visibility and direct-hit effectiveness, and introduced updated Anti-Tank Mine limits and despawn rules for better battlefield balance. AI Behaviour and Vehicle Usage Enhancements: Expanded AI vehicle usage to bikes and scout helicopters, improved pathfinding on Contaminated and Eastwood, refined combat priorities, and improved helicopter flare usage and anti-air handling. Maps and Mode Fixes: Addressed multiple exploits, spawn logic issues, traversal bugs, and invalid-state problems across Mirak Valley, Siege of Cairo, Eastwood, and Contaminated. Progression and Battle Pass Reliability: Delivered a broad progression consistency pass, correcting Battle Pass tiers, token calculations, End of Round rewards, accolade tracking, challenge criteria discrepancies, and stat inconsistencies. UI, HUD and Front-End Improvements: Improved threat prioritisation, ping feedback, downed-state clarity, profile navigation, loadout presentation, and resolved numerous visual inconsistencies across Battle Pass, challenges, and menus. Audio and Squad Expansion: Introduced the Strix Raiders squad with four unique voice performances, improved footstep clarity and spatialisation, refined vehicle and jet mix balance, and added new Stereo Width customisation options.</p>
 <p class="grp"><b>PLAYER</b></p>
 <ul class="plain">
-<li>Corrected an issue where Gauntlet Special Forces Operator challenges could appear unavailable.</li>
+<li data-item="gauntlet">Corrected an issue where Gauntlet Special Forces Operator challenges could appear unavailable.</li>
 <li>Corrected an issue where the Sentinel accolade could trigger incorrectly after the zone was exhausted.</li>
 <li>Resolved an issue that prevented the sabotage prompt from sometimes not appearing when next to a tank.</li>
 <li>Resolved an issue where Time Nudge could drop below zero when switching simulation rate from 30Hz to 60Hz during late-stage Battle Royale.</li>
@@ -3891,7 +3892,7 @@ html{-webkit-text-size-adjust:100%}
 <p class="grp"><b>MAP</b></p>
 <ul class="plain">
 <li>Resolved an issue causing Intel Caches not to have randomized spawns.</li>
-<li>Resolved an issue where Beacons would float above the ground at their initial spawn in Gauntlet.</li>
+<li data-item="gauntlet">Resolved an issue where Beacons would float above the ground at their initial spawn in Gauntlet.</li>
 </ul>
 <p class="grp"><b>LOOT</b></p>
 <ul class="plain">
@@ -3912,7 +3913,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>UI&amp;HUD</b></p>
 <ul class="plain">
-<li>Corrected an issue where the “Complete matches in any mode” challenge was incorrectly tagged as a Gauntlet challenge.</li>
+<li data-item="gauntlet">Corrected an issue where the “Complete matches in any mode” challenge was incorrectly tagged as a Gauntlet challenge.</li>
 <li>Resolved an issue which prevented players from pinging items inside opened loot containers.</li>
 <li>Resolved an issue which could cause the Artillery Strike notification to appear red when a teammate used it.</li>
 <li>Resolved an issue where the UI of the Decryption Mission persisted after the beacon was destroyed by the ring, failing the mission in Battle Royale.</li>
@@ -3925,7 +3926,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Improved audio mix when in proximity to the ring in Battle Royale.</li>
 <li>Resolved an issue where no sound effects would play when downloading and picking up data drives in Battle Royale.</li>
 <li>Resolved an issue where the menu arrival sound could be heard when opening the commo-rose in Battle Royale.</li>
-<li>Slightly lowered the Gauntlet Qualifier Widget UI sound effects.</li>
+<li data-item="gauntlet">Slightly lowered the Gauntlet Qualifier Widget UI sound effects.</li>
 <li>Spot Ping has been updated to a more easily recognizable sound and Squad Ping has been slightly increased in volume.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/en/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-2-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.2.0</a>, posted Mar 13, 2026</div>
@@ -3946,7 +3947,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
-<li data-item="armored-transport">Added the Traverser Mark II to select Large, Medium, and Small Gauntlet layouts.</li>
+<li data-item="armored-transport gauntlet">Added the Traverser Mark II to select Large, Medium, and Small Gauntlet layouts.</li>
 <li data-item="armored-transport">Fixed an issue where the weapon could rotate incorrectly in first-person view when using the Traverser Mark II Remote Weapon Station.</li>
 <li>Fixed an issue where incorrect or missing crosshairs could appear for side passengers in the Traverse Mark II.</li>
 </ul>
@@ -3971,7 +3972,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>UI &amp; HUD</b></p>
 <ul class="plain">
-<li>Fixed an issue where strike package map markers would not disappear when joining a Gauntlet session right after playing a Battle Royale match.</li>
+<li data-item="gauntlet">Fixed an issue where strike package map markers would not disappear when joining a Gauntlet session right after playing a Battle Royale match.</li>
 <li>Fixed an issue where the Clear Ping action did not work with default controller bindings.</li>
 </ul>
 <p class="grp"><b>UI &amp; HUD · Battle Royale</b></p>
@@ -3986,10 +3987,10 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>UI &amp; HUD · Gauntlet</b></p>
 <ul class="plain">
-<li>Fixed an issue where the Beacon Pulse icon could appear too far away when first picked up by an enemy.</li>
-<li>Fixed an issue where the countdown icon on the Mobile Respawn gadget could disappear too early.</li>
-<li>Fixed overlapping UI elements when rapidly exiting the Edit Loadout menu.</li>
-<li>Fixed overlapping UI elements where “Random Deploy” could appear behind class selection buttons on the redeploy screen.</li>
+<li data-item="gauntlet">Fixed an issue where the Beacon Pulse icon could appear too far away when first picked up by an enemy.</li>
+<li data-item="gauntlet">Fixed an issue where the countdown icon on the Mobile Respawn gadget could disappear too early.</li>
+<li data-item="gauntlet">Fixed overlapping UI elements when rapidly exiting the Edit Loadout menu.</li>
+<li data-item="gauntlet">Fixed overlapping UI elements where “Random Deploy” could appear behind class selection buttons on the redeploy screen.</li>
 </ul>
 <p class="grp"><b>AUDIO</b></p>
 <ul class="plain">
@@ -4011,7 +4012,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>MAP &amp; MODES</b></p>
 <ul class="plain">
-<li>Fixed an edge case in Gauntlet mode “Data Extraction” where the drone could disappear permanently if drives were deposited at the exact moment it landed.</li>
+<li data-item="gauntlet">Fixed an edge case in Gauntlet mode “Data Extraction” where the drone could disappear permanently if drives were deposited at the exact moment it landed.</li>
 </ul>
 <p class="grp"><b>UI &amp; HUD · Battle Royale</b></p>
 <ul class="plain">
@@ -4020,7 +4021,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>UI &amp; HUD · Gauntlet</b></p>
 <ul class="plain">
-<li>Fixed an issue where the armor bar could disappear after quickly editing a loadout.</li>
+<li data-item="gauntlet">Fixed an issue where the armor bar could disappear after quickly editing a loadout.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-3-5" target="_blank" rel="noopener">Battlefield 6 Game Update 1.1.3.5</a>, posted Jan 16, 2026</div>
 </div>
@@ -4043,7 +4044,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>GAUNTLET</b></p>
 <ul class="plain">
-<li>Fixed an issue where mission objects would not drop if the carrier disconnected.</li>
+<li data-item="gauntlet">Fixed an issue where mission objects would not drop if the carrier disconnected.</li>
 </ul>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
@@ -4074,7 +4075,7 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>MAP · Gauntlet</b></p>
 <ul class="plain">
-<li>Fixed an issue where M-COMs in Wreckage would not reactivate after being destroyed.</li>
+<li data-item="gauntlet">Fixed an issue where M-COMs in Wreckage would not reactivate after being destroyed.</li>
 </ul>
 <p class="grp"><b>UI &amp; HUD</b></p>
 <ul class="plain">
@@ -4090,10 +4091,10 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>UI &amp; HUD · Gauntlet</b></p>
 <ul class="plain">
-<li>Added correct interaction prompts for counter-mission teams when defusing explosives in Wreckage.</li>
-<li>Fixed an issue where the scoreboard was sorted by deaths instead of score.</li>
-<li>Fixed an issue where the Loadout screen overlay could incorrectly appear over the Gauntlet Mission Briefing on Aftermath.</li>
-<li>Fixed team-ownership colours for M-COMs in Wreckage missions.</li>
+<li data-item="gauntlet">Added correct interaction prompts for counter-mission teams when defusing explosives in Wreckage.</li>
+<li data-item="gauntlet">Fixed an issue where the scoreboard was sorted by deaths instead of score.</li>
+<li data-item="gauntlet">Fixed an issue where the Loadout screen overlay could incorrectly appear over the Gauntlet Mission Briefing on Aftermath.</li>
+<li data-item="gauntlet">Fixed team-ownership colours for M-COMs in Wreckage missions.</li>
 </ul>
 <p class="grp"><b>AUDIO</b></p>
 <ul class="plain">
@@ -4110,7 +4111,7 @@ html{-webkit-text-size-adjust:100%}
 <div class="i18n" data-i18n="games/battlefield/battlefield-6/news/battlefield-6-game-update-1-1-2-0"></div>
 <p class="grp"><b>VEHICLES</b></p>
 <ul class="plain">
-<li data-item="ptkm-1r">Fixed the issue where the Golf Cart could set off the PTKM-1R gadget in Gauntlet.</li>
+<li data-item="gauntlet ptkm-1r">Fixed the issue where the Golf Cart could set off the PTKM-1R gadget in Gauntlet.</li>
 <li>Fixed persistent gunner MG model after Rhib Boat destruction.</li>
 </ul>
 <p class="grp"><b>UI &amp; HUD</b></p>
@@ -4228,7 +4229,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Corrected the Season 1 Catch-Up Hardware quest so grenade kills and assists now track correctly.</li>
 <li>Improved Season 2 challenge accuracy across Week 1, Week 6, Week 11, “Complete matches in any mode”, “Earn score, counts double in Battle Royale”, the weekly challenge “Earn score, counts double in Battle Royale”, and “Deal damage with Explosives or Incendiaries.” so the in-game presentation now matches the intended design.</li>
 <li>Corrected an issue where weekly free-to-play challenges and missions tagged with “All Modes” now unlock and track properly for eligible players.</li>
-<li data-item="fighter-jet light-ground-transport">Improved Red Bull challenge setup so “In Gauntlet: RB Supermoto, Capture Red Checkpoints as a squad.” uses the correct tag, “Earn Score while driving land vehicles, counts for double if gained in Gauntlet: RB Supermoto” now tracks and doubles correctly, that “Get total airtime in seconds using the ATV, Motorcycle or Light Infantry Vehicle.” now supports all intended Light Transport vehicles, and the F-97 Kestrel now uses its player-facing name instead of a dev-facing one.</li>
+<li data-item="fighter-jet gauntlet light-ground-transport">Improved Red Bull challenge setup so “In Gauntlet: RB Supermoto, Capture Red Checkpoints as a squad.” uses the correct tag, “Earn Score while driving land vehicles, counts for double if gained in Gauntlet: RB Supermoto” now tracks and doubles correctly, that “Get total airtime in seconds using the ATV, Motorcycle or Light Infantry Vehicle.” now supports all intended Light Transport vehicles, and the F-97 Kestrel now uses its player-facing name instead of a dev-facing one.</li>
 <li>Improved Weekly Missions “Kill enemies and Revive teammates” so the bonus reward now displays correctly after completion.</li>
 <li data-item="assault">Updated Assault 1 assignments so the incorrect "OR" category no longer appears.</li>
 <li>Updated Multiplayer challenge licensing so MP-only OR challenges now display as locked for free-to-play users.</li>
@@ -4276,7 +4277,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Fixed an issue where rerolling challenges could become unavailable when switching between the Battle Pass and Daily Challenges.</li>
 <li>Fixed an issue where the assignment tracker did not correctly track missions from the Unit page.</li>
 <li>Fixed incorrect tracking for multiple weekly and assignment-based challenges.</li>
-<li>Fixed multiple issues with challenge criteria displaying or progressing incorrectly across REDSEC Gauntlet and Weekly Challenges.</li>
+<li data-item="gauntlet">Fixed multiple issues with challenge criteria displaying or progressing incorrectly across REDSEC Gauntlet and Weekly Challenges.</li>
 <li>Fixed incorrect progress display for Week 2 challenges.</li>
 <li>Fixed an issue where exploration assignments could complete with fewer actions than intended.</li>
 </ul>
@@ -4881,7 +4882,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Fixed an issue where equipping or previewing gadgets and melee weapons could cause them to appear under the vehicle section in the Loadouts screen.</li>
 <li>Fixed an issue where locked Battle Pass rewards could appear stuck in the Loadout screen after navigating back from the Battle Pass.</li>
 <li>Fixed an issue where mortar hit indicators and damage numbers were not displayed correctly.</li>
-<li>Fixed an issue where the Big Map and scoreboard button prompts were missing in Gauntlet End of Round screens.</li>
+<li data-item="gauntlet">Fixed an issue where the Big Map and scoreboard button prompts were missing in Gauntlet End of Round screens.</li>
 <li>Fixed an issue where the crosshair could briefly display incorrect spacing when switching weapons.</li>
 <li data-item="attack-helicopter">Fixed an issue where the gunner seat aiming indicators on attack helicopters remained static while the helicopter was moving, leading to incorrect aiming feedback.</li>
 <li>Fixed an issue where the “Go to Store” button prompt was not functional for vehicle customization on PlayStation 5.</li>
@@ -5766,9 +5767,9 @@ html{-webkit-text-size-adjust:100%}
 <li>Corrected Primary Weapon restriction behaviour so players no longer become unable to move after deploying.</li>
 <li>Corrected profanity filtering so non-prohibited words are no longer censored.</li>
 <li>Corrected the Experience Image button flow so it now works properly after resetting or refreshing an experience.</li>
-<li>Corrected the Gauntlet Web Builder so the Mission tab is no longer accessible where it should not be.</li>
+<li data-item="gauntlet">Corrected the Gauntlet Web Builder so the Mission tab is no longer accessible where it should not be.</li>
 <li>Corrected the MapsItem block in Web App 1.2.1.0 so missing maps now appear correctly.</li>
-<li>Corrected the Mission Order tab for Verified Gauntlet so it now functions correctly.</li>
+<li data-item="gauntlet">Corrected the Mission Order tab for Verified Gauntlet so it now functions correctly.</li>
 <li>Corrected the Psy Gas Strike entry in Restrictions so it no longer uses placeholder icon and name.</li>
 <li>Improved experience creation so importing spatial data no longer prevents experiences from being created.</li>
 <li>Improved hosting stability for experiences using multiple Granite POIs with specific spatial data.</li>
@@ -5787,10 +5788,10 @@ html{-webkit-text-size-adjust:100%}
 </ul>
 <p class="grp"><b>PORTAL · Verified Experiences &amp; Gauntlet</b></p>
 <ul class="plain">
-<li data-item="ss26">Corrected SS26 restrictions so it no longer appears twice in the Restrictions tab.</li>
-<li>Corrected the Verified Experience start flow so rounds can no longer begin without meeting the intended pre-round player requirement.</li>
-<li>Corrected the Verified Gauntlet scoreboard so squads joining after the local squad now appear correctly during the match.</li>
-<li>Improved hosting compatibility so Verified Experiences created on previous patches no longer return an unknown error.</li>
+<li data-item="gauntlet ss26">Corrected SS26 restrictions so it no longer appears twice in the Restrictions tab.</li>
+<li data-item="gauntlet">Corrected the Verified Experience start flow so rounds can no longer begin without meeting the intended pre-round player requirement.</li>
+<li data-item="gauntlet">Corrected the Verified Gauntlet scoreboard so squads joining after the local squad now appear correctly during the match.</li>
+<li data-item="gauntlet">Improved hosting compatibility so Verified Experiences created on previous patches no longer return an unknown error.</li>
 </ul>
 <div class="src">Source: <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-1-2-3-0" target="_blank" rel="noopener">Battlefield 6 Game Update 1.2.3.0</a>, posted Apr 10, 2026</div>
 </div>
@@ -5807,7 +5808,7 @@ html{-webkit-text-size-adjust:100%}
 <li>Corrected an issue where Hosted servers could be missing from ‘Servers’ until refreshing.</li>
 <li>Corrected an issue where the Portal server browser list could overlap other buttons.</li>
 <li data-item="recon">Corrected an issue where the Recon class could become unusable if all gadgets were disabled except Throwables.</li>
-<li>Corrected Gauntlet mission cap behaviour.</li>
+<li data-item="gauntlet">Corrected Gauntlet mission cap behaviour.</li>
 <li>Corrected ModBuilder Transform and movement logic.</li>
 <li>Corrected multiple terrain texture inconsistencies on Marina.</li>
 <li>Corrected OnGameModeEnding event triggering.</li>
@@ -5816,17 +5817,17 @@ html{-webkit-text-size-adjust:100%}
 <li>Removed the AAV-7A1 vehicle from the Portal restrictions tab. It is only featured in the campaign, so a Portal restriction is not relevant.</li>
 <li data-item="grt-cps">Corrected the GRT-CPS DMR placeholder icon in the Web App Restrictions tab.</li>
 <li>Corrected vehicle seat event reporting.</li>
-<li>Corrected Verified Gauntlet layout scaling.</li>
+<li data-item="gauntlet">Corrected Verified Gauntlet layout scaling.</li>
 <li>Corrected Web App tooltip and subtitle inconsistencies.</li>
 <li>Corrected Winter mode mutator functionality on local servers.</li>
-<li>Enforced correct minimum player counts per team in Gauntlet experiences via the Web App.</li>
+<li data-item="gauntlet">Enforced correct minimum player counts per team in Gauntlet experiences via the Web App.</li>
 <li>Improved experience save stability.</li>
 <li>Improved join flow so Experience info loads more reliably when joining password-protected servers.</li>
 <li>Improved Portal Log call stack reporting.</li>
 <li>Improved runtime Sound Effects and voice line parameter updates.</li>
 <li>Improved runtime spawn placement accuracy.</li>
 <li>Improved script safety to prevent long stalls from infinite loops.</li>
-<li>Improved validation handling so invalid Gauntlet array data no longer results in unintended game mode behaviour.</li>
+<li data-item="gauntlet">Improved validation handling so invalid Gauntlet array data no longer results in unintended game mode behaviour.</li>
 <li>Resolved a UI overlap issue where the compass could overlap the menu in HoH Parkour Extraction.</li>
 <li>Resolved an issue where selecting “Purchase” in Experience Details could redirect to an empty screen.</li>
 <li>Resolved an issue where selecting a featured Portal could incorrectly redirect users to Settings.</li>
@@ -6166,7 +6167,7 @@ html{-webkit-text-size-adjust:100%}
 <ul class="plain">
 <li data-item="carrier-strike">Added Out of Bounds volumes to reduce instances of spawn camping on the carrier deck.</li>
 <li data-item="breakthrough carrier-strike rush">Corrected an issue where HQ icons would not stick to the minimap in Rush and Breakthrough.</li>
-<li data-item="carrier-strike">Fixed "Alliance Disbanded" notification incorrectly appearing during the final round of Gauntlet.</li>
+<li data-item="carrier-strike gauntlet">Fixed "Alliance Disbanded" notification incorrectly appearing during the final round of Gauntlet.</li>
 <li data-item="carrier-strike">Corrected an issue where a player's class would be deselected after exiting a mode tutorial.</li>
 <li data-item="carrier-strike">Jets will no longer spawn on the carriers once breached, and will only be available through the deploy screen.</li>
 </ul>
