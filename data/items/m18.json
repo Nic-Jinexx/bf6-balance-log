@@ -26,5 +26,9 @@
   ],
   "related": [],
   "retired_paths": [],
+  "tag_deny": [
+    "smoke grenade launcher"
+  ],
+  "_tag_deny_note": "The Smoke Grenade Launcher is the M320A1 SMK, which has its own page and carries the phrase as an alias. Masked out so a launcher line does not also land here. First seen in 2.1.1.0.",
   "_unlock_note": "Reported unlocked by default on 2026-08-02. Not yet confirmed against an in-game capture: unlock text only displays on items the account does not own, and all throwables are owned."
 }

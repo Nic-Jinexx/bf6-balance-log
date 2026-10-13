@@ -2,6 +2,13 @@
  "_comment": "The Patch Index table, and the source of every patch block's date and EA link. Verified field by field against EA's own page - never write a date here from memory. scripts/render_patches.py generates the table and the expandable full-patch view from this file.",
  "patches": [
   {
+   "version": "2.1.1.0",
+   "posted": "Oct 12, 2026",
+   "live": "Oct 13, 2026",
+   "headline": "Season 5: Siege of Vegas (Vegas Strip, Area 51, Rapid Royale)",
+   "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-game-update-2-1-1-0"
+  },
+  {
    "version": "1.4.3.5",
    "posted": "Sep 28, 2026",
    "live": "Sep 30, 2026",
