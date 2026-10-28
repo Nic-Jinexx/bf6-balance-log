@@ -297,6 +297,27 @@
         {"name": "Proximity Chat", "kind": "Feature", "_note": "REDSEC, Battlefield Labs. EA says it “arrives in Battlefield Labs for Live” in Battle Royale and “may be switched on or off” during the testing period. No page."},
         {"name": "Diver's Knife", "kind": "Melee", "_note": "EA's changelog heading is “New Melee Weapon: Diver’s Knife”; the body calls it “the Royal Navy Dive Knife”. The final reward of the Deep Six Collection Event. No page yet: no melee item exists."}
       ]
+    },
+    {
+      "version": "2.1.1.0",
+      "name": "Siege of Vegas",
+      "season": 5,
+      "live": "Oct 13, 2026",
+      "_note": "Season 5 launch. No Season 5 roadmap art is in the repo, so unlike the blocks above, names and kinds are read off the NEW CONTENT section of EA's 2.1.1.0 page (cached at data/patch-source/2.1.1.0.html), not the roadmap. EA's page gives 08:00 UTC for the download and 12:00 UTC for Season 5 content on Tuesday, October 13. Recorded Oct 27, 2026. None of these has a page yet, so none carries a slug.",
+      "added": [
+        {"name": "Vegas Strip", "kind": "Map", "_note": "EA: supports all combat sizes, land vehicles and helicopters. Also a Rapid Royale map."},
+        {"name": "Area 51", "kind": "Map"},
+        {"name": "Rapid Royale", "kind": "Mode", "_note": "REDSEC. EA's heading is “NEW REDSEC MODE”; played “across multiple maps, including Vegas Strip and Mirak Valley”."},
+        {"name": "Ranked Battle Royale", "kind": "Feature", "_note": "REDSEC. A launch out of Battlefield Labs, not a debut: EA says it “officially launches with Season 5, moving beyond Battlefield Labs”."},
+        {"name": "Multiplayer Leaderboards", "kind": "Feature", "_note": "Named once in EA's NEW CONTENT intro and nowhere else on the page."},
+        {"name": "Mk 24", "kind": "Assault Rifle"},
+        {"name": "RSPR", "kind": "PDW", "_note": "EA calls it a “Personal Defence Weapon”. No other item has this kind, and where the in-game weapon screen files it is not recorded."},
+        {"name": "Z84M", "kind": "LMG", "_note": "EA: “A belt-fed Light Machine Gun”."},
+        {"name": "ELR-40", "kind": "Sniper Rifle", "_note": "EA: “A versatile Bolt-Action Sniper Rifle”."},
+        {"name": "Battle Pass Season 5", "kind": "Feature"},
+        {"name": "Battlefield 6 x Dead Space: Convergence Event", "kind": "Event", "_note": "EA: “From October 20 through November 7”. Time-limited. Its rewards are cosmetic. No page."},
+        {"name": "Marker Incursion", "kind": "Mode", "_note": "Part of the Convergence Event: “a new 16-player PvE experience” in “Battlefield 6 and REDSEC”, with the Pulse Rifle Battle Pickup. Time-limited. No page."}
+      ]
     }
   ],
   "_removed_comment": "Availability observations: content that was live and is not any more, and content that came back. Kept separate from 'releases' because none of this has a version: EA has published no changelog line for any of it, so the only source is an in-game screen read on a given date. Each block records what was seen, when, and where; build_pages.py turns it into an Availability row using the literal 'value' string, so nothing is assembled or inferred at render time. The row is labelled 'Removed' unless the block sets its own 'label' — needed because content returns, and 'Removed' would then state the opposite of what was seen. Blocks are read in file order, so a later observation of the same slug supersedes an earlier one. An entry here does NOT delete the item's page. The patch history stays and the row is what stops the page implying the content is still playable. See docs/adr/0007.",

@@ -3,7 +3,7 @@
   "_source": "https://www.ea.com/games/battlefield/battlefield-6/news",
   "_date": "EA's publishingDate, date part only -- it is what EA's own listing prints. The timezone offsets in the payload are inconsistent (+08:00, +01:00, -07:00, Z) and shifting to UTC would move some articles off the date EA shows.",
   "_title": "EA's exact wording. `label` is DERIVED from it for the sidebar and may be hand-corrected; a re-fetch keeps a hand-edited label while the title is unchanged.",
-  "_scanned": "135 BF6 news articles scanned, 25 are Community Updates",
+  "_scanned": "138 BF6 news articles scanned, 26 are Community Updates",
   "updates": [
     {
       "date": "2025-08-04",
@@ -161,7 +161,9 @@
       "title": "BATTLEFIELD 6 - COMMUNITY UPDATE - NEW MAPS, FEATURES, AND MORE",
       "label": "New Maps, Features, and More",
       "slug": "battlefield-6-community-update-new-maps-features-and-more",
-      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-new-maps-features-and-more"
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-new-maps-features-and-more",
+      "keep": true,
+      "keep_note": "EA dropped this from its news listing between Oct 13 and Oct 27, 2026, but the article itself is still live (HTTP 200 on Oct 27, 2026). Kept so the sidebar does not lose a working link."
     },
     {
       "date": "2026-08-06",
@@ -183,6 +185,13 @@
       "label": "Siege of Vegas Incoming",
       "slug": "battlefield-6-community-update-siege-of-vegas-incoming",
       "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-siege-of-vegas-incoming"
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Battlefield 6 - Community Update - More to Season 5",
+      "label": "More to Season 5",
+      "slug": "battlefield-6-community-update-more-to-season-5",
+      "url": "https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-community-update-more-to-season-5"
     }
   ]
 }
